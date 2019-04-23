@@ -86,6 +86,36 @@ void erase(_*& trp, const _& key){
 	}
 	update_data(trp);
 }
+// Implicit treaps
+void split_imp(_* trp, ll pos, _*& l, _*& r, ll sum = 0){
+	// Splits the treap by key
+	if(!trp){l=r=nullptr;}
+	ll cur = sum + get_data(trp->l).size;
+	if(pos <= sum){
+		split(trp->l, pos, l, trp->l, sum);
+		r = trp;
+	}
+	else {
+		split(trp->r, pos, trp->r, r, cur+1);
+		l = trp;
+	}
+	update_data(trp);
+}
+template<typename Trp>
+void insert_imp(Trp*& trp, Trp* x, ll pos){
+	if(!trp){trp=x;}
+	else if (trp->pri < x->pri){
+		split(trp, pos, x->l, x->r), trp = x;
+	}
+	else{
+		insert(x->key<trp->key ?trp->l :trp->r, x);
+	}
+	update_data(trp);
+}
+template<typename Trp>
+_ insert_imp(Trp*& trp, _ co& key, ll pos){
+	return insert_imp(trp, new Trp{key}, pos);
+}
 template<typename T, typename... Ts>
 T& operator<<(T& os, treap<Ts...>* trp){
 	static ll lvl = -1;
