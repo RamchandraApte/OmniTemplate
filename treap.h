@@ -15,6 +15,11 @@ struct size_data {
 	ll size{};
 };
 template<typename Key>
+size_data<Key> operator+(size_data<Key> co& l, size_data<Key> co& r){
+	// Returns the data for a node given the data for the children.
+	return size_data<Key>{l.size+r.size+1};
+}
+template<typename Key>
 ostream& operator<<(ostream& os, size_data<Key> co& data){
 	return os<<"size = "<<data.size<<endl;
 }
@@ -24,11 +29,7 @@ Data get_data(treap<Key, Data>* trp){
 }
 void update_data(_* trp){
 	if(!trp){return;}
-	update_data_impl(trp);
-}
-template<typename Key>
-void update_data_impl(treap<Key, size_data<Key>>* trp){
-	trp->data.size = get_data(trp->l).size+get_data(trp->r).size+1;
+	trp->data = get_data(trp->l)+get_data(trp->r);
 }
 void split(_* trp, _ co& key, _*& l, _*& r){
 	// Splits the treap by key
