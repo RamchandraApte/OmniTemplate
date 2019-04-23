@@ -88,29 +88,28 @@ void erase(_*& trp, const _& key){
 }
 // Implicit treaps
 void split_imp(_* trp, ll pos, _*& l, _*& r, ll sum = 0){
-	// Splits the treap by key
-	if(!trp){l=r=nullptr;}
+	// Splits the treap by pos
+	if(!trp){
+		l=r=nullptr;
+		return;
+	}
 	ll cur = sum + get_data(trp->l).size;
-	if(pos <= sum){
-		split(trp->l, pos, l, trp->l, sum);
+	if(pos <= cur){
+		split_imp(trp->l, pos, l, trp->l, sum);
 		r = trp;
 	}
 	else {
-		split(trp->r, pos, trp->r, r, cur+1);
+		split_imp(trp->r, pos, trp->r, r, cur+1);
 		l = trp;
 	}
 	update_data(trp);
 }
 template<typename Trp>
 void insert_imp(Trp*& trp, Trp* x, ll pos){
-	if(!trp){trp=x;}
-	else if (trp->pri < x->pri){
-		split(trp, pos, x->l, x->r), trp = x;
-	}
-	else{
-		insert(x->key<trp->key ?trp->l :trp->r, x);
-	}
-	update_data(trp);
+	Trp *l, *r;
+	split_imp(trp, pos, l, r);
+	l = join(l, x);
+	trp = join(l, r);
 }
 template<typename Trp>
 _ insert_imp(Trp*& trp, _ co& key, ll pos){
