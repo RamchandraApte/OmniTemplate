@@ -6,7 +6,7 @@ struct treap {
 	Data data;
 	treap(Key co& key_): pri{reng()}, key{key_} {
 		update_data(&this);
-	}
+	}	
 };
 template<typename Key, template<typename> typename Data_Temp>
 using treap_t = treap<Key, Data_Temp<Key>>;
@@ -128,5 +128,19 @@ T& operator<<(T& os, treap<Ts...>* trp){
 	else{
 		os<<tab<<"null"<<endl;
 	}
-	return os;	
+	return os;
+}
+template<typename Key, typename Data>
+void to_array(treap<Key, Data>* trp, vector<Key>& out){
+	if(!trp){return;}
+	to_array(trp->l, out);
+	out.pb(trp->key);
+	to_array(trp->r, out);
+}
+template<typename Key, typename Data>
+vector<Key> to_array(treap<Key, Data>* trp){
+	// Returns the array of keys for an implicit treap.
+	vector<Key> out;
+	to_array(trp, out);
+	return out;
 }
