@@ -1,17 +1,16 @@
-ll M = 1e9+7;
-struct small_mod {};	
-struct no_mod {};
+ll M = 1e9+7; // modulus
+struct no_mod{};
 struct md {
 	ll x;
 	md():x{0LL}{}
 	template<typename T, typename = enable_if_t<is_integral<T>::value, void>>
 	md(T x_):x(ll(x_)%M){}
-	md(ll x_, small_mod):x(x_>=M?x_-M:x_){}
 	md(ll x_, no_mod): x(x_) {}
 	explicit operator _(){return x;}
 };
 md operator+(md co& a, md co& b){
-	return {a.x+b.x, small_mod{}};
+	ll co sum = a.x+b.x;
+	return {sum>=M?sum-M:sum, no_mod{}};
 }
 md operator++(md& a){
 	return a+=1;
@@ -21,10 +20,12 @@ md operator-(md co& a){
 }
 bin(==, md);
 md operator*(md co& a, md co& b){
-	ll ret = ull(a.x)*ull(b.x)-ull(M)*ull(ld(a.x)*ld(b.x)/ld(M));
-	if(ret < 0){return {ret+M, no_mod{}};}
-	if(ret >= M){return {ret-M, no_mod{}};}
-	return {ret, no_mod{}};
+	const ull quot = ld(a.x)*ld(b.x)/ld(M);
+	// Computes the approximate remainder
+	const ll rem = ull(a.x)*ull(b.x)-ull(M)*quot;
+	if(rem < 0){return {rem+M, no_mod{}};}
+	if(rem >= M){return {rem-M, no_mod{}};}
+	return {rem, no_mod{}};
 }
 struct id {};
 md operator/(id, md co& b){
