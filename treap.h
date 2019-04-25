@@ -1,9 +1,10 @@
 template<typename Key, typename Data>
 struct treap {
 	treap *l{}, *r{}; // left and right nodes
-	ll pri; // random heap priority
-	Key key; // binary search tree key
-	Data data;
+	ll pri{}; // random heap priority
+	Key key{}; // binary search tree key
+	Data data{};
+	bool rev{};
 	treap(Key co& key_): pri{reng()}, key{key_} {
 		update_data(&this);
 	}	
@@ -47,6 +48,7 @@ void split(_* trp, _ co& key, _*& l, _*& r){
 template<typename Trp>
 [[nodiscard]] Trp* join(Trp* l, Trp* r){
 	// All the keys in l are less than the keys in r
+	down(l); down(r);
 	_ ret = [&](){
 		if(!l){return r;}
 		else if(!r){return l;}
@@ -87,12 +89,22 @@ void erase(_*& trp, const _& key){
 	update_data(trp);
 }
 // Implicit treaps
+void down(_* trp){
+	if(!(trp && trp->rev)){return;}
+	swap(trp->l, trp->r);
+	#define flip(x) if(trp->x){trp->x->rev^=1;}
+	flip(l)
+	flip(r)
+	#undef flip
+	trp->rev=0;
+}
 void split_imp(_* trp, ll pos, _*& l, _*& r, ll sum = 0){
 	// Splits the treap by pos
 	if(!trp){
 		l=r=nullptr;
 		return;
 	}
+	down(trp);
 	ll cur = sum + get_data(trp->l).size;
 	if(pos <= cur){
 		split_imp(trp->l, pos, l, trp->l, sum);
@@ -110,6 +122,21 @@ void insert_imp(Trp*& trp, Trp* x, ll pos){
 	split_imp(trp, pos, l, r);
 	l = join(l, x);
 	trp = join(l, r);
+}
+template<typename Trp>
+void erase_imp(Trp*& trp, ll pos){
+	Trp *l, *r, *x, *nr;
+	split_imp(trp, pos, l, r);
+	split_imp(r, 1, x, nr);
+	trp = join(l, nr);
+}
+template<typename Trp>
+auto get_imp(Trp*& trp, ll pos){
+	Trp *l, *r, *x, *nr;
+	split_imp(trp, pos, l, r);
+	split_imp(r, 1, x, nr);
+	trp = join(join(l, x), nr);
+	return x->key;
 }
 template<typename Trp>
 _ insert_imp(Trp*& trp, _ co& key, ll pos){
