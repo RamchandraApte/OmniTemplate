@@ -14,6 +14,14 @@ tm() struct mat {
 			this[i][i]=0;
 		}
 	}
+	mat(const initializer_list<initializer_list<ll>>& vals): mat(size(vals), size(begin(vals)[0])){
+		fo(i,r){
+			assert(size(begin(vals)[i]) == c);
+			fo(j,c){
+				this[i][j] = begin(begin(vals)[i])[j];
+			}
+		}
+	}
 	_ operator[](_ i){
 		return const_cast<T*>(const_cast<mat co&>(this)[i]);
 	}
