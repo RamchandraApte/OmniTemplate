@@ -46,6 +46,33 @@ tm(...) _ operator*(mat<T...> co& a, mat<T...> co& b){
 	}
 	return c;
 }
+tm(...) _ operator/(mat<T...> b, mat<T...> a){
+	/*
+	Solves ax=b using Gaussian elimination.
+	Returns x, a row vector.
+	*/
+	assert(a.r == a.c && a.c == b.c && b.r == 1);
+	fo(i,a.r){
+		const auto div = a[i][i];
+		b[0][i]/=div;
+		fo(k,a.r){
+			a[i][k]/=div;
+		}
+		fo(j,a.r){
+			if(j==i){continue;}
+			const auto	mul = a[j][i];
+			fo(k,a.r){
+				a[j][k]-=a[i][k]*mul;
+			}
+			b[0][j]-=b[0][i]*mul;
+		}
+	}
+	mat<T...> x(b.c,1);
+	fo(i,b.c){
+		x[i][0] = b[0][i];
+	}
+	return x;
+}
 tm(...) _& operator<<(ostream& os, mat<T...> co& m){
 	os<<"mat{"<<endl;
 	fo(i,m.r){
