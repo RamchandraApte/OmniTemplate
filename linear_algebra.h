@@ -78,7 +78,7 @@ tm(...) _ operator/(mat<T...> b, mat<T...> a){
 	return gauss(b,a).first;
 }
 template<typename T>
-det(const mat<T>& a){
+T det(const mat<T>& a){
 	return gauss(mat<T>(a.r, 1), a).second;
 }
 tm(...) _& operator<<(ostream& os, mat<T...> co& m){
