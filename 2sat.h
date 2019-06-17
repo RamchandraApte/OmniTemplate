@@ -2,6 +2,7 @@ optional<vc<char>> sat2(const vc<pr>& v){
 	/*
 	Takes a 2 SAT instance and returns a solution.
 	Numerical negation represents logical negation.
+	0 means empty
 	*/
 	ll n = 0;
 	for(const auto& p: v){
@@ -9,8 +10,8 @@ optional<vc<char>> sat2(const vc<pr>& v){
 	}
 	vc<vl> g(2*n+1);
 	for(const auto& p:v){
-		g[n-p.first].pb(n+p.second);
-		g[n-p.second].pb(n+p.first);
+		if(p.first){g[n-p.first].pb(n+p.second);}
+		if(p.second){g[n-p.second].pb(n+p.first);}
 	}
 	dfs topo{g};
 	topo();
