@@ -8,6 +8,12 @@ void test_matrix(){
 	dbg(b);
 	dbg(det(a));
 }
+void test_sat2(){
+	for(char c:*sat2({{1,2},{-2, 3}})){
+		dbg((ll)c);
+	}
+};
 void main2(){
 	test_matrix();
+	test_sat2();
 }
