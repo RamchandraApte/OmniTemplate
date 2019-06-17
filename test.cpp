@@ -6,6 +6,7 @@ void test_matrix(){
 	dbg(x);
 	dbg(a*x);
 	dbg(b);
+	dbg(det(a));
 }
 void main2(){
 	test_matrix();

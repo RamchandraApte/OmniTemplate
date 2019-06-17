@@ -46,14 +46,17 @@ tm(...) _ operator*(mat<T...> co& a, mat<T...> co& b){
 	}
 	return c;
 }
-tm(...) _ operator/(mat<T...> b, mat<T...> a){
+template<typename T>
+pair<mat<T>, T> gauss(mat<T> b, mat<T> a){
 	/*
-	Returns x such that ax=b.
+	Returns x such that ax=b and the determinant of a via Gaussian elimination.
 	*/
 	assert(a.r == a.c);
 	assert(a.r == b.r);
+	T det = 1;
 	fo(i,a.r){
 		const auto div = a[i][i];
+		det*=div;
 		for(auto& ar: {ref(a), ref(b)}){
 			fo(k,ar.get().c){
 				ar.get()[i][k]/=div;
@@ -69,7 +72,14 @@ tm(...) _ operator/(mat<T...> b, mat<T...> a){
 			}
 		}
 	}
-	return b;
+	return {move(b), det};
+}
+tm(...) _ operator/(mat<T...> b, mat<T...> a){
+	return gauss(b,a).first;
+}
+template<typename T>
+det(const mat<T>& a){
+	return gauss(mat<T>(a.r, 1), a).second;
 }
 tm(...) _& operator<<(ostream& os, mat<T...> co& m){
 	os<<"mat{"<<endl;
