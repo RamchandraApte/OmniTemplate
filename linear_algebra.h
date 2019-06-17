@@ -47,7 +47,7 @@ tm(...) _ operator*(mat<T...> co& a, mat<T...> co& b){
 	return c;
 }
 template<typename T>
-pair<mat<T>, T> gauss(mat<T> b, mat<T> a){
+pair<mat<T>&&, T> gauss(mat<T> b, mat<T> a){
 	/*
 	Returns x such that ax=b and the determinant of a via Gaussian elimination.
 	*/
