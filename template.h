@@ -104,12 +104,12 @@ _ debug($ x, $ name, source_location co& loc = source_location::current()){
 	--depth;
 	return x;
 }
-#include "linear_algebra.h"
 #include "dsu.h"
 #include "operations.h"
 #include "utility.h"
 #include "modulo.h"
 #include "number_theory.h"
+#include "linear_algebra.h"
 tm() struct ar {using type = T;};
 tm() using ar_t = typename ar<T>::type;
 template<typename T, size_t n>
@@ -144,6 +144,7 @@ using omap = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
 END_NS
 BEGIN_NS
 #include "segment_tree.h"
+#include "2sat.h"
 END_NS
 co bool multitest = false;
 struct random_device_patch { // Random device patch to fix libstdc++'s broken implementation on Windows
