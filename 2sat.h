@@ -28,3 +28,8 @@ optional<vc<char>> sat2(const vc<pr>& v){
 	}
 	return vals;
 }
+void test_sat2(){
+	for(char c:*sat2({{1,2},{-2, 3}})){
+		dbg((ll)c);
+	}
+}
