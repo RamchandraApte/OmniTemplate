@@ -68,3 +68,10 @@ um fac(ll n){
 	return fac(g) + fac(n/g);
 }
 void egcd($ a, $ b, _& x, _& y){a?egcd(b%a, a, y, x),x-=b/a*y:(x=0,y=1);}
+ll totient(ll n){
+	auto fact = fac(n);
+	for(const auto& p:fact){
+		n-=n/p.first;
+	}
+	return n;
+}

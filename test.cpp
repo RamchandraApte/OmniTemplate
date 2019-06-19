@@ -13,7 +13,11 @@ void test_sat2(){
 		dbg((ll)c);
 	}
 };
+void test_totient(){
+	assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 && totient(84) == 24 && totient(127) == 126);
+}
 void main2(){
 	test_matrix();
 	test_sat2();
+	test_totient();
 }
