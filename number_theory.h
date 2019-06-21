@@ -78,3 +78,39 @@ ll totient(ll n){
 void test_totient(){
 	assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 && totient(84) == 24 && totient(127) == 126);
 }
+ll dlog(const md a, md b){
+	/* Finds x such that a^x = b (mod M) using baby-step giant-step algorithm.
+		M must be prime
+	*/
+	assert(prime(M));
+	auto check = [&](ll x){
+		assert(power(a, x) == b);
+		return x;
+	};
+	ll sq = sqrt(static_cast<long long int>(M))+1;
+	unordered_map<md,ll> powers;
+	const auto a_sq = power(a, sq);
+	md pw = 1;
+	fo(i,sq+1){
+		powers[pw] = i;
+		pw*=a_sq;
+	}
+	for(ll cnt = 0;;++cnt){
+		if(auto it = powers.find(b); it != end(b)){
+			return check((it->second*sq-cnt)%(M-1));
+		}
+		b*=a;
+	}
+}
+void test_dlog(){
+	auto check = [](ll a2, ll b, ll m){
+		with _m{m, M};
+		md a{a2};
+		auto x = power(a, b);
+	};
+	check(2, 10, 1025);
+	check(7, 1, 30);
+	check(1, 1, 1);
+	check(23,47,153);
+	check(15, 100, 45);
+}
