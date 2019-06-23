@@ -96,7 +96,7 @@ ll dlog(const md a, md b){
 		pw*=a_sq;
 	}
 	for(ll cnt = 0;;++cnt){
-		if(auto it = powers.find(b); it != end(b)){
+		if(auto it = powers.find(b); it != end(powers)){
 			return check((it->second*sq-cnt)%(M-1));
 		}
 		b*=a;
