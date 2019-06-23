@@ -114,3 +114,30 @@ void test_dlog(){
 	check(23,47,153);
 	check(15, 100, 45);
 }
+md primitive_root(){
+	if(M==1){return 0;}
+	auto tot = totient(M);
+	auto pfactor = fac(tot);
+	fo(i,1,M){
+		auto is_generator = [&](){
+			if(gcd(i, M) != 1){return false;}
+			for(auto p:pfactor){
+				if(power(md{i}, tot/p.first) == 1){
+					return false;
+				}
+			}
+			return true;
+		};
+		if(is_generator()){return i;}
+	}
+}
+void test_primitive_root(){
+	auto check = [&](ll m, ll x){
+		with _m{m,M};
+		assert(primitive_root() == x);
+	};
+	check(1, 0);
+	check(3, 2);
+	check(6, 5);
+	check(7, 3);
+}
