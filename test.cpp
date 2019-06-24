@@ -4,5 +4,5 @@ void main2(){
 	test_sat2();
 	test_totient();
 	test_dlog();
-	test_generator();
+	test_primitive_root();
 }

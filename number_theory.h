@@ -119,7 +119,7 @@ md primitive_root(){
 	auto tot = totient(M);
 	auto pfactor = fac(tot);
 	fo(i,1,M){
-		auto is_generator = [&](){
+		auto is_primitive_root = [&](){
 			if(gcd(i, M) != 1){return false;}
 			for(auto p:pfactor){
 				if(power(md{i}, tot/p.first) == 1){
@@ -128,7 +128,7 @@ md primitive_root(){
 			}
 			return true;
 		};
-		if(is_generator()){return i;}
+		if(is_primitive_root()){return i;}
 	}
 }
 void test_primitive_root(){
