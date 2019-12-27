@@ -158,3 +158,4 @@ struct random_device_patch { // Random device patch to fix libstdc++'s broken im
 using default_random_device = random_device_patch;
 default_random_engine reng{default_random_device{}()};
 #include "treap.h"
+#include "queue.h"
