@@ -4,7 +4,7 @@ struct edge {
 		return tuple{w,a,b};
 	}
 };
-operator<(edge co& a, edge co& b){
+bool operator<(edge co& a, edge co& b){
 	return a.to_tuple() < b.to_tuple();
 }
 _& operator<<(ostream& os, edge co& e){

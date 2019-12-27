@@ -1,5 +1,5 @@
 struct first_cmp {
-	operator()(_ a, _ b) co{
+bool	operator()(_ a, _ b) co{
 		return a.first < b.first;
 	}
 };
