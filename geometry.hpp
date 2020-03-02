@@ -33,7 +33,7 @@ auto hull(_& v, df(do_sort, true)){
 	}
 	return h;
 }
-auto convex_min($ r, $ f){
+auto convex_min(const auto& r, const auto& f){
 	return *partition_point(al(r), [&](auto i){return !(f(i) < f(i+1));});
 }
 struct cht {
@@ -42,8 +42,8 @@ struct cht {
 		uniq(v, map_args(lambda(imag), equal_to{}),map_args(lambda(conj)));
 		h = dbg(hull(v, false));
 	}
-	auto min($ x){
-		auto co eval = [&]($ i){return real(h[i])*x+imag(h[i]);};
+	auto min(const auto& x){
+		auto co eval = [&](const auto& i){return real(h[i])*x+imag(h[i]);};
 		return eval(convex_min(ra{size(h)-1}, eval));
 	}
 };
