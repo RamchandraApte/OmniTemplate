@@ -5,7 +5,7 @@ struct treap {
 	Key key{}; // binary search tree key
 	Data data{};
 	bool rev{};
-	treap(Key co& key_): pri{reng()}, key{key_} {
+	treap(Key const& key_): pri{reng()}, key{key_} {
 		update_data(&this);
 	}	
 };
@@ -16,12 +16,12 @@ struct size_data {
 	ll size{};
 };
 template<typename Key>
-size_data<Key> operator+(size_data<Key> co& l, size_data<Key> co& r){
+size_data<Key> operator+(size_data<Key> const& l, size_data<Key> const& r){
 	// Returns the data for a node given the data for the children.
 	return size_data<Key>{l.size+r.size+1};
 }
 template<typename Key>
-ostream& operator<<(ostream& os, size_data<Key> co& data){
+ostream& operator<<(ostream& os, size_data<Key> const& data){
 	return os<<"size = "<<data.size<<endl;
 }
 template<typename Key, typename Data>
@@ -32,7 +32,7 @@ void update_data(_* trp){
 	if(!trp){return;}
 	trp->data = get_data(trp->l)+get_data(trp->r);
 }
-void split(_* trp, _ co& key, _*& l, _*& r){
+void split(_* trp, _ const& key, _*& l, _*& r){
 	// Splits the treap by key
 	if(!trp){l=r=nullptr;}
 	else if(key < trp->key){
@@ -76,7 +76,7 @@ void insert(Trp*& trp, Trp* x){
 	update_data(trp);
 }
 template<typename Trp>
-_ insert(Trp*& trp, _ co& key){
+_ insert(Trp*& trp, _ const& key){
 	return insert(trp, new Trp{key});
 }
 void erase(_*& trp, const _& key){
@@ -139,7 +139,7 @@ auto get_imp(Trp*& trp, ll pos){
 	return x->key;
 }
 template<typename Trp>
-_ insert_imp(Trp*& trp, _ co& key, ll pos){
+_ insert_imp(Trp*& trp, _ const& key, ll pos){
 	return insert_imp(trp, new Trp{key}, pos);
 }
 template<typename T, typename... Ts>

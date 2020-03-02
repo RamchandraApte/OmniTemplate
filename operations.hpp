@@ -14,19 +14,19 @@ _ operator>($ a, $ b){
 	return b < a;
 }
 tm() using uset = unordered_set<T>;
-um operator+(um a, um co& b){
+um operator+(um a, um const& b){
 	for($ p:b){
 		a[p.first]+=p.second;
 	}
 	return a;
 }
-tm() _ operator|(uset<T> co& a, uset<T> co& b){
+tm() _ operator|(uset<T> const& a, uset<T> const& b){
 	$ [sm, bg] = minmax(a, b);
 	_ ret = bg;
 	ret.insert(al(sm));
 	return ret;
 };
-tm() _ operator&(uset<T> co& a, uset<T> co& b){
+tm() _ operator&(uset<T> const& a, uset<T> const& b){
 	$ [sm, bg] = minmax(a, b);
 	uset<T> ret;
 	for($ x: sm){
@@ -36,7 +36,7 @@ tm() _ operator&(uset<T> co& a, uset<T> co& b){
 	}
 	return ret;
 }
-tm() _ sub_set(uset<T> co& a, uset<T> co& b, uset<T>& ret){
+tm() _ sub_set(uset<T> const& a, uset<T> const& b, uset<T>& ret){
 	for($ x: a){
 		if(!b.count(x)){
 			ret.insert(x);
@@ -44,11 +44,11 @@ tm() _ sub_set(uset<T> co& a, uset<T> co& b, uset<T>& ret){
 	}
 	return ret;
 }
-tm() _ operator-(uset<T> co& a, uset<T> co& b){	
+tm() _ operator-(uset<T> const& a, uset<T> const& b){	
 	uset<T> ret;
 	return sub_set(a,b,ret);
 }
-tm() _ operator^(uset<T> co& a, uset<T> co& b){
+tm() _ operator^(uset<T> const& a, uset<T> const& b){
 	uset<T> ret = a-b;
 	sub_set(b, a, ret);
 	return ret;

@@ -1,13 +1,13 @@
 struct edge {
 	ll w, a, b;
-	_ to_tuple() co{
+	_ to_tuple() const{
 		return tuple{w,a,b};
 	}
 };
-bool operator<(edge co& a, edge co& b){
+bool operator<(edge const& a, edge const& b){
 	return a.to_tuple() < b.to_tuple();
 }
-_& operator<<(ostream& os, edge co& e){
+_& operator<<(ostream& os, edge const& e){
 	return os<<"edge{"<<e.a<<"-"<<e.w<<"->"<<e.b<<"}";
 }
 _ dist(_ g, _ s){
@@ -34,7 +34,7 @@ _ dist(_ g, _ s){
 	}
 	return array<vl,2>{d,pv};
 }
-_ dist(mat<ll> co& g){
+_ dist(mat<ll> const& g){
 	assert(g.r == g.c);
 	_ n = g.r;
 	_ d = g;
@@ -63,7 +63,7 @@ _ mst(_ es){
 	return ret;
 }
 struct gsearch {
-	vc<vl> co& g;
+	vc<vl> const& g;
 	ll n;
 	vl v;
 	deque<ll> q;

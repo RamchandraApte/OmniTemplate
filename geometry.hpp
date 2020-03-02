@@ -1,12 +1,12 @@
 namespace std {
-auto operator<(pt co& a, pt co& b){
+auto operator<(pt const& a, pt const& b){
 	return map_args([](auto x){return tuple{real(x), imag(x)};})(a,b);
 }
 }
-auto dot(pt co& a, pt co& b){
+auto dot(pt const& a, pt const& b){
 	return real(conj(a)*b);
 }
-auto wedge(pt co& a, pt co& b){
+auto wedge(pt const& a, pt const& b){
 	return imag(conj(a)*b);
 }
 auto area(auto a, auto b, auto c){
@@ -43,7 +43,7 @@ struct cht {
 		h = dbg(hull(v, false));
 	}
 	auto min(const auto& x){
-		auto co eval = [&](const auto& i){return real(h[i])*x+imag(h[i]);};
+		auto const eval = [&](const auto& i){return real(h[i])*x+imag(h[i]);};
 		return eval(convex_min(ra{size(h)-1}, eval));
 	}
 };

@@ -24,8 +24,7 @@
 #define this (*this)
 #define al(v) begin(v),end(v)
 #define I(x) ll x;cin>>x;
-#define co const
-#define $ _ co&
+#define $ _ const&
 #define pb push_back
 #define vc vector
 bool debug_mode = false;
@@ -70,7 +69,7 @@ tm() using pq = std::priority_queue<T, vector<T>, greater<>>;
 let(clock_, high_resolution_clock);
 import(this_thread);
 let(um,unordered_map<ll, ll>);
-tm() _ type_name([[maybe_unused]] T co& v){
+tm() _ type_name([[maybe_unused]] T const& v){
 	string s = __PRETTY_FUNCTION__, tar = "T = ";
 	_ st = s.find(tar)+tar.size();
 	return s.substr(st, s.find("]", st)-st);
@@ -90,13 +89,13 @@ _ simple_tp([[maybe_unused]] $ v){
 	return s;
 }
 _ constexpr inf = ll(numeric_limits<ll>::max())/8;
-_ co delim = ", "s;
+_ const delim = ", "s;
 _ constexpr tau = 2*3.1415926535897932384626433L;
 #include "io.hpp"
 BEGIN_NS
 #include "range.hpp"
 ll depth = -1;
-_ debug($ x, $ name, source_location co& loc = source_location::current()){
+_ debug($ x, $ name, source_location const& loc = source_location::current()){
 	if(debug_mode){
 		fo(i,depth){cerr<<"\t";}
 		cerr<<loc.function_name()<<":"<<loc.line()<<" "<<name<<" = "<<x<<endl;
@@ -118,12 +117,12 @@ struct ar<T[n]>{using type = array<ar_t<T>,n>;};
 #include "graph_theory.hpp"
 tm() using bin_op = T(*)(T,T);
 #define ret(x, id) if(f == static_cast<tp(f)>(x)){return id;}
-constexpr ll identity(bin_op<ll co&> co& f){
+constexpr ll identity(bin_op<ll const&> const& f){
 	ret(max<ll>, -inf);
 	ret(min<ll>, inf);
 	abort();
 }
-constexpr ll identity(bin_op<ll> co& f){
+constexpr ll identity(bin_op<ll> const& f){
 	ret(gcd<ll>, 0);
 	abort();
 }
@@ -146,7 +145,7 @@ BEGIN_NS
 #include "segment_tree.hpp"
 #include "2sat.hpp"
 END_NS
-co bool multitest = false;
+const bool multitest = false;
 struct random_device_patch { // Random device patch to fix libstdc++'s broken implementation on Windows
 	unsigned int operator()(){
 		return clock_::now().time_since_epoch().count(); // Probably random enough

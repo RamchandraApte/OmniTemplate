@@ -2,7 +2,7 @@ struct dsu {
 	mutable vl p;
 	vl s;
 	explicit dsu(_ n): p(n), s(n,1) {iota(al(p),0);}
-	ll operator[](ll x) co {return x==p[x]?x:p[x]=this[p[x]];}
+	ll operator[](ll x) const {return x==p[x]?x:p[x]=this[p[x]];}
 	_ operator()(_ x, _ y){
 		x = this[x]; y = this[y];
 		if(x == y){return false;}
@@ -12,7 +12,7 @@ struct dsu {
 		return true;
 	}
 };
-_& operator<<(ostream& os, dsu co& d){
+_& operator<<(ostream& os, dsu const& d){
 	os<<"dsu{";
 	fo(i,d.p.size()){
 		if(i){os<<delim;}

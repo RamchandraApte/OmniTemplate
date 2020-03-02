@@ -1,8 +1,8 @@
-ll co sz = 30;
+ll const sz = 30;
 tm() struct no {
 	vector<no*> p;
 	T v;
-	no(T co& v_, no* pa = nullptr): p(sz), v(v_){
+	no(T const& v_, no* pa = nullptr): p(sz), v(v_){
 		if(!pa){pa = &this;}
 		fo(i,sz){
 			p[i] = pa;

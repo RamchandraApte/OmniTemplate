@@ -9,10 +9,10 @@ _ fix($ func){
 	return [=](_... args) {return func(fix(func), args...);};
 }
 #define lambda(f) [&](_... args){return f(args...);}
-_ maxeq(_&& x, _ co& y){
+_ maxeq(_&& x, _ const& y){
 	x = max(x, y);
 }
-_ mineq(_&& x, _ co& y){
+_ mineq(_&& x, _ const& y){
 	x = min(x, y);
 }
 template<typename T>
@@ -26,7 +26,7 @@ _ cache($ f){
 	};
 }
 template<typename Eq = equal_to<>, typename T = less<>>
-_ uniq(_& v, Eq co& up = Eq{}, T co& sp = T{}){
+_ uniq(_& v, Eq const& up = Eq{}, T const& sp = T{}){
 	sort(al(v), sp);
 	v.resize(unique(al(v), up)-begin(v));
 	return v;

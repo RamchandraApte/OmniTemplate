@@ -8,7 +8,7 @@ _ prime(_ n){
 	ll tz = __builtin_ctz(n-1);
 	_ b = (n-1)>>tz;
 	dbg(b);
-	_ prime_a = [&](md co& a){
+	_ prime_a = [&](md const& a){
 		dbg(a);
 		if(a==0){return true;}
 		_ p = power(a,b);
@@ -57,7 +57,7 @@ um fac(ll n){
 	else if(!prime(n)) {
 		with _m{n,M};
 		for(md c = 0;g == n;++c){
-			_ co f = [&]($ x){return x*x+x+c;};
+			_ const f = [&]($ x){return x*x+x+c;};
 			for(md a = 0, b = a; a = f(a), b = f(f(b)), (g = gcd(ll(a-b),n)) == 1;){}
 		}
 	}

@@ -3,7 +3,7 @@ tm() struct mat {
 	vc<T> a;
 	mat(_ r_, _ c_, df(v, 0LL)): r(r_), c(c_), a(r*c, v) {assert(r>=1 && c>=1);}
 	mat(_ d):r(1),c(1),a{d}{}
-	mat(vc<vc<pr>> co& g):mat(g.size(),g.size(),inf) {
+	mat(vc<vc<pr>> const& g):mat(g.size(),g.size(),inf) {
 		fo(i,r){
 			for($ p:g[i]){
 				_ [x,w] = p;
@@ -23,16 +23,16 @@ tm() struct mat {
 		}
 	}
 	_ operator[](_ i){
-		return const_cast<T*>(const_cast<mat co&>(this)[i]);
+		return const_cast<T*>(const_cast<mat const&>(this)[i]);
 	}
-	_ operator[](_ i) co{
+	_ operator[](_ i) const{
 		return &a[i*c];
 	}
-	_ id() co{
+	_ id() const{
 		return this.r==1 && this.c==1 && this[0][0]==1;
 	}
 };
-tm(...) _ operator*(mat<T...> co& a, mat<T...> co& b){
+tm(...) _ operator*(mat<T...> const& a, mat<T...> const& b){
 	if(a.id()){return b;}
 	if(b.id()){return a;}
 	assert(a.c == b.r);
@@ -81,7 +81,7 @@ template<typename T>
 T det(const mat<T>& a){
 	return gauss(mat<T>(a.r, 1), a).second;
 }
-tm(...) _& operator<<(ostream& os, mat<T...> co& m){
+tm(...) _& operator<<(ostream& os, mat<T...> const& m){
 	os<<"mat{"<<endl;
 	fo(i,m.r){
 		copy(m[i], m[i]+m.c, make_ostream_joiner(os, delim));
@@ -90,7 +90,7 @@ tm(...) _& operator<<(ostream& os, mat<T...> co& m){
 	return os<<"}";
 }
 template<typename T>
-_ lin_recur(vc<T> co& c, ll n){
+_ lin_recur(vc<T> const& c, ll n){
 	mat<T> m{size(c), size(c)};
 	copy(al(c), m[0]);
 	fo(i,1,size(c)){

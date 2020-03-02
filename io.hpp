@@ -4,7 +4,7 @@ struct rin {
 	_& operator<<(const char*){
 		return this;
 	}
-	_& operator<<(string co& s){
+	_& operator<<(string const& s){
 		if(s.empty()){
 			in>>const_cast<string&>(s);
 		}
@@ -38,7 +38,7 @@ _ print($ arg1, $... args){
 }
 END_NS
 namespace std {
-	tm(...) _& operator<<(ostream& os, pair<T...> co& p){
+	tm(...) _& operator<<(ostream& os, pair<T...> const& p){
 		return os<<simple_tp(p)<<"{"<<p.first<<delim<<p.second<<"}";
 	}
 	_ operator<<(ostream& os, $ v) -> decltype(begin(v), declval<tp(os)>()){
@@ -64,7 +64,7 @@ namespace std {
 		return os;
 	}
 	#if __cplusplus >= 201703L
-	tm() _& operator<<(ostream& os, optional<T> co& opt){
+	tm() _& operator<<(ostream& os, optional<T> const& opt){
 		return opt?(os<<*opt):(os<<"nullopt");
 	}
 	#endif

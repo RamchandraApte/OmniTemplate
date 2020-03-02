@@ -8,18 +8,18 @@ struct md {
 	md(ll x_, no_mod): x(x_) {}
 	explicit operator _(){return x;}
 };
-md operator+(md co& a, md co& b){
-	ll co sum = a.x+b.x;
+md operator+(md const& a, md const& b){
+	ll const sum = a.x+b.x;
 	return {sum>=M?sum-M:sum, no_mod{}};
 }
 md operator++(md& a){
 	return a+=1;
 }
-md operator-(md co& a){
+md operator-(md const& a){
 	return {M-a.x, no_mod{}};
 }
 bin(==, md);
-md operator*(md co& a, md co& b){
+md operator*(md const& a, md const& b){
 	const ull quot = ld(a.x)*ld(b.x)/ld(M);
 	// Computes the approximate remainder
 	const ll rem = ull(a.x)*ull(b.x)-ull(M)*quot;
@@ -28,19 +28,19 @@ md operator*(md co& a, md co& b){
 	return {rem, no_mod{}};
 }
 struct id {};
-md operator/(id, md co& b){
+md operator/(id, md const& b){
 	assert(b != 0);
 	return power(b, M-2);
 }
-_ operator/(md co& a, md co& b) {
+_ operator/(md const& a, md const& b) {
 	return a*(id{}/b);
 }
-_& operator<<(ostream& os, md co& m){return os<<m.x;}
+_& operator<<(ostream& os, md const& m){return os<<m.x;}
 END_NS
 namespace std {
 template<>
 struct hash<md> {
-	size_t operator()(md co& x) co {
+	size_t operator()(md const& x) const {
 		return x.x;
 	}
 };

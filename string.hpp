@@ -14,14 +14,14 @@ struct hash_str {
 		}
 		//dbg(h);
 		partial_sum(al(h), begin(h));		
-		auto co inv = md{1}/md{0x51a3e995948c0deULL};
+		auto const inv = md{1}/md{0x51a3e995948c0deULL};
 		md x = 1;
 		fo(i,0,p.size()){
 			p[i] = x;
 			x*=md{inv};
 		}
 	}
-	size_t operator()(string_view co& v){
+	size_t operator()(string_view const& v){
 		with _w{lcg_mod,M};
 		ll l = v.data()-st;
 		//dbg(l);
@@ -33,11 +33,11 @@ struct hash_str {
 	}
 };
 struct bytehash {
-	auto operator()($ x) co{
+	auto operator()($ x) const{
 		return hash<string_view>{}(string_view{reinterpret_cast<const char*>(&x), sizeof(x)});
 	}
 };
-vl prefix(string co& s){
+vl prefix(string const& s){
 	ll n = s.size();
 	vl p(n);	
 	fo(i,1,n){
@@ -49,7 +49,7 @@ vl prefix(string co& s){
 	dbg(p);
 	return p;
 }
-auto search_all(string co& t, string co& s){
+auto search_all(string const& t, string const& s){
 	auto p = prefix(s+'\0'+t);
 	vl v;
 	fo(i,t.size()){
@@ -62,11 +62,11 @@ auto search_all(string co& t, string co& s){
 string empstr = "";
 struct search_it: it_base<ll> {
 	using iterator_category = input_iterator_tag;
-	string co& t, s;
+	string const& t, s;
 	const ll n, ed;
 	vl p;
 	ll i=0, o=0;
-	search_it(string co& t_, string co& s_): t(t_), s(s_), n(s.size()), ed(n+1+t.size()), p(n) {++this;}
+	search_it(string const& t_, string const& s_): t(t_), s(s_), n(s.size()), ed(n+1+t.size()), p(n) {++this;}
 	explicit search_it():search_it(empstr, empstr){}
 	auto operator*(){
 		assert(n);
@@ -89,13 +89,13 @@ struct search_it: it_base<ll> {
 		}
 	}
 };
-auto operator==(search_it co& a, search_it co& b){
+auto operator==(search_it const& a, search_it const& b){
 	bool sa = a.n, sb = b.n;
 	if(sa ^ sb){return a.i == b.i;}
 	if(sa){return a.i == a.ed;}
 	if(sb){return b.ed == b.i;}
 }
-auto operator<(search_it co& a, search_it co& b){
+auto operator<(search_it const& a, search_it const& b){
 	bool sa = a.n, sb = b.n;
 	if(sa ^ sb){return a.i < b.i;}
 	if(sa){return a.i < a.ed;}

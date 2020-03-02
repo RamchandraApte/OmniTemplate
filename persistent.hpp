@@ -1,5 +1,5 @@
 struct first_cmp {
-bool	operator()(_ a, _ b) co{
+bool	operator()(_ a, _ b) const{
 		return a.first < b.first;
 	}
 };
@@ -13,10 +13,10 @@ struct pers {
 		s.erase(e);
 		s.insert(e);
 	}
-	operator _() co{
+	operator _() const{
 		return (*--s.upper_bound({tim, T{}})).second;
 	}
 };
-tm() _& operator<<(ostream& os, pers<T> co& p){
+tm() _& operator<<(ostream& os, pers<T> const& p){
 	return os<<static_cast<T>(p);
 }
