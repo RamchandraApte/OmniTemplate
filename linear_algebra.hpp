@@ -1,12 +1,12 @@
 tm() struct mat {
 	ll r,c;
 	vc<T> a;
-	mat(_ r_, _ c_, df(v, 0LL)): r(r_), c(c_), a(r*c, v) {assert(r>=1 && c>=1);}
-	mat(_ d):r(1),c(1),a{d}{}
+	mat(auto r_, auto c_, df(v, 0LL)): r(r_), c(c_), a(r*c, v) {assert(r>=1 && c>=1);}
+	mat(auto d):r(1),c(1),a{d}{}
 	mat(vc<vc<pr>> const& g):mat(g.size(),g.size(),inf) {
 		fo(i,r){
 			for($ p:g[i]){
-				_ [x,w] = p;
+				auto [x,w] = p;
 				this[i][x] = w;
 			}
 		}
@@ -22,17 +22,17 @@ tm() struct mat {
 			}
 		}
 	}
-	_ operator[](_ i){
+	auto operator[](auto i){
 		return const_cast<T*>(const_cast<mat const&>(this)[i]);
 	}
-	_ operator[](_ i) const{
+	auto operator[](auto i) const{
 		return &a[i*c];
 	}
-	_ id() const{
+	auto id() const{
 		return this.r==1 && this.c==1 && this[0][0]==1;
 	}
 };
-tm(...) _ operator*(mat<T...> const& a, mat<T...> const& b){
+tm(...) auto operator*(mat<T...> const& a, mat<T...> const& b){
 	if(a.id()){return b;}
 	if(b.id()){return a;}
 	assert(a.c == b.r);
@@ -74,14 +74,14 @@ pair<mat<T>&&, T> gauss(mat<T> b, mat<T> a){
 	}
 	return {move(b), det};
 }
-tm(...) _ operator/(mat<T...> b, mat<T...> a){
+tm(...) auto operator/(mat<T...> b, mat<T...> a){
 	return gauss(b,a).first;
 }
 template<typename T>
 T det(const mat<T>& a){
 	return gauss(mat<T>(a.r, 1), a).second;
 }
-tm(...) _& operator<<(ostream& os, mat<T...> const& m){
+tm(...) auto& operator<<(ostream& os, mat<T...> const& m){
 	os<<"mat{"<<endl;
 	fo(i,m.r){
 		copy(m[i], m[i]+m.c, make_ostream_joiner(os, delim));
@@ -90,7 +90,7 @@ tm(...) _& operator<<(ostream& os, mat<T...> const& m){
 	return os<<"}";
 }
 template<typename T>
-_ lin_recur(vc<T> const& c, ll n){
+auto lin_recur(vc<T> const& c, ll n){
 	mat<T> m{size(c), size(c)};
 	copy(al(c), m[0]);
 	fo(i,1,size(c)){

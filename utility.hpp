@@ -4,19 +4,19 @@ struct with {
 	with(ll new_, ll& v_):old(v_), v(v_){v = new_;}
 	~with(){v = old;}
 };
-_ fix($ func){
+auto fix($ func){
 	// Helper for lambda recursive functions
-	return [=](_... args) {return func(fix(func), args...);};
+	return [=](auto... args) {return func(fix(func), args...);};
 }
-#define lambda(f) [&](_... args){return f(args...);}
-_ maxeq(_&& x, _ const& y){
+#define lambda(f) [&](auto... args){return f(args...);}
+auto maxeq(auto&& x, auto const& y){
 	x = max(x, y);
 }
-_ mineq(_&& x, _ const& y){
+auto mineq(auto&& x, auto const& y){
 	x = min(x, y);
 }
 template<typename T>
-_ cache($ f){
+auto cache($ f){
 	T ch;
 	return [=]($ arg) mutable {
 		if(ch.find(arg) == end(ch)){
@@ -26,16 +26,16 @@ _ cache($ f){
 	};
 }
 template<typename Eq = equal_to<>, typename T = less<>>
-_ uniq(_& v, Eq const& up = Eq{}, T const& sp = T{}){
+auto uniq(auto& v, Eq const& up = Eq{}, T const& sp = T{}){
 	sort(al(v), sp);
 	v.resize(unique(al(v), up)-begin(v));
 	return v;
 }
 template<typename T = less<>>
-_ map_args($ f, T g = T{}){
+auto map_args($ f, T g = T{}){
 	return [&]($... args){return g(f(args)...);};
 }
-_ prev_less($ v){
+auto prev_less($ v){
 	ll n = v.size();
 	vl l(n,-1);
 	stack<ll> s;
@@ -50,7 +50,7 @@ _ prev_less($ v){
 	}
 	return l;
 }
-_ nx2(_ x){
+auto nx2(auto x){
 	return ll(1LL)<<ll(ceil(log2(lli(x))));
 }
 ll next_comb(ll x){

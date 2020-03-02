@@ -1,17 +1,17 @@
 vl divs;
-_ prime(_ n){
+auto prime(auto n){
 	assert(n>=2);
 	if(n < divs.size()){
 		return divs[n] == n;
 	}
 	with _m{n,M};
 	ll tz = __builtin_ctz(n-1);
-	_ b = (n-1)>>tz;
+	auto b = (n-1)>>tz;
 	dbg(b);
-	_ prime_a = [&](md const& a){
+	auto prime_a = [&](md const& a){
 		dbg(a);
 		if(a==0){return true;}
-		_ p = power(a,b);
+		auto p = power(a,b);
 		if(p==1){return true;}
 		fo(i,tz){
 			if(p == -1){return true;}
@@ -34,11 +34,11 @@ vl divisors(ll x){
 	}
 	return v;
 }
-_ sieve(ll n){
+auto sieve(ll n){
 	vl d(n), ps;
 	fo(i,2,n){
 		if(d[i] == 0){ps.pb(d[i] = i);}
-		for(_ p: ps){
+		for(auto p: ps){
 			if(!(p<=d[i] && p*i < n)){break;}
 			assert(d[p*i] == 0);
 			d[p*i] = p;
@@ -57,7 +57,7 @@ um fac(ll n){
 	else if(!prime(n)) {
 		with _m{n,M};
 		for(md c = 0;g == n;++c){
-			_ const f = [&]($ x){return x*x+x+c;};
+			auto const f = [&]($ x){return x*x+x+c;};
 			for(md a = 0, b = a; a = f(a), b = f(f(b)), (g = gcd(ll(a-b),n)) == 1;){}
 		}
 	}
@@ -67,7 +67,7 @@ um fac(ll n){
 	assert(1 < g && g < n && !(n%g));
 	return fac(g) + fac(n/g);
 }
-void egcd($ a, $ b, _& x, _& y){a?egcd(b%a, a, y, x),x-=b/a*y:(x=0,y=1);}
+void egcd($ a, $ b, auto& x, auto& y){a?egcd(b%a, a, y, x),x-=b/a*y:(x=0,y=1);}
 ll totient(ll n){
 	auto fact = fac(n);
 	for(const auto& p:fact){

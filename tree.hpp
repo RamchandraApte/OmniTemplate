@@ -9,9 +9,9 @@ tm() struct no {
 			pa = pa->p[i];
 		}
 	}
-	_ gt(ll h){
+	auto gt(ll h){
 		bt b(h);
-		_ x = &this;
+		auto x = &this;
 		fo(i,sz){
 			if(b[i]){
 				x = x->p[i];
@@ -22,9 +22,9 @@ tm() struct no {
 	operator bool(){
 		return p[0] != &this;
 	}
-	_ dp(){
+	auto dp(){
 		bt b;
-		_ x = this;
+		auto x = this;
 		for($ i:rev(ra{sz})){
 			if(*x.p[i]){
 				x = *x.p[i];
@@ -34,7 +34,7 @@ tm() struct no {
 		return ll(b.to_ullong())+1;
 	}
 };
-tm() _ lca(no<T>* a, no<T>* b){
+tm() auto lca(no<T>* a, no<T>* b){
 	ll da = a->dp(), db = b->dp();
 	if(da > db){swap(a,b);}
 	b = b->gt(db-da);

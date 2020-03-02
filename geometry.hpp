@@ -19,7 +19,7 @@ auto ccw(pt a, pt b, pt c){
 	}
 	return w > 0;
 }
-auto hull(_& v, df(do_sort, true)){
+auto hull(auto& v, df(do_sort, true)){
 	if(do_sort){
 		const auto p = *min_element(al(v), map_args([](pt a){return tuple{imag(a), real(a)};}));
 		sort(al(v), bind(ccw, p, _1, _2));
@@ -38,7 +38,7 @@ auto convex_min(const auto& r, const auto& f){
 }
 struct cht {
 	vc<pt> h;
-	cht(_& v){
+	cht(auto& v){
 		uniq(v, map_args(lambda(imag), equal_to{}),map_args(lambda(conj)));
 		h = dbg(hull(v, false));
 	}

@@ -1,15 +1,15 @@
 struct bigint {
 	vc<ull> v;
 	explicit bigint($ v_): v(v_) {}
-	_ operator[](size_t i) const{
+	auto operator[](size_t i) const{
 		return i<v.size()?v[i]:0;
 	}
 };
-_& operator<<(ostream& os, bigint const& a){
+auto& operator<<(ostream& os, bigint const& a){
 	return os<<a.v;
 }
 #if 0
-_ operator+(bigint const& a, bigint const& b){
+auto operator+(bigint const& a, bigint const& b){
 	#define addo __builtin_add_overflow
 	initializer_list xs{a,b};
 	ull sm = 0;

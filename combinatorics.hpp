@@ -1,11 +1,11 @@
-_ perm(_ a, _ b){
+auto perm(auto a, auto b){
 	using T = tp(a);
 	return accumulate(int_it<T>{a+1-b}, int_it<T>{a+1}, 1LL, multiplies<>{});
 }
-_ fact(_ n){
+auto fact(auto n){
 	return perm(n, n);
 }
-_ choose(_ a, _ b){
+auto choose(auto a, auto b){
 	// Returns a choose b
 	return perm(a, b)/fact(b);
 }

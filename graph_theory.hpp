@@ -1,16 +1,16 @@
 struct edge {
 	ll w, a, b;
-	_ to_tuple() const{
+	auto to_tuple() const{
 		return tuple{w,a,b};
 	}
 };
 bool operator<(edge const& a, edge const& b){
 	return a.to_tuple() < b.to_tuple();
 }
-_& operator<<(ostream& os, edge const& e){
+auto& operator<<(ostream& os, edge const& e){
 	return os<<"edge{"<<e.a<<"-"<<e.w<<"->"<<e.b<<"}";
 }
-_ dist(_ g, _ s){
+auto dist(auto g, auto s){
 	vl d(g.size(),inf), pv(g.size(),-1);
 	pq<pr> q;
 	d[s] = 0;
@@ -23,8 +23,8 @@ _ dist(_ g, _ s){
 		if(di != d[a]){continue;}
 		for($ pb: g[a]){
 			$ [b,w] = pb;
-			_& x = d[b];
-			_ nw = di+w;
+			auto& x = d[b];
+			auto nw = di+w;
 			if(nw < x){
 				pv[b] = a;
 				x = nw;
@@ -34,23 +34,23 @@ _ dist(_ g, _ s){
 	}
 	return array<vl,2>{d,pv};
 }
-_ dist(mat<ll> const& g){
+auto dist(mat<ll> const& g){
 	assert(g.r == g.c);
-	_ n = g.r;
-	_ d = g;
+	auto n = g.r;
+	auto d = g;
 	fo(k,n){
 		fo(i,n){
 			fo(j,n){
-				_& x = d[i][j];
+				auto& x = d[i][j];
 				x = min(x, d[i][k]+d[k][j]);
 			}
 		}
 	}
 	return d;
 }
-_ mst(_ es){
+auto mst(auto es){
 	sort(al(es));
-	_ mi = -inf;
+	auto mi = -inf;
 	for($ e: es){
 		mi = max(mi,max(e.a,e.b));
 	}
@@ -73,7 +73,7 @@ struct gsearch {
 	void operator()(){
 		fo(i,n){if(!v[i]){this(i);}}
 	}
-	_ add(ll j, ll i){
+	auto add(ll j, ll i){
 		d[j] = d[i]+1;
 		p[j] = i;
 	}
@@ -92,7 +92,7 @@ struct dfs: searcher {
 struct bfs: searcher {
 	q.pb(s);
 	for(ll idx = 0; idx < q.size(); ++idx){
-		_ i = q[idx];
+		auto i = q[idx];
 		if(v[i]){continue;}
 		v[i]=true;
 		for($ j: g[i]){
@@ -102,7 +102,7 @@ struct bfs: searcher {
 	}
 }
 };
-_ trans($ g){
+auto trans($ g){
 	ll n = size(g);
 	vc<vl> h(n);
 	fo(i,n){
@@ -112,12 +112,12 @@ _ trans($ g){
 	}
 	return h;
 }
-_ scc($ g){
+auto scc($ g){
 	// Returns the strongly connected component for each vertex of the graph g.
-	_ h = trans(g);
+	auto h = trans(g);
 	dbg(h);
 	vl cm(size(g), -1);
-	_ assign = fix([&]($ assign, ll u, ll c) -> void {
+	auto assign = fix([&]($ assign, ll u, ll c) -> void {
 			dbg(u);
 			if(cm[u]!=-1){return;}
 			cm[u] = c;
@@ -133,24 +133,24 @@ _ scc($ g){
 	}
 	return cm;
 }
-_ bipartite($ g){
+auto bipartite($ g){
 	bfs b{g};
 	b();
-	_ n = size(g);
+	auto n = size(g);
 	vl s(n);
-	for(_ i:b.q){
-		if(_ x = b.p[i]; x!=-1){s[i] = !s[x];}
+	for(auto i:b.q){
+		if(auto x = b.p[i]; x!=-1){s[i] = !s[x];}
 	}
 	bool bi = true;
 	fo(i,n){
-		for(_ j:g[i]){
+		for(auto j:g[i]){
 			bi &= s[i] != s[j];
 		}
 	}
 	return bi?optional{s}:nullopt;
 }
-_ max_match($ g){
-	_ s = bipartite(g).value();
+auto max_match($ g){
+	auto s = bipartite(g).value();
 	ll n = g.size();
 	vl m(n,-1);
 	for(ll md = -1; md != inf;){
@@ -202,11 +202,11 @@ _ max_match($ g){
 	}
 	return m;
 }
-_ add_edge(vc<vl>& g, ll u, ll v){
+auto add_edge(vc<vl>& g, ll u, ll v){
 	g[u].pb(v);
 	g[v].pb(u);
 }
-_ graph_in(vc<vl>& g, ll m){
+auto graph_in(vc<vl>& g, ll m){
 	fo(i,0,m){
 		I(u);I(v);
 		add_edge(g, --u, --v);

@@ -16,27 +16,27 @@
 #define BEGIN_NS
 #define END_NS
 #endif
-#define fo(i,...) for([[maybe_unused]] _ i: ra{__VA_ARGS__})
-#define fr(i,...) for([[maybe_unused]] _ i: rev(ra{__VA_ARGS__}))
-#define _ auto
+#define fo(i,...) for([[maybe_unused]] auto i: ra{__VA_ARGS__ })
+#define fr(i,...) for([[maybe_unused]] auto i: rev(ra{__VA_ARGS__ }))
+#define auto auto
 #define tp decltype
-#define tm(...) template<typename __VA_ARGS__ T>
+#define tm(...) template<typename __VA_ARGS__  T>
 #define this (*this)
 #define al(v) begin(v),end(v)
 #define I(x) ll x;cin>>x;
-#define $ _ const&
+#define $ auto const&
 #define pb push_back
 #define vc vector
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...)
-#define WARN(msg) [[deprecated(msg)]] _ warn = [](){rel_assert(msg);}; warn();
+#define WARN(msg) [[deprecated(msg)]] auto warn = [](){rel_assert(msg);}; warn();
 //#define TODO(msg) WARN("TODO: " msg)
 #define TODO(msg)
 #define paste2(x,y) x##y
 #define paste(x, y) paste2(x,y)
 #define lets_count lets_add paste(_l, __COUNTER__)
-#define let(a, ...) using a = __VA_ARGS__; lets_count{#__VA_ARGS__, #a};
+#define let(a, ...) using a = __VA_ARGS__ ; lets_count{#__VA_ARGS__ , #a};
 #define import(a) using namespace a; lets_count{#a "::", ""};
 #define df(x, v) remove_const_t<tp(v)> x = v
 using namespace std;
@@ -69,33 +69,33 @@ tm() using pq = std::priority_queue<T, vector<T>, greater<>>;
 let(clock_, high_resolution_clock);
 import(this_thread);
 let(um,unordered_map<ll, ll>);
-tm() _ type_name([[maybe_unused]] T const& v){
+tm() auto type_name([[maybe_unused]] T const& v){
 	string s = __PRETTY_FUNCTION__, tar = "T = ";
-	_ st = s.find(tar)+tar.size();
+	auto st = s.find(tar)+tar.size();
 	return s.substr(st, s.find("]", st)-st);
 }
-_ replace(_ s, $ a, $ b){
+auto replace(auto s, $ a, $ b){
 	ll loc;
 	while((loc = s.find(a)) !=string::npos){
 		s = s.substr(0, loc) + b + s.substr(loc+a.size());
 	}
 	return s;
 }
-_ simple_tp([[maybe_unused]] $ v){
-	_ s = type_name(v);
+auto simple_tp([[maybe_unused]] $ v){
+	auto s = type_name(v);
 	for($ p: lets){
 		s = replace(s, p.first, p.second);
 	}
 	return s;
 }
-_ constexpr inf = ll(numeric_limits<ll>::max())/8;
-_ const delim = ", "s;
-_ constexpr tau = 2*3.1415926535897932384626433L;
+auto constexpr inf = ll(numeric_limits<ll>::max())/8;
+auto const delim = ", "s;
+auto constexpr tau = 2*3.1415926535897932384626433L;
 #include "io.hpp"
 BEGIN_NS
 #include "range.hpp"
 ll depth = -1;
-_ debug($ x, $ name, source_location const& loc = source_location::current()){
+auto debug($ x, $ name, source_location const& loc = source_location::current()){
 	if(debug_mode){
 		fo(i,depth){cerr<<"\t";}
 		cerr<<loc.function_name()<<":"<<loc.line()<<" "<<name<<" = "<<x<<endl;

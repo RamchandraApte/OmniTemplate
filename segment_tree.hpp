@@ -1,36 +1,36 @@
-template<_ op, lli id_ = identity(op)>
+template<auto op, lli id_ = identity(op)>
 struct seg {
 	using T = tp(identity(op));
 	static constexpr T id = id_;
 	ll const n;
 	mutable vc<T> a, z;
-	seg(_ v): n(nx2(v.size())), a(2*n, id), z(2*n){
+	seg(auto v): n(nx2(v.size())), a(2*n, id), z(2*n){
 		copy(al(v), begin(a)+n);
-		for(_ i:rev(ra{n})){
+		for(auto i:rev(ra{n})){
 			dbg(i);
 			a[i] = op(a[2*i],a[2*i+1]);
 		}
 	}
-	const static _ def = -1LL;
-	_ fix(_ l, _& r, _ nl, _& nr) const{
+	const static auto def = -1LL;
+	auto fix(auto l, auto& r, auto nl, auto& nr) const{
 		if(r == def){r = l+1;}
 		if(nr == def){nr = n;}
 		return make_tuple((nl+nr)/2, r<=nl || nr<=l, l<=nl && nr<=r);
 	}
-	_ down(_ i) const{
+	auto down(auto i) const{
 		a[i]+=z[i];
 		if(i<n){
 			fo(j,2){z[2*i+j]+=z[i];}
 		}
 		z[i] = 0;
 	}
-	#define sig _ l, df(r, def), df(i, 1LL), df(nl, 0LL), df(nr, def)
+	#define sig auto l, df(r, def), df(i, 1LL), df(nl, 0LL), df(nr, def)
 	T gt(sig) const {
 		$ [m, dis, over] = fix(l, r, nl, nr);
 		down(i);
 		return dis?id:over?a[i]:op(gt(l, r, 2*i, nl, m), gt(l, r, 2*i+1, m, nr));
 	}
-	_ up(_ v, sig){
+	auto up(auto v, sig){
 		$ [m, dis, over] = fix(l, r, nl, nr);
 		if(dis||over){
 			if(over){
@@ -44,8 +44,8 @@ struct seg {
 		a[i] = op(a[2*i], a[2*i+1]);
 	}
 };
-template<_... args>
- _& operator<<(ostream& os, seg<args...> const& sg){
+template<auto... args>
+ auto& operator<<(ostream& os, seg<args...> const& sg){
 	os<<"seg{vl{";
 	fo(i,sg.n){
 		if(i){os<<delim;}
@@ -55,14 +55,14 @@ template<_... args>
 }
 tm() struct lazy_ptr {
 	mutable T* ptr;
-	_ operator->() const{
+	auto operator->() const{
 		if(!ptr){
 			ptr = new T{};
 		}
 		return ptr;
 	}
 	lazy_ptr(): ptr{nullptr} {}
-	_& operator*() const{
+	auto& operator*() const{
 		return *(this.operator->());
 	}
 	operator bool() const{
@@ -71,7 +71,7 @@ tm() struct lazy_ptr {
 };
 tm() struct pers_ptr {
 	mutable T* ptr;
-	_ operator->() const {
+	auto operator->() const {
 		if(ptr){
 			dbg("creatin");
 			ptr = new T{*ptr};
@@ -83,14 +83,14 @@ tm() struct pers_ptr {
 		return ptr;
 	}
 	pers_ptr(): ptr{nullptr} {}
-	_& operator*() const{
+	auto& operator*() const{
 		return *(this.operator->());
 	}
 	operator bool() const{
 		return ptr;
 	}
 };
-_ up_inv($ s, $ i){
+auto up_inv($ s, $ i){
 	s.v(i).a = s.op(s.v(gl(i)).a,s.v(gr(i)).a);
 }
 tm() struct no_v {
@@ -112,14 +112,14 @@ template<typename T>
 using mypers = pers_ptr<no_ptr_v<T, pers_ptr>>;
 template<typename T>
 using mylazy = lazy_ptr<no_ptr_v<T, lazy_ptr>>;
-_& gl($ ptr){
+auto& gl($ ptr){
 	return ptr->l_;
 }
-_& gr($ ptr){
+auto& gr($ ptr){
 	return ptr->r_;
 }
 tm() struct seg_base {
-	_& v(T const& x) const{
+	auto& v(T const& x) const{
 		return x->v;
 	}
 	bool ok(T const& x) const{
@@ -135,10 +135,10 @@ tm() no_impl<T> gl(no_impl<T> const& x) {return ll(x.i)<<ll(1);}
 tm() no_impl<T> gr(no_impl<T> const& x) {return gl(x).i|ll(1);}
 tm() struct seg_base<no_impl<T>> {
 	mutable vc<T> v_;
-	_& v(no_impl<T> x) const{
+	auto& v(no_impl<T> x) const{
 		return v_[x.i];
 	}
-	_ ok(no_impl<T> x) const{
+	auto ok(no_impl<T> x) const{
 		return x.i < v_.size();
 	}
 	seg_base($ n, $ id): v_(2*n){
@@ -146,7 +146,7 @@ tm() struct seg_base<no_impl<T>> {
 		fo(i,n){
 			v(n+i).a = d[i];
 		}
-		for(_ i:rev(ra{n})){
+		for(auto i:rev(ra{n})){
 			up_inv(this, dbg(i));
 		}*/
 	}
@@ -163,20 +163,20 @@ struct seg2: seg_base<No> {
 	vc<No> h;
 	#define v this.v
 	seg2(ll n_): seg_base<No>(nx2(n_), 0LL), n{nx2(n_)}, id{identity(op)}, ro{} {}
-	const static _ def = -1LL;
+	const static auto def = -1LL;
 	ll l, r;
-	_ mid(ll nl, ll nr) const {
+	auto mid(ll nl, ll nr) const {
 		return ll(nl+nr)>>ll(1);
 	}
-	_ dis(ll nl, ll nr) const {
+	auto dis(ll nl, ll nr) const {
 		return r<=nl || nr<=l;
 	}
-	_ over(ll nl, ll nr) const {
+	auto over(ll nl, ll nr) const {
 		return l<=nl && nr<=r;
 	}
-	_ down(No const& i, bool d) const{
+	auto down(No const& i, bool d) const{
 		v(i).a+=v(i).z;
-		//for(_ x: initializer_list<reference_wrapper<No>>{gl(i), gr(i)}){
+		//for(auto x: initializer_list<reference_wrapper<No>>{gl(i), gr(i)}){
 		#define do_lazy(x) if(d){v(x).a+=v(i).z;}
 		do_lazy(gl(i));
 		do_lazy(gr(i));
@@ -185,21 +185,21 @@ struct seg2: seg_base<No> {
 	#define sig No const& i, ll nl, ll nr
 	T gt(sig) const {
 		dbg(nl);dbg(nr);dbg(v(i).a);
-		_ m = mid(nl, nr);
+		auto m = mid(nl, nr);
 		down(i,nr-nl!=1);
 		return dis(nl, nr)?id:over(nl, nr)?v(i).a:op(gt(gl(i), nl, m), gt(gr(i), m, nr));
 	}
-	_ gt(ll l_, ll r_){
+	auto gt(ll l_, ll r_){
 		l = l_; r = r_;
 		return gt(ro, 0, n);
 	}
-	_ gt(ll l){
+	auto gt(ll l){
 		return gt(l, l+1);
 	}
-	_ up(T const& val, sig){
+	auto up(T const& val, sig){
 		//dbg(i.i);dbg(val);dbg(nl);dbg(nr);
 		//cerr<<i.i<<" "<<val<<" "<<nl<<" "<<nr<<endl;
-		_ m = mid(nl, nr);
+		auto m = mid(nl, nr);
 		if(over(nl,nr)){
 			dbg(nl);dbg(nr);
 			v(i).z+=val;
@@ -214,21 +214,21 @@ struct seg2: seg_base<No> {
 		up_inv(this, i);
 		//cerr<<"exiting: "<<i.i<<endl;
 	}
-	_ up(_ val, ll l_, ll r_){
+	auto up(auto val, ll l_, ll r_){
 		l = l_; r = r_;
 		h.pb(ro);
 		up(val, ro, 0, n);
 	}
-	_ up(_ val, ll l){
+	auto up(auto val, ll l){
 		up(val, l, l+1);
 	}
 };
 #undef v
 struct mymax {
-	_ operator()(ll x, ll y) const{
+	auto operator()(ll x, ll y) const{
 		return max(x,y);
 	};
 };
-_ identity(mymax){
+auto identity(mymax){
 	return -inf;
 }

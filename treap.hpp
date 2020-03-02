@@ -28,11 +28,11 @@ template<typename Key, typename Data>
 Data get_data(treap<Key, Data>* trp){
 	return trp?trp->data:Data{};
 }
-void update_data(_* trp){
+void update_data(auto* trp){
 	if(!trp){return;}
 	trp->data = get_data(trp->l)+get_data(trp->r);
 }
-void split(_* trp, _ const& key, _*& l, _*& r){
+void split(auto* trp, auto const& key, auto*& l, auto*& r){
 	// Splits the treap by key
 	if(!trp){l=r=nullptr;}
 	else if(key < trp->key){
@@ -49,7 +49,7 @@ template<typename Trp>
 [[nodiscard]] Trp* join(Trp* l, Trp* r){
 	// All the keys in l are less than the keys in r
 	down(l); down(r);
-	_ ret = [&](){
+	auto ret = [&](){
 		if(!l){return r;}
 		else if(!r){return l;}
 		else if(l->pri < r->pri){
@@ -76,10 +76,10 @@ void insert(Trp*& trp, Trp* x){
 	update_data(trp);
 }
 template<typename Trp>
-_ insert(Trp*& trp, _ const& key){
+auto insert(Trp*& trp, auto const& key){
 	return insert(trp, new Trp{key});
 }
-void erase(_*& trp, const _& key){
+void erase(auto*& trp, const auto& key){
 	if(trp->key == key){
 		trp = join(trp->l, trp->r);
 	}
@@ -89,7 +89,7 @@ void erase(_*& trp, const _& key){
 	update_data(trp);
 }
 // Implicit treaps
-void down(_* trp){
+void down(auto* trp){
 	if(!(trp && trp->rev)){return;}
 	swap(trp->l, trp->r);
 	#define flip(x) if(trp->x){trp->x->rev^=1;}
@@ -98,7 +98,7 @@ void down(_* trp){
 	#undef flip
 	trp->rev=0;
 }
-void split_imp(_* trp, ll pos, _*& l, _*& r, ll sum = 0){
+void split_imp(auto* trp, ll pos, auto*& l, auto*& r, ll sum = 0){
 	// Splits the treap by pos
 	if(!trp){
 		l=r=nullptr;
@@ -139,7 +139,7 @@ auto get_imp(Trp*& trp, ll pos){
 	return x->key;
 }
 template<typename Trp>
-_ insert_imp(Trp*& trp, _ const& key, ll pos){
+auto insert_imp(Trp*& trp, auto const& key, ll pos){
 	return insert_imp(trp, new Trp{key}, pos);
 }
 template<typename T, typename... Ts>

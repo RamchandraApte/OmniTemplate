@@ -1,16 +1,16 @@
-_ constexpr operator-($ a, $ b){
+auto constexpr operator-($ a, $ b){
 	return a + -b;
 }
-_ constexpr operator!=($ a, $ b){
+auto constexpr operator!=($ a, $ b){
 	return !(a==b);
 }
-_ operator<=($ a, $ b){
+auto operator<=($ a, $ b){
 	return !(b < a);
 }
-_ operator>=($ a, $ b){
+auto operator>=($ a, $ b){
 	return b <= a;
 }
-_ operator>($ a, $ b){
+auto operator>($ a, $ b){
 	return b < a;
 }
 tm() using uset = unordered_set<T>;
@@ -20,13 +20,13 @@ um operator+(um a, um const& b){
 	}
 	return a;
 }
-tm() _ operator|(uset<T> const& a, uset<T> const& b){
+tm() auto operator|(uset<T> const& a, uset<T> const& b){
 	$ [sm, bg] = minmax(a, b);
-	_ ret = bg;
+	auto ret = bg;
 	ret.insert(al(sm));
 	return ret;
 };
-tm() _ operator&(uset<T> const& a, uset<T> const& b){
+tm() auto operator&(uset<T> const& a, uset<T> const& b){
 	$ [sm, bg] = minmax(a, b);
 	uset<T> ret;
 	for($ x: sm){
@@ -36,7 +36,7 @@ tm() _ operator&(uset<T> const& a, uset<T> const& b){
 	}
 	return ret;
 }
-tm() _ sub_set(uset<T> const& a, uset<T> const& b, uset<T>& ret){
+tm() auto sub_set(uset<T> const& a, uset<T> const& b, uset<T>& ret){
 	for($ x: a){
 		if(!b.count(x)){
 			ret.insert(x);
@@ -44,16 +44,16 @@ tm() _ sub_set(uset<T> const& a, uset<T> const& b, uset<T>& ret){
 	}
 	return ret;
 }
-tm() _ operator-(uset<T> const& a, uset<T> const& b){	
+tm() auto operator-(uset<T> const& a, uset<T> const& b){	
 	uset<T> ret;
 	return sub_set(a,b,ret);
 }
-tm() _ operator^(uset<T> const& a, uset<T> const& b){
+tm() auto operator^(uset<T> const& a, uset<T> const& b){
 	uset<T> ret = a-b;
 	sub_set(b, a, ret);
 	return ret;
 }
-tm() _ operator*(vc<T> a, vc<T> b){
+tm() auto operator*(vc<T> a, vc<T> b){
 	assert(a.size() == b.size());
 	vc<T> c(a.size());
 	fo(i,a.size()){
@@ -61,7 +61,7 @@ tm() _ operator*(vc<T> a, vc<T> b){
 	}
 	return c;
 }
-_ operator+(_ it, enable_if_t<!is_same<typename iterator_traits<tp(it)>::iterator_category, random_access_iterator_tag>::value, size_t> n){
+auto operator+(auto it, enable_if_t<!is_same<typename iterator_traits<tp(it)>::iterator_category, random_access_iterator_tag>::value, size_t> n){
 	advance(it, n);
 	return it;
 }

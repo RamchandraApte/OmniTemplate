@@ -3,9 +3,9 @@ extern const bool multitest;
 #if 0
 string s = __FILE__;
 ifstream input{s.substr(0,s.size()-string{"cpp"}.size())+"in"};
-_& in = input?input:cin;
+auto& in = input?input:cin;
 #else
-_& in = cin;
+auto& in = cin;
 #endif
 int main(int argc, char *argv[]){
 	#ifdef LOCAL

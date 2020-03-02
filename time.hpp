@@ -5,7 +5,7 @@ struct timer {
 		cerr<<"Time duration: "<<duration<ld>(clock_::now()-t1).count()<<" s"<<endl;
 	}
 };
-_ bench(_ a){
+auto bench(auto a){
 	timer _t;
 	dbg(ll(-5)/ll(3));
 	dbg(tp(a)(-5)/tp(a)(3));

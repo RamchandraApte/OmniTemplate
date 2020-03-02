@@ -6,7 +6,7 @@ struct md {
 	template<typename T, typename = enable_if_t<is_integral<T>::value, void>>
 	md(T x_):x(ll(x_)%M){}
 	md(ll x_, no_mod): x(x_) {}
-	explicit operator _(){return x;}
+	explicit operator auto(){return x;}
 };
 md operator+(md const& a, md const& b){
 	ll const sum = a.x+b.x;
@@ -32,10 +32,10 @@ md operator/(id, md const& b){
 	assert(b != 0);
 	return power(b, M-2);
 }
-_ operator/(md const& a, md const& b) {
+auto operator/(md const& a, md const& b) {
 	return a*(id{}/b);
 }
-_& operator<<(ostream& os, md const& m){return os<<m.x;}
+auto& operator<<(ostream& os, md const& m){return os<<m.x;}
 END_NS
 namespace std {
 template<>
