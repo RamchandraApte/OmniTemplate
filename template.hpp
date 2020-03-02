@@ -59,7 +59,7 @@ import(literals);
 import(placeholders)
 let(lli,long long);
 let(ull, unsigned long long);
-#include "my_int.h"
+#include "my_int.hpp"
 let(vl,vector<ll>);
 let(ld,long double)
 let(pr,pair<ll, ll>);
@@ -92,9 +92,9 @@ _ simple_tp([[maybe_unused]] $ v){
 _ constexpr inf = ll(numeric_limits<ll>::max())/8;
 _ co delim = ", "s;
 _ constexpr tau = 2*3.1415926535897932384626433L;
-#include "io.h"
+#include "io.hpp"
 BEGIN_NS
-#include "range.h"
+#include "range.hpp"
 ll depth = -1;
 _ debug($ x, $ name, source_location co& loc = source_location::current()){
 	if(debug_mode){
@@ -104,18 +104,18 @@ _ debug($ x, $ name, source_location co& loc = source_location::current()){
 	--depth;
 	return x;
 }
-#include "dsu.h"
-#include "operations.h"
-#include "utility.h"
-#include "modulo.h"
-#include "number_theory.h"
-#include "linear_algebra.h"
+#include "dsu.hpp"
+#include "operations.hpp"
+#include "utility.hpp"
+#include "modulo.hpp"
+#include "number_theory.hpp"
+#include "linear_algebra.hpp"
 tm() struct ar {using type = T;};
 tm() using ar_t = typename ar<T>::type;
 template<typename T, size_t n>
 struct ar<T[n]>{using type = array<ar_t<T>,n>;};
-#include "combinatorics.h"
-#include "graph_theory.h"
+#include "combinatorics.hpp"
+#include "graph_theory.hpp"
 tm() using bin_op = T(*)(T,T);
 #define ret(x, id) if(f == static_cast<tp(f)>(x)){return id;}
 constexpr ll identity(bin_op<ll co&> co& f){
@@ -127,24 +127,24 @@ constexpr ll identity(bin_op<ll> co& f){
 	ret(gcd<ll>, 0);
 	abort();
 }
-#include "persistent.h"
-#include "time.h"
-#include "fft.h"
-#include "big_integer.h"
-#include "coroutine.h"
-#include "tree.h"
-#include "geometry.h"
+#include "persistent.hpp"
+#include "time.hpp"
+#include "fft.hpp"
+#include "big_integer.hpp"
+#include "coroutine.hpp"
+#include "tree.hpp"
+#include "geometry.hpp"
 using ull = unsigned long long ;
-#include "string.h"
+#include "string.hpp"
 END_NS
-#include "main.h"
+#include "main.hpp"
 BEGIN_NS
 template<typename T, typename V = null_type>
 using omap = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
 END_NS
 BEGIN_NS
-#include "segment_tree.h"
-#include "2sat.h"
+#include "segment_tree.hpp"
+#include "2sat.hpp"
 END_NS
 co bool multitest = false;
 struct random_device_patch { // Random device patch to fix libstdc++'s broken implementation on Windows
@@ -157,5 +157,5 @@ struct random_device_patch { // Random device patch to fix libstdc++'s broken im
 };
 using default_random_device = random_device_patch;
 default_random_engine reng{default_random_device{}()};
-#include "treap.h"
-#include "queue.h"
+#include "treap.hpp"
+#include "queue.hpp"
