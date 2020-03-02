@@ -8,7 +8,7 @@ tm()
 struct pers {
 	using event = pair<ll, T>;
 	set<event, first_cmp> s;
-	auto operator =($ v){
+	auto operator =(const auto& v){
 		event e{tim,v};
 		s.erase(e);
 		s.insert(e);

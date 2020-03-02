@@ -50,7 +50,7 @@ tm()
 auto operator&(range<T> const& a, range<T> const& b){
 return range<T>{max(a.bg, b.bg),min(a.ed, b.ed)};
 }
-auto rev($ r){
+auto rev(const auto& r){
 	using rev_it = reverse_iterator<tp(begin(r))>;
 	return range{rev_it{end(r)}, rev_it{begin(r)}};
 }
@@ -60,7 +60,7 @@ tm() int_it<T> operator -(int_it<T> const& a){return -a.x;}
 enum isect {
 	null, dis, over, cont, eq
 };
-auto intersect($ a, $ b){
+auto intersect(const auto& a, const auto& b){
 	if(a == b){return isect::eq;}
 	if(a[1] <= b[0]){return isect::dis;}
 	if(a[0]<=b[0] && b[1] <= a[1]){return isect::cont;}
@@ -73,7 +73,7 @@ tm() auto operator^(range<T> const& a, range<T> const& b){
 auto filter(vc<ra>& v){
 	sort(al(v));
 	vc<ra> sg;
-	for($ p: v){
+	for(const auto& p: v){
 		if(sg.empty() || sg.back().ed < p.ed){
 			sg.pb(p);
 		}

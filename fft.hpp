@@ -17,7 +17,7 @@
 		i+=2*d;
 	}
 	i = s;
-	for($ x:out){
+	for(const auto& x:out){
 		v[i] = x;
 		i+=d;
 	}
@@ -59,6 +59,6 @@ auto ifft(auto v){
 	return r;
 }
 #endif
-auto conv($ a, $ b){
+auto conv(const auto& a, const auto& b){
 	return ifft(fft(a)*fft(b));
 }

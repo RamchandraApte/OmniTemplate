@@ -1,4 +1,4 @@
-#define aug(op) auto operator op##=(auto& a, $ b){return a = a op b;}
+#define aug(op) auto operator op##=(auto& a, const auto& b){return a = a op b;}
 struct ll {
 	lli x;
 	constexpr ll(long long int x_ = 0): x(x_) {}

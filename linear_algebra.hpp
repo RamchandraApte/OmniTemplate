@@ -5,7 +5,7 @@ tm() struct mat {
 	mat(auto d):r(1),c(1),a{d}{}
 	mat(vc<vc<pr>> const& g):mat(g.size(),g.size(),inf) {
 		fo(i,r){
-			for($ p:g[i]){
+			for(const auto& p:g[i]){
 				auto [x,w] = p;
 				this[i][x] = w;
 			}

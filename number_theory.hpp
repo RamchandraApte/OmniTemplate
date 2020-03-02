@@ -57,7 +57,7 @@ um fac(ll n){
 	else if(!prime(n)) {
 		with _m{n,M};
 		for(md c = 0;g == n;++c){
-			auto const f = [&]($ x){return x*x+x+c;};
+			auto const f = [&](const auto& x){return x*x+x+c;};
 			for(md a = 0, b = a; a = f(a), b = f(f(b)), (g = gcd(ll(a-b),n)) == 1;){}
 		}
 	}
@@ -67,7 +67,7 @@ um fac(ll n){
 	assert(1 < g && g < n && !(n%g));
 	return fac(g) + fac(n/g);
 }
-void egcd($ a, $ b, auto& x, auto& y){a?egcd(b%a, a, y, x),x-=b/a*y:(x=0,y=1);}
+void egcd(const auto& a, const auto& b, auto& x, auto& y){a?egcd(b%a, a, y, x),x-=b/a*y:(x=0,y=1);}
 ll totient(ll n){
 	auto fact = fac(n);
 	for(const auto& p:fact){

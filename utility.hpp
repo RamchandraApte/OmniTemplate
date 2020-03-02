@@ -4,7 +4,7 @@ struct with {
 	with(ll new_, ll& v_):old(v_), v(v_){v = new_;}
 	~with(){v = old;}
 };
-auto fix($ func){
+auto fix(const auto& func){
 	// Helper for lambda recursive functions
 	return [=](auto... args) {return func(fix(func), args...);};
 }
@@ -16,9 +16,9 @@ auto mineq(auto&& x, auto const& y){
 	x = min(x, y);
 }
 template<typename T>
-auto cache($ f){
+auto cache(const auto& f){
 	T ch;
-	return [=]($ arg) mutable {
+	return [=](const auto& arg) mutable {
 		if(ch.find(arg) == end(ch)){
 			ch[arg] = f(arg);
 		}
@@ -32,10 +32,10 @@ auto uniq(auto& v, Eq const& up = Eq{}, T const& sp = T{}){
 	return v;
 }
 template<typename T = less<>>
-auto map_args($ f, T g = T{}){
-	return [&]($... args){return g(f(args)...);};
+auto map_args(const auto& f, T g = T{}){
+	return [&](const auto&... args){return g(f(args)...);};
 }
-auto prev_less($ v){
+auto prev_less(const auto& v){
 	ll n = v.size();
 	vl l(n,-1);
 	stack<ll> s;

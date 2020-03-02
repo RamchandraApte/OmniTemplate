@@ -18,11 +18,11 @@ auto dist(auto g, auto s){
 		q.push({d[i], i});
 	}
 	while(q.size()){
-		$ [di, a] = q.top();
+		const auto& [di, a] = q.top();
 		q.pop();
 		if(di != d[a]){continue;}
-		for($ pb: g[a]){
-			$ [b,w] = pb;
+		for(const auto& pb: g[a]){
+			const auto& [b,w] = pb;
 			auto& x = d[b];
 			auto nw = di+w;
 			if(nw < x){
@@ -51,12 +51,12 @@ auto dist(mat<ll> const& g){
 auto mst(auto es){
 	sort(al(es));
 	auto mi = -inf;
-	for($ e: es){
+	for(const auto& e: es){
 		mi = max(mi,max(e.a,e.b));
 	}
 	dsu d{mi+1};
 	tp(es) ret;
-	for($ e: es){
+	for(const auto& e: es){
 		if(d(e.a,e.b)){continue;}
 		ret.pb(e);
 	}
@@ -68,7 +68,7 @@ struct gsearch {
 	vl v;
 	deque<ll> q;
 	vl p, d;
-	gsearch($ g_): g(g_), n(size(g)), v(n), p(n,-1), d(n) {}
+	gsearch(const auto& g_): g(g_), n(size(g)), v(n), p(n,-1), d(n) {}
 	virtual void operator()(ll) = 0;
 	void operator()(){
 		fo(i,n){if(!v[i]){this(i);}}
@@ -81,7 +81,7 @@ struct gsearch {
 #define searcher public gsearch {using gsearch::operator(), gsearch::gsearch; void operator()(ll s)
 struct dfs: searcher {
 	v[s] = true;
-	for($ j: g[s]){
+	for(const auto& j: g[s]){
 		if(v[j]){continue;}
 		add(j, s);
 		this(j);
@@ -95,14 +95,14 @@ struct bfs: searcher {
 		auto i = q[idx];
 		if(v[i]){continue;}
 		v[i]=true;
-		for($ j: g[i]){
+		for(const auto& j: g[i]){
 			q.pb(j);
 			add(j, i);
 		}
 	}
 }
 };
-auto trans($ g){
+auto trans(const auto& g){
 	ll n = size(g);
 	vc<vl> h(n);
 	fo(i,n){
@@ -112,12 +112,12 @@ auto trans($ g){
 	}
 	return h;
 }
-auto scc($ g){
+auto scc(const auto& g){
 	// Returns the strongly connected component for each vertex of the graph g.
 	auto h = trans(g);
 	dbg(h);
 	vl cm(size(g), -1);
-	auto assign = fix([&]($ assign, ll u, ll c) -> void {
+	auto assign = fix([&](const auto& assign, ll u, ll c) -> void {
 			dbg(u);
 			if(cm[u]!=-1){return;}
 			cm[u] = c;
@@ -133,7 +133,7 @@ auto scc($ g){
 	}
 	return cm;
 }
-auto bipartite($ g){
+auto bipartite(const auto& g){
 	bfs b{g};
 	b();
 	auto n = size(g);
@@ -149,7 +149,7 @@ auto bipartite($ g){
 	}
 	return bi?optional{s}:nullopt;
 }
-auto max_match($ g){
+auto max_match(const auto& g){
 	auto s = bipartite(g).value();
 	ll n = g.size();
 	vl m(n,-1);
@@ -175,7 +175,7 @@ auto max_match($ g){
 		dbg(b.d);
 		dbg(m);
 		dbg(s);
-		auto path = fix([&]($ path, ll i) -> bool{
+		auto path = fix([&](const auto& path, ll i) -> bool{
 			dbg(i);
 			if(v[i]){return false;}
 			v[i] = true;

@@ -1,35 +1,35 @@
-auto constexpr operator-($ a, $ b){
+auto constexpr operator-(const auto& a, const auto& b){
 	return a + -b;
 }
-auto constexpr operator!=($ a, $ b){
+auto constexpr operator!=(const auto& a, const auto& b){
 	return !(a==b);
 }
-auto operator<=($ a, $ b){
+auto operator<=(const auto& a, const auto& b){
 	return !(b < a);
 }
-auto operator>=($ a, $ b){
+auto operator>=(const auto& a, const auto& b){
 	return b <= a;
 }
-auto operator>($ a, $ b){
+auto operator>(const auto& a, const auto& b){
 	return b < a;
 }
 tm() using uset = unordered_set<T>;
 um operator+(um a, um const& b){
-	for($ p:b){
+	for(const auto& p:b){
 		a[p.first]+=p.second;
 	}
 	return a;
 }
 tm() auto operator|(uset<T> const& a, uset<T> const& b){
-	$ [sm, bg] = minmax(a, b);
+	const auto& [sm, bg] = minmax(a, b);
 	auto ret = bg;
 	ret.insert(al(sm));
 	return ret;
 };
 tm() auto operator&(uset<T> const& a, uset<T> const& b){
-	$ [sm, bg] = minmax(a, b);
+	const auto& [sm, bg] = minmax(a, b);
 	uset<T> ret;
-	for($ x: sm){
+	for(const auto& x: sm){
 		if(bg.count(x)){
 			ret.insert(x);
 		}
@@ -37,7 +37,7 @@ tm() auto operator&(uset<T> const& a, uset<T> const& b){
 	return ret;
 }
 tm() auto sub_set(uset<T> const& a, uset<T> const& b, uset<T>& ret){
-	for($ x: a){
+	for(const auto& x: a){
 		if(!b.count(x)){
 			ret.insert(x);
 		}

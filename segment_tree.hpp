@@ -26,12 +26,12 @@ struct seg {
 	}
 	#define sig auto l, df(r, def), df(i, 1LL), df(nl, 0LL), df(nr, def)
 	T gt(sig) const {
-		$ [m, dis, over] = fix(l, r, nl, nr);
+		const auto& [m, dis, over] = fix(l, r, nl, nr);
 		down(i);
 		return dis?id:over?a[i]:op(gt(l, r, 2*i, nl, m), gt(l, r, 2*i+1, m, nr));
 	}
 	auto up(auto v, sig){
-		$ [m, dis, over] = fix(l, r, nl, nr);
+		const auto& [m, dis, over] = fix(l, r, nl, nr);
 		if(dis||over){
 			if(over){
 				z[i]+=v;
@@ -90,7 +90,7 @@ tm() struct pers_ptr {
 		return ptr;
 	}
 };
-auto up_inv($ s, $ i){
+auto up_inv(const auto& s, const auto& i){
 	s.v(i).a = s.op(s.v(gl(i)).a,s.v(gr(i)).a);
 }
 tm() struct no_v {
@@ -112,10 +112,10 @@ template<typename T>
 using mypers = pers_ptr<no_ptr_v<T, pers_ptr>>;
 template<typename T>
 using mylazy = lazy_ptr<no_ptr_v<T, lazy_ptr>>;
-auto& gl($ ptr){
+auto& gl(const auto& ptr){
 	return ptr->l_;
 }
-auto& gr($ ptr){
+auto& gr(const auto& ptr){
 	return ptr->r_;
 }
 tm() struct seg_base {
@@ -125,7 +125,7 @@ tm() struct seg_base {
 	bool ok(T const& x) const{
 		return true;
 	}
-	seg_base($ n, $ id){}
+	seg_base(const auto& n, const auto& id){}
 };
 tm() struct no_impl {
 	ll i;
@@ -141,7 +141,7 @@ tm() struct seg_base<no_impl<T>> {
 	auto ok(no_impl<T> x) const{
 		return x.i < v_.size();
 	}
-	seg_base($ n, $ id): v_(2*n){
+	seg_base(const auto& n, const auto& id): v_(2*n){
 		/*
 		fo(i,n){
 			v(n+i).a = d[i];

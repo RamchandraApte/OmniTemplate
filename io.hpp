@@ -31,7 +31,7 @@ tm(...) auto& operator<<(ostream& os, tuple<T...> t){
 		}, t);
 	return os;
 }
-auto print($ arg1, $... args){
+auto print(const auto& arg1, const auto&... args){
 	cout<<arg1;
 	(void)((cout<<" "<<args),...);
 	cout<<endl;
@@ -41,7 +41,7 @@ namespace std {
 	tm(...) auto& operator<<(ostream& os, pair<T...> const& p){
 		return os<<simple_tp(p)<<"{"<<p.first<<delim<<p.second<<"}";
 	}
-	auto operator<<(ostream& os, $ v) -> decltype(begin(v), declval<tp(os)>()){
+	auto operator<<(ostream& os, const auto& v) -> decltype(begin(v), declval<tp(os)>()){
 		auto ed = begin(v);
 		auto big = v.size()>20;
 		if(big){
@@ -57,8 +57,8 @@ namespace std {
 		}
 		return os<<"}";
 	}
-	auto operator<<(rin& os, $ v) -> decltype(begin(v), declval<tp(os)>()){
-		for($ elem:v){
+	auto operator<<(rin& os, const auto& v) -> decltype(begin(v), declval<tp(os)>()){
+		for(const auto& elem:v){
 			os<<elem;
 		}
 		return os;

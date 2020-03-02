@@ -25,7 +25,7 @@ tm() struct no {
 	auto dp(){
 		bt b;
 		auto x = this;
-		for($ i:rev(ra{sz})){
+		for(const auto& i:rev(ra{sz})){
 			if(*x.p[i]){
 				x = *x.p[i];
 				b[i] = 1;
@@ -39,7 +39,7 @@ tm() auto lca(no<T>* a, no<T>* b){
 	if(da > db){swap(a,b);}
 	b = b->gt(db-da);
 	if(a == b){return a;}
-	for($ i:rev(ra{sz})){
+	for(const auto& i:rev(ra{sz})){
 		if(a->p[i] != b->p[i]){
 			a = a->p[i];
 			b = b->p[i];
