@@ -31,34 +31,33 @@ auto ifft(auto& v){
 }
 #endif
 #if 1
-auto fft(auto v){
+auto fft(auto v) {
 	auto n = nx2(v.size());
-	if(n == 1){return v;}
-	v.resize(n);
-	vc<vc<com>> vs(2, vc<com>(n/2));
-	fo(i,n){
-		vs[i%2][i/2] = v[i];
+	if (n == 1) {
+		return v;
 	}
-	for(auto& x: vs){
+	v.resize(n);
+	vc<vc<com>> vs(2, vc<com>(n / 2));
+	fo(i, n) { vs[i % 2][i / 2] = v[i]; }
+	for (auto &x : vs) {
 		x = fft(x);
 	}
 	vc<com> f(n);
-	fo(i2,n){
-		auto i = i2%(n/2);
-		f[i2] = vs[0][i]+exp(-com{0, double{tau}*double{i2/n}})*vs[1][i];
+	fo(i2, n) {
+		auto i = i2 % (n / 2);
+		f[i2] =
+			vs[0][i] + exp(-com{0, double{tau} * double{i2 / n}}) * vs[1][i];
 		//++cnt;
 	}
 	return f;
 }
-auto ifft(auto v){
-	reverse(begin(v)+1, end(v));
+auto ifft(auto v) {
+	reverse(begin(v) + 1, end(v));
 	auto r = fft(v);
-	for(auto& x: r){
-		x/=com{v.size()};
+	for (auto &x : r) {
+		x /= com{v.size()};
 	}
 	return r;
 }
 #endif
-auto conv(const auto& a, const auto& b){
-	return ifft(fft(a)*fft(b));
-}
+auto conv(const auto &a, const auto &b) { return ifft(fft(a) * fft(b)); }
