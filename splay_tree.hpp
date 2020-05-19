@@ -21,9 +21,9 @@ template <typename T> struct SplayTree {
 	Node *root{};
 	size_t sz{};
 	SplayTree() {}
-	static void attach(Node *&old, Node *const new_) {
-		new_->parent = old->parent;
-		old = new_;
+	static void attach(Node *const par, bool side, Node *const new_) {
+        if(new_){new_->parent = par;}
+		par->child[side] = new_;
 	}
 	static bool side(Node *const child) {
 		return child->parent->child[1] == child;
@@ -33,14 +33,10 @@ template <typename T> struct SplayTree {
 
 		const bool i = side(x);
 
-		if(x->child[!i]){
-      attach(p->child[i], x->child[!i]);
-      attach(x->child[!i], p);
-    }
-    else {
-      x->child[!i] = p;
-      p->parent = x;
-    }
+        if(p->parent){attach(p->parent, side(p), x);}
+        else{x->parent = nullptr;}
+        attach(p, i, x->child[!i]);
+        attach(x, !i, p);
 	}
 	static void splay(Node *const x) {
 		while (x->parent) {
@@ -72,6 +68,7 @@ template <typename T> struct SplayTree {
 			if (!nw) {
 				nw = x;
 				nw->parent = y;
+                root = nw;
 				splay(nw);
 				return;
 			}
@@ -94,12 +91,14 @@ template <typename T> struct SplayTree {
 	}
 	static Node *join(Node *const a, Node *const b) {
 		if (!a) {
+            b->parent = nullptr;
 			return b;
 		}
 		Node *const mx = extremum(a, true);
 		splay(mx);
 		assert(mx->child[1] == nullptr);
 		mx->child[1] = b;
+        mx->parent = nullptr;
 		return mx;
 	}
 	array<Node *, 2> split(Node *const x) {
