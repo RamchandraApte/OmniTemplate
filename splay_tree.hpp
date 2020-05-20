@@ -11,19 +11,23 @@ public:
     using iterator_category = bidirectional_iterator_tag;
 
   public:
-    void operator++() {
-      if (node->child[1]) {
-        node = extremum(node->child[1], false);
-        return;
-      }
-      for (; node->parent && side(node); node = node->parent) {
-      }
-      node = node->parent;
-    }
+    void operator--() { advance<false>(); }
+    void operator++() { advance<true>(); }
     T &operator*() { return node->value; }
     Node *node;
     iterator(Node *node_arg) : node(node_arg) {}
     bool operator==(const iterator oth) const { return this.node == oth.node; }
+
+  private:
+    template <bool dir> void advance() {
+      if (node->child[1]) {
+        node = extremum(node->child[1], !dir);
+        return;
+      }
+      for (; node->parent && side(node) == dir; node = node->parent)
+        ;
+      node = node->parent;
+    }
   };
   Node *root{};
   size_t sz{};
@@ -123,8 +127,8 @@ public:
   }
   Node *find(const T &key) {
     auto x = root;
-    for (; x && key != x->value; x = x->child[key > x->value]) {
-    }
+    for (; x && key != x->value; x = x->child[key > x->value])
+      ;
     return x;
   }
   size_t size() { return sz; }
