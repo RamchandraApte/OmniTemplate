@@ -8,16 +8,25 @@ template <typename T> struct SplayTree {
 		Node *parent{};
 	};
 	struct iterator: public it_base<T> {
+      using iterator_category = bidirectional_iterator_tag;
 	  public:
 		void operator++() {
-      for(;node && side(node); node = node->parent){}
-    }
-    T& operator*(){
-      return node->value;
-    }
-		Node *node;
-    iterator(Node* node_arg): node(node_arg) {}
-	};
+            if(node->child[1]){
+                node = extremum(node->child[1], false);
+                return;
+            }
+            for(;node->parent && side(node); node = node->parent){}
+            node = node->parent;
+        }
+        T& operator*(){
+            return node->value;
+        }
+        Node *node;
+        iterator(Node* node_arg): node(node_arg) {}
+        bool operator==(const iterator oth) const{
+            return this.node == oth.node;
+        }
+    };
 	Node *root{};
 	size_t sz{};
 	SplayTree() {}
@@ -144,12 +153,15 @@ void test_splay_tree() {
 	sp.insert(20);
 	sp.insert(-2);
 	sp.insert(6);
-	for (auto x : {-2, 6, 20}) {
+    vl expected{-2,4,5,6,20};
+    assert(sp.size() == expected.size());
+	for (auto x : expected) {
 		assert(sp.find(x)->value == x);
 	}
-	vl vec;
-  SplayTree<int>::iterator::value_type x1{};
-	//copy(sp.begin(), sp.end(), back_inserter(vec));
-  dbg(vec);
+    SplayTree<int>::iterator::value_type x1{};
+    vl vec;
+	copy(sp.begin(), sp.end(), back_inserter(vec));
+    dbg(vec);
+    assert(vec == expected);
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
