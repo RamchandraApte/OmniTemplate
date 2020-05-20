@@ -1,29 +1,29 @@
 #define aug(op)                                                                \
-	auto operator op##=(auto &a, const auto &b) { return a = a op b; }
+  auto operator op##=(auto &a, const auto &b) { return a = a op b; }
 struct ll {
-	lli x;
-	constexpr ll(long long int x_ = 0) : x(x_) {}
-	constexpr operator auto &() { return x; }
-	constexpr operator lli() const { return x; }
+  lli x;
+  constexpr ll(long long int x_ = 0) : x(x_) {}
+  constexpr operator auto &() { return x; }
+  constexpr operator lli() const { return x; }
 // template<typename T, typename = enable_if_t<is_integral<T>::value, void>>
 // template<typename T, typename = enable_if_t<is_integral<T>::value, void>>
 #define opi(type)                                                              \
-	operator type() { return x; }
-	// opi(double);opi(int);opi(size_t);opi(long double);opi(unsigned
-	// int);opi(bool); constexpr operator T() const{return x;}
-	/*operator bool() const{return x;}
-	operator size_t() const {return x;}
-	operator int128() const {return x;}*/
-	constexpr ll operator-() const { return -x; }
-	ll operator--() {
-		--x;
-		return this;
-	}
-	ll operator++() {
-		++x;
-		return this;
-	}
-	ll operator+=(ll b) { return x += b.x; }
+  operator type() { return x; }
+  // opi(double);opi(int);opi(size_t);opi(long double);opi(unsigned
+  // int);opi(bool); constexpr operator T() const{return x;}
+  /*operator bool() const{return x;}
+  operator size_t() const {return x;}
+  operator int128() const {return x;}*/
+  constexpr ll operator-() const { return -x; }
+  ll operator--() {
+    --x;
+    return this;
+  }
+  ll operator++() {
+    ++x;
+    return this;
+  }
+  ll operator+=(ll b) { return x += b.x; }
 };
 #ifdef __SIZEOF_INT128__
 using int128 = __int128;
@@ -39,35 +39,35 @@ aug(/);
 #define MIX128(...)
 #endif
 #define mix1(op, T1, T2)                                                       \
-	constexpr auto operator op(T1 a, T2 b) {                                   \
-		return static_cast<ll>(a) op static_cast<ll>(b);                       \
-	}
+  constexpr auto operator op(T1 a, T2 b) {                                     \
+    return static_cast<ll>(a) op static_cast<ll>(b);                           \
+  }
 #define mix(op, T1, T2) mix1(op, T1, T2) mix1(op, T2, T1)
 #define mixll(op)                                                              \
-	mix(op, ll, int) mix(op, ll, lli) MIX128(op, ll) mix(op, ll, size_t)       \
-		mix(op, ll, double)
+  mix(op, ll, int) mix(op, ll, lli) MIX128(op, ll) mix(op, ll, size_t)         \
+      mix(op, ll, double)
 #define bill(op)                                                               \
-	constexpr ll operator op(ll const &a, ll const &b) {                       \
-		return lli(a) op lli(b);                                               \
-	}
+  constexpr ll operator op(ll const &a, ll const &b) {                         \
+    return lli(a) op lli(b);                                                   \
+  }
 bill(+) bill(*) bill(|) bill(&) bill(^) bill(<<) bill(>>) constexpr ll
 operator/(ll const &a, ll const &b) {
-	lli x = lli(a) / lli(b), r = lli(a) % lli(b);
-	return x - ((x < 0) && r);
+  lli x = lli(a) / lli(b), r = lli(a) % lli(b);
+  return x - ((x < 0) && r);
 }
 constexpr auto operator<(ll a, ll b) { return lli(a) < lli(b); }
 constexpr auto operator==(ll a, ll b) { return lli(a) == lli(b); }
 constexpr ll operator%(ll a, ll b) {
-	lli x = lli(a) % lli(b);
-	if (lli(x) < 0) {
-		x += lli(b);
-	}
-	return x;
+  lli x = lli(a) % lli(b);
+  if (lli(x) < 0) {
+    x += lli(b);
+  }
+  return x;
 }
 mixll(+) mixll(/) mixll(*) mixll(<) mixll(==) mixll(%) mixll(&) mixll(>>)
-	mixll(<<) auto &
-	operator<<(ostream &os, ll const &a) {
-	return os << a.x;
+    mixll(<<) auto &
+    operator<<(ostream &os, ll const &a) {
+  return os << a.x;
 }
 ll operator"" M(unsigned long long int x) { return x; }
 auto ceil_div(ll x, ll y) { return (x + y - 1) / y; }

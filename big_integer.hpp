@@ -1,7 +1,7 @@
 struct bigint {
-	vc<ull> v;
-	explicit bigint(const auto &v_) : v(v_) {}
-	auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
+  vc<ull> v;
+  explicit bigint(const auto &v_) : v(v_) {}
+  auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
 };
 auto &operator<<(ostream &os, bigint const &a) { return os << a.v; }
 #if 0
