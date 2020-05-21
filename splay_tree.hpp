@@ -21,7 +21,7 @@ public:
   private:
     template <bool dir> void advance() {
       if (node->child[1]) {
-        node = extremum(node->child[1], !dir);
+        node = extremum<!dir>(node->child[1]);
         return;
       }
       for (; node->parent && side(node) == dir; node = node->parent)
@@ -101,16 +101,16 @@ public:
     --sz;
   }
   void erase(const T &key) { erase(find(key)); }
-  static Node *extremum(Node *const x, const bool i) {
+  template <bool i> static Node *extremum(Node *const x) {
     assert(x);
-    return x->child[i] ? extremum(x->child[i], i) : x;
+    return x->child[i] ? extremum<i>(x->child[i]) : x;
   }
   static Node *join(Node *const a, Node *const b) {
     if (!a) {
       b->parent = nullptr;
       return b;
     }
-    Node *const mx = extremum(a, true);
+    Node *const mx = extremum<true>(a);
     splay(mx);
     assert(mx->child[1] == nullptr);
     mx->child[1] = b;
@@ -133,7 +133,7 @@ public:
   }
   size_t size() { return sz; }
   bool empty() { return size() == 0; }
-  iterator begin() { return iterator{extremum(root, false)}; }
+  iterator begin() { return iterator{extremum<false>(root)}; }
   iterator end() { return iterator{nullptr}; }
 };
 void test_splay_tree() {

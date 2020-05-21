@@ -26,7 +26,6 @@
 #define I(x)                                                                   \
   ll x;                                                                        \
   cin >> x;
-#define $ auto const &
 #define pb push_back
 #define vc vector
 bool debug_mode = false;
@@ -54,7 +53,7 @@ vector<pair<string, string>> lets{{"__debug::", ""},
                                   {"const ", ""},
                                   {"__cxx11::basic_string<char>", "string"}};
 struct lets_add {
-  lets_add($ a, $ b) { lets.pb({a, b}); }
+  lets_add(const auto &a, const auto &b) { lets.pb({a, b}); }
 };
 import(__gnu_pbds);
 using __gnu_cxx::power;
@@ -80,16 +79,16 @@ tm() auto type_name([[maybe_unused]] T const &v) {
   auto st = s.find(tar) + tar.size();
   return s.substr(st, s.find("]", st) - st);
 }
-auto replace(auto s, $ a, $ b) {
+auto replace(auto s, const auto &a, const auto &b) {
   ll loc;
   while ((loc = s.find(a)) != string::npos) {
     s = s.substr(0, loc) + b + s.substr(loc + a.size());
   }
   return s;
 }
-auto simple_tp([[maybe_unused]] $ v) {
+auto simple_tp([[maybe_unused]] const auto &v) {
   auto s = type_name(v);
-  for ($ p : lets) {
+  for (const auto &p : lets) {
     s = replace(s, p.first, p.second);
   }
   return s;
@@ -101,7 +100,7 @@ auto constexpr tau = 2 * 3.1415926535897932384626433L;
 BEGIN_NS
 #include "range.hpp"
 ll depth = -1;
-auto debug($ x, $ name,
+auto debug(const auto &x, const auto &name,
            source_location const &loc = source_location::current()) {
   if (debug_mode) {
     fo(i, depth) { cerr << "\t"; }
