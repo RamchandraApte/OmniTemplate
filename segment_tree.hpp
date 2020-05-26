@@ -1,3 +1,5 @@
+#pragma once
+#include "utility.hpp"
 template <auto op, lli id_ = identity(op)> struct seg {
   using T = tp(identity(op));
   static constexpr T id = id_;

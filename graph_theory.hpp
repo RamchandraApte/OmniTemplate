@@ -1,3 +1,7 @@
+#pragma once
+#include "linear_algebra.hpp"
+#include "utility.hpp"
+#include "dsu.hpp"
 struct edge {
   ll w, a, b;
   auto to_tuple() const { return tuple{w, a, b}; }
@@ -204,7 +208,7 @@ auto max_match(const vc<vl> &g) {
         return true;
       }
       for (ll j : g[i]) {
-        if (b.d[j] = b.d[i] + 1) {
+        if (b.d[j] == b.d[i] + 1) {
           if (dbg(path(j))) {
             dbg(j);
             if (s[i] == 0) {

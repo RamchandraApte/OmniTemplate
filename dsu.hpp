@@ -1,3 +1,4 @@
+#pragma once
 struct dsu {
   mutable vl p;
   vl s;

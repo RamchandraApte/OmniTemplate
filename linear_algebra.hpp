@@ -1,3 +1,4 @@
+#pragma once
 tm() struct mat {
   ll r, c;
   vc<T> a;

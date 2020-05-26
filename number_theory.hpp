@@ -1,3 +1,6 @@
+#pragma once
+#include "modulo.hpp"
+#include "utility.hpp"
 vl divs;
 auto prime(ll n) {
   assert(n >= 2);

@@ -154,7 +154,7 @@ constexpr ll identity(bin_op<ll> const &f) {
 #include "tree.hpp"
 #include "geometry.hpp"
 using ull = unsigned long long;
-//#include "string.hpp"
+#include "string.hpp"
 END_NS
 #include "main.hpp"
 BEGIN_NS

@@ -1,3 +1,4 @@
+#include "graph_theory.hpp"
 optional<vc<char>> sat2(const vc<pr> &v) {
   /*
   Takes a 2 SAT instance and returns a solution.

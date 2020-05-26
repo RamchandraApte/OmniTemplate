@@ -2,7 +2,7 @@ struct hash_str {
   static auto constexpr lcg_mod = (1ULL << 62) - 57;
   const char *st;
   vc<md> h, p;
-  explicit hash_str(const auto &s)
+  explicit hash_str(const string &s)
       : st(s.data()), h(s.size() + 1), p(s.size()) {
     with _w{lcg_mod, M};
     md g = 1;
@@ -34,7 +34,7 @@ struct hash_str {
   }
 };
 struct bytehash {
-  auto operator()(const auto &x) const {
+  auto operator()(const string &x) const {
     return hash<string_view>{}(
         string_view{reinterpret_cast<const char *>(&x), sizeof(x)});
   }
@@ -130,7 +130,7 @@ auto operator<(search_it const &a, search_it const &b) {
     return b.ed < b.i;
   }
 }
-auto search_ra(const auto &... args) {
+template <typename... Ts> auto search_ra(const Ts &... args) {
   return range{search_it(args...), search_it()};
 }
 class trie_node {
