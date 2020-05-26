@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 tm() struct it_base {
   using value_type = T;
   using pointer = T *;

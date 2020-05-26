@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 template <typename T> auto perm(T a, T b) {
   return accumulate(int_it<T>{a + 1 - b}, int_it<T>{a + 1}, 1LL,
                     multiplies<>{});

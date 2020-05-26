@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 void main2();
 extern const bool multitest;
 #if 0

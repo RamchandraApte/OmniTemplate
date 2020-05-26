@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 #include "graph_theory.hpp"
 optional<vc<char>> sat2(const vc<pr> &v) {
   /*

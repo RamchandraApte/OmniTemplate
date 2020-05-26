@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 #if 0
  auto fft(auto& v, df(d, 1LL),  df(s, 0LL)){
 	 if(v.size() == d){return;}

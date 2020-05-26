@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 struct bigint {
   vc<ull> v;
   explicit bigint(const vc<ull> &v_) : v(v_) {}

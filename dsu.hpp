@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 struct dsu {
   mutable vl p;
   vl s;

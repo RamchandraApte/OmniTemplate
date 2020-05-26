@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 template <typename T> struct SplayTree {
 public:
   struct Node {

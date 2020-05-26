@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 struct rin {
   istream &in;
   rin(istream &in_) : in(in_) {}

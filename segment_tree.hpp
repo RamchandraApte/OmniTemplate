@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 #include "utility.hpp"
 template <auto op, lli id_ = identity(op)> struct seg {
   using T = tp(identity(op));

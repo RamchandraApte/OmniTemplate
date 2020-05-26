@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 ll const sz = 30;
 tm() struct no {
   vector<no *> p;

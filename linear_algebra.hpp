@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 tm() struct mat {
   ll r, c;
   vc<T> a;

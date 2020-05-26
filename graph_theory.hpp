@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 #include "linear_algebra.hpp"
 #include "utility.hpp"
 #include "dsu.hpp"

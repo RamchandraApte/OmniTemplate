@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 #define CO_SWITCH
 #ifdef CO_SWITCH
 #define cobegin                                                                \

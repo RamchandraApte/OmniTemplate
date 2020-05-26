@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 template <typename T> T power(T a, size_t b) {
   T ret = 1;
   for (; b >>= 1; a *= a) {

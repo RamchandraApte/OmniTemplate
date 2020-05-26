@@ -1,4 +1,5 @@
 #pragma once
+#include "core.hpp"
 #include "modulo.hpp"
 #include "utility.hpp"
 vl divs;
