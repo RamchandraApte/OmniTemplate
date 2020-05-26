@@ -168,3 +168,8 @@ void test_primitive_root() {
   check(6, 5);
   check(7, 3);
 }
+void test_number_theory() {
+  test_totient();
+  test_dlog();
+  test_primitive_root();
+}
