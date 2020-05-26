@@ -1,3 +1,4 @@
+#pragma once
 struct bigint {
   vc<ull> v;
   explicit bigint(const vc<ull> &v_) : v(v_) {}

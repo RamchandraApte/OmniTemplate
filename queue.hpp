@@ -1,3 +1,4 @@
+#pragma once
 /* Queue adaptor, creates a queue using two Stacks left, right
  * If there are at least two elements, left and right are not empty.
  * If there is one element, it is in left.

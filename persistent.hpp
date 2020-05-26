@@ -1,3 +1,4 @@
+#pragma once
 struct first_cmp {
   template <typename T> bool operator()(T a, T b) const {
     return a.first < b.first;

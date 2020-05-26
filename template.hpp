@@ -1,3 +1,4 @@
+#pragma once
 #ifndef PRE
 #if defined(__GNUC__) && !defined(__clang__)
 #define REALGCC

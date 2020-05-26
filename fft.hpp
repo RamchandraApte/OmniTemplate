@@ -1,3 +1,4 @@
+#pragma once
 #if 0
  auto fft(auto& v, df(d, 1LL),  df(s, 0LL)){
 	 if(v.size() == d){return;}

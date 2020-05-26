@@ -1,3 +1,4 @@
+#pragma once
 struct hash_str {
   static auto constexpr lcg_mod = (1ULL << 62) - 57;
   const char *st;

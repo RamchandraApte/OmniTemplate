@@ -1,3 +1,4 @@
+#pragma once
 ll const sz = 30;
 tm() struct no {
   vector<no *> p;

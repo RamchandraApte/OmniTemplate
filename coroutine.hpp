@@ -1,3 +1,4 @@
+#pragma once
 #define CO_SWITCH
 #ifdef CO_SWITCH
 #define cobegin                                                                \

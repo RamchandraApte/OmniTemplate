@@ -1,3 +1,4 @@
+#pragma once
 tm() struct it_base {
   using value_type = T;
   using pointer = T *;

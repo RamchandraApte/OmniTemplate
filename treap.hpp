@@ -1,3 +1,4 @@
+#pragma once
 template <typename Key, typename Data> struct treap {
   treap *l{}, *r{}; // left and right nodes
   ll pri{};         // random heap priority

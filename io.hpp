@@ -1,3 +1,4 @@
+#pragma once
 struct rin {
   istream &in;
   rin(istream &in_) : in(in_) {}

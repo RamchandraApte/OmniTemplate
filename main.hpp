@@ -1,3 +1,4 @@
+#pragma once
 void main2();
 extern const bool multitest;
 #if 0

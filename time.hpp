@@ -1,3 +1,4 @@
+#pragma once
 struct timer {
   tp(clock_::now()) t1;
   timer() : t1(clock_::now()) {}
