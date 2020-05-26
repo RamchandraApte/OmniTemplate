@@ -8,8 +8,8 @@ template <typename Func> struct fix {
   // Helper for lambda recursive functions
   Func func;
   fix(const Func &func_) : func(func_) {}
-  template <typename... Ts> auto operator()(Ts... args) const {
-    return func(this, args...);
+  template <typename... Ts> auto operator()(Ts &&... args) const {
+    return func(this, forward<decltype(args)>(args)...);
   }
 };
 #define lambda(f) [&](auto... args) { return f(args...); }
