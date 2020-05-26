@@ -1,8 +1,8 @@
 #pragma once
 #include "core.hpp"
+#include "dsu.hpp"
 #include "linear_algebra.hpp"
 #include "utility.hpp"
-#include "dsu.hpp"
 struct edge {
   ll w, a, b;
   auto to_tuple() const { return tuple{w, a, b}; }
