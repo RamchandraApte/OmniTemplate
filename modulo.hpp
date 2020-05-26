@@ -48,9 +48,24 @@ template <typename Stream> auto &operator<<(Stream &os, md const &m) {
   return os << m.x;
 }
 END_NS
+void test_power() {
+  assert(power(2, 3) == 8);
+  assert(power(3, 10) == 59049);
+  with _m{static_cast<ll>(1e9 + 7), M};
+  assert(power(md{3}, 1000) == md{56888193});
+}
+void test_md() {
+  with _m{7, M};
+  assert(md{34} / md{-2} == md{4});
+  assert(md{2} - md{6} == md{3});
+}
 namespace std {
 template <> struct hash<md> {
   size_t operator()(md const &x) const { return x.x; }
 };
 } // namespace std
+void test_modulo() {
+  test_power();
+  test_md();
+}
 BEGIN_NS
