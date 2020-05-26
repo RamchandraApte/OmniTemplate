@@ -31,7 +31,7 @@ auto ifft(auto& v){
 }
 #endif
 #if 1
-auto fft(auto v) {
+template <typename Cont> vc<com> fft(Cont v) {
   auto n = nx2(v.size());
   if (n == 1) {
     return v;
@@ -50,7 +50,7 @@ auto fft(auto v) {
   }
   return f;
 }
-auto ifft(auto v) {
+template <typename Cont> vc<com> ifft(Cont v) {
   reverse(begin(v) + 1, end(v));
   auto r = fft(v);
   for (auto &x : r) {
@@ -59,4 +59,6 @@ auto ifft(auto v) {
   return r;
 }
 #endif
-auto conv(const auto &a, const auto &b) { return ifft(fft(a) * fft(b)); }
+template <typename Cont> auto conv(const Cont &a, const Cont &b) {
+  return ifft(fft(a) * fft(b));
+}

@@ -4,14 +4,18 @@ struct with {
   with(ll new_, ll &v_) : old(v_), v(v_) { v = new_; }
   ~with() { v = old; }
 };
-auto fix(const auto &func) {
+template <typename Func> struct fix {
   // Helper for lambda recursive functions
-  return [=](auto... args) { return func(fix(func), args...); };
-}
+  Func func;
+  fix(const Func &func_) : func(func_) {}
+  template <typename... Ts> auto operator()(Ts... args) const {
+    return func(this, args...);
+  }
+};
 #define lambda(f) [&](auto... args) { return f(args...); }
-auto maxeq(auto &&x, auto const &y) { x = max(x, y); }
-auto mineq(auto &&x, auto const &y) { x = min(x, y); }
-template <typename T> auto cache(const auto &f) {
+template <typename T> auto maxeq(T &&x, const T &y) { x = max(x, y); }
+template <typename T> auto mineq(T &&x, const T &y) { x = min(x, y); }
+template <typename T> auto cache(const T &f) {
   T ch;
   return [=](const auto &arg) mutable {
     if (ch.find(arg) == end(ch)) {
@@ -20,16 +24,17 @@ template <typename T> auto cache(const auto &f) {
     return ch[arg];
   };
 }
-template <typename Eq = equal_to<>, typename T = less<>>
-auto uniq(auto &v, Eq const &up = Eq{}, T const &sp = T{}) {
+template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
+auto uniq(Cont &v, Eq const &up = Eq{}, T const &sp = T{}) {
   sort(al(v), sp);
   v.resize(unique(al(v), up) - begin(v));
   return v;
 }
-template <typename T = less<>> auto map_args(const auto &f, T g = T{}) {
+template <typename T = less<>, typename Func>
+auto map_args(const Func &f, T g = T{}) {
   return [&](const auto &... args) { return g(f(args)...); };
 }
-auto prev_less(const auto &v) {
+template <typename T> auto prev_less(const T &v) {
   ll n = v.size();
   vl l(n, -1);
   stack<ll> s;
@@ -44,7 +49,7 @@ auto prev_less(const auto &v) {
   }
   return l;
 }
-auto nx2(auto x) { return ll(1LL) << ll(ceil(log2(lli(x)))); }
+auto nx2(ll x) { return ll(1LL) << ll(ceil(log2(lli(x)))); }
 ll next_comb(ll x) {
   ll tz = __builtin_ctz(x);
   ll y = x + (ll{1} << tz);

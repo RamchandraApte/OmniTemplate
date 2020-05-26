@@ -1,5 +1,5 @@
 vl divs;
-auto prime(auto n) {
+auto prime(ll n) {
   assert(n >= 2);
   if (n < divs.size()) {
     return divs[n] == n;
@@ -30,7 +30,7 @@ auto prime(auto n) {
 }
 vl divisors(ll x) {
   vl v;
-  fo(d, 1, ll{ceil(sqrt(ld{x}))} + 1) {
+  fo(d, 1, static_cast<ll>(ceil(sqrt(static_cast<ld>(x)))) + 1) {
     if (!(x % d)) {
       v.pb(d);
       if (ll y = x / d; d != y) {
@@ -81,7 +81,7 @@ um fac(ll n) {
   assert(1 < g && g < n && !(n % g));
   return fac(g) + fac(n / g);
 }
-void egcd(const auto &a, const auto &b, auto &x, auto &y) {
+void egcd(const ll a, const ll b, ll &x, ll &y) {
   a ? egcd(b % a, a, y, x), x -= b / a * y : (x = 0, y = 1);
 }
 ll totient(ll n) {

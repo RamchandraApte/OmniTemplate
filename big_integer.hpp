@@ -1,9 +1,11 @@
 struct bigint {
   vc<ull> v;
-  explicit bigint(const auto &v_) : v(v_) {}
+  explicit bigint(const vc<ull> &v_) : v(v_) {}
   auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
 };
-auto &operator<<(ostream &os, bigint const &a) { return os << a.v; }
+template <typename Stream> auto &operator<<(Stream &os, bigint const &a) {
+  return os << a.v;
+}
 #if 0
 auto operator+(bigint const& a, bigint const& b){
 #define addo __builtin_add_overflow

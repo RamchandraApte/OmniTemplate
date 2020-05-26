@@ -1,3 +1,12 @@
+template <typename T> T power(T a, size_t b) {
+  T ret = 1;
+  for (; b >>= 1; a *= a) {
+    if (b & 1) {
+      ret *= a;
+    }
+  }
+  return ret;
+}
 ll M = 1e9 + 7; // modulus
 struct no_mod {};
 struct md {
@@ -33,7 +42,9 @@ md operator/(id, md const &b) {
   return power(b, M - 2);
 }
 auto operator/(md const &a, md const &b) { return a * (id{} / b); }
-auto &operator<<(ostream &os, md const &m) { return os << m.x; }
+template <typename Stream> auto &operator<<(Stream &os, md const &m) {
+  return os << m.x;
+}
 END_NS
 namespace std {
 template <> struct hash<md> {

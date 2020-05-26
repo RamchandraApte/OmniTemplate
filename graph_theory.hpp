@@ -5,10 +5,10 @@ struct edge {
 bool operator<(edge const &a, edge const &b) {
   return a.to_tuple() < b.to_tuple();
 }
-auto &operator<<(ostream &os, edge const &e) {
+template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
   return os << "edge{" << e.a << "-" << e.w << "->" << e.b << "}";
 }
-auto dist(auto g, auto s) {
+auto dist(vector<vector<pr>> g, ll s) {
   vl d(g.size(), inf), pv(g.size(), -1);
   pq<pr> q;
   d[s] = 0;
@@ -46,7 +46,7 @@ auto dist(mat<ll> const &g) {
   }
   return d;
 }
-auto mst(auto es) {
+auto mst(vector<edge> es) {
   sort(al(es));
   auto mi = -inf;
   for (const auto &e : es) {
@@ -68,7 +68,8 @@ struct gsearch {
   vl v;
   deque<ll> q;
   vl p, d;
-  gsearch(const auto &g_) : g(g_), n(size(g)), v(n), p(n, -1), d(n) {}
+  gsearch(const vector<vector<ll>> &g_)
+      : g(g_), n(size(g)), v(n), p(n, -1), d(n) {}
   virtual void operator()(ll) = 0;
   void operator()() {
     fo(i, n) {
@@ -116,7 +117,7 @@ struct bfs : searcher {
 }
 }
 ;
-auto trans(const auto &g) {
+auto trans(const vc<vl> &g) {
   ll n = size(g);
   vc<vl> h(n);
   fo(i, n) {
@@ -126,12 +127,12 @@ auto trans(const auto &g) {
   }
   return h;
 }
-auto scc(const auto &g) {
+auto scc(const vc<vl> &g) {
   // Returns the strongly connected component for each vertex of the graph g.
   auto h = trans(g);
   dbg(h);
   vl cm(size(g), -1);
-  auto assign = fix([&](const auto &assign, ll u, ll c) -> void {
+  auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
     dbg(u);
     if (cm[u] != -1) {
       return;
@@ -140,7 +141,7 @@ auto scc(const auto &g) {
     for (ll v : h[u]) {
       assign(v, c);
     }
-  });
+  }};
   dfs s{g};
   s();
   dbg(s.q);
@@ -149,7 +150,7 @@ auto scc(const auto &g) {
   }
   return cm;
 }
-auto bipartite(const auto &g) {
+auto bipartite(const vc<vl> &g) {
   bfs b{g};
   b();
   auto n = size(g);
@@ -167,7 +168,7 @@ auto bipartite(const auto &g) {
   }
   return bi ? optional{s} : nullopt;
 }
-auto max_match(const auto &g) {
+auto max_match(const vc<vl> &g) {
   auto s = bipartite(g).value();
   ll n = g.size();
   vl m(n, -1);
@@ -193,7 +194,7 @@ auto max_match(const auto &g) {
     dbg(b.d);
     dbg(m);
     dbg(s);
-    auto path = fix([&](const auto &path, ll i) -> bool {
+    auto path = fix{[&](const auto &path, ll i) -> bool {
       dbg(i);
       if (v[i]) {
         return false;
@@ -215,7 +216,7 @@ auto max_match(const auto &g) {
         }
       }
       return false;
-    });
+    }};
     fo(i, n) {
       if (s[i] == 0 && m[i] == -1) {
         path(i);

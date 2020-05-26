@@ -1,8 +1,20 @@
-auto constexpr operator-(const auto &a, const auto &b) { return a + -b; }
-auto constexpr operator!=(const auto &a, const auto &b) { return !(a == b); }
-auto operator<=(const auto &a, const auto &b) { return !(b < a); }
-auto operator>=(const auto &a, const auto &b) { return b <= a; }
-auto operator>(const auto &a, const auto &b) { return b < a; }
+template <typename T1, typename T2>
+auto constexpr operator-(const T1 &a, const T2 &b) {
+  return a + -b;
+}
+template <typename T1, typename T2>
+auto constexpr operator!=(const T1 &a, const T2 &b) {
+  return !(a == b);
+}
+template <typename T1, typename T2> auto operator<=(const T1 &a, const T2 &b) {
+  return !(b < a);
+}
+template <typename T1, typename T2> auto operator>=(const T1 &a, const T2 &b) {
+  return b <= a;
+}
+template <typename T1, typename T2> auto operator>(const T1 &a, const T2 &b) {
+  return b < a;
+}
 tm() using uset = unordered_set<T>;
 um operator+(um a, um const &b) {
   for (const auto &p : b) {
@@ -49,8 +61,9 @@ tm() auto operator*(vc<T> a, vc<T> b) {
   fo(i, a.size()) { c[i] = a[i] * b[i]; }
   return c;
 }
+template <typename Iterator>
 auto operator+(
-    auto it,
+    Iterator it,
     enable_if_t<!is_same<typename iterator_traits<tp(it)>::iterator_category,
                          random_access_iterator_tag>::value,
                 size_t>

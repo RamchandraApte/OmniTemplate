@@ -6,7 +6,7 @@ struct timer {
          << " s" << endl;
   }
 };
-auto bench(auto a) {
+template <typename Func> void bench(Func a) {
   timer _t;
   dbg(ll(-5) / ll(3));
   dbg(tp(a)(-5) / tp(a)(3));

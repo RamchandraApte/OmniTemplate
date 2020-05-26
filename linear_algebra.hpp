@@ -1,10 +1,10 @@
 tm() struct mat {
   ll r, c;
   vc<T> a;
-  mat(auto r_, auto c_, df(v, 0LL)) : r(r_), c(c_), a(r * c, v) {
+  mat(ll r_, ll c_, df(v, 0LL)) : r(r_), c(c_), a(r * c, v) {
     assert(r >= 1 && c >= 1);
   }
-  mat(auto d) : r(1), c(1), a{d} {}
+  mat(T d) : r(1), c(1), a{d} {}
   mat(vc<vc<pr>> const &g) : mat(g.size(), g.size(), inf) {
     fo(i, r) {
       for (const auto &p : g[i]) {
@@ -21,10 +21,10 @@ tm() struct mat {
       fo(j, c) { this[i][j] = begin(begin(vals)[i])[j]; }
     }
   }
-  auto operator[](auto i) {
+  auto operator[](ll i) {
     return const_cast<T *>(const_cast<mat const &>(this)[i]);
   }
-  auto operator[](auto i) const { return &a[i * c]; }
+  auto operator[](ll i) const { return &a[i * c]; }
   auto id() const { return this.r == 1 && this.c == 1 && this[0][0] == 1; }
 };
 tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
@@ -72,7 +72,8 @@ tm(...) auto operator/(mat<T...> b, mat<T...> a) { return gauss(b, a).first; }
 template <typename T> T det(const mat<T> &a) {
   return gauss(mat<T>(a.r, 1), a).second;
 }
-tm(...) auto &operator<<(ostream &os, mat<T...> const &m) {
+template <typename Stream, typename... T>
+auto &operator<<(Stream &os, mat<T...> const &m) {
   os << "mat{" << endl;
   fo(i, m.r) {
     copy(m[i], m[i] + m.c, make_ostream_joiner(os, delim));

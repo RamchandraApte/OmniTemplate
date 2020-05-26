@@ -4,7 +4,7 @@ template <typename Key, typename Data> struct treap {
   Key key{};        // binary search tree key
   Data data{};
   bool rev{};
-  treap(Key const &key_) : pri{reng()}, key{key_} { update_data(&this); }
+  treap(Key const &key_) : pri(reng()), key{key_} { update_data(&this); }
 };
 template <typename Key, template <typename> typename Data_Temp>
 using treap_t = treap<Key, Data_Temp<Key>>;
@@ -14,20 +14,21 @@ size_data<Key> operator+(size_data<Key> const &l, size_data<Key> const &r) {
   // Returns the data for a node given the data for the children.
   return size_data<Key>{l.size + r.size + 1};
 }
-template <typename Key>
-ostream &operator<<(ostream &os, size_data<Key> const &data) {
+template <typename Stream, typename Key>
+ostream &operator<<(Stream &os, size_data<Key> const &data) {
   return os << "size = " << data.size << endl;
 }
 template <typename Key, typename Data> Data get_data(treap<Key, Data> *trp) {
   return trp ? trp->data : Data{};
 }
-void update_data(auto *trp) {
+template <typename Trp> void update_data(Trp *trp) {
   if (!trp) {
     return;
   }
   trp->data = get_data(trp->l) + get_data(trp->r);
 }
-void split(auto *trp, auto const &key, auto *&l, auto *&r) {
+template <typename Key, typename Data, typename Trp = treap<Key, Data>>
+void split(treap<Key, Data> *trp, const Key &key, Trp *&l, Trp *&r) {
   // Splits the treap by key
   if (!trp) {
     l = r = nullptr;
@@ -70,10 +71,12 @@ template <typename Trp> void insert(Trp *&trp, Trp *x) {
   }
   update_data(trp);
 }
-template <typename Trp> auto insert(Trp *&trp, auto const &key) {
+template <typename Key, typename Data, typename Trp = treap<Key, Data>>
+auto insert(treap<Key, Data> *&trp, const Key &key) {
   return insert(trp, new Trp{key});
 }
-void erase(auto *&trp, const auto &key) {
+template <typename Key, typename Data, typename Trp = treap<Key, Data>>
+void erase(treap<Key, Data> *&trp, const Key &key) {
   if (trp->key == key) {
     trp = join(trp->l, trp->r);
   } else {
@@ -82,7 +85,7 @@ void erase(auto *&trp, const auto &key) {
   update_data(trp);
 }
 // Implicit treaps
-void down(auto *trp) {
+template <typename Trp> void down(Trp *trp) {
   if (!(trp && trp->rev)) {
     return;
   }
@@ -95,7 +98,8 @@ void down(auto *trp) {
 #undef flip
       trp->rev = 0;
 }
-void split_imp(auto *trp, ll pos, auto *&l, auto *&r, ll sum = 0) {
+template <typename Trp>
+void split_imp(Trp *trp, ll pos, Trp *&l, Trp *&r, ll sum = 0) {
   // Splits the treap by pos
   if (!trp) {
     l = r = nullptr;
@@ -131,7 +135,8 @@ template <typename Trp> auto get_imp(Trp *&trp, ll pos) {
   trp = join(join(l, x), nr);
   return x->key;
 }
-template <typename Trp> auto insert_imp(Trp *&trp, auto const &key, ll pos) {
+template <typename Key, typename Data, typename Trp = treap<Key, Data>>
+auto insert_imp(treap<Key, Data> *&trp, Key const &key, ll pos) {
   return insert_imp(trp, new Trp{key}, pos);
 }
 template <typename T, typename... Ts> T &operator<<(T &os, treap<Ts...> *trp) {

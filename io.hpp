@@ -8,7 +8,7 @@ struct rin {
     }
     return this;
   }
-  rin &operator>>(auto &x) {
+  template <typename T> rin &operator>>(T &x) {
     this << x;
     return this;
   }
@@ -20,11 +20,13 @@ auto operator<<(R &r, const T &x)
   r.in >> const_cast<T &>(x);
   return r;
 }
-tm() enable_if_t<is_same<T, istream>::value, rin> operator>>(T &is, auto &x) {
+template <typename Stream, typename T>
+enable_if_t<is_same<T, istream>::value, rin> operator>>(Stream &is, T &x) {
   rin r{is};
   return r >> x;
 }
-tm(...) auto &operator<<(ostream &os, tuple<T...> t) {
+template <typename Stream, typename... T>
+auto &operator<<(Stream &os, tuple<T...> t) {
   apply(
       [&](auto &f, auto &... x) {
         os << f;
@@ -33,17 +35,20 @@ tm(...) auto &operator<<(ostream &os, tuple<T...> t) {
       t);
   return os;
 }
-auto print(const auto &arg1, const auto &... args) {
+template <typename T1, typename... Ts>
+auto print(const T1 &arg1, const Ts &... args) {
   cout << arg1;
-  (void)((cout << " " << args), ...);
+  ((cout << " " << args), ...);
   cout << endl;
 }
 END_NS
 namespace std {
-tm(...) auto &operator<<(ostream &os, pair<T...> const &p) {
+template <typename Stream, typename... T>
+auto &operator<<(Stream &os, pair<T...> const &p) {
   return os << simple_tp(p) << "{" << p.first << delim << p.second << "}";
 }
-auto operator<<(ostream &os, const auto &v)
+template <typename Stream, typename Container>
+auto operator<<(Stream &os, const Container &v)
     -> decltype(begin(v), declval<tp(os)>()) {
   auto ed = begin(v);
   auto big = v.size() > 20;
@@ -59,15 +64,16 @@ auto operator<<(ostream &os, const auto &v)
   }
   return os << "}";
 }
-auto operator<<(rin &os, const auto &v)
-    -> decltype(begin(v), declval<tp(os)>()) {
+template <typename T>
+auto operator<<(rin &os, const T &v) -> decltype(begin(v), declval<tp(os)>()) {
   for (const auto &elem : v) {
     os << elem;
   }
   return os;
 }
 #if __cplusplus >= 201703L
-tm() auto &operator<<(ostream &os, optional<T> const &opt) {
+template <typename Stream, typename T>
+auto &operator<<(Stream &os, optional<T> const &opt) {
   return opt ? (os << *opt) : (os << "nullopt");
 }
 #endif

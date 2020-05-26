@@ -7,8 +7,7 @@ tm() struct it_base {
 tm() struct int_it : it_base<T> {
   using iterator_category = random_access_iterator_tag;
   T x, m;
-  int_it(auto x_, auto m_ = 1) : x(x_), m(m_) {}
-  int_it(auto x_) : int_it(x_, 1) {}
+  template <typename Integer> int_it(Integer x_, T m_ = 1) : x(x_), m(m_) {}
   int_it() {}
   auto &operator*() const {
     static T x_stat;
@@ -37,7 +36,7 @@ tm() bin(==, int_it<T>);
 tm() bin(<, int_it<T>);
 tm() struct range {
   T bg, ed;
-  range(auto ed_) : range(0LL, ed_) {}
+  explicit range(T ed_) : range(0LL, ed_) {}
   range(T const &bg_, T const &ed_)
       : bg(bg_), ed(max(bg, static_cast<T>(ed_))) {}
   auto begin() const { return bg; }
@@ -50,7 +49,7 @@ tm() auto operator<(range<T> const &a, range<T> const &b) {
 tm() auto operator&(range<T> const &a, range<T> const &b) {
   return range<T>{max(a.bg, b.bg), min(a.ed, b.ed)};
 }
-auto rev(const auto &r) {
+template <typename T> auto rev(const range<T> &r) {
   using rev_it = reverse_iterator<tp(begin(r))>;
   return range{rev_it{end(r)}, rev_it{begin(r)}};
 }
@@ -60,7 +59,7 @@ tm() int_it<T> operator+(int_it<T> const &a, int_it<T> const &b) {
 }
 tm() int_it<T> operator-(int_it<T> const &a) { return -a.x; }
 enum isect { null, dis, over, cont, eq };
-auto intersect(const auto &a, const auto &b) {
+template <typename T1, typename T2> auto intersect(const T1 &a, const T2 &b) {
   if (a == b) {
     return isect::eq;
   }

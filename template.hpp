@@ -1,5 +1,12 @@
 #ifndef PRE
+#if defined(__GNUC__) && !defined(__clang__)
+#define REALGCC
+#endif
+#ifdef REALGCC
 #include <bits/extc++.h>
+#else
+#include <bits/stdc++.h>
+#endif
 #include <experimental/source_location>
 #include <experimental/iterator>
 #endif
@@ -18,7 +25,6 @@
 #endif
 #define fo(i, ...) for ([[maybe_unused]] auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] auto i : rev(ra{__VA_ARGS__}))
-#define auto auto
 #define tp decltype
 #define tm(...) template <typename __VA_ARGS__ T>
 #define this (*this)
@@ -53,10 +59,12 @@ vector<pair<string, string>> lets{{"__debug::", ""},
                                   {"const ", ""},
                                   {"__cxx11::basic_string<char>", "string"}};
 struct lets_add {
-  lets_add(const auto &a, const auto &b) { lets.pb({a, b}); }
+  lets_add(const string &a, const string &b) { lets.pb({a, b}); }
 };
+#ifdef REALGCC
 import(__gnu_pbds);
 using __gnu_cxx::power;
+#endif
 using std::priority_queue;
 import(std);
 import(experimental);
@@ -79,14 +87,14 @@ tm() auto type_name([[maybe_unused]] T const &v) {
   auto st = s.find(tar) + tar.size();
   return s.substr(st, s.find("]", st) - st);
 }
-auto replace(auto s, const auto &a, const auto &b) {
+auto replace(string s, const string &a, const string &b) {
   ll loc;
   while ((loc = s.find(a)) != string::npos) {
     s = s.substr(0, loc) + b + s.substr(loc + a.size());
   }
   return s;
 }
-auto simple_tp([[maybe_unused]] const auto &v) {
+template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
   auto s = type_name(v);
   for (const auto &p : lets) {
     s = replace(s, p.first, p.second);
@@ -99,8 +107,10 @@ auto constexpr tau = 2 * 3.1415926535897932384626433L;
 #include "io.hpp"
 BEGIN_NS
 #include "range.hpp"
+#include "operations.hpp"
 ll depth = -1;
-auto debug(const auto &x, const auto &name,
+template <typename T>
+auto debug(const T &x, const string &name,
            source_location const &loc = source_location::current()) {
   if (debug_mode) {
     fo(i, depth) { cerr << "\t"; }
@@ -111,7 +121,6 @@ auto debug(const auto &x, const auto &name,
   return x;
 }
 #include "dsu.hpp"
-#include "operations.hpp"
 #include "utility.hpp"
 #include "modulo.hpp"
 #include "number_theory.hpp"
@@ -145,12 +154,14 @@ constexpr ll identity(bin_op<ll> const &f) {
 #include "tree.hpp"
 #include "geometry.hpp"
 using ull = unsigned long long;
-#include "string.hpp"
+//#include "string.hpp"
 END_NS
 #include "main.hpp"
 BEGIN_NS
+#ifdef REALGCC
 template <typename T, typename V = null_type>
 using omap = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
+#endif
 END_NS
 BEGIN_NS
 #include "segment_tree.hpp"

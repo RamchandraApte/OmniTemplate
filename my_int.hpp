@@ -1,5 +1,8 @@
 #define aug(op)                                                                \
-  auto operator op##=(auto &a, const auto &b) { return a = a op b; }
+  template <typename T1, typename T2>                                          \
+  auto operator op##=(T1 &a, const T2 &b) {                                    \
+    return a = a op b;                                                         \
+  }
 struct ll {
   lli x;
   constexpr ll(long long int x_ = 0) : x(x_) {}
@@ -65,8 +68,10 @@ constexpr ll operator%(ll a, ll b) {
   return x;
 }
 mixll(+) mixll(/) mixll(*) mixll(<) mixll(==) mixll(%) mixll(&) mixll(>>)
-    mixll(<<) auto &
-    operator<<(ostream &os, ll const &a) {
+    mixll(<<)
+
+        template <typename Stream>
+        auto &operator<<(Stream &os, ll const &a) {
   return os << a.x;
 }
 ll operator"" M(unsigned long long int x) { return x; }
@@ -79,6 +84,10 @@ inh(is_integral){};
 inh(is_unsigned){};
 inh(is_signed){};
 inh(numeric_limits){};
-auto operator+(auto a, ll b) { return a + lli(b); }
+template <typename T, typename ll_t,
+          typename = enable_if_t<is_same_v<ll_t, ll>, void>>
+auto operator+(T a, ll_t b) {
+  return a + lli(b);
+}
 } // namespace std
 BEGIN_NS

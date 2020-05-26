@@ -20,7 +20,7 @@ public:
   }
   bool empty() const { return left.empty() && right.empty(); }
   size_type size() const { return left.size() + right.size(); }
-  void push(const auto &val) {
+  void push(const value_type &val) {
     (empty() ? left : right).push(val);
     check_invariant();
   }
