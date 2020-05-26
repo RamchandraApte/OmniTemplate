@@ -34,6 +34,16 @@ public:
   Node *root{};
   size_t sz{};
   SplayTree() {}
+  ~SplayTree() { destroy(root); }
+  static void destroy(Node *const node) {
+    if (!node) {
+      return;
+    }
+    for (Node *const child : node->child) {
+      destroy(child);
+    }
+    delete node;
+  }
   static void attach(Node *const par, bool side, Node *const new_) {
     if (new_) {
       new_->parent = par;
