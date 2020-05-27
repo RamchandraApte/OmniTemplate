@@ -36,8 +36,11 @@ optional<vc<char>> sat2(const vc<pr> &v) {
   return vals;
 }
 void test_sat2() {
-  const auto ret = *sat2({{1, 2}, {-2, 3}});
-  for (char c : ret) {
-    dbg((ll)c);
-  }
+  const auto ret1 = *sat2({{1, 2}, {-2, 3}});
+  assert(ret1[1] || ret1[2]);
+  assert(!ret1[2] || ret1[3]);
+  const auto ret2 = *sat2({{1, 2}, {2, 3}, {-2, -1}});
+  assert(ret2[1] || ret2[2]);
+  assert(ret2[2] || ret2[3]);
+  assert(!ret2[2] || !ret2[1]);
 }

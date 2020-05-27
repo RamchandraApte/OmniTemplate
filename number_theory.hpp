@@ -32,17 +32,38 @@ auto prime(ll n) {
   vl v{2, 325, 9375, 28178, 450775, 9780504, 1795265022};
   return all_of(al(v), prime_a);
 }
+void test_prime() {
+  assert(prime(2));
+  assert(prime(3));
+  assert(!prime(4));
+  assert(prime(5));
+  assert(!prime(static_cast<ll>(1e9 + 6)));
+  assert(prime(static_cast<ll>(1e9 + 7)));
+}
 vl divisors(ll x) {
+  // Return all divisors of x in sorted order
+  assert(x >= 1);
   vl v;
-  fo(d, 1, static_cast<ll>(ceil(sqrt(static_cast<ld>(x)))) + 1) {
-    if (!(x % d)) {
-      v.pb(d);
-      if (ll y = x / d; d != y) {
-        v.pb(y);
-      }
+  fo(d, 1, x + 1) if (!(x % d)) {
+    ll y = x / d;
+    if (y < d) {
+      break;
+    }
+    v.pb(d);
+    if (d < y) {
+      v.pb(y);
     }
   }
+  sort(al(v));
   return v;
+}
+void test_divisors() {
+  assert((divisors(1) == vl{1}));
+  assert((divisors(2) == vl{1, 2}));
+  assert((divisors(3) == vl{1, 3}));
+  assert((divisors(4) == vl{1, 2, 4}));
+  assert((divisors(36) == vl{1, 2, 3, 4, 6, 9, 12, 18, 36}));
+  assert((divisors(49) == vl{1, 7, 49}));
 }
 auto sieve(ll n) {
   vl d(n), ps;
@@ -84,6 +105,15 @@ um fac(ll n) {
   }
   assert(1 < g && g < n && !(n % g));
   return fac(g) + fac(n / g);
+}
+void test_fac() {
+  assert((fac(1) == um{}));
+  assert((fac(1) == um{}));
+  assert((fac(2) == um{{2, 1}}));
+  assert((fac(3) == um{{3, 1}}));
+  assert((fac(4) == um{{2, 2}}));
+  assert((fac(36) == um{{2, 2}, {3, 2}}));
+  assert((fac(49) == um{{7, 2}}));
 }
 void egcd(const ll a, const ll b, ll &x, ll &y) {
   a ? egcd(b % a, a, y, x), x -= b / a * y : (x = 0, y = 1);
@@ -169,6 +199,9 @@ void test_primitive_root() {
   check(7, 3);
 }
 void test_number_theory() {
+  test_prime();
+  test_divisors();
+  test_fac();
   test_totient();
   test_dlog();
   test_primitive_root();
