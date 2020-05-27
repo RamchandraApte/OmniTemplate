@@ -34,33 +34,34 @@ auto ifft(auto& v){
 #endif
 #if 1
 template <typename Cont> vc<com> fft(Cont v) {
-  auto n = nx2(v.size());
-  if (n == 1) {
-    return v;
-  }
-  v.resize(n);
-  vc<vc<com>> vs(2, vc<com>(n / 2));
-  fo(i, n) { vs[i % 2][i / 2] = v[i]; }
-  for (auto &x : vs) {
-    x = fft(x);
-  }
-  vc<com> f(n);
-  fo(i2, n) {
-    auto i = i2 % (n / 2);
-    f[i2] = vs[0][i] + exp(-com{0, double{tau} * double{i2 / n}}) * vs[1][i];
-    //++cnt;
-  }
-  return f;
+	auto n = nx2(v.size());
+	if (n == 1) {
+		return v;
+	}
+	v.resize(n);
+	vc<vc<com>> vs(2, vc<com>(n / 2));
+	fo(i, n) { vs[i % 2][i / 2] = v[i]; }
+	for (auto &x : vs) {
+		x = fft(x);
+	}
+	vc<com> f(n);
+	fo(i2, n) {
+		auto i = i2 % (n / 2);
+		f[i2] = vs[0][i] +
+			exp(-com{0, double{tau} * double{i2 / n}}) * vs[1][i];
+		//++cnt;
+	}
+	return f;
 }
 template <typename Cont> vc<com> ifft(Cont v) {
-  reverse(begin(v) + 1, end(v));
-  auto r = fft(v);
-  for (auto &x : r) {
-    x /= com{v.size()};
-  }
-  return r;
+	reverse(begin(v) + 1, end(v));
+	auto r = fft(v);
+	for (auto &x : r) {
+		x /= com{v.size()};
+	}
+	return r;
 }
 #endif
 template <typename Cont> auto conv(const Cont &a, const Cont &b) {
-  return ifft(fft(a) * fft(b));
+	return ifft(fft(a) * fft(b));
 }

@@ -32,36 +32,36 @@
 #define this (*this)
 #define al(v) begin(v), end(v)
 #define I(x)                                                                   \
-  ll x;                                                                        \
-  cin >> x;
+	ll x;                                                                  \
+	cin >> x;
 #define pb push_back
 #define vc vector
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...)
 #define WARN(msg)                                                              \
-  [[deprecated(msg)]] auto warn = []() { rel_assert(msg); };                   \
-  warn();
+	[[deprecated(msg)]] auto warn = []() { rel_assert(msg); };             \
+	warn();
 //#define TODO(msg) WARN("TODO: " msg)
 #define TODO(msg)
 #define paste2(x, y) x##y
 #define paste(x, y) paste2(x, y)
 #define lets_count lets_add paste(_l, __COUNTER__)
 #define let(a, ...)                                                            \
-  using a = __VA_ARGS__;                                                       \
-  lets_count{#__VA_ARGS__, #a};
+	using a = __VA_ARGS__;                                                 \
+	lets_count{#__VA_ARGS__, #a};
 #define import(a)                                                              \
-  using namespace a;                                                           \
-  lets_count{#a "::", ""};
+	using namespace a;                                                     \
+	lets_count{#a "::", ""};
 #define df(x, v) remove_const_t<tp(v)> x = v
 using namespace std;
 BEGIN_NS
 #define ostream auto
 vector<pair<string, string>> lets{{"__debug::", ""},
-                                  {"const ", ""},
-                                  {"__cxx11::basic_string<char>", "string"}};
+				  {"const ", ""},
+				  {"__cxx11::basic_string<char>", "string"}};
 struct lets_add {
-  lets_add(const string &a, const string &b) { lets.pb({a, b}); }
+	lets_add(const string &a, const string &b) { lets.pb({a, b}); }
 };
 #ifdef REALGCC
 import(__gnu_pbds);
@@ -85,27 +85,31 @@ let(clock_, high_resolution_clock);
 import(this_thread);
 let(um, unordered_map<ll, ll>);
 tm() auto type_name([[maybe_unused]] T const &v) {
-  string s = __PRETTY_FUNCTION__, tar = "T = ";
-  auto st = s.find(tar) + tar.size();
-  return s.substr(st, s.find("]", st) - st);
+	/*! Return the type name of the type of value*/
+	string s = __PRETTY_FUNCTION__, tar = "T = ";
+	auto st = s.find(tar) + tar.size();
+	return s.substr(st, s.find("]", st) - st);
 }
 auto replace(string s, const string &a, const string &b) {
-  ll loc;
-  while ((loc = s.find(a)) != string::npos) {
-    s = s.substr(0, loc) + b + s.substr(loc + a.size());
-  }
-  return s;
+	/*! Replace all occurences of a in s with b*/
+	// TODO This is multipass. Should this be singlepass?
+	ll loc;
+	while ((loc = s.find(a)) != string::npos) {
+		s = s.substr(0, loc) + b + s.substr(loc + a.size());
+	}
+	return s;
 }
 template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
-  auto s = type_name(v);
-  for (const auto &p : lets) {
-    s = replace(s, p.first, p.second);
-  }
-  return s;
+	/*! Return the simplified type of v */
+	auto s = type_name(v);
+	for (const auto &p : lets) {
+		s = replace(s, p.first, p.second);
+	}
+	return s;
 }
-auto constexpr inf = ll(numeric_limits<ll>::max()) / 8;
-auto const delim = ", "s;
-auto constexpr tau = 2 * 3.1415926535897932384626433L;
+auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
+auto const delim = ", "s; /*!< Delimiter for debug output */
+auto constexpr tau = 2 * 3.1415926535897932384626433L; /*!< Pi */
 #include "io.hpp"
 BEGIN_NS
 #include "operations.hpp"
@@ -113,14 +117,15 @@ BEGIN_NS
 ll depth = -1;
 template <typename T>
 auto debug(const T &x, const string &name,
-           source_location const &loc = source_location::current()) {
-  if (debug_mode) {
-    fo(i, depth) { cerr << "\t"; }
-    cerr << loc.function_name() << ":" << loc.line() << " " << name << " = "
-         << x << endl;
-  }
-  --depth;
-  return x;
+	   source_location const &loc = source_location::current()) {
+	/*!< Debug print x */
+	if (debug_mode) {
+		fo(i, depth) { cerr << "\t"; }
+		cerr << loc.function_name() << ":" << loc.line() << " " << name
+		     << " = " << x << endl;
+	}
+	--depth;
+	return x;
 }
 
 using ull = unsigned long long;
@@ -135,31 +140,34 @@ END_NS
 tm() struct ar { using type = T; };
 tm() using ar_t = typename ar<T>::type;
 template <typename T, size_t n> struct ar<T[n]> {
-  using type = array<ar_t<T>, n>;
+	using type = array<ar_t<T>, n>;
 };
 
 tm() using bin_op = T(*)(T, T);
 #define ret(x, id)                                                             \
-  if (f == static_cast<tp(f)>(x)) {                                            \
-    return id;                                                                 \
-  }
+	if (f == static_cast<tp(f)>(x)) {                                      \
+		return id;                                                     \
+	}
 constexpr ll identity(bin_op<ll const &> const &f) {
-  ret(max<ll>, -inf);
-  ret(min<ll>, inf);
-  abort();
+	ret(max<ll>, -inf);
+	ret(min<ll>, inf);
+	abort();
 }
 constexpr ll identity(bin_op<ll> const &f) {
-  ret(gcd<ll>, 0);
-  abort();
+	ret(gcd<ll>, 0);
+	abort();
 }
 
 const bool multitest = false;
-struct random_device_patch { // Random device patch to fix libstdc++'s broken
-                             // implementation on Windows
-  unsigned int operator()() {
-    return clock_::now().time_since_epoch().count(); // Probably random enough
-  }
-  double entropy() { return 0.0; }
+struct random_device_patch {
+	/*! Random device patch to fix libstdc++'s broken implementation on
+	 * Windows*/
+	unsigned int operator()() {
+		return clock_::now()
+		    .time_since_epoch()
+		    .count(); // Probably random enough
+	}
+	double entropy() { return 0.0; }
 };
 using default_random_device = random_device_patch;
 default_random_engine reng{default_random_device{}()};

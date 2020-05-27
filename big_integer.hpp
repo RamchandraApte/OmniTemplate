@@ -1,12 +1,12 @@
 #pragma once
 #include "core.hpp"
 struct bigint {
-  vc<ull> v;
-  explicit bigint(const vc<ull> &v_) : v(v_) {}
-  auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
+	vc<ull> v;
+	explicit bigint(const vc<ull> &v_) : v(v_) {}
+	auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
 };
 template <typename Stream> auto &operator<<(Stream &os, bigint const &a) {
-  return os << a.v;
+	return os << a.v;
 }
 #if 0
 auto operator+(bigint const& a, bigint const& b){
