@@ -138,8 +138,8 @@ auto trans(const vc<vl> &g) {
 	return h;
 }
 auto scc(const vc<vl> &g) {
-	// Returns the strongly connected component for each vertex of the graph
-	// g.
+	/*! Returns the strongly connected component for each vertex of the
+	 * graph g.*/
 	auto h = trans(g);
 	dbg(h);
 	vl cm(size(g), -1);

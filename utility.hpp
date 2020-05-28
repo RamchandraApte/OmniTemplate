@@ -1,14 +1,14 @@
 #pragma once
 #include "core.hpp"
 struct with {
-	/* Sets v to new_ temporary while with object is alive */
+	/*! Sets v to new_ temporary while with object is alive */
 	ll old;
 	ll &v;
 	with(ll new_, ll &v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
 template <typename Func> struct fix {
-	/* Helper for lambda recursive functions. The recursive function is
+	/*! Helper for lambda recursive functions. The recursive function is
 	 * passed to Func as the first argument.*/
 	Func func;
 	fix(const Func &func_) : func(func_) {}
@@ -20,7 +20,7 @@ template <typename Func> struct fix {
 template <typename T> auto maxeq(T &&x, const T &y) { x = max(x, y); }
 template <typename T> auto mineq(T &&x, const T &y) { x = min(x, y); }
 template <typename T> auto cache(const T &f) {
-	/*Cache calls to f using a map of type T*/
+	/*! Cache calls to f using a map of type T*/
 	T ch;
 	return [=](const auto &arg) mutable {
 		if (ch.find(arg) == end(ch)) {
@@ -31,7 +31,7 @@ template <typename T> auto cache(const T &f) {
 }
 template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 auto uniq(Cont &v, Eq const &up = Eq{}, T const &sp = T{}) {
-	/* Remove all duplicates element from v so that all elements in v are
+	/*! Remove all duplicates element from v so that all elements in v are
 	 * distinct and sorted */
 	sort(al(v), sp);
 	v.resize(unique(al(v), up) - begin(v));
