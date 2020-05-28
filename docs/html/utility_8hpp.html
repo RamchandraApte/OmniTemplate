@@ -72,7 +72,9 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">/home/ram/OmniTemplate/utility.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -97,11 +99,25 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfix.html">fix&lt; Func &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structar.html">ar&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structar_3_01T_0fn_0e_4.html">ar&lt; T[n]&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrandom__device__patch.html">random_device_patch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a76cdb96860b77886867832efcffeeb32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a76cdb96860b77886867832efcffeeb32">lambda</a>(f)&#160;&#160;&#160;[&amp;](auto... args) { return f(args...); }</td></tr>
 <tr class="separator:a76cdb96860b77886867832efcffeeb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a98dc5e985b024363c80f2778a577c51a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a98dc5e985b024363c80f2778a577c51a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a98dc5e985b024363c80f2778a577c51a">ar_t</a> = typename <a class="el" href="structar.html">ar</a>&lt; T &gt;::type</td></tr>
+<tr class="separator:a98dc5e985b024363c80f2778a577c51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab383d789912924c9ccfe84042e73bf06"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#ab383d789912924c9ccfe84042e73bf06">default_random_device</a> = <a class="el" href="structrandom__device__patch.html">random_device_patch</a></td></tr>
+<tr class="separator:ab383d789912924c9ccfe84042e73bf06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -127,6 +143,11 @@ Functions</h2></td></tr>
 <tr class="separator:a02462a4216b54e8116b62f164ac15368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7d7f9d0bbad247488d15de2919cfb9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#ae7d7f9d0bbad247488d15de2919cfb9e">next_comb</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
 <tr class="separator:ae7d7f9d0bbad247488d15de2919cfb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9fc68ed025086c5affbd401726bc07b8"><td class="memItemLeft" align="right" valign="top">default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a9fc68ed025086c5affbd401726bc07b8">reng</a> {<a class="el" href="utility_8hpp.html#ab383d789912924c9ccfe84042e73bf06">default_random_device</a>{}()}</td></tr>
+<tr class="separator:a9fc68ed025086c5affbd401726bc07b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a76cdb96860b77886867832efcffeeb32"></a>
@@ -141,6 +162,37 @@ Functions</h2></td></tr>
           <td class="paramtype">&#160;</td>
           <td class="paramname">f</td><td>)</td>
           <td>&#160;&#160;&#160;[&amp;](auto... args) { return f(args...); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a98dc5e985b024363c80f2778a577c51a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98dc5e985b024363c80f2778a577c51a">&#9670;&nbsp;</a></span>ar_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="utility_8hpp.html#a98dc5e985b024363c80f2778a577c51a">ar_t</a> =  typename <a class="el" href="structar.html">ar</a>&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab383d789912924c9ccfe84042e73bf06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab383d789912924c9ccfe84042e73bf06">&#9670;&nbsp;</a></span>default_random_device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="utility_8hpp.html#ab383d789912924c9ccfe84042e73bf06">default_random_device</a> =  <a class="el" href="structrandom__device__patch.html">random_device_patch</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -196,6 +248,11 @@ template&lt;typename T  = less&lt;&gt;, typename Func &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="utility_8hpp_a03511d4859cd518749f66a6af5391f92_icgraph.svg" width="380" height="138"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -292,6 +349,11 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="utility_8hpp_a02462a4216b54e8116b62f164ac15368_icgraph.svg" width="388" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -349,6 +411,26 @@ template&lt;typename Eq  = equal_to&lt;&gt;, typename T  = less&lt;&gt;, typenam
       </table>
 </div><div class="memdoc">
 <p>Remove all duplicates element from v so that all elements in v are distinct and sorted</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="utility_8hpp_a44a45701b2aec7031b9a0592b8fe433b_icgraph.svg" width="180" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9fc68ed025086c5affbd401726bc07b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc68ed025086c5affbd401726bc07b8">&#9670;&nbsp;</a></span>reng</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default_random_engine reng {<a class="el" href="utility_8hpp.html#ab383d789912924c9ccfe84042e73bf06">default_random_device</a>{}()}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

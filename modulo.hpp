@@ -14,7 +14,7 @@ ll M = 1e9 + 7; //^ Modulus
 struct no_mod {};
 struct md {
 	/*! Modular arithmetic class */
-	ll x;
+	ll x; //!< The representative element, which is in [0, M)
 	md() : x{0LL} {}
 	template <typename T,
 		  typename = enable_if_t<is_integral<T>::value, void>>

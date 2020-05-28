@@ -7,12 +7,16 @@ struct edge {
 	auto to_tuple() const { return tuple{w, a, b}; }
 };
 bool operator<(edge const &a, edge const &b) {
+	/*! Compare the edges by weight, with ties compared by a and b*/
 	return a.to_tuple() < b.to_tuple();
 }
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
+	/*! Print the edge*/
 	return os << "edge{" << e.a << "-" << e.w << "->" << e.b << "}";
 }
 auto dist(vector<vector<pr>> g, ll s) {
+	/*! Given an adjacency-list of a graph, returns the shortest distance to
+	 * each vertex from the source. Algorithm: Dijkstra*/
 	vl d(g.size(), inf), pv(g.size(), -1);
 	pq<pr> q;
 	d[s] = 0;
@@ -37,6 +41,8 @@ auto dist(vector<vector<pr>> g, ll s) {
 	return array<vl, 2>{d, pv};
 }
 auto dist(mat<ll> const &g) {
+	/*! Given a 2D matrix of distances for each edge in g, returns a 2D
+	 * matrix of the shortest distances. Algorithm: Floyd-Warshall*/
 	assert(g.r == g.c);
 	auto n = g.r;
 	auto d = g;
@@ -51,8 +57,8 @@ auto dist(mat<ll> const &g) {
 	return d;
 }
 auto mst(vector<edge> es) {
-	//*! Returns the minimum spanning tree of the set of edges es, as a set
-	// of edges*/
+	/*! Returns the minimum spanning tree of the set of edges es, as a set
+	 * of edges*/
 	sort(al(es));
 	auto mi = -inf;
 	for (const auto &e : es) {
@@ -79,6 +85,8 @@ struct gsearch {
 	    : g(g_), n(size(g)), v(n), p(n, -1), d(n) {}
 	virtual void operator()(ll) = 0;
 	void operator()() {
+		/* Run the searcher on all vertices. Useful for visiting the
+		 * entire graph, and not just one connected component. */
 		fo(i, n) {
 			if (!v[i]) {
 				this(i);
@@ -86,6 +94,8 @@ struct gsearch {
 		}
 	}
 	auto add(ll j, ll i) {
+		/*! Add vertex j as a child of already visited vertex i in the
+		 * searcher tree*/
 		d[j] = d[i] + 1;
 		p[j] = i;
 	}

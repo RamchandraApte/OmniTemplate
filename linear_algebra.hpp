@@ -51,8 +51,8 @@ tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
 }
 template <typename T> pair<mat<T> &&, T> gauss(mat<T> b, mat<T> a) {
 	/*!
-	Returns x such that ax=b and the determinant of a via Gaussian
-	elimination.
+	Returns matrix x such that \f$ax = b\f$ and the determinant of a via
+	Gaussian elimination.
 	*/
 	assert(a.r == a.c);
 	assert(a.r == b.r);
@@ -77,13 +77,18 @@ template <typename T> pair<mat<T> &&, T> gauss(mat<T> b, mat<T> a) {
 	}
 	return {move(b), det};
 }
-tm(...) auto operator/(mat<T...> b, mat<T...> a) { return gauss(b, a).first; }
+tm(...) auto operator/(mat<T...> b, mat<T...> a) {
+	/*! Returns \f$ba^{-1}\f$*/
+	// TODO or is it the other way round 🤔?
+	return gauss(b, a).first;
+}
 template <typename T> T det(const mat<T> &a) {
 	/*! Returns the determinant of matrix a*/
 	return gauss(mat<T>(a.r, 1), a).second;
 }
 template <typename Stream, typename... T>
 auto &operator<<(Stream &os, mat<T...> const &m) {
+	/*! Print the matrix rows, line by line*/
 	os << "mat{" << endl;
 	fo(i, m.r) {
 		copy(m[i], m[i] + m.c, make_ostream_joiner(os, delim));
@@ -93,6 +98,7 @@ auto &operator<<(Stream &os, mat<T...> const &m) {
 }
 template <typename T> auto lin_recur(vc<T> const &c, ll n) {
 	/*! Returns nth therm of linear recurrence described by c*/
+	// TODO which direction is the linear recurrence? 🤔
 	mat<T> m{size(c), size(c)};
 	copy(al(c), m[0]);
 	fo(i, 1, size(c)) { m[i][i - 1] = 1; }

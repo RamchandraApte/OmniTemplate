@@ -3,7 +3,8 @@
 template <auto op, lli id_ = identity(op)> struct seg {
 	using T = tp(identity(op));
 	static constexpr T id = id_;
-	ll const n;
+	ll const n; /*!< Number of nodes of teh segment tree. Does not need to
+		       be a power of two.*/
 	mutable vc<T> a, z;
 	template <typename Cont>
 	seg(const Cont &v) : n(nx2(v.size())), a(2 * n, id), z(2 * n) {
