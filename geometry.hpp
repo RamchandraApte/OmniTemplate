@@ -6,7 +6,16 @@ auto operator<(pt const &a, pt const &b) {
 }
 } // namespace std
 auto dot(pt const &a, pt const &b) { return real(conj(a) * b); }
+void test_dot() {
+	assert((dot({1, 2}, {2, 5}) == 1 * 2 + 2 * 5));
+	assert((dot({0, 2}, {3, 0}) == 0 * 3 + 2 * 0));
+}
 auto wedge(pt const &a, pt const &b) { return imag(conj(a) * b); }
+void test_wedge() {
+	assert((wedge({1, 0}, {0, 1}) == 1));
+	assert((wedge({1, 1}, {1, 1}) == 0));
+	assert((wedge({1, 0}, {0, 0}) == 0));
+}
 auto area(pt a, pt b, pt c) { return wedge(b - a, c - a); }
 auto ccw(pt a, pt b, pt c) {
 	/*! Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
@@ -45,9 +54,9 @@ struct cht {
 	/*! Convex-hull trick. This can be used to find the minimum of a set of
 	 * lines at various points. */
 	vc<pt> h; //!< The lines
-	template <typename Cont> cht(Cont &v) {
-		uniq(v, map_args(lambda(imag), equal_to{}),
-		     map_args(lambda(conj)));
+	template <typename Cont> cht(const Cont v) {
+		v = uniq(v, map_args(lambda(imag), equal_to{}),
+			 map_args(lambda(conj)));
 		h = dbg(hull(v, false));
 	}
 	auto min(ll x) {
@@ -58,3 +67,7 @@ struct cht {
 		return eval(convex_min(ra{size(h) - 1}, eval));
 	}
 };
+void test_geometry() {
+	test_dot();
+	test_wedge();
+}

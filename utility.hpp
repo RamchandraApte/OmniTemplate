@@ -2,8 +2,8 @@
 #include "core.hpp"
 struct with {
 	/*! Sets v to new_ temporary while with object is alive */
-	ll old;
-	ll &v;
+	ll old; //!< Original value of the variable
+	ll &v;	//!< Reference to variable
 	with(ll new_, ll &v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
@@ -29,13 +29,18 @@ template <typename T> auto cache(const T &f) {
 		return ch[arg];
 	};
 }
+// TODO why doesn't [[nodiscard]] generated a compiler warning?
 template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
-auto uniq(Cont &v, Eq const &up = Eq{}, T const &sp = T{}) {
+[[nodiscard]] auto uniq(Cont v, Eq const &up = Eq{}, T const &sp = T{}) {
 	/*! Remove all duplicates element from v so that all elements in v are
 	 * distinct and sorted */
 	sort(al(v), sp);
 	v.resize(unique(al(v), up) - begin(v));
 	return v;
+}
+void test_uniq() {
+	assert((uniq(vl{2, -1, 3, -1, 2, 3}) == vl{-1, 2, 3}));
+	assert((uniq<equal_to<>, greater<>>(vl{1, -3, 5}) == vl{5, 1, -3}));
 }
 template <typename T = less<>, typename Func>
 auto map_args(const Func &f, T g = T{}) {
@@ -57,10 +62,30 @@ template <typename T> auto prev_less(const T &v) {
 	return l;
 }
 auto nx2(ll x) { return ll(1LL) << ll(ceil(log2(lli(x)))); }
-ll next_comb(ll x) {
-	ll tz = __builtin_ctz(x);
+[[nodiscard]] ll next_comb(ll x) {
+	/*! Formally, returns the smallest integer y > x such that popcount(y) =
+	 * popcount(x). Note, such y must exist. */
+	// Uses algorithm from some blog online, I think
+	ll tz = __builtin_ctzll(x);
 	ll y = x + (ll{1} << tz);
-	return y | (y ^ x) >> (2 + tz);
+	const auto ret = y | (y ^ x) >> (2 + tz);
+	assert(ret > x);
+	assert(__builtin_popcountll(ret) == __builtin_popcountll(x));
+	return ret;
+}
+void test_comb() {
+	ll x = 0b111;
+	x = next_comb(x);
+	assert(x == 0b1011);
+	x = next_comb(x);
+	assert(x == 0b1101);
+	x = next_comb(x);
+	assert(x == 0b1110);
+	x = 0b1;
+	x = next_comb(x);
+	assert(x == 0b10);
+	x = next_comb(x);
+	assert(x == 0b100);
 }
 tm() struct ar { using type = T; };
 tm() using ar_t = typename ar<T>::type;
@@ -74,9 +99,14 @@ struct random_device_patch {
 	unsigned int operator()() {
 		return clock_::now()
 		    .time_since_epoch()
-		    .count(); // Probably random enough
+		    .count(); // TODO Probably random enough, but could be
+			      // improved?
 	}
 	double entropy() { return 0.0; }
 };
 using default_random_device = random_device_patch;
 default_random_engine reng{default_random_device{}()};
+void test_utility() {
+	test_uniq();
+	test_comb();
+}

@@ -6,4 +6,6 @@ void main2() {
   test_modulo();
   test_queue();
   test_splay_tree();
+  test_geometry();
+  test_utility();
 }
