@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'sat2_599',
+		'sat2_607',
 		[
 			'sat2',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'scc_600',
+		'scc_608',
 		[
 			'scc',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'search_5fall_601',
+		'search_5fall_609',
 		[
 			'search_all',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'search_5fit_602',
+		'search_5fit_610',
 		[
 			'search_it',
 			[
@@ -45,7 +45,7 @@ var searchData = [
 		]
 	],
 	[
-		'search_5fra_603',
+		'search_5fra_611',
 		[
 			'search_ra',
 			[
@@ -55,7 +55,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_604',
+		'seg_612',
 		[
 			'seg',
 			[
@@ -65,7 +65,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg2_605',
+		'seg2_613',
 		[
 			'seg2',
 			[
@@ -75,7 +75,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_5fbase_606',
+		'seg_5fbase_614',
 		[
 			'seg_base',
 			[
@@ -90,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'side_607',
+		'side_615',
 		[
 			'side',
 			[
@@ -100,7 +100,7 @@ var searchData = [
 		]
 	],
 	[
-		'sieve_608',
+		'sieve_616',
 		[
 			'sieve',
 			[
@@ -110,7 +110,7 @@ var searchData = [
 		]
 	],
 	[
-		'simple_5ftp_609',
+		'simple_5ftp_617',
 		[
 			'simple_tp',
 			[
@@ -120,7 +120,7 @@ var searchData = [
 		]
 	],
 	[
-		'size_610',
+		'size_618',
 		[
 			'size',
 			[
@@ -134,7 +134,7 @@ var searchData = [
 		]
 	],
 	[
-		'splay_611',
+		'splay_619',
 		[
 			'splay',
 			[
@@ -144,7 +144,7 @@ var searchData = [
 		]
 	],
 	[
-		'splaytree_612',
+		'splaytree_620',
 		[
 			'SplayTree',
 			[
@@ -154,7 +154,7 @@ var searchData = [
 		]
 	],
 	[
-		'split_613',
+		'split_621',
 		[
 			'split',
 			[
@@ -168,7 +168,7 @@ var searchData = [
 		]
 	],
 	[
-		'split_5fimp_614',
+		'split_5fimp_622',
 		[
 			'split_imp',
 			[
@@ -178,7 +178,7 @@ var searchData = [
 		]
 	],
 	[
-		'sub_5fset_615',
+		'sub_5fset_623',
 		[
 			'sub_set',
 			[

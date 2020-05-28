@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'gauss_507',
+		'gauss_515',
 		[
 			'gauss',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fdata_508',
+		'get_5fdata_516',
 		[
 			'get_data',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fimp_509',
+		'get_5fimp_517',
 		[
 			'get_imp',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fleft_510',
+		'get_5fleft_518',
 		[
 			'get_left',
 			[
@@ -40,7 +40,7 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fright_511',
+		'get_5fright_519',
 		[
 			'get_right',
 			[
@@ -50,7 +50,7 @@ var searchData = [
 		]
 	],
 	[
-		'gl_512',
+		'gl_520',
 		[
 			'gl',
 			[
@@ -65,7 +65,7 @@ var searchData = [
 		]
 	],
 	[
-		'gr_513',
+		'gr_521',
 		[
 			'gr',
 			[
@@ -80,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'graph_5fin_514',
+		'graph_5fin_522',
 		[
 			'graph_in',
 			[
@@ -90,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'gsearch_515',
+		'gsearch_523',
 		[
 			'gsearch',
 			[
@@ -100,7 +100,7 @@ var searchData = [
 		]
 	],
 	[
-		'gt_516',
+		'gt_524',
 		[
 			'gt',
 			[

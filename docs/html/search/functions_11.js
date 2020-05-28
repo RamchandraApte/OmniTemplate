@@ -1,6 +1,26 @@
 var searchData = [
 	[
-		'test_5fdivisors_616',
+		'test_5far_624',
+		[
+			'test_ar',
+			[
+				'../utility_8hpp.html#aebff8fa924a7c48ecb780e71c6316ea6',
+				1, 'utility.hpp'
+			]
+		]
+	],
+	[
+		'test_5fcomb_625',
+		[
+			'test_comb',
+			[
+				'../utility_8hpp.html#af923bad71129f66456f8fd6545d79bfe',
+				1, 'utility.hpp'
+			]
+		]
+	],
+	[
+		'test_5fdivisors_626',
 		[
 			'test_divisors',
 			[
@@ -10,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fdlog_617',
+		'test_5fdlog_627',
 		[
 			'test_dlog',
 			[
@@ -20,7 +40,17 @@ var searchData = [
 		]
 	],
 	[
-		'test_5ffac_618',
+		'test_5fdot_628',
+		[
+			'test_dot',
+			[
+				'../geometry_8hpp.html#a08748b8a2389649d041e6c8ff9d28ba0',
+				1, 'geometry.hpp'
+			]
+		]
+	],
+	[
+		'test_5ffac_629',
 		[
 			'test_fac',
 			[
@@ -30,7 +60,17 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fmatrix_619',
+		'test_5fgeometry_630',
+		[
+			'test_geometry',
+			[
+				'../geometry_8hpp.html#a847291628b61b00d0bc261bb22adf447',
+				1, 'geometry.hpp'
+			]
+		]
+	],
+	[
+		'test_5fmatrix_631',
 		[
 			'test_matrix',
 			[
@@ -40,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fmd_620',
+		'test_5fmd_632',
 		[
 			'test_md',
 			[
@@ -50,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fminqueue_621',
+		'test_5fminqueue_633',
 		[
 			'test_minqueue',
 			[
@@ -60,7 +100,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fminstack_622',
+		'test_5fminstack_634',
 		[
 			'test_minstack',
 			[
@@ -70,7 +110,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fmodulo_623',
+		'test_5fmodulo_635',
 		[
 			'test_modulo',
 			[
@@ -80,7 +120,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fnumber_5ftheory_624',
+		'test_5fnumber_5ftheory_636',
 		[
 			'test_number_theory',
 			[
@@ -90,7 +130,17 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fpower_625',
+		'test_5fnx2_637',
+		[
+			'test_nx2',
+			[
+				'../utility_8hpp.html#ae9af300622998a43b200780645473ec3',
+				1, 'utility.hpp'
+			]
+		]
+	],
+	[
+		'test_5fpower_638',
 		[
 			'test_power',
 			[
@@ -100,7 +150,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fprime_626',
+		'test_5fprime_639',
 		[
 			'test_prime',
 			[
@@ -110,7 +160,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fprimitive_5froot_627',
+		'test_5fprimitive_5froot_640',
 		[
 			'test_primitive_root',
 			[
@@ -120,7 +170,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fqueue_628',
+		'test_5fqueue_641',
 		[
 			'test_queue',
 			[
@@ -130,7 +180,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fqueueadaptor_629',
+		'test_5fqueueadaptor_642',
 		[
 			'test_queueadaptor',
 			[
@@ -140,7 +190,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fsat2_630',
+		'test_5fsat2_643',
 		[
 			'test_sat2',
 			[
@@ -150,7 +200,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fsplay_5ftree_631',
+		'test_5fsplay_5ftree_644',
 		[
 			'test_splay_tree',
 			[
@@ -160,7 +210,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5ftotient_632',
+		'test_5ftotient_645',
 		[
 			'test_totient',
 			[
@@ -170,7 +220,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5ftrie_5fnode_633',
+		'test_5ftrie_5fnode_646',
 		[
 			'test_trie_node',
 			[
@@ -180,7 +230,37 @@ var searchData = [
 		]
 	],
 	[
-		'timer_634',
+		'test_5funiq_647',
+		[
+			'test_uniq',
+			[
+				'../utility_8hpp.html#a135862e0b9eecf842529ef19034e3c3c',
+				1, 'utility.hpp'
+			]
+		]
+	],
+	[
+		'test_5futility_648',
+		[
+			'test_utility',
+			[
+				'../utility_8hpp.html#a5e29afed548a99cd2c14f21a464382d7',
+				1, 'utility.hpp'
+			]
+		]
+	],
+	[
+		'test_5fwedge_649',
+		[
+			'test_wedge',
+			[
+				'../geometry_8hpp.html#a51b282424a806deac8ebd597aa601232',
+				1, 'geometry.hpp'
+			]
+		]
+	],
+	[
+		'timer_650',
 		[
 			'timer',
 			[
@@ -190,7 +270,7 @@ var searchData = [
 		]
 	],
 	[
-		'tm_635',
+		'tm_651',
 		[
 			'tm',
 			[
@@ -200,7 +280,7 @@ var searchData = [
 		]
 	],
 	[
-		'to_5farray_636',
+		'to_5farray_652',
 		[
 			'to_array',
 			[
@@ -216,7 +296,7 @@ var searchData = [
 		]
 	],
 	[
-		'to_5ftuple_637',
+		'to_5ftuple_653',
 		[
 			'to_tuple',
 			[
@@ -226,7 +306,7 @@ var searchData = [
 		]
 	],
 	[
-		'top_638',
+		'top_654',
 		[
 			'top',
 			[
@@ -236,7 +316,7 @@ var searchData = [
 		]
 	],
 	[
-		'totient_639',
+		'totient_655',
 		[
 			'totient',
 			[
@@ -246,7 +326,7 @@ var searchData = [
 		]
 	],
 	[
-		'trans_640',
+		'trans_656',
 		[
 			'trans',
 			[
@@ -256,7 +336,7 @@ var searchData = [
 		]
 	],
 	[
-		'treap_641',
+		'treap_657',
 		[
 			'treap',
 			[

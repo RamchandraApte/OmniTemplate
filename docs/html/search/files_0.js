@@ -1,4 +1,2 @@
-var searchData=
-[
-  ['2sat_2ehpp_433',['2sat.hpp',['../2sat_8hpp.html',1,'']]]
-];
+var searchData =
+    [ [ '2sat_2ehpp_441', [ '2sat.hpp', [ '../2sat_8hpp.html', 1, '' ] ] ] ];

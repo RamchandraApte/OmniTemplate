@@ -137,7 +137,7 @@ var searchData = [
 		[
 			'nx2',
 			[
-				'../utility_8hpp.html#a02462a4216b54e8116b62f164ac15368',
+				'../utility_8hpp.html#af792f767f338ad4a8547856ed0626120',
 				1, 'utility.hpp'
 			]
 		]

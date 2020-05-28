@@ -1,12 +1,23 @@
 #pragma once
 #include "core.hpp"
+// TODO templatize this
 struct with {
 	/*! Sets v to new_ temporary while with object is alive */
 	ll old; //!< Original value of the variable
 	ll &v;	//!< Reference to variable
-	with(ll new_, ll &v_) : old(v_), v(v_) { v = new_; }
+	[[nodiscard]] with(ll new_, ll &v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
+void test_with() {
+	ll var = 12;
+	auto inner_func = [&]() {
+		with _w(23, var);
+		assert(var == 23);
+		var = 45;
+	};
+	inner_func();
+	assert(var == 12);
+}
 template <typename Func> struct fix {
 	/*! Helper for lambda recursive functions. The recursive function is
 	 * passed to Func as the first argument.*/
@@ -61,11 +72,28 @@ template <typename T> auto prev_less(const T &v) {
 	}
 	return l;
 }
-auto nx2(ll x) { return ll(1LL) << ll(ceil(log2(lli(x)))); }
+ll nx2(ll x) {
+	/*! Return the smallest power of two at least x*/
+	if (x == 0) {
+		return 1;
+	}
+	return 1LL << ll(ceil(log2(lli(x))));
+}
+void test_nx2() {
+	assert(nx2(0) == 1);
+	assert(nx2(1) == 1);
+	assert(nx2(2) == 2);
+	assert(nx2(3) == 4);
+	assert(nx2(4) == 4);
+	assert(nx2(5) == 8);
+	assert(nx2((1LL << 45) - 100) == 1LL << 45);
+	assert(nx2((1LL << 45)) == 1LL << 45);
+}
 [[nodiscard]] ll next_comb(ll x) {
 	/*! Formally, returns the smallest integer y > x such that popcount(y) =
 	 * popcount(x). Note, such y must exist. */
 	// Uses algorithm from some blog online, I think
+	// TODO credit author
 	ll tz = __builtin_ctzll(x);
 	ll y = x + (ll{1} << tz);
 	const auto ret = y | (y ^ x) >> (2 + tz);
@@ -73,7 +101,7 @@ auto nx2(ll x) { return ll(1LL) << ll(ceil(log2(lli(x)))); }
 	assert(__builtin_popcountll(ret) == __builtin_popcountll(x));
 	return ret;
 }
-void test_comb() {
+void test_next_comb() {
 	ll x = 0b111;
 	x = next_comb(x);
 	assert(x == 0b1011);
@@ -93,6 +121,12 @@ template <typename T, size_t n> struct ar<T[n]> {
 	using type = array<ar_t<T>, n>;
 };
 
+void test_ar() {
+	using std::is_same_v; // FIXME
+	static_assert(is_same_v<ar_t<ll[2][3]>, array<array<ll, 3>, 2>>);
+	static_assert(is_same_v<ar_t<array<ll, 200>[2][3]>,
+				array<array<array<ll, 200>, 3>, 2>>);
+}
 struct random_device_patch {
 	/*! Random device patch to fix libstdc++'s broken implementation on
 	 * Windows*/
@@ -104,9 +138,13 @@ struct random_device_patch {
 	}
 	double entropy() { return 0.0; }
 };
+// TODO activate only on windows
 using default_random_device = random_device_patch;
 default_random_engine reng{default_random_device{}()};
 void test_utility() {
+	test_with();
 	test_uniq();
-	test_comb();
+	test_next_comb();
+	test_ar();
+	test_nx2();
 }
