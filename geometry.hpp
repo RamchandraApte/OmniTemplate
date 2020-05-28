@@ -1,6 +1,5 @@
 #pragma once
 #include "core.hpp"
-#include "utility.hpp"
 namespace std {
 auto operator<(pt const &a, pt const &b) {
 	return map_args([](auto x) { return tuple{real(x), imag(x)}; })(a, b);

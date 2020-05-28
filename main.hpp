@@ -1,7 +1,6 @@
 #pragma once
 #include "core.hpp"
 void main2();
-extern const bool multitest;
 #if 0
 string s = __FILE__;
 ifstream input{s.substr(0,s.size()-string{"cpp"}.size())+"in"};

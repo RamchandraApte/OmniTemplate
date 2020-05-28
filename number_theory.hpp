@@ -1,7 +1,6 @@
 #pragma once
 #include "core.hpp"
 #include "modulo.hpp"
-#include "utility.hpp"
 vl divs;
 auto prime(ll n) {
 	/*! Return whether integer n >= 2 is prime*/

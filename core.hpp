@@ -79,57 +79,12 @@ let(vl, vector<ll>);
 let(ld, long double) let(pr, pair<ll, ll>);
 let(com, complex<double>);
 let(pt, complex<ll>);
+let(ull, unsigned long long);
 using bt = bitset<numeric_limits<ll>::digits>;
 tm() using pq = std::priority_queue<T, vector<T>, greater<>>;
 let(clock_, high_resolution_clock);
 import(this_thread);
 let(um, unordered_map<ll, ll>);
-tm() auto type_name([[maybe_unused]] T const &v) {
-	/*! Return the type name of the type of value*/
-	string s = __PRETTY_FUNCTION__, tar = "T = ";
-	auto st = s.find(tar) + tar.size();
-	return s.substr(st, s.find("]", st) - st);
-}
-auto replace(string s, const string &a, const string &b) {
-	/*! Replace all occurences of a in s with b*/
-	// TODO This is multipass. Should this be singlepass?
-	ll loc;
-	while ((loc = s.find(a)) != string::npos) {
-		s = s.substr(0, loc) + b + s.substr(loc + a.size());
-	}
-	return s;
-}
-template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
-	/*! Return the simplified type of v */
-	auto s = type_name(v);
-	for (const auto &p : lets) {
-		s = replace(s, p.first, p.second);
-	}
-	return s;
-}
-auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
-auto const delim = ", "s; /*!< Delimiter for debug output */
-auto constexpr tau = 2 * 3.1415926535897932384626433L; /*!< Pi */
-#include "io.hpp"
-BEGIN_NS
-#include "operations.hpp"
-#include "range.hpp"
-ll depth = -1;
-template <typename T>
-auto debug(const T &x, const string &name,
-	   source_location const &loc = source_location::current()) {
-	/*!< Debug print x */
-	if (debug_mode) {
-		fo(i, depth) { cerr << "\t"; }
-		cerr << loc.function_name() << ":" << loc.line() << " " << name
-		     << " = " << x << endl;
-	}
-	--depth;
-	return x;
-}
-
-using ull = unsigned long long;
-
 BEGIN_NS
 #ifdef REALGCC
 template <typename T, typename V = null_type>
@@ -137,37 +92,14 @@ using omap = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
 #endif
 END_NS
 
-tm() struct ar { using type = T; };
-tm() using ar_t = typename ar<T>::type;
-template <typename T, size_t n> struct ar<T[n]> {
-	using type = array<ar_t<T>, n>;
-};
+auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
+auto const delim = ", "s; /*!< Delimiter for debug output */
+auto constexpr tau = 2 * 3.1415926535897932384626433L; /*!< Pi */
+bool multitest = false;
 
-tm() using bin_op = T(*)(T, T);
-#define ret(x, id)                                                             \
-	if (f == static_cast<tp(f)>(x)) {                                      \
-		return id;                                                     \
-	}
-constexpr ll identity(bin_op<ll const &> const &f) {
-	ret(max<ll>, -inf);
-	ret(min<ll>, inf);
-	abort();
-}
-constexpr ll identity(bin_op<ll> const &f) {
-	ret(gcd<ll>, 0);
-	abort();
-}
-
-const bool multitest = false;
-struct random_device_patch {
-	/*! Random device patch to fix libstdc++'s broken implementation on
-	 * Windows*/
-	unsigned int operator()() {
-		return clock_::now()
-		    .time_since_epoch()
-		    .count(); // Probably random enough
-	}
-	double entropy() { return 0.0; }
-};
-using default_random_device = random_device_patch;
-default_random_engine reng{default_random_device{}()};
+#include "io.hpp"
+BEGIN_NS
+#include "operations.hpp"
+#include "range.hpp"
+#include "debug.hpp"
+#include "utility.hpp"

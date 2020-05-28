@@ -62,3 +62,21 @@ ll next_comb(ll x) {
 	ll y = x + (ll{1} << tz);
 	return y | (y ^ x) >> (2 + tz);
 }
+tm() struct ar { using type = T; };
+tm() using ar_t = typename ar<T>::type;
+template <typename T, size_t n> struct ar<T[n]> {
+	using type = array<ar_t<T>, n>;
+};
+
+struct random_device_patch {
+	/*! Random device patch to fix libstdc++'s broken implementation on
+	 * Windows*/
+	unsigned int operator()() {
+		return clock_::now()
+		    .time_since_epoch()
+		    .count(); // Probably random enough
+	}
+	double entropy() { return 0.0; }
+};
+using default_random_device = random_device_patch;
+default_random_engine reng{default_random_device{}()};
