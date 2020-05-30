@@ -35,3 +35,16 @@ template <typename Stream> auto &operator<<(Stream &os, dsu const &d) {
 	}
 	return os << "}";
 }
+void test_dsu() {
+	dsu d{100};
+	fo(i, 100) { assert(d[i] == i); }
+	d(3, 4);
+	d(6, 10);
+	d(6, 6);
+	d(10, 3);
+	vl idx{d[3], d[4], d[6], d[10]};
+	assert(all_of(al(idx), [&](auto x) { return x == idx[0]; }));
+	dbg(d);
+	fo(i, 99) { d(i, i + 1); }
+	fo(i, 100) { assert(d[i] == d[0]); }
+}

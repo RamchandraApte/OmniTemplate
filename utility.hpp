@@ -57,6 +57,10 @@ template <typename T = less<>, typename Func>
 auto map_args(const Func &f, T g = T{}) {
 	return [&](const auto &... args) { return g(f(args)...); };
 }
+void test_map_args() {
+	vl a{24, 25};
+	assert(map_args<greater<>>([&](ll i) { return a[i]; })(1, 0));
+}
 template <typename T> auto prev_less(const T &v) {
 	ll n = v.size();
 	vl l(n, -1);
@@ -147,4 +151,5 @@ void test_utility() {
 	test_next_comb();
 	test_ar();
 	test_nx2();
+	test_map_args();
 }

@@ -8,5 +8,7 @@ void test_all() {
 	test_splay_tree();
 	test_geometry();
 	test_utility();
+	test_combinatorics();
+	test_dsu();
 }
 void main2() { test_all(); }

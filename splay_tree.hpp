@@ -1,10 +1,12 @@
 #pragma once
 #include "core.hpp"
+/*! Implements a splay tree*/
 template <typename T> struct SplayTree {
       public:
+	/*! Splay tree node */
 	struct Node {
 	      public:
-		// Constructor?
+		// TODO Constructor?
 		T value;
 		array<Node *, 2> child{};
 		Node *parent{};
@@ -54,9 +56,12 @@ template <typename T> struct SplayTree {
 		par->child[side] = new_;
 	}
 	static bool side(Node *const child) {
+		/*! Returns true if child is on the right, and false otherwise*/
+		// TODO use an enum for this
 		return child->parent->child[1] == child;
 	}
 	static void rotate(Node *const x) {
+		/*! Rotate node x around its parent */
 		const auto p = x->parent;
 
 		const bool i = side(x);
@@ -70,6 +75,7 @@ template <typename T> struct SplayTree {
 		attach(x, !i, p);
 	}
 	static void splay(Node *const x) {
+		/*! Splay node x. x will become the root of the tree*/
 		while (x->parent) {
 			if (!x->parent->parent) {
 				// Zig step
