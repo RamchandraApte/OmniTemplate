@@ -20,9 +20,17 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{combinatorics_8hpp_ada068dc4f9ea18a98ff58cb8b0be93c9}{perm}} (T a, T b)
 \item 
+void \mbox{\hyperlink{combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e}{test\+\_\+perm}} ()
+\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{combinatorics_8hpp_aed30b4e386e3e22247cd9d6aecc1e88f}{fact}} (T n)
 \item 
+void \mbox{\hyperlink{combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc}{test\+\_\+fact}} ()
+\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{combinatorics_8hpp_a4d8eda9d63610214a1eb9b92a51443d1}{choose}} (T a, T b)
+\item 
+void \mbox{\hyperlink{combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607}{test\+\_\+choose}} ()
+\item 
+void \mbox{\hyperlink{combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25}{test\+\_\+combinatorics}} ()
 \end{DoxyCompactItemize}
 
 
@@ -34,11 +42,19 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto choose (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})}
 
-Returns a choose bHere is the call graph for this function\+:\nopagebreak
+Returns a choose b, i.\+e. $\binom{a}{b}$Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=280pt]{combinatorics_8hpp_a4d8eda9d63610214a1eb9b92a51443d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_a4d8eda9d63610214a1eb9b92a51443d1_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{combinatorics_8hpp_aed30b4e386e3e22247cd9d6aecc1e88f}\label{combinatorics_8hpp_aed30b4e386e3e22247cd9d6aecc1e88f}} 
@@ -48,14 +64,15 @@ Returns a choose bHere is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto fact (\begin{DoxyParamCaption}\item[{T}]{n }\end{DoxyParamCaption})}
 
-Return the factorial of n.Here is the call graph for this function\+:\nopagebreak
+Return the factorial of n, i.\+e. $n!$.Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=193pt]{combinatorics_8hpp_aed30b4e386e3e22247cd9d6aecc1e88f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -69,10 +86,99 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto perm (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Return $P(a,b)$, the falling factorial.Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{combinatorics_8hpp_ada068dc4f9ea18a98ff58cb8b0be93c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607}\label{combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607}} 
+\index{combinatorics.hpp@{combinatorics.hpp}!test\_choose@{test\_choose}}
+\index{test\_choose@{test\_choose}!combinatorics.hpp@{combinatorics.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_choose()}{test\_choose()}}
+{\footnotesize\ttfamily void test\+\_\+choose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25}\label{combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25}} 
+\index{combinatorics.hpp@{combinatorics.hpp}!test\_combinatorics@{test\_combinatorics}}
+\index{test\_combinatorics@{test\_combinatorics}!combinatorics.hpp@{combinatorics.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_combinatorics()}{test\_combinatorics()}}
+{\footnotesize\ttfamily void test\+\_\+combinatorics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc}\label{combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc}} 
+\index{combinatorics.hpp@{combinatorics.hpp}!test\_fact@{test\_fact}}
+\index{test\_fact@{test\_fact}!combinatorics.hpp@{combinatorics.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_fact()}{test\_fact()}}
+{\footnotesize\ttfamily void test\+\_\+fact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e}\label{combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e}} 
+\index{combinatorics.hpp@{combinatorics.hpp}!test\_perm@{test\_perm}}
+\index{test\_perm@{test\_perm}!combinatorics.hpp@{combinatorics.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_perm()}{test\_perm()}}
+{\footnotesize\ttfamily void test\+\_\+perm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e_icgraph}
 \end{center}
 \end{figure}

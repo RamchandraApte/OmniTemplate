@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'w_374',
+		'w_387',
 		[
 			'w',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'warn_375',
+		'warn_388',
 		[
 			'WARN',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'wedge_376',
+		'wedge_389',
 		[
 			'wedge',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'with_377',
+		'with_390',
 		[
 			'with', [ '../structwith.html', 1, 'with' ],
 			[

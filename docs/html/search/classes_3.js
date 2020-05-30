@@ -1,4 +1,4 @@
 var searchData = [
-	[ 'dfs_389', [ 'dfs', [ '../structdfs.html', 1, '' ] ] ],
-	[ 'dsu_390', [ 'dsu', [ '../structdsu.html', 1, '' ] ] ]
+	[ 'dfs_402', [ 'dfs', [ '../structdfs.html', 1, '' ] ] ],
+	[ 'dsu_403', [ 'dsu', [ '../structdsu.html', 1, '' ] ] ]
 ];

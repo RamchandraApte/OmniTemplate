@@ -10,5 +10,6 @@ void test_all() {
 	test_utility();
 	test_combinatorics();
 	test_dsu();
+	test_graph_theory();
 }
 void main2() { test_all(); }

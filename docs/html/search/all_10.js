@@ -884,6 +884,16 @@ var searchData = [
 				1, 'SplayTree::iterator::operator==()'
 			],
 			[
+				'../graph__theory_8hpp.html#a3899b9c13b95304df918101d4c4f4d4f',
+				1,
+				'operator==(edge const &amp;a, edge const &amp;b):&#160;graph_theory.hpp'
+			],
+			[
+				'../linear__algebra_8hpp.html#adde02b85217405ecfe675758588ccd36',
+				1,
+				'operator==(mat&lt; T... &gt; const &amp;a, mat&lt; T... &gt; const &amp;b):&#160;linear_algebra.hpp'
+			],
+			[
 				'../modulo_8hpp.html#a0643abd64cbdf649cb7d2d1d10185b17',
 				1,
 				'operator==(md const &amp;a, md const &amp;b):&#160;modulo.hpp'

@@ -10,9 +10,12 @@ bool operator<(edge const &a, edge const &b) {
 	/*! Compare the edges by weight, with ties compared by a and b*/
 	return a.to_tuple() < b.to_tuple();
 }
+bool operator==(edge const &a, edge const &b) {
+	return a.to_tuple() == b.to_tuple();
+}
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	/*! Print the edge*/
-	return os << "edge{" << e.a << "-" << e.w << "->" << e.b << "}";
+	return os << "edge{" << e.a << "-(" << e.w << ")>" << e.b << "}";
 }
 auto dist(vector<vector<pr>> g, ll s) {
 	/*! Given an adjacency-list of a graph, returns the shortest distance to
@@ -42,7 +45,8 @@ auto dist(vector<vector<pr>> g, ll s) {
 }
 auto dist(mat<ll> const &g) {
 	/*! Given a 2D matrix of distances for each edge in g, returns a 2D
-	 * matrix of the shortest distances. Algorithm: Floyd-Warshall*/
+	 * matrix of the shortest distances. We do not consider paths of length
+	 * zero. Algorithm: Floyd-Warshall*/
 	assert(g.r == g.c);
 	auto n = g.r;
 	auto d = g;
@@ -56,23 +60,38 @@ auto dist(mat<ll> const &g) {
 	}
 	return d;
 }
+void test_dist() {
+	mat<ll> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};
+	mat<ll> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};
+	dbg(dist(g));
+	dbg(short_dist);
+	assert(dist(g) == short_dist);
+}
 auto mst(vector<edge> es) {
 	/*! Returns the minimum spanning tree of the set of edges es, as a set
 	 * of edges*/
+	// TODO what happens if no MST?
 	sort(al(es));
 	auto mi = -inf;
 	for (const auto &e : es) {
 		mi = max(mi, max(e.a, e.b));
 	}
 	dsu d{mi + 1};
-	tp(es) ret;
+	vector<edge> ret;
 	for (const auto &e : es) {
-		if (d(e.a, e.b)) {
+		if (!d(e.a, e.b)) {
 			continue;
 		}
 		ret.pb(e);
 	}
 	return ret;
+}
+void test_mst() {
+	vc<edge> edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};
+	auto ret = mst(edges);
+	sort(al(ret));
+	dbg(ret);
+	assert((ret == vc<edge>{edges[3], edges[1], edges[0]}));
 }
 struct gsearch {
 	/*! Generalized graph searcher/visitor*/
@@ -145,6 +164,11 @@ auto trans(const vc<vl> &g) {
 		}
 	}
 	return h;
+}
+void test_trans() {
+	assert((trans(vc<vl>{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) ==
+		vc<vl>{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
+	assert((trans(vc<vl>{}) == vc<vl>{}));
 }
 auto scc(const vc<vl> &g) {
 	/*! Returns the strongly connected component for each vertex of the
@@ -252,6 +276,17 @@ auto add_edge(vc<vl> &g, ll u, ll v) {
 	g[u].pb(v);
 	g[v].pb(u);
 }
+void test_add_edge() {
+	vc<vl> g(10);
+	add_edge(g, 3, 4);
+	add_edge(g, 6, 4);
+	add_edge(g, 9, 2);
+	// Order doesn't matter
+	for (auto &x : g) {
+		sort(al(x));
+	}
+	assert((g == vc<vl>{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));
+}
 auto graph_in(vc<vl> &g, ll m) {
 	/*! Reads 1-indexed list of edges into graph g*/
 	fo(i, 0, m) {
@@ -259,4 +294,10 @@ auto graph_in(vc<vl> &g, ll m) {
 		I(v);
 		add_edge(g, --u, --v);
 	}
+}
+void test_graph_theory() {
+	test_add_edge();
+	test_trans();
+	test_dist();
+	test_mst();
 }

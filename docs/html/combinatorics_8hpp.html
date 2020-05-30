@@ -94,12 +94,20 @@ Functions</h2></td></tr>
 <tr class="memitem:ada068dc4f9ea18a98ff58cb8b0be93c9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ada068dc4f9ea18a98ff58cb8b0be93c9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#ada068dc4f9ea18a98ff58cb8b0be93c9">perm</a> (T a, T b)</td></tr>
 <tr class="separator:ada068dc4f9ea18a98ff58cb8b0be93c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfa862b47420de0d171586777f5fa5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#aedfa862b47420de0d171586777f5fa5e">test_perm</a> ()</td></tr>
+<tr class="separator:aedfa862b47420de0d171586777f5fa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed30b4e386e3e22247cd9d6aecc1e88f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aed30b4e386e3e22247cd9d6aecc1e88f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#aed30b4e386e3e22247cd9d6aecc1e88f">fact</a> (T n)</td></tr>
 <tr class="separator:aed30b4e386e3e22247cd9d6aecc1e88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da351da5f459306dd3182e8e0e3a5bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#a1da351da5f459306dd3182e8e0e3a5bc">test_fact</a> ()</td></tr>
+<tr class="separator:a1da351da5f459306dd3182e8e0e3a5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d8eda9d63610214a1eb9b92a51443d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4d8eda9d63610214a1eb9b92a51443d1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#a4d8eda9d63610214a1eb9b92a51443d1">choose</a> (T a, T b)</td></tr>
 <tr class="separator:a4d8eda9d63610214a1eb9b92a51443d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ebcc5a7f4095dab1cc6d9bacd8d607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#a18ebcc5a7f4095dab1cc6d9bacd8d607">test_choose</a> ()</td></tr>
+<tr class="separator:a18ebcc5a7f4095dab1cc6d9bacd8d607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5a7372e7932ba5830e38929ec38c25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="combinatorics_8hpp.html#a0c5a7372e7932ba5830e38929ec38c25">test_combinatorics</a> ()</td></tr>
+<tr class="separator:a0c5a7372e7932ba5830e38929ec38c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a4d8eda9d63610214a1eb9b92a51443d1"></a>
@@ -129,11 +137,17 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a choose b</p>
+<p>Returns a choose b, i.e. \(\binom{a}{b}\)</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a4d8eda9d63610214a1eb9b92a51443d1_cgraph.svg" width="278" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a4d8eda9d63610214a1eb9b92a51443d1_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -155,7 +169,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the factorial of n.</p>
+<p>Return the factorial of n, i.e. \(n!\).</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -164,7 +178,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_aed30b4e386e3e22247cd9d6aecc1e88f_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_aed30b4e386e3e22247cd9d6aecc1e88f_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -196,10 +211,128 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Return \(P(a,b)\), the falling factorial.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_ada068dc4f9ea18a98ff58cb8b0be93c9_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_ada068dc4f9ea18a98ff58cb8b0be93c9_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a18ebcc5a7f4095dab1cc6d9bacd8d607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ebcc5a7f4095dab1cc6d9bacd8d607">&#9670;&nbsp;</a></span>test_choose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test_choose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607_cgraph.svg" width="426" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a18ebcc5a7f4095dab1cc6d9bacd8d607_icgraph.svg" width="638" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0c5a7372e7932ba5830e38929ec38c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5a7372e7932ba5830e38929ec38c25">&#9670;&nbsp;</a></span>test_combinatorics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test_combinatorics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25_cgraph.svg" width="640" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a0c5a7372e7932ba5830e38929ec38c25_icgraph.svg" width="490" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1da351da5f459306dd3182e8e0e3a5bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da351da5f459306dd3182e8e0e3a5bc">&#9670;&nbsp;</a></span>test_fact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test_fact </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc_cgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_a1da351da5f459306dd3182e8e0e3a5bc_icgraph.svg" width="616" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aedfa862b47420de0d171586777f5fa5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfa862b47420de0d171586777f5fa5e">&#9670;&nbsp;</a></span>test_perm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test_perm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e_cgraph.svg" width="203" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="combinatorics_8hpp_aedfa862b47420de0d171586777f5fa5e_icgraph.svg" width="626" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

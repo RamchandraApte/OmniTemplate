@@ -106,13 +106,29 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="dsu_8hpp.html#af3fcfa892c42e873402a4d0f4a73e0d4">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="dsu_8hpp.html#af3fcfa892c42e873402a4d0f4a73e0d4">test_dsu</a>() {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structdsu.html">dsu</a> d{100};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 100) { assert(d[i] == i); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// TODO check return value of d()</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    d(3, 4);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    d(6, 10);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    d(6, 6);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    d(10, 3);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> idx{d[3], d[4], d[6], d[10]};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    assert(all_of(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(idx), [&amp;](<span class="keyword">auto</span> x) { <span class="keywordflow">return</span> x == idx[0]; }));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="core_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a>(d);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 99) { d(i, i + 1); }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 100) { assert(d[i] == d[0]); }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructdsu_html_a3d8ef126d199a5463e3b9647bd7162ee"><div class="ttname"><a href="structdsu.html#a3d8ef126d199a5463e3b9647bd7162ee">dsu::dsu</a></div><div class="ttdeci">dsu(ll n)</div><div class="ttdef"><b>Definition:</b> dsu.hpp:7</div></div>
 <div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:78</div></div>
 <div class="ttc" id="adsu_8hpp_html_a79371d6c744abc293ad7db7766b1b997"><div class="ttname"><a href="dsu_8hpp.html#a79371d6c744abc293ad7db7766b1b997">operator&lt;&lt;</a></div><div class="ttdeci">auto &amp; operator&lt;&lt;(Stream &amp;os, dsu const &amp;d)</div><div class="ttdef"><b>Definition:</b> dsu.hpp:27</div></div>
 <div class="ttc" id="acore_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> core.hpp:33</div></div>
+<div class="ttc" id="adsu_8hpp_html_af3fcfa892c42e873402a4d0f4a73e0d4"><div class="ttname"><a href="dsu_8hpp.html#af3fcfa892c42e873402a4d0f4a73e0d4">test_dsu</a></div><div class="ttdeci">void test_dsu()</div><div class="ttdef"><b>Definition:</b> dsu.hpp:38</div></div>
 <div class="ttc" id="astructdsu_html_ab7482914117e1c1c47b8ef3ee8f020b9"><div class="ttname"><a href="structdsu.html#ab7482914117e1c1c47b8ef3ee8f020b9">dsu::operator[]</a></div><div class="ttdeci">ll operator[](ll x) const</div><div class="ttdef"><b>Definition:</b> dsu.hpp:8</div></div>
 <div class="ttc" id="astructdsu_html_a4ab9115da80cfd9d9811ea536442b6d6"><div class="ttname"><a href="structdsu.html#a4ab9115da80cfd9d9811ea536442b6d6">dsu::operator()</a></div><div class="ttdeci">auto operator()(ll x, ll y)</div><div class="ttdef"><b>Definition:</b> dsu.hpp:12</div></div>
+<div class="ttc" id="acore_8hpp_html_a49bc164f30e64702250d2cbea09bf86c"><div class="ttname"><a href="core_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a></div><div class="ttdeci">#define dbg(x)</div><div class="ttdef"><b>Definition:</b> core.hpp:19</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="astructdsu_html"><div class="ttname"><a href="structdsu.html">dsu</a></div><div class="ttdef"><b>Definition:</b> dsu.hpp:3</div></div>
 <div class="ttc" id="astructdsu_html_a124d53d5eb8022b25d804bd5e2b5d6d4"><div class="ttname"><a href="structdsu.html#a124d53d5eb8022b25d804bd5e2b5d6d4">dsu::p</a></div><div class="ttdeci">vl p</div><div class="ttdef"><b>Definition:</b> dsu.hpp:5</div></div>

@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'range_602',
+		'range_615',
 		[
 			'range',
 			[
@@ -15,7 +15,7 @@ var searchData = [
 		]
 	],
 	[
-		'replace_603',
+		'replace_616',
 		[
 			'replace',
 			[
@@ -25,7 +25,7 @@ var searchData = [
 		]
 	],
 	[
-		'rev_604',
+		'rev_617',
 		[
 			'rev',
 			[
@@ -35,7 +35,7 @@ var searchData = [
 		]
 	],
 	[
-		'rin_605',
+		'rin_618',
 		[
 			'rin',
 			[
@@ -45,7 +45,7 @@ var searchData = [
 		]
 	],
 	[
-		'rotate_606',
+		'rotate_619',
 		[
 			'rotate',
 			[

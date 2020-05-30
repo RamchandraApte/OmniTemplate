@@ -23,6 +23,8 @@ struct \mbox{\hyperlink{structmat}{mat$<$ T $>$}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename ... T$>$ }\\bool \mbox{\hyperlink{linear__algebra_8hpp_adde02b85217405ecfe675758588ccd36}{operator==}} (\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&a, \mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&b)
+\item 
 {\footnotesize template$<$typename ... T$>$ }\\auto \mbox{\hyperlink{linear__algebra_8hpp_a869262492de32bc50ba1ae957607d69b}{operator$\ast$}} (\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&a, \mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&b)
 \item 
 {\footnotesize template$<$typename T $>$ }\\pair$<$ \mbox{\hyperlink{structmat}{mat}}$<$ T $>$ \&\&, T $>$ \mbox{\hyperlink{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266}{gauss}} (\mbox{\hyperlink{structmat}{mat}}$<$ T $>$ b, \mbox{\hyperlink{structmat}{mat}}$<$ T $>$ a)
@@ -54,7 +56,8 @@ Returns the determinant of matrix aHere is the call graph for this function\+:\n
 \includegraphics[width=193pt]{linear__algebra_8hpp_a9bca95617a7712fbff5e543cf1cef977_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -68,14 +71,15 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 pair$<$\mbox{\hyperlink{structmat}{mat}}$<$T$>$ \&\&, T$>$ gauss (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T $>$}]{b,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T $>$}]{a }\end{DoxyParamCaption})}
 
-Returns matrix x such that $ax = b$ and the determinant of a via Gaussian elimination.Here is the call graph for this function\+:\nopagebreak
+Returns matrix x such that $ax = b$ and the determinant of $a$ via Gaussian elimination.Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=193pt]{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,7 +128,14 @@ Returns $ba^{-1}$Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Stream , typename... T$>$ \\
 auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&}]{m }\end{DoxyParamCaption})}
 
-Print the matrix rows, line by line\mbox{\Hypertarget{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}\label{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}} 
+Print the matrix rows, line by line\mbox{\Hypertarget{linear__algebra_8hpp_adde02b85217405ecfe675758588ccd36}\label{linear__algebra_8hpp_adde02b85217405ecfe675758588ccd36}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename ... T$>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}\label{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}} 
 \index{linear\_algebra.hpp@{linear\_algebra.hpp}!test\_matrix@{test\_matrix}}
 \index{test\_matrix@{test\_matrix}!linear\_algebra.hpp@{linear\_algebra.hpp}}
 \doxysubsubsection{\texorpdfstring{test\_matrix()}{test\_matrix()}}
@@ -137,10 +148,11 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=302pt]{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=313pt]{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3_icgraph}
+\includegraphics[width=350pt]{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3_icgraph}
 \end{center}
 \end{figure}

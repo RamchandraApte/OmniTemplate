@@ -43,6 +43,8 @@ using \mbox{\hyperlink{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}{default\+
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{utility_8hpp_a61e1ebee9702000f4f876a4e08d2d83a}{test\+\_\+with}} ()
+\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_a5b93ebe953feb9309e59874dee0fdb07}{maxeq}} (T \&\&x, const T \&y)
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_abc6bb3f86a9c2d3083df5636d475b0fd}{mineq}} (T \&\&x, const T \&y)
@@ -55,6 +57,8 @@ void \mbox{\hyperlink{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c}{test\+\_\+
 \item 
 {\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{utility_8hpp_a03511d4859cd518749f66a6af5391f92}{map\+\_\+args}} (const Func \&f, T g=T\{\})
 \item 
+void \mbox{\hyperlink{utility_8hpp_a4d1e5660a426a9d04e0907c3a69b55fa}{test\+\_\+map\+\_\+args}} ()
+\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_ad32b8ad96cf96371fe9ad3c397218352}{prev\+\_\+less}} (const T \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{utility_8hpp_af792f767f338ad4a8547856ed0626120}{nx2}} (\mbox{\hyperlink{structll}{ll}} x)
@@ -63,7 +67,7 @@ void \mbox{\hyperlink{utility_8hpp_ae9af300622998a43b200780645473ec3}{test\+\_\+
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{utility_8hpp_ae7d7f9d0bbad247488d15de2919cfb9e}{next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
-void \mbox{\hyperlink{utility_8hpp_af923bad71129f66456f8fd6545d79bfe}{test\+\_\+comb}} ()
+void \mbox{\hyperlink{utility_8hpp_a9a2af0b2340759f5b235759ed1116227}{test\+\_\+next\+\_\+comb}} ()
 \item 
 void \mbox{\hyperlink{utility_8hpp_aebff8fa924a7c48ecb780e71c6316ea6}{test\+\_\+ar}} ()
 \item 
@@ -116,7 +120,8 @@ Cache calls to f using a map of type T\mbox{\Hypertarget{utility_8hpp_a03511d485
 {\footnotesize\ttfamily template$<$typename T  = less$<$$>$, typename Func $>$ \\
 auto map\+\_\+args (\begin{DoxyParamCaption}\item[{const Func \&}]{f,  }\item[{T}]{g = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -143,7 +148,8 @@ auto mineq (\begin{DoxyParamCaption}\item[{T \&\&}]{x,  }\item[{const T \&}]{y }
 \doxysubsubsection{\texorpdfstring{next\_comb()}{next\_comb()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} next\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
-Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the caller graph for this function\+:\nopagebreak
+Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -156,7 +162,8 @@ Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(
 \doxysubsubsection{\texorpdfstring{nx2()}{nx2()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} nx2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
-Return the smallest power of two at least xHere is the caller graph for this function\+:\nopagebreak
+Return the smallest power of two at least xHere is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -176,31 +183,56 @@ auto prev\+\_\+less (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyPar
 \doxysubsubsection{\texorpdfstring{test\_ar()}{test\_ar()}}
 {\footnotesize\ttfamily void test\+\_\+ar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{utility_8hpp_aebff8fa924a7c48ecb780e71c6316ea6_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{utility_8hpp_af923bad71129f66456f8fd6545d79bfe}\label{utility_8hpp_af923bad71129f66456f8fd6545d79bfe}} 
-\index{utility.hpp@{utility.hpp}!test\_comb@{test\_comb}}
-\index{test\_comb@{test\_comb}!utility.hpp@{utility.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_comb()}{test\_comb()}}
-{\footnotesize\ttfamily void test\+\_\+comb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{utility_8hpp_a4d1e5660a426a9d04e0907c3a69b55fa}\label{utility_8hpp_a4d1e5660a426a9d04e0907c3a69b55fa}} 
+\index{utility.hpp@{utility.hpp}!test\_map\_args@{test\_map\_args}}
+\index{test\_map\_args@{test\_map\_args}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_map\_args()}{test\_map\_args()}}
+{\footnotesize\ttfamily void test\+\_\+map\+\_\+args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=255pt]{utility_8hpp_af923bad71129f66456f8fd6545d79bfe_cgraph}
+\includegraphics[width=270pt]{utility_8hpp_a4d1e5660a426a9d04e0907c3a69b55fa_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{utility_8hpp_af923bad71129f66456f8fd6545d79bfe_icgraph}
+\includegraphics[width=350pt]{utility_8hpp_a4d1e5660a426a9d04e0907c3a69b55fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_a9a2af0b2340759f5b235759ed1116227}\label{utility_8hpp_a9a2af0b2340759f5b235759ed1116227}} 
+\index{utility.hpp@{utility.hpp}!test\_next\_comb@{test\_next\_comb}}
+\index{test\_next\_comb@{test\_next\_comb}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_next\_comb()}{test\_next\_comb()}}
+{\footnotesize\ttfamily void test\+\_\+next\+\_\+comb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{utility_8hpp_a9a2af0b2340759f5b235759ed1116227_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_a9a2af0b2340759f5b235759ed1116227_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{utility_8hpp_ae9af300622998a43b200780645473ec3}\label{utility_8hpp_ae9af300622998a43b200780645473ec3}} 
@@ -216,7 +248,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=210pt]{utility_8hpp_ae9af300622998a43b200780645473ec3_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -236,7 +269,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=216pt]{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -249,18 +283,34 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_utility()}{test\_utility()}}
 {\footnotesize\ttfamily void test\+\_\+utility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=309pt]{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7_icgraph}
+\includegraphics[width=350pt]{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_a61e1ebee9702000f4f876a4e08d2d83a}\label{utility_8hpp_a61e1ebee9702000f4f876a4e08d2d83a}} 
+\index{utility.hpp@{utility.hpp}!test\_with@{test\_with}}
+\index{test\_with@{test\_with}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_with()}{test\_with()}}
+{\footnotesize\ttfamily void test\+\_\+with (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_a61e1ebee9702000f4f876a4e08d2d83a_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{utility_8hpp_a73acc7df64034554661daeb64205aae6}\label{utility_8hpp_a73acc7df64034554661daeb64205aae6}} 
@@ -270,7 +320,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ \\
 auto uniq (\begin{DoxyParamCaption}\item[{Cont}]{v,  }\item[{Eq const \&}]{up = {\ttfamily Eq\{\}},  }\item[{T const \&}]{sp = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
 
-Remove all duplicates element from v so that all elements in v are distinct and sortedHere is the caller graph for this function\+:\nopagebreak
+Remove all duplicates element from v so that all elements in v are distinct and sortedHere is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

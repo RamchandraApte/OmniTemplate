@@ -38,6 +38,7 @@ template <typename Stream> auto &operator<<(Stream &os, dsu const &d) {
 void test_dsu() {
 	dsu d{100};
 	fo(i, 100) { assert(d[i] == i); }
+	// TODO check return value of d()
 	d(3, 4);
 	d(6, 10);
 	d(6, 6);

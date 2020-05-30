@@ -32,6 +32,9 @@ tm() struct mat {
 		return this.r == 1 && this.c == 1 && this[0][0] == 1;
 	}
 };
+tm(...) bool operator==(mat<T...> const &a, mat<T...> const &b) {
+	return a.r == b.r && a.c == b.c && a.a == b.a;
+}
 tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
 	/*! Returns the matrix product of a and b*/
 	if (a.id()) {
