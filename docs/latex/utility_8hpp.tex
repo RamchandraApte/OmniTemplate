@@ -1,0 +1,288 @@
+\hypertarget{utility_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/utility.hpp File Reference}
+\label{utility_8hpp}\index{/home/ram/OmniTemplate/utility.hpp@{/home/ram/OmniTemplate/utility.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+Include dependency graph for utility.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwith}{with}}
+\item 
+struct \mbox{\hyperlink{structfix}{fix$<$ Func $>$}}
+\item 
+struct \mbox{\hyperlink{structar}{ar$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structar_3_01T_0fn_0e_4}{ar$<$ T\mbox{[}n\mbox{]}$>$}}
+\item 
+struct \mbox{\hyperlink{structrandom__device__patch}{random\+\_\+device\+\_\+patch}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{utility_8hpp_a76cdb96860b77886867832efcffeeb32}{lambda}}(f)~\mbox{[}\&\mbox{]}(auto... args) \{ return f(args...); \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{utility_8hpp_a98dc5e985b024363c80f2778a577c51a}{ar\+\_\+t}} = typename \mbox{\hyperlink{structar}{ar}}$<$ T $>$\+::type
+\item 
+using \mbox{\hyperlink{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}{default\+\_\+random\+\_\+device}} = \mbox{\hyperlink{structrandom__device__patch}{random\+\_\+device\+\_\+patch}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_a5b93ebe953feb9309e59874dee0fdb07}{maxeq}} (T \&\&x, const T \&y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_abc6bb3f86a9c2d3083df5636d475b0fd}{mineq}} (T \&\&x, const T \&y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_a81e820760e553018a680c8264aa443b4}{cache}} (const T \&f)
+\item 
+{\footnotesize template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ }\\auto \mbox{\hyperlink{utility_8hpp_a73acc7df64034554661daeb64205aae6}{uniq}} (Cont \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, Eq const \&up=Eq\{\}, T const \&sp=T\{\})
+\item 
+void \mbox{\hyperlink{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c}{test\+\_\+uniq}} ()
+\item 
+{\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{utility_8hpp_a03511d4859cd518749f66a6af5391f92}{map\+\_\+args}} (const Func \&f, T g=T\{\})
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{utility_8hpp_ad32b8ad96cf96371fe9ad3c397218352}{prev\+\_\+less}} (const T \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{utility_8hpp_af792f767f338ad4a8547856ed0626120}{nx2}} (\mbox{\hyperlink{structll}{ll}} x)
+\item 
+void \mbox{\hyperlink{utility_8hpp_ae9af300622998a43b200780645473ec3}{test\+\_\+nx2}} ()
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{utility_8hpp_ae7d7f9d0bbad247488d15de2919cfb9e}{next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
+\item 
+void \mbox{\hyperlink{utility_8hpp_af923bad71129f66456f8fd6545d79bfe}{test\+\_\+comb}} ()
+\item 
+void \mbox{\hyperlink{utility_8hpp_aebff8fa924a7c48ecb780e71c6316ea6}{test\+\_\+ar}} ()
+\item 
+void \mbox{\hyperlink{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7}{test\+\_\+utility}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+default\+\_\+random\+\_\+engine \mbox{\hyperlink{utility_8hpp_a9fc68ed025086c5affbd401726bc07b8}{reng}} \{\mbox{\hyperlink{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}{default\+\_\+random\+\_\+device}}\{\}()\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{utility_8hpp_a76cdb96860b77886867832efcffeeb32}\label{utility_8hpp_a76cdb96860b77886867832efcffeeb32}} 
+\index{utility.hpp@{utility.hpp}!lambda@{lambda}}
+\index{lambda@{lambda}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{lambda}{lambda}}
+{\footnotesize\ttfamily \#define lambda(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{[}\&\mbox{]}(auto... args) \{ return f(args...); \}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{utility_8hpp_a98dc5e985b024363c80f2778a577c51a}\label{utility_8hpp_a98dc5e985b024363c80f2778a577c51a}} 
+\index{utility.hpp@{utility.hpp}!ar\_t@{ar\_t}}
+\index{ar\_t@{ar\_t}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{ar\_t}{ar\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{utility_8hpp_a98dc5e985b024363c80f2778a577c51a}{ar\+\_\+t}} =  typename \mbox{\hyperlink{structar}{ar}}$<$T$>$\+::type}
+
+\mbox{\Hypertarget{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}\label{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}} 
+\index{utility.hpp@{utility.hpp}!default\_random\_device@{default\_random\_device}}
+\index{default\_random\_device@{default\_random\_device}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{default\_random\_device}{default\_random\_device}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}{default\+\_\+random\+\_\+device}} =  \mbox{\hyperlink{structrandom__device__patch}{random\+\_\+device\+\_\+patch}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utility_8hpp_a81e820760e553018a680c8264aa443b4}\label{utility_8hpp_a81e820760e553018a680c8264aa443b4}} 
+\index{utility.hpp@{utility.hpp}!cache@{cache}}
+\index{cache@{cache}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{cache()}{cache()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto cache (\begin{DoxyParamCaption}\item[{const T \&}]{f }\end{DoxyParamCaption})}
+
+Cache calls to f using a map of type T\mbox{\Hypertarget{utility_8hpp_a03511d4859cd518749f66a6af5391f92}\label{utility_8hpp_a03511d4859cd518749f66a6af5391f92}} 
+\index{utility.hpp@{utility.hpp}!map\_args@{map\_args}}
+\index{map\_args@{map\_args}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{map\_args()}{map\_args()}}
+{\footnotesize\ttfamily template$<$typename T  = less$<$$>$, typename Func $>$ \\
+auto map\+\_\+args (\begin{DoxyParamCaption}\item[{const Func \&}]{f,  }\item[{T}]{g = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_a03511d4859cd518749f66a6af5391f92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_a5b93ebe953feb9309e59874dee0fdb07}\label{utility_8hpp_a5b93ebe953feb9309e59874dee0fdb07}} 
+\index{utility.hpp@{utility.hpp}!maxeq@{maxeq}}
+\index{maxeq@{maxeq}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{maxeq()}{maxeq()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto maxeq (\begin{DoxyParamCaption}\item[{T \&\&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utility_8hpp_abc6bb3f86a9c2d3083df5636d475b0fd}\label{utility_8hpp_abc6bb3f86a9c2d3083df5636d475b0fd}} 
+\index{utility.hpp@{utility.hpp}!mineq@{mineq}}
+\index{mineq@{mineq}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{mineq()}{mineq()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto mineq (\begin{DoxyParamCaption}\item[{T \&\&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utility_8hpp_ae7d7f9d0bbad247488d15de2919cfb9e}\label{utility_8hpp_ae7d7f9d0bbad247488d15de2919cfb9e}} 
+\index{utility.hpp@{utility.hpp}!next\_comb@{next\_comb}}
+\index{next\_comb@{next\_comb}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{next\_comb()}{next\_comb()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} next\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
+
+Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_ae7d7f9d0bbad247488d15de2919cfb9e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_af792f767f338ad4a8547856ed0626120}\label{utility_8hpp_af792f767f338ad4a8547856ed0626120}} 
+\index{utility.hpp@{utility.hpp}!nx2@{nx2}}
+\index{nx2@{nx2}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{nx2()}{nx2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} nx2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
+
+Return the smallest power of two at least xHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_af792f767f338ad4a8547856ed0626120_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_ad32b8ad96cf96371fe9ad3c397218352}\label{utility_8hpp_ad32b8ad96cf96371fe9ad3c397218352}} 
+\index{utility.hpp@{utility.hpp}!prev\_less@{prev\_less}}
+\index{prev\_less@{prev\_less}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{prev\_less()}{prev\_less()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto prev\+\_\+less (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{utility_8hpp_aebff8fa924a7c48ecb780e71c6316ea6}\label{utility_8hpp_aebff8fa924a7c48ecb780e71c6316ea6}} 
+\index{utility.hpp@{utility.hpp}!test\_ar@{test\_ar}}
+\index{test\_ar@{test\_ar}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_ar()}{test\_ar()}}
+{\footnotesize\ttfamily void test\+\_\+ar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_aebff8fa924a7c48ecb780e71c6316ea6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_af923bad71129f66456f8fd6545d79bfe}\label{utility_8hpp_af923bad71129f66456f8fd6545d79bfe}} 
+\index{utility.hpp@{utility.hpp}!test\_comb@{test\_comb}}
+\index{test\_comb@{test\_comb}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_comb()}{test\_comb()}}
+{\footnotesize\ttfamily void test\+\_\+comb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{utility_8hpp_af923bad71129f66456f8fd6545d79bfe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_af923bad71129f66456f8fd6545d79bfe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_ae9af300622998a43b200780645473ec3}\label{utility_8hpp_ae9af300622998a43b200780645473ec3}} 
+\index{utility.hpp@{utility.hpp}!test\_nx2@{test\_nx2}}
+\index{test\_nx2@{test\_nx2}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_nx2()}{test\_nx2()}}
+{\footnotesize\ttfamily void test\+\_\+nx2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{utility_8hpp_ae9af300622998a43b200780645473ec3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_ae9af300622998a43b200780645473ec3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c}\label{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c}} 
+\index{utility.hpp@{utility.hpp}!test\_uniq@{test\_uniq}}
+\index{test\_uniq@{test\_uniq}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_uniq()}{test\_uniq()}}
+{\footnotesize\ttfamily void test\+\_\+uniq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_a135862e0b9eecf842529ef19034e3c3c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7}\label{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7}} 
+\index{utility.hpp@{utility.hpp}!test\_utility@{test\_utility}}
+\index{test\_utility@{test\_utility}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_utility()}{test\_utility()}}
+{\footnotesize\ttfamily void test\+\_\+utility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{utility_8hpp_a5e29afed548a99cd2c14f21a464382d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{utility_8hpp_a73acc7df64034554661daeb64205aae6}\label{utility_8hpp_a73acc7df64034554661daeb64205aae6}} 
+\index{utility.hpp@{utility.hpp}!uniq@{uniq}}
+\index{uniq@{uniq}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{uniq()}{uniq()}}
+{\footnotesize\ttfamily template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ \\
+auto uniq (\begin{DoxyParamCaption}\item[{Cont}]{v,  }\item[{Eq const \&}]{up = {\ttfamily Eq\{\}},  }\item[{T const \&}]{sp = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
+
+Remove all duplicates element from v so that all elements in v are distinct and sortedHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{utility_8hpp_a73acc7df64034554661daeb64205aae6_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{utility_8hpp_a9fc68ed025086c5affbd401726bc07b8}\label{utility_8hpp_a9fc68ed025086c5affbd401726bc07b8}} 
+\index{utility.hpp@{utility.hpp}!reng@{reng}}
+\index{reng@{reng}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{reng}{reng}}
+{\footnotesize\ttfamily default\+\_\+random\+\_\+engine reng \{\mbox{\hyperlink{utility_8hpp_ab383d789912924c9ccfe84042e73bf06}{default\+\_\+random\+\_\+device}}\{\}()\}}
+

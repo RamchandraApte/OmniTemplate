@@ -1,0 +1,90 @@
+\hypertarget{structpers}{}\doxysection{pers$<$ T $>$ Struct Template Reference}
+\label{structpers}\index{pers$<$ T $>$@{pers$<$ T $>$}}
+
+
+{\ttfamily \#include $<$persistent.\+hpp$>$}
+
+
+
+Collaboration diagram for pers$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{structpers__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpers_ab6266965035895a8d15e4562e12a7534}{event}} = pair$<$ \mbox{\hyperlink{structll}{ll}}, T $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{structpers_a4f00b5204ad9a36fc53c6218ac2e9bd6}{operator=}} (const T \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+\item 
+\mbox{\hyperlink{structpers_a7ccd9b10b92b376ed94d1cd884cb8d53}{operator auto}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ \mbox{\hyperlink{structpers_ab6266965035895a8d15e4562e12a7534}{event}}, \mbox{\hyperlink{structfirst__cmp}{first\+\_\+cmp}} $>$ \mbox{\hyperlink{structpers_a21c930a460a93a1f9f9c0204d1b02fc2}{s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{structpers_a9ef3ff76530dd53d592a24b7980e5738}{tim}} = 0\+LL
+\begin{DoxyCompactList}\small\item\em Time for the persistent variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpers_ab6266965035895a8d15e4562e12a7534}\label{structpers_ab6266965035895a8d15e4562e12a7534}} 
+\index{pers$<$ T $>$@{pers$<$ T $>$}!event@{event}}
+\index{event@{event}!pers$<$ T $>$@{pers$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpers}{pers}}$<$ T $>$\+::\mbox{\hyperlink{structpers_ab6266965035895a8d15e4562e12a7534}{event}} =  pair$<$\mbox{\hyperlink{structll}{ll}}, T$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpers_a7ccd9b10b92b376ed94d1cd884cb8d53}\label{structpers_a7ccd9b10b92b376ed94d1cd884cb8d53}} 
+\index{pers$<$ T $>$@{pers$<$ T $>$}!operator auto@{operator auto}}
+\index{operator auto@{operator auto}!pers$<$ T $>$@{pers$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator auto()}{operator auto()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpers}{pers}}$<$ T $>$\+::operator auto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structpers_a4f00b5204ad9a36fc53c6218ac2e9bd6}\label{structpers_a4f00b5204ad9a36fc53c6218ac2e9bd6}} 
+\index{pers$<$ T $>$@{pers$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!pers$<$ T $>$@{pers$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{structpers}{pers}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpers_a21c930a460a93a1f9f9c0204d1b02fc2}\label{structpers_a21c930a460a93a1f9f9c0204d1b02fc2}} 
+\index{pers$<$ T $>$@{pers$<$ T $>$}!s@{s}}
+\index{s@{s}!pers$<$ T $>$@{pers$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+set$<$\mbox{\hyperlink{structpers_ab6266965035895a8d15e4562e12a7534}{event}}, \mbox{\hyperlink{structfirst__cmp}{first\+\_\+cmp}}$>$ \mbox{\hyperlink{structpers}{pers}}$<$ T $>$\+::s}
+
+\mbox{\Hypertarget{structpers_a9ef3ff76530dd53d592a24b7980e5738}\label{structpers_a9ef3ff76530dd53d592a24b7980e5738}} 
+\index{pers$<$ T $>$@{pers$<$ T $>$}!tim@{tim}}
+\index{tim@{tim}!pers$<$ T $>$@{pers$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tim}{tim}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{structpers}{pers}}$<$ T $>$\+::tim = 0\+LL\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Time for the persistent variable. 
+
+Persistent variable. The old values can be retrieved by changing the time tim 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{persistent_8hpp}{persistent.\+hpp}}\end{DoxyCompactItemize}

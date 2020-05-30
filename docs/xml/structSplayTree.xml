@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structSplayTree" kind="struct" language="C++" prot="public">
+    <compoundname>SplayTree</compoundname>
+    <includes refid="splay__tree_8hpp" local="no">splay_tree.hpp</includes>
+    <innerclass refid="structSplayTree_1_1iterator" prot="public">SplayTree::iterator</innerclass>
+    <innerclass refid="structSplayTree_1_1Node" prot="public">SplayTree::Node</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structSplayTree_1a6420512e79937fd59edb2a595f977750" prot="public" static="no" mutable="no">
+        <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>Node* SplayTree&lt; T &gt;::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="37" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSplayTree_1a4db3a3ba8655169a636ca73c4a88cc15" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SplayTree&lt; T &gt;::sz</definition>
+        <argsstring></argsstring>
+        <name>sz</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="38" column="8" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structSplayTree_1a83684091424cc8dab08bba29cacfc6df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SplayTree&lt; T &gt;::SplayTree</definition>
+        <argsstring>()</argsstring>
+        <name>SplayTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="39" column="1" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a9e4c104df4c96bec374dc45246a3d0dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SplayTree&lt; T &gt;::~SplayTree</definition>
+        <argsstring>()</argsstring>
+        <name>~SplayTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="40" column="1" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a68ee8070ca751318c345c2ec728b6003" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SplayTree&lt; T &gt;::insert</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>insert</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="90" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="90" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a9885fe15adae36e69006e8e2e2e5e21c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SplayTree&lt; T &gt;::insert</definition>
+        <argsstring>(const T &amp;key)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="110" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a31e65260a6cc94aab86c6a3def846830" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SplayTree&lt; T &gt;::erase</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>erase</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="111" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="111" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1afb833e454430e81bb3b1442237805320" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SplayTree&lt; T &gt;::erase</definition>
+        <argsstring>(const T &amp;key)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="118" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a0fce64ec0ca10d1774cd24d4c98edf1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>array&lt; <ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *, 2 &gt;</type>
+        <definition>array&lt;Node *, 2&gt; SplayTree&lt; T &gt;::split</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>split</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="135" column="7" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="135" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a875c802868fd4e94282efdedd86cb772" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>Node* SplayTree&lt; T &gt;::find</definition>
+        <argsstring>(const T &amp;key)</argsstring>
+        <name>find</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="143" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="143" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a67cc9fe4b6d6c9e2167701c982fcefb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SplayTree&lt; T &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="149" column="8" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a4b5e196ef6ecd49b08cd405a30ee6a6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SplayTree&lt; T &gt;::empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="150" column="6" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1aec1d30f8e415fe8e5946e524d27c1ad6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structSplayTree_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator SplayTree&lt; T &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="151" column="10" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a45302c7001ad3e2564ac91ccd7dd9a0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structSplayTree_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator SplayTree&lt; T &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="152" column="10" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="152" bodyend="152"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structSplayTree_1ac70b4b2c0a50a56f2984a1dfb332649a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SplayTree&lt; T &gt;::destroy</definition>
+        <argsstring>(Node *const node)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="41" column="13" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a8410ea1b66aeee0e07f11ec02dae2fa6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SplayTree&lt; T &gt;::attach</definition>
+        <argsstring>(Node *const par, bool side, Node *const new_)</argsstring>
+        <name>attach</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>par</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>new_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="50" column="13" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a06fae4dd156688ed46976373f21fbb26" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool SplayTree&lt; T &gt;::side</definition>
+        <argsstring>(Node *const child)</argsstring>
+        <name>side</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="56" column="13" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a167b770118895382687c93f9715a6879" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SplayTree&lt; T &gt;::rotate</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="59" column="13" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="59" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a88e940e01fba29d4f1eec8b8b5fb2cea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SplayTree&lt; T &gt;::splay</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>splay</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="72" column="13" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="72" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a879ddfc2ee6ff265e98ae1cfa851ff3e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>i</declname>
+            <defname>i</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>static Node* SplayTree&lt; T &gt;::extremum</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>extremum</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="119" column="25" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="structSplayTree_1a17f97eb4546fb9a2c182c5f6b2061395" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *</type>
+        <definition>static Node* SplayTree&lt; T &gt;::join</definition>
+        <argsstring>(Node *const a, Node *const b)</argsstring>
+        <name>join</name>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structSplayTree_1_1Node" kindref="compound">Node</ref> *const</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="123" column="13" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="123" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>SplayTree&lt; T &gt;</label>
+        <link refid="structSplayTree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::array&lt; SplayTree::Node *, 2 &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SplayTree&lt; T &gt;::Node</label>
+        <link refid="structSplayTree_1_1Node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>child</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/splay_tree.hpp" line="3" column="28" bodyfile="/home/ram/OmniTemplate/splay_tree.hpp" bodystart="3" bodyend="153"/>
+    <listofallmembers>
+      <member refid="structSplayTree_1a8410ea1b66aeee0e07f11ec02dae2fa6" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>attach</name></member>
+      <member refid="structSplayTree_1aec1d30f8e415fe8e5946e524d27c1ad6" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>begin</name></member>
+      <member refid="structSplayTree_1ac70b4b2c0a50a56f2984a1dfb332649a" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>destroy</name></member>
+      <member refid="structSplayTree_1a4b5e196ef6ecd49b08cd405a30ee6a6b" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>empty</name></member>
+      <member refid="structSplayTree_1a45302c7001ad3e2564ac91ccd7dd9a0c" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>end</name></member>
+      <member refid="structSplayTree_1a31e65260a6cc94aab86c6a3def846830" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>erase</name></member>
+      <member refid="structSplayTree_1afb833e454430e81bb3b1442237805320" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>erase</name></member>
+      <member refid="structSplayTree_1a879ddfc2ee6ff265e98ae1cfa851ff3e" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>extremum</name></member>
+      <member refid="structSplayTree_1a875c802868fd4e94282efdedd86cb772" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>find</name></member>
+      <member refid="structSplayTree_1a68ee8070ca751318c345c2ec728b6003" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>insert</name></member>
+      <member refid="structSplayTree_1a9885fe15adae36e69006e8e2e2e5e21c" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>insert</name></member>
+      <member refid="structSplayTree_1a17f97eb4546fb9a2c182c5f6b2061395" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>join</name></member>
+      <member refid="structSplayTree_1a6420512e79937fd59edb2a595f977750" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>root</name></member>
+      <member refid="structSplayTree_1a167b770118895382687c93f9715a6879" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>rotate</name></member>
+      <member refid="structSplayTree_1a06fae4dd156688ed46976373f21fbb26" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>side</name></member>
+      <member refid="structSplayTree_1a67cc9fe4b6d6c9e2167701c982fcefb8" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>size</name></member>
+      <member refid="structSplayTree_1a88e940e01fba29d4f1eec8b8b5fb2cea" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>splay</name></member>
+      <member refid="structSplayTree_1a83684091424cc8dab08bba29cacfc6df" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>SplayTree</name></member>
+      <member refid="structSplayTree_1a0fce64ec0ca10d1774cd24d4c98edf1c" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>split</name></member>
+      <member refid="structSplayTree_1a4db3a3ba8655169a636ca73c4a88cc15" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>sz</name></member>
+      <member refid="structSplayTree_1a9e4c104df4c96bec374dc45246a3d0dd" prot="public" virt="non-virtual"><scope>SplayTree</scope><name>~SplayTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

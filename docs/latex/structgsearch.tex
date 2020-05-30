@@ -1,0 +1,135 @@
+\hypertarget{structgsearch}{}\doxysection{gsearch Struct Reference}
+\label{structgsearch}\index{gsearch@{gsearch}}
+
+
+{\ttfamily \#include $<$graph\+\_\+theory.\+hpp$>$}
+
+
+
+Inheritance diagram for gsearch\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{structgsearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gsearch\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structgsearch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgsearch_a2947bb4418be3551585773e397d35fe6}{gsearch}} (const vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&g\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{structgsearch_a3f44a83cbe6f9c20052e5409decccd87}{operator()}} (\mbox{\hyperlink{structll}{ll}})=0
+\item 
+void \mbox{\hyperlink{structgsearch_a92a8ded190aadad238efe11b5ac3edcc}{operator()}} ()
+\item 
+auto \mbox{\hyperlink{structgsearch_af3e34f320b6bf7f9c57a2f2cad674747}{add}} (\mbox{\hyperlink{structll}{ll}} j, \mbox{\hyperlink{structll}{ll}} i)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \& \mbox{\hyperlink{structgsearch_ab98eef9a7b11ac9c53d3414ee0e2ad00}{g}}
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structgsearch_abf2c48fcc1e2bcea14720192fdb497df}{n}}
+\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgsearch_a1e83146a3e390b704f7b55409e7ad7bd}{v}}
+\item 
+deque$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structgsearch_a7f93010b6f8e7026b2300a03c4232d6c}{q}}
+\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgsearch_afa8e0680350061b5f45d444dfd9cc05b}{p}}
+\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgsearch_a8a8798107a301730f224547b6fd01ef7}{d}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structgsearch_a2947bb4418be3551585773e397d35fe6}\label{structgsearch_a2947bb4418be3551585773e397d35fe6}} 
+\index{gsearch@{gsearch}!gsearch@{gsearch}}
+\index{gsearch@{gsearch}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{gsearch()}{gsearch()}}
+{\footnotesize\ttfamily gsearch\+::gsearch (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&}]{g\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structgsearch_af3e34f320b6bf7f9c57a2f2cad674747}\label{structgsearch_af3e34f320b6bf7f9c57a2f2cad674747}} 
+\index{gsearch@{gsearch}!add@{add}}
+\index{add@{add}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily auto gsearch\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{j,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add vertex j as a child of already visited vertex i in the searcher treeHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{structgsearch_af3e34f320b6bf7f9c57a2f2cad674747_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structgsearch_a92a8ded190aadad238efe11b5ac3edcc}\label{structgsearch_a92a8ded190aadad238efe11b5ac3edcc}} 
+\index{gsearch@{gsearch}!operator()@{operator()}}
+\index{operator()@{operator()}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void gsearch\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgsearch_a3f44a83cbe6f9c20052e5409decccd87}\label{structgsearch_a3f44a83cbe6f9c20052e5409decccd87}} 
+\index{gsearch@{gsearch}!operator()@{operator()}}
+\index{operator()@{operator()}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void gsearch\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structbfs_a7f0c781accd2af82a51e4e95b758617d}{bfs}}, and \mbox{\hyperlink{structdfs_a4a1ad18797e9a2f7861d55ccf743727f}{dfs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structgsearch_a8a8798107a301730f224547b6fd01ef7}\label{structgsearch_a8a8798107a301730f224547b6fd01ef7}} 
+\index{gsearch@{gsearch}!d@{d}}
+\index{d@{d}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} gsearch\+::d}
+
+\mbox{\Hypertarget{structgsearch_ab98eef9a7b11ac9c53d3414ee0e2ad00}\label{structgsearch_ab98eef9a7b11ac9c53d3414ee0e2ad00}} 
+\index{gsearch@{gsearch}!g@{g}}
+\index{g@{g}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily const vector$<$\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}}$>$\& gsearch\+::g}
+
+Generalized graph searcher/visitor \mbox{\Hypertarget{structgsearch_abf2c48fcc1e2bcea14720192fdb497df}\label{structgsearch_abf2c48fcc1e2bcea14720192fdb497df}} 
+\index{gsearch@{gsearch}!n@{n}}
+\index{n@{n}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} gsearch\+::n}
+
+\mbox{\Hypertarget{structgsearch_afa8e0680350061b5f45d444dfd9cc05b}\label{structgsearch_afa8e0680350061b5f45d444dfd9cc05b}} 
+\index{gsearch@{gsearch}!p@{p}}
+\index{p@{p}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} gsearch\+::p}
+
+\mbox{\Hypertarget{structgsearch_a7f93010b6f8e7026b2300a03c4232d6c}\label{structgsearch_a7f93010b6f8e7026b2300a03c4232d6c}} 
+\index{gsearch@{gsearch}!q@{q}}
+\index{q@{q}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily deque$<$\mbox{\hyperlink{structll}{ll}}$>$ gsearch\+::q}
+
+\mbox{\Hypertarget{structgsearch_a1e83146a3e390b704f7b55409e7ad7bd}\label{structgsearch_a1e83146a3e390b704f7b55409e7ad7bd}} 
+\index{gsearch@{gsearch}!v@{v}}
+\index{v@{v}!gsearch@{gsearch}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} gsearch\+::v}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{graph__theory_8hpp}{graph\+\_\+theory.\+hpp}}\end{DoxyCompactItemize}

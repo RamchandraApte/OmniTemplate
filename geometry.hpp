@@ -50,9 +50,9 @@ auto convex_min(const Range &r, const Func &f) {
 	return *partition_point(al(r),
 				[&](auto i) { return !(f(i) < f(i + 1)); });
 }
+/*! Convex-hull trick. This can be used to find the minimum of a set of
+ * lines at various points. */
 struct cht {
-	/*! Convex-hull trick. This can be used to find the minimum of a set of
-	 * lines at various points. */
 	vc<pt> h; //!< The lines
 	template <typename Cont> cht(const Cont v) {
 		v = uniq(v, map_args(lambda(imag), equal_to{}),

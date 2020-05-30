@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdfs" kind="struct" language="C++" prot="public">
+    <compoundname>dfs</compoundname>
+    <basecompoundref refid="structgsearch" prot="public" virt="non-virtual">gsearch</basecompoundref>
+    <includes refid="graph__theory_8hpp" local="no">graph_theory.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdfs_1a4a1ad18797e9a2f7861d55ccf743727f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void dfs::operator()</definition>
+        <argsstring>(ll s)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="structgsearch_1a3f44a83cbe6f9c20052e5409decccd87">operator()</reimplements>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Depth-first search</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/graph_theory.hpp" line="98" column="75" bodyfile="/home/ram/OmniTemplate/graph_theory.hpp" bodystart="98" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structdfs_1a2947bb4418be3551585773e397d35fe6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gsearch::gsearch</definition>
+        <argsstring>(const vector&lt; vector&lt; ll &gt;&gt; &amp;g_)</argsstring>
+        <name>gsearch</name>
+        <param>
+          <type>const vector&lt; vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;&gt; &amp;</type>
+          <declname>g_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/graph_theory.hpp" line="98" column="1" bodyfile="/home/ram/OmniTemplate/graph_theory.hpp" bodystart="78" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>dfs</label>
+        <link refid="structdfs"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gsearch</label>
+        <link refid="structgsearch"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>dfs</label>
+        <link refid="structdfs"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gsearch</label>
+        <link refid="structgsearch"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>p</edgelabel>
+          <edgelabel>d</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>g</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>q</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; ll &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::deque&lt; ll &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ll</label>
+        <link refid="structll"/>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; vl &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/graph_theory.hpp" line="98" column="28" bodyfile="/home/ram/OmniTemplate/graph_theory.hpp" bodystart="98" bodyend="110"/>
+    <listofallmembers>
+      <member refid="structgsearch_1af3e34f320b6bf7f9c57a2f2cad674747" prot="public" virt="non-virtual"><scope>dfs</scope><name>add</name></member>
+      <member refid="structgsearch_1a8a8798107a301730f224547b6fd01ef7" prot="public" virt="non-virtual"><scope>dfs</scope><name>d</name></member>
+      <member refid="structgsearch_1ab98eef9a7b11ac9c53d3414ee0e2ad00" prot="public" virt="non-virtual"><scope>dfs</scope><name>g</name></member>
+      <member refid="structdfs_1a2947bb4418be3551585773e397d35fe6" prot="public" virt="non-virtual"><scope>dfs</scope><name>gsearch</name></member>
+      <member refid="structgsearch_1a2947bb4418be3551585773e397d35fe6" prot="public" virt="non-virtual" ambiguityscope="gsearch::"><scope>dfs</scope><name>gsearch</name></member>
+      <member refid="structgsearch_1abf2c48fcc1e2bcea14720192fdb497df" prot="public" virt="non-virtual"><scope>dfs</scope><name>n</name></member>
+      <member refid="structdfs_1a4a1ad18797e9a2f7861d55ccf743727f" prot="public" virt="virtual"><scope>dfs</scope><name>operator()</name></member>
+      <member refid="structgsearch_1a92a8ded190aadad238efe11b5ac3edcc" prot="public" virt="non-virtual" ambiguityscope="gsearch::"><scope>dfs</scope><name>operator()</name></member>
+      <member refid="structgsearch_1afa8e0680350061b5f45d444dfd9cc05b" prot="public" virt="non-virtual"><scope>dfs</scope><name>p</name></member>
+      <member refid="structgsearch_1a7f93010b6f8e7026b2300a03c4232d6c" prot="public" virt="non-virtual"><scope>dfs</scope><name>q</name></member>
+      <member refid="structgsearch_1a1e83146a3e390b704f7b55409e7ad7bd" prot="public" virt="non-virtual"><scope>dfs</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

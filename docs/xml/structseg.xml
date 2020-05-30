@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structseg" kind="struct" language="C++" prot="public">
+    <compoundname>seg</compoundname>
+    <includes refid="segment__tree_8hpp" local="no">segment_tree.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>auto</type>
+        <declname>op</declname>
+        <defname>op</defname>
+      </param>
+      <param>
+        <type><ref refid="core_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
+        <declname>id_</declname>
+        <defname>id_</defname>
+        <defval><ref refid="segment__tree_8hpp_1a79eb3560607dcadc86816675cb88146e" kindref="member">identity</ref>(op)</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" prot="public" static="no">
+        <type>decltype(<ref refid="segment__tree_8hpp_1a79eb3560607dcadc86816675cb88146e" kindref="member">identity</ref>(op))</type>
+        <definition>using seg&lt; op, id_ &gt;::T =  decltype (identity(op))</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="4" column="1" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structseg_1ad581224128223063bf41930f7d1143f7" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr <ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref></type>
+        <definition>constexpr T seg&lt; op, id_ &gt;::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <initializer>= id_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="5" column="20" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structseg_1aee612dceef417b2d76fcf2cf2a560852" prot="public" static="yes" mutable="no">
+        <type>const static auto</type>
+        <definition>const static auto seg&lt; op, id_ &gt;::def</definition>
+        <argsstring></argsstring>
+        <name>def</name>
+        <initializer>= -1LL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="16" column="19" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structseg_1aec39c86816f724381919a788bb6e899e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>const ll seg&lt; op, id_ &gt;::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="6" column="10" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structseg_1aad9da220752b136fa737498955050354" prot="public" static="no" mutable="yes">
+        <type>vector&lt; <ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref> &gt;</type>
+        <definition>vector&lt;T&gt; seg&lt; op, id_ &gt;::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="7" column="18" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structseg_1ae151eed87c688785b0071279a82f0a59" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref> &gt;</type>
+        <definition>vector&lt;T&gt; seg&lt; op, id_ &gt;::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="7" column="20" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structseg_1a71b2f9f35c3edacf1a431f8ab6b1b952" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Cont</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>seg&lt; op, id_ &gt;::seg</definition>
+        <argsstring>(const Cont &amp;v)</argsstring>
+        <name>seg</name>
+        <param>
+          <type>const Cont &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="9" column="1" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="structseg_1abe9e9d5eca61fc8414635dd7f6c2cce3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto seg&lt; op, id_ &gt;::fix</definition>
+        <argsstring>(ll l, ll &amp;r, ll nl, ll &amp;nr) const</argsstring>
+        <name>fix</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>nl</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref> &amp;</type>
+          <declname>nr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="17" column="6" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="17" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="structseg_1a47c33b5e0170ed5349eb68520ee245c6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto seg&lt; op, id_ &gt;::down</definition>
+        <argsstring>(ll i) const</argsstring>
+        <name>down</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="27" column="6" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="structseg_1a2eeb3a79f56b3825b357682187ae61b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref></type>
+        <definition>T seg&lt; op, id_ &gt;::gt</definition>
+        <argsstring>(ll l, remove_const_t&lt; decltype(def)&gt; r=def, remove_const_t&lt; tp(1LL)&gt; i=1LL, remove_const_t&lt; tp(0LL)&gt; nl=0LL, remove_const_t&lt; tp(def)&gt; nr=def) const</argsstring>
+        <name>gt</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>remove_const_t&lt; decltype(<ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref>)&gt;</type>
+          <declname>r</declname>
+          <defval><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref></defval>
+        </param>
+        <param>
+          <type>remove_const_t&lt; <ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(1LL)&gt;</type>
+          <declname>i</declname>
+          <defval>1LL</defval>
+        </param>
+        <param>
+          <type>remove_const_t&lt; <ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(0LL)&gt;</type>
+          <declname>nl</declname>
+          <defval>0LL</defval>
+        </param>
+        <param>
+          <type>remove_const_t&lt; <ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(<ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref>)&gt;</type>
+          <declname>nr</declname>
+          <defval><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="35" column="3" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structseg_1a0a0354d9f2ef32bd1f87c46de283c67b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto seg&lt; op, id_ &gt;::up</definition>
+        <argsstring>(T v, ll l, remove_const_t&lt; decltype(def)&gt; r=def, remove_const_t&lt; tp(1LL)&gt; i=1LL, remove_const_t&lt; tp(0LL)&gt; nl=0LL, remove_const_t&lt; tp(def)&gt; nr=def)</argsstring>
+        <name>up</name>
+        <param>
+          <type><ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>remove_const_t&lt; decltype(<ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref>)&gt;</type>
+          <declname>r</declname>
+          <defval><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref></defval>
+        </param>
+        <param>
+          <type>remove_const_t&lt; <ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(1LL)&gt;</type>
+          <declname>i</declname>
+          <defval>1LL</defval>
+        </param>
+        <param>
+          <type>remove_const_t&lt; <ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(0LL)&gt;</type>
+          <declname>nl</declname>
+          <defval>0LL</defval>
+        </param>
+        <param>
+          <type>remove_const_t&lt; <ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(<ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref>)&gt;</type>
+          <declname>nr</declname>
+          <defval><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="43" column="6" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="43" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>seg&lt; op, id_ &gt;</label>
+        <link refid="structseg"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ll</label>
+        <link refid="structll"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="3" column="26" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="3" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structseg_1aad9da220752b136fa737498955050354" prot="public" virt="non-virtual"><scope>seg</scope><name>a</name></member>
+      <member refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" prot="public" virt="non-virtual"><scope>seg</scope><name>def</name></member>
+      <member refid="structseg_1a47c33b5e0170ed5349eb68520ee245c6" prot="public" virt="non-virtual"><scope>seg</scope><name>down</name></member>
+      <member refid="structseg_1abe9e9d5eca61fc8414635dd7f6c2cce3" prot="public" virt="non-virtual"><scope>seg</scope><name>fix</name></member>
+      <member refid="structseg_1a2eeb3a79f56b3825b357682187ae61b9" prot="public" virt="non-virtual"><scope>seg</scope><name>gt</name></member>
+      <member refid="structseg_1ad581224128223063bf41930f7d1143f7" prot="public" virt="non-virtual"><scope>seg</scope><name>id</name></member>
+      <member refid="structseg_1aec39c86816f724381919a788bb6e899e" prot="public" virt="non-virtual"><scope>seg</scope><name>n</name></member>
+      <member refid="structseg_1a71b2f9f35c3edacf1a431f8ab6b1b952" prot="public" virt="non-virtual"><scope>seg</scope><name>seg</name></member>
+      <member refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" prot="public" virt="non-virtual"><scope>seg</scope><name>T</name></member>
+      <member refid="structseg_1a0a0354d9f2ef32bd1f87c46de283c67b" prot="public" virt="non-virtual"><scope>seg</scope><name>up</name></member>
+      <member refid="structseg_1ae151eed87c688785b0071279a82f0a59" prot="public" virt="non-virtual"><scope>seg</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -51,8 +51,8 @@ tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
 }
 template <typename T> pair<mat<T> &&, T> gauss(mat<T> b, mat<T> a) {
 	/*!
-	Returns matrix x such that \f$ax = b\f$ and the determinant of a via
-	Gaussian elimination.
+	Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
+	via Gaussian elimination.
 	*/
 	assert(a.r == a.c);
 	assert(a.r == b.r);
@@ -108,6 +108,7 @@ void test_matrix() {
 	mat<ld> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
 	mat<ld> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
 	auto x = b / a;
+	// TODO 😩 there are no asserts here
 	dbg(x);
 	dbg(a * x);
 	dbg(b);

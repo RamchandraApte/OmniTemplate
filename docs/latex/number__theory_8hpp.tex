@@ -1,0 +1,326 @@
+\hypertarget{number__theory_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/number\+\_\+theory.hpp File Reference}
+\label{number__theory_8hpp}\index{/home/ram/OmniTemplate/number\_theory.hpp@{/home/ram/OmniTemplate/number\_theory.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}modulo.\+hpp\char`\"{}}\newline
+Include dependency graph for number\+\_\+theory.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{number__theory_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784}{prime}} (\mbox{\hyperlink{structll}{ll}} n)
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_a87d7c3ba2489977a16ec40544a918e00}{test\+\_\+prime}} ()
+\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{number__theory_8hpp_af88afa289696363eee6d6caed35edfb5}{divisors}} (\mbox{\hyperlink{structll}{ll}} x)
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153}{test\+\_\+divisors}} ()
+\item 
+auto \mbox{\hyperlink{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944}{sieve}} (\mbox{\hyperlink{structll}{ll}} n)
+\item 
+\mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} \mbox{\hyperlink{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df}{fac}} (\mbox{\hyperlink{structll}{ll}} n)
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_afcfd3b1e3415393029bc6a496d825459}{test\+\_\+fac}} ()
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egcd}} (const \mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} b, \mbox{\hyperlink{structll}{ll}} \&x, \mbox{\hyperlink{structll}{ll}} \&y)
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f}{totient}} (\mbox{\hyperlink{structll}{ll}} n)
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_a8ae320acad5e35d58ca5ad7adc6ddd78}{test\+\_\+totient}} ()
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a7fe167e7a6ffd6127f342baf3169d9e9}{dlog}} (const \mbox{\hyperlink{structmd}{md}} a, \mbox{\hyperlink{structmd}{md}} b)
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_a7aac53ce82614d79c7098a1de32ed1e7}{test\+\_\+dlog}} ()
+\item 
+\mbox{\hyperlink{structmd}{md}} \mbox{\hyperlink{number__theory_8hpp_a8a159e82910edb282085d6879d8c382d}{primitive\+\_\+root}} ()
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_a0ff115471f41e78245b5dc48eaf8032f}{test\+\_\+primitive\+\_\+root}} ()
+\item 
+void \mbox{\hyperlink{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef}{test\+\_\+number\+\_\+theory}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{number__theory_8hpp_a5e4d8030cfc837ebe1e18d2c764d8bab}{divs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{number__theory_8hpp_af88afa289696363eee6d6caed35edfb5}\label{number__theory_8hpp_af88afa289696363eee6d6caed35edfb5}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!divisors@{divisors}}
+\index{divisors@{divisors}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{divisors()}{divisors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} divisors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
+
+Return all divisors of x in sorted orderHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_af88afa289696363eee6d6caed35edfb5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a7fe167e7a6ffd6127f342baf3169d9e9}\label{number__theory_8hpp_a7fe167e7a6ffd6127f342baf3169d9e9}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!dlog@{dlog}}
+\index{dlog@{dlog}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{dlog()}{dlog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dlog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmd}{md}}}]{a,  }\item[{\mbox{\hyperlink{structmd}{md}}}]{b }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{number__theory_8hpp_a7fe167e7a6ffd6127f342baf3169d9e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}\label{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!egcd@{egcd}}
+\index{egcd@{egcd}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{egcd()}{egcd()}}
+{\footnotesize\ttfamily void egcd (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{a,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{b,  }\item[{\mbox{\hyperlink{structll}{ll}} \&}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}} \&}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df}\label{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!fac@{fac}}
+\index{fac@{fac}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{fac()}{fac()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} fac (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784}\label{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!prime@{prime}}
+\index{prime@{prime}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{prime()}{prime()}}
+{\footnotesize\ttfamily auto prime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+
+Return whether integer n $>$= 2 is primeHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a8a159e82910edb282085d6879d8c382d}\label{number__theory_8hpp_a8a159e82910edb282085d6879d8c382d}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!primitive\_root@{primitive\_root}}
+\index{primitive\_root@{primitive\_root}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{primitive\_root()}{primitive\_root()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmd}{md}} primitive\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a8a159e82910edb282085d6879d8c382d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a8a159e82910edb282085d6879d8c382d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944}\label{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!sieve@{sieve}}
+\index{sieve@{sieve}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{sieve()}{sieve()}}
+{\footnotesize\ttfamily auto sieve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153}\label{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_divisors@{test\_divisors}}
+\index{test\_divisors@{test\_divisors}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_divisors()}{test\_divisors()}}
+{\footnotesize\ttfamily void test\+\_\+divisors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a7aac53ce82614d79c7098a1de32ed1e7}\label{number__theory_8hpp_a7aac53ce82614d79c7098a1de32ed1e7}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_dlog@{test\_dlog}}
+\index{test\_dlog@{test\_dlog}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_dlog()}{test\_dlog()}}
+{\footnotesize\ttfamily void test\+\_\+dlog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{number__theory_8hpp_a7aac53ce82614d79c7098a1de32ed1e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a7aac53ce82614d79c7098a1de32ed1e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_afcfd3b1e3415393029bc6a496d825459}\label{number__theory_8hpp_afcfd3b1e3415393029bc6a496d825459}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_fac@{test\_fac}}
+\index{test\_fac@{test\_fac}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_fac()}{test\_fac()}}
+{\footnotesize\ttfamily void test\+\_\+fac (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_afcfd3b1e3415393029bc6a496d825459_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_afcfd3b1e3415393029bc6a496d825459_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef}\label{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_number\_theory@{test\_number\_theory}}
+\index{test\_number\_theory@{test\_number\_theory}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_number\_theory()}{test\_number\_theory()}}
+{\footnotesize\ttfamily void test\+\_\+number\+\_\+theory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a87d7c3ba2489977a16ec40544a918e00}\label{number__theory_8hpp_a87d7c3ba2489977a16ec40544a918e00}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_prime@{test\_prime}}
+\index{test\_prime@{test\_prime}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_prime()}{test\_prime()}}
+{\footnotesize\ttfamily void test\+\_\+prime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{number__theory_8hpp_a87d7c3ba2489977a16ec40544a918e00_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a87d7c3ba2489977a16ec40544a918e00_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a0ff115471f41e78245b5dc48eaf8032f}\label{number__theory_8hpp_a0ff115471f41e78245b5dc48eaf8032f}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_primitive\_root@{test\_primitive\_root}}
+\index{test\_primitive\_root@{test\_primitive\_root}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_primitive\_root()}{test\_primitive\_root()}}
+{\footnotesize\ttfamily void test\+\_\+primitive\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a0ff115471f41e78245b5dc48eaf8032f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a0ff115471f41e78245b5dc48eaf8032f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a8ae320acad5e35d58ca5ad7adc6ddd78}\label{number__theory_8hpp_a8ae320acad5e35d58ca5ad7adc6ddd78}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!test\_totient@{test\_totient}}
+\index{test\_totient@{test\_totient}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_totient()}{test\_totient()}}
+{\footnotesize\ttfamily void test\+\_\+totient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a8ae320acad5e35d58ca5ad7adc6ddd78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a8ae320acad5e35d58ca5ad7adc6ddd78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f}\label{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!totient@{totient}}
+\index{totient@{totient}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{totient()}{totient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} totient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{number__theory_8hpp_a5e4d8030cfc837ebe1e18d2c764d8bab}\label{number__theory_8hpp_a5e4d8030cfc837ebe1e18d2c764d8bab}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!divs@{divs}}
+\index{divs@{divs}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{divs}{divs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} divs}
+

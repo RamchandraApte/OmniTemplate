@@ -1,0 +1,146 @@
+\hypertarget{linear__algebra_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/linear\+\_\+algebra.hpp File Reference}
+\label{linear__algebra_8hpp}\index{/home/ram/OmniTemplate/linear\_algebra.hpp@{/home/ram/OmniTemplate/linear\_algebra.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+Include dependency graph for linear\+\_\+algebra.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linear__algebra_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{linear__algebra_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmat}{mat$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... T$>$ }\\auto \mbox{\hyperlink{linear__algebra_8hpp_a869262492de32bc50ba1ae957607d69b}{operator$\ast$}} (\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&a, \mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\pair$<$ \mbox{\hyperlink{structmat}{mat}}$<$ T $>$ \&\&, T $>$ \mbox{\hyperlink{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266}{gauss}} (\mbox{\hyperlink{structmat}{mat}}$<$ T $>$ b, \mbox{\hyperlink{structmat}{mat}}$<$ T $>$ a)
+\item 
+{\footnotesize template$<$typename ... T$>$ }\\auto \mbox{\hyperlink{linear__algebra_8hpp_a82bf14f941e0f3e3c902ca1ea63b7a2d}{operator/}} (\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ b, \mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ a)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{linear__algebra_8hpp_a9bca95617a7712fbff5e543cf1cef977}{det}} (const \mbox{\hyperlink{structmat}{mat}}$<$ T $>$ \&a)
+\item 
+{\footnotesize template$<$typename Stream , typename... T$>$ }\\auto \& \mbox{\hyperlink{linear__algebra_8hpp_a9f304d5517398e00f1ba9c13317c07b8}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&m)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{linear__algebra_8hpp_ae3cd3eded530a14682cf9a4ca4d17f51}{lin\+\_\+recur}} (vector$<$ T $>$ const \&c, \mbox{\hyperlink{structll}{ll}} n)
+\item 
+void \mbox{\hyperlink{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}{test\+\_\+matrix}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{linear__algebra_8hpp_a9bca95617a7712fbff5e543cf1cef977}\label{linear__algebra_8hpp_a9bca95617a7712fbff5e543cf1cef977}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!det@{det}}
+\index{det@{det}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{det()}{det()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T det (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmat}{mat}}$<$ T $>$ \&}]{a }\end{DoxyParamCaption})}
+
+Returns the determinant of matrix aHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{linear__algebra_8hpp_a9bca95617a7712fbff5e543cf1cef977_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linear__algebra_8hpp_a9bca95617a7712fbff5e543cf1cef977_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266}\label{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!gauss@{gauss}}
+\index{gauss@{gauss}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{gauss()}{gauss()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pair$<$\mbox{\hyperlink{structmat}{mat}}$<$T$>$ \&\&, T$>$ gauss (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T $>$}]{b,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T $>$}]{a }\end{DoxyParamCaption})}
+
+Returns matrix x such that $ax = b$ and the determinant of a via Gaussian elimination.Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{linear__algebra_8hpp_a19f0f5824555e4b22a1636e87f97d266_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{linear__algebra_8hpp_ae3cd3eded530a14682cf9a4ca4d17f51}\label{linear__algebra_8hpp_ae3cd3eded530a14682cf9a4ca4d17f51}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!lin\_recur@{lin\_recur}}
+\index{lin\_recur@{lin\_recur}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{lin\_recur()}{lin\_recur()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto lin\+\_\+recur (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ const \&}]{c,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+
+Returns nth therm of linear recurrence described by cHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{linear__algebra_8hpp_ae3cd3eded530a14682cf9a4ca4d17f51_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{linear__algebra_8hpp_a869262492de32bc50ba1ae957607d69b}\label{linear__algebra_8hpp_a869262492de32bc50ba1ae957607d69b}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename ... T$>$ \\
+auto operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+Returns the matrix product of a and b\mbox{\Hypertarget{linear__algebra_8hpp_a82bf14f941e0f3e3c902ca1ea63b7a2d}\label{linear__algebra_8hpp_a82bf14f941e0f3e3c902ca1ea63b7a2d}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!operator/@{operator/}}
+\index{operator/@{operator/}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename ... T$>$ \\
+auto operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$}]{b,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$}]{a }\end{DoxyParamCaption})}
+
+Returns $ba^{-1}$Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{linear__algebra_8hpp_a82bf14f941e0f3e3c902ca1ea63b7a2d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{linear__algebra_8hpp_a9f304d5517398e00f1ba9c13317c07b8}\label{linear__algebra_8hpp_a9f304d5517398e00f1ba9c13317c07b8}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename Stream , typename... T$>$ \\
+auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structmat}{mat}}$<$ T... $>$ const \&}]{m }\end{DoxyParamCaption})}
+
+Print the matrix rows, line by line\mbox{\Hypertarget{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}\label{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3}} 
+\index{linear\_algebra.hpp@{linear\_algebra.hpp}!test\_matrix@{test\_matrix}}
+\index{test\_matrix@{test\_matrix}!linear\_algebra.hpp@{linear\_algebra.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_matrix()}{test\_matrix()}}
+{\footnotesize\ttfamily void test\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{linear__algebra_8hpp_ac334a92cbd04265f52708e07af9487e3_icgraph}
+\end{center}
+\end{figure}

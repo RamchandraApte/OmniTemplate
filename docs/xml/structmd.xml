@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmd" kind="struct" language="C++" prot="public">
+    <compoundname>md</compoundname>
+    <includes refid="modulo_8hpp" local="no">modulo.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmd_1ae010a9bb8f22532125423306ed05d3d4" prot="public" static="no" mutable="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll md::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modular arithmetic class </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/modulo.hpp" line="17" column="4" bodyfile="/home/ram/OmniTemplate/modulo.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmd_1a5d3fbc95f155d9fd6c8e6f2adb0c21eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>md::md</definition>
+        <argsstring>()</argsstring>
+        <name>md</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/modulo.hpp" line="18" column="1" bodyfile="/home/ram/OmniTemplate/modulo.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structmd_1adf938bd8e00154130a8cf712a747ea3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;is_integral&lt;T&gt;::value, void&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>md::md</definition>
+        <argsstring>(T x_)</argsstring>
+        <name>md</name>
+        <param>
+          <type>T</type>
+          <declname>x_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/modulo.hpp" line="21" column="1" bodyfile="/home/ram/OmniTemplate/modulo.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structmd_1a35987cee585ce0405bb4125d8f62b6b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>md::md</definition>
+        <argsstring>(ll x_, no_mod)</argsstring>
+        <name>md</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type><ref refid="structno__mod" kindref="compound">no_mod</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/modulo.hpp" line="22" column="1" bodyfile="/home/ram/OmniTemplate/modulo.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structmd_1a0ec8460ddbed45528ad11227e82a0f14" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>md::operator auto</definition>
+        <argsstring>()</argsstring>
+        <name>operator auto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/modulo.hpp" line="23" column="10" bodyfile="/home/ram/OmniTemplate/modulo.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ll</label>
+        <link refid="structll"/>
+      </node>
+      <node id="1">
+        <label>md</label>
+        <link refid="structmd"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>x</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/modulo.hpp" line="15" column="9" bodyfile="/home/ram/OmniTemplate/modulo.hpp" bodystart="15" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structmd_1a5d3fbc95f155d9fd6c8e6f2adb0c21eb" prot="public" virt="non-virtual"><scope>md</scope><name>md</name></member>
+      <member refid="structmd_1adf938bd8e00154130a8cf712a747ea3d" prot="public" virt="non-virtual"><scope>md</scope><name>md</name></member>
+      <member refid="structmd_1a35987cee585ce0405bb4125d8f62b6b3" prot="public" virt="non-virtual"><scope>md</scope><name>md</name></member>
+      <member refid="structmd_1a0ec8460ddbed45528ad11227e82a0f14" prot="public" virt="non-virtual"><scope>md</scope><name>operator auto</name></member>
+      <member refid="structmd_1ae010a9bb8f22532125423306ed05d3d4" prot="public" virt="non-virtual"><scope>md</scope><name>x</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

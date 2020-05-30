@@ -1,0 +1,89 @@
+\hypertarget{coroutine_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/coroutine.hpp File Reference}
+\label{coroutine_8hpp}\index{/home/ram/OmniTemplate/coroutine.hpp@{/home/ram/OmniTemplate/coroutine.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+Include dependency graph for coroutine.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{coroutine_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{coroutine_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{coroutine_8hpp_a07a24840ac2854166f541e047362d0bf}{C\+O\+\_\+\+S\+W\+I\+T\+CH}}
+\item 
+\#define \mbox{\hyperlink{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}{cobegin}}
+\item 
+\#define \mbox{\hyperlink{coroutine_8hpp_a904227d8e8b2e67adef1e140e9990a5c}{coend}}
+\item 
+\#define \mbox{\hyperlink{coroutine_8hpp_a40b2517161c64f0179823b67d4af0242}{coreturn}}(x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa}{coro}} (\mbox{\hyperlink{structll}{ll}} a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{coroutine_8hpp_a07a24840ac2854166f541e047362d0bf}\label{coroutine_8hpp_a07a24840ac2854166f541e047362d0bf}} 
+\index{coroutine.hpp@{coroutine.hpp}!CO\_SWITCH@{CO\_SWITCH}}
+\index{CO\_SWITCH@{CO\_SWITCH}!coroutine.hpp@{coroutine.hpp}}
+\doxysubsubsection{\texorpdfstring{CO\_SWITCH}{CO\_SWITCH}}
+{\footnotesize\ttfamily \#define C\+O\+\_\+\+S\+W\+I\+T\+CH}
+
+\mbox{\Hypertarget{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}\label{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}} 
+\index{coroutine.hpp@{coroutine.hpp}!cobegin@{cobegin}}
+\index{cobegin@{cobegin}!coroutine.hpp@{coroutine.hpp}}
+\doxysubsubsection{\texorpdfstring{cobegin}{cobegin}}
+{\footnotesize\ttfamily \#define cobegin}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{static} \mbox{\hyperlink{core_8hpp_a583d558126ab02babe89a77ae06a4156}{lli}} pos = 0;                                                    \(\backslash\)}
+\DoxyCodeLine{    switch (pos) \{                                                         \(\backslash\)}
+\DoxyCodeLine{    case 0:}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{coroutine_8hpp_a904227d8e8b2e67adef1e140e9990a5c}\label{coroutine_8hpp_a904227d8e8b2e67adef1e140e9990a5c}} 
+\index{coroutine.hpp@{coroutine.hpp}!coend@{coend}}
+\index{coend@{coend}!coroutine.hpp@{coroutine.hpp}}
+\doxysubsubsection{\texorpdfstring{coend}{coend}}
+{\footnotesize\ttfamily \#define coend}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{throw} out\_of\_range(\textcolor{stringliteral}{"Coroutine reached end."});                          \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{coroutine_8hpp_a40b2517161c64f0179823b67d4af0242}\label{coroutine_8hpp_a40b2517161c64f0179823b67d4af0242}} 
+\index{coroutine.hpp@{coroutine.hpp}!coreturn@{coreturn}}
+\index{coreturn@{coreturn}!coroutine.hpp@{coroutine.hpp}}
+\doxysubsubsection{\texorpdfstring{coreturn}{coreturn}}
+{\footnotesize\ttfamily \#define coreturn(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    pos = \_\_LINE\_\_;                                                        \(\backslash\)}
+\DoxyCodeLine{    return x;                                                              \(\backslash\)}
+\DoxyCodeLine{    case \_\_LINE\_\_:;}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa}\label{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa}} 
+\index{coroutine.hpp@{coroutine.hpp}!coro@{coro}}
+\index{coro@{coro}!coroutine.hpp@{coroutine.hpp}}
+\doxysubsubsection{\texorpdfstring{coro()}{coro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} coro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{a }\end{DoxyParamCaption})}
+

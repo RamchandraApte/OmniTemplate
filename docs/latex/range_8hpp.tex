@@ -1,0 +1,213 @@
+\hypertarget{range_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/range.hpp File Reference}
+\label{range_8hpp}\index{/home/ram/OmniTemplate/range.hpp@{/home/ram/OmniTemplate/range.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+Include dependency graph for range.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{range_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{range_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structit__base}{it\+\_\+base$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structint__it}{int\+\_\+it$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structrange}{range$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{range_8hpp_a198fc8d7aeb577c1c390bbf3cf9ade86}{bin}}(op,  Tp)~auto operator op(Tp const \&a, Tp const \&b) \{ return a.\+x op b.\+x; \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}} = \mbox{\hyperlink{structrange}{range}}$<$ \mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78}{isect}} \{ \newline
+\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4}{null}}, 
+\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536}{dis}}, 
+\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc}{over}}, 
+\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}}, 
+\newline
+\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015}{eq}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{range_8hpp_a2a9660e705c73071a9c68c86e5e92e29}{operator==}} (\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&a, \mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{range_8hpp_adf37877debb40c87ce158743d128a8df}{operator$<$}} (\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&a, \mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{range_8hpp_a5b1fcbc62cc963f6ab2598b13f114dd8}{operator$<$}} (\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&a, \mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{range_8hpp_a295cbb09d532a8eeeaab519fd1db0928}{operator\&}} (\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&a, \mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}{rev}} (const \mbox{\hyperlink{structrange}{range}}$<$ T $>$ \&r)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ \mbox{\hyperlink{range_8hpp_acb6120c8a8224e1d4465bf980bc01d07}{operator+}} (\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&a, \mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ \mbox{\hyperlink{range_8hpp_a8b072587149274d1639908e4edb23d3d}{operator-\/}} (\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&a)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{range_8hpp_a5eeb4818d038580518b4e590a066ec12}{intersect}} (const T1 \&a, const T2 \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{range_8hpp_a2e6b26fca3ba13b074816e7b97f8245d}{operator$^\wedge$}} (\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&a, \mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&b)
+\item 
+auto \mbox{\hyperlink{range_8hpp_a3eb62dcf88ab5afad4d62c6fea4bb570}{filter}} (vector$<$ \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}} $>$ \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{range_8hpp_a198fc8d7aeb577c1c390bbf3cf9ade86}\label{range_8hpp_a198fc8d7aeb577c1c390bbf3cf9ade86}} 
+\index{range.hpp@{range.hpp}!bin@{bin}}
+\index{bin@{bin}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{bin}{bin}}
+{\footnotesize\ttfamily \#define bin(\begin{DoxyParamCaption}\item[{}]{op,  }\item[{}]{Tp }\end{DoxyParamCaption})~auto operator op(Tp const \&a, Tp const \&b) \{ return a.\+x op b.\+x; \}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}\label{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}} 
+\index{range.hpp@{range.hpp}!ra@{ra}}
+\index{ra@{ra}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{ra}{ra}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}} =  \mbox{\hyperlink{structrange}{range}}$<$\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$\mbox{\hyperlink{structll}{ll}}$>$ $>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78}\label{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78}} 
+\index{range.hpp@{range.hpp}!isect@{isect}}
+\index{isect@{isect}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{isect}{isect}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78}{isect}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{null@{null}!range.hpp@{range.hpp}}\index{range.hpp@{range.hpp}!null@{null}}}\mbox{\Hypertarget{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4}\label{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4}} 
+null&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{dis@{dis}!range.hpp@{range.hpp}}\index{range.hpp@{range.hpp}!dis@{dis}}}\mbox{\Hypertarget{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536}\label{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536}} 
+dis&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{over@{over}!range.hpp@{range.hpp}}\index{range.hpp@{range.hpp}!over@{over}}}\mbox{\Hypertarget{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc}\label{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc}} 
+over&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cont@{cont}!range.hpp@{range.hpp}}\index{range.hpp@{range.hpp}!cont@{cont}}}\mbox{\Hypertarget{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}\label{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}} 
+cont&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eq@{eq}!range.hpp@{range.hpp}}\index{range.hpp@{range.hpp}!eq@{eq}}}\mbox{\Hypertarget{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015}\label{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015}} 
+eq&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{range_8hpp_a3eb62dcf88ab5afad4d62c6fea4bb570}\label{range_8hpp_a3eb62dcf88ab5afad4d62c6fea4bb570}} 
+\index{range.hpp@{range.hpp}!filter@{filter}}
+\index{filter@{filter}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily auto filter (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_a5eeb4818d038580518b4e590a066ec12}\label{range_8hpp_a5eeb4818d038580518b4e590a066ec12}} 
+\index{range.hpp@{range.hpp}!intersect@{intersect}}
+\index{intersect@{intersect}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+auto intersect (\begin{DoxyParamCaption}\item[{const T1 \&}]{a,  }\item[{const T2 \&}]{b }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{range_8hpp_a5eeb4818d038580518b4e590a066ec12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{range_8hpp_a295cbb09d532a8eeeaab519fd1db0928}\label{range_8hpp_a295cbb09d532a8eeeaab519fd1db0928}} 
+\index{range.hpp@{range.hpp}!operator\&@{operator\&}}
+\index{operator\&@{operator\&}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator\&()}{operator\&()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto operator\& (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_acb6120c8a8224e1d4465bf980bc01d07}\label{range_8hpp_acb6120c8a8224e1d4465bf980bc01d07}} 
+\index{range.hpp@{range.hpp}!operator+@{operator+}}
+\index{operator+@{operator+}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$T$>$ operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_a8b072587149274d1639908e4edb23d3d}\label{range_8hpp_a8b072587149274d1639908e4edb23d3d}} 
+\index{range.hpp@{range.hpp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$T$>$ operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_adf37877debb40c87ce158743d128a8df}\label{range_8hpp_adf37877debb40c87ce158743d128a8df}} 
+\index{range.hpp@{range.hpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_a5b1fcbc62cc963f6ab2598b13f114dd8}\label{range_8hpp_a5b1fcbc62cc963f6ab2598b13f114dd8}} 
+\index{range.hpp@{range.hpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_a2a9660e705c73071a9c68c86e5e92e29}\label{range_8hpp_a2a9660e705c73071a9c68c86e5e92e29}} 
+\index{range.hpp@{range.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structint__it}{int\+\_\+it}}$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{range_8hpp_a2e6b26fca3ba13b074816e7b97f8245d}\label{range_8hpp_a2e6b26fca3ba13b074816e7b97f8245d}} 
+\index{range.hpp@{range.hpp}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$^\wedge$()}{operator^()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto operator$^\wedge$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structrange}{range}}$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{range_8hpp_a2e6b26fca3ba13b074816e7b97f8245d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}\label{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}} 
+\index{range.hpp@{range.hpp}!rev@{rev}}
+\index{rev@{rev}!range.hpp@{range.hpp}}
+\doxysubsubsection{\texorpdfstring{rev()}{rev()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto rev (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrange}{range}}$<$ T $>$ \&}]{r }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05_icgraph}
+\end{center}
+\end{figure}

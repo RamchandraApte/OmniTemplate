@@ -1,0 +1,233 @@
+\hypertarget{segment__tree_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/segment\+\_\+tree.hpp File Reference}
+\label{segment__tree_8hpp}\index{/home/ram/OmniTemplate/segment\_tree.hpp@{/home/ram/OmniTemplate/segment\_tree.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+Include dependency graph for segment\+\_\+tree.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{segment__tree_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{segment__tree_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structseg}{seg$<$ op, id\+\_\+ $>$}}
+\item 
+struct \mbox{\hyperlink{structlazy__ptr}{lazy\+\_\+ptr$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structpers__ptr}{pers\+\_\+ptr$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structno__v}{no\+\_\+v$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structno__ptr__v}{no\+\_\+ptr\+\_\+v$<$ T, Ptr $>$}}
+\item 
+struct \mbox{\hyperlink{structseg__base}{seg\+\_\+base$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structno__impl}{no\+\_\+impl$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structseg__base_3_01no__impl_3_01T_01_4_01_4}{seg\+\_\+base$<$ no\+\_\+impl$<$ T $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{structseg2}{seg2$<$ Op, No\+\_\+\+T, T, No $>$}}
+\item 
+struct \mbox{\hyperlink{structmymax}{mymax}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{segment__tree_8hpp_adff0a7b40e9b24ea63a29da40e60da96}{sig}}~\mbox{\hyperlink{structll}{ll}} l, \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(r, def), \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(i, 1LL), \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(nl, 0\+LL), \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(nr, def)
+\item 
+\#define \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}~this.\+v
+\item 
+\#define \mbox{\hyperlink{segment__tree_8hpp_af1f6f68ae3982192886e37d50ba0d9e2}{do\+\_\+lazy}}(x)
+\item 
+\#define \mbox{\hyperlink{segment__tree_8hpp_adff0a7b40e9b24ea63a29da40e60da96}{sig}}~No const \&i, \mbox{\hyperlink{structll}{ll}} nl, \mbox{\hyperlink{structll}{ll}} nr
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{segment__tree_8hpp_a962063b214f65a5ee40a74f768d237a7}{mypers}} = \mbox{\hyperlink{structpers__ptr}{pers\+\_\+ptr}}$<$ \mbox{\hyperlink{structno__ptr__v}{no\+\_\+ptr\+\_\+v}}$<$ T, \mbox{\hyperlink{structpers__ptr}{pers\+\_\+ptr}} $>$ $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{segment__tree_8hpp_aa4cefbed832d0d4d4cfb40f2341e9a2e}{mylazy}} = \mbox{\hyperlink{structlazy__ptr}{lazy\+\_\+ptr}}$<$ \mbox{\hyperlink{structno__ptr__v}{no\+\_\+ptr\+\_\+v}}$<$ T, \mbox{\hyperlink{structlazy__ptr}{lazy\+\_\+ptr}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Stream , auto... args$>$ }\\auto \& \mbox{\hyperlink{segment__tree_8hpp_a5725dc99f2c2e7ba7ab0c73860df2554}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structseg}{seg}}$<$ args... $>$ const \&sg)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{segment__tree_8hpp_aee065d5582449ca9f96b80c630882b7a}{up\+\_\+inv}} (const T1 \&s, const T2 \&i)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \& \mbox{\hyperlink{segment__tree_8hpp_ae93006ee49e9655fd20f39aaf5743581}{gl}} (const T \&ptr)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \& \mbox{\hyperlink{segment__tree_8hpp_a2747683868ad04194c67440ba2aea330}{gr}} (const T \&ptr)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$ T $>$ \mbox{\hyperlink{segment__tree_8hpp_acb311db76dac96d5345a6f25d934898d}{gl}} (\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$ T $>$ const \&x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$ T $>$ \mbox{\hyperlink{segment__tree_8hpp_a7887b5dfaf56f18b18402b32f600659b}{gr}} (\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$ T $>$ const \&x)
+\item 
+auto \mbox{\hyperlink{segment__tree_8hpp_a79eb3560607dcadc86816675cb88146e}{identity}} (\mbox{\hyperlink{structmymax}{mymax}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{segment__tree_8hpp_aea41afc9d2c06ef4ab4b3b44a683ccb4}{identity}} (plus$<$ \mbox{\hyperlink{structll}{ll}} $>$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{segment__tree_8hpp_af1f6f68ae3982192886e37d50ba0d9e2}\label{segment__tree_8hpp_af1f6f68ae3982192886e37d50ba0d9e2}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!do\_lazy@{do\_lazy}}
+\index{do\_lazy@{do\_lazy}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{do\_lazy}{do\_lazy}}
+{\footnotesize\ttfamily \#define do\+\_\+lazy(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (d) \{                                                               \(\backslash\)}
+\DoxyCodeLine{        v(x).a += \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}(i).z;                                              \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{segment__tree_8hpp_adff0a7b40e9b24ea63a29da40e60da96}\label{segment__tree_8hpp_adff0a7b40e9b24ea63a29da40e60da96}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!sig@{sig}}
+\index{sig@{sig}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{sig}{sig}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define sig~\mbox{\hyperlink{structll}{ll}} l, \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(r, def), \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(i, 1LL), \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(nl, 0\+LL), \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(nr, def)}
+
+\mbox{\Hypertarget{segment__tree_8hpp_adff0a7b40e9b24ea63a29da40e60da96}\label{segment__tree_8hpp_adff0a7b40e9b24ea63a29da40e60da96}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!sig@{sig}}
+\index{sig@{sig}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{sig}{sig}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define sig~No const \&i, \mbox{\hyperlink{structll}{ll}} nl, \mbox{\hyperlink{structll}{ll}} nr}
+
+\mbox{\Hypertarget{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}\label{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!v@{v}}
+\index{v@{v}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \#define v~this.\+v}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{segment__tree_8hpp_aa4cefbed832d0d4d4cfb40f2341e9a2e}\label{segment__tree_8hpp_aa4cefbed832d0d4d4cfb40f2341e9a2e}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!mylazy@{mylazy}}
+\index{mylazy@{mylazy}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{mylazy}{mylazy}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{segment__tree_8hpp_aa4cefbed832d0d4d4cfb40f2341e9a2e}{mylazy}} =  \mbox{\hyperlink{structlazy__ptr}{lazy\+\_\+ptr}}$<$\mbox{\hyperlink{structno__ptr__v}{no\+\_\+ptr\+\_\+v}}$<$T, \mbox{\hyperlink{structlazy__ptr}{lazy\+\_\+ptr}}$>$ $>$}
+
+\mbox{\Hypertarget{segment__tree_8hpp_a962063b214f65a5ee40a74f768d237a7}\label{segment__tree_8hpp_a962063b214f65a5ee40a74f768d237a7}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!mypers@{mypers}}
+\index{mypers@{mypers}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{mypers}{mypers}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{segment__tree_8hpp_a962063b214f65a5ee40a74f768d237a7}{mypers}} =  \mbox{\hyperlink{structpers__ptr}{pers\+\_\+ptr}}$<$\mbox{\hyperlink{structno__ptr__v}{no\+\_\+ptr\+\_\+v}}$<$T, \mbox{\hyperlink{structpers__ptr}{pers\+\_\+ptr}}$>$ $>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{segment__tree_8hpp_ae93006ee49e9655fd20f39aaf5743581}\label{segment__tree_8hpp_ae93006ee49e9655fd20f39aaf5743581}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!gl@{gl}}
+\index{gl@{gl}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{gl()}{gl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto\& gl (\begin{DoxyParamCaption}\item[{const T \&}]{ptr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{segment__tree_8hpp_ae93006ee49e9655fd20f39aaf5743581_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{segment__tree_8hpp_acb311db76dac96d5345a6f25d934898d}\label{segment__tree_8hpp_acb311db76dac96d5345a6f25d934898d}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!gl@{gl}}
+\index{gl@{gl}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{gl()}{gl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$T$>$ gl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$ T $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{segment__tree_8hpp_a2747683868ad04194c67440ba2aea330}\label{segment__tree_8hpp_a2747683868ad04194c67440ba2aea330}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!gr@{gr}}
+\index{gr@{gr}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{gr()}{gr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto\& gr (\begin{DoxyParamCaption}\item[{const T \&}]{ptr }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{segment__tree_8hpp_a2747683868ad04194c67440ba2aea330_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{segment__tree_8hpp_a7887b5dfaf56f18b18402b32f600659b}\label{segment__tree_8hpp_a7887b5dfaf56f18b18402b32f600659b}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!gr@{gr}}
+\index{gr@{gr}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{gr()}{gr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$T$>$ gr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structno__impl}{no\+\_\+impl}}$<$ T $>$ const \&}]{x }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{segment__tree_8hpp_a7887b5dfaf56f18b18402b32f600659b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{segment__tree_8hpp_a79eb3560607dcadc86816675cb88146e}\label{segment__tree_8hpp_a79eb3560607dcadc86816675cb88146e}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!identity@{identity}}
+\index{identity@{identity}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}}
+{\footnotesize\ttfamily auto identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmymax}{mymax}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{segment__tree_8hpp_a5725dc99f2c2e7ba7ab0c73860df2554}\label{segment__tree_8hpp_a5725dc99f2c2e7ba7ab0c73860df2554}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename Stream , auto... args$>$ \\
+auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structseg}{seg}}$<$ args... $>$ const \&}]{sg }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{segment__tree_8hpp_a5725dc99f2c2e7ba7ab0c73860df2554_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{segment__tree_8hpp_aee065d5582449ca9f96b80c630882b7a}\label{segment__tree_8hpp_aee065d5582449ca9f96b80c630882b7a}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!up\_inv@{up\_inv}}
+\index{up\_inv@{up\_inv}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{up\_inv()}{up\_inv()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+auto up\+\_\+inv (\begin{DoxyParamCaption}\item[{const T1 \&}]{s,  }\item[{const T2 \&}]{i }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{segment__tree_8hpp_aee065d5582449ca9f96b80c630882b7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{segment__tree_8hpp_aee065d5582449ca9f96b80c630882b7a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{segment__tree_8hpp_aea41afc9d2c06ef4ab4b3b44a683ccb4}\label{segment__tree_8hpp_aea41afc9d2c06ef4ab4b3b44a683ccb4}} 
+\index{segment\_tree.hpp@{segment\_tree.hpp}!identity@{identity}}
+\index{identity@{identity}!segment\_tree.hpp@{segment\_tree.hpp}}
+\doxysubsubsection{\texorpdfstring{identity}{identity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity(plus$<$ \mbox{\hyperlink{structll}{ll}} $>$)}
+

@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="segment__tree_8hpp" kind="file" language="C++">
+    <compoundname>segment_tree.hpp</compoundname>
+    <includes refid="core_8hpp" local="yes">core.hpp</includes>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/template.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>bits/stdc++.h</label>
+      </node>
+      <node id="6">
+        <label>my_int.hpp</label>
+        <link refid="my__int_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="4">
+        <label>experimental/iterator</label>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/segment_tree.hpp</label>
+        <link refid="segment__tree_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/segment_tree.hpp</label>
+        <link refid="segment__tree_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structseg" prot="public">seg</innerclass>
+    <innerclass refid="structlazy__ptr" prot="public">lazy_ptr</innerclass>
+    <innerclass refid="structpers__ptr" prot="public">pers_ptr</innerclass>
+    <innerclass refid="structno__v" prot="public">no_v</innerclass>
+    <innerclass refid="structno__ptr__v" prot="public">no_ptr_v</innerclass>
+    <innerclass refid="structseg__base" prot="public">seg_base</innerclass>
+    <innerclass refid="structno__impl" prot="public">no_impl</innerclass>
+    <innerclass refid="structseg__base_3_01no__impl_3_01T_01_4_01_4" prot="public">seg_base&lt; no_impl&lt; T &gt; &gt;</innerclass>
+    <innerclass refid="structseg2" prot="public">seg2</innerclass>
+    <innerclass refid="structmymax" prot="public">mymax</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" prot="public" static="no">
+        <name>sig</name>
+        <initializer><ref refid="structll" kindref="compound">ll</ref> l, <ref refid="core_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" kindref="member">df</ref>(r, def), <ref refid="core_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" kindref="member">df</ref>(i, 1LL), <ref refid="core_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" kindref="member">df</ref>(nl, 0LL), <ref refid="core_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" kindref="member">df</ref>(nr, def)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="34" column="9" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" prot="public" static="no">
+        <name>v</name>
+        <initializer>this.v</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="151" column="9" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="segment__tree_8hpp_1af1f6f68ae3982192886e37d50ba0d9e2" prot="public" static="no">
+        <name>do_lazy</name>
+        <param><defname>x</defname></param>
+        <initializer>	if (d) {                                                               \
+		<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(x).a += <ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).z;                                              \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="162" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" prot="public" static="no">
+        <name>sig</name>
+        <initializer>No const &amp;i, <ref refid="structll" kindref="compound">ll</ref> nl, <ref refid="structll" kindref="compound">ll</ref> nr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="170" column="9" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="segment__tree_8hpp_1a962063b214f65a5ee40a74f768d237a7" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structpers__ptr" kindref="compound">pers_ptr</ref>&lt; <ref refid="structno__ptr__v" kindref="compound">no_ptr_v</ref>&lt; T, <ref refid="structpers__ptr" kindref="compound">pers_ptr</ref> &gt; &gt;</type>
+        <definition>using mypers =  pers_ptr&lt;no_ptr_v&lt;T, pers_ptr&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>mypers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="113" column="13" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="segment__tree_8hpp_1aa4cefbed832d0d4d4cfb40f2341e9a2e" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structlazy__ptr" kindref="compound">lazy_ptr</ref>&lt; <ref refid="structno__ptr__v" kindref="compound">no_ptr_v</ref>&lt; T, <ref refid="structlazy__ptr" kindref="compound">lazy_ptr</ref> &gt; &gt;</type>
+        <definition>using mylazy =  lazy_ptr&lt;no_ptr_v&lt;T, lazy_ptr&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>mylazy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="114" column="13" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" prot="public" static="no" mutable="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll identity(plus&lt; ll &gt;)</definition>
+        <argsstring>(plus&lt; ll &gt;)</argsstring>
+        <name>identity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="142" column="4" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="142" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="segment__tree_8hpp_1a5725dc99f2c2e7ba7ab0c73860df2554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Stream</type>
+          </param>
+          <param>
+            <type>auto...</type>
+            <declname>args</declname>
+            <defname>args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto&amp; operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;os, seg&lt; args... &gt; const &amp;sg)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="structseg" kindref="compound">seg</ref>&lt; args... &gt; const &amp;</type>
+          <declname>sg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="58" column="1" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="58" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="segment__tree_8hpp_1aee065d5582449ca9f96b80c630882b7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T1</type>
+          </param>
+          <param>
+            <type>typename T2</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto up_inv</definition>
+        <argsstring>(const T1 &amp;s, const T2 &amp;i)</argsstring>
+        <name>up_inv</name>
+        <param>
+          <type>const T1 &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const T2 &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="96" column="20" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto&amp; gl</definition>
+        <argsstring>(const T &amp;ptr)</argsstring>
+        <name>gl</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="115" column="18" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto&amp; gr</definition>
+        <argsstring>(const T &amp;ptr)</argsstring>
+        <name>gr</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="116" column="18" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="segment__tree_8hpp_1acb311db76dac96d5345a6f25d934898d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structno__impl" kindref="compound">no_impl</ref>&lt; T &gt;</type>
+        <definition>no_impl&lt;T&gt; gl</definition>
+        <argsstring>(no_impl&lt; T &gt; const &amp;x)</argsstring>
+        <name>gl</name>
+        <param>
+          <type><ref refid="structno__impl" kindref="compound">no_impl</ref>&lt; T &gt; const &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="126" column="24" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="segment__tree_8hpp_1a7887b5dfaf56f18b18402b32f600659b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structno__impl" kindref="compound">no_impl</ref>&lt; T &gt;</type>
+        <definition>no_impl&lt;T&gt; gr</definition>
+        <argsstring>(no_impl&lt; T &gt; const &amp;x)</argsstring>
+        <name>gr</name>
+        <param>
+          <type><ref refid="structno__impl" kindref="compound">no_impl</ref>&lt; T &gt; const &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="127" column="24" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="segment__tree_8hpp_1a79eb3560607dcadc86816675cb88146e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto identity</definition>
+        <argsstring>(mymax)</argsstring>
+        <name>identity</name>
+        <param>
+          <type><ref refid="structmymax" kindref="compound">mymax</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/segment_tree.hpp" line="220" column="6" bodyfile="/home/ram/OmniTemplate/segment_tree.hpp" bodystart="220" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_8hpp" kindref="compound">core.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="structseg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;auto<sp/>op,<sp/>lli<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">_<sp/>=<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">entity(op)&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structseg" kindref="compound">seg</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref><sp/>=<sp/><ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(<ref refid="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" kindref="member">identity</ref>(op));</highlight></codeline>
+<codeline lineno="5" refid="structseg_1ad581224128223063bf41930f7d1143f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>id_;</highlight></codeline>
+<codeline lineno="6" refid="structseg_1aec39c86816f724381919a788bb6e899e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="7" refid="structseg_1ae151eed87c688785b0071279a82f0a59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vc&lt;T&gt;<sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>,<sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Cont&gt;</highlight></codeline>
+<codeline lineno="9" refid="structseg_1a71b2f9f35c3edacf1a431f8ab6b1b952" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structseg_1a71b2f9f35c3edacf1a431f8ab6b1b952" kindref="member">seg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>)<sp/>:<sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>(<ref refid="utility_8hpp_1a02462a4216b54e8116b62f164ac15368" kindref="member">nx2</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>.size())),<sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>(2<sp/>*<sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>,<sp/><ref refid="structid" kindref="compound">id</ref>),<sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>(2<sp/>*<sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy(<ref refid="core_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>),<sp/>begin(<ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>)<sp/>+<sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>:<sp/><ref refid="range_8hpp_1af05d016fe174cf99a33f4ddac30c9b05" kindref="member">rev</ref>(<ref refid="structrange" kindref="compound">ra</ref>{<ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>}))<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(i);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[i]<sp/>=<sp/>op(<ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[2<sp/>*<sp/>i],<sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[2<sp/>*<sp/>i<sp/>+<sp/>1]);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16" refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref><sp/>=<sp/>-1LL;</highlight></codeline>
+<codeline lineno="17" refid="structseg_1abe9e9d5eca61fc8414635dd7f6c2cce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg_1abe9e9d5eca61fc8414635dd7f6c2cce3" kindref="member">fix</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;r,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>nl,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;nr)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r<sp/>==<sp/><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/>l<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nr<sp/>==<sp/><ref refid="structseg_1aee612dceef417b2d76fcf2cf2a560852" kindref="member">def</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nr<sp/>=<sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_tuple((nl<sp/>+<sp/>nr)<sp/>/<sp/>2,<sp/>r<sp/>&lt;=<sp/>nl<sp/>||<sp/>nr<sp/>&lt;=<sp/>l,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>&lt;=<sp/>nl<sp/>&amp;&amp;<sp/>nr<sp/>&lt;=<sp/>r);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27" refid="structseg_1a47c33b5e0170ed5349eb68520ee245c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg_1a47c33b5e0170ed5349eb68520ee245c6" kindref="member">down</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[i]<sp/>+=<sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>[i];</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&lt;<sp/><ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>2)<sp/>{<sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>[2<sp/>*<sp/>i<sp/>+<sp/>j]<sp/>+=<sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>[i];<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sig<sp/>ll<sp/>l,<sp/>df(r,<sp/>def),<sp/>df(i,<sp/>1LL),<sp/>df(nl,<sp/>0LL),<sp/>df(nr,<sp/>def)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structseg_1a2eeb3a79f56b3825b357682187ae61b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref><sp/><ref refid="structseg_1a2eeb3a79f56b3825b357682187ae61b9" kindref="member">gt</ref>(<ref refid="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" kindref="member">sig</ref>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[m,<sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" kindref="member">dis</ref>,<sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" kindref="member">over</ref>]<sp/>=<sp/><ref refid="structseg_1abe9e9d5eca61fc8414635dd7f6c2cce3" kindref="member">fix</ref>(l,<sp/>r,<sp/>nl,<sp/>nr);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1a47c33b5e0170ed5349eb68520ee245c6" kindref="member">down</ref>(i);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" kindref="member">dis</ref><sp/>?<sp/><ref refid="structseg_1ad581224128223063bf41930f7d1143f7" kindref="member">id</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" kindref="member">over</ref><sp/>?<sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[i]</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>op(<ref refid="structseg_1a2eeb3a79f56b3825b357682187ae61b9" kindref="member">gt</ref>(l,<sp/>r,<sp/>2<sp/>*<sp/>i,<sp/>nl,<sp/>m),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1a2eeb3a79f56b3825b357682187ae61b9" kindref="member">gt</ref>(l,<sp/>r,<sp/>2<sp/>*<sp/>i<sp/>+<sp/>1,<sp/>m,<sp/>nr));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43" refid="structseg_1a0a0354d9f2ef32bd1f87c46de283c67b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg_1a0a0354d9f2ef32bd1f87c46de283c67b" kindref="member">up</ref>(<ref refid="structseg_1ac4dfdbae549be2afbd65fb4ba79c71df" kindref="member">T</ref><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>,<sp/><ref refid="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" kindref="member">sig</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[m,<sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" kindref="member">dis</ref>,<sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" kindref="member">over</ref>]<sp/>=<sp/><ref refid="structseg_1abe9e9d5eca61fc8414635dd7f6c2cce3" kindref="member">fix</ref>(l,<sp/>r,<sp/>nl,<sp/>nr);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" kindref="member">dis</ref><sp/>||<sp/><ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" kindref="member">over</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" kindref="member">over</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1ae151eed87c688785b0071279a82f0a59" kindref="member">z</ref>[i]<sp/>+=<sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1a47c33b5e0170ed5349eb68520ee245c6" kindref="member">down</ref>(i);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1a0a0354d9f2ef32bd1f87c46de283c67b" kindref="member">up</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>,<sp/>l,<sp/>r,<sp/>2<sp/>*<sp/>i,<sp/>nl,<sp/>m);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1a0a0354d9f2ef32bd1f87c46de283c67b" kindref="member">up</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>,<sp/>l,<sp/>r,<sp/>2<sp/>*<sp/>i<sp/>+<sp/>1,<sp/>m,<sp/>nr);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[i]<sp/>=<sp/>op(<ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[2<sp/>*<sp/>i],<sp/><ref refid="structseg_1aad9da220752b136fa737498955050354" kindref="member">a</ref>[2<sp/>*<sp/>i<sp/>+<sp/>1]);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">...<sp/>args&gt;</highlight></codeline>
+<codeline lineno="58" refid="segment__tree_8hpp_1a5725dc99f2c2e7ba7ab0c73860df2554" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="segment__tree_8hpp_1a5725dc99f2c2e7ba7ab0c73860df2554" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structseg" kindref="compound">seg&lt;args...&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;sg)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;seg{vl{&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>sg.<ref refid="structseg_1aec39c86816f724381919a788bb6e899e" kindref="member">n</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="core_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" kindref="member">delim</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>sg.<ref refid="structseg_1a2eeb3a79f56b3825b357682187ae61b9" kindref="member">gt</ref>(i);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68" refid="structlazy__ptr" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structlazy__ptr" kindref="compound">lazy_ptr</ref><sp/>{</highlight></codeline>
+<codeline lineno="69" refid="structlazy__ptr_1a4cfd0fda110740dadc3bbe91d58bc290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>T<sp/>*<ref refid="structlazy__ptr_1a4cfd0fda110740dadc3bbe91d58bc290" kindref="member">ptr</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structlazy__ptr_1a23198f24df77a8c13e4e505161c7b731" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structlazy__ptr_1a23198f24df77a8c13e4e505161c7b731" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ptr)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>T{};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76" refid="structlazy__ptr_1a8067d4abb926381d2112c94e38f23f47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlazy__ptr_1a8067d4abb926381d2112c94e38f23f47" kindref="member">lazy_ptr</ref>()<sp/>:<sp/>ptr{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">}<sp/>{}</highlight></codeline>
+<codeline lineno="77" refid="structlazy__ptr_1aa656ca4583a15e622f958b9b1a31a595" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structlazy__ptr_1aa656ca4583a15e622f958b9b1a31a595" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*(this.operator-&gt;());<sp/>}</highlight></codeline>
+<codeline lineno="78" refid="structlazy__ptr_1abb09deaf76afd329d3c1028305ee271d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80" refid="structpers__ptr" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structpers__ptr" kindref="compound">pers_ptr</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="structpers__ptr_1a09c40afa9040c7e8bd07b993e7052ae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>T<sp/>*<ref refid="structpers__ptr_1a09c40afa9040c7e8bd07b993e7052ae8" kindref="member">ptr</ref>;</highlight></codeline>
+<codeline lineno="82" refid="structpers__ptr_1a11c0ed5aa0c51c3c737a440c5b03b38a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpers__ptr_1a11c0ed5aa0c51c3c737a440c5b03b38a" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(</highlight><highlight class="stringliteral">&quot;creatin&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>T{*ptr};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(</highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>T{};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92" refid="structpers__ptr_1a73050bc27d498b39a0232f12d611807e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpers__ptr_1a73050bc27d498b39a0232f12d611807e" kindref="member">pers_ptr</ref>()<sp/>:<sp/>ptr{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">}<sp/>{}</highlight></codeline>
+<codeline lineno="93" refid="structpers__ptr_1a831b3935357d59fc6234d7fa91e3b73d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structpers__ptr_1a831b3935357d59fc6234d7fa91e3b73d" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*(this.operator-&gt;());<sp/>}</highlight></codeline>
+<codeline lineno="94" refid="structpers__ptr_1a893fe3ea38d6996721fb9568f5cef0ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96" refid="segment__tree_8hpp_1aee065d5582449ca9f96b80c630882b7a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="segment__tree_8hpp_1aee065d5582449ca9f96b80c630882b7a" kindref="member">up_inv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;i)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>s.v(i).a<sp/>=<sp/>s.op(s.v(<ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(i)).a,<sp/>s.v(<ref refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" kindref="member">gr</ref>(i)).a);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99" refid="structno__v" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structno__v" kindref="compound">no_v</ref><sp/>{</highlight></codeline>
+<codeline lineno="100" refid="structno__v_1afeb623775433d4df7750227067691789" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>a,<sp/><ref refid="structno__v_1afeb623775433d4df7750227067691789" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="101" refid="structno__v_1a16914d5aa1cdd6a92f6524de5767fa1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structno__v_1a16914d5aa1cdd6a92f6524de5767fa1b" kindref="member">no_v</ref>()<sp/>:<sp/>a{},<sp/>z{}<sp/>{};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103" refid="structno__ptr__v" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Ptr&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structno__ptr__v" kindref="compound">no_ptr_v</ref><sp/>{</highlight></codeline>
+<codeline lineno="104" refid="structno__ptr__v_1a3f803abedc29db87949caf402f2bcf62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structno__ptr__v_1a3f803abedc29db87949caf402f2bcf62" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="105" refid="structno__ptr__v_1acb91e0442a70654ff9c188c6ed066312" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ptr&lt;no_ptr_v&gt;<sp/><ref refid="structno__ptr__v_1aa16efb18404e5dd1900a5875cd91fc7d" kindref="member">l_</ref>,<sp/><ref refid="structno__ptr__v_1acb91e0442a70654ff9c188c6ed066312" kindref="member">r_</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structno__ptr__v_1a80e621a9b805617100dbfca48485323b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structno__ptr__v_1a80e621a9b805617100dbfca48485323b" kindref="member">no_ptr_v</ref>()<sp/>:<sp/><ref refid="structno__ptr__v_1a3f803abedc29db87949caf402f2bcf62" kindref="member">v</ref>{},<sp/><ref refid="structno__ptr__v_1aa16efb18404e5dd1900a5875cd91fc7d" kindref="member">l_</ref>{},<sp/><ref refid="structno__ptr__v_1acb91e0442a70654ff9c188c6ed066312" kindref="member">r_</ref>{}<sp/>{}</highlight></codeline>
+<codeline lineno="107" refid="structno__ptr__v_1a432ad9590576bb262d394c36192458c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structno__ptr__v_1a432ad9590576bb262d394c36192458c7" kindref="member">no_ptr_v</ref>(<ref refid="structno__ptr__v" kindref="compound">no_ptr_v</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;oth)<sp/>:<sp/><ref refid="structno__ptr__v_1a3f803abedc29db87949caf402f2bcf62" kindref="member">v</ref>{oth.<ref refid="structno__ptr__v_1a3f803abedc29db87949caf402f2bcf62" kindref="member">v</ref>},<sp/><ref refid="structno__ptr__v_1aa16efb18404e5dd1900a5875cd91fc7d" kindref="member">l_</ref>{},<sp/><ref refid="structno__ptr__v_1acb91e0442a70654ff9c188c6ed066312" kindref="member">r_</ref>{}<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(</highlight><highlight class="stringliteral">&quot;copying,,,&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structno__ptr__v_1aa16efb18404e5dd1900a5875cd91fc7d" kindref="member">l_</ref>.ptr<sp/>=<sp/>oth.l_.ptr;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structno__ptr__v_1acb91e0442a70654ff9c188c6ed066312" kindref="member">r_</ref>.ptr<sp/>=<sp/>oth.r_.ptr;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113" refid="segment__tree_8hpp_1a962063b214f65a5ee40a74f768d237a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structpers__ptr" kindref="compound">mypers</ref><sp/>=<sp/><ref refid="structpers__ptr" kindref="compound">pers_ptr&lt;no_ptr_v&lt;T, pers_ptr&gt;</ref>&gt;;</highlight></codeline>
+<codeline lineno="114" refid="segment__tree_8hpp_1aa4cefbed832d0d4d4cfb40f2341e9a2e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structlazy__ptr" kindref="compound">mylazy</ref><sp/>=<sp/><ref refid="structlazy__ptr" kindref="compound">lazy_ptr&lt;no_ptr_v&lt;T, lazy_ptr&gt;</ref>&gt;;</highlight></codeline>
+<codeline lineno="115" refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;ptr)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;l_;<sp/>}</highlight></codeline>
+<codeline lineno="116" refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" kindref="member">gr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;ptr)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;r_;<sp/>}</highlight></codeline>
+<codeline lineno="117" refid="structseg__base" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structseg__base" kindref="compound">seg_base</ref><sp/>{</highlight></codeline>
+<codeline lineno="118" refid="structseg__base_1ad05224442279f2966fdbfc335ac3fa12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structseg__base_1ad05224442279f2966fdbfc335ac3fa12" kindref="member">v</ref>(T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x-&gt;v;<sp/>}</highlight></codeline>
+<codeline lineno="119" refid="structseg__base_1a01e5b733416c3317cf4772b1562a397d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structseg__base_1a01e5b733416c3317cf4772b1562a397d" kindref="member">ok</ref>(T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="120" refid="structseg__base_1aeee601535b14981decb6c71b1288cfc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structseg__base_1aeee601535b14981decb6c71b1288cfc3" kindref="member">seg_base</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122" refid="structno__impl" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structno__impl" kindref="compound">no_impl</ref><sp/>{</highlight></codeline>
+<codeline lineno="123" refid="structno__impl_1a0f24ce7c9ca9e957e8afc61af333f436" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structno__impl_1a0f24ce7c9ca9e957e8afc61af333f436" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="124" refid="structno__impl_1addb10d5b60a612d078476d1c721bf9af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structno__impl_1addb10d5b60a612d078476d1c721bf9af" kindref="member">no_impl</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>i_<sp/>=<sp/>1)<sp/>:<sp/>i(i_)<sp/>{}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="126" refid="segment__tree_8hpp_1acb311db76dac96d5345a6f25d934898d" refkind="member"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/><ref refid="structno__impl" kindref="compound">no_impl</ref>&lt;T&gt;<sp/><ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(<ref refid="structno__impl" kindref="compound">no_impl</ref>&lt;T&gt;<sp/>const<sp/>&amp;x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref>(x.i)<sp/>&lt;&lt;<sp/><ref refid="structll" kindref="compound">ll</ref>(1);<sp/>}</highlight></codeline>
+<codeline lineno="127" refid="segment__tree_8hpp_1a7887b5dfaf56f18b18402b32f600659b" refkind="member"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/><ref refid="structno__impl" kindref="compound">no_impl</ref>&lt;T&gt;<sp/><ref refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" kindref="member">gr</ref>(<ref refid="structno__impl" kindref="compound">no_impl</ref>&lt;T&gt;<sp/>const<sp/>&amp;x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(x).i<sp/>|<sp/><ref refid="structll" kindref="compound">ll</ref>(1);<sp/>}</highlight></codeline>
+<codeline lineno="128" refid="structseg__base_3_01no__impl_3_01T_01_4_01_4" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structseg__base" kindref="compound">seg_base</ref>&lt;<ref refid="structno__impl" kindref="compound">no_impl</ref>&lt;T&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="129" refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1a2ba58d2c0f5bf9131d5d4e5eea473f3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vc&lt;T&gt;<sp/><ref refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1a2ba58d2c0f5bf9131d5d4e5eea473f3b" kindref="member">v_</ref>;</highlight></codeline>
+<codeline lineno="130" refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1ae01d4305c38ee7d28f71aa0e7be1cb84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1ae01d4305c38ee7d28f71aa0e7be1cb84" kindref="member">v</ref>(<ref refid="structno__impl" kindref="compound">no_impl&lt;T&gt;</ref><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v_[x.<ref refid="structno__impl_1a0f24ce7c9ca9e957e8afc61af333f436" kindref="member">i</ref>];<sp/>}</highlight></codeline>
+<codeline lineno="131" refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1a00c7c5560040884839cf799196cf4d31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1a00c7c5560040884839cf799196cf4d31" kindref="member">ok</ref>(<ref refid="structno__impl" kindref="compound">no_impl&lt;T&gt;</ref><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.<ref refid="structno__impl_1a0f24ce7c9ca9e957e8afc61af333f436" kindref="member">i</ref><sp/>&lt;<sp/>v_.size();<sp/>}</highlight></codeline>
+<codeline lineno="132" refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1a3e2438a2d9c9eace44420cd01c44a446" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structseg__base_3_01no__impl_3_01T_01_4_01_4_1a3e2438a2d9c9eace44420cd01c44a446" kindref="member">seg_base</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>:<sp/>v_(2<sp/>*<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(i,n){</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v(n+i).a<sp/>=<sp/>d[i];</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(auto<sp/>i:rev(ra{n})){</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>up_inv(this,<sp/>dbg(i));</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="142" refid="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" kindref="member">identity</ref>(plus&lt;ll&gt;)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Op<sp/>=<sp/>plus&lt;ll&gt;,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>No_T<sp/>=<sp/><ref refid="segment__tree_8hpp_1a962063b214f65a5ee40a74f768d237a7" kindref="member">mypers</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T<sp/>=<sp/><ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(<ref refid="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" kindref="member">identity</ref>(Op{})),<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>No<sp/>=<sp/>No_T&lt;no_v&lt;T&gt;&gt;&gt;</highlight></codeline>
+<codeline lineno="145" refid="structseg2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structseg2" kindref="compound">seg2</ref><sp/>:<sp/><ref refid="structseg__base" kindref="compound">seg_base</ref>&lt;No&gt;<sp/>{</highlight></codeline>
+<codeline lineno="146" refid="structseg2_1a95e4432be7b55a0e088994978e6437a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Op<sp/><ref refid="structseg2_1a95e4432be7b55a0e088994978e6437a1" kindref="member">op</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structseg2_1a17a1d478c854b167aaca8d33283e7082" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structseg2_1a17a1d478c854b167aaca8d33283e7082" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="148" refid="structseg2_1a86d3b7930178a162f1fd32ca5dfe509f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a86d3b7930178a162f1fd32ca5dfe509f" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="149" refid="structseg2_1a5583f10d50c68678e881587dd9116aaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>No<sp/><ref refid="structseg2_1a5583f10d50c68678e881587dd9116aaf" kindref="member">ro</ref>;</highlight></codeline>
+<codeline lineno="150" refid="structseg2_1ae12c89dbd56719d18ecdf387fa7352b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vc&lt;No&gt;<sp/><ref refid="structseg2_1ae12c89dbd56719d18ecdf387fa7352b7" kindref="member">h</ref>;</highlight></codeline>
+<codeline lineno="151" refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>v<sp/>this.v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="structseg2_1aa4a805dbfc4482dcb84d65bbc2c0da91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structseg2_1aa4a805dbfc4482dcb84d65bbc2c0da91" kindref="member">seg2</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n_)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structseg__base" kindref="compound">seg_base</ref>&lt;No&gt;(<ref refid="utility_8hpp_1a02462a4216b54e8116b62f164ac15368" kindref="member">nx2</ref>(n_),<sp/>0LL),<sp/><ref refid="structseg2_1a86d3b7930178a162f1fd32ca5dfe509f" kindref="member">n</ref>{<ref refid="utility_8hpp_1a02462a4216b54e8116b62f164ac15368" kindref="member">nx2</ref>(n_)},<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">{<ref refid="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" kindref="member">identity</ref>(<ref refid="structseg2_1a95e4432be7b55a0e088994978e6437a1" kindref="member">op</ref>)},<sp/><ref refid="structseg2_1a5583f10d50c68678e881587dd9116aaf" kindref="member">ro</ref>{}<sp/>{}</highlight></codeline>
+<codeline lineno="154" refid="structseg2_1a79d45741dfbd3393b16a1a2529d59bf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a79d45741dfbd3393b16a1a2529d59bf7" kindref="member">def</ref><sp/>=<sp/>-1LL;</highlight></codeline>
+<codeline lineno="155" refid="structseg2_1a77a3a7274fdb739fc52b4215e45f5735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref>,<sp/><ref refid="structseg2_1a77a3a7274fdb739fc52b4215e45f5735" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="156" refid="structseg2_1a58ad2a794b63e208c386987ba7e0ac9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a58ad2a794b63e208c386987ba7e0ac9d" kindref="member">mid</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>nl,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>nr)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref>(nl<sp/>+<sp/>nr)<sp/>&gt;&gt;<sp/><ref refid="structll" kindref="compound">ll</ref>(1);<sp/>}</highlight></codeline>
+<codeline lineno="157" refid="structseg2_1afdf227899a92d38834ddc9caa6de2c2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1afdf227899a92d38834ddc9caa6de2c2f" kindref="member">dis</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>nl,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>nr)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a77a3a7274fdb739fc52b4215e45f5735" kindref="member">r</ref><sp/>&lt;=<sp/>nl<sp/>||<sp/>nr<sp/>&lt;=<sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="158" refid="structseg2_1afbcc6d580ba32864d8a170fdf360dadd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1afbcc6d580ba32864d8a170fdf360dadd" kindref="member">over</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>nl,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>nr)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref><sp/>&lt;=<sp/>nl<sp/>&amp;&amp;<sp/>nr<sp/>&lt;=<sp/><ref refid="structseg2_1a77a3a7274fdb739fc52b4215e45f5735" kindref="member">r</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="159" refid="structseg2_1a33fb24e03fa2b90f3dabac5c485b7b01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a33fb24e03fa2b90f3dabac5c485b7b01" kindref="member">down</ref>(No<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;i,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>d)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).a<sp/>+=<sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).z;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for(auto<sp/>x:<sp/>initializer_list&lt;reference_wrapper&lt;No&gt;&gt;{gl(i),<sp/>gr(i)}){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>do_lazy(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(d)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v(x).a<sp/>+=<sp/>v(i).z;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1af1f6f68ae3982192886e37d50ba0d9e2" kindref="member">do_lazy</ref>(<ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(i));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1af1f6f68ae3982192886e37d50ba0d9e2" kindref="member">do_lazy</ref>(<ref refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" kindref="member">gr</ref>(i));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170" refid="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sig<sp/>No<sp/>const<sp/>&amp;i,<sp/>ll<sp/>nl,<sp/>ll<sp/>nr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="structseg2_1a7ef694069f72f00e87d404ad533ad30c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structseg2_1a7ef694069f72f00e87d404ad533ad30c" kindref="member">gt</ref>(<ref refid="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" kindref="member">sig</ref>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(nl);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(nr);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).a);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m<sp/>=<sp/><ref refid="structseg2_1a58ad2a794b63e208c386987ba7e0ac9d" kindref="member">mid</ref>(nl,<sp/>nr);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1a33fb24e03fa2b90f3dabac5c485b7b01" kindref="member">down</ref>(i,<sp/>nr<sp/>-<sp/>nl<sp/>!=<sp/>1);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structseg2_1afdf227899a92d38834ddc9caa6de2c2f" kindref="member">dis</ref>(nl,<sp/>nr)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/><ref refid="structseg2_1a17a1d478c854b167aaca8d33283e7082" kindref="member">id</ref></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structseg2_1afbcc6d580ba32864d8a170fdf360dadd" kindref="member">over</ref>(nl,<sp/>nr)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).a</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structseg2_1a95e4432be7b55a0e088994978e6437a1" kindref="member">op</ref>(<ref refid="structseg2_1a7ef694069f72f00e87d404ad533ad30c" kindref="member">gt</ref>(<ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(i),<sp/>nl,<sp/>m),<sp/><ref refid="structseg2_1a7ef694069f72f00e87d404ad533ad30c" kindref="member">gt</ref>(<ref refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" kindref="member">gr</ref>(i),<sp/>m,<sp/>nr));</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183" refid="structseg2_1a2c72a97ed68c2e590b00ed1d48444c43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a2c72a97ed68c2e590b00ed1d48444c43" kindref="member">gt</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l_,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r_)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref><sp/>=<sp/>l_;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1a77a3a7274fdb739fc52b4215e45f5735" kindref="member">r</ref><sp/>=<sp/>r_;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a7ef694069f72f00e87d404ad533ad30c" kindref="member">gt</ref>(<ref refid="structseg2_1a5583f10d50c68678e881587dd9116aaf" kindref="member">ro</ref>,<sp/>0,<sp/><ref refid="structseg2_1a86d3b7930178a162f1fd32ca5dfe509f" kindref="member">n</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188" refid="structseg2_1ab3e8846e557fb6fbf36396bcf5a74f41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1ab3e8846e557fb6fbf36396bcf5a74f41" kindref="member">gt</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structseg2_1ab3e8846e557fb6fbf36396bcf5a74f41" kindref="member">gt</ref>(<ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref>,<sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref><sp/>+<sp/>1);<sp/>}</highlight></codeline>
+<codeline lineno="189" refid="structseg2_1ae857420dbe326c5a67bb5a4e95c0e884" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1ae857420dbe326c5a67bb5a4e95c0e884" kindref="member">up</ref>(T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;val,<sp/><ref refid="segment__tree_8hpp_1adff0a7b40e9b24ea63a29da40e60da96" kindref="member">sig</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dbg(i.i);dbg(val);dbg(nl);dbg(nr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cerr&lt;&lt;i.i&lt;&lt;&quot;<sp/>&quot;&lt;&lt;val&lt;&lt;&quot;<sp/>&quot;&lt;&lt;nl&lt;&lt;&quot;<sp/>&quot;&lt;&lt;nr&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m<sp/>=<sp/><ref refid="structseg2_1a58ad2a794b63e208c386987ba7e0ac9d" kindref="member">mid</ref>(nl,<sp/>nr);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structseg2_1afbcc6d580ba32864d8a170fdf360dadd" kindref="member">over</ref>(nl,<sp/>nr))<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(nl);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(nr);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>(i).z<sp/>+=<sp/>val;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1a33fb24e03fa2b90f3dabac5c485b7b01" kindref="member">down</ref>(i,<sp/>nr<sp/>-<sp/>nl<sp/>!=<sp/>1);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structseg2_1afdf227899a92d38834ddc9caa6de2c2f" kindref="member">dis</ref>(nl,<sp/>nr)<sp/>||<sp/><ref refid="structseg2_1afbcc6d580ba32864d8a170fdf360dadd" kindref="member">over</ref>(nl,<sp/>nr))<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(</highlight><highlight class="stringliteral">&quot;recursing...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1ae857420dbe326c5a67bb5a4e95c0e884" kindref="member">up</ref>(val,<sp/><ref refid="segment__tree_8hpp_1ae93006ee49e9655fd20f39aaf5743581" kindref="member">gl</ref>(i),<sp/>nl,<sp/>m);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1ae857420dbe326c5a67bb5a4e95c0e884" kindref="member">up</ref>(val,<sp/><ref refid="segment__tree_8hpp_1a2747683868ad04194c67440ba2aea330" kindref="member">gr</ref>(i),<sp/>m,<sp/>nr);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1aee065d5582449ca9f96b80c630882b7a" kindref="member">up_inv</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cerr&lt;&lt;&quot;exiting:<sp/>&quot;&lt;&lt;i.i&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208" refid="structseg2_1a63ce6762943493718ad2fb6796ce2458" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a63ce6762943493718ad2fb6796ce2458" kindref="member">up</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;val,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>l_,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r_)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref><sp/>=<sp/>l_;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1a77a3a7274fdb739fc52b4215e45f5735" kindref="member">r</ref><sp/>=<sp/>r_;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1ae12c89dbd56719d18ecdf387fa7352b7" kindref="member">h</ref>.pb(<ref refid="structseg2_1a5583f10d50c68678e881587dd9116aaf" kindref="member">ro</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structseg2_1ae857420dbe326c5a67bb5a4e95c0e884" kindref="member">up</ref>(val,<sp/><ref refid="structseg2_1a5583f10d50c68678e881587dd9116aaf" kindref="member">ro</ref>,<sp/>0,<sp/><ref refid="structseg2_1a86d3b7930178a162f1fd32ca5dfe509f" kindref="member">n</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214" refid="structseg2_1a8fce86584ae8e479f89b2f94b65d38cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structseg2_1a8fce86584ae8e479f89b2f94b65d38cd" kindref="member">up</ref>(T<sp/>val,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref>)<sp/>{<sp/><ref refid="structseg2_1a8fce86584ae8e479f89b2f94b65d38cd" kindref="member">up</ref>(val,<sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref>,<sp/><ref refid="structseg2_1addbfd656c176994b7019ed2990bc5b03" kindref="member">l</ref><sp/>+<sp/>1);<sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>v</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="structmymax" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmymax" kindref="compound">mymax</ref><sp/>{</highlight></codeline>
+<codeline lineno="218" refid="structmymax_1a152e4b3221f69d5ecead46cda55fb2bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structmymax_1a152e4b3221f69d5ecead46cda55fb2bf" kindref="member">operator()</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max(x,<sp/>y);<sp/>};</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="220" refid="segment__tree_8hpp_1a79eb3560607dcadc86816675cb88146e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="segment__tree_8hpp_1aea41afc9d2c06ef4ab4b3b44a683ccb4" kindref="member">identity</ref>(<ref refid="structmymax" kindref="compound">mymax</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="core_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>;<sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ram/OmniTemplate/segment_tree.hpp"/>
+  </compounddef>
+</doxygen>

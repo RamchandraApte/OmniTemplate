@@ -1,0 +1,229 @@
+\hypertarget{geometry_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/geometry.hpp File Reference}
+\label{geometry_8hpp}\index{/home/ram/OmniTemplate/geometry.hpp@{/home/ram/OmniTemplate/geometry.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+Include dependency graph for geometry.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{geometry_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcht}{cht}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445}{std\+::operator$<$}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&b)
+\item 
+auto \mbox{\hyperlink{geometry_8hpp_a3a11abcc4197ec78b28351e3eed5be89}{dot}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&b)
+\item 
+void \mbox{\hyperlink{geometry_8hpp_a08748b8a2389649d041e6c8ff9d28ba0}{test\+\_\+dot}} ()
+\item 
+auto \mbox{\hyperlink{geometry_8hpp_a39bd99d30f0161c6653cc30527741cef}{wedge}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&b)
+\item 
+void \mbox{\hyperlink{geometry_8hpp_a51b282424a806deac8ebd597aa601232}{test\+\_\+wedge}} ()
+\item 
+auto \mbox{\hyperlink{geometry_8hpp_af97237cbfd8361bffc2d971fd75b4c51}{area}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} b, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} c)
+\item 
+auto \mbox{\hyperlink{geometry_8hpp_a701ea24ac7922f0e0f6e73ffa4d09a51}{ccw}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} b, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} c)
+\item 
+{\footnotesize template$<$typename Cont $>$ }\\auto \mbox{\hyperlink{geometry_8hpp_a0b6c2daaffdebeec1ac633cff83d9594}{hull}} (Cont \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
+\item 
+{\footnotesize template$<$typename Range , typename Func $>$ }\\auto \mbox{\hyperlink{geometry_8hpp_a3e644172c556a84fa2c65aa39e99cea5}{convex\+\_\+min}} (const Range \&r, const Func \&f)
+\item 
+void \mbox{\hyperlink{geometry_8hpp_a847291628b61b00d0bc261bb22adf447}{test\+\_\+geometry}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{geometry_8hpp_af97237cbfd8361bffc2d971fd75b4c51}\label{geometry_8hpp_af97237cbfd8361bffc2d971fd75b4c51}} 
+\index{geometry.hpp@{geometry.hpp}!area@{area}}
+\index{area@{area}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily auto area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}}}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}}}]{b,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}}}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{geometry_8hpp_af97237cbfd8361bffc2d971fd75b4c51_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{geometry_8hpp_af97237cbfd8361bffc2d971fd75b4c51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a701ea24ac7922f0e0f6e73ffa4d09a51}\label{geometry_8hpp_a701ea24ac7922f0e0f6e73ffa4d09a51}} 
+\index{geometry.hpp@{geometry.hpp}!ccw@{ccw}}
+\index{ccw@{ccw}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{ccw()}{ccw()}}
+{\footnotesize\ttfamily auto ccw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}}}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}}}]{b,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}}}]{c }\end{DoxyParamCaption})}
+
+Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwiseHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{geometry_8hpp_a701ea24ac7922f0e0f6e73ffa4d09a51_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{geometry_8hpp_a701ea24ac7922f0e0f6e73ffa4d09a51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a3e644172c556a84fa2c65aa39e99cea5}\label{geometry_8hpp_a3e644172c556a84fa2c65aa39e99cea5}} 
+\index{geometry.hpp@{geometry.hpp}!convex\_min@{convex\_min}}
+\index{convex\_min@{convex\_min}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{convex\_min()}{convex\_min()}}
+{\footnotesize\ttfamily template$<$typename Range , typename Func $>$ \\
+auto convex\+\_\+min (\begin{DoxyParamCaption}\item[{const Range \&}]{r,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
+
+Returns the minimum of a convex function f over a Range r.Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{geometry_8hpp_a3e644172c556a84fa2c65aa39e99cea5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a3a11abcc4197ec78b28351e3eed5be89}\label{geometry_8hpp_a3a11abcc4197ec78b28351e3eed5be89}} 
+\index{geometry.hpp@{geometry.hpp}!dot@{dot}}
+\index{dot@{dot}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily auto dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{b }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a3a11abcc4197ec78b28351e3eed5be89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a0b6c2daaffdebeec1ac633cff83d9594}\label{geometry_8hpp_a0b6c2daaffdebeec1ac633cff83d9594}} 
+\index{geometry.hpp@{geometry.hpp}!hull@{hull}}
+\index{hull@{hull}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{hull()}{hull()}}
+{\footnotesize\ttfamily template$<$typename Cont $>$ \\
+auto hull (\begin{DoxyParamCaption}\item[{Cont \&}]{v,  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(true)$>$}]{do\+\_\+sort = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Returns the convex hull of the points in vHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a0b6c2daaffdebeec1ac633cff83d9594_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{geometry_8hpp_a0b6c2daaffdebeec1ac633cff83d9594_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445}\label{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445}} 
+\index{geometry.hpp@{geometry.hpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily auto std\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{b }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a08748b8a2389649d041e6c8ff9d28ba0}\label{geometry_8hpp_a08748b8a2389649d041e6c8ff9d28ba0}} 
+\index{geometry.hpp@{geometry.hpp}!test\_dot@{test\_dot}}
+\index{test\_dot@{test\_dot}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_dot()}{test\_dot()}}
+{\footnotesize\ttfamily void test\+\_\+dot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{geometry_8hpp_a08748b8a2389649d041e6c8ff9d28ba0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a08748b8a2389649d041e6c8ff9d28ba0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a847291628b61b00d0bc261bb22adf447}\label{geometry_8hpp_a847291628b61b00d0bc261bb22adf447}} 
+\index{geometry.hpp@{geometry.hpp}!test\_geometry@{test\_geometry}}
+\index{test\_geometry@{test\_geometry}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_geometry()}{test\_geometry()}}
+{\footnotesize\ttfamily void test\+\_\+geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a847291628b61b00d0bc261bb22adf447_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{geometry_8hpp_a847291628b61b00d0bc261bb22adf447_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a51b282424a806deac8ebd597aa601232}\label{geometry_8hpp_a51b282424a806deac8ebd597aa601232}} 
+\index{geometry.hpp@{geometry.hpp}!test\_wedge@{test\_wedge}}
+\index{test\_wedge@{test\_wedge}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_wedge()}{test\_wedge()}}
+{\footnotesize\ttfamily void test\+\_\+wedge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{geometry_8hpp_a51b282424a806deac8ebd597aa601232_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a51b282424a806deac8ebd597aa601232_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a39bd99d30f0161c6653cc30527741cef}\label{geometry_8hpp_a39bd99d30f0161c6653cc30527741cef}} 
+\index{geometry.hpp@{geometry.hpp}!wedge@{wedge}}
+\index{wedge@{wedge}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{wedge()}{wedge()}}
+{\footnotesize\ttfamily auto wedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{b }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a39bd99d30f0161c6653cc30527741cef_icgraph}
+\end{center}
+\end{figure}

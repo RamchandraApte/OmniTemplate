@@ -1,0 +1,405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="linear__algebra_8hpp" kind="file" language="C++">
+    <compoundname>linear_algebra.hpp</compoundname>
+    <includes refid="core_8hpp" local="yes">core.hpp</includes>
+    <includedby refid="graph__theory_8hpp" local="yes">/home/ram/OmniTemplate/graph_theory.hpp</includedby>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/template.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/linear_algebra.hpp</label>
+        <link refid="linear__algebra_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bits/stdc++.h</label>
+      </node>
+      <node id="6">
+        <label>my_int.hpp</label>
+        <link refid="my__int_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="4">
+        <label>experimental/iterator</label>
+      </node>
+      <node id="11">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/linear_algebra.hpp</label>
+        <link refid="linear__algebra_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/graph_theory.hpp</label>
+        <link refid="graph__theory_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/2sat.hpp</label>
+        <link refid="2sat_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmat" prot="public">mat</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="linear__algebra_8hpp_1a869262492de32bc50ba1ae957607d69b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto operator*</definition>
+        <argsstring>(mat&lt; T... &gt; const &amp;a, mat&lt; T... &gt; const &amp;b)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T... &gt; const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T... &gt; const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns the matrix product of a and b</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="35" column="21" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="35" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="linear__algebra_8hpp_1a19f0f5824555e4b22a1636e87f97d266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>pair&lt; <ref refid="structmat" kindref="compound">mat</ref>&lt; T &gt; &amp;&amp;, T &gt;</type>
+        <definition>pair&lt;mat&lt;T&gt; &amp;&amp;, T&gt; gauss</definition>
+        <argsstring>(mat&lt; T &gt; b, mat&lt; T &gt; a)</argsstring>
+        <name>gauss</name>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T &gt;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns x such that ax=b and the determinant of a via Gaussian elimination.</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="52" column="18" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="52" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="linear__algebra_8hpp_1a82bf14f941e0f3e3c902ca1ea63b7a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto operator/</definition>
+        <argsstring>(mat&lt; T... &gt; b, mat&lt; T... &gt; a)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T... &gt;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T... &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="80" column="21" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T det</definition>
+        <argsstring>(const mat&lt; T &gt; &amp;a)</argsstring>
+        <name>det</name>
+        <param>
+          <type>const <ref refid="structmat" kindref="compound">mat</ref>&lt; T &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns the determinant of matrix a</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="81" column="15" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="linear__algebra_8hpp_1a9f304d5517398e00f1ba9c13317c07b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Stream</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto&amp; operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;os, mat&lt; T... &gt; const &amp;m)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="structmat" kindref="compound">mat</ref>&lt; T... &gt; const &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="86" column="1" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="86" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="linear__algebra_8hpp_1ae3cd3eded530a14682cf9a4ca4d17f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto lin_recur</definition>
+        <argsstring>(vector&lt; T &gt; const &amp;c, ll n)</argsstring>
+        <name>lin_recur</name>
+        <param>
+          <type>vector&lt; T &gt; const &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns nth therm of linear recurrence described by c</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="94" column="18" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="linear__algebra_8hpp_1ac334a92cbd04265f52708e07af9487e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_matrix</definition>
+        <argsstring>()</argsstring>
+        <name>test_matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/linear_algebra.hpp" line="101" column="6" bodyfile="/home/ram/OmniTemplate/linear_algebra.hpp" bodystart="101" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_8hpp" kindref="compound">core.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="structmat" refkind="compound"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>()<sp/>struct<sp/><ref refid="structmat" kindref="compound">mat</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="structmat_1aca56f851058aa09cf0460a3969aa6629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref>,<sp/>c;<sp/></highlight></codeline>
+<codeline lineno="6" refid="structmat_1a0c873d2c32fd1b8cc4ad6fe8c6952277" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vc&lt;T&gt;<sp/><ref refid="structmat_1a0c873d2c32fd1b8cc4ad6fe8c6952277" kindref="member">a</ref>;<sp/></highlight></codeline>
+<codeline lineno="7" refid="structmat_1a9ad6e1850cab94280da915e5020dddeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat_1a9ad6e1850cab94280da915e5020dddeb" kindref="member">mat</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>r_,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>c_,<sp/><ref refid="core_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" kindref="member">df</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>,<sp/>0LL))<sp/>:<sp/>r(r_),<sp/>c(c_),<sp/>a(r<sp/>*<sp/>c,<sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(r<sp/>&gt;=<sp/>1<sp/>&amp;&amp;<sp/>c<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10" refid="structmat_1a1d61fff31bc57cc20b0c37a187ebd647" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat_1a1d61fff31bc57cc20b0c37a187ebd647" kindref="member">mat</ref>(T<sp/>d)<sp/>:<sp/>r(1),<sp/>c(1),<sp/>a{d}<sp/>{}</highlight></codeline>
+<codeline lineno="11" refid="structmat_1a776aa197276703b5f9ec5fea2b104602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat_1a776aa197276703b5f9ec5fea2b104602" kindref="member">mat</ref>(<ref refid="core_8hpp_1aff943633016deb6c62a519ffe92c6819" kindref="member">vc</ref>&lt;vc&lt;pr&gt;&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;g)<sp/>:<sp/><ref refid="structmat" kindref="compound">mat</ref>(g.size(),<sp/>g.size(),<sp/><ref refid="core_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/>g[i])<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[x,<sp/>w]<sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[i][x]<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>r)<sp/>{<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[i][i]<sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20" refid="structmat_1a788ed9db3460102dbf99530f5b79de5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat_1a788ed9db3460102dbf99530f5b79de5e" kindref="member">mat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>initializer_list&lt;initializer_list&lt;ll&gt;&gt;<sp/>&amp;vals)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structmat" kindref="compound">mat</ref>(size(vals),<sp/>size(begin(vals)[0]))<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(size(begin(vals)[i])<sp/>==<sp/>c);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>c)<sp/>{<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[i][j]<sp/>=<sp/>begin(begin(vals)[i])[j];<sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27" refid="structmat_1a2e094cc1c8b50b4ff26f6e2f885c9b96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structmat_1a2e094cc1c8b50b4ff26f6e2f885c9b96" kindref="member">operator[]</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T<sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal"><ref refid="structmat" kindref="compound">mat</ref><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">)[i]);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30" refid="structmat_1a3b5d5195a5157bc1fcc0d1df1d702553" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structmat_1a3b5d5195a5157bc1fcc0d1df1d702553" kindref="member">operator[]</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;a[i<sp/>*<sp/>c];<sp/>}</highlight></codeline>
+<codeline lineno="31" refid="structmat_1a5276e05d6558dd927544e92147e26fc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structmat_1a5276e05d6558dd927544e92147e26fc1" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.r<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>this.c<sp/>==<sp/>1<sp/>&amp;&amp;<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[0][0]<sp/>==<sp/>1;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35" refid="linear__algebra_8hpp_1a869262492de32bc50ba1ae957607d69b" refkind="member"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>(...)<sp/>auto<sp/>operator*(<ref refid="structmat" kindref="compound">mat</ref>&lt;T...&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structmat" kindref="compound">mat</ref>&lt;T...&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a.id())<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b.id())<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.c<sp/>==<sp/>b.r);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat" kindref="compound">mat</ref>&lt;T...&gt;<sp/>c{a.r,<sp/>b.c};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>c.r)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>a.c)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(k,<sp/>c.c)<sp/>{<sp/>c[i][k]<sp/>+=<sp/>a[i][j]<sp/>*<sp/>b[j][k];<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52" refid="linear__algebra_8hpp_1a19f0f5824555e4b22a1636e87f97d266" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/>pair&lt;mat&lt;T&gt;<sp/>&amp;&amp;,<sp/>T&gt;<sp/><ref refid="linear__algebra_8hpp_1a19f0f5824555e4b22a1636e87f97d266" kindref="member">gauss</ref>(<ref refid="structmat" kindref="compound">mat&lt;T&gt;</ref><sp/>b,<sp/><ref refid="structmat" kindref="compound">mat&lt;T&gt;</ref><sp/>a)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref><sp/>==<sp/>a.<ref refid="structmat_1abb1c76ee1813be34021752a1d9efa0ec" kindref="member">c</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref><sp/>==<sp/>b.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" kindref="member">det</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>a.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>div<sp/>=<sp/>a[i][i];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" kindref="member">det</ref><sp/>*=<sp/>div;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structar" kindref="compound">ar</ref><sp/>:<sp/>{ref(a),<sp/>ref(b)})<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(k,<sp/><ref refid="structar" kindref="compound">ar</ref>.get().c)<sp/>{<sp/><ref refid="structar" kindref="compound">ar</ref>.get()[i][k]<sp/>/=<sp/>div;<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>a.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j<sp/>==<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mul<sp/>=<sp/>a[j][i];</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structar" kindref="compound">ar</ref><sp/>:<sp/>{ref(a),<sp/>ref(b)})<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(k,<sp/><ref refid="structar" kindref="compound">ar</ref>.get().c)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structar" kindref="compound">ar</ref>.get()[j][k]<sp/>-=<sp/><ref refid="structar" kindref="compound">ar</ref>.get()[i][k]<sp/>*<sp/>mul;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{move(b),<sp/><ref refid="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" kindref="member">det</ref>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80" refid="linear__algebra_8hpp_1a82bf14f941e0f3e3c902ca1ea63b7a2d" refkind="member"><highlight class="normal"><ref refid="debug_8hpp_1ae23bfdc9a034bac8e1c722626e7cc983" kindref="member">tm</ref>(...)<sp/>auto<sp/>operator/(<ref refid="structmat" kindref="compound">mat</ref>&lt;T...&gt;<sp/>b,<sp/><ref refid="structmat" kindref="compound">mat</ref>&lt;T...&gt;<sp/>a)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="linear__algebra_8hpp_1a19f0f5824555e4b22a1636e87f97d266" kindref="member">gauss</ref>(b,<sp/>a).first;<sp/>}</highlight></codeline>
+<codeline lineno="81" refid="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/>T<sp/><ref refid="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" kindref="member">det</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmat" kindref="compound">mat&lt;T&gt;</ref><sp/>&amp;a)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="linear__algebra_8hpp_1a19f0f5824555e4b22a1636e87f97d266" kindref="member">gauss</ref>(<ref refid="structmat" kindref="compound">mat&lt;T&gt;</ref>(a.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref>,<sp/>1),<sp/>a).second;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>T&gt;</highlight></codeline>
+<codeline lineno="86" refid="linear__algebra_8hpp_1a9f304d5517398e00f1ba9c13317c07b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="linear__algebra_8hpp_1a9f304d5517398e00f1ba9c13317c07b8" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structmat" kindref="compound">mat&lt;T...&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;m)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mat{&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>m.<ref refid="structmat_1aca56f851058aa09cf0460a3969aa6629" kindref="member">r</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy(m[i],<sp/>m[i]<sp/>+<sp/>m.<ref refid="structmat_1abb1c76ee1813be34021752a1d9efa0ec" kindref="member">c</ref>,<sp/>make_ostream_joiner(os,<sp/><ref refid="core_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" kindref="member">delim</ref>));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94" refid="linear__algebra_8hpp_1ae3cd3eded530a14682cf9a4ca4d17f51" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="linear__algebra_8hpp_1ae3cd3eded530a14682cf9a4ca4d17f51" kindref="member">lin_recur</ref>(vc&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;c,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat" kindref="compound">mat&lt;T&gt;</ref><sp/>m{size(c),<sp/>size(c)};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>copy(<ref refid="core_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(c),<sp/>m[0]);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>1,<sp/>size(c))<sp/>{<sp/>m[i][i<sp/>-<sp/>1]<sp/>=<sp/>1;<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="modulo_8hpp_1a18e6bf3063c827da07de67653546a850" kindref="member">power</ref>(m,<sp/>n)[0][0];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101" refid="linear__algebra_8hpp_1ac334a92cbd04265f52708e07af9487e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="linear__algebra_8hpp_1ac334a92cbd04265f52708e07af9487e3" kindref="member">test_matrix</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat" kindref="compound">mat&lt;ld&gt;</ref><sp/>a{{2,<sp/>3,<sp/>5},<sp/>{3,<sp/>6,<sp/>10},<sp/>{5,<sp/>9,<sp/>16}};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmat" kindref="compound">mat&lt;ld&gt;</ref><sp/>b{{1,<sp/>2,<sp/>3},<sp/>{4,<sp/>5,<sp/>6},<sp/>{9,<sp/>7,<sp/>8}};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>b<sp/>/<sp/>a;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(x);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(a<sp/>*<sp/>x);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(b);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(<ref refid="linear__algebra_8hpp_1a9bca95617a7712fbff5e543cf1cef977" kindref="member">det</ref>(a));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/ram/OmniTemplate/linear_algebra.hpp"/>
+  </compounddef>
+</doxygen>
