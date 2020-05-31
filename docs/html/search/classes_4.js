@@ -1,2 +1,2 @@
 var searchData =
-    [ [ 'edge_404', [ 'edge', [ '../structedge.html', 1, '' ] ] ] ];
+    [ [ 'edge_406', [ 'edge', [ '../structedge.html', 1, '' ] ] ] ];

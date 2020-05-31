@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'debug_503',
+		'debug_505',
 		[
 			'debug',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'destroy_504',
+		'destroy_506',
 		[
 			'destroy',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'det_505',
+		'det_507',
 		[
 			'det',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'dis_506',
+		'dis_508',
 		[
 			'dis',
 			[
@@ -40,7 +40,7 @@ var searchData = [
 		]
 	],
 	[
-		'dist_507',
+		'dist_509',
 		[
 			'dist',
 			[
@@ -56,7 +56,7 @@ var searchData = [
 		]
 	],
 	[
-		'divisors_508',
+		'divisors_510',
 		[
 			'divisors',
 			[
@@ -66,7 +66,7 @@ var searchData = [
 		]
 	],
 	[
-		'dlog_509',
+		'dlog_511',
 		[
 			'dlog',
 			[
@@ -76,7 +76,7 @@ var searchData = [
 		]
 	],
 	[
-		'dot_510',
+		'dot_512',
 		[
 			'dot',
 			[
@@ -86,7 +86,7 @@ var searchData = [
 		]
 	],
 	[
-		'down_511',
+		'down_513',
 		[
 			'down',
 			[
@@ -104,7 +104,7 @@ var searchData = [
 		]
 	],
 	[
-		'dp_512',
+		'dp_514',
 		[
 			'dp',
 			[
@@ -114,7 +114,7 @@ var searchData = [
 		]
 	],
 	[
-		'dsu_513',
+		'dsu_515',
 		[
 			'dsu',
 			[

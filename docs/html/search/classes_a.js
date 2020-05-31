@@ -1,11 +1,11 @@
 var searchData = [
-	[ 'mat_422', [ 'mat', [ '../structmat.html', 1, '' ] ] ],
-	[ 'md_423', [ 'md', [ '../structmd.html', 1, '' ] ] ],
-	[ 'minqueue_424', [ 'MinQueue', [ '../classMinQueue.html', 1, '' ] ] ],
-	[ 'minstack_425', [ 'MinStack', [ '../classMinStack.html', 1, '' ] ] ],
+	[ 'mat_424', [ 'mat', [ '../structmat.html', 1, '' ] ] ],
+	[ 'md_425', [ 'md', [ '../structmd.html', 1, '' ] ] ],
+	[ 'minqueue_426', [ 'MinQueue', [ '../classMinQueue.html', 1, '' ] ] ],
+	[ 'minstack_427', [ 'MinStack', [ '../classMinStack.html', 1, '' ] ] ],
 	[
-		'minstack_3c_20t_20_3e_426',
+		'minstack_3c_20t_20_3e_428',
 		[ 'MinStack&lt; T &gt;', [ '../classMinStack.html', 1, '' ] ]
 	],
-	[ 'mymax_427', [ 'mymax', [ '../structmymax.html', 1, '' ] ] ]
+	[ 'mymax_429', [ 'mymax', [ '../structmymax.html', 1, '' ] ] ]
 ];

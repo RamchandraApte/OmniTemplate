@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'b_696',
+		'b_701',
 		[
 			'b',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'bg_697',
+		'bg_702',
 		[
 			'bg',
 			[

@@ -30,15 +30,20 @@ auto dist(vector<vector<pr>> g, ll s) {
 	d[s] = 0;
 	fo(i, d.size()) { q.push({d[i], i}); }
 	while (q.size()) {
-		const auto &[di, a] = q.top();
+		const auto [di, a] = q.top();
 		q.pop();
+		dbg(a);
 		if (di != d[a]) {
 			continue;
 		}
 		for (const auto &pb : g[a]) {
+			// TODO Why doesn't the macro pb expand?
 			const auto &[b, w] = pb;
 			auto &x = d[b];
 			auto nw = di + w;
+			dbg(di);
+			dbg(nw);
+			dbg(b);
 			if (nw < x) {
 				pv[b] = a;
 				x = nw;
@@ -52,6 +57,7 @@ auto dist(mat<ll> const &g) {
 	/*! Given a 2D matrix of distances for each edge in g, returns a 2D
 	 * matrix of the shortest distances. We do not consider paths of length
 	 * zero. Algorithm: Floyd-Warshall*/
+	// TODO do we want to consider zero-length paths?
 	assert(g.r == g.c);
 	auto n = g.r;
 	auto d = g;
@@ -71,6 +77,20 @@ void test_dist() {
 	dbg(dist(g));
 	dbg(short_dist);
 	assert(dist(g) == short_dist);
+	const auto n = g.r;
+	vc<vc<pr>> adj(n);
+	fo(i, 0, n) {
+		fo(j, 0, n) { adj[i].pb({j, g[i][j]}); }
+	}
+	fo(s, 0, n) {
+		// TODO test pv
+		const auto dijkstra = dist(adj, s)[0];
+		auto floyd = vl(short_dist[s], short_dist[s] + n);
+		floyd[s] = 0;
+		dbg(dijkstra);
+		dbg(floyd);
+		assert((dijkstra == floyd));
+	}
 }
 auto mst(vector<edge> es) {
 	/*! Returns the minimum spanning tree of the set of edges es, as a set
@@ -210,6 +230,20 @@ auto scc(const vc<vl> &g) {
 	}
 	return cm;
 }
+void test_scc() {
+	vc<vl> g(5);
+	g[0].pb(3);
+	g[3].pb(1);
+	g[1].pb(2);
+	g[2].pb(0);
+	g[0].pb(4);
+	g[2].pb(4);
+	const auto cm = scc(g);
+	vl v{cm[0], cm[1], cm[2], cm[3]};
+	// TODO refactor this into a function
+	assert((all_of(al(v), [&](auto x) { return x == v[0]; })));
+	assert(cm[4] != cm[0]);
+}
 auto bipartite(const vc<vl> &g) {
 	/*! Returns a bipartite coloring if possible */
 	bfs b{g};
@@ -331,4 +365,5 @@ void test_graph_theory() {
 	test_mst();
 	test_bfs();
 	test_bipartite();
+	test_scc();
 }

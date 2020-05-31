@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'perm_605',
+		'perm_607',
 		[
 			'perm',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'pers_5fptr_606',
+		'pers_5fptr_608',
 		[
 			'pers_ptr',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'pop_607',
+		'pop_609',
 		[
 			'pop',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'power_608',
+		'power_610',
 		[
 			'power',
 			[
@@ -40,7 +40,7 @@ var searchData = [
 		]
 	],
 	[
-		'prefix_609',
+		'prefix_611',
 		[
 			'prefix',
 			[
@@ -50,7 +50,7 @@ var searchData = [
 		]
 	],
 	[
-		'prev_5fless_610',
+		'prev_5fless_612',
 		[
 			'prev_less',
 			[
@@ -60,7 +60,7 @@ var searchData = [
 		]
 	],
 	[
-		'prime_611',
+		'prime_613',
 		[
 			'prime',
 			[
@@ -70,7 +70,7 @@ var searchData = [
 		]
 	],
 	[
-		'primitive_5froot_612',
+		'primitive_5froot_614',
 		[
 			'primitive_root',
 			[
@@ -80,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'print_613',
+		'print_615',
 		[
 			'print',
 			[
@@ -90,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'push_614',
+		'push_616',
 		[
 			'push',
 			[

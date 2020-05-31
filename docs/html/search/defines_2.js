@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'co_5fswitch_795',
+		'co_5fswitch_800',
 		[
 			'CO_SWITCH',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'cobegin_796',
+		'cobegin_801',
 		[
 			'cobegin',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'coend_797',
+		'coend_802',
 		[
 			'coend',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'coreturn_798',
+		'coreturn_803',
 		[
 			'coreturn',
 			[

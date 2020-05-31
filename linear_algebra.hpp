@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+// TODO Tensors? Also, matrix_row class.
 tm() struct mat {
 	/*! Matrix class*/
 	ll r, c; //!< Row, column

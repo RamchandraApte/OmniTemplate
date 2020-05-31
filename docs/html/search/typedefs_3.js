@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'default_5frandom_5fdevice_761',
+		'default_5frandom_5fdevice_766',
 		[
 			'default_random_device',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'difference_5ftype_762',
+		'difference_5ftype_767',
 		[
 			'difference_type',
 			[

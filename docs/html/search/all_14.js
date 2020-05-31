@@ -74,17 +74,7 @@ var searchData = [
 		]
 	],
 	[
-		'searcher_289',
-		[
-			'searcher',
-			[
-				'../graph__theory_8hpp.html#a587d93d28f9f4517fa136b09fd721a68',
-				1, 'graph_theory.hpp'
-			]
-		]
-	],
-	[
-		'seg_290',
+		'seg_289',
 		[
 			'seg',
 			[ '../structseg.html', 1, 'seg&lt; op, id_ &gt;' ],
@@ -95,7 +85,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg2_291',
+		'seg2_290',
 		[
 			'seg2',
 			[
@@ -109,7 +99,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_5fbase_292',
+		'seg_5fbase_291',
 		[
 			'seg_base',
 			[ '../structseg__base.html', 1, 'seg_base&lt; T &gt;' ],
@@ -125,7 +115,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_293',
+		'seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_292',
 		[
 			'seg_base&lt; no_impl&lt; T &gt; &gt;',
 			[
@@ -135,11 +125,11 @@ var searchData = [
 		]
 	],
 	[
-		'segment_5ftree_2ehpp_294',
+		'segment_5ftree_2ehpp_293',
 		[ 'segment_tree.hpp', [ '../segment__tree_8hpp.html', 1, '' ] ]
 	],
 	[
-		'side_295',
+		'side_294',
 		[
 			'side',
 			[
@@ -149,7 +139,7 @@ var searchData = [
 		]
 	],
 	[
-		'sieve_296',
+		'sieve_295',
 		[
 			'sieve',
 			[
@@ -159,7 +149,7 @@ var searchData = [
 		]
 	],
 	[
-		'sig_297',
+		'sig_296',
 		[
 			'sig',
 			[
@@ -173,7 +163,7 @@ var searchData = [
 		]
 	],
 	[
-		'simple_5ftp_298',
+		'simple_5ftp_297',
 		[
 			'simple_tp',
 			[
@@ -183,7 +173,7 @@ var searchData = [
 		]
 	],
 	[
-		'size_299',
+		'size_298',
 		[
 			'size',
 			[
@@ -201,11 +191,11 @@ var searchData = [
 		]
 	],
 	[
-		'size_5fdata_300',
+		'size_5fdata_299',
 		[ 'size_data', [ '../structsize__data.html', 1, '' ] ]
 	],
 	[
-		'size_5ftype_301',
+		'size_5ftype_300',
 		[
 			'size_type',
 			[
@@ -219,7 +209,7 @@ var searchData = [
 		]
 	],
 	[
-		'splay_302',
+		'splay_301',
 		[
 			'splay',
 			[
@@ -229,11 +219,11 @@ var searchData = [
 		]
 	],
 	[
-		'splay_5ftree_2ehpp_303',
+		'splay_5ftree_2ehpp_302',
 		[ 'splay_tree.hpp', [ '../splay__tree_8hpp.html', 1, '' ] ]
 	],
 	[
-		'splaytree_304',
+		'splaytree_303',
 		[
 			'SplayTree',
 			[
@@ -247,7 +237,7 @@ var searchData = [
 		]
 	],
 	[
-		'split_305',
+		'split_304',
 		[
 			'split',
 			[
@@ -261,7 +251,7 @@ var searchData = [
 		]
 	],
 	[
-		'split_5fimp_306',
+		'split_5fimp_305',
 		[
 			'split_imp',
 			[
@@ -271,7 +261,7 @@ var searchData = [
 		]
 	],
 	[
-		'st_307',
+		'st_306',
 		[
 			'st',
 			[
@@ -281,11 +271,11 @@ var searchData = [
 		]
 	],
 	[
-		'string_2ehpp_308',
+		'string_2ehpp_307',
 		[ 'string.hpp', [ '../string_8hpp.html', 1, '' ] ]
 	],
 	[
-		'sub_5fset_309',
+		'sub_5fset_308',
 		[
 			'sub_set',
 			[
@@ -295,7 +285,7 @@ var searchData = [
 		]
 	],
 	[
-		'sz_310',
+		'sz_309',
 		[
 			'sz',
 			[

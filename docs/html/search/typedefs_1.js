@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'bin_5fop_755',
+		'bin_5fop_760',
 		[
 			'bin_op',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'bt_756',
+		'bt_761',
 		[
 			'bt',
 			[
