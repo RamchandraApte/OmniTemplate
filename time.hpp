@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace time_tools {
 struct timer {
 	/*! Timer class that return the time between construction and
 	 * destruction */
@@ -24,3 +25,5 @@ template <typename Func> void bench(Func a) {
 	}
 	dbg(ans);
 }
+} // namespace time_tools
+using namespace time_tools;

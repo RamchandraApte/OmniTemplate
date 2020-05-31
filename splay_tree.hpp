@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace splay_tree {
 /*! Implements a splay tree*/
 template <typename T> struct SplayTree {
       public:
@@ -189,3 +190,5 @@ void test_splay_tree() {
 	assert(vec == expected);
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
+} // namespace splay_tree
+using namespace splay_tree;

@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace combinatorics {
 template <typename T> auto perm(T a, T b) {
 	/*!Return \f$P(a,b)\f$, the falling factorial.*/
 	return accumulate(int_it<T>{a + 1 - b}, int_it<T>{a + 1}, T{1},
@@ -42,3 +43,5 @@ void test_combinatorics() {
 	test_fact();
 	test_choose();
 }
+} // namespace combinatorics
+using namespace combinatorics;

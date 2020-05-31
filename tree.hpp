@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace tree {
 ll const sz = 30;
 tm() struct no {
 	vector<no *> p;
@@ -56,3 +57,5 @@ tm() auto lca(no<T> *a, no<T> *b) {
 	assert(a->p[0] == b->p[0]);
 	return a->p[0];
 }
+} // namespace tree
+using namespace tree;

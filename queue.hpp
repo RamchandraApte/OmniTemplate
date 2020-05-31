@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace queue_tools {
 /* Queue adaptor, creates a queue using two Stacks left, right
  * If there are at least two elements, left and right are not empty.
  * If there is one element, it is in left.
@@ -139,3 +140,5 @@ void test_queue() {
 	test_queueadaptor();
 	test_minqueue();
 }
+} // namespace queue_tools
+using namespace queue_tools;

@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace bigint {
 struct bigint {
 	vc<ull> v;
 	explicit bigint(const vc<ull> &v_) : v(v_) {}
@@ -24,3 +25,5 @@ auto operator+(bigint const& a, bigint const& b){
 	return c;
 }
 #endif
+} // namespace bigint
+using namespace bigint;

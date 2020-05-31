@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace utility {
 // TODO templatize this
 struct with {
 	/*! Sets v to new_ temporary while with object is alive */
@@ -153,3 +154,5 @@ void test_utility() {
 	test_nx2();
 	test_map_args();
 }
+} // namespace utility
+using namespace utility;

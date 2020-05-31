@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace persistent {
 struct first_cmp {
 	/*! Compare based on the first member of a variable*/
 	// TODO make a key-based comparision class
@@ -26,3 +27,5 @@ auto &operator<<(Stream &os, pers<T> const &p) {
 	/*! Print the current value of the persistent variable p*/
 	return os << static_cast<T>(p);
 }
+} // namespace persistent
+using namespace persistent;

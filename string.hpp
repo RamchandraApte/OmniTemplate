@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace string_tools {
 struct hash_str {
 	static auto constexpr lcg_mod = (1ULL << 62) - 57;
 	const char *st;
@@ -146,3 +147,5 @@ class trie_node {
 	}
 };
 void test_trie_node() {}
+} // namespace string_tools
+using namespace string_tools;

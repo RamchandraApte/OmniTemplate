@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace modulo {
 template <typename T> T power(T a, size_t b) {
 	/*! Return \f$a^b\f$ */
 	T ret = 1;
@@ -10,6 +11,9 @@ template <typename T> T power(T a, size_t b) {
 	}
 	return ret;
 }
+} // namespace modulo
+using namespace modulo;
+// FIXME add more stuff in modulo namespace
 ll M = 1e9 + 7; //^ Modulus
 struct no_mod {};
 struct md {
@@ -73,4 +77,3 @@ void test_modulo() {
 	test_power();
 	test_md();
 }
-BEGIN_NS

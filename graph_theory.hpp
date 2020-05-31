@@ -2,11 +2,7 @@
 #include "core.hpp"
 #include "dsu.hpp"
 #include "linear_algebra.hpp"
-auto add_edge(vc<vl> &g, ll u, ll v) {
-	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
-	g[u].pb(v);
-	g[v].pb(u);
-}
+// TODO get stuff below into namespace
 struct edge {
 	ll w, a, b;
 	auto to_tuple() const { return tuple{w, a, b}; }
@@ -21,6 +17,12 @@ bool operator==(edge const &a, edge const &b) {
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	/*! Print the edge*/
 	return os << "edge{" << e.a << "-(" << e.w << ")>" << e.b << "}";
+}
+namespace graph_theory {
+auto add_edge(vc<vl> &g, ll u, ll v) {
+	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
+	g[u].pb(v);
+	g[v].pb(u);
 }
 auto dist(vector<vector<pr>> g, ll s) {
 	/*! Given an adjacency-list of a graph, returns the shortest distance to
@@ -367,3 +369,5 @@ void test_graph_theory() {
 	test_bipartite();
 	test_scc();
 }
+} // namespace graph_theory
+using namespace graph_theory;

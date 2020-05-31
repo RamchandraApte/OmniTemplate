@@ -1,6 +1,7 @@
 #pragma once
 #include "core.hpp"
 #include "graph_theory.hpp"
+namespace sat2 {
 optional<vc<char>> sat2(const vc<pr> &v) {
 	/*!
 	Takes a 2 SAT instance and returns a solution.
@@ -48,3 +49,5 @@ void test_sat2() {
 	const auto ret4 = sat2({{1, 2}, {3, 2}, {-1, -1}, {-2, -2}});
 	assert(!ret4);
 }
+} // namespace sat2
+using namespace sat2;

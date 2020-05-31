@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+namespace dsu_ds {
 struct dsu {
 	/*! Disjoint-set data structure */
 	mutable vl p;
@@ -49,3 +50,5 @@ void test_dsu() {
 	fo(i, 99) { d(i, i + 1); }
 	fo(i, 100) { assert(d[i] == d[0]); }
 }
+} // namespace dsu_ds
+using namespace dsu_ds;

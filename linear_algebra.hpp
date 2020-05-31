@@ -1,6 +1,7 @@
 #pragma once
 #include "core.hpp"
 // TODO Tensors? Also, matrix_row class.
+namespace linear_algebra {
 tm() struct mat {
 	/*! Matrix class*/
 	ll r, c; //!< Row, column
@@ -118,3 +119,5 @@ void test_matrix() {
 	dbg(b);
 	dbg(det(a));
 }
+} // namespace linear_algebra
+using namespace linear_algebra;

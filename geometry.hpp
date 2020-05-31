@@ -5,6 +5,7 @@ auto operator<(pt const &a, pt const &b) {
 	return map_args([](auto x) { return tuple{real(x), imag(x)}; })(a, b);
 }
 } // namespace std
+namespace geometry {
 auto dot(pt const &a, pt const &b) { return real(conj(a) * b); }
 void test_dot() {
 	assert((dot({1, 2}, {2, 5}) == 1 * 2 + 2 * 5));
@@ -71,3 +72,5 @@ void test_geometry() {
 	test_dot();
 	test_wedge();
 }
+} // namespace geometry
+using namespace geometry;
