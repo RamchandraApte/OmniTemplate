@@ -1,2 +1,2 @@
 var searchData =
-    [ [ 'queue_2ehpp_509', [ 'queue.hpp', [ '../queue_8hpp.html', 1, '' ] ] ] ];
+    [ [ 'queue_2ehpp_512', [ 'queue.hpp', [ '../queue_8hpp.html', 1, '' ] ] ] ];

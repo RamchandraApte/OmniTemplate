@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'queueadaptor_457',
+		'queueadaptor_460',
 		[
 			'QueueAdaptor',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'queueadaptor_3c_20minstack_3c_20t_20_3e_20_3e_458',
+		'queueadaptor_3c_20minstack_3c_20t_20_3e_20_3e_461',
 		[
 			'QueueAdaptor&lt; MinStack&lt; T &gt; &gt;',
 			[

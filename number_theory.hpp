@@ -81,6 +81,10 @@ auto sieve(ll n) {
 	}
 	return d;
 }
+void test_sieve() {
+	dbg(sieve(11));
+	assert((sieve(11) == vl{0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2}));
+}
 um fac(ll n) {
 	// Returns the factorization of n as a mapping from the prime to the
 	// exponent.
@@ -118,7 +122,20 @@ void test_fac() {
 	assert((fac(49) == um{{7, 2}}));
 }
 void egcd(const ll a, const ll b, ll &x, ll &y) {
+	/*! Sets x and y so that \f$x\cdot a + y\cdot b = \gcd(a,b)\f$*/
 	a ? egcd(b % a, a, y, x), x -= b / a * y : (x = 0, y = 1);
+}
+void test_egcd(ll a, ll b) {
+	ll x, y;
+	egcd(a, b, x, y);
+	assert(x * a + y * b == gcd(a, b));
+}
+void test_egcd() {
+	test_egcd(6, 15);
+	test_egcd(3, 4);
+	test_egcd(6, 6);
+	test_egcd(2, 1);
+	test_egcd(63, 12);
 }
 ll totient(ll n) {
 	auto fact = fac(n);
@@ -131,12 +148,15 @@ void test_totient() {
 	assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 &&
 	       totient(84) == 24 && totient(127) == 126);
 }
-ll dlog(const md a, md b) {
+ll dlog(const md a, const md b) {
 	/* Finds x such that a^x = b (mod M) using baby-step giant-step
 	   algorithm. M must be prime
 	*/
 	assert(prime(M));
 	auto check = [&](ll x) {
+		dbg(a);
+		dbg(x);
+		dbg(b);
 		assert(power(a, x) == b);
 		return x;
 	};
@@ -148,24 +168,27 @@ ll dlog(const md a, md b) {
 		powers[pw] = i;
 		pw *= a_sq;
 	}
+	auto x = b;
 	for (ll cnt = 0;; ++cnt) {
-		if (auto it = powers.find(b); it != end(powers)) {
+		if (auto it = powers.find(x); it != end(powers)) {
 			return check((it->second * sq - cnt) % (M - 1));
 		}
-		b *= a;
+		x *= a;
 	}
 }
 void test_dlog() {
-	auto check = [](ll a2, ll b, ll m) {
+	auto check = [](md a, ll x, ll m) {
 		with _m{m, M};
-		md a{a2};
-		auto x = power(a, b);
+		auto b = power(a, x);
+		dbg(a);
+		dbg(b);
+		dlog(a, b);
 	};
-	check(2, 10, 1025);
-	check(7, 1, 30);
-	check(1, 1, 1);
-	check(23, 47, 153);
-	check(15, 100, 45);
+	check(2, 10, 1031);
+	check(7, 1, 31);
+	check(1, 1, 2);
+	check(23, 47, 157);
+	check(15, 100, 47);
 }
 md primitive_root() {
 	if (M == 1) {
@@ -207,4 +230,6 @@ void test_number_theory() {
 	test_totient();
 	test_dlog();
 	test_primitive_root();
+	test_sieve();
+	test_egcd();
 }

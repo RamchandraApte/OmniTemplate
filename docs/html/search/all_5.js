@@ -199,7 +199,7 @@ var searchData = [
 		[
 			'dlog',
 			[
-				'../number__theory_8hpp.html#a7fe167e7a6ffd6127f342baf3169d9e9',
+				'../number__theory_8hpp.html#a39d0e5b2564df62e404880671eb3211e',
 				1, 'number_theory.hpp'
 			]
 		]

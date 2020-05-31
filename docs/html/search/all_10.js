@@ -764,12 +764,12 @@ var searchData = [
 				'std::operator&lt;&lt;(Stream &amp;os, pair&lt; T... &gt; const &amp;p)'
 			],
 			[
-				'../io_8hpp.html#a1920aa20adebf218cbbdf8bb06a4c351',
+				'../io_8hpp.html#ae20bab070d542e328002339b661fa882',
 				1,
-				'std::operator&lt;&lt;(Stream &amp;os, const Container &amp;v) -&gt; decltype(begin(v), declval&lt; decltype(os)&gt;())'
+				'std::operator&lt;&lt;(Stream &amp;os, const Container &amp;v) -&gt; decltype(begin(v), declval&lt; tp(os)&gt;())'
 			],
 			[
-				'../io_8hpp.html#a26ed2eacd641d0bb463e15dd04d3dd63', 1, 'std::operator&lt;&lt;(rin &amp;os, const T &amp;v) -&gt; decltype(begin(v), declval&lt; decltype(os)&gt;())'
+				'../io_8hpp.html#ae6935fd47565e3c0f597392ae256e165', 1, 'std::operator&lt;&lt;(rin &amp;os, const T &amp;v) -&gt; decltype(begin(v), declval&lt; tp(os)&gt;())'
 			],
 			[
 				'../namespacelinear__algebra.html#abd5c3b8b105df6592284c867a9451dad',

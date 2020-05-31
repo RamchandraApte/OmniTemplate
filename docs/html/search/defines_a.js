@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'opi_860',
+		'opi_865',
 		[
 			'opi',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'ostream_861',
+		'ostream_866',
 		[
 			'ostream',
 			[

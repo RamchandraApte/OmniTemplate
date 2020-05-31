@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'back_525',
+		'back_528',
 		[
 			'back',
 			[
@@ -14,7 +14,7 @@ var searchData = [
 		]
 	],
 	[
-		'begin_526',
+		'begin_529',
 		[
 			'begin',
 			[
@@ -28,7 +28,7 @@ var searchData = [
 		]
 	],
 	[
-		'bench_527',
+		'bench_530',
 		[
 			'bench',
 			[
@@ -38,7 +38,7 @@ var searchData = [
 		]
 	],
 	[
-		'bigint_528',
+		'bigint_531',
 		[
 			'bigint',
 			[
@@ -48,7 +48,7 @@ var searchData = [
 		]
 	],
 	[
-		'bipartite_529',
+		'bipartite_532',
 		[
 			'bipartite',
 			[

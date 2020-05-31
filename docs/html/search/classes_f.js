@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'search_5fit_462',
+		'search_5fit_465',
 		[
 			'search_it',
 			[
@@ -9,14 +9,14 @@ var searchData = [
 			]
 		]
 	],
-	[ 'seg_463', [ 'seg', [ '../structseg.html', 1, '' ] ] ],
-	[ 'seg2_464', [ 'seg2', [ '../structseg2.html', 1, '' ] ] ],
+	[ 'seg_466', [ 'seg', [ '../structseg.html', 1, '' ] ] ],
+	[ 'seg2_467', [ 'seg2', [ '../structseg2.html', 1, '' ] ] ],
 	[
-		'seg_5fbase_465',
+		'seg_5fbase_468',
 		[ 'seg_base', [ '../structseg__base.html', 1, '' ] ]
 	],
 	[
-		'seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_466',
+		'seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_469',
 		[
 			'seg_base&lt; no_impl&lt; T &gt; &gt;',
 			[
@@ -26,11 +26,11 @@ var searchData = [
 		]
 	],
 	[
-		'size_5fdata_467',
+		'size_5fdata_470',
 		[ 'size_data', [ '../structsize__data.html', 1, '' ] ]
 	],
 	[
-		'splaytree_468',
+		'splaytree_471',
 		[
 			'SplayTree',
 			[

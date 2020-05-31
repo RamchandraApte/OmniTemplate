@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'ok_606',
+		'ok_609',
 		[
 			'ok',
 			[
@@ -14,7 +14,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20auto_607',
+		'operator_20auto_610',
 		[
 			'operator auto',
 			[
@@ -32,7 +32,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20auto_20_26_608',
+		'operator_20auto_20_26_611',
 		[
 			'operator auto &amp;',
 			[
@@ -42,7 +42,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20bool_609',
+		'operator_20bool_612',
 		[
 			'operator bool',
 			[
@@ -60,7 +60,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20ll_610',
+		'operator_20ll_613',
 		[
 			'operator ll',
 			[
@@ -70,7 +70,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20lli_611',
+		'operator_20lli_614',
 		[
 			'operator lli',
 			[
@@ -80,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_21_3d_612',
+		'operator_21_3d_615',
 		[
 			'operator!=',
 			[
@@ -90,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_22_22m_613',
+		'operator_22_22m_616',
 		[
 			'operator&quot;&quot;M',
 			[
@@ -100,7 +100,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_25_614',
+		'operator_25_617',
 		[
 			'operator%',
 			[
@@ -142,7 +142,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_26_615',
+		'operator_26_618',
 		[
 			'operator&amp;',
 			[
@@ -199,7 +199,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_28_29_616',
+		'operator_28_29_619',
 		[
 			'operator()',
 			[
@@ -253,7 +253,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2a_617',
+		'operator_2a_620',
 		[
 			'operator*',
 			[
@@ -331,7 +331,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2a_3d_618',
+		'operator_2a_3d_621',
 		[
 			'operator*=',
 			[
@@ -341,7 +341,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2b_619',
+		'operator_2b_622',
 		[
 			'operator+',
 			[
@@ -417,7 +417,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2b_2b_620',
+		'operator_2b_2b_623',
 		[
 			'operator++',
 			[
@@ -448,7 +448,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2b_3d_621',
+		'operator_2b_3d_624',
 		[
 			'operator+=',
 			[
@@ -462,7 +462,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_622',
+		'operator_2d_625',
 		[
 			'operator-',
 			[
@@ -500,7 +500,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_2d_623',
+		'operator_2d_2d_626',
 		[
 			'operator--',
 			[
@@ -523,7 +523,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_3d_624',
+		'operator_2d_3d_627',
 		[
 			'operator-=',
 			[
@@ -533,7 +533,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_3e_625',
+		'operator_2d_3e_628',
 		[
 			'operator-&gt;',
 			[
@@ -547,7 +547,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2f_626',
+		'operator_2f_629',
 		[
 			'operator/',
 			[
@@ -604,7 +604,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2f_3d_627',
+		'operator_2f_3d_630',
 		[
 			'operator/=',
 			[
@@ -614,7 +614,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3c_628',
+		'operator_3c_631',
 		[
 			'operator&lt;',
 			[
@@ -683,7 +683,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3c_3c_629',
+		'operator_3c_3c_632',
 		[
 			'operator&lt;&lt;',
 			[
@@ -723,14 +723,14 @@ var searchData = [
 				'std::operator&lt;&lt;(Stream &amp;os, pair&lt; T... &gt; const &amp;p)'
 			],
 			[
-				'../io_8hpp.html#a1920aa20adebf218cbbdf8bb06a4c351',
+				'../io_8hpp.html#ae20bab070d542e328002339b661fa882',
 				1,
-				'std::operator&lt;&lt;(Stream &amp;os, const Container &amp;v) -&gt; decltype(begin(v), declval&lt; decltype(os)&gt;())'
+				'std::operator&lt;&lt;(Stream &amp;os, const Container &amp;v) -&gt; decltype(begin(v), declval&lt; tp(os)&gt;())'
 			],
 			[
-				'../io_8hpp.html#a26ed2eacd641d0bb463e15dd04d3dd63',
+				'../io_8hpp.html#ae6935fd47565e3c0f597392ae256e165',
 				1,
-				'std::operator&lt;&lt;(rin &amp;os, const T &amp;v) -&gt; decltype(begin(v), declval&lt; decltype(os)&gt;())'
+				'std::operator&lt;&lt;(rin &amp;os, const T &amp;v) -&gt; decltype(begin(v), declval&lt; tp(os)&gt;())'
 			],
 			[
 				'../namespacelinear__algebra.html#abd5c3b8b105df6592284c867a9451dad',
@@ -752,8 +752,7 @@ var searchData = [
 				'operator&lt;&lt;(ll a, int b):&#160;my_int.hpp'
 			],
 			[
-				'../my__int_8hpp.html#a3bf6f579bb3c901a70403ff474880bea',
-				1,
+				'../my__int_8hpp.html#a3bf6f579bb3c901a70403ff474880bea', 1,
 				'operator&lt;&lt;(int a, ll b):&#160;my_int.hpp'
 			],
 			[
@@ -813,7 +812,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3c_3d_630',
+		'operator_3c_3d_633',
 		[
 			'operator&lt;=',
 			[
@@ -823,7 +822,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3d_631',
+		'operator_3d_634',
 		[
 			'operator=',
 			[
@@ -833,7 +832,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3d_3d_632',
+		'operator_3d_3d_635',
 		[
 			'operator==',
 			[
@@ -902,7 +901,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3e_633',
+		'operator_3e_636',
 		[
 			'operator&gt;',
 			[
@@ -912,7 +911,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3e_3d_634',
+		'operator_3e_3d_637',
 		[
 			'operator&gt;=',
 			[
@@ -922,7 +921,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3e_3e_635',
+		'operator_3e_3e_638',
 		[
 			'operator&gt;&gt;',
 			[
@@ -982,7 +981,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_5b_5d_636',
+		'operator_5b_5d_639',
 		[
 			'operator[]',
 			[
@@ -1004,7 +1003,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_5e_637',
+		'operator_5e_640',
 		[
 			'operator^',
 			[
@@ -1025,7 +1024,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_7c_638',
+		'operator_7c_641',
 		[
 			'operator|',
 			[
@@ -1041,7 +1040,7 @@ var searchData = [
 		]
 	],
 	[
-		'over_639',
+		'over_642',
 		[
 			'over',
 			[

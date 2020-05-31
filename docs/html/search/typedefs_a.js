@@ -1,5 +1,5 @@
 var searchData = [ [
-	'size_5ftype_818',
+	'size_5ftype_823',
 	[
 		'size_type',
 		[

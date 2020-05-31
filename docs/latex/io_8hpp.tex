@@ -1,14 +1,7 @@
 \hypertarget{io_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/io.hpp File Reference}
 \label{io_8hpp}\index{/home/ram/OmniTemplate/io.hpp@{/home/ram/OmniTemplate/io.hpp}}
-{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
-Include dependency graph for io.\+hpp\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{io_8hpp__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,9 +26,9 @@ struct \mbox{\hyperlink{structrin}{rin}}
 \item 
 {\footnotesize template$<$typename Stream , typename... T$>$ }\\auto \& \mbox{\hyperlink{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425}{std\+::operator$<$$<$}} (Stream \&os, pair$<$ T... $>$ const \&p)
 \item 
-{\footnotesize template$<$typename Stream , typename Container $>$ }\\auto \mbox{\hyperlink{io_8hpp_a1920aa20adebf218cbbdf8bb06a4c351}{std\+::operator$<$$<$}} (Stream \&os, const Container \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$ decltype(os)$>$())
+{\footnotesize template$<$typename Stream , typename Container $>$ }\\auto \mbox{\hyperlink{io_8hpp_ae20bab070d542e328002339b661fa882}{std\+::operator$<$$<$}} (Stream \&os, const Container \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$ \mbox{\hyperlink{core_8hpp_ab025e87040bd241c89f5a880c12fc80c}{tp}}(os)$>$())
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{io_8hpp_a26ed2eacd641d0bb463e15dd04d3dd63}{std\+::operator$<$$<$}} (\mbox{\hyperlink{structrin}{rin}} \&os, const T \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$ decltype(os)$>$())
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{io_8hpp_ae6935fd47565e3c0f597392ae256e165}{std\+::operator$<$$<$}} (\mbox{\hyperlink{structrin}{rin}} \&os, const T \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$ \mbox{\hyperlink{core_8hpp_ab025e87040bd241c89f5a880c12fc80c}{tp}}(os)$>$())
 \end{DoxyCompactItemize}
 
 
@@ -48,25 +41,26 @@ struct \mbox{\hyperlink{structrin}{rin}}
 auto operator$<$$<$ (\begin{DoxyParamCaption}\item[{R \&}]{r,  }\item[{const T \&}]{x }\end{DoxyParamCaption}) -\/$>$ decltype(\mbox{\hyperlink{main_8hpp_acf30f45bb690161eda6eb343b019d6e7}{r.\+in}} $>$$>$ const\+\_\+cast$<$T \&$>$(x),
 		declval$<$enable\+\_\+if\+\_\+t$<$is\+\_\+same$<$R, \mbox{\hyperlink{structrin}{rin}}$>$\+::value, \mbox{\hyperlink{structrin}{rin}} \&$>$$>$()) }
 
-\mbox{\Hypertarget{io_8hpp_a26ed2eacd641d0bb463e15dd04d3dd63}\label{io_8hpp_a26ed2eacd641d0bb463e15dd04d3dd63}} 
+\mbox{\Hypertarget{io_8hpp_ae6935fd47565e3c0f597392ae256e165}\label{io_8hpp_ae6935fd47565e3c0f597392ae256e165}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-auto std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrin}{rin}} \&}]{os,  }\item[{const T \&}]{v }\end{DoxyParamCaption}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$ decltype (os)$>$()) }
+auto std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrin}{rin}} \&}]{os,  }\item[{const T \&}]{v }\end{DoxyParamCaption}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$\mbox{\hyperlink{core_8hpp_ab025e87040bd241c89f5a880c12fc80c}{tp}}(os)$>$()) }
 
-\mbox{\Hypertarget{io_8hpp_a1920aa20adebf218cbbdf8bb06a4c351}\label{io_8hpp_a1920aa20adebf218cbbdf8bb06a4c351}} 
+\mbox{\Hypertarget{io_8hpp_ae20bab070d542e328002339b661fa882}\label{io_8hpp_ae20bab070d542e328002339b661fa882}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename Container $>$ \\
-auto std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{const Container \&}]{v }\end{DoxyParamCaption}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$ decltype (os)$>$()) }
+auto std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{const Container \&}]{v }\end{DoxyParamCaption}) -\/$>$ decltype(begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), declval$<$\mbox{\hyperlink{core_8hpp_ab025e87040bd241c89f5a880c12fc80c}{tp}}(os)$>$()) }
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{io_8hpp_a1920aa20adebf218cbbdf8bb06a4c351_cgraph}
+\includegraphics[width=350pt]{io_8hpp_ae20bab070d542e328002339b661fa882_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425}\label{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425}} 
@@ -76,7 +70,8 @@ Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Stream , typename... T$>$ \\
 auto\& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{pair$<$ T... $>$ const \&}]{p }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

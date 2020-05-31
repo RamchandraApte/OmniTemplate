@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'wedge_732',
+		'wedge_737',
 		[
 			'wedge',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'with_733',
+		'with_738',
 		[
 			'with',
 			[

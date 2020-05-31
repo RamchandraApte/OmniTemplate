@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'lazy_5fptr_584',
+		'lazy_5fptr_587',
 		[
 			'lazy_ptr',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'lca_585',
+		'lca_588',
 		[
 			'lca',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'lets_5fadd_586',
+		'lets_5fadd_589',
 		[
 			'lets_add',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'lin_5frecur_587',
+		'lin_5frecur_590',
 		[
 			'lin_recur',
 			[
@@ -40,7 +40,7 @@ var searchData = [
 		]
 	],
 	[
-		'll_588',
+		'll_591',
 		[
 			'll',
 			[

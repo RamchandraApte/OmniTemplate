@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'dfs_422',
+		'dfs_425',
 		[
 			'dfs',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'dsu_423',
+		'dsu_426',
 		[ 'dsu', [ '../structdsu__ds_1_1dsu.html', 1, 'dsu_ds' ] ]
 	]
 ];

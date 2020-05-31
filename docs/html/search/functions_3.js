@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'debug_538',
+		'debug_541',
 		[
 			'debug',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'destroy_539',
+		'destroy_542',
 		[
 			'destroy',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'det_540',
+		'det_543',
 		[
 			'det',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'dis_541',
+		'dis_544',
 		[
 			'dis',
 			[
@@ -40,7 +40,7 @@ var searchData = [
 		]
 	],
 	[
-		'dist_542',
+		'dist_545',
 		[
 			'dist',
 			[
@@ -56,7 +56,7 @@ var searchData = [
 		]
 	],
 	[
-		'divisors_543',
+		'divisors_546',
 		[
 			'divisors',
 			[
@@ -66,17 +66,17 @@ var searchData = [
 		]
 	],
 	[
-		'dlog_544',
+		'dlog_547',
 		[
 			'dlog',
 			[
-				'../number__theory_8hpp.html#a7fe167e7a6ffd6127f342baf3169d9e9',
+				'../number__theory_8hpp.html#a39d0e5b2564df62e404880671eb3211e',
 				1, 'number_theory.hpp'
 			]
 		]
 	],
 	[
-		'dot_545',
+		'dot_548',
 		[
 			'dot',
 			[
@@ -86,7 +86,7 @@ var searchData = [
 		]
 	],
 	[
-		'down_546',
+		'down_549',
 		[
 			'down',
 			[
@@ -104,7 +104,7 @@ var searchData = [
 		]
 	],
 	[
-		'dp_547',
+		'dp_550',
 		[
 			'dp',
 			[
@@ -114,7 +114,7 @@ var searchData = [
 		]
 	],
 	[
-		'dsu_548',
+		'dsu_551',
 		[
 			'dsu',
 			[
