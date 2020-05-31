@@ -1,3 +1,5 @@
+#pragma once
+#include "range.hpp"
 tm() auto type_name([[maybe_unused]] T const &v) {
 	/*! Return the type name of the type of value*/
 	string s = __PRETTY_FUNCTION__, tar = "T = ";

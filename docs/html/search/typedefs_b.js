@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		't_809',
+		't_819',
 		[
 			'T',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'treap_5ft_810',
+		'treap_5ft_820',
 		[
 			'treap_t',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'type_811',
+		'type_821',
 		[
 			'type',
 			[

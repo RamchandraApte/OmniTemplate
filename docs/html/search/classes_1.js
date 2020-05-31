@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'bfs_413',
+		'bfs_418',
 		[
 			'bfs',
 			[
@@ -10,11 +10,11 @@ var searchData = [
 		]
 	],
 	[
-		'bigint_414',
+		'bigint_419',
 		[ 'bigint', [ '../structbigint_1_1bigint.html', 1, 'bigint' ] ]
 	],
 	[
-		'bytehash_415',
+		'bytehash_420',
 		[
 			'bytehash',
 			[

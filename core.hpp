@@ -99,7 +99,7 @@ bool multitest = false;
 
 #include "io.hpp"
 BEGIN_NS
+#include "debug.hpp"
 #include "operations.hpp"
 #include "range.hpp"
-#include "debug.hpp"
 #include "utility.hpp"

@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'random_5fdevice_5fpatch_454',
+		'random_5fdevice_5fpatch_459',
 		[
 			'random_device_patch',
 			[
@@ -9,6 +9,6 @@ var searchData = [
 			]
 		]
 	],
-	[ 'range_455', [ 'range', [ '../structrange.html', 1, '' ] ] ],
-	[ 'rin_456', [ 'rin', [ '../structrin.html', 1, '' ] ] ]
+	[ 'range_460', [ 'range', [ '../structrange.html', 1, '' ] ] ],
+	[ 'rin_461', [ 'rin', [ '../structrin.html', 1, '' ] ] ]
 ];

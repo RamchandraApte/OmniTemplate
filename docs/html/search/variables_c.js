@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'm_755',
+		'm_765',
 		[
 			'm',
 			[
@@ -14,7 +14,7 @@ var searchData = [
 		]
 	],
 	[
-		'multitest_756',
+		'multitest_766',
 		[
 			'multitest',
 			[

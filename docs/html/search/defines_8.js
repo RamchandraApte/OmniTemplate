@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'mix_845',
+		'mix_855',
 		[
 			'mix',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'mix1_846',
+		'mix1_856',
 		[
 			'mix1',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'mix128_847',
+		'mix128_857',
 		[
 			'MIX128',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'mixll_848',
+		'mixll_858',
 		[
 			'mixll',
 			[

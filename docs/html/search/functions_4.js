@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'egcd_544',
+		'egcd_549',
 		[
 			'egcd',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'empty_545',
+		'empty_550',
 		[
 			'empty',
 			[
@@ -24,7 +24,7 @@ var searchData = [
 		]
 	],
 	[
-		'end_546',
+		'end_551',
 		[
 			'end',
 			[
@@ -38,7 +38,7 @@ var searchData = [
 		]
 	],
 	[
-		'entropy_547',
+		'entropy_552',
 		[
 			'entropy',
 			[
@@ -48,7 +48,7 @@ var searchData = [
 		]
 	],
 	[
-		'erase_548',
+		'erase_553',
 		[
 			'erase',
 			[
@@ -67,7 +67,7 @@ var searchData = [
 		]
 	],
 	[
-		'erase_5fimp_549',
+		'erase_5fimp_554',
 		[
 			'erase_imp',
 			[
@@ -77,7 +77,7 @@ var searchData = [
 		]
 	],
 	[
-		'extremum_550',
+		'extremum_555',
 		[
 			'extremum',
 			[

@@ -28,7 +28,9 @@ struct \mbox{\hyperlink{structgeometry_1_1cht}{geometry\+::cht}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-auto \mbox{\hyperlink{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445}{std\+::operator$<$}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&b)
+bool \mbox{\hyperlink{geometry_8hpp_af5ffcfab211ceb3267e9ac74e35ed09e}{std\+::operator$<$}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&b)
+\item 
+void \mbox{\hyperlink{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824}{std\+::test\+\_\+less}} ()
 \item 
 auto \mbox{\hyperlink{namespacegeometry_a5ceebf824d89e53cc4a5f7652338e22f}{geometry\+::dot}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&b)
 \item 
@@ -42,32 +44,64 @@ auto \mbox{\hyperlink{namespacegeometry_ae77c652506bca228ac4c3ab2ae81583f}{geome
 \item 
 auto \mbox{\hyperlink{namespacegeometry_a0da9365748befd6d88a5e4eb2e163ca0}{geometry\+::ccw}} (\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} a, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} b, \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} c)
 \item 
-{\footnotesize template$<$typename Cont $>$ }\\auto \mbox{\hyperlink{namespacegeometry_a5033300f41ced6b6082bebe96d5eab7f}{geometry\+::hull}} (Cont \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
+void \mbox{\hyperlink{namespacegeometry_a18ead2a577ff9e1f661e55515285809b}{geometry\+::test\+\_\+ccw}} ()
+\item 
+auto \mbox{\hyperlink{namespacegeometry_a6229602ca6eb5527277fb1c226a3fa60}{geometry\+::hull}} (vector$<$ \mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} $>$ \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
 \item 
 {\footnotesize template$<$typename Range , typename Func $>$ }\\auto \mbox{\hyperlink{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}{geometry\+::convex\+\_\+min}} (const Range \&r, const Func \&f)
+\item 
+void \mbox{\hyperlink{namespacegeometry_a9ac8131722d15a1da83d0065f1093f1e}{geometry\+::test\+\_\+convex\+\_\+min}} ()
+\item 
+void \mbox{\hyperlink{namespacegeometry_a27118bb54df18fa8cdda0a971ad58027}{geometry\+::test\+\_\+hull}} ()
+\item 
+void \mbox{\hyperlink{namespacegeometry_a403f2d9011246963c0e4b7a2101c5ec0}{geometry\+::test\+\_\+cht}} ()
 \item 
 void \mbox{\hyperlink{namespacegeometry_aad3419586eb6065d81469c30417d5530}{geometry\+::test\+\_\+geometry}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445}\label{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445}} 
+\mbox{\Hypertarget{geometry_8hpp_af5ffcfab211ceb3267e9ac74e35ed09e}\label{geometry_8hpp_af5ffcfab211ceb3267e9ac74e35ed09e}} 
 \index{geometry.hpp@{geometry.hpp}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!geometry.hpp@{geometry.hpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
-{\footnotesize\ttfamily auto std\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool std\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_aaf26cd2ec4fe33a7b7601fe9386cd44e}{pt}} const \&}]{b }\end{DoxyParamCaption})}
 
-Compare points a and b lexicographicallyHere is the call graph for this function\+:\nopagebreak
+Compare points a and b lexicographicallyHere is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=301pt]{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445_cgraph}
+\includegraphics[width=301pt]{geometry_8hpp_af5ffcfab211ceb3267e9ac74e35ed09e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=167pt]{geometry_8hpp_a71b653e8feee4fdabf84841ac545b445_icgraph}
+\includegraphics[width=167pt]{geometry_8hpp_af5ffcfab211ceb3267e9ac74e35ed09e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824}\label{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824}} 
+\index{geometry.hpp@{geometry.hpp}!test\_less@{test\_less}}
+\index{test\_less@{test\_less}!geometry.hpp@{geometry.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_less()}{test\_less()}}
+{\footnotesize\ttfamily void std\+::test\+\_\+less (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824_icgraph}
 \end{center}
 \end{figure}

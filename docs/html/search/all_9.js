@@ -50,7 +50,7 @@ var searchData = [
 		[
 			'hull',
 			[
-				'../namespacegeometry.html#a5033300f41ced6b6082bebe96d5eab7f',
+				'../namespacegeometry.html#a6229602ca6eb5527277fb1c226a3fa60',
 				1, 'geometry'
 			]
 		]

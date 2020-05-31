@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'mat_437',
+		'mat_442',
 		[
 			'mat',
 			[
@@ -9,9 +9,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'md_438', [ 'md', [ '../structmd.html', 1, '' ] ] ],
+	[ 'md_443', [ 'md', [ '../structmd.html', 1, '' ] ] ],
 	[
-		'minqueue_439',
+		'minqueue_444',
 		[
 			'MinQueue',
 			[
@@ -21,7 +21,7 @@ var searchData = [
 		]
 	],
 	[
-		'minstack_440',
+		'minstack_445',
 		[
 			'MinStack',
 			[
@@ -31,7 +31,7 @@ var searchData = [
 		]
 	],
 	[
-		'minstack_3c_20t_20_3e_441',
+		'minstack_3c_20t_20_3e_446',
 		[
 			'MinStack&lt; T &gt;',
 			[
@@ -40,5 +40,5 @@ var searchData = [
 			]
 		]
 	],
-	[ 'mymax_442', [ 'mymax', [ '../structmymax.html', 1, '' ] ] ]
+	[ 'mymax_447', [ 'mymax', [ '../structmymax.html', 1, '' ] ] ]
 ];
