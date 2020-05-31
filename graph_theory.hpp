@@ -2,6 +2,11 @@
 #include "core.hpp"
 #include "dsu.hpp"
 #include "linear_algebra.hpp"
+auto add_edge(vc<vl> &g, ll u, ll v) {
+	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
+	g[u].pb(v);
+	g[v].pb(u);
+}
 struct edge {
 	ll w, a, b;
 	auto to_tuple() const { return tuple{w, a, b}; }
@@ -119,42 +124,53 @@ struct gsearch {
 		p[j] = i;
 	}
 };
-#define searcher                                                               \
-      public                                                                   \
-	gsearch {                                                              \
-		using gsearch::operator(), gsearch::gsearch;                   \
-		void operator()(ll s)
-struct dfs : searcher {
-	/*! Depth-first search */
-	v[s] = true;
-	for (const auto &j : g[s]) {
-		if (v[j]) {
-			continue;
+/*! Depth-first search */
+struct dfs : public gsearch {
+	using gsearch::operator(), gsearch::gsearch;
+	void operator()(ll s) {
+		v[s] = true;
+		for (const auto &j : g[s]) {
+			if (v[j]) {
+				continue;
+			}
+			add(j, s);
+			this(j);
 		}
-		add(j, s);
-		this(j);
+		q.push_front(s);
 	}
-	q.push_front(s);
-}
-}
-;
-struct bfs : searcher {
-	/*! Breadth-first search*/
-	q.pb(s);
-	for (ll idx = 0; idx < q.size(); ++idx) {
-		auto i = q[idx];
-		if (v[i]) {
-			continue;
-		}
-		v[i] = true;
-		for (const auto &j : g[i]) {
-			q.pb(j);
-			add(j, i);
+};
+/*! Breadth-first search*/
+struct bfs : public gsearch {
+	using gsearch::operator(), gsearch::gsearch;
+	void operator()(ll s) {
+		ll old_size = q.size();
+		q.pb(s);
+		v[s] = true;
+		for (ll idx = old_size; idx < q.size(); ++idx) {
+			auto i = q[idx];
+			for (const auto &j : g[i]) {
+				if (v[j]) {
+					continue;
+				}
+				q.pb(j);
+				v[j] = true;
+				add(j, i);
+			}
 		}
 	}
+};
+void test_bfs() {
+	vc<vl> g(4);
+	add_edge(g, 0, 1);
+	add_edge(g, 1, 2);
+	add_edge(g, 1, 3);
+	add_edge(g, 2, 3);
+	bfs b{g};
+	b(0);
+	dbg(b.p);
+	assert((b.p == vl{-1, 0, 1, 1}));
+	assert((b.d == vl{0, 1, 2, 2}));
 }
-}
-;
 auto trans(const vc<vl> &g) {
 	ll n = size(g);
 	vc<vl> h(n);
@@ -200,6 +216,7 @@ auto bipartite(const vc<vl> &g) {
 	b();
 	auto n = size(g);
 	vl s(n);
+	dbg(b.p);
 	for (auto i : b.q) {
 		if (auto x = b.p[i]; x != -1) {
 			s[i] = !s[x];
@@ -212,6 +229,23 @@ auto bipartite(const vc<vl> &g) {
 		}
 	}
 	return bi ? optional{s} : nullopt;
+}
+void test_bipartite() {
+	vc<vl> g(6);
+	// (2,1,4) is one side, and (5,3,0) is another side
+	// connected component 1
+	add_edge(g, 2, 5);
+	add_edge(g, 4, 5);
+	add_edge(g, 4, 3);
+	// connected component 2
+	add_edge(g, 1, 0);
+	add_edge(g, 4, 0);
+	const auto col = bipartite(g).value();
+	fo(i, 0, g.size()) {
+		for (auto j : g[i]) {
+			assert(col[i] ^ col[j]);
+		}
+	}
 }
 auto max_match(const vc<vl> &g) {
 	/*! Returns a maximum matching of g*/
@@ -271,11 +305,6 @@ auto max_match(const vc<vl> &g) {
 	}
 	return m;
 }
-auto add_edge(vc<vl> &g, ll u, ll v) {
-	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
-	g[u].pb(v);
-	g[v].pb(u);
-}
 void test_add_edge() {
 	vc<vl> g(10);
 	add_edge(g, 3, 4);
@@ -300,4 +329,6 @@ void test_graph_theory() {
 	test_trans();
 	test_dist();
 	test_mst();
+	test_bfs();
+	test_bipartite();
 }

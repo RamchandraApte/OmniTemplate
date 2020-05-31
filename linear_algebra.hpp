@@ -100,7 +100,7 @@ auto &operator<<(Stream &os, mat<T...> const &m) {
 	return os << "}";
 }
 template <typename T> auto lin_recur(vc<T> const &c, ll n) {
-	/*! Returns nth therm of linear recurrence described by c*/
+	/*! Returns nth term of linear recurrence described by c*/
 	// TODO which direction is the linear recurrence? 🤔
 	mat<T> m{size(c), size(c)};
 	copy(al(c), m[0]);
