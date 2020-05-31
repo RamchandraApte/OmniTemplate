@@ -2,15 +2,15 @@
 #include "core.hpp"
 // TODO Tensors? Also, matrix_row class.
 namespace linear_algebra {
-tm() struct mat {
+tm() struct matrix {
 	/*! Matrix class*/
 	ll r, c; //!< Row, column
 	vc<T> a; //! Array storing the data, in row-major order
-	mat(ll r_, ll c_, df(v, 0LL)) : r(r_), c(c_), a(r * c, v) {
+	matrix(ll r_, ll c_, df(v, 0LL)) : r(r_), c(c_), a(r * c, v) {
 		assert(r >= 1 && c >= 1);
 	}
-	mat(T d) : r(1), c(1), a{d} {}
-	mat(vc<vc<pr>> const &g) : mat(g.size(), g.size(), inf) {
+	matrix(T d) : r(1), c(1), a{d} {}
+	matrix(vc<vc<pr>> const &g) : matrix(g.size(), g.size(), inf) {
 		fo(i, r) {
 			for (const auto &p : g[i]) {
 				auto [x, w] = p;
@@ -19,25 +19,25 @@ tm() struct mat {
 		}
 		fo(i, r) { this[i][i] = 0; }
 	}
-	mat(const initializer_list<initializer_list<ll>> &vals)
-	    : mat(size(vals), size(begin(vals)[0])) {
+	matrix(const initializer_list<initializer_list<ll>> &vals)
+	    : matrix(size(vals), size(begin(vals)[0])) {
 		fo(i, r) {
 			assert(size(begin(vals)[i]) == c);
 			fo(j, c) { this[i][j] = begin(begin(vals)[i])[j]; }
 		}
 	}
 	auto operator[](ll i) {
-		return const_cast<T *>(const_cast<mat const &>(this)[i]);
+		return const_cast<T *>(const_cast<matrix const &>(this)[i]);
 	}
 	auto operator[](ll i) const { return &a[i * c]; }
 	auto id() const {
 		return this.r == 1 && this.c == 1 && this[0][0] == 1;
 	}
 };
-tm(...) bool operator==(mat<T...> const &a, mat<T...> const &b) {
+tm(...) bool operator==(matrix<T...> const &a, matrix<T...> const &b) {
 	return a.r == b.r && a.c == b.c && a.a == b.a;
 }
-tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
+tm(...) auto operator*(matrix<T...> const &a, matrix<T...> const &b) {
 	/*! Returns the matrix product of a and b*/
 	if (a.id()) {
 		return b;
@@ -46,7 +46,7 @@ tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
 		return a;
 	}
 	assert(a.c == b.r);
-	mat<T...> c{a.r, b.c};
+	matrix<T...> c{a.r, b.c};
 	fo(i, c.r) {
 		fo(j, a.c) {
 			fo(k, c.c) { c[i][k] += a[i][j] * b[j][k]; }
@@ -54,7 +54,7 @@ tm(...) auto operator*(mat<T...> const &a, mat<T...> const &b) {
 	}
 	return c;
 }
-template <typename T> pair<mat<T> &&, T> gauss(mat<T> b, mat<T> a) {
+template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	/*!
 	Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
 	via Gaussian elimination.
@@ -82,17 +82,17 @@ template <typename T> pair<mat<T> &&, T> gauss(mat<T> b, mat<T> a) {
 	}
 	return {move(b), det};
 }
-tm(...) auto operator/(mat<T...> b, mat<T...> a) {
+tm(...) auto operator/(matrix<T...> b, matrix<T...> a) {
 	/*! Returns \f$ba^{-1}\f$*/
 	// TODO or is it the other way round 🤔?
 	return gauss(b, a).first;
 }
-template <typename T> T det(const mat<T> &a) {
+template <typename T> T det(const matrix<T> &a) {
 	/*! Returns the determinant of matrix a*/
-	return gauss(mat<T>(a.r, 1), a).second;
+	return gauss(matrix<T>(a.r, 1), a).second;
 }
 template <typename Stream, typename... T>
-auto &operator<<(Stream &os, mat<T...> const &m) {
+auto &operator<<(Stream &os, matrix<T...> const &m) {
 	/*! Print the matrix rows, line by line*/
 	os << "mat{" << endl;
 	fo(i, m.r) {
@@ -104,14 +104,14 @@ auto &operator<<(Stream &os, mat<T...> const &m) {
 template <typename T> auto lin_recur(vc<T> const &c, ll n) {
 	/*! Returns nth term of linear recurrence described by c*/
 	// TODO which direction is the linear recurrence? 🤔
-	mat<T> m{size(c), size(c)};
+	matrix<T> m{size(c), size(c)};
 	copy(al(c), m[0]);
 	fo(i, 1, size(c)) { m[i][i - 1] = 1; }
 	return power(m, n)[0][0];
 }
 void test_matrix() {
-	mat<ld> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
-	mat<ld> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
+	matrix<ld> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
+	matrix<ld> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
 	auto x = b / a;
 	// TODO 😩 there are no asserts here
 	dbg(x);

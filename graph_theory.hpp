@@ -55,7 +55,7 @@ auto dist(vector<vector<pr>> g, ll s) {
 	}
 	return array<vl, 2>{d, pv};
 }
-auto dist(mat<ll> const &g) {
+auto dist(matrix<ll> const &g) {
 	/*! Given a 2D matrix of distances for each edge in g, returns a 2D
 	 * matrix of the shortest distances. We do not consider paths of length
 	 * zero. Algorithm: Floyd-Warshall*/
@@ -74,8 +74,8 @@ auto dist(mat<ll> const &g) {
 	return d;
 }
 void test_dist() {
-	mat<ll> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};
-	mat<ll> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};
+	matrix<ll> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};
+	matrix<ll> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};
 	dbg(dist(g));
 	dbg(short_dist);
 	assert(dist(g) == short_dist);
