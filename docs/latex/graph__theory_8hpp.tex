@@ -22,16 +22,19 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 struct \mbox{\hyperlink{structedge}{edge}}
 \item 
-struct \mbox{\hyperlink{structgsearch}{gsearch}}
+struct \mbox{\hyperlink{structgraph__theory_1_1gsearch}{graph\+\_\+theory\+::gsearch}}
 \item 
-struct \mbox{\hyperlink{structdfs}{dfs}}
+struct \mbox{\hyperlink{structgraph__theory_1_1dfs}{graph\+\_\+theory\+::dfs}}
 \item 
-struct \mbox{\hyperlink{structbfs}{bfs}}
+struct \mbox{\hyperlink{structgraph__theory_1_1bfs}{graph\+\_\+theory\+::bfs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegraph__theory}{graph\+\_\+theory}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
-\item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a010bc7128795883d7fa391f33f8c67e0}{add\+\_\+edge}} (vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
 bool \mbox{\hyperlink{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af}{operator$<$}} (\mbox{\hyperlink{structedge}{edge}} const \&a, \mbox{\hyperlink{structedge}{edge}} const \&b)
 \item 
@@ -39,125 +42,43 @@ bool \mbox{\hyperlink{graph__theory_8hpp_a3899b9c13b95304df918101d4c4f4d4f}{oper
 \item 
 {\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{graph__theory_8hpp_a18e4531fb24d91bacaab3071e73938f5}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structedge}{edge}} const \&e)
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a75115f1ba36186dc32ecb102a399508a}{dist}} (vector$<$ vector$<$ \mbox{\hyperlink{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$ g, \mbox{\hyperlink{structll}{ll}} s)
+auto \mbox{\hyperlink{namespacegraph__theory_a39a0a5f2c23a2facdf6251a142a88e1b}{graph\+\_\+theory\+::add\+\_\+edge}} (vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a1fd40cc212c57c5abe8872fe2f90a1e6}{dist}} (\mbox{\hyperlink{structmat}{mat}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&g)
+auto \mbox{\hyperlink{namespacegraph__theory_a8167523c5325380ddf6d2903dd654271}{graph\+\_\+theory\+::dist}} (vector$<$ vector$<$ \mbox{\hyperlink{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$ g, \mbox{\hyperlink{structll}{ll}} s)
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_a7a5d11f82e9baa82dc71ff8ded6f62da}{test\+\_\+dist}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_ac57faa4f7fdf406d6a511fb5b3dad2e8}{graph\+\_\+theory\+::dist}} (\mbox{\hyperlink{structlinear__algebra_1_1mat}{mat}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&g)
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_ad13100084f2ab4fa87a96eb6baaab424}{mst}} (vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ es)
+void \mbox{\hyperlink{namespacegraph__theory_a2b593631b45e50c3345b1026e2a65c32}{graph\+\_\+theory\+::test\+\_\+dist}} ()
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_adc21a6e0c023e0b90a90d2cd42940d42}{test\+\_\+mst}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_adc41c5f6146aaa8dce40082a7f310161}{graph\+\_\+theory\+::mst}} (vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$ es)
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_abcb0555d48c32c824ec01a7c2b834a4a}{test\+\_\+bfs}} ()
+void \mbox{\hyperlink{namespacegraph__theory_a84ac78302ab327b1a880654a74f696b3}{graph\+\_\+theory\+::test\+\_\+mst}} ()
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a6ed45f64f1378ebb531ad28483501ebf}{trans}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
+void \mbox{\hyperlink{namespacegraph__theory_a2aea60be1c24dc82badd96e40923038b}{graph\+\_\+theory\+::test\+\_\+bfs}} ()
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_a56c22f1781661a462e8a456fb4562e68}{test\+\_\+trans}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_a5b4fccebd731ef29c9050b946d57c8c9}{graph\+\_\+theory\+::trans}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a93d1a20d68db74c43261dd28201eb875}{scc}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
+void \mbox{\hyperlink{namespacegraph__theory_a734cad165e9d3343718dea3cab4febc3}{graph\+\_\+theory\+::test\+\_\+trans}} ()
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_aa68c8186aa3aba8f70f57404aec67cd8}{test\+\_\+scc}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_a14c5caae4119d720412cda7748174301}{graph\+\_\+theory\+::scc}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a5ed86477f2614adcf2b123f8a530a75b}{bipartite}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
+void \mbox{\hyperlink{namespacegraph__theory_a67e1bb0651ba8b410525f0a06c154f10}{graph\+\_\+theory\+::test\+\_\+scc}} ()
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_ac5604c1c25612be563ce269b2de93874}{test\+\_\+bipartite}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_abacb9f1cecd2284dd5fb2bcfaf256b74}{graph\+\_\+theory\+::bipartite}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a838f63e24db10d9e165fd191b3cc2e05}{max\+\_\+match}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
+void \mbox{\hyperlink{namespacegraph__theory_aeebcf017acc0533f31c46d62d0cebe72}{graph\+\_\+theory\+::test\+\_\+bipartite}} ()
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_a8cbcc457cc04bce093aa17866046ffb6}{test\+\_\+add\+\_\+edge}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_a3aa84048435079e1235a2ab9abb93467}{graph\+\_\+theory\+::max\+\_\+match}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g)
 \item 
-auto \mbox{\hyperlink{graph__theory_8hpp_a5f6185d1499a6bd321a7841e23001caa}{graph\+\_\+in}} (vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} m)
+void \mbox{\hyperlink{namespacegraph__theory_af419fd09d176890f30126a49064cbd9b}{graph\+\_\+theory\+::test\+\_\+add\+\_\+edge}} ()
 \item 
-void \mbox{\hyperlink{graph__theory_8hpp_a9c55a42c5c6ac6b7fb16f464507e90c6}{test\+\_\+graph\+\_\+theory}} ()
+auto \mbox{\hyperlink{namespacegraph__theory_a305e818c99814cd465186b57c0a73f50}{graph\+\_\+theory\+::graph\+\_\+in}} (vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} m)
+\item 
+void \mbox{\hyperlink{namespacegraph__theory_aa2b38897f4c429325f0eb73b1137755a}{graph\+\_\+theory\+::test\+\_\+graph\+\_\+theory}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{graph__theory_8hpp_a010bc7128795883d7fa391f33f8c67e0}\label{graph__theory_8hpp_a010bc7128795883d7fa391f33f8c67e0}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!add\_edge@{add\_edge}}
-\index{add\_edge@{add\_edge}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
-{\footnotesize\ttfamily auto add\+\_\+edge (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{g,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v }\end{DoxyParamCaption})}
-
-Adds edge $u \leftrightarrow v$ to graph gHere is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a010bc7128795883d7fa391f33f8c67e0_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a5ed86477f2614adcf2b123f8a530a75b}\label{graph__theory_8hpp_a5ed86477f2614adcf2b123f8a530a75b}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!bipartite@{bipartite}}
-\index{bipartite@{bipartite}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{bipartite()}{bipartite()}}
-{\footnotesize\ttfamily auto bipartite (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{g }\end{DoxyParamCaption})}
-
-Returns a bipartite coloring if possibleHere is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a5ed86477f2614adcf2b123f8a530a75b_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a1fd40cc212c57c5abe8872fe2f90a1e6}\label{graph__theory_8hpp_a1fd40cc212c57c5abe8872fe2f90a1e6}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!dist@{dist}}
-\index{dist@{dist}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{dist()}{dist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily auto dist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmat}{mat}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&}]{g }\end{DoxyParamCaption})}
-
-Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances. We do not consider paths of length zero. Algorithm\+: Floyd-\/\+Warshall\mbox{\Hypertarget{graph__theory_8hpp_a75115f1ba36186dc32ecb102a399508a}\label{graph__theory_8hpp_a75115f1ba36186dc32ecb102a399508a}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!dist@{dist}}
-\index{dist@{dist}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{dist()}{dist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily auto dist (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$}]{g,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{s }\end{DoxyParamCaption})}
-
-Given an adjacency-\/list of a graph, returns the shortest distance to each vertex from the source. Algorithm\+: DijkstraHere is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a75115f1ba36186dc32ecb102a399508a_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a5f6185d1499a6bd321a7841e23001caa}\label{graph__theory_8hpp_a5f6185d1499a6bd321a7841e23001caa}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!graph\_in@{graph\_in}}
-\index{graph\_in@{graph\_in}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{graph\_in()}{graph\_in()}}
-{\footnotesize\ttfamily auto graph\+\_\+in (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{g,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{m }\end{DoxyParamCaption})}
-
-Reads 1-\/indexed list of edges into graph gHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=239pt]{graph__theory_8hpp_a5f6185d1499a6bd321a7841e23001caa_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a838f63e24db10d9e165fd191b3cc2e05}\label{graph__theory_8hpp_a838f63e24db10d9e165fd191b3cc2e05}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!max\_match@{max\_match}}
-\index{max\_match@{max\_match}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{max\_match()}{max\_match()}}
-{\footnotesize\ttfamily auto max\+\_\+match (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{g }\end{DoxyParamCaption})}
-
-Returns a maximum matching of gHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=248pt]{graph__theory_8hpp_a838f63e24db10d9e165fd191b3cc2e05_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_ad13100084f2ab4fa87a96eb6baaab424}\label{graph__theory_8hpp_ad13100084f2ab4fa87a96eb6baaab424}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!mst@{mst}}
-\index{mst@{mst}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{mst()}{mst()}}
-{\footnotesize\ttfamily auto mst (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structedge}{edge}} $>$}]{es }\end{DoxyParamCaption})}
-
-Returns the minimum spanning tree of the set of edges es, as a set of edgesHere is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_ad13100084f2ab4fa87a96eb6baaab424_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af}\label{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af}} 
 \index{graph\_theory.hpp@{graph\_theory.hpp}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!graph\_theory.hpp@{graph\_theory.hpp}}
@@ -189,198 +110,5 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=276pt]{graph__theory_8hpp_a3899b9c13b95304df918101d4c4f4d4f_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a93d1a20d68db74c43261dd28201eb875}\label{graph__theory_8hpp_a93d1a20d68db74c43261dd28201eb875}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!scc@{scc}}
-\index{scc@{scc}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{scc()}{scc()}}
-{\footnotesize\ttfamily auto scc (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{g }\end{DoxyParamCaption})}
-
-Returns the strongly connected component for each vertex of the graph g.Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=189pt]{graph__theory_8hpp_a93d1a20d68db74c43261dd28201eb875_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a93d1a20d68db74c43261dd28201eb875_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a8cbcc457cc04bce093aa17866046ffb6}\label{graph__theory_8hpp_a8cbcc457cc04bce093aa17866046ffb6}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_add\_edge@{test\_add\_edge}}
-\index{test\_add\_edge@{test\_add\_edge}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_add\_edge()}{test\_add\_edge()}}
-{\footnotesize\ttfamily void test\+\_\+add\+\_\+edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=268pt]{graph__theory_8hpp_a8cbcc457cc04bce093aa17866046ffb6_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a8cbcc457cc04bce093aa17866046ffb6_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_abcb0555d48c32c824ec01a7c2b834a4a}\label{graph__theory_8hpp_abcb0555d48c32c824ec01a7c2b834a4a}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_bfs@{test\_bfs}}
-\index{test\_bfs@{test\_bfs}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_bfs()}{test\_bfs()}}
-{\footnotesize\ttfamily void test\+\_\+bfs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=236pt]{graph__theory_8hpp_abcb0555d48c32c824ec01a7c2b834a4a_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_abcb0555d48c32c824ec01a7c2b834a4a_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_ac5604c1c25612be563ce269b2de93874}\label{graph__theory_8hpp_ac5604c1c25612be563ce269b2de93874}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_bipartite@{test\_bipartite}}
-\index{test\_bipartite@{test\_bipartite}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_bipartite()}{test\_bipartite()}}
-{\footnotesize\ttfamily void test\+\_\+bipartite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=262pt]{graph__theory_8hpp_ac5604c1c25612be563ce269b2de93874_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_ac5604c1c25612be563ce269b2de93874_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a7a5d11f82e9baa82dc71ff8ded6f62da}\label{graph__theory_8hpp_a7a5d11f82e9baa82dc71ff8ded6f62da}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_dist@{test\_dist}}
-\index{test\_dist@{test\_dist}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_dist()}{test\_dist()}}
-{\footnotesize\ttfamily void test\+\_\+dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=210pt]{graph__theory_8hpp_a7a5d11f82e9baa82dc71ff8ded6f62da_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a7a5d11f82e9baa82dc71ff8ded6f62da_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a9c55a42c5c6ac6b7fb16f464507e90c6}\label{graph__theory_8hpp_a9c55a42c5c6ac6b7fb16f464507e90c6}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_graph\_theory@{test\_graph\_theory}}
-\index{test\_graph\_theory@{test\_graph\_theory}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_graph\_theory()}{test\_graph\_theory()}}
-{\footnotesize\ttfamily void test\+\_\+graph\+\_\+theory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a9c55a42c5c6ac6b7fb16f464507e90c6_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a9c55a42c5c6ac6b7fb16f464507e90c6_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_adc21a6e0c023e0b90a90d2cd42940d42}\label{graph__theory_8hpp_adc21a6e0c023e0b90a90d2cd42940d42}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_mst@{test\_mst}}
-\index{test\_mst@{test\_mst}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_mst()}{test\_mst()}}
-{\footnotesize\ttfamily void test\+\_\+mst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=210pt]{graph__theory_8hpp_adc21a6e0c023e0b90a90d2cd42940d42_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_adc21a6e0c023e0b90a90d2cd42940d42_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_aa68c8186aa3aba8f70f57404aec67cd8}\label{graph__theory_8hpp_aa68c8186aa3aba8f70f57404aec67cd8}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_scc@{test\_scc}}
-\index{test\_scc@{test\_scc}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_scc()}{test\_scc()}}
-{\footnotesize\ttfamily void test\+\_\+scc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=281pt]{graph__theory_8hpp_aa68c8186aa3aba8f70f57404aec67cd8_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_aa68c8186aa3aba8f70f57404aec67cd8_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a56c22f1781661a462e8a456fb4562e68}\label{graph__theory_8hpp_a56c22f1781661a462e8a456fb4562e68}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!test\_trans@{test\_trans}}
-\index{test\_trans@{test\_trans}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_trans()}{test\_trans()}}
-{\footnotesize\ttfamily void test\+\_\+trans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=222pt]{graph__theory_8hpp_a56c22f1781661a462e8a456fb4562e68_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a56c22f1781661a462e8a456fb4562e68_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a6ed45f64f1378ebb531ad28483501ebf}\label{graph__theory_8hpp_a6ed45f64f1378ebb531ad28483501ebf}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!trans@{trans}}
-\index{trans@{trans}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{trans()}{trans()}}
-{\footnotesize\ttfamily auto trans (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{g }\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__theory_8hpp_a6ed45f64f1378ebb531ad28483501ebf_icgraph}
 \end{center}
 \end{figure}

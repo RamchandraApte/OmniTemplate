@@ -1,11 +1,11 @@
 var searchData = [
 	[
-		'n_184',
+		'n_190',
 		[
 			'n',
 			[
-				'../structgsearch.html#abf2c48fcc1e2bcea14720192fdb497df',
-				1, 'gsearch::n()'
+				'../structgraph__theory_1_1gsearch.html#aaf730677878c7da56a3b4728d9300e03',
+				1, 'graph_theory::gsearch::n()'
 			],
 			[
 				'../structseg.html#aec39c86816f724381919a788bb6e899e',
@@ -16,13 +16,13 @@ var searchData = [
 				1, 'seg2::n()'
 			],
 			[
-				'../structsearch__it.html#a4469baa0cfd438036376385f2dd914b0',
-				1, 'search_it::n()'
+				'../structstring__tools_1_1search__it.html#aab70ce1b2fdb25d6476e2a68e3e42fef',
+				1, 'string_tools::search_it::n()'
 			]
 		]
 	],
 	[
-		'ndebug_185',
+		'ndebug_191',
 		[
 			'NDEBUG',
 			[
@@ -32,27 +32,31 @@ var searchData = [
 		]
 	],
 	[
-		'next_5fcomb_186',
+		'next_5fcomb_192',
 		[
 			'next_comb',
 			[
-				'../utility_8hpp.html#ae7d7f9d0bbad247488d15de2919cfb9e',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a7cd324d23686536d1d4eeb92afb61ed4',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'no_187',
+		'no_193',
 		[
-			'no', [ '../structno.html', 1, 'no&lt; T &gt;' ],
+			'no',
 			[
-				'../structno.html#a25936b1dd27df91a24479835b5acc4b3',
-				1, 'no::no()'
+				'../structtree_1_1no.html', 1,
+				'tree::no&lt; T &gt;'
+			],
+			[
+				'../structtree_1_1no.html#ace71f0011f855bca48eb7d708854bbfb',
+				1, 'tree::no::no()'
 			]
 		]
 	],
 	[
-		'no_5fimpl_188',
+		'no_5fimpl_194',
 		[
 			'no_impl',
 			[ '../structno__impl.html', 1, 'no_impl&lt; T &gt;' ],
@@ -62,9 +66,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'no_5fmod_189', [ 'no_mod', [ '../structno__mod.html', 1, '' ] ] ],
+	[ 'no_5fmod_195', [ 'no_mod', [ '../structno__mod.html', 1, '' ] ] ],
 	[
-		'no_5fptr_5fv_190',
+		'no_5fptr_5fv_196',
 		[
 			'no_ptr_v',
 			[
@@ -82,7 +86,7 @@ var searchData = [
 		]
 	],
 	[
-		'no_5fv_191',
+		'no_5fv_197',
 		[
 			'no_v', [ '../structno__v.html', 1, 'no_v&lt; T &gt;' ],
 			[
@@ -92,21 +96,21 @@ var searchData = [
 		]
 	],
 	[
-		'node_192',
+		'node_198',
 		[
 			'Node',
 			[
-				'../structSplayTree_1_1Node.html', 1,
-				'SplayTree&lt; T &gt;::Node'
+				'../structsplay__tree_1_1SplayTree_1_1Node.html',
+				1, 'splay_tree::SplayTree&lt; T &gt;::Node'
 			],
 			[
-				'../structSplayTree_1_1iterator.html#a570dbdcaec4a93b65f4ae518d71ca774',
-				1, 'SplayTree::iterator::node()'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#a3c9fb5e7acf1d7fbb16ca90c28158e90',
+				1, 'splay_tree::SplayTree::iterator::node()'
 			]
 		]
 	],
 	[
-		'null_193',
+		'null_199',
 		[
 			'null',
 			[
@@ -116,14 +120,14 @@ var searchData = [
 		]
 	],
 	[
-		'number_5ftheory_2ehpp_194',
+		'number_5ftheory_2ehpp_200',
 		[
 			'number_theory.hpp',
 			[ '../number__theory_8hpp.html', 1, '' ]
 		]
 	],
 	[
-		'numeric_5flimits_3c_20ll_20_3e_195',
+		'numeric_5flimits_3c_20ll_20_3e_201',
 		[
 			'numeric_limits&lt; ll &gt;',
 			[
@@ -133,12 +137,12 @@ var searchData = [
 		]
 	],
 	[
-		'nx2_196',
+		'nx2_202',
 		[
 			'nx2',
 			[
-				'../utility_8hpp.html#af792f767f338ad4a8547856ed0626120',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a58ac7b6c58967aa2796efb5cc2eaa506',
+				1, 'utility'
 			]
 		]
 	]

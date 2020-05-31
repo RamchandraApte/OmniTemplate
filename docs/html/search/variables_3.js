@@ -1,21 +1,21 @@
 var searchData = [
 	[
-		'c_703',
+		'c_731',
 		[
 			'c',
 			[
-				'../structmat.html#abb1c76ee1813be34021752a1d9efa0ec',
-				1, 'mat'
+				'../structlinear__algebra_1_1mat.html#a5c0cc3b89ea8e6b79e9915c50c6c336b',
+				1, 'linear_algebra::mat'
 			]
 		]
 	],
 	[
-		'child_704',
+		'child_732',
 		[
 			'child',
 			[
-				'../structSplayTree_1_1Node.html#ad58709abd217b595a81e7644025186ae',
-				1, 'SplayTree::Node'
+				'../structsplay__tree_1_1SplayTree_1_1Node.html#a180bb2086974ef98e56bf9c5e89243f1',
+				1, 'splay_tree::SplayTree::Node'
 			]
 		]
 	]

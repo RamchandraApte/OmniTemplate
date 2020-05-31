@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'perm_607',
+		'perm_635',
 		[
 			'perm',
 			[
-				'../combinatorics_8hpp.html#ada068dc4f9ea18a98ff58cb8b0be93c9',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a162be12f51480d59189ec28dbcc2c5e2',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'pers_5fptr_608',
+		'pers_5fptr_636',
 		[
 			'pers_ptr',
 			[
@@ -20,47 +20,47 @@ var searchData = [
 		]
 	],
 	[
-		'pop_609',
+		'pop_637',
 		[
 			'pop',
 			[
-				'../classQueueAdaptor.html#a81ec309acaf4e8ad47e49d2fbffb0000',
-				1, 'QueueAdaptor'
+				'../classqueue__tools_1_1QueueAdaptor.html#aab204b0f776af2b94156b69435b81df8',
+				1, 'queue_tools::QueueAdaptor'
 			]
 		]
 	],
 	[
-		'power_610',
+		'power_638',
 		[
 			'power',
 			[
-				'../modulo_8hpp.html#a18e6bf3063c827da07de67653546a850',
-				1, 'modulo.hpp'
+				'../namespacemodulo.html#a78c1f4f324678db9d37a8dcb30e048f4',
+				1, 'modulo'
 			]
 		]
 	],
 	[
-		'prefix_611',
+		'prefix_639',
 		[
 			'prefix',
 			[
-				'../string_8hpp.html#ad36260cad14dddb2dd9ecacaa7eae158',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a908088ce2404d968ab69990c35885499',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'prev_5fless_612',
+		'prev_5fless_640',
 		[
 			'prev_less',
 			[
-				'../utility_8hpp.html#ad32b8ad96cf96371fe9ad3c397218352',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a50e9430d1096ce6997ae910135a9533f',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'prime_613',
+		'prime_641',
 		[
 			'prime',
 			[
@@ -70,7 +70,7 @@ var searchData = [
 		]
 	],
 	[
-		'primitive_5froot_614',
+		'primitive_5froot_642',
 		[
 			'primitive_root',
 			[
@@ -80,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'print_615',
+		'print_643',
 		[
 			'print',
 			[
@@ -90,16 +90,16 @@ var searchData = [
 		]
 	],
 	[
-		'push_616',
+		'push_644',
 		[
 			'push',
 			[
-				'../classQueueAdaptor.html#ad0f545cec9fdfb5cdda40a51c9ff8648',
-				1, 'QueueAdaptor::push()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a5857db040da0411af2957d3d44783808',
+				1, 'queue_tools::QueueAdaptor::push()'
 			],
 			[
-				'../classMinStack.html#a85a56f030b69fd1b4191f8318b6b9d28',
-				1, 'MinStack::push()'
+				'../classqueue__tools_1_1MinStack.html#a9d9144961b94102610066192b64b6efa',
+				1, 'queue_tools::MinStack::push()'
 			]
 		]
 	]

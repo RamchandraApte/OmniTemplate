@@ -14,12 +14,12 @@ var searchData = [
 		[
 			'back',
 			[
-				'../classQueueAdaptor.html#a7140ad57c092adb529df4212bbf62f92',
-				1, 'QueueAdaptor::back() const'
+				'../classqueue__tools_1_1QueueAdaptor.html#a70c630a800a12e880917ffc2ccbd1153',
+				1, 'queue_tools::QueueAdaptor::back() const'
 			],
 			[
-				'../classQueueAdaptor.html#a86760f4e5f8f261a4199af7bfd6e175c',
-				1, 'QueueAdaptor::back()'
+				'../classqueue__tools_1_1QueueAdaptor.html#ad3a4f68bb1c2cbd0bedd8094e732bece',
+				1, 'queue_tools::QueueAdaptor::back()'
 			]
 		]
 	],
@@ -32,8 +32,8 @@ var searchData = [
 				1, 'range::begin()'
 			],
 			[
-				'../structSplayTree.html#aec1d30f8e415fe8e5946e524d27c1ad6',
-				1, 'SplayTree::begin()'
+				'../structsplay__tree_1_1SplayTree.html#a2f4c63a201ae3d63d08229382dcbfc67',
+				1, 'splay_tree::SplayTree::begin()'
 			]
 		]
 	],
@@ -52,12 +52,21 @@ var searchData = [
 		[
 			'bench',
 			[
-				'../time_8hpp.html#a425b2be37c7d8476b2e1a8c8cf2b9c44',
-				1, 'time.hpp'
+				'../namespacetime__tools.html#a4d00a3da24d192703891d9dba336e6b5',
+				1, 'time_tools'
 			]
 		]
 	],
-	[ 'bfs_17', [ 'bfs', [ '../structbfs.html', 1, '' ] ] ],
+	[
+		'bfs_17',
+		[
+			'bfs',
+			[
+				'../structgraph__theory_1_1bfs.html', 1,
+				'graph_theory'
+			]
+		]
+	],
 	[
 		'bg_18',
 		[
@@ -75,10 +84,15 @@ var searchData = [
 	[
 		'bigint_20',
 		[
-			'bigint', [ '../structbigint.html', 1, 'bigint' ],
+			'bigint',
 			[
-				'../structbigint.html#a324563b78ab11071f07181a94a992edc',
-				1, 'bigint::bigint()'
+				'../structbigint_1_1bigint.html', 1,
+				'bigint::bigint'
+			],
+			[ '../namespacebigint.html', 1, 'bigint' ],
+			[
+				'../structbigint_1_1bigint.html#a2104d28d86c22e149f16f912b8d4e39e',
+				1, 'bigint::bigint::bigint()'
 			]
 		]
 	],
@@ -117,8 +131,8 @@ var searchData = [
 		[
 			'bipartite',
 			[
-				'../graph__theory_8hpp.html#a5ed86477f2614adcf2b123f8a530a75b',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#abacb9f1cecd2284dd5fb2bcfaf256b74',
+				1, 'graph_theory'
 			]
 		]
 	],
@@ -132,5 +146,14 @@ var searchData = [
 			]
 		]
 	],
-	[ 'bytehash_26', [ 'bytehash', [ '../structbytehash.html', 1, '' ] ] ]
+	[
+		'bytehash_26',
+		[
+			'bytehash',
+			[
+				'../structstring__tools_1_1bytehash.html', 1,
+				'string_tools'
+			]
+		]
+	]
 ];

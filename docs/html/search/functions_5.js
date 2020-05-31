@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'fac_523',
+		'fac_551',
 		[
 			'fac',
 			[
@@ -10,17 +10,17 @@ var searchData = [
 		]
 	],
 	[
-		'fact_524',
+		'fact_552',
 		[
 			'fact',
 			[
-				'../combinatorics_8hpp.html#aed30b4e386e3e22247cd9d6aecc1e88f',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a683282a64d9be4f8df67be6138201570',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'fft_525',
+		'fft_553',
 		[
 			'fft',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'filter_526',
+		'filter_554',
 		[
 			'filter',
 			[
@@ -40,17 +40,17 @@ var searchData = [
 		]
 	],
 	[
-		'find_527',
+		'find_555',
 		[
 			'find',
 			[
-				'../structSplayTree.html#a875c802868fd4e94282efdedd86cb772',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a63ec7e70e6422bbf64cb0b2e1bf497a9',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'fix_528',
+		'fix_556',
 		[
 			'fix',
 			[
@@ -58,8 +58,8 @@ var searchData = [
 				1, 'seg::fix()'
 			],
 			[
-				'../structfix.html#adb36f588bb16737970ac97c54686c126',
-				1, 'fix::fix()'
+				'../structutility_1_1fix.html#a0dc72e4b470b6c975318e9127706510f',
+				1, 'utility::fix::fix()'
 			],
 			[
 				'../namespacefix.html#aa1dbc2d92b97d52f7b70dee2535b7e94',
@@ -68,16 +68,16 @@ var searchData = [
 		]
 	],
 	[
-		'front_529',
+		'front_557',
 		[
 			'front',
 			[
-				'../classQueueAdaptor.html#ad3da3b616f21aa04d52328583eed51ed',
-				1, 'QueueAdaptor::front() const'
+				'../classqueue__tools_1_1QueueAdaptor.html#a603c22db9148d592426c73e53ad88178',
+				1, 'queue_tools::QueueAdaptor::front() const'
 			],
 			[
-				'../classQueueAdaptor.html#a66ac47ae5211e9ee3c81fdcb97f37451',
-				1, 'QueueAdaptor::front()'
+				'../classqueue__tools_1_1QueueAdaptor.html#ac807754cdc69adb7dcfd12c02a21d7cb',
+				1, 'queue_tools::QueueAdaptor::front()'
 			]
 		]
 	]

@@ -1,21 +1,24 @@
 var searchData = [
-	[ 'no_430', [ 'no', [ '../structno.html', 1, '' ] ] ],
-	[ 'no_5fimpl_431', [ 'no_impl', [ '../structno__impl.html', 1, '' ] ] ],
-	[ 'no_5fmod_432', [ 'no_mod', [ '../structno__mod.html', 1, '' ] ] ],
+	[ 'no_443', [ 'no', [ '../structtree_1_1no.html', 1, 'tree' ] ] ],
+	[ 'no_5fimpl_444', [ 'no_impl', [ '../structno__impl.html', 1, '' ] ] ],
+	[ 'no_5fmod_445', [ 'no_mod', [ '../structno__mod.html', 1, '' ] ] ],
 	[
-		'no_5fptr_5fv_433',
+		'no_5fptr_5fv_446',
 		[ 'no_ptr_v', [ '../structno__ptr__v.html', 1, '' ] ]
 	],
-	[ 'no_5fv_434', [ 'no_v', [ '../structno__v.html', 1, '' ] ] ],
+	[ 'no_5fv_447', [ 'no_v', [ '../structno__v.html', 1, '' ] ] ],
 	[
-		'node_435',
+		'node_448',
 		[
 			'Node',
-			[ '../structSplayTree_1_1Node.html', 1, 'SplayTree' ]
+			[
+				'../structsplay__tree_1_1SplayTree_1_1Node.html',
+				1, 'splay_tree::SplayTree'
+			]
 		]
 	],
 	[
-		'numeric_5flimits_3c_20ll_20_3e_436',
+		'numeric_5flimits_3c_20ll_20_3e_449',
 		[
 			'numeric_limits&lt; ll &gt;',
 			[

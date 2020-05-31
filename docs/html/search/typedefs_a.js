@@ -1,14 +1,14 @@
 var searchData = [ [
-	'size_5ftype_780',
+	'size_5ftype_808',
 	[
 		'size_type',
 		[
-			'../classQueueAdaptor.html#a9d1778a597097422d7545f38b7bc18ff',
-			1, 'QueueAdaptor::size_type()'
+			'../classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b',
+			1, 'queue_tools::QueueAdaptor::size_type()'
 		],
 		[
-			'../classMinStack.html#ab6f486799ff38265a93d4de4bf047e6f',
-			1, 'MinStack::size_type()'
+			'../classqueue__tools_1_1MinStack.html#a206c07303cc4afcc2ab35a04852f67e3',
+			1, 'queue_tools::MinStack::size_type()'
 		]
 	]
 ] ];

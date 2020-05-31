@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'fac_88',
+		'fac_90',
 		[
 			'fac',
 			[
@@ -10,17 +10,17 @@ var searchData = [
 		]
 	],
 	[
-		'fact_89',
+		'fact_91',
 		[
 			'fact',
 			[
-				'../combinatorics_8hpp.html#aed30b4e386e3e22247cd9d6aecc1e88f',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a683282a64d9be4f8df67be6138201570',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'fft_90',
+		'fft_92',
 		[
 			'fft',
 			[
@@ -29,9 +29,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'fft_2ehpp_91', [ 'fft.hpp', [ '../fft_8hpp.html', 1, '' ] ] ],
+	[ 'fft_2ehpp_93', [ 'fft.hpp', [ '../fft_8hpp.html', 1, '' ] ] ],
 	[
-		'filter_92',
+		'filter_94',
 		[
 			'filter',
 			[
@@ -41,31 +41,41 @@ var searchData = [
 		]
 	],
 	[
-		'find_93',
+		'find_95',
 		[
 			'find',
 			[
-				'../structSplayTree.html#a875c802868fd4e94282efdedd86cb772',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a63ec7e70e6422bbf64cb0b2e1bf497a9',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'first_5fcmp_94',
-		[ 'first_cmp', [ '../structfirst__cmp.html', 1, '' ] ]
+		'first_5fcmp_96',
+		[
+			'first_cmp',
+			[
+				'../structpersistent_1_1first__cmp.html', 1,
+				'persistent'
+			]
+		]
 	],
 	[
-		'fix_95',
+		'fix_97',
 		[
-			'fix', [ '../structfix.html', 1, 'fix&lt; Func &gt;' ],
+			'fix',
+			[
+				'../structutility_1_1fix.html', 1,
+				'utility::fix&lt; Func &gt;'
+			],
 			[ '../namespacefix.html', 1, 'fix' ],
 			[
 				'../structseg.html#abe9e9d5eca61fc8414635dd7f6c2cce3',
 				1, 'seg::fix()'
 			],
 			[
-				'../structfix.html#adb36f588bb16737970ac97c54686c126',
-				1, 'fix::fix()'
+				'../structutility_1_1fix.html#a0dc72e4b470b6c975318e9127706510f',
+				1, 'utility::fix::fix()'
 			],
 			[
 				'../namespacefix.html#aa1dbc2d92b97d52f7b70dee2535b7e94',
@@ -73,9 +83,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'fix_2epy_96', [ 'fix.py', [ '../fix_8py.html', 1, '' ] ] ],
+	[ 'fix_2epy_98', [ 'fix.py', [ '../fix_8py.html', 1, '' ] ] ],
 	[
-		'flip_97',
+		'flip_99',
 		[
 			'flip',
 			[
@@ -85,7 +95,7 @@ var searchData = [
 		]
 	],
 	[
-		'fo_98',
+		'fo_100',
 		[
 			'fo',
 			[
@@ -95,7 +105,7 @@ var searchData = [
 		]
 	],
 	[
-		'fr_99',
+		'fr_101',
 		[
 			'fr',
 			[
@@ -105,26 +115,26 @@ var searchData = [
 		]
 	],
 	[
-		'front_100',
+		'front_102',
 		[
 			'front',
 			[
-				'../classQueueAdaptor.html#ad3da3b616f21aa04d52328583eed51ed',
-				1, 'QueueAdaptor::front() const'
+				'../classqueue__tools_1_1QueueAdaptor.html#a603c22db9148d592426c73e53ad88178',
+				1, 'queue_tools::QueueAdaptor::front() const'
 			],
 			[
-				'../classQueueAdaptor.html#a66ac47ae5211e9ee3c81fdcb97f37451',
-				1, 'QueueAdaptor::front()'
+				'../classqueue__tools_1_1QueueAdaptor.html#ac807754cdc69adb7dcfd12c02a21d7cb',
+				1, 'queue_tools::QueueAdaptor::front()'
 			]
 		]
 	],
 	[
-		'func_101',
+		'func_103',
 		[
 			'func',
 			[
-				'../structfix.html#a2012a85b07f6b8fca89428ee232a0c52',
-				1, 'fix'
+				'../structutility_1_1fix.html#a3afbbbf98d76d3123362956f5b586940',
+				1, 'utility::fix'
 			]
 		]
 	]

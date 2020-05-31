@@ -1,26 +1,26 @@
 var searchData = [
 	[
-		'o_731',
+		'o_759',
 		[
 			'o',
 			[
-				'../structsearch__it.html#ad6180023d90fa2b55c0efece83b5c055',
-				1, 'search_it'
+				'../structstring__tools_1_1search__it.html#a0cf94550269ceab1506f23e769d3e16e',
+				1, 'string_tools::search_it'
 			]
 		]
 	],
 	[
-		'old_732',
+		'old_760',
 		[
 			'old',
 			[
-				'../structwith.html#aac8393894f6a5ae26f7573d58d4b6c14',
-				1, 'with'
+				'../structutility_1_1with.html#a925374fbb72eb58346236aa8196274af',
+				1, 'utility::with'
 			]
 		]
 	],
 	[
-		'op_733',
+		'op_761',
 		[
 			'op',
 			[

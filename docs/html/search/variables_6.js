@@ -1,10 +1,10 @@
 var searchData = [ [
-	'func_714',
+	'func_742',
 	[
 		'func',
 		[
-			'../structfix.html#a2012a85b07f6b8fca89428ee232a0c52',
-			1, 'fix'
+			'../structutility_1_1fix.html#a3afbbbf98d76d3123362956f5b586940',
+			1, 'utility::fix'
 		]
 	]
 ] ];

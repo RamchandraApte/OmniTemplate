@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'ok_573',
+		'ok_601',
 		[
 			'ok',
 			[
@@ -14,7 +14,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20auto_574',
+		'operator_20auto_602',
 		[
 			'operator auto',
 			[
@@ -22,8 +22,8 @@ var searchData = [
 				1, 'md::operator auto()'
 			],
 			[
-				'../structpers.html#a7ccd9b10b92b376ed94d1cd884cb8d53',
-				1, 'pers::operator auto()'
+				'../structpersistent_1_1pers.html#ad16e2906f0acb5b44696b3e732756ea7',
+				1, 'persistent::pers::operator auto()'
 			],
 			[
 				'../structint__it.html#aefbd19544f6f65507479b9058aab2998',
@@ -32,7 +32,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20auto_20_26_575',
+		'operator_20auto_20_26_603',
 		[
 			'operator auto &amp;',
 			[
@@ -42,7 +42,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20bool_576',
+		'operator_20bool_604',
 		[
 			'operator bool',
 			[
@@ -54,13 +54,13 @@ var searchData = [
 				1, 'pers_ptr::operator bool()'
 			],
 			[
-				'../structno.html#aeab546c13d21bc9056b96300093a97ea',
-				1, 'no::operator bool()'
+				'../structtree_1_1no.html#af0b6086861d10ce510b9a5619bd3ef36',
+				1, 'tree::no::operator bool()'
 			]
 		]
 	],
 	[
-		'operator_20ll_577',
+		'operator_20ll_605',
 		[
 			'operator ll',
 			[
@@ -70,7 +70,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_20lli_578',
+		'operator_20lli_606',
 		[
 			'operator lli',
 			[
@@ -80,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_21_3d_579',
+		'operator_21_3d_607',
 		[
 			'operator!=',
 			[
@@ -90,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_22_22m_580',
+		'operator_22_22m_608',
 		[
 			'operator&quot;&quot;M',
 			[
@@ -100,7 +100,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_25_581',
+		'operator_25_609',
 		[
 			'operator%',
 			[
@@ -142,7 +142,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_26_582',
+		'operator_26_610',
 		[
 			'operator&amp;',
 			[
@@ -199,61 +199,61 @@ var searchData = [
 		]
 	],
 	[
-		'operator_28_29_583',
+		'operator_28_29_611',
 		[
 			'operator()',
 			[
-				'../structdsu.html#a4ab9115da80cfd9d9811ea536442b6d6',
-				1, 'dsu::operator()()'
+				'../structdsu__ds_1_1dsu.html#ae8ad024ba75086c1f5dd11d9ac77c90a',
+				1, 'dsu_ds::dsu::operator()()'
 			],
 			[
-				'../structgsearch.html#a3f44a83cbe6f9c20052e5409decccd87',
-				1, 'gsearch::operator()(ll)=0'
+				'../structgraph__theory_1_1gsearch.html#abdf4ecadc6bff94aea75e416101d52fe',
+				1, 'graph_theory::gsearch::operator()(ll)=0'
 			],
 			[
-				'../structgsearch.html#a92a8ded190aadad238efe11b5ac3edcc',
-				1, 'gsearch::operator()()'
+				'../structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c',
+				1, 'graph_theory::gsearch::operator()()'
 			],
 			[
-				'../structdfs.html#a4a1ad18797e9a2f7861d55ccf743727f',
-				1, 'dfs::operator()()'
+				'../structgraph__theory_1_1dfs.html#a1a3ba25e0132919c9aa1392f93490927',
+				1, 'graph_theory::dfs::operator()()'
 			],
 			[
-				'../structbfs.html#a7f0c781accd2af82a51e4e95b758617d',
-				1, 'bfs::operator()()'
+				'../structgraph__theory_1_1bfs.html#adedad40628b7db9317842705122446bd',
+				1, 'graph_theory::bfs::operator()()'
 			],
 			[
 				'../structstd_1_1hash_3_01md_01_4.html#ae02292d626a0cd109a0e55c5a6779c3f',
 				1, 'std::hash&lt; md &gt;::operator()()'
 			],
 			[
-				'../structfirst__cmp.html#a552c2330a99f5e51676e3d5463bba040',
-				1, 'first_cmp::operator()()'
+				'../structpersistent_1_1first__cmp.html#a7b8fbb5ea87d4bc3ab32ec623b06b6cb',
+				1, 'persistent::first_cmp::operator()()'
 			],
 			[
 				'../structmymax.html#a152e4b3221f69d5ecead46cda55fb2bf',
 				1, 'mymax::operator()()'
 			],
 			[
-				'../structhash__str.html#ae6fd6e0300d1b4020e0df5430f54f507',
-				1, 'hash_str::operator()()'
+				'../structstring__tools_1_1hash__str.html#a99c0cc33fd4936512d1616a82b7b575d',
+				1, 'string_tools::hash_str::operator()()'
 			],
 			[
-				'../structbytehash.html#a9134bf96ee911825f045ee603d5970cd',
-				1, 'bytehash::operator()()'
+				'../structstring__tools_1_1bytehash.html#acd2724cd77a5c806fb0877c1211e7b25',
+				1, 'string_tools::bytehash::operator()()'
 			],
 			[
-				'../structfix.html#af62440018ea81c6b2fc7b29620a714c2',
-				1, 'fix::operator()()'
+				'../structutility_1_1fix.html#a71588d2f2e349fed9b375f15227b5966',
+				1, 'utility::fix::operator()()'
 			],
 			[
-				'../structrandom__device__patch.html#a5d58f2b4a5507b0b1ae6273eee7d7e07',
-				1, 'random_device_patch::operator()()'
+				'../structutility_1_1random__device__patch.html#a7cd4a52d04894da5d2ca621a419da09a',
+				1, 'utility::random_device_patch::operator()()'
 			]
 		]
 	],
 	[
-		'operator_2a_584',
+		'operator_2a_612',
 		[
 			'operator*',
 			[
@@ -269,17 +269,17 @@ var searchData = [
 				1, 'pers_ptr::operator*()'
 			],
 			[
-				'../structSplayTree_1_1iterator.html#a784b5bd1d70a24bf1367fedd30c9dc7e',
-				1, 'SplayTree::iterator::operator*()'
-			],
-			[
-				'../structsearch__it.html#af8d68beb8a634f1d6c15d8531360a08f',
-				1, 'search_it::operator*()'
-			],
-			[
-				'../linear__algebra_8hpp.html#a869262492de32bc50ba1ae957607d69b',
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#a829b918c279fe14702e25c943df6792e',
 				1,
-				'operator*(mat&lt; T... &gt; const &amp;a, mat&lt; T... &gt; const &amp;b):&#160;linear_algebra.hpp'
+				'splay_tree::SplayTree::iterator::operator*()'
+			],
+			[
+				'../structstring__tools_1_1search__it.html#af1edaa6e375d857575d012a55cdd4980',
+				1, 'string_tools::search_it::operator*()'
+			],
+			[
+				'../namespacelinear__algebra.html#a1c6aa5860219e4c07f3b8bda1db4e0f2',
+				1, 'linear_algebra::operator*()'
 			],
 			[
 				'../modulo_8hpp.html#a739129162899ff43a39303d29bd964dd',
@@ -331,7 +331,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2a_3d_585',
+		'operator_2a_3d_613',
 		[
 			'operator*=',
 			[
@@ -341,7 +341,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2b_586',
+		'operator_2b_614',
 		[
 			'operator+',
 			[
@@ -417,7 +417,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2b_2b_587',
+		'operator_2b_2b_615',
 		[
 			'operator++',
 			[
@@ -433,12 +433,13 @@ var searchData = [
 				1, 'int_it::operator++(int)'
 			],
 			[
-				'../structSplayTree_1_1iterator.html#a16422ee75f155368e0186196ac89b43c',
-				1, 'SplayTree::iterator::operator++()'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#a87fdbf8660f782a32ee209ab7108c0e8',
+				1,
+				'splay_tree::SplayTree::iterator::operator++()'
 			],
 			[
-				'../structsearch__it.html#a33dc3ba18c2a273db02fc12ad1ea64e6',
-				1, 'search_it::operator++()'
+				'../structstring__tools_1_1search__it.html#ae3b12022612273c38ee27b30942ded0b',
+				1, 'string_tools::search_it::operator++()'
 			],
 			[
 				'../modulo_8hpp.html#a17100f55f940d2da859920ff8783fc92',
@@ -447,7 +448,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2b_3d_588',
+		'operator_2b_3d_616',
 		[
 			'operator+=',
 			[
@@ -461,7 +462,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_589',
+		'operator_2d_617',
 		[
 			'operator-',
 			[
@@ -499,7 +500,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_2d_590',
+		'operator_2d_2d_618',
 		[
 			'operator--',
 			[
@@ -515,13 +516,14 @@ var searchData = [
 				1, 'int_it::operator--(int)'
 			],
 			[
-				'../structSplayTree_1_1iterator.html#a97df329bdff57dc3a956cea177bd3624',
-				1, 'SplayTree::iterator::operator--()'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#a1b2e58809547e4402b8a7ef16ed8253d',
+				1,
+				'splay_tree::SplayTree::iterator::operator--()'
 			]
 		]
 	],
 	[
-		'operator_2d_3d_591',
+		'operator_2d_3d_619',
 		[
 			'operator-=',
 			[
@@ -531,7 +533,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2d_3e_592',
+		'operator_2d_3e_620',
 		[
 			'operator-&gt;',
 			[
@@ -545,13 +547,12 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2f_593',
+		'operator_2f_621',
 		[
 			'operator/',
 			[
-				'../linear__algebra_8hpp.html#a82bf14f941e0f3e3c902ca1ea63b7a2d',
-				1,
-				'operator/(mat&lt; T... &gt; b, mat&lt; T... &gt; a):&#160;linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a2eb0db5259fbc7fffc75dd722aef527f',
+				1, 'linear_algebra::operator/()'
 			],
 			[
 				'../modulo_8hpp.html#ae515d341b4d4ed9e65ab11d85566dcb5',
@@ -603,7 +604,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_2f_3d_594',
+		'operator_2f_3d_622',
 		[
 			'operator/=',
 			[
@@ -613,7 +614,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3c_595',
+		'operator_3c_623',
 		[
 			'operator&lt;',
 			[
@@ -676,14 +677,13 @@ var searchData = [
 				'operator&lt;(range&lt; T &gt; const &amp;a, range&lt; T &gt; const &amp;b):&#160;range.hpp'
 			],
 			[
-				'../string_8hpp.html#a172956100bf7aa13ca8ecb1b872826e2',
-				1,
-				'operator&lt;(search_it const &amp;a, search_it const &amp;b):&#160;string.hpp'
+				'../namespacestring__tools.html#a072e7010806806c68fa2f537b0677c74',
+				1, 'string_tools::operator&lt;()'
 			]
 		]
 	],
 	[
-		'operator_3c_3c_596',
+		'operator_3c_3c_624',
 		[
 			'operator&lt;&lt;',
 			[
@@ -695,14 +695,12 @@ var searchData = [
 				1, 'rin::operator&lt;&lt;(string const &amp;s)'
 			],
 			[
-				'../big__integer_8hpp.html#ab1c01ea11cd355eaa2c477d43ffc120b',
-				1,
-				'operator&lt;&lt;(Stream &amp;os, bigint const &amp;a):&#160;big_integer.hpp'
+				'../namespacebigint.html#af4352ea3f90e44bbfe72018e96a89bce',
+				1, 'bigint::operator&lt;&lt;()'
 			],
 			[
-				'../dsu_8hpp.html#a79371d6c744abc293ad7db7766b1b997',
-				1,
-				'operator&lt;&lt;(Stream &amp;os, dsu const &amp;d):&#160;dsu.hpp'
+				'../namespacedsu__ds.html#a7c3dbc9f3763e1bd7e1faf0bdff90f78',
+				1, 'dsu_ds::operator&lt;&lt;()'
 			],
 			[
 				'../graph__theory_8hpp.html#a18e4531fb24d91bacaab3071e73938f5',
@@ -735,9 +733,8 @@ var searchData = [
 				'std::operator&lt;&lt;(rin &amp;os, const T &amp;v) -&gt; decltype(begin(v), declval&lt; decltype(os)&gt;())'
 			],
 			[
-				'../linear__algebra_8hpp.html#a9f304d5517398e00f1ba9c13317c07b8',
-				1,
-				'operator&lt;&lt;(Stream &amp;os, mat&lt; T... &gt; const &amp;m):&#160;linear_algebra.hpp'
+				'../namespacelinear__algebra.html#abd5c3b8b105df6592284c867a9451dad',
+				1, 'linear_algebra::operator&lt;&lt;()'
 			],
 			[
 				'../modulo_8hpp.html#ad6ef17134f6c5b63ed687fe46a62e2d7',
@@ -795,12 +792,13 @@ var searchData = [
 				'operator&lt;&lt;(Stream &amp;os, ll const &amp;a):&#160;my_int.hpp'
 			],
 			[
-				'../persistent_8hpp.html#a4666dfbf25b18ab72bed8f906767d938',
-				1,
-				'operator&lt;&lt;(Stream &amp;os, pers&lt; T &gt; const &amp;p):&#160;persistent.hpp'
+				'../namespacepersistent.html#aafe71ec52739bdcd46b2a85ac35ec776',
+				1, 'persistent::operator&lt;&lt;()'
 			],
 			[
-				'../segment__tree_8hpp.html#a5725dc99f2c2e7ba7ab0c73860df2554', 1, 'operator&lt;&lt;(Stream &amp;os, seg&lt; args... &gt; const &amp;sg):&#160;segment_tree.hpp'
+				'../segment__tree_8hpp.html#a5725dc99f2c2e7ba7ab0c73860df2554',
+				1,
+				'operator&lt;&lt;(Stream &amp;os, seg&lt; args... &gt; const &amp;sg):&#160;segment_tree.hpp'
 			],
 			[
 				'../treap_8hpp.html#a650f755f8c99e25e39d93616c8c866df',
@@ -815,7 +813,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3c_3d_597',
+		'operator_3c_3d_625',
 		[
 			'operator&lt;=',
 			[
@@ -825,32 +823,31 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3d_598',
+		'operator_3d_626',
 		[
 			'operator=',
 			[
-				'../structpers.html#a4f00b5204ad9a36fc53c6218ac2e9bd6',
-				1, 'pers'
+				'../structpersistent_1_1pers.html#a11fc55a84cb1327a5797ea29352eb8b9',
+				1, 'persistent::pers'
 			]
 		]
 	],
 	[
-		'operator_3d_3d_599',
+		'operator_3d_3d_627',
 		[
 			'operator==',
 			[
-				'../structSplayTree_1_1iterator.html#aa7e5c04b48a15e8f3d7725fdc208572b',
-				1, 'SplayTree::iterator::operator==()'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#ac7fc8c5b9cf35ae5b350631deda6b3c3',
+				1,
+				'splay_tree::SplayTree::iterator::operator==()'
 			],
 			[
 				'../graph__theory_8hpp.html#a3899b9c13b95304df918101d4c4f4d4f',
-				1,
-				'operator==(edge const &amp;a, edge const &amp;b):&#160;graph_theory.hpp'
+				1, 'operator==():&#160;graph_theory.hpp'
 			],
 			[
-				'../linear__algebra_8hpp.html#adde02b85217405ecfe675758588ccd36',
-				1,
-				'operator==(mat&lt; T... &gt; const &amp;a, mat&lt; T... &gt; const &amp;b):&#160;linear_algebra.hpp'
+				'../namespacelinear__algebra.html#aba815ba84289e2a7681e41e213461064',
+				1, 'linear_algebra::operator==()'
 			],
 			[
 				'../modulo_8hpp.html#a0643abd64cbdf649cb7d2d1d10185b17',
@@ -899,14 +896,13 @@ var searchData = [
 				'operator==(int_it&lt; T &gt; const &amp;a, int_it&lt; T &gt; const &amp;b):&#160;range.hpp'
 			],
 			[
-				'../string_8hpp.html#ab6c8ca76a6f0b8cc64a2a42b5f37c449',
-				1,
-				'operator==(search_it const &amp;a, search_it const &amp;b):&#160;string.hpp'
+				'../namespacestring__tools.html#ae6f8c1cd029548c31fa4c1cfab06a52f',
+				1, 'string_tools::operator==()'
 			]
 		]
 	],
 	[
-		'operator_3e_600',
+		'operator_3e_628',
 		[
 			'operator&gt;',
 			[
@@ -916,7 +912,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3e_3d_601',
+		'operator_3e_3d_629',
 		[
 			'operator&gt;=',
 			[
@@ -926,7 +922,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_3e_3e_602',
+		'operator_3e_3e_630',
 		[
 			'operator&gt;&gt;',
 			[
@@ -986,29 +982,29 @@ var searchData = [
 		]
 	],
 	[
-		'operator_5b_5d_603',
+		'operator_5b_5d_631',
 		[
 			'operator[]',
 			[
-				'../structbigint.html#af5db872f2ba54c931ba25fac1eb80f26',
-				1, 'bigint::operator[]()'
+				'../structbigint_1_1bigint.html#a976d2ec97121424c6ce6b4bb05f6ec86',
+				1, 'bigint::bigint::operator[]()'
 			],
 			[
-				'../structdsu.html#ab7482914117e1c1c47b8ef3ee8f020b9',
-				1, 'dsu::operator[]()'
+				'../structdsu__ds_1_1dsu.html#a4b0c8664978805f43fcf44e3ce465d69',
+				1, 'dsu_ds::dsu::operator[]()'
 			],
 			[
-				'../structmat.html#a2e094cc1c8b50b4ff26f6e2f885c9b96',
-				1, 'mat::operator[](ll i)'
+				'../structlinear__algebra_1_1mat.html#a29226724aa72a4298b55d2f0d5fbe68a',
+				1, 'linear_algebra::mat::operator[](ll i)'
 			],
 			[
-				'../structmat.html#a3b5d5195a5157bc1fcc0d1df1d702553',
-				1, 'mat::operator[](ll i) const'
+				'../structlinear__algebra_1_1mat.html#a69ac32bf5ee0251cd0d7e397d4e29c56',
+				1, 'linear_algebra::mat::operator[](ll i) const'
 			]
 		]
 	],
 	[
-		'operator_5e_604',
+		'operator_5e_632',
 		[
 			'operator^',
 			[
@@ -1029,7 +1025,7 @@ var searchData = [
 		]
 	],
 	[
-		'operator_7c_605',
+		'operator_7c_633',
 		[
 			'operator|',
 			[
@@ -1045,7 +1041,7 @@ var searchData = [
 		]
 	],
 	[
-		'over_606',
+		'over_634',
 		[
 			'over',
 			[

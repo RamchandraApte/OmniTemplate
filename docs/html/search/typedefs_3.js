@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'default_5frandom_5fdevice_766',
+		'default_5frandom_5fdevice_794',
 		[
 			'default_random_device',
 			[
-				'../utility_8hpp.html#ab383d789912924c9ccfe84042e73bf06',
-				1, 'utility.hpp'
+				'../namespaceutility.html#af41259b5f79ca938b1b30a75cf711bad',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'difference_5ftype_767',
+		'difference_5ftype_795',
 		[
 			'difference_type',
 			[

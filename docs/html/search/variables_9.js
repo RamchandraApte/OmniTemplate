@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'i_717',
+		'i_745',
 		[
 			'i',
 			[
@@ -8,13 +8,13 @@ var searchData = [
 				1, 'no_impl::i()'
 			],
 			[
-				'../structsearch__it.html#a72ea4698639a3fedc737de70319d72eb',
-				1, 'search_it::i()'
+				'../structstring__tools_1_1search__it.html#abbec6589aea3d745e199d755d85d554a',
+				1, 'string_tools::search_it::i()'
 			]
 		]
 	],
 	[
-		'id_718',
+		'id_746',
 		[
 			'id',
 			[
@@ -28,7 +28,7 @@ var searchData = [
 		]
 	],
 	[
-		'identity_719',
+		'identity_747',
 		[
 			'identity',
 			[
@@ -38,7 +38,7 @@ var searchData = [
 		]
 	],
 	[
-		'in_720',
+		'in_748',
 		[
 			'in',
 			[
@@ -52,7 +52,7 @@ var searchData = [
 		]
 	],
 	[
-		'inf_721',
+		'inf_749',
 		[
 			'inf',
 			[

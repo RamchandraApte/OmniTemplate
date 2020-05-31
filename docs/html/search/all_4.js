@@ -4,8 +4,8 @@ var searchData = [
 		[
 			'c',
 			[
-				'../structmat.html#abb1c76ee1813be34021752a1d9efa0ec',
-				1, 'mat'
+				'../structlinear__algebra_1_1mat.html#a5c0cc3b89ea8e6b79e9915c50c6c336b',
+				1, 'linear_algebra::mat'
 			]
 		]
 	],
@@ -14,8 +14,8 @@ var searchData = [
 		[
 			'cache',
 			[
-				'../utility_8hpp.html#a81e820760e553018a680c8264aa443b4',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a6e069fcf8b422fbc525eba2543e36a6e',
+				1, 'utility'
 			]
 		]
 	],
@@ -24,8 +24,8 @@ var searchData = [
 		[
 			'ccw',
 			[
-				'../geometry_8hpp.html#a701ea24ac7922f0e0f6e73ffa4d09a51',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a0da9365748befd6d88a5e4eb2e163ca0',
+				1, 'geometry'
 			]
 		]
 	],
@@ -44,8 +44,8 @@ var searchData = [
 		[
 			'child',
 			[
-				'../structSplayTree_1_1Node.html#ad58709abd217b595a81e7644025186ae',
-				1, 'SplayTree::Node'
+				'../structsplay__tree_1_1SplayTree_1_1Node.html#a180bb2086974ef98e56bf9c5e89243f1',
+				1, 'splay_tree::SplayTree::Node'
 			]
 		]
 	],
@@ -54,18 +54,19 @@ var searchData = [
 		[
 			'choose',
 			[
-				'../combinatorics_8hpp.html#a4d8eda9d63610214a1eb9b92a51443d1',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a1b1a7ea1cc5fc393d43d6a4c6d888876',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
 		'cht_33',
 		[
-			'cht', [ '../structcht.html', 1, 'cht' ],
+			'cht',
+			[ '../structgeometry_1_1cht.html', 1, 'geometry::cht' ],
 			[
-				'../structcht.html#aa8ccca255cb5abc67b6a9ea2d93931c8',
-				1, 'cht::cht()'
+				'../structgeometry_1_1cht.html#ab32a1385d1d61f99e3b1c4dd7335a88d',
+				1, 'geometry::cht::cht()'
 			]
 		]
 	],
@@ -120,25 +121,30 @@ var searchData = [
 		]
 	],
 	[
-		'combinatorics_2ehpp_39',
+		'combinatorics_39',
+		[ 'combinatorics', [ '../namespacecombinatorics.html', 1, '' ] ]
+	],
+	[
+		'combinatorics_2ehpp_40',
 		[ 'combinatorics.hpp', [ '../combinatorics_8hpp.html', 1, '' ] ]
 	],
 	[
-		'const_5freference_40',
+		'const_5freference_41',
 		[
 			'const_reference',
 			[
-				'../classQueueAdaptor.html#a56ffcdcc62cfe0618fc90437ce482018',
-				1, 'QueueAdaptor::const_reference()'
+				'../classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236',
+				1,
+				'queue_tools::QueueAdaptor::const_reference()'
 			],
 			[
-				'../classMinStack.html#af778589a78b11f906c7f6da00c1c0043',
-				1, 'MinStack::const_reference()'
+				'../classqueue__tools_1_1MinStack.html#a6fbd0283e2f3522ba2a795b8e3bfabd3',
+				1, 'queue_tools::MinStack::const_reference()'
 			]
 		]
 	],
 	[
-		'cont_41',
+		'cont_42',
 		[
 			'cont',
 			[
@@ -148,21 +154,21 @@ var searchData = [
 		]
 	],
 	[
-		'container_5ftype_42',
+		'container_5ftype_43',
 		[
 			'container_type',
 			[
-				'../classQueueAdaptor.html#a7d8d187a304d8c0a2d5044966bfbb8a6',
-				1, 'QueueAdaptor::container_type()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a0a12e0ff52602d46cea6f7bb072933f6',
+				1, 'queue_tools::QueueAdaptor::container_type()'
 			],
 			[
-				'../classMinStack.html#a410d91ba73ecf060c4cf7c5d542c63e0',
-				1, 'MinStack::container_type()'
+				'../classqueue__tools_1_1MinStack.html#ac9ae47477c69e5faadb9c478a153c596',
+				1, 'queue_tools::MinStack::container_type()'
 			]
 		]
 	],
 	[
-		'conv_43',
+		'conv_44',
 		[
 			'conv',
 			[
@@ -172,18 +178,18 @@ var searchData = [
 		]
 	],
 	[
-		'convex_5fmin_44',
+		'convex_5fmin_45',
 		[
 			'convex_min',
 			[
-				'../geometry_8hpp.html#a3e644172c556a84fa2c65aa39e99cea5',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a8143f89812fca762e08ba1a5d984c46b',
+				1, 'geometry'
 			]
 		]
 	],
-	[ 'core_2ehpp_45', [ 'core.hpp', [ '../core_8hpp.html', 1, '' ] ] ],
+	[ 'core_2ehpp_46', [ 'core.hpp', [ '../core_8hpp.html', 1, '' ] ] ],
 	[
-		'coreturn_46',
+		'coreturn_47',
 		[
 			'coreturn',
 			[
@@ -193,7 +199,7 @@ var searchData = [
 		]
 	],
 	[
-		'coro_47',
+		'coro_48',
 		[
 			'coro',
 			[
@@ -203,7 +209,7 @@ var searchData = [
 		]
 	],
 	[
-		'coroutine_2ehpp_48',
+		'coroutine_2ehpp_49',
 		[ 'coroutine.hpp', [ '../coroutine_8hpp.html', 1, '' ] ]
 	]
 ];

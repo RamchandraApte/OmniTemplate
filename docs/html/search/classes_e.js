@@ -1,11 +1,14 @@
 var searchData = [
 	[
-		'random_5fdevice_5fpatch_441',
+		'random_5fdevice_5fpatch_454',
 		[
 			'random_device_patch',
-			[ '../structrandom__device__patch.html', 1, '' ]
+			[
+				'../structutility_1_1random__device__patch.html',
+				1, 'utility'
+			]
 		]
 	],
-	[ 'range_442', [ 'range', [ '../structrange.html', 1, '' ] ] ],
-	[ 'rin_443', [ 'rin', [ '../structrin.html', 1, '' ] ] ]
+	[ 'range_455', [ 'range', [ '../structrange.html', 1, '' ] ] ],
+	[ 'rin_456', [ 'rin', [ '../structrin.html', 1, '' ] ] ]
 ];

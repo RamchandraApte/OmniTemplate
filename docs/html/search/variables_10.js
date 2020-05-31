@@ -1,10 +1,10 @@
 var searchData = [ [
-	'q_738',
+	'q_766',
 	[
 		'q',
 		[
-			'../structgsearch.html#a7f93010b6f8e7026b2300a03c4232d6c',
-			1, 'gsearch'
+			'../structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c',
+			1, 'graph_theory::gsearch'
 		]
 	]
 ] ];

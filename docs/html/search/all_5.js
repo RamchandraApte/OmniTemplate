@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'd_49',
+		'd_50',
 		[
 			'd',
 			[
-				'../structgsearch.html#a8a8798107a301730f224547b6fd01ef7',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#a3ae3429c387e83af67204fd0cdaa6d9d',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
 	[
-		'data_50',
+		'data_51',
 		[
 			'data',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'dbg_51',
+		'dbg_52',
 		[
 			'dbg',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'debug_52',
+		'debug_53',
 		[
 			'debug',
 			[
@@ -39,9 +39,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'debug_2ehpp_53', [ 'debug.hpp', [ '../debug_8hpp.html', 1, '' ] ] ],
+	[ 'debug_2ehpp_54', [ 'debug.hpp', [ '../debug_8hpp.html', 1, '' ] ] ],
 	[
-		'debug_5fmode_54',
+		'debug_5fmode_55',
 		[
 			'debug_mode',
 			[
@@ -51,7 +51,7 @@ var searchData = [
 		]
 	],
 	[
-		'def_55',
+		'def_56',
 		[
 			'def',
 			[
@@ -65,17 +65,17 @@ var searchData = [
 		]
 	],
 	[
-		'default_5frandom_5fdevice_56',
+		'default_5frandom_5fdevice_57',
 		[
 			'default_random_device',
 			[
-				'../utility_8hpp.html#ab383d789912924c9ccfe84042e73bf06',
-				1, 'utility.hpp'
+				'../namespaceutility.html#af41259b5f79ca938b1b30a75cf711bad',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'delim_57',
+		'delim_58',
 		[
 			'delim',
 			[
@@ -85,7 +85,7 @@ var searchData = [
 		]
 	],
 	[
-		'depth_58',
+		'depth_59',
 		[
 			'depth',
 			[
@@ -95,27 +95,27 @@ var searchData = [
 		]
 	],
 	[
-		'destroy_59',
+		'destroy_60',
 		[
 			'destroy',
 			[
-				'../structSplayTree.html#ac70b4b2c0a50a56f2984a1dfb332649a',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#ac6144f6ba3df06f3eb31da230d62a50b',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'det_60',
+		'det_61',
 		[
 			'det',
 			[
-				'../linear__algebra_8hpp.html#a9bca95617a7712fbff5e543cf1cef977',
-				1, 'linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a91838fc40acc32797cc1fe2499b3d472',
+				1, 'linear_algebra'
 			]
 		]
 	],
 	[
-		'df_61',
+		'df_62',
 		[
 			'df',
 			[
@@ -124,9 +124,18 @@ var searchData = [
 			]
 		]
 	],
-	[ 'dfs_62', [ 'dfs', [ '../structdfs.html', 1, '' ] ] ],
 	[
-		'difference_5ftype_63',
+		'dfs_63',
+		[
+			'dfs',
+			[
+				'../structgraph__theory_1_1dfs.html', 1,
+				'graph_theory'
+			]
+		]
+	],
+	[
+		'difference_5ftype_64',
 		[
 			'difference_type',
 			[
@@ -136,7 +145,7 @@ var searchData = [
 		]
 	],
 	[
-		'dis_64',
+		'dis_65',
 		[
 			'dis',
 			[
@@ -150,23 +159,23 @@ var searchData = [
 		]
 	],
 	[
-		'dist_65',
+		'dist_66',
 		[
 			'dist',
 			[
-				'../graph__theory_8hpp.html#a75115f1ba36186dc32ecb102a399508a',
+				'../namespacegraph__theory.html#a8167523c5325380ddf6d2903dd654271',
 				1,
-				'dist(vector&lt; vector&lt; pr &gt;&gt; g, ll s):&#160;graph_theory.hpp'
+				'graph_theory::dist(vector&lt; vector&lt; pr &gt;&gt; g, ll s)'
 			],
 			[
-				'../graph__theory_8hpp.html#a1fd40cc212c57c5abe8872fe2f90a1e6',
+				'../namespacegraph__theory.html#ac57faa4f7fdf406d6a511fb5b3dad2e8',
 				1,
-				'dist(mat&lt; ll &gt; const &amp;g):&#160;graph_theory.hpp'
+				'graph_theory::dist(mat&lt; ll &gt; const &amp;g)'
 			]
 		]
 	],
 	[
-		'divisors_66',
+		'divisors_67',
 		[
 			'divisors',
 			[
@@ -176,7 +185,7 @@ var searchData = [
 		]
 	],
 	[
-		'divs_67',
+		'divs_68',
 		[
 			'divs',
 			[
@@ -186,7 +195,7 @@ var searchData = [
 		]
 	],
 	[
-		'dlog_68',
+		'dlog_69',
 		[
 			'dlog',
 			[
@@ -196,7 +205,7 @@ var searchData = [
 		]
 	],
 	[
-		'do_5flazy_69',
+		'do_5flazy_70',
 		[
 			'do_lazy',
 			[
@@ -206,17 +215,17 @@ var searchData = [
 		]
 	],
 	[
-		'dot_70',
+		'dot_71',
 		[
 			'dot',
 			[
-				'../geometry_8hpp.html#a3a11abcc4197ec78b28351e3eed5be89',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a5ceebf824d89e53cc4a5f7652338e22f',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'down_71',
+		'down_72',
 		[
 			'down',
 			[
@@ -234,24 +243,26 @@ var searchData = [
 		]
 	],
 	[
-		'dp_72',
+		'dp_73',
 		[
 			'dp',
 			[
-				'../structno.html#a27eebf6a6aa79e20dd853fa39bf400bd',
-				1, 'no'
+				'../structtree_1_1no.html#af0fdce790d620d5787ac8efe7642ce70',
+				1, 'tree::no'
 			]
 		]
 	],
 	[
-		'dsu_73',
+		'dsu_74',
 		[
-			'dsu', [ '../structdsu.html', 1, 'dsu' ],
+			'dsu',
+			[ '../structdsu__ds_1_1dsu.html', 1, 'dsu_ds::dsu' ],
 			[
-				'../structdsu.html#a3d8ef126d199a5463e3b9647bd7162ee',
-				1, 'dsu::dsu()'
+				'../structdsu__ds_1_1dsu.html#a1e6ba03b0b186d48a5082d6c403d1719',
+				1, 'dsu_ds::dsu::dsu()'
 			]
 		]
 	],
-	[ 'dsu_2ehpp_74', [ 'dsu.hpp', [ '../dsu_8hpp.html', 1, '' ] ] ]
+	[ 'dsu_2ehpp_75', [ 'dsu.hpp', [ '../dsu_8hpp.html', 1, '' ] ] ],
+	[ 'dsu_5fds_76', [ 'dsu_ds', [ '../namespacedsu__ds.html', 1, '' ] ] ]
 ];

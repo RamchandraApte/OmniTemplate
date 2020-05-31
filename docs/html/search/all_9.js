@@ -1,54 +1,57 @@
 var searchData = [
 	[
-		'h_115',
+		'h_119',
 		[
 			'h',
 			[
-				'../structcht.html#a2dacac27432e96effbcd18cd158074ec',
-				1, 'cht::h()'
+				'../structgeometry_1_1cht.html#a9f9ad7e44e2235ae74328154bf82705f',
+				1, 'geometry::cht::h()'
 			],
 			[
 				'../structseg2.html#ae12c89dbd56719d18ecdf387fa7352b7',
 				1, 'seg2::h()'
 			],
 			[
-				'../structhash__str.html#a8ff1aebd14db666e829ba1c002158b74',
-				1, 'hash_str::h()'
+				'../structstring__tools_1_1hash__str.html#a7d2f6db90549c7ad0c1bd973fdaeb89b',
+				1, 'string_tools::hash_str::h()'
 			]
 		]
 	],
 	[
-		'hash_3c_20ll_20_3e_116',
+		'hash_3c_20ll_20_3e_120',
 		[
 			'hash&lt; ll &gt;',
 			[ '../structstd_1_1hash_3_01ll_01_4.html', 1, 'std' ]
 		]
 	],
 	[
-		'hash_3c_20md_20_3e_117',
+		'hash_3c_20md_20_3e_121',
 		[
 			'hash&lt; md &gt;',
 			[ '../structstd_1_1hash_3_01md_01_4.html', 1, 'std' ]
 		]
 	],
 	[
-		'hash_5fstr_118',
+		'hash_5fstr_122',
 		[
 			'hash_str',
-			[ '../structhash__str.html', 1, 'hash_str' ],
 			[
-				'../structhash__str.html#aa2aca132b7c912cb2a0f7f85fa4bac9d',
-				1, 'hash_str::hash_str()'
+				'../structstring__tools_1_1hash__str.html', 1,
+				'string_tools::hash_str'
+			],
+			[
+				'../structstring__tools_1_1hash__str.html#acdc2a1a29a8ea05b6e92276a8e771cf7',
+				1, 'string_tools::hash_str::hash_str()'
 			]
 		]
 	],
 	[
-		'hull_119',
+		'hull_123',
 		[
 			'hull',
 			[
-				'../geometry_8hpp.html#a0b6c2daaffdebeec1ac633cff83d9594',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a5033300f41ced6b6082bebe96d5eab7f',
+				1, 'geometry'
 			]
 		]
 	]

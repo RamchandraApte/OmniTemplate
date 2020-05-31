@@ -1,21 +1,21 @@
 var searchData = [
 	[
-		'wedge_694',
+		'wedge_722',
 		[
 			'wedge',
 			[
-				'../geometry_8hpp.html#a39bd99d30f0161c6653cc30527741cef',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a8c892a38a0ee5e5f47a06ba52d86a1fd',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'with_695',
+		'with_723',
 		[
 			'with',
 			[
-				'../structwith.html#a57a2ecba97c092a98b37db9d713f7b38',
-				1, 'with'
+				'../structutility_1_1with.html#ad5705a9ea2cdba42769360a65b7bc85d',
+				1, 'utility::with'
 			]
 		]
 	]

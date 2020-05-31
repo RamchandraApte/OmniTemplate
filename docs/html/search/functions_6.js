@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'gauss_530',
+		'gauss_558',
 		[
 			'gauss',
 			[
-				'../linear__algebra_8hpp.html#a19f0f5824555e4b22a1636e87f97d266',
-				1, 'linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a03aa0e426fe77447c17b33024bf073ce',
+				1, 'linear_algebra'
 			]
 		]
 	],
 	[
-		'get_5fdata_531',
+		'get_5fdata_559',
 		[
 			'get_data',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fimp_532',
+		'get_5fimp_560',
 		[
 			'get_imp',
 			[
@@ -30,27 +30,27 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fleft_533',
+		'get_5fleft_561',
 		[
 			'get_left',
 			[
-				'../classQueueAdaptor.html#a93327b413fb302d9f9b533a21179d39f',
-				1, 'QueueAdaptor'
+				'../classqueue__tools_1_1QueueAdaptor.html#a409777bac8958f09bf99f9ca2ff64ab0',
+				1, 'queue_tools::QueueAdaptor'
 			]
 		]
 	],
 	[
-		'get_5fright_534',
+		'get_5fright_562',
 		[
 			'get_right',
 			[
-				'../classQueueAdaptor.html#a9434246f808b040616e5bffb304fce43',
-				1, 'QueueAdaptor'
+				'../classqueue__tools_1_1QueueAdaptor.html#a39e37c34ea5fd27421f3f8dabe733a28',
+				1, 'queue_tools::QueueAdaptor'
 			]
 		]
 	],
 	[
-		'gl_535',
+		'gl_563',
 		[
 			'gl',
 			[
@@ -65,7 +65,7 @@ var searchData = [
 		]
 	],
 	[
-		'gr_536',
+		'gr_564',
 		[
 			'gr',
 			[
@@ -80,27 +80,27 @@ var searchData = [
 		]
 	],
 	[
-		'graph_5fin_537',
+		'graph_5fin_565',
 		[
 			'graph_in',
 			[
-				'../graph__theory_8hpp.html#a5f6185d1499a6bd321a7841e23001caa',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'gsearch_538',
+		'gsearch_566',
 		[
 			'gsearch',
 			[
-				'../structgsearch.html#a2947bb4418be3551585773e397d35fe6',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
 	[
-		'gt_539',
+		'gt_567',
 		[
 			'gt',
 			[
@@ -121,8 +121,8 @@ var searchData = [
 				1, 'seg2::gt(ll l)'
 			],
 			[
-				'../structno.html#a960156e927f79fdc000b9d230233369c',
-				1, 'no::gt()'
+				'../structtree_1_1no.html#a6706d57cfed232149e1af1c15dfd2dfa',
+				1, 'tree::no::gt()'
 			]
 		]
 	]

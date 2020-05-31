@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'm_158',
+		'm_163',
 		[
 			'm',
 			[
@@ -14,7 +14,7 @@ var searchData = [
 		]
 	],
 	[
-		'main_159',
+		'main_164',
 		[
 			'main',
 			[
@@ -23,9 +23,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'main_2ehpp_160', [ 'main.hpp', [ '../main_8hpp.html', 1, '' ] ] ],
+	[ 'main_2ehpp_165', [ 'main.hpp', [ '../main_8hpp.html', 1, '' ] ] ],
 	[
-		'main2_161',
+		'main2_166',
 		[
 			'main2',
 			[
@@ -43,62 +43,66 @@ var searchData = [
 		]
 	],
 	[
-		'map_5fargs_162',
+		'map_5fargs_167',
 		[
 			'map_args',
 			[
-				'../utility_8hpp.html#a03511d4859cd518749f66a6af5391f92',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a3bd1495c0bc9744b584e2294d8cb4693',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'mat_163',
+		'mat_168',
 		[
-			'mat', [ '../structmat.html', 1, 'mat&lt; T &gt;' ],
+			'mat',
 			[
-				'../structmat.html#a9ad6e1850cab94280da915e5020dddeb',
-				1,
-				'mat::mat(ll r_, ll c_, remove_const_t&lt; decltype(0LL)&gt; v=0LL)'
+				'../structlinear__algebra_1_1mat.html', 1,
+				'linear_algebra::mat&lt; T &gt;'
 			],
 			[
-				'../structmat.html#a1d61fff31bc57cc20b0c37a187ebd647',
-				1, 'mat::mat(T d)'
+				'../structlinear__algebra_1_1mat.html#ac7b577a385a660803789c65385513c7f',
+				1,
+				'linear_algebra::mat::mat(ll r_, ll c_, remove_const_t&lt; decltype(0LL)&gt; v=0LL)'
 			],
 			[
-				'../structmat.html#a776aa197276703b5f9ec5fea2b104602',
-				1,
-				'mat::mat(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)'
+				'../structlinear__algebra_1_1mat.html#a45138e742302b519a5cc0dc61d303d85',
+				1, 'linear_algebra::mat::mat(T d)'
 			],
 			[
-				'../structmat.html#a788ed9db3460102dbf99530f5b79de5e',
+				'../structlinear__algebra_1_1mat.html#ae4a8b93974829ecd104eb11bdb0aaa2e',
 				1,
-				'mat::mat(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)'
+				'linear_algebra::mat::mat(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)'
+			],
+			[
+				'../structlinear__algebra_1_1mat.html#a293297cbfcda8e14db3810f3c99407d9',
+				1,
+				'linear_algebra::mat::mat(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)'
 			]
 		]
 	],
 	[
-		'max_5fmatch_164',
+		'max_5fmatch_169',
 		[
 			'max_match',
 			[
-				'../graph__theory_8hpp.html#a838f63e24db10d9e165fd191b3cc2e05',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a3aa84048435079e1235a2ab9abb93467',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'maxeq_165',
+		'maxeq_170',
 		[
 			'maxeq',
 			[
-				'../utility_8hpp.html#a5b93ebe953feb9309e59874dee0fdb07',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a8b6098643b1bdae5f74331329a0dafb8',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'md_166',
+		'md_171',
 		[
 			'md', [ '../structmd.html', 1, 'md' ],
 			[
@@ -116,7 +120,7 @@ var searchData = [
 		]
 	],
 	[
-		'mid_167',
+		'mid_172',
 		[
 			'mid',
 			[
@@ -126,41 +130,65 @@ var searchData = [
 		]
 	],
 	[
-		'min_168',
+		'min_173',
 		[
 			'min',
 			[
-				'../structcht.html#af18569403920449f2f6a7059497dddb9',
-				1, 'cht::min()'
+				'../structgeometry_1_1cht.html#a0861340168994dd1a2e448e93ebbbce1',
+				1, 'geometry::cht::min()'
 			],
 			[
-				'../classMinStack.html#abb4c7ff623765a0c24f2091a27855310',
-				1, 'MinStack::min()'
+				'../classqueue__tools_1_1MinStack.html#abdcf9b4a593fa77e2702ee740814ff8b',
+				1, 'queue_tools::MinStack::min()'
 			],
 			[
-				'../classMinQueue.html#aa050a922fde794170ad24d639f42df36',
-				1, 'MinQueue::min()'
+				'../classqueue__tools_1_1MinQueue.html#a73bf3796b5aadd9098a2d1cee3485739',
+				1, 'queue_tools::MinQueue::min()'
 			]
 		]
 	],
 	[
-		'mineq_169',
+		'mineq_174',
 		[
 			'mineq',
 			[
-				'../utility_8hpp.html#abc6bb3f86a9c2d3083df5636d475b0fd',
-				1, 'utility.hpp'
+				'../namespaceutility.html#ae7b018f306c93c012280e72b146dbe68',
+				1, 'utility'
 			]
 		]
 	],
-	[ 'minqueue_170', [ 'MinQueue', [ '../classMinQueue.html', 1, '' ] ] ],
-	[ 'minstack_171', [ 'MinStack', [ '../classMinStack.html', 1, '' ] ] ],
 	[
-		'minstack_3c_20t_20_3e_172',
-		[ 'MinStack&lt; T &gt;', [ '../classMinStack.html', 1, '' ] ]
+		'minqueue_175',
+		[
+			'MinQueue',
+			[
+				'../classqueue__tools_1_1MinQueue.html', 1,
+				'queue_tools'
+			]
+		]
 	],
 	[
-		'mix_173',
+		'minstack_176',
+		[
+			'MinStack',
+			[
+				'../classqueue__tools_1_1MinStack.html', 1,
+				'queue_tools'
+			]
+		]
+	],
+	[
+		'minstack_3c_20t_20_3e_177',
+		[
+			'MinStack&lt; T &gt;',
+			[
+				'../classqueue__tools_1_1MinStack.html', 1,
+				'queue_tools'
+			]
+		]
+	],
+	[
+		'mix_178',
 		[
 			'mix',
 			[
@@ -170,7 +198,7 @@ var searchData = [
 		]
 	],
 	[
-		'mix1_174',
+		'mix1_179',
 		[
 			'mix1',
 			[
@@ -180,7 +208,7 @@ var searchData = [
 		]
 	],
 	[
-		'mix128_175',
+		'mix128_180',
 		[
 			'MIX128',
 			[
@@ -190,7 +218,7 @@ var searchData = [
 		]
 	],
 	[
-		'mixll_176',
+		'mixll_181',
 		[
 			'mixll',
 			[
@@ -199,22 +227,23 @@ var searchData = [
 			]
 		]
 	],
+	[ 'modulo_182', [ 'modulo', [ '../namespacemodulo.html', 1, '' ] ] ],
 	[
-		'modulo_2ehpp_177',
+		'modulo_2ehpp_183',
 		[ 'modulo.hpp', [ '../modulo_8hpp.html', 1, '' ] ]
 	],
 	[
-		'mst_178',
+		'mst_184',
 		[
 			'mst',
 			[
-				'../graph__theory_8hpp.html#ad13100084f2ab4fa87a96eb6baaab424',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#adc41c5f6146aaa8dce40082a7f310161',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'multitest_179',
+		'multitest_185',
 		[
 			'multitest',
 			[
@@ -224,11 +253,11 @@ var searchData = [
 		]
 	],
 	[
-		'my_5fint_2ehpp_180',
+		'my_5fint_2ehpp_186',
 		[ 'my_int.hpp', [ '../my__int_8hpp.html', 1, '' ] ]
 	],
 	[
-		'mylazy_181',
+		'mylazy_187',
 		[
 			'mylazy',
 			[
@@ -237,9 +266,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'mymax_182', [ 'mymax', [ '../structmymax.html', 1, '' ] ] ],
+	[ 'mymax_188', [ 'mymax', [ '../structmymax.html', 1, '' ] ] ],
 	[
-		'mypers_183',
+		'mypers_189',
 		[
 			'mypers',
 			[

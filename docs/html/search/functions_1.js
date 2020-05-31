@@ -1,20 +1,20 @@
 var searchData = [
 	[
-		'back_492',
+		'back_520',
 		[
 			'back',
 			[
-				'../classQueueAdaptor.html#a7140ad57c092adb529df4212bbf62f92',
-				1, 'QueueAdaptor::back() const'
+				'../classqueue__tools_1_1QueueAdaptor.html#a70c630a800a12e880917ffc2ccbd1153',
+				1, 'queue_tools::QueueAdaptor::back() const'
 			],
 			[
-				'../classQueueAdaptor.html#a86760f4e5f8f261a4199af7bfd6e175c',
-				1, 'QueueAdaptor::back()'
+				'../classqueue__tools_1_1QueueAdaptor.html#ad3a4f68bb1c2cbd0bedd8094e732bece',
+				1, 'queue_tools::QueueAdaptor::back()'
 			]
 		]
 	],
 	[
-		'begin_493',
+		'begin_521',
 		[
 			'begin',
 			[
@@ -22,38 +22,38 @@ var searchData = [
 				1, 'range::begin()'
 			],
 			[
-				'../structSplayTree.html#aec1d30f8e415fe8e5946e524d27c1ad6',
-				1, 'SplayTree::begin()'
+				'../structsplay__tree_1_1SplayTree.html#a2f4c63a201ae3d63d08229382dcbfc67',
+				1, 'splay_tree::SplayTree::begin()'
 			]
 		]
 	],
 	[
-		'bench_494',
+		'bench_522',
 		[
 			'bench',
 			[
-				'../time_8hpp.html#a425b2be37c7d8476b2e1a8c8cf2b9c44',
-				1, 'time.hpp'
+				'../namespacetime__tools.html#a4d00a3da24d192703891d9dba336e6b5',
+				1, 'time_tools'
 			]
 		]
 	],
 	[
-		'bigint_495',
+		'bigint_523',
 		[
 			'bigint',
 			[
-				'../structbigint.html#a324563b78ab11071f07181a94a992edc',
-				1, 'bigint'
+				'../structbigint_1_1bigint.html#a2104d28d86c22e149f16f912b8d4e39e',
+				1, 'bigint::bigint'
 			]
 		]
 	],
 	[
-		'bipartite_496',
+		'bipartite_524',
 		[
 			'bipartite',
 			[
-				'../graph__theory_8hpp.html#a5ed86477f2614adcf2b123f8a530a75b',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#abacb9f1cecd2284dd5fb2bcfaf256b74',
+				1, 'graph_theory'
 			]
 		]
 	]

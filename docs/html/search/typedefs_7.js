@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'mylazy_772',
+		'mylazy_800',
 		[
 			'mylazy',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'mypers_773',
+		'mypers_801',
 		[
 			'mypers',
 			[

@@ -1,80 +1,83 @@
 var searchData = [
 	[
-		's_283',
+		's_291',
 		[
 			's',
 			[
-				'../structdsu.html#ac8bcf25a17813d0298500990894e8192',
-				1, 'dsu::s()'
+				'../structdsu__ds_1_1dsu.html#afc6efa4f289a652843e2f9b814ae0041',
+				1, 'dsu_ds::dsu::s()'
 			],
 			[
-				'../structpers.html#a21c930a460a93a1f9f9c0204d1b02fc2',
-				1, 'pers::s()'
+				'../structpersistent_1_1pers.html#aa69f50e85db0c10e684390388ef6f23b',
+				1, 'persistent::pers::s()'
 			],
 			[
-				'../structsearch__it.html#a38ccae906a5d300780dce4d451deb17f',
-				1, 'search_it::s()'
+				'../structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe',
+				1, 'string_tools::search_it::s()'
 			]
 		]
 	],
 	[
-		'sat2_284',
+		'sat2_292',
 		[
-			'sat2',
+			'sat2', [ '../namespacesat2.html', 1, 'sat2' ],
 			[
-				'../2sat_8hpp.html#aab122b9926a6b55217e5542e400a6bae',
-				1, '2sat.hpp'
+				'../namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d',
+				1, 'sat2::sat2()'
 			]
 		]
 	],
 	[
-		'scc_285',
+		'scc_293',
 		[
 			'scc',
 			[
-				'../graph__theory_8hpp.html#a93d1a20d68db74c43261dd28201eb875',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a14c5caae4119d720412cda7748174301',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'search_5fall_286',
+		'search_5fall_294',
 		[
 			'search_all',
 			[
-				'../string_8hpp.html#a75acb80dd54dda8d2ae0c24a5d6f7c0c',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a314ab0a3b3f972a1af0b738851323829',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'search_5fit_287',
+		'search_5fit_295',
 		[
 			'search_it',
-			[ '../structsearch__it.html', 1, 'search_it' ],
 			[
-				'../structsearch__it.html#a734b63a53fc42bdf87d06bdf420af261',
-				1,
-				'search_it::search_it(string const &amp;t_, string const &amp;s_)'
+				'../structstring__tools_1_1search__it.html', 1,
+				'string_tools::search_it'
 			],
 			[
-				'../structsearch__it.html#aefe859f1cfc5ae1745baeabe41cd7a83',
-				1, 'search_it::search_it()'
+				'../structstring__tools_1_1search__it.html#aca022e021ec03287386571ef78a8e954',
+				1,
+				'string_tools::search_it::search_it(string const &amp;t_, string const &amp;s_)'
+			],
+			[
+				'../structstring__tools_1_1search__it.html#a1605669d491f38f76e0f32902a4b0ce7',
+				1, 'string_tools::search_it::search_it()'
 			]
 		]
 	],
 	[
-		'search_5fra_288',
+		'search_5fra_296',
 		[
 			'search_ra',
 			[
-				'../string_8hpp.html#a426f3aae79af5e0f9bf49f2dc28d3da8',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a9ea78f4e72ed84a9dc9c77e705185739',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'seg_289',
+		'seg_297',
 		[
 			'seg',
 			[ '../structseg.html', 1, 'seg&lt; op, id_ &gt;' ],
@@ -85,7 +88,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg2_290',
+		'seg2_298',
 		[
 			'seg2',
 			[
@@ -99,7 +102,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_5fbase_291',
+		'seg_5fbase_299',
 		[
 			'seg_base',
 			[ '../structseg__base.html', 1, 'seg_base&lt; T &gt;' ],
@@ -115,7 +118,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_292',
+		'seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_300',
 		[
 			'seg_base&lt; no_impl&lt; T &gt; &gt;',
 			[
@@ -125,21 +128,21 @@ var searchData = [
 		]
 	],
 	[
-		'segment_5ftree_2ehpp_293',
+		'segment_5ftree_2ehpp_301',
 		[ 'segment_tree.hpp', [ '../segment__tree_8hpp.html', 1, '' ] ]
 	],
 	[
-		'side_294',
+		'side_302',
 		[
 			'side',
 			[
-				'../structSplayTree.html#a06fae4dd156688ed46976373f21fbb26',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a12959724650bbd9fcf143c22ca674a9e',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'sieve_295',
+		'sieve_303',
 		[
 			'sieve',
 			[
@@ -149,7 +152,7 @@ var searchData = [
 		]
 	],
 	[
-		'sig_296',
+		'sig_304',
 		[
 			'sig',
 			[
@@ -163,7 +166,7 @@ var searchData = [
 		]
 	],
 	[
-		'simple_5ftp_297',
+		'simple_5ftp_305',
 		[
 			'simple_tp',
 			[
@@ -173,7 +176,7 @@ var searchData = [
 		]
 	],
 	[
-		'size_298',
+		'size_306',
 		[
 			'size',
 			[
@@ -181,68 +184,72 @@ var searchData = [
 				1, 'size_data::size()'
 			],
 			[
-				'../classQueueAdaptor.html#ac5d740b880e456d5a44cdba1f5acf2c1',
-				1, 'QueueAdaptor::size()'
+				'../classqueue__tools_1_1QueueAdaptor.html#adfb78c6b9828b06e9c8f29ae56b43078',
+				1, 'queue_tools::QueueAdaptor::size()'
 			],
 			[
-				'../structSplayTree.html#a67cc9fe4b6d6c9e2167701c982fcefb8',
-				1, 'SplayTree::size()'
+				'../structsplay__tree_1_1SplayTree.html#a399bb4f399c9dd30d087cd6766a91700',
+				1, 'splay_tree::SplayTree::size()'
 			]
 		]
 	],
 	[
-		'size_5fdata_299',
+		'size_5fdata_307',
 		[ 'size_data', [ '../structsize__data.html', 1, '' ] ]
 	],
 	[
-		'size_5ftype_300',
+		'size_5ftype_308',
 		[
 			'size_type',
 			[
-				'../classQueueAdaptor.html#a9d1778a597097422d7545f38b7bc18ff',
-				1, 'QueueAdaptor::size_type()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b',
+				1, 'queue_tools::QueueAdaptor::size_type()'
 			],
 			[
-				'../classMinStack.html#ab6f486799ff38265a93d4de4bf047e6f',
-				1, 'MinStack::size_type()'
+				'../classqueue__tools_1_1MinStack.html#a206c07303cc4afcc2ab35a04852f67e3',
+				1, 'queue_tools::MinStack::size_type()'
 			]
 		]
 	],
 	[
-		'splay_301',
+		'splay_309',
 		[
 			'splay',
 			[
-				'../structSplayTree.html#a88e940e01fba29d4f1eec8b8b5fb2cea',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a3db8f486eeed38868355ebc740ae893e',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'splay_5ftree_2ehpp_302',
+		'splay_5ftree_310',
+		[ 'splay_tree', [ '../namespacesplay__tree.html', 1, '' ] ]
+	],
+	[
+		'splay_5ftree_2ehpp_311',
 		[ 'splay_tree.hpp', [ '../splay__tree_8hpp.html', 1, '' ] ]
 	],
 	[
-		'splaytree_303',
+		'splaytree_312',
 		[
 			'SplayTree',
 			[
-				'../structSplayTree.html', 1,
-				'SplayTree&lt; T &gt;'
+				'../structsplay__tree_1_1SplayTree.html', 1,
+				'splay_tree::SplayTree&lt; T &gt;'
 			],
 			[
-				'../structSplayTree.html#a83684091424cc8dab08bba29cacfc6df',
-				1, 'SplayTree::SplayTree()'
+				'../structsplay__tree_1_1SplayTree.html#aa627e1ec6a9f5f62cb2aba123f47df0b',
+				1, 'splay_tree::SplayTree::SplayTree()'
 			]
 		]
 	],
 	[
-		'split_304',
+		'split_313',
 		[
 			'split',
 			[
-				'../structSplayTree.html#a0fce64ec0ca10d1774cd24d4c98edf1c',
-				1, 'SplayTree::split()'
+				'../structsplay__tree_1_1SplayTree.html#a70d72238898de04e4524586a060609b2',
+				1, 'splay_tree::SplayTree::split()'
 			],
 			[
 				'../treap_8hpp.html#ab4b19e3c8f0a975627a7261ed3e2c29b',
@@ -251,7 +258,7 @@ var searchData = [
 		]
 	],
 	[
-		'split_5fimp_305',
+		'split_5fimp_314',
 		[
 			'split_imp',
 			[
@@ -261,21 +268,25 @@ var searchData = [
 		]
 	],
 	[
-		'st_306',
+		'st_315',
 		[
 			'st',
 			[
-				'../structhash__str.html#a3f7edccf79b433723951542b1521e893',
-				1, 'hash_str'
+				'../structstring__tools_1_1hash__str.html#ac76e86127435197776e56d58da7ac0fe',
+				1, 'string_tools::hash_str'
 			]
 		]
 	],
 	[
-		'string_2ehpp_307',
+		'string_2ehpp_316',
 		[ 'string.hpp', [ '../string_8hpp.html', 1, '' ] ]
 	],
 	[
-		'sub_5fset_308',
+		'string_5ftools_317',
+		[ 'string_tools', [ '../namespacestring__tools.html', 1, '' ] ]
+	],
+	[
+		'sub_5fset_318',
 		[
 			'sub_set',
 			[
@@ -285,16 +296,16 @@ var searchData = [
 		]
 	],
 	[
-		'sz_309',
+		'sz_319',
 		[
 			'sz',
 			[
-				'../structSplayTree.html#a4db3a3ba8655169a636ca73c4a88cc15',
-				1, 'SplayTree::sz()'
+				'../structsplay__tree_1_1SplayTree.html#ad8a0e9a28f75b0ad0f8f0391a2cd1192',
+				1, 'splay_tree::SplayTree::sz()'
 			],
 			[
-				'../tree_8hpp.html#a8f1a8683a6149a8df03b1bf40b7beaa0',
-				1, 'sz():&#160;tree.hpp'
+				'../namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53',
+				1, 'tree::sz()'
 			]
 		]
 	]

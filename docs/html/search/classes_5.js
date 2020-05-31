@@ -1,7 +1,16 @@
 var searchData = [
 	[
-		'first_5fcmp_407',
-		[ 'first_cmp', [ '../structfirst__cmp.html', 1, '' ] ]
+		'first_5fcmp_420',
+		[
+			'first_cmp',
+			[
+				'../structpersistent_1_1first__cmp.html', 1,
+				'persistent'
+			]
+		]
 	],
-	[ 'fix_408', [ 'fix', [ '../structfix.html', 1, '' ] ] ]
+	[
+		'fix_421',
+		[ 'fix', [ '../structutility_1_1fix.html', 1, 'utility' ] ]
+	]
 ];

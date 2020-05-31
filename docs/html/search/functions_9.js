@@ -1,10 +1,10 @@
 var searchData = [ [
-	'join_550',
+	'join_578',
 	[
 		'join',
 		[
-			'../structSplayTree.html#a17f97eb4546fb9a2c182c5f6b2061395',
-			1, 'SplayTree::join()'
+			'../structsplay__tree_1_1SplayTree.html#a21a513a7ac2715f280d2a89b3890722a',
+			1, 'splay_tree::SplayTree::join()'
 		],
 		[
 			'../treap_8hpp.html#a4338e31f2a01e882efc6adf47768c076',

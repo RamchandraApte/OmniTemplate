@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'clock_5f_762',
+		'clock_5f_790',
 		[
 			'clock_',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'com_763',
+		'com_791',
 		[
 			'com',
 			[
@@ -20,30 +20,31 @@ var searchData = [
 		]
 	],
 	[
-		'const_5freference_764',
+		'const_5freference_792',
 		[
 			'const_reference',
 			[
-				'../classQueueAdaptor.html#a56ffcdcc62cfe0618fc90437ce482018',
-				1, 'QueueAdaptor::const_reference()'
+				'../classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236',
+				1,
+				'queue_tools::QueueAdaptor::const_reference()'
 			],
 			[
-				'../classMinStack.html#af778589a78b11f906c7f6da00c1c0043',
-				1, 'MinStack::const_reference()'
+				'../classqueue__tools_1_1MinStack.html#a6fbd0283e2f3522ba2a795b8e3bfabd3',
+				1, 'queue_tools::MinStack::const_reference()'
 			]
 		]
 	],
 	[
-		'container_5ftype_765',
+		'container_5ftype_793',
 		[
 			'container_type',
 			[
-				'../classQueueAdaptor.html#a7d8d187a304d8c0a2d5044966bfbb8a6',
-				1, 'QueueAdaptor::container_type()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a0a12e0ff52602d46cea6f7bb072933f6',
+				1, 'queue_tools::QueueAdaptor::container_type()'
 			],
 			[
-				'../classMinStack.html#a410d91ba73ecf060c4cf7c5d542c63e0',
-				1, 'MinStack::container_type()'
+				'../classqueue__tools_1_1MinStack.html#ac9ae47477c69e5faadb9c478a153c596',
+				1, 'queue_tools::MinStack::container_type()'
 			]
 		]
 	]

@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'ed_712',
+		'ed_740',
 		[
 			'ed',
 			[
@@ -8,18 +8,18 @@ var searchData = [
 				1, 'range::ed()'
 			],
 			[
-				'../structsearch__it.html#a46579f4b89ff311a870546f50af638c2',
-				1, 'search_it::ed()'
+				'../structstring__tools_1_1search__it.html#a87ec86b38282706ad524ea778ba728b0',
+				1, 'string_tools::search_it::ed()'
 			]
 		]
 	],
 	[
-		'empstr_713',
+		'empstr_741',
 		[
 			'empstr',
 			[
-				'../string_8hpp.html#a856c91a54b4b92ce7969d3ce8aeac3f1',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a01217477dcb709d208fc7a38ee91d26e',
+				1, 'string_tools'
 			]
 		]
 	]

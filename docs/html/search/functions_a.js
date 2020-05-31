@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'lazy_5fptr_551',
+		'lazy_5fptr_579',
 		[
 			'lazy_ptr',
 			[
@@ -10,17 +10,17 @@ var searchData = [
 		]
 	],
 	[
-		'lca_552',
+		'lca_580',
 		[
 			'lca',
 			[
-				'../tree_8hpp.html#aee19c8efa379e905568ab1d54bebfe6b',
-				1, 'tree.hpp'
+				'../namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419',
+				1, 'tree'
 			]
 		]
 	],
 	[
-		'lets_5fadd_553',
+		'lets_5fadd_581',
 		[
 			'lets_add',
 			[
@@ -30,17 +30,17 @@ var searchData = [
 		]
 	],
 	[
-		'lin_5frecur_554',
+		'lin_5frecur_582',
 		[
 			'lin_recur',
 			[
-				'../linear__algebra_8hpp.html#ae3cd3eded530a14682cf9a4ca4d17f51',
-				1, 'linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a83e73169ca96c72d26f112bd55c38b02',
+				1, 'linear_algebra'
 			]
 		]
 	],
 	[
-		'll_555',
+		'll_583',
 		[
 			'll',
 			[

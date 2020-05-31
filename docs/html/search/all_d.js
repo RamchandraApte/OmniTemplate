@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'l_143',
+		'l_147',
 		[
 			'l',
 			[
@@ -14,7 +14,7 @@ var searchData = [
 		]
 	],
 	[
-		'l_5f_144',
+		'l_5f_148',
 		[
 			'l_',
 			[
@@ -24,7 +24,7 @@ var searchData = [
 		]
 	],
 	[
-		'lambda_145',
+		'lambda_149',
 		[
 			'lambda',
 			[
@@ -34,7 +34,7 @@ var searchData = [
 		]
 	],
 	[
-		'lazy_5fptr_146',
+		'lazy_5fptr_150',
 		[
 			'lazy_ptr',
 			[ '../structlazy__ptr.html', 1, 'lazy_ptr&lt; T &gt;' ],
@@ -45,27 +45,27 @@ var searchData = [
 		]
 	],
 	[
-		'lca_147',
+		'lca_151',
 		[
 			'lca',
 			[
-				'../tree_8hpp.html#aee19c8efa379e905568ab1d54bebfe6b',
-				1, 'tree.hpp'
+				'../namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419',
+				1, 'tree'
 			]
 		]
 	],
 	[
-		'lcg_5fmod_148',
+		'lcg_5fmod_152',
 		[
 			'lcg_mod',
 			[
-				'../structhash__str.html#a30fd050c96c02d32403015aa45cf36c5',
-				1, 'hash_str'
+				'../structstring__tools_1_1hash__str.html#a6a815a0256e241866570471a3f19e1ea',
+				1, 'string_tools::hash_str'
 			]
 		]
 	],
 	[
-		'ld_149',
+		'ld_153',
 		[
 			'ld',
 			[
@@ -75,7 +75,7 @@ var searchData = [
 		]
 	],
 	[
-		'let_150',
+		'let_154',
 		[
 			'let',
 			[
@@ -85,7 +85,7 @@ var searchData = [
 		]
 	],
 	[
-		'lets_151',
+		'lets_155',
 		[
 			'lets',
 			[
@@ -95,7 +95,7 @@ var searchData = [
 		]
 	],
 	[
-		'lets_5fadd_152',
+		'lets_5fadd_156',
 		[
 			'lets_add',
 			[ '../structlets__add.html', 1, 'lets_add' ],
@@ -106,7 +106,7 @@ var searchData = [
 		]
 	],
 	[
-		'lets_5fcount_153',
+		'lets_5fcount_157',
 		[
 			'lets_count',
 			[
@@ -116,24 +116,31 @@ var searchData = [
 		]
 	],
 	[
-		'lin_5frecur_154',
+		'lin_5frecur_158',
 		[
 			'lin_recur',
 			[
-				'../linear__algebra_8hpp.html#ae3cd3eded530a14682cf9a4ca4d17f51',
-				1, 'linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a83e73169ca96c72d26f112bd55c38b02',
+				1, 'linear_algebra'
 			]
 		]
 	],
 	[
-		'linear_5falgebra_2ehpp_155',
+		'linear_5falgebra_159',
+		[
+			'linear_algebra',
+			[ '../namespacelinear__algebra.html', 1, '' ]
+		]
+	],
+	[
+		'linear_5falgebra_2ehpp_160',
 		[
 			'linear_algebra.hpp',
 			[ '../linear__algebra_8hpp.html', 1, '' ]
 		]
 	],
 	[
-		'll_156',
+		'll_161',
 		[
 			'll', [ '../structll.html', 1, 'll' ],
 			[
@@ -143,7 +150,7 @@ var searchData = [
 		]
 	],
 	[
-		'lli_157',
+		'lli_162',
 		[
 			'lli',
 			[

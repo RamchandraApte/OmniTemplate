@@ -1,11 +1,11 @@
 var searchData = [
 	[
-		'r_266',
+		'r_274',
 		[
 			'r',
 			[
-				'../structmat.html#aca56f851058aa09cf0460a3969aa6629',
-				1, 'mat::r()'
+				'../structlinear__algebra_1_1mat.html#a9d9efb22ebbed519be5fdc72116d46b3',
+				1, 'linear_algebra::mat::r()'
 			],
 			[
 				'../structseg2.html#a77a3a7274fdb739fc52b4215e45f5735',
@@ -18,7 +18,7 @@ var searchData = [
 		]
 	],
 	[
-		'r_5f_267',
+		'r_5f_275',
 		[
 			'r_',
 			[
@@ -28,7 +28,7 @@ var searchData = [
 		]
 	],
 	[
-		'ra_268',
+		'ra_276',
 		[
 			'ra',
 			[
@@ -38,14 +38,17 @@ var searchData = [
 		]
 	],
 	[
-		'random_5fdevice_5fpatch_269',
+		'random_5fdevice_5fpatch_277',
 		[
 			'random_device_patch',
-			[ '../structrandom__device__patch.html', 1, '' ]
+			[
+				'../structutility_1_1random__device__patch.html',
+				1, 'utility'
+			]
 		]
 	],
 	[
-		'range_270',
+		'range_278',
 		[
 			'range',
 			[ '../structrange.html', 1, 'range&lt; T &gt;' ],
@@ -60,19 +63,19 @@ var searchData = [
 			]
 		]
 	],
-	[ 'range_2ehpp_271', [ 'range.hpp', [ '../range_8hpp.html', 1, '' ] ] ],
-	[ 'readme_2emd_272', [ 'README.md', [ '../README_8md.html', 1, '' ] ] ],
+	[ 'range_2ehpp_279', [ 'range.hpp', [ '../range_8hpp.html', 1, '' ] ] ],
+	[ 'readme_2emd_280', [ 'README.md', [ '../README_8md.html', 1, '' ] ] ],
 	[
-		'reference_273',
+		'reference_281',
 		[
 			'reference',
 			[
-				'../classQueueAdaptor.html#a879e8bf98a35a1ea6cc7d63b0de0783f',
-				1, 'QueueAdaptor::reference()'
+				'../classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f',
+				1, 'queue_tools::QueueAdaptor::reference()'
 			],
 			[
-				'../classMinStack.html#ababec68b9c2f1fbf3e573f0c00fb55a0',
-				1, 'MinStack::reference()'
+				'../classqueue__tools_1_1MinStack.html#aa0f4720a343e959a1c4539604b48e91f',
+				1, 'queue_tools::MinStack::reference()'
 			],
 			[
 				'../structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a',
@@ -81,7 +84,7 @@ var searchData = [
 		]
 	],
 	[
-		'rel_5fassert_274',
+		'rel_5fassert_282',
 		[
 			'rel_assert',
 			[
@@ -91,17 +94,17 @@ var searchData = [
 		]
 	],
 	[
-		'reng_275',
+		'reng_283',
 		[
 			'reng',
 			[
-				'../utility_8hpp.html#a9fc68ed025086c5affbd401726bc07b8',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'replace_276',
+		'replace_284',
 		[
 			'replace',
 			[
@@ -111,7 +114,7 @@ var searchData = [
 		]
 	],
 	[
-		'ret_277',
+		'ret_285',
 		[
 			'ret',
 			[
@@ -121,7 +124,7 @@ var searchData = [
 		]
 	],
 	[
-		'rev_278',
+		'rev_286',
 		[
 			'rev',
 			[
@@ -135,7 +138,7 @@ var searchData = [
 		]
 	],
 	[
-		'rin_279',
+		'rin_287',
 		[
 			'rin', [ '../structrin.html', 1, 'rin' ],
 			[
@@ -145,7 +148,7 @@ var searchData = [
 		]
 	],
 	[
-		'ro_280',
+		'ro_288',
 		[
 			'ro',
 			[
@@ -155,22 +158,22 @@ var searchData = [
 		]
 	],
 	[
-		'root_281',
+		'root_289',
 		[
 			'root',
 			[
-				'../structSplayTree.html#a6420512e79937fd59edb2a595f977750',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a673d3706c5c3e58495775af5aac944c9',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'rotate_282',
+		'rotate_290',
 		[
 			'rotate',
 			[
-				'../structSplayTree.html#a167b770118895382687c93f9715a6879',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a5e9b38d0cd5740cf94899eddbcbca05e',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	]

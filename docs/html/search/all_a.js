@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'i_120',
+		'i_124',
 		[
 			'i',
 			[
@@ -8,8 +8,8 @@ var searchData = [
 				1, 'no_impl::i()'
 			],
 			[
-				'../structsearch__it.html#a72ea4698639a3fedc737de70319d72eb',
-				1, 'search_it::i()'
+				'../structstring__tools_1_1search__it.html#abbec6589aea3d745e199d755d85d554a',
+				1, 'string_tools::search_it::i()'
 			],
 			[
 				'../core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb',
@@ -18,7 +18,7 @@ var searchData = [
 		]
 	],
 	[
-		'id_121',
+		'id_125',
 		[
 			'id', [ '../structid.html', 1, 'id' ],
 			[
@@ -30,13 +30,13 @@ var searchData = [
 				1, 'seg2::id()'
 			],
 			[
-				'../structmat.html#a5276e05d6558dd927544e92147e26fc1',
-				1, 'mat::id()'
+				'../structlinear__algebra_1_1mat.html#a3a5c49f2f844f29e5a198a75b0effba8',
+				1, 'linear_algebra::mat::id()'
 			]
 		]
 	],
 	[
-		'identity_122',
+		'identity_126',
 		[
 			'identity',
 			[
@@ -60,7 +60,7 @@ var searchData = [
 		]
 	],
 	[
-		'ifft_123',
+		'ifft_127',
 		[
 			'ifft',
 			[
@@ -70,7 +70,7 @@ var searchData = [
 		]
 	],
 	[
-		'import_124',
+		'import_128',
 		[
 			'import',
 			[
@@ -80,7 +80,7 @@ var searchData = [
 		]
 	],
 	[
-		'in_125',
+		'in_129',
 		[
 			'in',
 			[
@@ -94,7 +94,7 @@ var searchData = [
 		]
 	],
 	[
-		'inf_126',
+		'inf_130',
 		[
 			'inf',
 			[
@@ -104,7 +104,7 @@ var searchData = [
 		]
 	],
 	[
-		'inh_127',
+		'inh_131',
 		[
 			'inh',
 			[
@@ -114,16 +114,18 @@ var searchData = [
 		]
 	],
 	[
-		'insert_128',
+		'insert_132',
 		[
 			'insert',
 			[
-				'../structSplayTree.html#a68ee8070ca751318c345c2ec728b6003',
-				1, 'SplayTree::insert(Node *const x)'
+				'../structsplay__tree_1_1SplayTree.html#a80ab90fbd7be1405ae05399b0fc2f2f1',
+				1,
+				'splay_tree::SplayTree::insert(Node *const x)'
 			],
 			[
-				'../structSplayTree.html#a9885fe15adae36e69006e8e2e2e5e21c',
-				1, 'SplayTree::insert(const T &amp;key)'
+				'../structsplay__tree_1_1SplayTree.html#a2bf075a9e6a46e3f9b61e7b00b546707',
+				1,
+				'splay_tree::SplayTree::insert(const T &amp;key)'
 			],
 			[
 				'../treap_8hpp.html#ad45b31cb3a5a560af114abfcbce83936',
@@ -138,7 +140,7 @@ var searchData = [
 		]
 	],
 	[
-		'insert_5fimp_129',
+		'insert_5fimp_133',
 		[
 			'insert_imp',
 			[
@@ -154,7 +156,7 @@ var searchData = [
 		]
 	],
 	[
-		'int_5fit_130',
+		'int_5fit_134',
 		[
 			'int_it',
 			[ '../structint__it.html', 1, 'int_it&lt; T &gt;' ],
@@ -169,7 +171,7 @@ var searchData = [
 		]
 	],
 	[
-		'intersect_131',
+		'intersect_135',
 		[
 			'intersect',
 			[
@@ -178,9 +180,9 @@ var searchData = [
 			]
 		]
 	],
-	[ 'io_2ehpp_132', [ 'io.hpp', [ '../io_8hpp.html', 1, '' ] ] ],
+	[ 'io_2ehpp_136', [ 'io.hpp', [ '../io_8hpp.html', 1, '' ] ] ],
 	[
-		'is_5fintegral_3c_20ll_20_3e_133',
+		'is_5fintegral_3c_20ll_20_3e_137',
 		[
 			'is_integral&lt; ll &gt;',
 			[
@@ -190,7 +192,7 @@ var searchData = [
 		]
 	],
 	[
-		'is_5fsigned_3c_20ll_20_3e_134',
+		'is_5fsigned_3c_20ll_20_3e_138',
 		[
 			'is_signed&lt; ll &gt;',
 			[
@@ -200,7 +202,7 @@ var searchData = [
 		]
 	],
 	[
-		'is_5funsigned_3c_20ll_20_3e_135',
+		'is_5funsigned_3c_20ll_20_3e_139',
 		[
 			'is_unsigned&lt; ll &gt;',
 			[
@@ -210,7 +212,7 @@ var searchData = [
 		]
 	],
 	[
-		'isect_136',
+		'isect_140',
 		[
 			'isect',
 			[
@@ -219,27 +221,27 @@ var searchData = [
 			]
 		]
 	],
-	[ 'it_5fbase_137', [ 'it_base', [ '../structit__base.html', 1, '' ] ] ],
+	[ 'it_5fbase_141', [ 'it_base', [ '../structit__base.html', 1, '' ] ] ],
 	[
-		'it_5fbase_3c_20ll_20_3e_138',
+		'it_5fbase_3c_20ll_20_3e_142',
 		[ 'it_base&lt; ll &gt;', [ '../structit__base.html', 1, '' ] ]
 	],
 	[
-		'iterator_139',
+		'iterator_143',
 		[
 			'iterator',
 			[
-				'../structSplayTree_1_1iterator.html', 1,
-				'SplayTree&lt; T &gt;::iterator'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html',
+				1, 'splay_tree::SplayTree&lt; T &gt;::iterator'
 			],
 			[
-				'../structSplayTree_1_1iterator.html#a657b0988d690e341ba0560d59b845143',
-				1, 'SplayTree::iterator::iterator()'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#ab0ea6ed296b79fa203a92992006448ea',
+				1, 'splay_tree::SplayTree::iterator::iterator()'
 			]
 		]
 	],
 	[
-		'iterator_5fcategory_140',
+		'iterator_5fcategory_144',
 		[
 			'iterator_category',
 			[
@@ -247,12 +249,14 @@ var searchData = [
 				1, 'int_it::iterator_category()'
 			],
 			[
-				'../structSplayTree_1_1iterator.html#ad051365ab1cf91a51228681ae68f3e2e',
-				1, 'SplayTree::iterator::iterator_category()'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#a69bb5a2446e8219c0eca5b6791272e23',
+				1,
+				'splay_tree::SplayTree::iterator::iterator_category()'
 			],
 			[
-				'../structsearch__it.html#a0ef4e543076893cd1e302dd0e2f0a685',
-				1, 'search_it::iterator_category()'
+				'../structstring__tools_1_1search__it.html#acb50112dd85865f007cd61cce21075ca',
+				1,
+				'string_tools::search_it::iterator_category()'
 			]
 		]
 	]

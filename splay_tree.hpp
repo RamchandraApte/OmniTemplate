@@ -12,6 +12,7 @@ template <typename T> struct SplayTree {
 		array<Node *, 2> child{};
 		Node *parent{};
 	};
+	/*! Splay tree iterator */
 	struct iterator : public it_base<T> {
 		using iterator_category = bidirectional_iterator_tag;
 
@@ -37,11 +38,12 @@ template <typename T> struct SplayTree {
 			node = node->parent;
 		}
 	};
-	Node *root{};
-	size_t sz{};
+	Node *root{}; /*!< Root node */
+	size_t sz{};  /*!< Size of the splay tree*/
 	SplayTree() {}
 	~SplayTree() { destroy(root); }
 	static void destroy(Node *const node) {
+		/*! Destroy the subtree node */
 		if (!node) {
 			return;
 		}
@@ -95,6 +97,7 @@ template <typename T> struct SplayTree {
 		}
 	}
 	void insert(Node *const x) {
+		/*! Insert node x into the splay tree*/
 		++sz;
 		if (!root) {
 			root = x;
@@ -114,8 +117,12 @@ template <typename T> struct SplayTree {
 		}
 		return;
 	}
-	void insert(const T &key) { insert(new Node{key}); }
+	void insert(const T &key) {
+		/*! Insert key key into the splay tree*/
+		insert(new Node{key});
+	}
 	void erase(Node *const x) {
+		/*! Erase node x from the splay tree*/
 		assert(x);
 		splay(x);
 		root = join(x->child[0], x->child[1]);
@@ -124,6 +131,8 @@ template <typename T> struct SplayTree {
 	}
 	void erase(const T &key) { erase(find(key)); }
 	template <bool i> static Node *extremum(Node *const x) {
+		/*! Return the extremum of the subtree x. Minimum if i is false,
+		 * maximum if i is true.*/
 		assert(x);
 		return x->child[i] ? extremum<i>(x->child[i]) : x;
 	}
@@ -148,6 +157,7 @@ template <typename T> struct SplayTree {
 		return {x, x->child[1]};
 	}
 	Node *find(const T &key) {
+		/*! Returns node with key key*/
 		auto x = root;
 		for (; x && key != x->value; x = x->child[key > x->value])
 			;

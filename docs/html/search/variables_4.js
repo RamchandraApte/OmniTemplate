@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'd_705',
+		'd_733',
 		[
 			'd',
 			[
-				'../structgsearch.html#a8a8798107a301730f224547b6fd01ef7',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#a3ae3429c387e83af67204fd0cdaa6d9d',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
 	[
-		'data_706',
+		'data_734',
 		[
 			'data',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'debug_5fmode_707',
+		'debug_5fmode_735',
 		[
 			'debug_mode',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'def_708',
+		'def_736',
 		[
 			'def',
 			[
@@ -44,7 +44,7 @@ var searchData = [
 		]
 	],
 	[
-		'delim_709',
+		'delim_737',
 		[
 			'delim',
 			[
@@ -54,7 +54,7 @@ var searchData = [
 		]
 	],
 	[
-		'depth_710',
+		'depth_738',
 		[
 			'depth',
 			[
@@ -64,7 +64,7 @@ var searchData = [
 		]
 	],
 	[
-		'divs_711',
+		'divs_739',
 		[
 			'divs',
 			[

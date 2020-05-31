@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'dbg_804',
+		'dbg_832',
 		[
 			'dbg',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'df_805',
+		'df_833',
 		[
 			'df',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'do_5flazy_806',
+		'do_5flazy_834',
 		[
 			'do_lazy',
 			[

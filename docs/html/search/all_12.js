@@ -1,24 +1,37 @@
 var searchData = [
 	[
-		'q_262',
+		'q_269',
 		[
 			'q',
 			[
-				'../structgsearch.html#a7f93010b6f8e7026b2300a03c4232d6c',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
-	[ 'queue_2ehpp_263', [ 'queue.hpp', [ '../queue_8hpp.html', 1, '' ] ] ],
+	[ 'queue_2ehpp_270', [ 'queue.hpp', [ '../queue_8hpp.html', 1, '' ] ] ],
 	[
-		'queueadaptor_264',
-		[ 'QueueAdaptor', [ '../classQueueAdaptor.html', 1, '' ] ]
+		'queue_5ftools_271',
+		[ 'queue_tools', [ '../namespacequeue__tools.html', 1, '' ] ]
 	],
 	[
-		'queueadaptor_3c_20minstack_3c_20t_20_3e_20_3e_265',
+		'queueadaptor_272',
+		[
+			'QueueAdaptor',
+			[
+				'../classqueue__tools_1_1QueueAdaptor.html', 1,
+				'queue_tools'
+			]
+		]
+	],
+	[
+		'queueadaptor_3c_20minstack_3c_20t_20_3e_20_3e_273',
 		[
 			'QueueAdaptor&lt; MinStack&lt; T &gt; &gt;',
-			[ '../classQueueAdaptor.html', 1, '' ]
+			[
+				'../classqueue__tools_1_1QueueAdaptor.html', 1,
+				'queue_tools'
+			]
 		]
 	]
 ];

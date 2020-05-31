@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'main_556',
+		'main_584',
 		[
 			'main',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'main2_557',
+		'main2_585',
 		[
 			'main2',
 			[
@@ -28,62 +28,62 @@ var searchData = [
 		]
 	],
 	[
-		'map_5fargs_558',
+		'map_5fargs_586',
 		[
 			'map_args',
 			[
-				'../utility_8hpp.html#a03511d4859cd518749f66a6af5391f92',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a3bd1495c0bc9744b584e2294d8cb4693',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'mat_559',
+		'mat_587',
 		[
 			'mat',
 			[
-				'../structmat.html#a9ad6e1850cab94280da915e5020dddeb',
+				'../structlinear__algebra_1_1mat.html#ac7b577a385a660803789c65385513c7f',
 				1,
-				'mat::mat(ll r_, ll c_, remove_const_t&lt; decltype(0LL)&gt; v=0LL)'
+				'linear_algebra::mat::mat(ll r_, ll c_, remove_const_t&lt; decltype(0LL)&gt; v=0LL)'
 			],
 			[
-				'../structmat.html#a1d61fff31bc57cc20b0c37a187ebd647',
-				1, 'mat::mat(T d)'
+				'../structlinear__algebra_1_1mat.html#a45138e742302b519a5cc0dc61d303d85',
+				1, 'linear_algebra::mat::mat(T d)'
 			],
 			[
-				'../structmat.html#a776aa197276703b5f9ec5fea2b104602',
+				'../structlinear__algebra_1_1mat.html#ae4a8b93974829ecd104eb11bdb0aaa2e',
 				1,
-				'mat::mat(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)'
+				'linear_algebra::mat::mat(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)'
 			],
 			[
-				'../structmat.html#a788ed9db3460102dbf99530f5b79de5e',
+				'../structlinear__algebra_1_1mat.html#a293297cbfcda8e14db3810f3c99407d9',
 				1,
-				'mat::mat(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)'
+				'linear_algebra::mat::mat(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)'
 			]
 		]
 	],
 	[
-		'max_5fmatch_560',
+		'max_5fmatch_588',
 		[
 			'max_match',
 			[
-				'../graph__theory_8hpp.html#a838f63e24db10d9e165fd191b3cc2e05',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a3aa84048435079e1235a2ab9abb93467',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'maxeq_561',
+		'maxeq_589',
 		[
 			'maxeq',
 			[
-				'../utility_8hpp.html#a5b93ebe953feb9309e59874dee0fdb07',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a8b6098643b1bdae5f74331329a0dafb8',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'md_562',
+		'md_590',
 		[
 			'md',
 			[
@@ -101,7 +101,7 @@ var searchData = [
 		]
 	],
 	[
-		'mid_563',
+		'mid_591',
 		[
 			'mid',
 			[
@@ -111,40 +111,40 @@ var searchData = [
 		]
 	],
 	[
-		'min_564',
+		'min_592',
 		[
 			'min',
 			[
-				'../structcht.html#af18569403920449f2f6a7059497dddb9',
-				1, 'cht::min()'
+				'../structgeometry_1_1cht.html#a0861340168994dd1a2e448e93ebbbce1',
+				1, 'geometry::cht::min()'
 			],
 			[
-				'../classMinStack.html#abb4c7ff623765a0c24f2091a27855310',
-				1, 'MinStack::min()'
+				'../classqueue__tools_1_1MinStack.html#abdcf9b4a593fa77e2702ee740814ff8b',
+				1, 'queue_tools::MinStack::min()'
 			],
 			[
-				'../classMinQueue.html#aa050a922fde794170ad24d639f42df36',
-				1, 'MinQueue::min()'
+				'../classqueue__tools_1_1MinQueue.html#a73bf3796b5aadd9098a2d1cee3485739',
+				1, 'queue_tools::MinQueue::min()'
 			]
 		]
 	],
 	[
-		'mineq_565',
+		'mineq_593',
 		[
 			'mineq',
 			[
-				'../utility_8hpp.html#abc6bb3f86a9c2d3083df5636d475b0fd',
-				1, 'utility.hpp'
+				'../namespaceutility.html#ae7b018f306c93c012280e72b146dbe68',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'mst_566',
+		'mst_594',
 		[
 			'mst',
 			[
-				'../graph__theory_8hpp.html#ad13100084f2ab4fa87a96eb6baaab424',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#adc41c5f6146aaa8dce40082a7f310161',
+				1, 'graph_theory'
 			]
 		]
 	]

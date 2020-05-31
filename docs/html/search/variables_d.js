@@ -1,11 +1,11 @@
 var searchData = [
 	[
-		'n_729',
+		'n_757',
 		[
 			'n',
 			[
-				'../structgsearch.html#abf2c48fcc1e2bcea14720192fdb497df',
-				1, 'gsearch::n()'
+				'../structgraph__theory_1_1gsearch.html#aaf730677878c7da56a3b4728d9300e03',
+				1, 'graph_theory::gsearch::n()'
 			],
 			[
 				'../structseg.html#aec39c86816f724381919a788bb6e899e',
@@ -16,18 +16,18 @@ var searchData = [
 				1, 'seg2::n()'
 			],
 			[
-				'../structsearch__it.html#a4469baa0cfd438036376385f2dd914b0',
-				1, 'search_it::n()'
+				'../structstring__tools_1_1search__it.html#aab70ce1b2fdb25d6476e2a68e3e42fef',
+				1, 'string_tools::search_it::n()'
 			]
 		]
 	],
 	[
-		'node_730',
+		'node_758',
 		[
 			'node',
 			[
-				'../structSplayTree_1_1iterator.html#a570dbdcaec4a93b65f4ae518d71ca774',
-				1, 'SplayTree::iterator'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#a3c9fb5e7acf1d7fbb16ca90c28158e90',
+				1, 'splay_tree::SplayTree::iterator'
 			]
 		]
 	]

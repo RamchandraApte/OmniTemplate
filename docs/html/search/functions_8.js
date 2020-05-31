@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'id_542',
+		'id_570',
 		[
 			'id',
 			[
-				'../structmat.html#a5276e05d6558dd927544e92147e26fc1',
-				1, 'mat'
+				'../structlinear__algebra_1_1mat.html#a3a5c49f2f844f29e5a198a75b0effba8',
+				1, 'linear_algebra::mat'
 			]
 		]
 	],
 	[
-		'identity_543',
+		'identity_571',
 		[
 			'identity',
 			[
@@ -30,7 +30,7 @@ var searchData = [
 		]
 	],
 	[
-		'ifft_544',
+		'ifft_572',
 		[
 			'ifft',
 			[
@@ -40,16 +40,18 @@ var searchData = [
 		]
 	],
 	[
-		'insert_545',
+		'insert_573',
 		[
 			'insert',
 			[
-				'../structSplayTree.html#a68ee8070ca751318c345c2ec728b6003',
-				1, 'SplayTree::insert(Node *const x)'
+				'../structsplay__tree_1_1SplayTree.html#a80ab90fbd7be1405ae05399b0fc2f2f1',
+				1,
+				'splay_tree::SplayTree::insert(Node *const x)'
 			],
 			[
-				'../structSplayTree.html#a9885fe15adae36e69006e8e2e2e5e21c',
-				1, 'SplayTree::insert(const T &amp;key)'
+				'../structsplay__tree_1_1SplayTree.html#a2bf075a9e6a46e3f9b61e7b00b546707',
+				1,
+				'splay_tree::SplayTree::insert(const T &amp;key)'
 			],
 			[
 				'../treap_8hpp.html#ad45b31cb3a5a560af114abfcbce83936',
@@ -64,7 +66,7 @@ var searchData = [
 		]
 	],
 	[
-		'insert_5fimp_546',
+		'insert_5fimp_574',
 		[
 			'insert_imp',
 			[
@@ -80,7 +82,7 @@ var searchData = [
 		]
 	],
 	[
-		'int_5fit_547',
+		'int_5fit_575',
 		[
 			'int_it',
 			[
@@ -94,7 +96,7 @@ var searchData = [
 		]
 	],
 	[
-		'intersect_548',
+		'intersect_576',
 		[
 			'intersect',
 			[
@@ -104,12 +106,12 @@ var searchData = [
 		]
 	],
 	[
-		'iterator_549',
+		'iterator_577',
 		[
 			'iterator',
 			[
-				'../structSplayTree_1_1iterator.html#a657b0988d690e341ba0560d59b845143',
-				1, 'SplayTree::iterator'
+				'../structsplay__tree_1_1SplayTree_1_1iterator.html#ab0ea6ed296b79fa203a92992006448ea',
+				1, 'splay_tree::SplayTree::iterator'
 			]
 		]
 	]

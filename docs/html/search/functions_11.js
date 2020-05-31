@@ -1,16 +1,16 @@
 var searchData = [
 	[
-		'test_5fadd_5fedge_639',
+		'test_5fadd_5fedge_667',
 		[
 			'test_add_edge',
 			[
-				'../graph__theory_8hpp.html#a8cbcc457cc04bce093aa17866046ffb6',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fall_640',
+		'test_5fall_668',
 		[
 			'test_all',
 			[
@@ -20,67 +20,67 @@ var searchData = [
 		]
 	],
 	[
-		'test_5far_641',
+		'test_5far_669',
 		[
 			'test_ar',
 			[
-				'../utility_8hpp.html#aebff8fa924a7c48ecb780e71c6316ea6',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a46672014ead1e91eeafec896f61036db',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'test_5fbfs_642',
+		'test_5fbfs_670',
 		[
 			'test_bfs',
 			[
-				'../graph__theory_8hpp.html#abcb0555d48c32c824ec01a7c2b834a4a',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fbipartite_643',
+		'test_5fbipartite_671',
 		[
 			'test_bipartite',
 			[
-				'../graph__theory_8hpp.html#ac5604c1c25612be563ce269b2de93874',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fchoose_644',
+		'test_5fchoose_672',
 		[
 			'test_choose',
 			[
-				'../combinatorics_8hpp.html#a18ebcc5a7f4095dab1cc6d9bacd8d607',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a4bb0c0ff8e23b9dfa30bdc71206a62be',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'test_5fcombinatorics_645',
+		'test_5fcombinatorics_673',
 		[
 			'test_combinatorics',
 			[
-				'../combinatorics_8hpp.html#a0c5a7372e7932ba5830e38929ec38c25',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a4e91bb5e7575eceb8a1727698820b896',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'test_5fdist_646',
+		'test_5fdist_674',
 		[
 			'test_dist',
 			[
-				'../graph__theory_8hpp.html#a7a5d11f82e9baa82dc71ff8ded6f62da',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a2b593631b45e50c3345b1026e2a65c32',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fdivisors_647',
+		'test_5fdivisors_675',
 		[
 			'test_divisors',
 			[
@@ -90,7 +90,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fdlog_648',
+		'test_5fdlog_676',
 		[
 			'test_dlog',
 			[
@@ -100,27 +100,27 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fdot_649',
+		'test_5fdot_677',
 		[
 			'test_dot',
 			[
-				'../geometry_8hpp.html#a08748b8a2389649d041e6c8ff9d28ba0',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#afaf01b71e2401cde2a17f7de0c7589f4',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'test_5fdsu_650',
+		'test_5fdsu_678',
 		[
 			'test_dsu',
 			[
-				'../dsu_8hpp.html#af3fcfa892c42e873402a4d0f4a73e0d4',
-				1, 'dsu.hpp'
+				'../namespacedsu__ds.html#a426a22a1e2a6fdc93737f181b90b10e8',
+				1, 'dsu_ds'
 			]
 		]
 	],
 	[
-		'test_5ffac_651',
+		'test_5ffac_679',
 		[
 			'test_fac',
 			[
@@ -130,57 +130,57 @@ var searchData = [
 		]
 	],
 	[
-		'test_5ffact_652',
+		'test_5ffact_680',
 		[
 			'test_fact',
 			[
-				'../combinatorics_8hpp.html#a1da351da5f459306dd3182e8e0e3a5bc',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a49a9258d4d599545b41c0425b8c34aeb',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'test_5fgeometry_653',
+		'test_5fgeometry_681',
 		[
 			'test_geometry',
 			[
-				'../geometry_8hpp.html#a847291628b61b00d0bc261bb22adf447',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#aad3419586eb6065d81469c30417d5530',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'test_5fgraph_5ftheory_654',
+		'test_5fgraph_5ftheory_682',
 		[
 			'test_graph_theory',
 			[
-				'../graph__theory_8hpp.html#a9c55a42c5c6ac6b7fb16f464507e90c6',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fmap_5fargs_655',
+		'test_5fmap_5fargs_683',
 		[
 			'test_map_args',
 			[
-				'../utility_8hpp.html#a4d1e5660a426a9d04e0907c3a69b55fa',
-				1, 'utility.hpp'
+				'../namespaceutility.html#ab69832291ff66469b755de5c5e5d6700',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'test_5fmatrix_656',
+		'test_5fmatrix_684',
 		[
 			'test_matrix',
 			[
-				'../linear__algebra_8hpp.html#ac334a92cbd04265f52708e07af9487e3',
-				1, 'linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a14b8a1cd669e604f8c4c121e723f17b6',
+				1, 'linear_algebra'
 			]
 		]
 	],
 	[
-		'test_5fmd_657',
+		'test_5fmd_685',
 		[
 			'test_md',
 			[
@@ -190,27 +190,27 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fminqueue_658',
+		'test_5fminqueue_686',
 		[
 			'test_minqueue',
 			[
-				'../queue_8hpp.html#ade8983381de2dd15dd63f80934f01827',
-				1, 'queue.hpp'
+				'../namespacequeue__tools.html#a71b737e17fb5b267fa169679d262e116',
+				1, 'queue_tools'
 			]
 		]
 	],
 	[
-		'test_5fminstack_659',
+		'test_5fminstack_687',
 		[
 			'test_minstack',
 			[
-				'../queue_8hpp.html#a10088901e62ea354d6ae3d8cd9575a05',
-				1, 'queue.hpp'
+				'../namespacequeue__tools.html#aa529c8f80a8d1ef721ff78853f291be9',
+				1, 'queue_tools'
 			]
 		]
 	],
 	[
-		'test_5fmodulo_660',
+		'test_5fmodulo_688',
 		[
 			'test_modulo',
 			[
@@ -220,27 +220,27 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fmst_661',
+		'test_5fmst_689',
 		[
 			'test_mst',
 			[
-				'../graph__theory_8hpp.html#adc21a6e0c023e0b90a90d2cd42940d42',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fnext_5fcomb_662',
+		'test_5fnext_5fcomb_690',
 		[
 			'test_next_comb',
 			[
-				'../utility_8hpp.html#a9a2af0b2340759f5b235759ed1116227',
-				1, 'utility.hpp'
+				'../namespaceutility.html#ad358004e1f554321202b4e29f8470c5e',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'test_5fnumber_5ftheory_663',
+		'test_5fnumber_5ftheory_691',
 		[
 			'test_number_theory',
 			[
@@ -250,27 +250,27 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fnx2_664',
+		'test_5fnx2_692',
 		[
 			'test_nx2',
 			[
-				'../utility_8hpp.html#ae9af300622998a43b200780645473ec3',
-				1, 'utility.hpp'
+				'../namespaceutility.html#aff688c4f151d8b34df3a40c099d8dbe8',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'test_5fperm_665',
+		'test_5fperm_693',
 		[
 			'test_perm',
 			[
-				'../combinatorics_8hpp.html#aedfa862b47420de0d171586777f5fa5e',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a354a245ee1f57f4f0586318676040d0a',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'test_5fpower_666',
+		'test_5fpower_694',
 		[
 			'test_power',
 			[
@@ -280,7 +280,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fprime_667',
+		'test_5fprime_695',
 		[
 			'test_prime',
 			[
@@ -290,7 +290,7 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fprimitive_5froot_668',
+		'test_5fprimitive_5froot_696',
 		[
 			'test_primitive_root',
 			[
@@ -300,57 +300,57 @@ var searchData = [
 		]
 	],
 	[
-		'test_5fqueue_669',
+		'test_5fqueue_697',
 		[
 			'test_queue',
 			[
-				'../queue_8hpp.html#a409d820ae1bf7e9bac41a9258ef79165',
-				1, 'queue.hpp'
+				'../namespacequeue__tools.html#a9586d21c0545444548b7b230f4d15e94',
+				1, 'queue_tools'
 			]
 		]
 	],
 	[
-		'test_5fqueueadaptor_670',
+		'test_5fqueueadaptor_698',
 		[
 			'test_queueadaptor',
 			[
-				'../queue_8hpp.html#a3582140b7324e0ea0a09e7b49aff5da4',
-				1, 'queue.hpp'
+				'../namespacequeue__tools.html#a31a61f436e43953f5fb5672c2faae31f',
+				1, 'queue_tools'
 			]
 		]
 	],
 	[
-		'test_5fsat2_671',
+		'test_5fsat2_699',
 		[
 			'test_sat2',
 			[
-				'../2sat_8hpp.html#ae65df9939b591697fda3629f42cb8ec7',
-				1, '2sat.hpp'
+				'../namespacesat2.html#a25e1814f70e51eb57308bc0dea349406',
+				1, 'sat2'
 			]
 		]
 	],
 	[
-		'test_5fscc_672',
+		'test_5fscc_700',
 		[
 			'test_scc',
 			[
-				'../graph__theory_8hpp.html#aa68c8186aa3aba8f70f57404aec67cd8',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5fsplay_5ftree_673',
+		'test_5fsplay_5ftree_701',
 		[
 			'test_splay_tree',
 			[
-				'../splay__tree_8hpp.html#a453119e81bfa8f9fc72104639b907497',
-				1, 'splay_tree.hpp'
+				'../namespacesplay__tree.html#a3a9f2936a5b68efebc1499fa476ac89f',
+				1, 'splay_tree'
 			]
 		]
 	],
 	[
-		'test_5ftotient_674',
+		'test_5ftotient_702',
 		[
 			'test_totient',
 			[
@@ -360,77 +360,77 @@ var searchData = [
 		]
 	],
 	[
-		'test_5ftrans_675',
+		'test_5ftrans_703',
 		[
 			'test_trans',
 			[
-				'../graph__theory_8hpp.html#a56c22f1781661a462e8a456fb4562e68',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'test_5ftrie_5fnode_676',
+		'test_5ftrie_5fnode_704',
 		[
 			'test_trie_node',
 			[
-				'../string_8hpp.html#a0ca9f9c163492b1f67aecc120f5b5e09',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a47b9e4b28d14bb8e5e187d656a24d01d',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'test_5funiq_677',
+		'test_5funiq_705',
 		[
 			'test_uniq',
 			[
-				'../utility_8hpp.html#a135862e0b9eecf842529ef19034e3c3c',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a393602f329243516ab6a008f905aa82d',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'test_5futility_678',
+		'test_5futility_706',
 		[
 			'test_utility',
 			[
-				'../utility_8hpp.html#a5e29afed548a99cd2c14f21a464382d7',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a5037ce073dfbaeaf7083a725780cdaf1',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'test_5fwedge_679',
+		'test_5fwedge_707',
 		[
 			'test_wedge',
 			[
-				'../geometry_8hpp.html#a51b282424a806deac8ebd597aa601232',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#af24e139ee1704a4aa6452a7fec700995',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'test_5fwith_680',
+		'test_5fwith_708',
 		[
 			'test_with',
 			[
-				'../utility_8hpp.html#a61e1ebee9702000f4f876a4e08d2d83a',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a2f611269d39535446ae5f89e3de27d9b',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'timer_681',
+		'timer_709',
 		[
 			'timer',
 			[
-				'../structtimer.html#ae536faf93e02933cd025a6fbcbb48d0a',
-				1, 'timer'
+				'../structtime__tools_1_1timer.html#a7fe96a11cb200ff618cdc06c239cd1c0',
+				1, 'time_tools::timer'
 			]
 		]
 	],
 	[
-		'tm_682',
+		'tm_710',
 		[
 			'tm',
 			[
@@ -440,7 +440,7 @@ var searchData = [
 		]
 	],
 	[
-		'to_5farray_683',
+		'to_5farray_711',
 		[
 			'to_array',
 			[
@@ -456,7 +456,7 @@ var searchData = [
 		]
 	],
 	[
-		'to_5ftuple_684',
+		'to_5ftuple_712',
 		[
 			'to_tuple',
 			[
@@ -466,17 +466,17 @@ var searchData = [
 		]
 	],
 	[
-		'top_685',
+		'top_713',
 		[
 			'top',
 			[
-				'../classMinStack.html#ae98eca6ba51417aabdea04f6c223078f',
-				1, 'MinStack'
+				'../classqueue__tools_1_1MinStack.html#af2d0b5ab34b19c4cca8f29aa0f382080',
+				1, 'queue_tools::MinStack'
 			]
 		]
 	],
 	[
-		'totient_686',
+		'totient_714',
 		[
 			'totient',
 			[
@@ -486,17 +486,17 @@ var searchData = [
 		]
 	],
 	[
-		'trans_687',
+		'trans_715',
 		[
 			'trans',
 			[
-				'../graph__theory_8hpp.html#a6ed45f64f1378ebb531ad28483501ebf',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a5b4fccebd731ef29c9050b946d57c8c9',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'treap_688',
+		'treap_716',
 		[
 			'treap',
 			[

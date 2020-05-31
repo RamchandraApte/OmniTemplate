@@ -1,61 +1,61 @@
 var searchData = [
 	[
-		'sat2_622',
+		'sat2_650',
 		[
 			'sat2',
 			[
-				'../2sat_8hpp.html#aab122b9926a6b55217e5542e400a6bae',
-				1, '2sat.hpp'
+				'../namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d',
+				1, 'sat2'
 			]
 		]
 	],
 	[
-		'scc_623',
+		'scc_651',
 		[
 			'scc',
 			[
-				'../graph__theory_8hpp.html#a93d1a20d68db74c43261dd28201eb875',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a14c5caae4119d720412cda7748174301',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'search_5fall_624',
+		'search_5fall_652',
 		[
 			'search_all',
 			[
-				'../string_8hpp.html#a75acb80dd54dda8d2ae0c24a5d6f7c0c',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a314ab0a3b3f972a1af0b738851323829',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'search_5fit_625',
+		'search_5fit_653',
 		[
 			'search_it',
 			[
-				'../structsearch__it.html#a734b63a53fc42bdf87d06bdf420af261',
+				'../structstring__tools_1_1search__it.html#aca022e021ec03287386571ef78a8e954',
 				1,
-				'search_it::search_it(string const &amp;t_, string const &amp;s_)'
+				'string_tools::search_it::search_it(string const &amp;t_, string const &amp;s_)'
 			],
 			[
-				'../structsearch__it.html#aefe859f1cfc5ae1745baeabe41cd7a83',
-				1, 'search_it::search_it()'
+				'../structstring__tools_1_1search__it.html#a1605669d491f38f76e0f32902a4b0ce7',
+				1, 'string_tools::search_it::search_it()'
 			]
 		]
 	],
 	[
-		'search_5fra_626',
+		'search_5fra_654',
 		[
 			'search_ra',
 			[
-				'../string_8hpp.html#a426f3aae79af5e0f9bf49f2dc28d3da8',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a9ea78f4e72ed84a9dc9c77e705185739',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'seg_627',
+		'seg_655',
 		[
 			'seg',
 			[
@@ -65,7 +65,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg2_628',
+		'seg2_656',
 		[
 			'seg2',
 			[
@@ -75,7 +75,7 @@ var searchData = [
 		]
 	],
 	[
-		'seg_5fbase_629',
+		'seg_5fbase_657',
 		[
 			'seg_base',
 			[
@@ -90,17 +90,17 @@ var searchData = [
 		]
 	],
 	[
-		'side_630',
+		'side_658',
 		[
 			'side',
 			[
-				'../structSplayTree.html#a06fae4dd156688ed46976373f21fbb26',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a12959724650bbd9fcf143c22ca674a9e',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'sieve_631',
+		'sieve_659',
 		[
 			'sieve',
 			[
@@ -110,7 +110,7 @@ var searchData = [
 		]
 	],
 	[
-		'simple_5ftp_632',
+		'simple_5ftp_660',
 		[
 			'simple_tp',
 			[
@@ -120,46 +120,46 @@ var searchData = [
 		]
 	],
 	[
-		'size_633',
+		'size_661',
 		[
 			'size',
 			[
-				'../classQueueAdaptor.html#ac5d740b880e456d5a44cdba1f5acf2c1',
-				1, 'QueueAdaptor::size()'
+				'../classqueue__tools_1_1QueueAdaptor.html#adfb78c6b9828b06e9c8f29ae56b43078',
+				1, 'queue_tools::QueueAdaptor::size()'
 			],
 			[
-				'../structSplayTree.html#a67cc9fe4b6d6c9e2167701c982fcefb8',
-				1, 'SplayTree::size()'
+				'../structsplay__tree_1_1SplayTree.html#a399bb4f399c9dd30d087cd6766a91700',
+				1, 'splay_tree::SplayTree::size()'
 			]
 		]
 	],
 	[
-		'splay_634',
+		'splay_662',
 		[
 			'splay',
 			[
-				'../structSplayTree.html#a88e940e01fba29d4f1eec8b8b5fb2cea',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#a3db8f486eeed38868355ebc740ae893e',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'splaytree_635',
+		'splaytree_663',
 		[
 			'SplayTree',
 			[
-				'../structSplayTree.html#a83684091424cc8dab08bba29cacfc6df',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#aa627e1ec6a9f5f62cb2aba123f47df0b',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],
 	[
-		'split_636',
+		'split_664',
 		[
 			'split',
 			[
-				'../structSplayTree.html#a0fce64ec0ca10d1774cd24d4c98edf1c',
-				1, 'SplayTree::split()'
+				'../structsplay__tree_1_1SplayTree.html#a70d72238898de04e4524586a060609b2',
+				1, 'splay_tree::SplayTree::split()'
 			],
 			[
 				'../treap_8hpp.html#ab4b19e3c8f0a975627a7261ed3e2c29b',
@@ -168,7 +168,7 @@ var searchData = [
 		]
 	],
 	[
-		'split_5fimp_637',
+		'split_5fimp_665',
 		[
 			'split_imp',
 			[
@@ -178,7 +178,7 @@ var searchData = [
 		]
 	],
 	[
-		'sub_5fset_638',
+		'sub_5fset_666',
 		[
 			'sub_set',
 			[

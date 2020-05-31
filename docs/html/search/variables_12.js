@@ -1,24 +1,24 @@
 var searchData = [
 	[
-		's_745',
+		's_773',
 		[
 			's',
 			[
-				'../structdsu.html#ac8bcf25a17813d0298500990894e8192',
-				1, 'dsu::s()'
+				'../structdsu__ds_1_1dsu.html#afc6efa4f289a652843e2f9b814ae0041',
+				1, 'dsu_ds::dsu::s()'
 			],
 			[
-				'../structpers.html#a21c930a460a93a1f9f9c0204d1b02fc2',
-				1, 'pers::s()'
+				'../structpersistent_1_1pers.html#aa69f50e85db0c10e684390388ef6f23b',
+				1, 'persistent::pers::s()'
 			],
 			[
-				'../structsearch__it.html#a38ccae906a5d300780dce4d451deb17f',
-				1, 'search_it::s()'
+				'../structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe',
+				1, 'string_tools::search_it::s()'
 			]
 		]
 	],
 	[
-		'size_746',
+		'size_774',
 		[
 			'size',
 			[
@@ -28,26 +28,26 @@ var searchData = [
 		]
 	],
 	[
-		'st_747',
+		'st_775',
 		[
 			'st',
 			[
-				'../structhash__str.html#a3f7edccf79b433723951542b1521e893',
-				1, 'hash_str'
+				'../structstring__tools_1_1hash__str.html#ac76e86127435197776e56d58da7ac0fe',
+				1, 'string_tools::hash_str'
 			]
 		]
 	],
 	[
-		'sz_748',
+		'sz_776',
 		[
 			'sz',
 			[
-				'../structSplayTree.html#a4db3a3ba8655169a636ca73c4a88cc15',
-				1, 'SplayTree::sz()'
+				'../structsplay__tree_1_1SplayTree.html#ad8a0e9a28f75b0ad0f8f0391a2cd1192',
+				1, 'splay_tree::SplayTree::sz()'
 			],
 			[
-				'../tree_8hpp.html#a8f1a8683a6149a8df03b1bf40b7beaa0',
-				1, 'sz():&#160;tree.hpp'
+				'../namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53',
+				1, 'tree::sz()'
 			]
 		]
 	]

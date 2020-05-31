@@ -1,26 +1,26 @@
 var searchData = [
 	[
-		'cache_497',
+		'cache_525',
 		[
 			'cache',
 			[
-				'../utility_8hpp.html#a81e820760e553018a680c8264aa443b4',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a6e069fcf8b422fbc525eba2543e36a6e',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'ccw_498',
+		'ccw_526',
 		[
 			'ccw',
 			[
-				'../geometry_8hpp.html#a701ea24ac7922f0e0f6e73ffa4d09a51',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a0da9365748befd6d88a5e4eb2e163ca0',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'ceil_5fdiv_499',
+		'ceil_5fdiv_527',
 		[
 			'ceil_div',
 			[
@@ -30,27 +30,27 @@ var searchData = [
 		]
 	],
 	[
-		'choose_500',
+		'choose_528',
 		[
 			'choose',
 			[
-				'../combinatorics_8hpp.html#a4d8eda9d63610214a1eb9b92a51443d1',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a1b1a7ea1cc5fc393d43d6a4c6d888876',
+				1, 'combinatorics'
 			]
 		]
 	],
 	[
-		'cht_501',
+		'cht_529',
 		[
 			'cht',
 			[
-				'../structcht.html#aa8ccca255cb5abc67b6a9ea2d93931c8',
-				1, 'cht'
+				'../structgeometry_1_1cht.html#ab32a1385d1d61f99e3b1c4dd7335a88d',
+				1, 'geometry::cht'
 			]
 		]
 	],
 	[
-		'conv_502',
+		'conv_530',
 		[
 			'conv',
 			[
@@ -60,17 +60,17 @@ var searchData = [
 		]
 	],
 	[
-		'convex_5fmin_503',
+		'convex_5fmin_531',
 		[
 			'convex_min',
 			[
-				'../geometry_8hpp.html#a3e644172c556a84fa2c65aa39e99cea5',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#a8143f89812fca762e08ba1a5d984c46b',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'coro_504',
+		'coro_532',
 		[
 			'coro',
 			[

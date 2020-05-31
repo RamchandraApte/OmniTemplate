@@ -1,42 +1,42 @@
 var searchData = [
 	[
-		'p_238',
+		'p_244',
 		[
 			'p',
 			[
-				'../structdsu.html#a124d53d5eb8022b25d804bd5e2b5d6d4',
-				1, 'dsu::p()'
+				'../structdsu__ds_1_1dsu.html#ade11b833f6689409a0a595a9c3586223',
+				1, 'dsu_ds::dsu::p()'
 			],
 			[
-				'../structgsearch.html#afa8e0680350061b5f45d444dfd9cc05b',
-				1, 'gsearch::p()'
+				'../structgraph__theory_1_1gsearch.html#a7bad3224d34e2150f372f183ddc6ba97',
+				1, 'graph_theory::gsearch::p()'
 			],
 			[
-				'../structhash__str.html#a6dfc768d54875741155fc4f45cbdab56',
-				1, 'hash_str::p()'
+				'../structstring__tools_1_1hash__str.html#a55977ba3ebcd9d5611f23e684253eeab',
+				1, 'string_tools::hash_str::p()'
 			],
 			[
-				'../structsearch__it.html#a8cf3aec16419ecf395c43b43202ffb60',
-				1, 'search_it::p()'
+				'../structstring__tools_1_1search__it.html#aae138c0caa8c516aef9979abd73fa15a',
+				1, 'string_tools::search_it::p()'
 			],
 			[
-				'../structno.html#a3ba164f5ead58d3f015564e74a934a5a',
-				1, 'no::p()'
+				'../structtree_1_1no.html#a3dd518d66a2bf5c95d277ff8d9638c1a',
+				1, 'tree::no::p()'
 			]
 		]
 	],
 	[
-		'parent_239',
+		'parent_245',
 		[
 			'parent',
 			[
-				'../structSplayTree_1_1Node.html#a1e7187c88cf9cf7d8d886b7e331fa844',
-				1, 'SplayTree::Node'
+				'../structsplay__tree_1_1SplayTree_1_1Node.html#a06af521d7f0b00fc55b764903a46709d',
+				1, 'splay_tree::SplayTree::Node'
 			]
 		]
 	],
 	[
-		'paste_240',
+		'paste_246',
 		[
 			'paste',
 			[
@@ -46,7 +46,7 @@ var searchData = [
 		]
 	],
 	[
-		'paste2_241',
+		'paste2_247',
 		[
 			'paste2',
 			[
@@ -56,7 +56,7 @@ var searchData = [
 		]
 	],
 	[
-		'pb_242',
+		'pb_248',
 		[
 			'pb',
 			[
@@ -66,18 +66,24 @@ var searchData = [
 		]
 	],
 	[
-		'perm_243',
+		'perm_249',
 		[
 			'perm',
 			[
-				'../combinatorics_8hpp.html#ada068dc4f9ea18a98ff58cb8b0be93c9',
-				1, 'combinatorics.hpp'
+				'../namespacecombinatorics.html#a162be12f51480d59189ec28dbcc2c5e2',
+				1, 'combinatorics'
 			]
 		]
 	],
-	[ 'pers_244', [ 'pers', [ '../structpers.html', 1, '' ] ] ],
 	[
-		'pers_5fptr_245',
+		'pers_250',
+		[
+			'pers',
+			[ '../structpersistent_1_1pers.html', 1, 'persistent' ]
+		]
+	],
+	[
+		'pers_5fptr_251',
 		[
 			'pers_ptr',
 			[ '../structpers__ptr.html', 1, 'pers_ptr&lt; T &gt;' ],
@@ -88,11 +94,15 @@ var searchData = [
 		]
 	],
 	[
-		'persistent_2ehpp_246',
+		'persistent_252',
+		[ 'persistent', [ '../namespacepersistent.html', 1, '' ] ]
+	],
+	[
+		'persistent_2ehpp_253',
 		[ 'persistent.hpp', [ '../persistent_8hpp.html', 1, '' ] ]
 	],
 	[
-		'pointer_247',
+		'pointer_254',
 		[
 			'pointer',
 			[
@@ -102,27 +112,27 @@ var searchData = [
 		]
 	],
 	[
-		'pop_248',
+		'pop_255',
 		[
 			'pop',
 			[
-				'../classQueueAdaptor.html#a81ec309acaf4e8ad47e49d2fbffb0000',
-				1, 'QueueAdaptor'
+				'../classqueue__tools_1_1QueueAdaptor.html#aab204b0f776af2b94156b69435b81df8',
+				1, 'queue_tools::QueueAdaptor'
 			]
 		]
 	],
 	[
-		'power_249',
+		'power_256',
 		[
 			'power',
 			[
-				'../modulo_8hpp.html#a18e6bf3063c827da07de67653546a850',
-				1, 'modulo.hpp'
+				'../namespacemodulo.html#a78c1f4f324678db9d37a8dcb30e048f4',
+				1, 'modulo'
 			]
 		]
 	],
 	[
-		'pq_250',
+		'pq_257',
 		[
 			'pq',
 			[
@@ -132,7 +142,7 @@ var searchData = [
 		]
 	],
 	[
-		'pr_251',
+		'pr_258',
 		[
 			'pr',
 			[
@@ -142,27 +152,27 @@ var searchData = [
 		]
 	],
 	[
-		'prefix_252',
+		'prefix_259',
 		[
 			'prefix',
 			[
-				'../string_8hpp.html#ad36260cad14dddb2dd9ecacaa7eae158',
-				1, 'string.hpp'
+				'../namespacestring__tools.html#a908088ce2404d968ab69990c35885499',
+				1, 'string_tools'
 			]
 		]
 	],
 	[
-		'prev_5fless_253',
+		'prev_5fless_260',
 		[
 			'prev_less',
 			[
-				'../utility_8hpp.html#ad32b8ad96cf96371fe9ad3c397218352',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a50e9430d1096ce6997ae910135a9533f',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'pri_254',
+		'pri_261',
 		[
 			'pri',
 			[
@@ -172,7 +182,7 @@ var searchData = [
 		]
 	],
 	[
-		'prime_255',
+		'prime_262',
 		[
 			'prime',
 			[
@@ -182,7 +192,7 @@ var searchData = [
 		]
 	],
 	[
-		'primitive_5froot_256',
+		'primitive_5froot_263',
 		[
 			'primitive_root',
 			[
@@ -192,7 +202,7 @@ var searchData = [
 		]
 	],
 	[
-		'print_257',
+		'print_264',
 		[
 			'print',
 			[
@@ -202,11 +212,11 @@ var searchData = [
 		]
 	],
 	[
-		'program_2ecpp_258',
+		'program_2ecpp_265',
 		[ 'program.cpp', [ '../program_8cpp.html', 1, '' ] ]
 	],
 	[
-		'pt_259',
+		'pt_266',
 		[
 			'pt',
 			[
@@ -216,7 +226,7 @@ var searchData = [
 		]
 	],
 	[
-		'ptr_260',
+		'ptr_267',
 		[
 			'ptr',
 			[
@@ -230,16 +240,16 @@ var searchData = [
 		]
 	],
 	[
-		'push_261',
+		'push_268',
 		[
 			'push',
 			[
-				'../classQueueAdaptor.html#ad0f545cec9fdfb5cdda40a51c9ff8648',
-				1, 'QueueAdaptor::push()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a5857db040da0411af2957d3d44783808',
+				1, 'queue_tools::QueueAdaptor::push()'
 			],
 			[
-				'../classMinStack.html#a85a56f030b69fd1b4191f8318b6b9d28',
-				1, 'MinStack::push()'
+				'../classqueue__tools_1_1MinStack.html#a9d9144961b94102610066192b64b6efa',
+				1, 'queue_tools::MinStack::push()'
 			]
 		]
 	]

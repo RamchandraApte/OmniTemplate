@@ -1,41 +1,41 @@
 var searchData = [
 	[
-		'add_488',
+		'add_516',
 		[
 			'add',
 			[
-				'../structgsearch.html#af3e34f320b6bf7f9c57a2f2cad674747',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#ae258e3c4ebcc9e5ae8e24b281ac9c72a',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
 	[
-		'add_5fedge_489',
+		'add_5fedge_517',
 		[
 			'add_edge',
 			[
-				'../graph__theory_8hpp.html#a010bc7128795883d7fa391f33f8c67e0',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a39a0a5f2c23a2facdf6251a142a88e1b',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'area_490',
+		'area_518',
 		[
 			'area',
 			[
-				'../geometry_8hpp.html#af97237cbfd8361bffc2d971fd75b4c51',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#ae77c652506bca228ac4c3ab2ae81583f',
+				1, 'geometry'
 			]
 		]
 	],
 	[
-		'attach_491',
+		'attach_519',
 		[
 			'attach',
 			[
-				'../structSplayTree.html#a8410ea1b66aeee0e07f11ec02dae2fa6',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#ac91c4a1fa163994e18084f90e0921b08',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	]

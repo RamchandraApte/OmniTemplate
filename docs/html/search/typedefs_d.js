@@ -1,15 +1,15 @@
 var searchData = [
 	[
-		'value_5ftype_787',
+		'value_5ftype_815',
 		[
 			'value_type',
 			[
-				'../classQueueAdaptor.html#a504a74bd62b9e4f0d7ac731fe07a8b8f',
-				1, 'QueueAdaptor::value_type()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540',
+				1, 'queue_tools::QueueAdaptor::value_type()'
 			],
 			[
-				'../classMinStack.html#a28cd940fc80f2d8983d1ce270d803740',
-				1, 'MinStack::value_type()'
+				'../classqueue__tools_1_1MinStack.html#ac879ccf41b218e3d75e227314e84e0c6',
+				1, 'queue_tools::MinStack::value_type()'
 			],
 			[
 				'../structit__base.html#a750730b3baf6464b16f1483c656f5dce',
@@ -18,7 +18,7 @@ var searchData = [
 		]
 	],
 	[
-		'vl_788',
+		'vl_816',
 		[
 			'vl',
 			[

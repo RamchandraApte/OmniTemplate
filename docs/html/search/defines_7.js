@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'lambda_814',
+		'lambda_842',
 		[
 			'lambda',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'let_815',
+		'let_843',
 		[
 			'let',
 			[
@@ -20,7 +20,7 @@ var searchData = [
 		]
 	],
 	[
-		'lets_5fcount_816',
+		'lets_5fcount_844',
 		[
 			'lets_count',
 			[

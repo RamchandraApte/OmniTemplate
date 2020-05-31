@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'ull_375',
+		'ull_387',
 		[
 			'ull',
 			[
@@ -10,7 +10,7 @@ var searchData = [
 		]
 	],
 	[
-		'um_376',
+		'um_388',
 		[
 			'um',
 			[
@@ -20,17 +20,17 @@ var searchData = [
 		]
 	],
 	[
-		'uniq_377',
+		'uniq_389',
 		[
 			'uniq',
 			[
-				'../utility_8hpp.html#a73acc7df64034554661daeb64205aae6',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a531cc980b5de78f0c2f36ae3210cb9cf',
+				1, 'utility'
 			]
 		]
 	],
 	[
-		'up_378',
+		'up_390',
 		[
 			'up',
 			[
@@ -53,7 +53,7 @@ var searchData = [
 		]
 	],
 	[
-		'up_5finv_379',
+		'up_5finv_391',
 		[
 			'up_inv',
 			[
@@ -63,7 +63,7 @@ var searchData = [
 		]
 	],
 	[
-		'update_5fdata_380',
+		'update_5fdata_392',
 		[
 			'update_data',
 			[
@@ -73,7 +73,7 @@ var searchData = [
 		]
 	],
 	[
-		'uset_381',
+		'uset_393',
 		[
 			'uset',
 			[
@@ -82,8 +82,9 @@ var searchData = [
 			]
 		]
 	],
+	[ 'utility_394', [ 'utility', [ '../namespaceutility.html', 1, '' ] ] ],
 	[
-		'utility_2ehpp_382',
+		'utility_2ehpp_395',
 		[ 'utility.hpp', [ '../utility_8hpp.html', 1, '' ] ]
 	]
 ];

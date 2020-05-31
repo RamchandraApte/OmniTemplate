@@ -8,8 +8,8 @@ var searchData = [
 				1, 'edge::a()'
 			],
 			[
-				'../structmat.html#a0c873d2c32fd1b8cc4ad6fe8c6952277',
-				1, 'mat::a()'
+				'../structlinear__algebra_1_1mat.html#aae118ed0a9f443f45b9aafa0c6a9cbbe',
+				1, 'linear_algebra::mat::a()'
 			],
 			[
 				'../structseg.html#aad9da220752b136fa737498955050354',
@@ -26,8 +26,8 @@ var searchData = [
 		[
 			'add',
 			[
-				'../structgsearch.html#af3e34f320b6bf7f9c57a2f2cad674747',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#ae258e3c4ebcc9e5ae8e24b281ac9c72a',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
@@ -36,8 +36,8 @@ var searchData = [
 		[
 			'add_edge',
 			[
-				'../graph__theory_8hpp.html#a010bc7128795883d7fa391f33f8c67e0',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a39a0a5f2c23a2facdf6251a142a88e1b',
+				1, 'graph_theory'
 			]
 		]
 	],
@@ -51,12 +51,15 @@ var searchData = [
 			]
 		]
 	],
-	[ 'ar_6', [ 'ar', [ '../structar.html', 1, '' ] ] ],
+	[ 'ar_6', [ 'ar', [ '../structutility_1_1ar.html', 1, 'utility' ] ] ],
 	[
 		'ar_3c_20t_5bn_5d_3e_7',
 		[
 			'ar&lt; T[n]&gt;',
-			[ '../structar_3_01T_0fn_0e_4.html', 1, '' ]
+			[
+				'../structutility_1_1ar_3_01T_0fn_0e_4.html', 1,
+				'utility'
+			]
 		]
 	],
 	[
@@ -64,8 +67,8 @@ var searchData = [
 		[
 			'ar_t',
 			[
-				'../utility_8hpp.html#a98dc5e985b024363c80f2778a577c51a',
-				1, 'utility.hpp'
+				'../namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0',
+				1, 'utility'
 			]
 		]
 	],
@@ -74,8 +77,8 @@ var searchData = [
 		[
 			'area',
 			[
-				'../geometry_8hpp.html#af97237cbfd8361bffc2d971fd75b4c51',
-				1, 'geometry.hpp'
+				'../namespacegeometry.html#ae77c652506bca228ac4c3ab2ae81583f',
+				1, 'geometry'
 			]
 		]
 	],
@@ -84,8 +87,8 @@ var searchData = [
 		[
 			'attach',
 			[
-				'../structSplayTree.html#a8410ea1b66aeee0e07f11ec02dae2fa6',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#ac91c4a1fa163994e18084f90e0921b08',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	],

@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'ra_778',
+		'ra_806',
 		[
 			'ra',
 			[
@@ -10,16 +10,16 @@ var searchData = [
 		]
 	],
 	[
-		'reference_779',
+		'reference_807',
 		[
 			'reference',
 			[
-				'../classQueueAdaptor.html#a879e8bf98a35a1ea6cc7d63b0de0783f',
-				1, 'QueueAdaptor::reference()'
+				'../classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f',
+				1, 'queue_tools::QueueAdaptor::reference()'
 			],
 			[
-				'../classMinStack.html#ababec68b9c2f1fbf3e573f0c00fb55a0',
-				1, 'MinStack::reference()'
+				'../classqueue__tools_1_1MinStack.html#aa0f4720a343e959a1c4539604b48e91f',
+				1, 'queue_tools::MinStack::reference()'
 			],
 			[
 				'../structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a',

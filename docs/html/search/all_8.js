@@ -1,30 +1,34 @@
 var searchData = [
 	[
-		'g_102',
+		'g_104',
 		[
 			'g',
 			[
-				'../structgsearch.html#ab98eef9a7b11ac9c53d3414ee0e2ad00',
-				1, 'gsearch'
+				'../structgraph__theory_1_1gsearch.html#a37b44bcbcc59b248f4834380ecc703e3',
+				1, 'graph_theory::gsearch'
 			]
 		]
 	],
 	[
-		'gauss_103',
+		'gauss_105',
 		[
 			'gauss',
 			[
-				'../linear__algebra_8hpp.html#a19f0f5824555e4b22a1636e87f97d266',
-				1, 'linear_algebra.hpp'
+				'../namespacelinear__algebra.html#a03aa0e426fe77447c17b33024bf073ce',
+				1, 'linear_algebra'
 			]
 		]
 	],
 	[
-		'geometry_2ehpp_104',
+		'geometry_106',
+		[ 'geometry', [ '../namespacegeometry.html', 1, '' ] ]
+	],
+	[
+		'geometry_2ehpp_107',
 		[ 'geometry.hpp', [ '../geometry_8hpp.html', 1, '' ] ]
 	],
 	[
-		'get_5fdata_105',
+		'get_5fdata_108',
 		[
 			'get_data',
 			[
@@ -34,7 +38,7 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fimp_106',
+		'get_5fimp_109',
 		[
 			'get_imp',
 			[
@@ -44,27 +48,27 @@ var searchData = [
 		]
 	],
 	[
-		'get_5fleft_107',
+		'get_5fleft_110',
 		[
 			'get_left',
 			[
-				'../classQueueAdaptor.html#a93327b413fb302d9f9b533a21179d39f',
-				1, 'QueueAdaptor'
+				'../classqueue__tools_1_1QueueAdaptor.html#a409777bac8958f09bf99f9ca2ff64ab0',
+				1, 'queue_tools::QueueAdaptor'
 			]
 		]
 	],
 	[
-		'get_5fright_108',
+		'get_5fright_111',
 		[
 			'get_right',
 			[
-				'../classQueueAdaptor.html#a9434246f808b040616e5bffb304fce43',
-				1, 'QueueAdaptor'
+				'../classqueue__tools_1_1QueueAdaptor.html#a39e37c34ea5fd27421f3f8dabe733a28',
+				1, 'queue_tools::QueueAdaptor'
 			]
 		]
 	],
 	[
-		'gl_109',
+		'gl_112',
 		[
 			'gl',
 			[
@@ -79,7 +83,7 @@ var searchData = [
 		]
 	],
 	[
-		'gr_110',
+		'gr_113',
 		[
 			'gr',
 			[
@@ -94,31 +98,39 @@ var searchData = [
 		]
 	],
 	[
-		'graph_5fin_111',
+		'graph_5fin_114',
 		[
 			'graph_in',
 			[
-				'../graph__theory_8hpp.html#a5f6185d1499a6bd321a7841e23001caa',
-				1, 'graph_theory.hpp'
+				'../namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50',
+				1, 'graph_theory'
 			]
 		]
 	],
 	[
-		'graph_5ftheory_2ehpp_112',
+		'graph_5ftheory_115',
+		[ 'graph_theory', [ '../namespacegraph__theory.html', 1, '' ] ]
+	],
+	[
+		'graph_5ftheory_2ehpp_116',
 		[ 'graph_theory.hpp', [ '../graph__theory_8hpp.html', 1, '' ] ]
 	],
 	[
-		'gsearch_113',
+		'gsearch_117',
 		[
-			'gsearch', [ '../structgsearch.html', 1, 'gsearch' ],
+			'gsearch',
 			[
-				'../structgsearch.html#a2947bb4418be3551585773e397d35fe6',
-				1, 'gsearch::gsearch()'
+				'../structgraph__theory_1_1gsearch.html', 1,
+				'graph_theory::gsearch'
+			],
+			[
+				'../structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33',
+				1, 'graph_theory::gsearch::gsearch()'
 			]
 		]
 	],
 	[
-		'gt_114',
+		'gt_118',
 		[
 			'gt',
 			[
@@ -139,8 +151,8 @@ var searchData = [
 				1, 'seg2::gt(ll l)'
 			],
 			[
-				'../structno.html#a960156e927f79fdc000b9d230233369c',
-				1, 'no::gt()'
+				'../structtree_1_1no.html#a6706d57cfed232149e1af1c15dfd2dfa',
+				1, 'tree::no::gt()'
 			]
 		]
 	]

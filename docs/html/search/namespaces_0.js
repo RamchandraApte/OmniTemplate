@@ -1,2 +1,2 @@
 var searchData =
-    [ [ 'fix_455', [ 'fix', [ '../namespacefix.html', 1, '' ] ] ] ];
+    [ [ 'bigint_468', [ 'bigint', [ '../namespacebigint.html', 1, '' ] ] ] ];

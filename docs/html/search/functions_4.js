@@ -1,6 +1,6 @@
 var searchData = [
 	[
-		'egcd_516',
+		'egcd_544',
 		[
 			'egcd',
 			[
@@ -10,21 +10,21 @@ var searchData = [
 		]
 	],
 	[
-		'empty_517',
+		'empty_545',
 		[
 			'empty',
 			[
-				'../classQueueAdaptor.html#a526c084a248a28ebec26d5934546f63d',
-				1, 'QueueAdaptor::empty()'
+				'../classqueue__tools_1_1QueueAdaptor.html#a65573a420692f22b4274313469f3688b',
+				1, 'queue_tools::QueueAdaptor::empty()'
 			],
 			[
-				'../structSplayTree.html#a4b5e196ef6ecd49b08cd405a30ee6a6b',
-				1, 'SplayTree::empty()'
+				'../structsplay__tree_1_1SplayTree.html#a8e1d11e9d19124bb01c9669a7d1ebd7b',
+				1, 'splay_tree::SplayTree::empty()'
 			]
 		]
 	],
 	[
-		'end_518',
+		'end_546',
 		[
 			'end',
 			[
@@ -32,32 +32,33 @@ var searchData = [
 				1, 'range::end()'
 			],
 			[
-				'../structSplayTree.html#a45302c7001ad3e2564ac91ccd7dd9a0c',
-				1, 'SplayTree::end()'
+				'../structsplay__tree_1_1SplayTree.html#a45aa483490efb984be745d3847061eba',
+				1, 'splay_tree::SplayTree::end()'
 			]
 		]
 	],
 	[
-		'entropy_519',
+		'entropy_547',
 		[
 			'entropy',
 			[
-				'../structrandom__device__patch.html#ad1afe488ba29afca0ca7787af051cdbe',
-				1, 'random_device_patch'
+				'../structutility_1_1random__device__patch.html#ad2083d821e1bc651e937571037c29b5f',
+				1, 'utility::random_device_patch'
 			]
 		]
 	],
 	[
-		'erase_520',
+		'erase_548',
 		[
 			'erase',
 			[
-				'../structSplayTree.html#a31e65260a6cc94aab86c6a3def846830',
-				1, 'SplayTree::erase(Node *const x)'
+				'../structsplay__tree_1_1SplayTree.html#a967e320e3d33cad8b0a9c30cd51ed924',
+				1, 'splay_tree::SplayTree::erase(Node *const x)'
 			],
 			[
-				'../structSplayTree.html#afb833e454430e81bb3b1442237805320',
-				1, 'SplayTree::erase(const T &amp;key)'
+				'../structsplay__tree_1_1SplayTree.html#a3c4ae0ba499f4f13a60602ca082365fc',
+				1,
+				'splay_tree::SplayTree::erase(const T &amp;key)'
 			],
 			[
 				'../treap_8hpp.html#add90798283a022be36a018723badda5b',
@@ -66,7 +67,7 @@ var searchData = [
 		]
 	],
 	[
-		'erase_5fimp_521',
+		'erase_5fimp_549',
 		[
 			'erase_imp',
 			[
@@ -76,12 +77,12 @@ var searchData = [
 		]
 	],
 	[
-		'extremum_522',
+		'extremum_550',
 		[
 			'extremum',
 			[
-				'../structSplayTree.html#a879ddfc2ee6ff265e98ae1cfa851ff3e',
-				1, 'SplayTree'
+				'../structsplay__tree_1_1SplayTree.html#abc59d753ddb6ffa3361b242bbb3fe9f0',
+				1, 'splay_tree::SplayTree'
 			]
 		]
 	]
