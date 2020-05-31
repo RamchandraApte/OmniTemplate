@@ -7,7 +7,8 @@ template <auto op, lli id_ = identity(op)> struct seg {
 		       be a power of two.*/
 	mutable vector<T> a, z;
 	template <typename Cont>
-	seg(const Cont &v) : n(nx2(v.size())), a(2 * n, id), z(2 * n) {
+	seg(const Cont &v)
+	    : n(next_pow_of_2(v.size())), a(2 * n, id), z(2 * n) {
 		copy(al(v), begin(a) + n);
 		for (auto i : rev(ra{n})) {
 			dbg(i);
@@ -151,7 +152,8 @@ struct seg2 : seg_base<No> {
 	vector<No> h;
 #define v this.v
 	seg2(ll n_)
-	    : seg_base<No>(nx2(n_), 0LL), n{nx2(n_)}, id{identity(op)}, ro{} {}
+	    : seg_base<No>(next_pow_of_2(n_), 0LL), n{next_pow_of_2(n_)},
+	      id{identity(op)}, ro{} {}
 	const static auto def = -1LL;
 	ll l, r;
 	auto mid(ll nl, ll nr) const { return ll(nl + nr) >> ll(1); }

@@ -1,25 +1,25 @@
 #pragma once
 #include "core.hpp"
 namespace std {
-bool operator<(pt const &a, pt const &b) {
+bool operator<(point const &a, point const &b) {
 	/*! Compare points a and b lexicographically*/
 	return map_args([](auto x) { return tuple{real(x), imag(x)}; })(a, b);
 }
 void test_less() {
-	assert((pt{1, 2} < pt{3, 5}));
+	assert((point{1, 2} < point{3, 5}));
 
-	assert((pt{1, 2} < pt{3, 1}));
+	assert((point{1, 2} < point{3, 1}));
 
-	assert((pt{1, 1} < pt{1, 2}));
+	assert((point{1, 1} < point{1, 2}));
 
-	assert((!(pt{1, 2} < pt{1, 1})));
+	assert((!(point{1, 2} < point{1, 1})));
 
-	assert((!(pt{1, 2} < pt{1, 2})));
+	assert((!(point{1, 2} < point{1, 2})));
 }
 } // namespace std
 namespace geometry {
 // TODO generalize these products for multidimensional vectors
-auto dot(pt const &a, pt const &b) {
+auto dot(point const &a, point const &b) {
 	/*! returns the dot product of 2D vectors a and b, i.e. \f$a \cdot
 	 * b\f$*/
 	return real(conj(a) * b);
@@ -28,7 +28,7 @@ void test_dot() {
 	assert((dot({1, 2}, {2, 5}) == 1 * 2 + 2 * 5));
 	assert((dot({0, 2}, {3, 0}) == 0 * 3 + 2 * 0));
 }
-auto wedge(pt const &a, pt const &b) {
+auto wedge(point const &a, point const &b) {
 	/*! Returns the wedge product of 2D vectors a and b, \f$a \wedge b\f$*/
 	return imag(conj(a) * b);
 }
@@ -37,8 +37,8 @@ void test_wedge() {
 	assert((wedge({1, 1}, {1, 1}) == 0));
 	assert((wedge({1, 0}, {0, 0}) == 0));
 }
-auto area(pt a, pt b, pt c) { return wedge(b - a, c - a); }
-auto ccw(pt a, pt b, pt c) {
+auto area(point a, point b, point c) { return wedge(b - a, c - a); }
+auto ccw(point a, point b, point c) {
 	/*! Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
 	 * is counterclockwise. Throws std::invalid_argument if a, b, c are
 	 * collinear. */
@@ -52,7 +52,7 @@ auto ccw(pt a, pt b, pt c) {
 void test_ccw() {
 	assert((ccw({1, 0}, {1, 1}, {0, 1})));
 	assert((!ccw({0, 1}, {1, 1}, {1, 0})));
-	auto test_collinear = [&](pt a, pt b, pt c) {
+	auto test_collinear = [&](point a, point b, point c) {
 		try {
 			ccw(a, b, c);
 		} catch (invalid_argument) {
@@ -67,12 +67,12 @@ void test_ccw() {
 	test_collinear({2, 0}, {-3, 0}, {4, 0});
 	test_collinear({4, 6}, {6, 9}, {-4, -6});
 }
-auto hull(vector<pt> &v, df(do_sort, true)) {
+auto hull(vector<point> &v, df(do_sort, true)) {
 	/*! Returns the convex hull of the points in v*/
-	vector<pt> h;
+	vector<point> h;
 	if (do_sort) {
 		const auto p =
-		    *min_element(al(v), map_args([](pt a) {
+		    *min_element(al(v), map_args([](point a) {
 					 return tuple{imag(a), real(a)};
 				 }));
 		sort(al(v), bind(ccw, p, _1, _2));
@@ -103,8 +103,8 @@ void test_convex_min() {
 /*! Convex-hull trick. This can be used to find the minimum of a set of
  * lines at various points. */
 struct cht {
-	vector<pt> h; //!< The lines, specified as (a,b) for ax+b.
-	explicit cht(vector<pt> v) {
+	vector<point> h; //!< The lines, specified as (a,b) for ax+b.
+	explicit cht(vector<point> v) {
 		v = uniq(v, map_args(lambda(imag), equal_to{}),
 			 map_args(lambda(conj)));
 		h = dbg(hull(v, false));
@@ -118,8 +118,8 @@ struct cht {
 	}
 };
 void test_hull() {
-	vector<pt> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
-	vector<pt> exp{lines[1], lines[2], lines[4], lines[5]};
+	vector<point> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
+	vector<point> exp{lines[1], lines[2], lines[4], lines[5]};
 	auto h = hull(lines);
 	sort(al(h));
 	dbg(h);
@@ -128,12 +128,12 @@ void test_hull() {
 	assert(h == exp);
 }
 void test_cht() {
-	vector<pt> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
+	vector<point> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
 	cht ch{lines};
 	fo(x, -1000, 1000) {
 		ll mn = inf;
 		for (const auto line : lines) {
-			mn = min(mn, dot(line, pt{x, 1}));
+			mn = min(mn, dot(line, point{x, 1}));
 		}
 		assert(ch.min(x) == mn);
 	}

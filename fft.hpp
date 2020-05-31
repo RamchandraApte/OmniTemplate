@@ -34,7 +34,7 @@ auto ifft(auto& v){
 #endif
 #if 1
 template <typename Cont> vector<com> fft(Cont v) {
-	auto n = nx2(v.size());
+	auto n = next_pow_of_2(v.size());
 	if (n == 1) {
 		return v;
 	}

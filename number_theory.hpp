@@ -12,7 +12,7 @@ auto prime(ll n) {
 	ll tz = __builtin_ctz(n - 1);
 	auto b = (n - 1) >> tz;
 	dbg(b);
-	auto prime_a = [&](md const &a) {
+	auto prime_a = [&](modulo const &a) {
 		dbg(a);
 		if (a == 0) {
 			return true;
@@ -97,12 +97,12 @@ um fac(ll n) {
 		g = divs[n];
 	} else if (!prime(n)) {
 		with _m{n, M};
-		for (md c = 0; g == n; ++c) {
+		for (modulo c = 0; g == n; ++c) {
 			auto const f = [&](const auto &x) {
 				return x * x + x + c;
 			};
-			for (md a = 0, b = a; a = f(a), b = f(f(b)),
-				(g = gcd(ll(a - b), n)) == 1;) {
+			for (modulo a = 0, b = a; a = f(a), b = f(f(b)),
+				    (g = gcd(ll(a - b), n)) == 1;) {
 			}
 		}
 	}
@@ -148,7 +148,7 @@ void test_totient() {
 	assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 &&
 	       totient(84) == 24 && totient(127) == 126);
 }
-ll dlog(const md a, const md b) {
+ll dlog(const modulo a, const modulo b) {
 	/* Finds x such that a^x = b (mod M) using baby-step giant-step
 	   algorithm. M must be prime
 	*/
@@ -161,9 +161,9 @@ ll dlog(const md a, const md b) {
 		return x;
 	};
 	ll sq = sqrt(static_cast<long long int>(M)) + 1;
-	unordered_map<md, ll> powers;
+	unordered_map<modulo, ll> powers;
 	const auto a_sq = power(a, sq);
-	md pw = 1;
+	modulo pw = 1;
 	fo(i, sq + 1) {
 		powers[pw] = i;
 		pw *= a_sq;
@@ -177,7 +177,7 @@ ll dlog(const md a, const md b) {
 	}
 }
 void test_dlog() {
-	auto check = [](md a, ll x, ll m) {
+	auto check = [](modulo a, ll x, ll m) {
 		with _m{m, M};
 		auto b = power(a, x);
 		dbg(a);
@@ -190,7 +190,7 @@ void test_dlog() {
 	check(23, 47, 157);
 	check(15, 100, 47);
 }
-md primitive_root() {
+modulo primitive_root() {
 	if (M == 1) {
 		return 0;
 	}
@@ -202,7 +202,7 @@ md primitive_root() {
 				return false;
 			}
 			for (auto p : pfactor) {
-				if (power(md{i}, tot / p.first) == 1) {
+				if (power(modulo{i}, tot / p.first) == 1) {
 					return false;
 				}
 			}

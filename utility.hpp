@@ -77,22 +77,22 @@ template <typename T> auto prev_less(const T &v) {
 	}
 	return l;
 }
-ll nx2(ll x) {
+ll next_pow_of_2(ll x) {
 	/*! Return the smallest power of two at least x*/
 	if (x == 0) {
 		return 1;
 	}
 	return 1LL << ll(ceil(log2(lli(x))));
 }
-void test_nx2() {
-	assert(nx2(0) == 1);
-	assert(nx2(1) == 1);
-	assert(nx2(2) == 2);
-	assert(nx2(3) == 4);
-	assert(nx2(4) == 4);
-	assert(nx2(5) == 8);
-	assert(nx2((1LL << 45) - 100) == 1LL << 45);
-	assert(nx2((1LL << 45)) == 1LL << 45);
+void test_next_pow_of_2() {
+	assert(next_pow_of_2(0) == 1);
+	assert(next_pow_of_2(1) == 1);
+	assert(next_pow_of_2(2) == 2);
+	assert(next_pow_of_2(3) == 4);
+	assert(next_pow_of_2(4) == 4);
+	assert(next_pow_of_2(5) == 8);
+	assert(next_pow_of_2((1LL << 45) - 100) == 1LL << 45);
+	assert(next_pow_of_2((1LL << 45)) == 1LL << 45);
 }
 [[nodiscard]] ll next_comb(ll x) {
 	/*! Formally, returns the smallest integer y > x such that popcount(y) =
@@ -151,7 +151,7 @@ void test_utility() {
 	test_uniq();
 	test_next_comb();
 	test_ar();
-	test_nx2();
+	test_next_pow_of_2();
 	test_map_args();
 }
 } // namespace utility

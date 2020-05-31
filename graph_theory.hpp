@@ -60,8 +60,8 @@ auto dist(matrix<ll> const &g) {
 	 * matrix of the shortest distances. We do not consider paths of length
 	 * zero. Algorithm: Floyd-Warshall*/
 	// TODO do we want to consider zero-length paths?
-	assert(g.r == g.c);
-	auto n = g.r;
+	assert(g.rows_n == g.cols_n);
+	auto n = g.rows_n;
 	auto d = g;
 	fo(k, n) {
 		fo(i, n) {
@@ -79,7 +79,7 @@ void test_dist() {
 	dbg(dist(g));
 	dbg(short_dist);
 	assert(dist(g) == short_dist);
-	const auto n = g.r;
+	const auto n = g.rows_n;
 	vector<vector<pr>> adj(n);
 	fo(i, 0, n) {
 		fo(j, 0, n) { adj[i].pb({j, g[i][j]}); }

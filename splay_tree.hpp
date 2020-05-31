@@ -39,7 +39,7 @@ template <typename T> struct SplayTree {
 		}
 	};
 	Node *root{}; /*!< Root node */
-	size_t sz{};  /*!< Size of the splay tree*/
+	size_t size_{}; /*!< Size of the splay tree*/
 	SplayTree() {}
 	~SplayTree() { destroy(root); }
 	static void destroy(Node *const node) {
@@ -98,7 +98,7 @@ template <typename T> struct SplayTree {
 	}
 	void insert(Node *const x) {
 		/*! Insert node x into the splay tree*/
-		++sz;
+		++size_;
 		if (!root) {
 			root = x;
 			return;
@@ -127,7 +127,7 @@ template <typename T> struct SplayTree {
 		splay(x);
 		root = join(x->child[0], x->child[1]);
 		delete x;
-		--sz;
+		--size_;
 	}
 	void erase(const T &key) { erase(find(key)); }
 	template <bool i> static Node *extremum(Node *const x) {
@@ -163,7 +163,7 @@ template <typename T> struct SplayTree {
 			;
 		return x;
 	}
-	size_t size() { return sz; }
+	size_t size() { return size_; }
 	bool empty() { return size() == 0; }
 	iterator begin() { return iterator{extremum<false>(root)}; }
 	iterator end() { return iterator{nullptr}; }

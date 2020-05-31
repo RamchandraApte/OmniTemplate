@@ -4,25 +4,25 @@ namespace string_tools {
 struct hash_str {
 	static auto constexpr lcg_mod = (1ULL << 62) - 57;
 	const char *st;
-	vector<md> h, p;
+	vector<modulo> h, p;
 	explicit hash_str(const string &s)
 	    : st(s.data()), h(s.size() + 1), p(s.size()) {
 		with _w{lcg_mod, M};
-		md g = 1;
+		modulo g = 1;
 		fo(i, 0, s.size()) {
-			g *= md{0x51a3e995948c0deULL};
+			g *= modulo{0x51a3e995948c0deULL};
 			// dbg(A);
 			// dbg(B);
 			// dbg(lli((int128(A.x)*int128(B.x))%int128(M)));
-			h[i + 1] = md{s[i]} * g;
+			h[i + 1] = modulo{s[i]} * g;
 		}
 		// dbg(h);
 		partial_sum(al(h), begin(h));
-		auto const inv = md{1} / md{0x51a3e995948c0deULL};
-		md x = 1;
+		auto const inv = modulo{1} / modulo{0x51a3e995948c0deULL};
+		modulo x = 1;
 		fo(i, 0, p.size()) {
 			p[i] = x;
-			x *= md{inv};
+			x *= modulo{inv};
 		}
 	}
 	size_t operator()(string_view const &v) {
@@ -30,7 +30,7 @@ struct hash_str {
 		ll l = v.data() - st;
 		// dbg(l);
 		// dbg(v.size());
-		// dbg(md{10}-md{100});
+		// dbg(modulo{10}-modulo{100});
 		// dbg(h[l+v.size()]-h[l]);
 		// dbg(p[l]);
 		return ll((h[l + v.size()] - h[l]) * p[l]);

@@ -78,7 +78,7 @@ let(ull, unsigned long long);
 let(vl, vector<ll>);
 let(ld, long double) let(pr, pair<ll, ll>);
 let(com, complex<double>);
-let(pt, complex<ll>);
+let(point, complex<ll>);
 let(ull, unsigned long long);
 using bt = bitset<numeric_limits<ll>::digits>;
 tm() using pq = std::priority_queue<T, vector<T>, greater<>>;
