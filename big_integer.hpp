@@ -2,8 +2,8 @@
 #include "core.hpp"
 namespace bigint {
 struct bigint {
-	vc<ull> v;
-	explicit bigint(const vc<ull> &v_) : v(v_) {}
+	vector<ull> v;
+	explicit bigint(const vector<ull> &v_) : v(v_) {}
 	auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
 };
 template <typename Stream> auto &operator<<(Stream &os, bigint const &a) {

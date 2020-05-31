@@ -35,7 +35,7 @@
 	ll x;                                                                  \
 	cin >> x;
 #define pb push_back
-#define vc vector
+#define vector vector
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...)

@@ -19,7 +19,7 @@ template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	return os << "edge{" << e.a << "-(" << e.w << ")>" << e.b << "}";
 }
 namespace graph_theory {
-auto add_edge(vc<vl> &g, ll u, ll v) {
+auto add_edge(vector<vl> &g, ll u, ll v) {
 	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
 	g[u].pb(v);
 	g[v].pb(u);
@@ -80,7 +80,7 @@ void test_dist() {
 	dbg(short_dist);
 	assert(dist(g) == short_dist);
 	const auto n = g.r;
-	vc<vc<pr>> adj(n);
+	vector<vector<pr>> adj(n);
 	fo(i, 0, n) {
 		fo(j, 0, n) { adj[i].pb({j, g[i][j]}); }
 	}
@@ -114,15 +114,15 @@ auto mst(vector<edge> es) {
 	return ret;
 }
 void test_mst() {
-	vc<edge> edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};
+	vector<edge> edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};
 	auto ret = mst(edges);
 	sort(al(ret));
 	dbg(ret);
-	assert((ret == vc<edge>{edges[3], edges[1], edges[0]}));
+	assert((ret == vector<edge>{edges[3], edges[1], edges[0]}));
 }
 struct gsearch {
 	/*! Generalized graph searcher/visitor*/
-	vc<vl> const &g;
+	vector<vl> const &g;
 	ll n;
 	vl v;
 	deque<ll> q;
@@ -182,7 +182,7 @@ struct bfs : public gsearch {
 	}
 };
 void test_bfs() {
-	vc<vl> g(4);
+	vector<vl> g(4);
 	add_edge(g, 0, 1);
 	add_edge(g, 1, 2);
 	add_edge(g, 1, 3);
@@ -193,9 +193,9 @@ void test_bfs() {
 	assert((b.p == vl{-1, 0, 1, 1}));
 	assert((b.d == vl{0, 1, 2, 2}));
 }
-auto trans(const vc<vl> &g) {
+auto trans(const vector<vl> &g) {
 	ll n = size(g);
-	vc<vl> h(n);
+	vector<vl> h(n);
 	fo(i, n) {
 		for (ll j : g[i]) {
 			h[j].pb(i);
@@ -204,11 +204,11 @@ auto trans(const vc<vl> &g) {
 	return h;
 }
 void test_trans() {
-	assert((trans(vc<vl>{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) ==
-		vc<vl>{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
-	assert((trans(vc<vl>{}) == vc<vl>{}));
+	assert((trans(vector<vl>{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) ==
+		vector<vl>{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
+	assert((trans(vector<vl>{}) == vector<vl>{}));
 }
-auto scc(const vc<vl> &g) {
+auto scc(const vector<vl> &g) {
 	/*! Returns the strongly connected component for each vertex of the
 	 * graph g.*/
 	auto h = trans(g);
@@ -233,7 +233,7 @@ auto scc(const vc<vl> &g) {
 	return cm;
 }
 void test_scc() {
-	vc<vl> g(5);
+	vector<vl> g(5);
 	g[0].pb(3);
 	g[3].pb(1);
 	g[1].pb(2);
@@ -246,7 +246,7 @@ void test_scc() {
 	assert((all_of(al(v), [&](auto x) { return x == v[0]; })));
 	assert(cm[4] != cm[0]);
 }
-auto bipartite(const vc<vl> &g) {
+auto bipartite(const vector<vl> &g) {
 	/*! Returns a bipartite coloring if possible */
 	bfs b{g};
 	b();
@@ -267,7 +267,7 @@ auto bipartite(const vc<vl> &g) {
 	return bi ? optional{s} : nullopt;
 }
 void test_bipartite() {
-	vc<vl> g(6);
+	vector<vl> g(6);
 	// (2,1,4) is one side, and (5,3,0) is another side
 	// connected component 1
 	add_edge(g, 2, 5);
@@ -283,14 +283,14 @@ void test_bipartite() {
 		}
 	}
 }
-auto max_match(const vc<vl> &g) {
+auto max_match(const vector<vl> &g) {
 	/*! Returns a maximum matching of g*/
 	auto s = bipartite(g).value();
 	ll n = g.size();
 	vl m(n, -1);
 	for (ll md = -1; md != inf;) {
 		vl v(n);
-		vc<vl> h(n);
+		vector<vl> h(n);
 		fo(i, n) {
 			for (ll j : g[i]) {
 				if ((j == m[i]) == s[i]) {
@@ -342,7 +342,7 @@ auto max_match(const vc<vl> &g) {
 	return m;
 }
 void test_add_edge() {
-	vc<vl> g(10);
+	vector<vl> g(10);
 	add_edge(g, 3, 4);
 	add_edge(g, 6, 4);
 	add_edge(g, 9, 2);
@@ -350,9 +350,10 @@ void test_add_edge() {
 	for (auto &x : g) {
 		sort(al(x));
 	}
-	assert((g == vc<vl>{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));
+	assert(
+	    (g == vector<vl>{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));
 }
-auto graph_in(vc<vl> &g, ll m) {
+auto graph_in(vector<vl> &g, ll m) {
 	/*! Reads 1-indexed list of edges into graph g*/
 	fo(i, 0, m) {
 		I(u);

@@ -4,7 +4,7 @@ namespace string_tools {
 struct hash_str {
 	static auto constexpr lcg_mod = (1ULL << 62) - 57;
 	const char *st;
-	vc<md> h, p;
+	vector<md> h, p;
 	explicit hash_str(const string &s)
 	    : st(s.data()), h(s.size() + 1), p(s.size()) {
 		with _w{lcg_mod, M};

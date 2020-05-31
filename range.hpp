@@ -80,9 +80,9 @@ template <typename T1, typename T2> auto intersect(const T1 &a, const T2 &b) {
 tm() auto operator^(range<T> const &a, range<T> const &b) {
 	return max(intersect(a, b), intersect(b, a));
 }
-auto filter(vc<ra> &v) {
+auto filter(vector<ra> &v) {
 	sort(al(v));
-	vc<ra> sg;
+	vector<ra> sg;
 	for (const auto &p : v) {
 		if (sg.empty() || sg.back().ed < p.ed) {
 			sg.pb(p);

@@ -5,12 +5,12 @@ namespace linear_algebra {
 tm() struct matrix {
 	/*! Matrix class*/
 	ll r, c; //!< Row, column
-	vc<T> a; //! Array storing the data, in row-major order
+	vector<T> a; //! Array storing the data, in row-major order
 	matrix(ll r_, ll c_, df(v, 0LL)) : r(r_), c(c_), a(r * c, v) {
 		assert(r >= 1 && c >= 1);
 	}
 	matrix(T d) : r(1), c(1), a{d} {}
-	matrix(vc<vc<pr>> const &g) : matrix(g.size(), g.size(), inf) {
+	matrix(vector<vector<pr>> const &g) : matrix(g.size(), g.size(), inf) {
 		fo(i, r) {
 			for (const auto &p : g[i]) {
 				auto [x, w] = p;
@@ -101,7 +101,7 @@ auto &operator<<(Stream &os, matrix<T...> const &m) {
 	}
 	return os << "}";
 }
-template <typename T> auto lin_recur(vc<T> const &c, ll n) {
+template <typename T> auto lin_recur(vector<T> const &c, ll n) {
 	/*! Returns nth term of linear recurrence described by c*/
 	// TODO which direction is the linear recurrence? 🤔
 	matrix<T> m{size(c), size(c)};

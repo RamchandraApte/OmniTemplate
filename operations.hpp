@@ -57,9 +57,9 @@ tm() auto operator^(uset<T> const &a, uset<T> const &b) {
 	sub_set(b, a, ret);
 	return ret;
 }
-tm() auto operator*(vc<T> a, vc<T> b) {
+tm() auto operator*(vector<T> a, vector<T> b) {
 	assert(a.size() == b.size());
-	vc<T> c(a.size());
+	vector<T> c(a.size());
 	fo(i, a.size()) { c[i] = a[i] * b[i]; }
 	return c;
 }

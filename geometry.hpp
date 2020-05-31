@@ -67,9 +67,9 @@ void test_ccw() {
 	test_collinear({2, 0}, {-3, 0}, {4, 0});
 	test_collinear({4, 6}, {6, 9}, {-4, -6});
 }
-auto hull(vc<pt> &v, df(do_sort, true)) {
+auto hull(vector<pt> &v, df(do_sort, true)) {
 	/*! Returns the convex hull of the points in v*/
-	vc<pt> h;
+	vector<pt> h;
 	if (do_sort) {
 		const auto p =
 		    *min_element(al(v), map_args([](pt a) {
@@ -103,8 +103,8 @@ void test_convex_min() {
 /*! Convex-hull trick. This can be used to find the minimum of a set of
  * lines at various points. */
 struct cht {
-	vc<pt> h; //!< The lines, specified as (a,b) for ax+b.
-	explicit cht(vc<pt> v) {
+	vector<pt> h; //!< The lines, specified as (a,b) for ax+b.
+	explicit cht(vector<pt> v) {
 		v = uniq(v, map_args(lambda(imag), equal_to{}),
 			 map_args(lambda(conj)));
 		h = dbg(hull(v, false));
@@ -118,8 +118,8 @@ struct cht {
 	}
 };
 void test_hull() {
-	vc<pt> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
-	vc<pt> exp{lines[1], lines[2], lines[4], lines[5]};
+	vector<pt> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
+	vector<pt> exp{lines[1], lines[2], lines[4], lines[5]};
 	auto h = hull(lines);
 	sort(al(h));
 	dbg(h);
@@ -128,7 +128,7 @@ void test_hull() {
 	assert(h == exp);
 }
 void test_cht() {
-	vc<pt> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
+	vector<pt> lines{{1, 2}, {4, -2}, {-1, 3}, {1, 3}, {-4, 2}, {3, 4}};
 	cht ch{lines};
 	fo(x, -1000, 1000) {
 		ll mn = inf;

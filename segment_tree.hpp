@@ -5,7 +5,7 @@ template <auto op, lli id_ = identity(op)> struct seg {
 	static constexpr T id = id_;
 	ll const n; /*!< Number of nodes of teh segment tree. Does not need to
 		       be a power of two.*/
-	mutable vc<T> a, z;
+	mutable vector<T> a, z;
 	template <typename Cont>
 	seg(const Cont &v) : n(nx2(v.size())), a(2 * n, id), z(2 * n) {
 		copy(al(v), begin(a) + n);
@@ -127,7 +127,7 @@ tm() struct no_impl {
 tm() no_impl<T> gl(no_impl<T> const &x) { return ll(x.i) << ll(1); }
 tm() no_impl<T> gr(no_impl<T> const &x) { return gl(x).i | ll(1); }
 tm() struct seg_base<no_impl<T>> {
-	mutable vc<T> v_;
+	mutable vector<T> v_;
 	auto &v(no_impl<T> x) const { return v_[x.i]; }
 	auto ok(no_impl<T> x) const { return x.i < v_.size(); }
 	seg_base(const ll n, const T &id) : v_(2 * n) {
@@ -148,7 +148,7 @@ struct seg2 : seg_base<No> {
 	T id;
 	ll const n;
 	No ro;
-	vc<No> h;
+	vector<No> h;
 #define v this.v
 	seg2(ll n_)
 	    : seg_base<No>(nx2(n_), 0LL), n{nx2(n_)}, id{identity(op)}, ro{} {}
