@@ -1,2 +1,4 @@
-var searchData =
-    [ [ 'bigint_476', [ 'bigint', [ '../namespacebigint.html', 1, '' ] ] ] ];
+var searchData=
+[
+  ['bigint_478',['bigint',['../namespacebigint.html',1,'']]]
+];

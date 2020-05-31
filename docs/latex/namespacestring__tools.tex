@@ -1,0 +1,96 @@
+\hypertarget{namespacestring__tools}{}\doxysection{string\+\_\+tools Namespace Reference}
+\label{namespacestring__tools}\index{string\_tools@{string\_tools}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstring__tools_1_1bytehash}{bytehash}}
+\item 
+struct \mbox{\hyperlink{structstring__tools_1_1hash__str}{hash\+\_\+str}}
+\item 
+struct \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}}
+\item 
+class \mbox{\hyperlink{classstring__tools_1_1trie__node}{trie\+\_\+node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} \mbox{\hyperlink{namespacestring__tools_a908088ce2404d968ab69990c35885499}{prefix}} (string const \&s)
+\item 
+auto \mbox{\hyperlink{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}{search\+\_\+all}} (string const \&t, string const \&s)
+\item 
+auto \mbox{\hyperlink{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}{operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
+\item 
+auto \mbox{\hyperlink{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}{operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a9ea78f4e72ed84a9dc9c77e705185739}{search\+\_\+ra}} (const Ts \&... args)
+\item 
+void \mbox{\hyperlink{namespacestring__tools_a47b9e4b28d14bb8e5e187d656a24d01d}{test\+\_\+trie\+\_\+node}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e}{empstr}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}\label{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}} 
+\index{string\_tools@{string\_tools}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily auto string\+\_\+tools\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{a,  }\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}\label{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}} 
+\index{string\_tools@{string\_tools}!operator==@{operator==}}
+\index{operator==@{operator==}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto string\+\_\+tools\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{a,  }\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacestring__tools_a908088ce2404d968ab69990c35885499}\label{namespacestring__tools_a908088ce2404d968ab69990c35885499}} 
+\index{string\_tools@{string\_tools}!prefix@{prefix}}
+\index{prefix@{prefix}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{prefix()}{prefix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{s }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacestring__tools_a908088ce2404d968ab69990c35885499_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}\label{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}} 
+\index{string\_tools@{string\_tools}!search\_all@{search\_all}}
+\index{search\_all@{search\_all}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{search\_all()}{search\_all()}}
+{\footnotesize\ttfamily auto string\+\_\+tools\+::search\+\_\+all (\begin{DoxyParamCaption}\item[{string const \&}]{t,  }\item[{string const \&}]{s }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacestring__tools_a9ea78f4e72ed84a9dc9c77e705185739}\label{namespacestring__tools_a9ea78f4e72ed84a9dc9c77e705185739}} 
+\index{string\_tools@{string\_tools}!search\_ra@{search\_ra}}
+\index{search\_ra@{search\_ra}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{search\_ra()}{search\_ra()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+auto string\+\_\+tools\+::search\+\_\+ra (\begin{DoxyParamCaption}\item[{const Ts \&...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacestring__tools_a47b9e4b28d14bb8e5e187d656a24d01d}\label{namespacestring__tools_a47b9e4b28d14bb8e5e187d656a24d01d}} 
+\index{string\_tools@{string\_tools}!test\_trie\_node@{test\_trie\_node}}
+\index{test\_trie\_node@{test\_trie\_node}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{test\_trie\_node()}{test\_trie\_node()}}
+{\footnotesize\ttfamily void string\+\_\+tools\+::test\+\_\+trie\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e}\label{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e}} 
+\index{string\_tools@{string\_tools}!empstr@{empstr}}
+\index{empstr@{empstr}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{empstr}{empstr}}
+{\footnotesize\ttfamily string string\+\_\+tools\+::empstr = \char`\"{}\char`\"{}}
+

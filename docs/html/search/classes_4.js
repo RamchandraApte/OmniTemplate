@@ -1,2 +1,4 @@
-var searchData =
-    [ [ 'edge_427', [ 'edge', [ '../structedge.html', 1, '' ] ] ] ];
+var searchData=
+[
+  ['edge_429',['edge',['../structedge.html',1,'']]]
+];

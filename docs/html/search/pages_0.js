@@ -1,7 +1,4 @@
-var searchData = [ [
-	'omnitemplate_880',
-	[
-		'OmniTemplate',
-		[ '../md__home_ram_OmniTemplate_README.html', 1, '' ]
-	]
-] ];
+var searchData=
+[
+  ['omnitemplate_884',['OmniTemplate',['../md__home_ram_OmniTemplate_README.html',1,'']]]
+];

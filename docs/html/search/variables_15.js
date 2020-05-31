@@ -1,10 +1,4 @@
-var searchData = [ [
-	'w_799',
-	[
-		'w',
-		[
-			'../structedge.html#ae1956b073448bd37adb2d9ba2b9dd3f4',
-			1, 'edge'
-		]
-	]
-] ];
+var searchData=
+[
+  ['w_803',['w',['../structedge.html#ae1956b073448bd37adb2d9ba2b9dd3f4',1,'edge']]]
+];
