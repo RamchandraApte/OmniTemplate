@@ -321,6 +321,7 @@ auto max_match(const vector<vl> &g) {
 	}
 	return m;
 }
+void test_max_match(const vector<vl> &g) { max_match(g); }
 void test_add_edge() {
 	vector<vl> g(10);
 	add_edge(g, 3, 4);

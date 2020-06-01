@@ -12,6 +12,6 @@ void test_all() {
 	test_dsu();
 	test_graph_theory();
 	test_string();
-	vector<vl> g;
+	test_coroutine();
 }
 void main2() { test_all(); }
