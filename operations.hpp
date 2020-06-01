@@ -24,15 +24,15 @@ um operator+(um a, um const &b) {
 	}
 	return a;
 }
-tm() auto operator|(uset<T> const &a, uset<T> const &b) {
+tm() auto operator|(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);
 	auto ret = bg;
 	ret.insert(al(sm));
 	return ret;
 };
-tm() auto operator&(uset<T> const &a, uset<T> const &b) {
+tm() auto operator&(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);
-	uset<T> ret;
+	unordered_set<T> ret;
 	for (const auto &x : sm) {
 		if (bg.count(x)) {
 			ret.insert(x);
@@ -40,7 +40,8 @@ tm() auto operator&(uset<T> const &a, uset<T> const &b) {
 	}
 	return ret;
 }
-tm() auto sub_set(uset<T> const &a, uset<T> const &b, uset<T> &ret) {
+tm() auto sub_set(unordered_set<T> const &a, unordered_set<T> const &b,
+		  unordered_set<T> &ret) {
 	for (const auto &x : a) {
 		if (!b.count(x)) {
 			ret.insert(x);
@@ -48,12 +49,12 @@ tm() auto sub_set(uset<T> const &a, uset<T> const &b, uset<T> &ret) {
 	}
 	return ret;
 }
-tm() auto operator-(uset<T> const &a, uset<T> const &b) {
-	uset<T> ret;
+tm() auto operator-(unordered_set<T> const &a, unordered_set<T> const &b) {
+	unordered_set<T> ret;
 	return sub_set(a, b, ret);
 }
-tm() auto operator^(uset<T> const &a, uset<T> const &b) {
-	uset<T> ret = a - b;
+tm() auto operator^(unordered_set<T> const &a, unordered_set<T> const &b) {
+	unordered_set<T> ret = a - b;
 	sub_set(b, a, ret);
 	return ret;
 }
