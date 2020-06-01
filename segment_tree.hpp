@@ -1,7 +1,7 @@
 #pragma once
 #include "core.hpp"
 template <auto op, lli id_ = identity(op)> struct seg {
-	using T = tp(identity(op));
+	using T = decltype(identity(op));
 	static constexpr T id = id_;
 	ll const n; /*!< Number of nodes of teh segment tree. Does not need to
 		       be a power of two.*/
@@ -143,7 +143,7 @@ tm() struct seg_base<no_impl<T>> {
 };
 ll identity(plus<ll>) { return 0; }
 template <typename Op = plus<ll>, template <typename> typename No_T = mypers,
-	  typename T = tp(identity(Op{})), typename No = No_T<no_v<T>>>
+	  typename T = decltype(identity(Op{})), typename No = No_T<no_v<T>>>
 struct seg2 : seg_base<No> {
 	Op op;
 	T id;

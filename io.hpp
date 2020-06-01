@@ -50,7 +50,7 @@ auto &operator<<(Stream &os, pair<T...> const &p) {
 }
 template <typename Stream, typename Container>
 auto operator<<(Stream &os, const Container &v)
-    -> decltype(begin(v), declval<tp(os)>()) {
+    -> decltype(begin(v), declval<decltype(os)>()) {
 	auto ed = begin(v);
 	auto big = v.size() > 20;
 	if (big) {
@@ -66,7 +66,8 @@ auto operator<<(Stream &os, const Container &v)
 	return os << "}";
 }
 template <typename T>
-auto operator<<(rin &os, const T &v) -> decltype(begin(v), declval<tp(os)>()) {
+auto operator<<(rin &os, const T &v)
+    -> decltype(begin(v), declval<decltype(os)>()) {
 	for (const auto &elem : v) {
 		os << elem;
 	}

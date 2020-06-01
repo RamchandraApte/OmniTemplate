@@ -66,16 +66,17 @@ tm() auto operator*(vector<T> a, vector<T> b) {
 template <typename Iterator>
 auto operator+(
     Iterator it,
-    enable_if_t<!is_same<typename iterator_traits<tp(it)>::iterator_category,
-			 random_access_iterator_tag>::value,
-		size_t>
+    enable_if_t<
+	!is_same<typename iterator_traits<decltype(it)>::iterator_category,
+		 random_access_iterator_tag>::value,
+	size_t>
 	n) {
 	advance(it, n);
 	return it;
 }
 tm() using bin_op = T(*)(T, T);
 #define ret(x, id)                                                             \
-	if (f == static_cast<tp(f)>(x)) {                                      \
+	if (f == static_cast<decltype(f)>(x)) {                                \
 		return id;                                                     \
 	}
 constexpr ll identity(bin_op<ll const &> const &f) {

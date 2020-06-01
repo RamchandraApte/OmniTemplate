@@ -27,7 +27,6 @@
 #endif
 #define fo(i, ...) for ([[maybe_unused]] auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] auto i : rev(ra{__VA_ARGS__}))
-#define tp decltype
 #define tm(...) template <typename __VA_ARGS__ T>
 #define this (*this)
 #define al(v) begin(v), end(v)
@@ -53,7 +52,7 @@ bool debug_mode = false;
 #define import(a)                                                              \
 	using namespace a;                                                     \
 	lets_count{#a "::", ""};
-#define df(x, v) remove_const_t<tp(v)> x = v
+#define df(x, v) remove_const_t<decltype(v)> x = v
 using namespace std;
 BEGIN_NS
 #define ostream auto
