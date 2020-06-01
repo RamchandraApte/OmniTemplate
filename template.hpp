@@ -15,12 +15,9 @@
 #include "time.hpp"
 #include "tree.hpp"
 #include "utility.hpp"
-END_NS
 #include "main.hpp"
-BEGIN_NS
 #include "2sat.hpp"
 #include "segment_tree.hpp"
-END_NS
 #include "queue.hpp"
 #include "splay_tree.hpp"
 #include "treap.hpp"

@@ -78,7 +78,6 @@ mixll(+) mixll(/) mixll(*) mixll(<) mixll(==) mixll(%) mixll(&) mixll(>>)
 }
 ll operator"" M(unsigned long long int x) { return x; }
 auto ceil_div(ll x, ll y) { return (x + y - 1) / y; }
-END_NS
 namespace std {
 #define inh(cls) template <> struct cls<ll> : cls<lli>
 inh(hash) { using hash<lli>::hash; };
@@ -92,4 +91,3 @@ auto operator+(T a, ll_t b) {
 	return a + lli(b);
 }
 } // namespace std
-BEGIN_NS

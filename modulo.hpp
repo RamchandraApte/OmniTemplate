@@ -56,7 +56,7 @@ auto operator/(modulo const &a, modulo const &b) { return a * (id{} / b); }
 template <typename Stream> auto &operator<<(Stream &os, modulo const &m) {
 	return os << m.x;
 }
-END_NS
+
 void test_power() {
 	assert(power(2, 3) == 8);
 	assert(power(3, 10) == 59049);

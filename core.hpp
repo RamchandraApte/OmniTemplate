@@ -18,13 +18,6 @@
 #define NDEBUG
 #define dbg(x) (x)
 #endif
-#if 0
-#define BEGIN_NS namespace {
-#define END_NS }
-#else
-#define BEGIN_NS
-#define END_NS
-#endif
 #define fo(i, ...) for ([[maybe_unused]] auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] auto i : rev(ra{__VA_ARGS__}))
 #define tm(...) template <typename __VA_ARGS__ T>
@@ -54,8 +47,6 @@ bool debug_mode = false;
 	lets_count{#a "::", ""};
 #define df(x, v) remove_const_t<decltype(v)> x = v
 using namespace std;
-BEGIN_NS
-#define ostream auto
 vector<pair<string, string>> lets{{"__debug::", ""},
 				  {"const ", ""},
 				  {"__cxx11::basic_string<char>", "string"}};
@@ -84,13 +75,12 @@ tm() using pq = std::priority_queue<T, vector<T>, greater<>>;
 let(clock_, high_resolution_clock);
 import(this_thread);
 let(um, unordered_map<ll, ll>);
-BEGIN_NS
+
 #ifdef REALGCC
 template <typename T, typename V = null_type>
 using order_stat_map =
     tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
 #endif
-END_NS
 
 auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
 auto const delim = ", "s; /*!< Delimiter for debug output */
@@ -98,7 +88,6 @@ auto constexpr tau = 2 * 3.1415926535897932384626433L; /*!< Pi */
 bool multitest = false;
 
 #include "io.hpp"
-BEGIN_NS
 #include "debug.hpp"
 #include "operations.hpp"
 #include "range.hpp"

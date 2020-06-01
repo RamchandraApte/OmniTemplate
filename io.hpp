@@ -42,7 +42,6 @@ auto print(const T1 &arg1, const Ts &... args) {
 	((cout << " " << args), ...);
 	cout << endl;
 }
-END_NS
 namespace std {
 template <typename Stream, typename... T>
 auto &operator<<(Stream &os, pair<T...> const &p) {
