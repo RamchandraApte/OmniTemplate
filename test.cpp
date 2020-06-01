@@ -11,6 +11,7 @@ void test_all() {
 	test_combinatorics();
 	test_dsu();
 	test_graph_theory();
+	test_string();
 	vector<vl> g;
 }
 void main2() { test_all(); }

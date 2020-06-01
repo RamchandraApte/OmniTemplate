@@ -5,18 +5,14 @@ struct hash_str {
 	static auto constexpr lcg_mod = (1ULL << 62) - 57;
 	const char *st;
 	vector<modulo> h, p;
-	explicit hash_str(const string &s)
+	explicit hash_str(const string_view s)
 	    : st(s.data()), h(s.size() + 1), p(s.size()) {
 		with _w{lcg_mod, M};
 		modulo g = 1;
 		fo(i, 0, s.size()) {
 			g *= modulo{0x51a3e995948c0deULL};
-			// dbg(A);
-			// dbg(B);
-			// dbg(lli((int128(A.x)*int128(B.x))%int128(M)));
 			h[i + 1] = modulo{s[i]} * g;
 		}
-		// dbg(h);
 		partial_sum(al(h), begin(h));
 		auto const inv = modulo{1} / modulo{0x51a3e995948c0deULL};
 		modulo x = 1;
@@ -25,23 +21,39 @@ struct hash_str {
 			x *= modulo{inv};
 		}
 	}
-	size_t operator()(string_view const &v) {
+	size_t operator()(const string_view v) const {
 		with _w{lcg_mod, M};
 		ll l = v.data() - st;
-		// dbg(l);
-		// dbg(v.size());
-		// dbg(modulo{10}-modulo{100});
-		// dbg(h[l+v.size()]-h[l]);
-		// dbg(p[l]);
 		return ll((h[l + v.size()] - h[l]) * p[l]);
 	}
 };
+void test_hash_str() {
+	auto main_str = "OmniTemplate, OmniTemplate"sv;
+	hash_str func{main_str};
+	func(main_str.substr(0, 3));
+	unordered_map<string_view, ll, hash_str> mapping({}, func);
+	auto omni1 = main_str.substr(0, 4);
+	auto omni2 = main_str.substr(14, 4);
+	auto omn = main_str.substr(14, 3);
+	assert(omni1 == omni2);
+	mapping[omni1] = 42;
+	assert(mapping[omni2] == 42);
+	assert(mapping[omn] == 0);
+}
 struct bytehash {
-	auto operator()(const string &x) const {
+	template <typename T> constexpr auto operator()(const T &x) const {
 		return hash<string_view>{}(
 		    string_view{reinterpret_cast<const char *>(&x), sizeof(x)});
 	}
 };
+void test_bytehash() {
+	bytehash func{};
+	fo(i, 100) {
+		assert(func(i) != func(i + 1));
+		assert((func(tuple{to_string(i), i}) !=
+			func(tuple{to_string(i), i + 1})));
+	}
+}
 vl prefix(string const &s) {
 	ll n = s.size();
 	vl p(n);
@@ -147,5 +159,9 @@ class trie_node {
 	}
 };
 void test_trie_node() {}
+void test_string() {
+	test_hash_str();
+	test_bytehash();
+}
 } // namespace string_tools
 using namespace string_tools;
