@@ -147,9 +147,9 @@ void test_totient() {
 }
 ll dlog(const modulo a, const modulo b) {
 	/* Finds x such that a^x = b (mod M) using baby-step giant-step
-	   algorithm. M must be prime
+	   algorithm. a and M must be coprime.
 	*/
-	assert(prime(M));
+	assert(gcd(a, m) == 1);
 	auto check = [&](ll x) {
 		assert(power(a, x) == b);
 		return x;
@@ -165,7 +165,7 @@ ll dlog(const modulo a, const modulo b) {
 	auto x = b;
 	for (ll cnt = 0;; ++cnt) {
 		if (auto it = powers.find(x); it != end(powers)) {
-			return check((it->second * sq - cnt) % (M - 1));
+			return check((it->second * sq - cnt) % totient(M));
 		}
 		x *= a;
 	}
@@ -176,11 +176,15 @@ void test_dlog() {
 		auto b = power(a, x);
 		dlog(a, b);
 	};
-	check(2, 10, 1031);
-	check(7, 1, 31);
-	check(1, 1, 2);
-	check(23, 47, 157);
-	check(15, 100, 47);
+	fo(a, 20) {
+		fo(x, 20) {
+			fo(m, 1, 20) {
+				if (gcd(a, m) == 1) {
+					check(a, x, m);
+				}
+			}
+		}
+	}
 }
 modulo primitive_root() {
 	if (M == 1) {
