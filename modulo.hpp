@@ -24,7 +24,7 @@ struct modulo {
 		  typename = enable_if_t<is_integral<T>::value, void>>
 	modulo(T x_) : x(ll(x_) % M) {}
 	modulo(ll x_, no_mod) : x(x_) {}
-	explicit operator auto() { return x; }
+	explicit operator auto() const { return x; }
 };
 modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;

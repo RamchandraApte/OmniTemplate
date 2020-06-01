@@ -149,7 +149,7 @@ ll dlog(const modulo a, const modulo b) {
 	/* Finds x such that a^x = b (mod M) using baby-step giant-step
 	   algorithm. a and M must be coprime.
 	*/
-	assert(gcd(a, m) == 1);
+	assert(gcd(static_cast<ll>(a), M) == 1);
 	auto check = [&](ll x) {
 		assert(power(a, x) == b);
 		return x;
