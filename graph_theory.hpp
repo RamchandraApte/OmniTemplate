@@ -21,8 +21,8 @@ template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 namespace graph_theory {
 auto add_edge(vector<vl> &g, ll u, ll v) {
 	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
-	g[u].pb(v);
-	g[v].pb(u);
+	g[u].push_back(v);
+	g[v].push_back(u);
 }
 auto dist(vector<vector<pr>> g, ll s) {
 	/*! Given an adjacency-list of a graph, returns the shortest distance to
@@ -82,7 +82,7 @@ void test_dist() {
 	const auto n = g.rows_n;
 	vector<vector<pr>> adj(n);
 	fo(i, 0, n) {
-		fo(j, 0, n) { adj[i].pb({j, g[i][j]}); }
+		fo(j, 0, n) { adj[i].push_back({j, g[i][j]}); }
 	}
 	fo(s, 0, n) {
 		// TODO test pv
@@ -109,7 +109,7 @@ auto mst(vector<edge> es) {
 		if (!d(e.a, e.b)) {
 			continue;
 		}
-		ret.pb(e);
+		ret.push_back(e);
 	}
 	return ret;
 }
@@ -166,7 +166,7 @@ struct bfs : public gsearch {
 	using gsearch::operator(), gsearch::gsearch;
 	void operator()(ll s) {
 		ll old_size = q.size();
-		q.pb(s);
+		q.push_back(s);
 		v[s] = true;
 		for (ll idx = old_size; idx < q.size(); ++idx) {
 			auto i = q[idx];
@@ -174,7 +174,7 @@ struct bfs : public gsearch {
 				if (v[j]) {
 					continue;
 				}
-				q.pb(j);
+				q.push_back(j);
 				v[j] = true;
 				add(j, i);
 			}
@@ -198,7 +198,7 @@ auto trans(const vector<vl> &g) {
 	vector<vl> h(n);
 	fo(i, n) {
 		for (ll j : g[i]) {
-			h[j].pb(i);
+			h[j].push_back(i);
 		}
 	}
 	return h;
@@ -234,12 +234,12 @@ auto scc(const vector<vl> &g) {
 }
 void test_scc() {
 	vector<vl> g(5);
-	g[0].pb(3);
-	g[3].pb(1);
-	g[1].pb(2);
-	g[2].pb(0);
-	g[0].pb(4);
-	g[2].pb(4);
+	g[0].push_back(3);
+	g[3].push_back(1);
+	g[1].push_back(2);
+	g[2].push_back(0);
+	g[0].push_back(4);
+	g[2].push_back(4);
 	const auto cm = scc(g);
 	vl v{cm[0], cm[1], cm[2], cm[3]};
 	// TODO refactor this into a function
@@ -294,7 +294,7 @@ auto max_match(const vector<vl> &g) {
 		fo(i, n) {
 			for (ll j : g[i]) {
 				if ((j == m[i]) == s[i]) {
-					h[i].pb(j);
+					h[i].push_back(j);
 				}
 			}
 		}

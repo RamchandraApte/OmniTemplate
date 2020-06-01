@@ -34,7 +34,7 @@
 	ll x;                                                                  \
 	cin >> x;
 #define pb push_back
-#define vector vector
+#define vc vector
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...)
@@ -60,7 +60,7 @@ vector<pair<string, string>> lets{{"__debug::", ""},
 				  {"const ", ""},
 				  {"__cxx11::basic_string<char>", "string"}};
 struct lets_add {
-	lets_add(const string &a, const string &b) { lets.pb({a, b}); }
+	lets_add(const string &a, const string &b) { lets.push_back({a, b}); }
 };
 #ifdef REALGCC
 import(__gnu_pbds);

@@ -169,7 +169,7 @@ void to_array(treap<Key, Data> *trp, vector<Key> &out) {
 		return;
 	}
 	to_array(trp->l, out);
-	out.pb(trp->key);
+	out.push_back(trp->key);
 	to_array(trp->r, out);
 }
 template <typename Key, typename Data>

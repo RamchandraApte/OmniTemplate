@@ -211,7 +211,7 @@ struct seg2 : seg_base<No> {
 	auto up(const T &val, ll l_, ll r_) {
 		l = l_;
 		r = r_;
-		h.pb(ro);
+		h.push_back(ro);
 		up(val, ro, 0, n);
 	}
 	auto up(T val, ll l) { up(val, l, l + 1); }

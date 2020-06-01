@@ -15,10 +15,10 @@ optional<vector<char>> sat2(const vector<pr> &v) {
 	vector<vl> g(2 * n + 1);
 	for (const auto &p : v) {
 		if (p.first) {
-			g[n - p.first].pb(n + p.second);
+			g[n - p.first].push_back(n + p.second);
 		}
 		if (p.second) {
-			g[n - p.second].pb(n + p.first);
+			g[n - p.second].push_back(n + p.first);
 		}
 	}
 	dfs topo{g};

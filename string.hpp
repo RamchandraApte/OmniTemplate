@@ -64,7 +64,7 @@ auto search_all(string const &t, string const &s) {
 	vl v;
 	fo(i, t.size()) {
 		if (p[s.size() + 1 + i] == s.size()) {
-			v.pb(i);
+			v.push_back(i);
 		}
 	}
 	return v;

@@ -76,7 +76,7 @@ auto hull(vector<point> &v, df(do_sort, true)) {
 					 return tuple{imag(a), real(a)};
 				 }));
 		sort(al(v), bind(ccw, p, _1, _2));
-		h.pb(p);
+		h.push_back(p);
 	}
 	for (auto x : v) {
 		while (h.size() >= 2 && !ccw(h[h.size() - 2], h.back(), x)) {

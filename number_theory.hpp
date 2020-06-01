@@ -49,9 +49,9 @@ vl divisors(ll x) {
 		if (y < d) {
 			break;
 		}
-		v.pb(d);
+		v.push_back(d);
 		if (d < y) {
-			v.pb(y);
+			v.push_back(y);
 		}
 	}
 	sort(al(v));
@@ -69,7 +69,7 @@ auto sieve(ll n) {
 	vl d(n), ps;
 	fo(i, 2, n) {
 		if (d[i] == 0) {
-			ps.pb(d[i] = i);
+			ps.push_back(d[i] = i);
 		}
 		for (auto p : ps) {
 			if (!(p <= d[i] && p * i < n)) {

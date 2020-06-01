@@ -85,7 +85,7 @@ auto filter(vector<ra> &v) {
 	vector<ra> sg;
 	for (const auto &p : v) {
 		if (sg.empty() || sg.back().ed < p.ed) {
-			sg.pb(p);
+			sg.push_back(p);
 		}
 	}
 }
