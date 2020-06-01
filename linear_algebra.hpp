@@ -115,10 +115,6 @@ void test_matrix() {
 	matrix<ld> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
 	auto x = b / a;
 	// TODO 😩 there are no asserts here
-	dbg(x);
-	dbg(a * x);
-	dbg(b);
-	dbg(det(a));
 }
 } // namespace linear_algebra
 using namespace linear_algebra;

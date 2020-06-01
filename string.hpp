@@ -68,7 +68,6 @@ vl prefix(string const &s) {
 			}
 		}
 	}
-	dbg(p);
 	return p;
 }
 auto search_all(string const &t, string const &s) {
@@ -113,8 +112,6 @@ struct search_it : it_base<ll> {
 			if (i < n) {
 				p[i] = o;
 			}
-			dbg(i);
-			dbg(o);
 			if (o == n) {
 				break;
 			}

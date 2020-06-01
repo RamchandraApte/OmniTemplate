@@ -14,16 +14,13 @@ struct timer {
 };
 template <typename Func> void bench(Func a) {
 	timer _t;
-	dbg(ll(-5) / ll(3));
-	dbg(tp(a)(-5) / tp(a)(3));
-	dbg(tp(a)(-6) / tp(a)(3));
 	decltype(a) ans = 0;
 	for (decltype(a) i = 0; i < a; ++i) {
 		for (decltype(a) j = 1; j < a; ++j) {
 			ans += ((-i) % (j));
 		}
 	}
-	dbg(ans);
+	// TODO avoid optimization of ans?
 }
 } // namespace time_tools
 using namespace time_tools;

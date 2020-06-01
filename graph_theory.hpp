@@ -34,7 +34,6 @@ auto dist(vector<vector<pr>> g, ll s) {
 	while (q.size()) {
 		const auto [di, a] = q.top();
 		q.pop();
-		dbg(a);
 		if (di != d[a]) {
 			continue;
 		}
@@ -43,9 +42,6 @@ auto dist(vector<vector<pr>> g, ll s) {
 			const auto &[b, w] = pb;
 			auto &x = d[b];
 			auto nw = di + w;
-			dbg(di);
-			dbg(nw);
-			dbg(b);
 			if (nw < x) {
 				pv[b] = a;
 				x = nw;
@@ -76,8 +72,6 @@ auto dist(matrix<ll> const &g) {
 void test_dist() {
 	matrix<ll> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};
 	matrix<ll> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};
-	dbg(dist(g));
-	dbg(short_dist);
 	assert(dist(g) == short_dist);
 	const auto n = g.rows_n;
 	vector<vector<pr>> adj(n);
@@ -89,8 +83,6 @@ void test_dist() {
 		const auto dijkstra = dist(adj, s)[0];
 		auto floyd = vl(short_dist[s], short_dist[s] + n);
 		floyd[s] = 0;
-		dbg(dijkstra);
-		dbg(floyd);
 		assert((dijkstra == floyd));
 	}
 }
@@ -117,7 +109,6 @@ void test_mst() {
 	vector<edge> edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};
 	auto ret = mst(edges);
 	sort(al(ret));
-	dbg(ret);
 	assert((ret == vector<edge>{edges[3], edges[1], edges[0]}));
 }
 struct gsearch {
@@ -189,7 +180,6 @@ void test_bfs() {
 	add_edge(g, 2, 3);
 	bfs b{g};
 	b(0);
-	dbg(b.p);
 	assert((b.p == vl{-1, 0, 1, 1}));
 	assert((b.d == vl{0, 1, 2, 2}));
 }
@@ -212,10 +202,8 @@ auto scc(const vector<vl> &g) {
 	/*! Returns the strongly connected component for each vertex of the
 	 * graph g.*/
 	auto h = trans(g);
-	dbg(h);
 	vl cm(size(g), -1);
 	auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
-		dbg(u);
 		if (cm[u] != -1) {
 			return;
 		}
@@ -226,7 +214,6 @@ auto scc(const vector<vl> &g) {
 	}};
 	dfs s{g};
 	s();
-	dbg(s.q);
 	for (ll i : s.q) {
 		assign(i, i);
 	}
@@ -252,7 +239,6 @@ auto bipartite(const vector<vl> &g) {
 	b();
 	auto n = size(g);
 	vl s(n);
-	dbg(b.p);
 	for (auto i : b.q) {
 		if (auto x = b.p[i]; x != -1) {
 			s[i] = !s[x];
@@ -306,12 +292,7 @@ auto max_match(const vector<vl> &g) {
 				md = min(md, b.d[i]);
 			}
 		}
-		dbg(md);
-		dbg(b.d);
-		dbg(m);
-		dbg(s);
 		auto path = fix{[&](const auto &path, ll i) -> bool {
-			dbg(i);
 			if (v[i]) {
 				return false;
 			}
@@ -321,8 +302,7 @@ auto max_match(const vector<vl> &g) {
 			}
 			for (ll j : g[i]) {
 				if (b.d[j] == b.d[i] + 1) {
-					if (dbg(path(j))) {
-						dbg(j);
+					if (path(j)) {
 						if (s[i] == 0) {
 							m[i] = j;
 							m[j] = i;

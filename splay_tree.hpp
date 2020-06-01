@@ -196,7 +196,6 @@ void test_splay_tree() {
 	SplayTree<int>::iterator::value_type x1{};
 	vl vec;
 	copy(sp.begin(), sp.end(), back_inserter(vec));
-	dbg(vec);
 	assert(vec == expected);
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }

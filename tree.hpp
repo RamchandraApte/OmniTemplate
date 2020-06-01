@@ -52,8 +52,6 @@ tm() auto lca(no<T> *a, no<T> *b) {
 			b = b->p[i];
 		}
 	}
-	dbg(a->v);
-	dbg(b->v);
 	assert(a->p[0] == b->p[0]);
 	return a->p[0];
 }

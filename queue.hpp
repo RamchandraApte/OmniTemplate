@@ -78,7 +78,6 @@ void test_queueadaptor() {
 	assert(q.size() == 4);
 	assert(!q.empty());
 	assert(q.front() == 5);
-	dbg(q.back());
 	assert(q.back() == 8);
 	q.pop();
 	q.pop();

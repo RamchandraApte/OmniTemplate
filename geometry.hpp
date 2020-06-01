@@ -58,9 +58,6 @@ void test_ccw() {
 		} catch (invalid_argument) {
 			return;
 		}
-		dbg(a);
-		dbg(b);
-		dbg(c);
 		assert(false);
 	};
 	test_collinear({0, 1}, {0, 2}, {0, -1});
@@ -107,7 +104,7 @@ struct cht {
 	explicit cht(vector<point> v) {
 		v = uniq(v, map_args(lambda(imag), equal_to{}),
 			 map_args(lambda(conj)));
-		h = dbg(hull(v, false));
+		h = hull(v, false);
 	}
 	auto min(ll x) {
 		/*! Minimum value of the lines at x*/
@@ -122,9 +119,7 @@ void test_hull() {
 	vector<point> exp{lines[1], lines[2], lines[4], lines[5]};
 	auto h = hull(lines);
 	sort(al(h));
-	dbg(h);
 	sort(al(exp));
-	dbg(exp);
 	assert(h == exp);
 }
 void test_cht() {

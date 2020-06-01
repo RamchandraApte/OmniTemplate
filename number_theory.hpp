@@ -11,9 +11,7 @@ auto prime(ll n) {
 	with _m{n, M};
 	ll tz = __builtin_ctz(n - 1);
 	auto b = (n - 1) >> tz;
-	dbg(b);
 	auto prime_a = [&](modulo const &a) {
-		dbg(a);
 		if (a == 0) {
 			return true;
 		}
@@ -82,7 +80,6 @@ auto sieve(ll n) {
 	return d;
 }
 void test_sieve() {
-	dbg(sieve(11));
 	assert((sieve(11) == vl{0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2}));
 }
 um fac(ll n) {
@@ -154,9 +151,6 @@ ll dlog(const modulo a, const modulo b) {
 	*/
 	assert(prime(M));
 	auto check = [&](ll x) {
-		dbg(a);
-		dbg(x);
-		dbg(b);
 		assert(power(a, x) == b);
 		return x;
 	};
@@ -180,8 +174,6 @@ void test_dlog() {
 	auto check = [](modulo a, ll x, ll m) {
 		with _m{m, M};
 		auto b = power(a, x);
-		dbg(a);
-		dbg(b);
 		dlog(a, b);
 	};
 	check(2, 10, 1031);

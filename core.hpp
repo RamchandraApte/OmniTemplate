@@ -87,7 +87,8 @@ let(um, unordered_map<ll, ll>);
 BEGIN_NS
 #ifdef REALGCC
 template <typename T, typename V = null_type>
-using omap = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
+using order_stat_map =
+    tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
 #endif
 END_NS
 

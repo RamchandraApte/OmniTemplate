@@ -18,8 +18,7 @@ auto operator+(bigint const& a, bigint const& b){
 	bigint c(sm+1);
 	fo(i,sm){
 		for(const auto& x: xs){
-			dbg(i);
-			c.v[i+1] |= dbg(addo(c.v[i], x[i], c.v.data()+i));
+			c.v[i+1] |= addo(c.v[i], x[i], c.v.data()+i);
 		}
 	}
 	return c;

@@ -11,7 +11,6 @@ template <auto op, lli id_ = identity(op)> struct seg {
 	    : n(next_pow_of_2(v.size())), a(2 * n, id), z(2 * n) {
 		copy(al(v), begin(a) + n);
 		for (auto i : rev(ra{n})) {
-			dbg(i);
 			a[i] = op(a[2 * i], a[2 * i + 1]);
 		}
 	}
@@ -83,10 +82,8 @@ tm() struct pers_ptr {
 	mutable T *ptr;
 	auto operator->() const {
 		if (ptr) {
-			dbg("creatin");
 			ptr = new T{*ptr};
 		} else {
-			dbg("null");
 			ptr = new T{};
 		}
 		return ptr;
@@ -107,7 +104,6 @@ template <typename T, template <typename> typename Ptr> struct no_ptr_v {
 	Ptr<no_ptr_v> l_, r_;
 	no_ptr_v() : v{}, l_{}, r_{} {}
 	no_ptr_v(no_ptr_v const &oth) : v{oth.v}, l_{}, r_{} {
-		dbg("copying,,,");
 		l_.ptr = oth.l_.ptr;
 		r_.ptr = oth.r_.ptr;
 	}
@@ -137,7 +133,7 @@ tm() struct seg_base<no_impl<T>> {
 			v(n+i).a = d[i];
 		}
 		for(auto i:rev(ra{n})){
-			up_inv(this, dbg(i));
+			up_inv(this, i);
 		}*/
 	}
 };
@@ -172,9 +168,6 @@ struct seg2 : seg_base<No> {
 	}
 #define sig No const &i, ll nl, ll nr
 	T gt(sig) const {
-		dbg(nl);
-		dbg(nr);
-		dbg(v(i).a);
 		auto m = mid(nl, nr);
 		down(i, nr - nl != 1);
 		return dis(nl, nr)
@@ -190,23 +183,17 @@ struct seg2 : seg_base<No> {
 	}
 	auto gt(ll l) { return gt(l, l + 1); }
 	auto up(T const &val, sig) {
-		// dbg(i.i);dbg(val);dbg(nl);dbg(nr);
-		// cerr<<i.i<<" "<<val<<" "<<nl<<" "<<nr<<endl;
 		auto m = mid(nl, nr);
 		if (over(nl, nr)) {
-			dbg(nl);
-			dbg(nr);
 			v(i).z += val;
 		}
 		down(i, nr - nl != 1);
 		if (dis(nl, nr) || over(nl, nr)) {
 			return;
 		}
-		dbg("recursing...");
 		up(val, gl(i), nl, m);
 		up(val, gr(i), m, nr);
 		up_inv(this, i);
-		// cerr<<"exiting: "<<i.i<<endl;
 	}
 	auto up(const T &val, ll l_, ll r_) {
 		l = l_;
