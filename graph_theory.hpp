@@ -24,12 +24,12 @@ auto add_edge(vector<vl> &g, ll u, ll v) {
 	g[u].push_back(v);
 	g[v].push_back(u);
 }
-auto dist(vector<vector<pr>> g, ll s) {
+auto shortest_dist(vector<vector<pr>> g, ll source) {
 	/*! Given an adjacency-list of a graph, returns the shortest distance to
 	 * each vertex from the source. Algorithm: Dijkstra*/
 	vl d(g.size(), inf), pv(g.size(), -1);
 	pq<pr> q;
-	d[s] = 0;
+	d[source] = 0;
 	fo(i, d.size()) { q.push({d[i], i}); }
 	while (q.size()) {
 		const auto [di, a] = q.top();
@@ -51,14 +51,14 @@ auto dist(vector<vector<pr>> g, ll s) {
 	}
 	return array<vl, 2>{d, pv};
 }
-auto dist(matrix<ll> const &g) {
+auto shortest_dist(matrix<ll> const &graph) {
 	/*! Given a 2D matrix of distances for each edge in g, returns a 2D
 	 * matrix of the shortest distances. We do not consider paths of length
 	 * zero. Algorithm: Floyd-Warshall*/
 	// TODO do we want to consider zero-length paths?
-	assert(g.rows_n == g.cols_n);
-	auto n = g.rows_n;
-	auto d = g;
+	assert(graph.rows_n == graph.cols_n);
+	auto n = graph.rows_n;
+	auto d = graph;
 	fo(k, n) {
 		fo(i, n) {
 			fo(j, n) {
@@ -69,10 +69,10 @@ auto dist(matrix<ll> const &g) {
 	}
 	return d;
 }
-void test_dist() {
+void test_shortest_dist() {
 	matrix<ll> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};
 	matrix<ll> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};
-	assert(dist(g) == short_dist);
+	assert(shortest_dist(g) == short_dist);
 	const auto n = g.rows_n;
 	vector<vector<pr>> adj(n);
 	fo(i, 0, n) {
@@ -80,24 +80,24 @@ void test_dist() {
 	}
 	fo(s, 0, n) {
 		// TODO test pv
-		const auto dijkstra = dist(adj, s)[0];
+		const auto dijkstra = shortest_dist(adj, s)[0];
 		auto floyd = vl(short_dist[s], short_dist[s] + n);
 		floyd[s] = 0;
 		assert((dijkstra == floyd));
 	}
 }
-auto mst(vector<edge> es) {
+auto mst(vector<edge> edges) {
 	/*! Returns the minimum spanning tree of the set of edges es, as a set
 	 * of edges*/
 	// TODO what happens if no MST?
-	sort(al(es));
+	sort(al(edges));
 	auto mi = -inf;
-	for (const auto &e : es) {
+	for (const auto &e : edges) {
 		mi = max(mi, max(e.a, e.b));
 	}
 	dsu d{mi + 1};
 	vector<edge> ret;
-	for (const auto &e : es) {
+	for (const auto &e : edges) {
 		if (!d(e.a, e.b)) {
 			continue;
 		}
@@ -184,11 +184,11 @@ void test_bfs() {
 	assert((b.p == vl{-1, 0, 1, 1}));
 	assert((b.d == vl{0, 1, 2, 2}));
 }
-auto trans(const vector<vl> &g) {
-	ll n = size(g);
+auto trans(const vector<vl> &graph) {
+	ll n = size(graph);
 	vector<vl> h(n);
 	fo(i, n) {
-		for (ll j : g[i]) {
+		for (ll j : graph[i]) {
 			h[j].push_back(i);
 		}
 	}
@@ -199,11 +199,11 @@ void test_trans() {
 		vector<vl>{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
 	assert((trans(vector<vl>{}) == vector<vl>{}));
 }
-auto scc(const vector<vl> &g) {
+auto scc(const vector<vl> &graph) {
 	/*! Returns the strongly connected component for each vertex of the
 	 * graph g.*/
-	auto h = trans(g);
-	vl cm(size(g), -1);
+	auto h = trans(graph);
+	vl cm(size(graph), -1);
 	auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
 		if (cm[u] != -1) {
 			return;
@@ -213,7 +213,7 @@ auto scc(const vector<vl> &g) {
 			assign(v, c);
 		}
 	}};
-	dfs s{g};
+	dfs s{graph};
 	s();
 	for (ll i : s.q) {
 		assign(i, i);
@@ -234,20 +234,20 @@ void test_scc() {
 	assert((all_of(al(v), [&](auto x) { return x == v[0]; })));
 	assert(cm[4] != cm[0]);
 }
-auto bipartite(const vector<vl> &g) {
+auto bipartite(const vector<vl> &graph) {
 	/*! Returns a bipartite coloring if possible */
-	bfs b{g};
+	bfs b{graph};
 	b();
-	auto n = size(g);
+	auto n = size(graph);
 	vl s(n);
 	for (auto i : b.q) {
-		if (auto x = b.p[i]; x != -1) {
-			s[i] = !s[x];
+		if (const auto par = b.p[i]; par != -1) {
+			s[i] = !s[par];
 		}
 	}
 	bool bi = true;
 	fo(i, n) {
-		for (auto j : g[i]) {
+		for (const auto j : graph[i]) {
 			bi &= s[i] != s[j];
 		}
 	}
@@ -419,7 +419,7 @@ auto graph_in(vector<vl> &g, ll m) {
 void test_graph_theory() {
 	test_add_edge();
 	test_trans();
-	test_dist();
+	test_shortest_dist();
 	test_mst();
 	test_bfs();
 	test_bipartite();

@@ -5,13 +5,13 @@ struct hash_str {
 	static auto constexpr lcg_mod = (1ULL << 62) - 57;
 	const char *st;
 	vector<modulo> h, p;
-	explicit hash_str(const string_view s)
-	    : st(s.data()), h(s.size() + 1), p(s.size()) {
+	explicit hash_str(const string_view str)
+	    : st(str.data()), h(str.size() + 1), p(str.size()) {
 		with _w{lcg_mod, M};
 		modulo g = 1;
-		fo(i, 0, s.size()) {
+		fo(i, 0, str.size()) {
 			g *= modulo{0x51a3e995948c0deULL};
-			h[i + 1] = modulo{s[i]} * g;
+			h[i + 1] = modulo{str[i]} * g;
 		}
 		partial_sum(al(h), begin(h));
 		auto const inv = modulo{1} / modulo{0x51a3e995948c0deULL};
