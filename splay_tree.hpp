@@ -197,7 +197,6 @@ void test_splay_tree() {
 	vl vec;
 	copy(sp.begin(), sp.end(), back_inserter(vec));
 	assert(vec == expected);
-	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 } // namespace splay_tree
 using namespace splay_tree;

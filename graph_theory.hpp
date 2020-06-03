@@ -271,21 +271,21 @@ void test_bipartite() {
 	}
 }
 auto max_match(const vector<vl> &graph) {
-	/*! Returns a maximum matching of bipartite graph g using the
+	/*! Returns a maximum matching of bipartite graph using the
 	 * Hopcroft-Karp algorithm.*/
 	auto side = bipartite(graph).value();
 	ll n = graph.size();
 	vl match(n, -1);
 	while (true) {
-		/* Construct a directed graph with edges from*/
+		/* Construct a directed graph to find aug_pathmenting paths*/
 		// TODO refactor this to use lazy graphs
-		vector<vl> h(n + 2);
+		vector<vl> aug_path(n + 2);
 		const auto dummy_a = n;
 		const auto dummy_b = n + 1;
 		fo(i, n) {
 			for (ll j : graph[i]) {
 				if ((j == match[i]) == side[i]) {
-					h[i].push_back(j);
+					aug_path[i].push_back(j);
 				}
 			}
 		}
@@ -294,35 +294,28 @@ auto max_match(const vector<vl> &graph) {
 				continue;
 			}
 			if (side[i]) {
-				h[i].push_back(dummy_b);
+				aug_path[i].push_back(dummy_b);
 			} else {
-				h[dummy_a].push_back(i);
+				aug_path[dummy_a].push_back(i);
 			}
 		}
-		bfs b{h};
+		bfs b{aug_path};
 		b(dummy_a);
-		dbg(h);
-		dbg(match);
-		dbg(b.p);
-		dbg(b.d);
 		if (b.d[dummy_b] == inf) {
 			break;
 		}
-		vl v(n + 2);
-		dbg(v);
+		vl vis(aug_path.size());
 		auto path = fix{[&](const auto &path, ll i) -> bool {
-			if (v[i]) {
+			if (vis[i]) {
 				return false;
 			}
-			v[i] = true;
+			vis[i] = true;
 			if (i == dummy_b) {
 				return true;
 			}
-			for (ll j : h[i]) {
+			for (ll j : aug_path[i]) {
 				if (b.d[j] == b.d[i] + 1) {
 					if (path(j)) {
-						dbg(i);
-						dbg(j);
 						if (i < n && j < n) {
 							match[i] = j;
 							match[j] = i;
@@ -334,12 +327,6 @@ auto max_match(const vector<vl> &graph) {
 			return false;
 		}};
 		path(dummy_a);
-		static ll cnt = 0;
-		++cnt;
-		if (cnt >= 100) {
-			dbg("breaking infinite loop!");
-			break;
-		}
 	}
 	return match;
 }
@@ -389,12 +376,24 @@ void test_max_match() {
 		vector<vl> g(6);
 		// 0, 2, 4 on one side, 1, 3, 5 on the other side
 		add_edge(g, 0, 1);
-		add_edge(g, 0, 3);
 		add_edge(g, 2, 1);
 		add_edge(g, 2, 5);
 		add_edge(g, 4, 1);
 		add_edge(g, 4, 5);
-		assert((matching_size(max_match(g)) == 2 * 3));
+		assert((matching_size(max_match(g)) == 2 * 2));
+	}
+	{
+		vector<vl> g(10);
+		// 0, 2, 4 on one side, 1, 3, 5 on the other side
+		fo(i, 0, g.size() / 2) {
+			if (2 * i - 1 >= 0) {
+				add_edge(g, 2 * i, 2 * i - 1);
+			}
+			if (2 * i + 1 < g.size()) {
+				add_edge(g, 2 * i, 2 * i + 1);
+			}
+		}
+		assert((matching_size(max_match(g)) == 2 * g.size() / 2));
 	}
 }
 void test_add_edge() {

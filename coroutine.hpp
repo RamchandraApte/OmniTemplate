@@ -44,6 +44,5 @@ void test_coroutine() {
 		}
 	} catch (out_of_range) {
 	}
-	dbg(v);
 	assert((v == vl{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));
 }

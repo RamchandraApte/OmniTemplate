@@ -13,5 +13,6 @@ void test_all() {
 	test_graph_theory();
 	test_string();
 	test_coroutine();
+	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 void main2() { test_all(); }
