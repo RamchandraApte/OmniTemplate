@@ -119,7 +119,7 @@ struct gsearch {
 	deque<ll> q;
 	vl p, d;
 	gsearch(const vector<vector<ll>> &g_)
-	    : g(g_), n(size(g)), v(n), p(n, -1), d(n) {}
+	    : g(g_), n(size(g)), v(n), p(n, -1), d(n, inf) {}
 	virtual void operator()(ll) = 0;
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
@@ -159,6 +159,7 @@ struct bfs : public gsearch {
 		ll old_size = q.size();
 		q.push_back(s);
 		v[s] = true;
+		d[s] = 0;
 		for (ll idx = old_size; idx < q.size(); ++idx) {
 			auto i = q[idx];
 			for (const auto &j : g[i]) {
@@ -269,43 +270,62 @@ void test_bipartite() {
 		}
 	}
 }
-auto max_match(const vector<vl> &g) {
-	/*! Returns a maximum matching of g using the Hopcroft-Karp algorithm.*/
-	auto s = bipartite(g).value();
-	ll n = g.size();
-	vl m(n, -1);
-	for (ll md = -1; md != inf;) {
-		vl v(n);
-		vector<vl> h(n);
+auto max_match(const vector<vl> &graph) {
+	/*! Returns a maximum matching of bipartite graph g using the
+	 * Hopcroft-Karp algorithm.*/
+	auto side = bipartite(graph).value();
+	ll n = graph.size();
+	vl match(n, -1);
+	while (true) {
+		/* Construct a directed graph with edges from*/
+		// TODO refactor this to use lazy graphs
+		vector<vl> h(n + 2);
+		const auto dummy_a = n;
+		const auto dummy_b = n + 1;
 		fo(i, n) {
-			for (ll j : g[i]) {
-				if ((j == m[i]) == s[i]) {
+			for (ll j : graph[i]) {
+				if ((j == match[i]) == side[i]) {
 					h[i].push_back(j);
 				}
 			}
 		}
-		bfs b{h};
-		b();
-		md = inf;
 		fo(i, n) {
-			if (s[i] == 1 && m[i] == -1) {
-				md = min(md, b.d[i]);
+			if (match[i] != -1) {
+				continue;
+			}
+			if (side[i]) {
+				h[i].push_back(dummy_b);
+			} else {
+				h[dummy_a].push_back(i);
 			}
 		}
+		bfs b{h};
+		b(dummy_a);
+		dbg(h);
+		dbg(match);
+		dbg(b.p);
+		dbg(b.d);
+		if (b.d[dummy_b] == inf) {
+			break;
+		}
+		vl v(n + 2);
+		dbg(v);
 		auto path = fix{[&](const auto &path, ll i) -> bool {
 			if (v[i]) {
 				return false;
 			}
 			v[i] = true;
-			if (s[i] == 1 && m[i] == -1 && b.d[i] == md) {
+			if (i == dummy_b) {
 				return true;
 			}
-			for (ll j : g[i]) {
+			for (ll j : h[i]) {
 				if (b.d[j] == b.d[i] + 1) {
 					if (path(j)) {
-						if (s[i] == 0) {
-							m[i] = j;
-							m[j] = i;
+						dbg(i);
+						dbg(j);
+						if (i < n && j < n) {
+							match[i] = j;
+							match[j] = i;
 						}
 						return true;
 					}
@@ -313,18 +333,18 @@ auto max_match(const vector<vl> &g) {
 			}
 			return false;
 		}};
-		fo(i, n) {
-			if (s[i] == 0 && m[i] == -1) {
-				path(i);
-			}
-		}
+		path(dummy_a);
 		static ll cnt = 0;
 		++cnt;
 		if (cnt >= 100) {
+			dbg("breaking infinite loop!");
 			break;
 		}
 	}
-	return m;
+	return match;
+}
+size_t matching_size(const vl &matching) {
+	return count_if(al(matching), [&](const auto x) { return x != -1; });
 }
 void test_max_match() {
 	{
@@ -332,12 +352,7 @@ void test_max_match() {
 		// 0, 2 on one side, 1 on the other side
 		add_edge(g, 0, 1);
 		add_edge(g, 2, 1);
-		const auto matching = max_match(g);
-		auto matching_size = [](const auto &matching) {
-			return count_if(al(matching),
-					[&](const auto x) { return x != -1; });
-		};
-		assert((matching_size(matching) == 2 * 1));
+		assert((matching_size(max_match(g)) == 2 * 1));
 	}
 	{
 		vector<vl> g(4);
@@ -345,13 +360,7 @@ void test_max_match() {
 		add_edge(g, 0, 1);
 		add_edge(g, 2, 1);
 		add_edge(g, 2, 3);
-		const auto matching = max_match(g);
-		auto matching_size = [](const auto &matching) {
-			return count_if(al(matching),
-					[&](const auto x) { return x != -1; });
-		};
-		dbg(matching);
-		assert((matching_size(matching) == 2 * 2));
+		assert((matching_size(max_match(g)) == 2 * 2));
 	}
 	{
 		vector<vl> g(6);
@@ -363,12 +372,7 @@ void test_max_match() {
 		add_edge(g, 4, 1);
 		add_edge(g, 4, 5);
 		const auto matching = max_match(g);
-		auto matching_size = [](const auto &matching) {
-			return count_if(al(matching),
-					[&](const auto x) { return x != -1; });
-		};
-		dbg(matching);
-		assert((matching_size(matching) == 2 * 3));
+		assert((matching_size(max_match(g)) == 2 * 3));
 	}
 	{
 		vector<vl> g(6);
@@ -379,13 +383,18 @@ void test_max_match() {
 		add_edge(g, 2, 5);
 		add_edge(g, 4, 1);
 		add_edge(g, 4, 5);
-		const auto matching = max_match(g);
-		auto matching_size = [](const auto &matching) {
-			return count_if(al(matching),
-					[&](const auto x) { return x != -1; });
-		};
-		dbg(matching);
-		assert((matching_size(matching) == 2 * 3));
+		assert((matching_size(max_match(g)) == 2 * 3));
+	}
+	{
+		vector<vl> g(6);
+		// 0, 2, 4 on one side, 1, 3, 5 on the other side
+		add_edge(g, 0, 1);
+		add_edge(g, 0, 3);
+		add_edge(g, 2, 1);
+		add_edge(g, 2, 5);
+		add_edge(g, 4, 1);
+		add_edge(g, 4, 5);
+		assert((matching_size(max_match(g)) == 2 * 3));
 	}
 }
 void test_add_edge() {
