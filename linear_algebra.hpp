@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+#include "modulo.hpp"
 // TODO Tensors? Also, matrix_row class.
 namespace linear_algebra {
 tm() struct matrix {
@@ -27,10 +28,10 @@ tm() struct matrix {
 			fo(j, cols_n) { this[i][j] = begin(begin(vals)[i])[j]; }
 		}
 	}
-	auto operator[](ll i) {
+	auto operator[](const ll i) {
 		return const_cast<T *>(const_cast<matrix const &>(this)[i]);
 	}
-	auto operator[](ll i) const { return &a[i * cols_n]; }
+	auto operator[](const ll i) const { return &a[i * cols_n]; }
 	auto id() const {
 		return this.rows_n == 1 && this.cols_n == 1 && this[0][0] == 1;
 	}
@@ -102,19 +103,28 @@ auto &operator<<(Stream &os, matrix<T...> const &m) {
 	}
 	return os << "}";
 }
-template <typename T> auto lin_recur(vector<T> const &c, ll n) {
-	/*! Returns nth term of linear recurrence described by c*/
-	// TODO which direction is the linear recurrence? 🤔
-	matrix<T> m{size(c), size(c)};
-	copy(al(c), m[0]);
-	fo(i, 1, size(c)) { m[i][i - 1] = 1; }
-	return power(m, n)[0][0];
-}
 void test_matrix() {
 	matrix<ld> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
 	matrix<ld> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
 	auto x = b / a;
 	// TODO 😩 there are no asserts here
+}
+template <typename T> auto lin_recur(vector<T> const &c, const ll n) {
+	/*! Returns nth term of linear recurrence described by c. \f$x(i) =
+	 * x_{i-1}c_0 + x_{i-2}c_1 + \dots \f$ and \f$x(0) = 1\f$*/
+	// TODO support constant term
+	matrix<T> m{size(c), size(c)};
+	copy(al(c), m[0]);
+	fo(i, 1, size(c)) { m[i][i - 1] = 1; }
+	return power(m, n)[0][0];
+}
+void test_lin_recur() {
+	assert(lin_recur(vl{1, 2}, 5) == 21);
+	assert(lin_recur(vl{2, 3, 1}, 4) == 65);
+}
+void test_linear_algebra() {
+	test_matrix();
+	test_lin_recur();
 }
 } // namespace linear_algebra
 using namespace linear_algebra;

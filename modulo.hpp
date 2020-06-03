@@ -3,7 +3,7 @@
 namespace modulo_name {
 template <typename T> T power(T a, size_t b) {
 	/*! Return \f$a^b\f$ */
-	T ret = 1;
+	T ret{1};
 	for (; b; b >>= 1, a *= a) {
 		if (b & 1) {
 			ret *= a;

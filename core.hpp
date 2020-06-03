@@ -1,4 +1,5 @@
 #pragma once
+/*! Contains core files for the template*/
 #ifndef PRE
 //#if defined(__GNUC__) && !defined(__clang__)
 #if 0
@@ -12,6 +13,7 @@
 #include <experimental/iterator>
 #include <experimental/source_location>
 #endif
+// Enabling LOCAL enables debug features
 #ifdef LOCAL
 #define dbg(x) (++depth, debug(x, #x##s))
 #else

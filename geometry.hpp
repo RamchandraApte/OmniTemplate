@@ -5,6 +5,8 @@ bool operator<(point const &a, point const &b) {
 	/*! Compare points a and b lexicographically*/
 	return map_args([](auto x) { return tuple{real(x), imag(x)}; })(a, b);
 }
+} // namespace std
+namespace geometry {
 void test_less() {
 	assert((point{1, 2} < point{3, 5}));
 
@@ -16,8 +18,6 @@ void test_less() {
 
 	assert((!(point{1, 2} < point{1, 2})));
 }
-} // namespace std
-namespace geometry {
 // TODO generalize these products for multidimensional vectors
 auto dot(point const &a, point const &b) {
 	/*! returns the dot product of 2D vectors a and b, i.e. \f$a \cdot
@@ -29,7 +29,9 @@ void test_dot() {
 	assert((dot({0, 2}, {3, 0}) == 0 * 3 + 2 * 0));
 }
 auto wedge(point const &a, point const &b) {
-	/*! Returns the wedge product of 2D vectors a and b, \f$a \wedge b\f$*/
+	/*! Returns the wedge product of 2D vectors a and b, \f$a \wedge b\f$.
+	 * This is the signed area of the parallelogram spanned by vectors
+	 * \f$\vec{f}\f$ and \f$\vec{b}\f$.*/
 	return imag(conj(a) * b);
 }
 void test_wedge() {
@@ -37,8 +39,10 @@ void test_wedge() {
 	assert((wedge({1, 1}, {1, 1}) == 0));
 	assert((wedge({1, 0}, {0, 0}) == 0));
 }
-auto area(point a, point b, point c) { return wedge(b - a, c - a); }
-auto ccw(point a, point b, point c) {
+auto area(const point &a, const point &b, const point &c) {
+	return wedge(b - a, c - a);
+}
+auto ccw(const point &a, const point &b, const point &c) {
 	/*! Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
 	 * is counterclockwise. Throws std::invalid_argument if a, b, c are
 	 * collinear. */
@@ -64,7 +68,8 @@ void test_ccw() {
 	test_collinear({2, 0}, {-3, 0}, {4, 0});
 	test_collinear({4, 6}, {6, 9}, {-4, -6});
 }
-auto hull(vector<point> &v, df(do_sort, true)) {
+auto hull(vector<point> v, df(do_sort, true)) {
+	// TODO why do_sort?
 	/*! Returns the convex hull of the points in v*/
 	vector<point> h;
 	if (do_sort) {
@@ -100,18 +105,18 @@ void test_convex_min() {
 /*! Convex-hull trick. This can be used to find the minimum of a set of
  * lines at various points. */
 struct cht {
-	vector<point> h; //!< The lines, specified as (a,b) for ax+b.
+	vector<point> lines; //!< The lines, specified as (a,b) for ax+b.
 	explicit cht(vector<point> v) {
 		v = uniq(v, map_args(lambda(imag), equal_to{}),
 			 map_args(lambda(conj)));
-		h = hull(v, false);
+		lines = hull(v, false);
 	}
 	auto min(ll x) {
 		/*! Minimum value of the lines at x*/
 		auto const eval = [&](const auto &i) {
-			return real(h[i]) * x + imag(h[i]);
+			return real(lines[i]) * x + imag(lines[i]);
 		};
-		return eval(convex_min(ra{size(h) - 1}, eval));
+		return eval(convex_min(ra{size(lines) - 1}, eval));
 	}
 };
 void test_hull() {

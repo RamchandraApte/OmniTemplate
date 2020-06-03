@@ -1,7 +1,8 @@
 #pragma once
 #include "core.hpp"
+/*! Combinatorics header. */
 namespace combinatorics {
-template <typename T> auto perm(T a, T b) {
+template <typename T> T perm(const T a, const T b) {
 	/*!Return \f$P(a,b)\f$, the falling factorial.*/
 	return accumulate(int_it<T>{a + 1 - b}, int_it<T>{a + 1}, T{1},
 			  multiplies<>{});
@@ -14,7 +15,7 @@ void test_perm() {
 	assert(perm(1, 0) == 1);
 	assert(perm(1, 1) == 1);
 }
-template <typename T> auto fact(T n) {
+template <typename T> T fact(const T n) {
 	/*! Return the factorial of n, i.e. \f$n!\f$. */
 	return perm(n, n);
 }
@@ -24,7 +25,7 @@ void test_fact() {
 	assert(fact(1) == 1);
 	assert(fact(8) == 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1);
 }
-template <typename T> auto choose(T a, T b) {
+template <typename T> T choose(const T a, const T b) {
 	/*! Returns a choose b, i.e. \f$\binom{a}{b}\f$*/
 	return perm(a, b) / fact(b);
 }

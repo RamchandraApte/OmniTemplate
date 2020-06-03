@@ -29,8 +29,8 @@ template <typename Func> struct fix {
 	}
 };
 #define lambda(f) [&](auto... args) { return f(args...); }
-template <typename T> auto maxeq(T &&x, const T &y) { x = max(x, y); }
-template <typename T> auto mineq(T &&x, const T &y) { x = min(x, y); }
+template <typename T> auto max_eq(T &x, const T &y) { x = max(x, y); }
+template <typename T> auto min_eq(T &x, const T &y) { x = min(x, y); }
 template <typename T> auto cache(const T &f) {
 	/*! Cache calls to f using a map of type T*/
 	T ch;

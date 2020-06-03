@@ -2,31 +2,33 @@
 #include "core.hpp"
 #include "graph_theory.hpp"
 namespace sat2 {
-optional<vector<char>> sat2(const vector<pr> &v) {
+optional<vector<char>> sat2(const vector<pr> &cnf) {
 	/*!
 	Takes a 2 SAT instance and returns a solution.
 	Numerical negation represents logical negation.
 	0 means empty
 	*/
 	ll n = 0;
-	for (const auto &p : v) {
-		n = max<ll>(n, max(abs(p.first), abs(p.second)));
+	for (const auto &clause : cnf) {
+		max_eq(n, static_cast<ll>(
+			      max(abs(clause.first), abs(clause.second))));
 	}
-	vector<vl> g(2 * n + 1);
-	for (const auto &p : v) {
-		if (p.first) {
-			g[n - p.first].push_back(n + p.second);
+	vector<vl> graph(2 * n + 1);
+	for (const auto &clause : cnf) {
+		// TODO why if statement?
+		if (clause.first) {
+			graph[n - clause.first].push_back(n + clause.second);
 		}
-		if (p.second) {
-			g[n - p.second].push_back(n + p.first);
+		if (clause.second) {
+			graph[n - clause.second].push_back(n + clause.first);
 		}
 	}
-	dfs topo{g};
+	dfs topo{graph};
 	topo();
-	vl idx(size(g));
+	vl idx(size(graph));
 	fo(i, size(topo.q)) { idx[topo.q[i]] = i; }
 	vector<char> vals(n + 1, -1);
-	auto comp = scc(g);
+	auto comp = scc(graph);
 	fo(i, 1, n + 1) {
 		auto x = idx[comp[n + i]], nx = idx[comp[n - i]];
 		if (nx == x) {

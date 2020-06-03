@@ -13,6 +13,7 @@ void test_all() {
 	test_graph_theory();
 	test_string();
 	test_coroutine();
+	test_linear_algebra();
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 void main2() { test_all(); }

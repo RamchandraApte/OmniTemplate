@@ -1,5 +1,7 @@
 #pragma once
 #include "range.hpp"
+/*! Debugging tools */
+namespace debug_tools {
 tm() auto type_name([[maybe_unused]] T const &v) {
 	/*! Return the type name of the type of value*/
 	string s = __PRETTY_FUNCTION__, tar = "T = ";
@@ -23,12 +25,12 @@ template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
 	}
 	return s;
 }
-
+// FIXME depth?
 ll depth = -1;
 template <typename T>
 auto debug(const T &x, const string &name,
 	   source_location const &loc = source_location::current()) {
-	/*!< Debug print x */
+	/*! Debug print x */
 	if (debug_mode) {
 		fo(i, depth) { cerr << "\t"; }
 		cerr << loc.function_name() << ":" << loc.line() << " " << name
@@ -37,3 +39,5 @@ auto debug(const T &x, const string &name,
 	--depth;
 	return x;
 }
+} // namespace debug_tools
+using namespace debug_tools;

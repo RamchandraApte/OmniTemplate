@@ -2,10 +2,11 @@
 #include "core.hpp"
 #include "dsu.hpp"
 #include "linear_algebra.hpp"
-// TODO get stuff below into namespace
+namespace graph_theory {
+//!< Edge with weight weight from a to b
 struct edge {
-	ll w, a, b;
-	auto to_tuple() const { return tuple{w, a, b}; }
+	ll weight, a, b;
+	auto to_tuple() const { return tuple{weight, a, b}; }
 };
 bool operator<(edge const &a, edge const &b) {
 	/*! Compare the edges by weight, with ties compared by a and b*/
@@ -16,18 +17,17 @@ bool operator==(edge const &a, edge const &b) {
 }
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	/*! Print the edge*/
-	return os << "edge{" << e.a << "-(" << e.w << ")>" << e.b << "}";
+	return os << "edge{" << e.a << "-(" << e.weight << ")>" << e.b << "}";
 }
-namespace graph_theory {
-auto add_edge(vector<vl> &g, ll u, ll v) {
-	/*! Adds edge \f$u \leftrightarrow v\f$ to graph g*/
-	g[u].push_back(v);
-	g[v].push_back(u);
+auto add_edge(vector<vl> &graph, ll u, ll v) {
+	/*! Adds edge \f$u \leftrightarrow v\f$ to graph graph*/
+	graph[u].push_back(v);
+	graph[v].push_back(u);
 }
-auto shortest_dist(vector<vector<pr>> g, ll source) {
+auto shortest_dist(vector<vector<pr>> graph, ll source) {
 	/*! Given an adjacency-list of a graph, returns the shortest distance to
 	 * each vertex from the source. Algorithm: Dijkstra*/
-	vl d(g.size(), inf), pv(g.size(), -1);
+	vl d(graph.size(), inf), pv(graph.size(), -1);
 	pq<pr> q;
 	d[source] = 0;
 	fo(i, d.size()) { q.push({d[i], i}); }
@@ -37,7 +37,7 @@ auto shortest_dist(vector<vector<pr>> g, ll source) {
 		if (di != d[a]) {
 			continue;
 		}
-		for (const auto &pb : g[a]) {
+		for (const auto &pb : graph[a]) {
 			// TODO Why doesn't the macro pb expand?
 			const auto &[b, w] = pb;
 			auto &x = d[b];
@@ -98,7 +98,7 @@ auto mst(vector<edge> edges) {
 	dsu d{mi + 1};
 	vector<edge> ret;
 	for (const auto &e : edges) {
-		if (!d(e.a, e.b)) {
+		if (!d.join(e.a, e.b)) {
 			continue;
 		}
 		ret.push_back(e);
@@ -111,63 +111,64 @@ void test_mst() {
 	sort(al(ret));
 	assert((ret == vector<edge>{edges[3], edges[1], edges[0]}));
 }
+/*! Generalized graph searcher/visitor*/
 struct gsearch {
-	/*! Generalized graph searcher/visitor*/
-	vector<vl> const &g;
-	ll n;
-	vl v;
-	deque<ll> q;
-	vl p, d;
+	vector<vl> const &graph;
+	vc<char> visited; //!< Whether vertex idx is visited
+	deque<ll> q;	  //!< Queue
+	vl parent;	  //!< Parent of vertex idx
+	vl distance;	  //!< Distance from source to vertex idx
 	gsearch(const vector<vector<ll>> &g_)
-	    : g(g_), n(size(g)), v(n), p(n, -1), d(n, inf) {}
+	    : graph(g_), visited(graph.size()), parent(graph.size(), -1),
+	      distance(graph.size(), inf) {}
 	virtual void operator()(ll) = 0;
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
 		 * entire graph, and not just one connected component. */
-		fo(i, n) {
-			if (!v[i]) {
+		fo(i, graph.size()) {
+			if (!visited[i]) {
 				this(i);
 			}
 		}
 	}
-	auto add(ll j, ll i) {
+	void add(const ll child, const ll par) {
 		/*! Add vertex j as a child of already visited vertex i in the
 		 * searcher tree*/
-		d[j] = d[i] + 1;
-		p[j] = i;
+		distance[child] = distance[par] + 1;
+		parent[child] = par;
 	}
 };
 /*! Depth-first search */
 struct dfs : public gsearch {
 	using gsearch::operator(), gsearch::gsearch;
-	void operator()(ll s) {
-		v[s] = true;
-		for (const auto &j : g[s]) {
-			if (v[j]) {
+	void operator()(const ll source) {
+		visited[source] = true;
+		for (const auto &j : graph[source]) {
+			if (visited[j]) {
 				continue;
 			}
-			add(j, s);
+			add(j, source);
 			this(j);
 		}
-		q.push_front(s);
+		q.push_front(source);
 	}
 };
 /*! Breadth-first search*/
 struct bfs : public gsearch {
 	using gsearch::operator(), gsearch::gsearch;
-	void operator()(ll s) {
+	void operator()(ll source) {
 		ll old_size = q.size();
-		q.push_back(s);
-		v[s] = true;
-		d[s] = 0;
+		q.push_back(source);
+		visited[source] = true;
+		distance[source] = 0;
 		for (ll idx = old_size; idx < q.size(); ++idx) {
 			auto i = q[idx];
-			for (const auto &j : g[i]) {
-				if (v[j]) {
+			for (const auto &j : graph[i]) {
+				if (visited[j]) {
 					continue;
 				}
 				q.push_back(j);
-				v[j] = true;
+				visited[j] = true;
 				add(j, i);
 			}
 		}
@@ -181,8 +182,8 @@ void test_bfs() {
 	add_edge(g, 2, 3);
 	bfs b{g};
 	b(0);
-	assert((b.p == vl{-1, 0, 1, 1}));
-	assert((b.d == vl{0, 1, 2, 2}));
+	assert((b.parent == vl{-1, 0, 1, 1}));
+	assert((b.distance == vl{0, 1, 2, 2}));
 }
 auto trans(const vector<vl> &graph) {
 	ll n = size(graph);
@@ -241,7 +242,7 @@ auto bipartite(const vector<vl> &graph) {
 	auto n = size(graph);
 	vl s(n);
 	for (auto i : b.q) {
-		if (const auto par = b.p[i]; par != -1) {
+		if (const auto par = b.parent[i]; par != -1) {
 			s[i] = !s[par];
 		}
 	}
@@ -301,7 +302,7 @@ auto max_match(const vector<vl> &graph) {
 		}
 		bfs b{aug_path};
 		b(dummy_a);
-		if (b.d[dummy_b] == inf) {
+		if (b.distance[dummy_b] == inf) {
 			break;
 		}
 		vl vis(aug_path.size());
@@ -314,7 +315,7 @@ auto max_match(const vector<vl> &graph) {
 				return true;
 			}
 			for (ll j : aug_path[i]) {
-				if (b.d[j] == b.d[i] + 1) {
+				if (b.distance[j] == b.distance[i] + 1) {
 					if (path(j)) {
 						if (i < n && j < n) {
 							match[i] = j;
