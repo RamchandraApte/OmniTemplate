@@ -270,7 +270,7 @@ void test_bipartite() {
 	}
 }
 auto max_match(const vector<vl> &g) {
-	/*! Returns a maximum matching of g*/
+	/*! Returns a maximum matching of g using the Hopcroft-Karp algorithm.*/
 	auto s = bipartite(g).value();
 	ll n = g.size();
 	vl m(n, -1);
@@ -318,10 +318,76 @@ auto max_match(const vector<vl> &g) {
 				path(i);
 			}
 		}
+		static ll cnt = 0;
+		++cnt;
+		if (cnt >= 100) {
+			break;
+		}
 	}
 	return m;
 }
-void test_max_match(const vector<vl> &g) { max_match(g); }
+void test_max_match() {
+	{
+		vector<vl> g(3);
+		// 0, 2 on one side, 1 on the other side
+		add_edge(g, 0, 1);
+		add_edge(g, 2, 1);
+		const auto matching = max_match(g);
+		auto matching_size = [](const auto &matching) {
+			return count_if(al(matching),
+					[&](const auto x) { return x != -1; });
+		};
+		assert((matching_size(matching) == 2 * 1));
+	}
+	{
+		vector<vl> g(4);
+		// 0, 2 on one side, 1, 3 on the other side
+		add_edge(g, 0, 1);
+		add_edge(g, 2, 1);
+		add_edge(g, 2, 3);
+		const auto matching = max_match(g);
+		auto matching_size = [](const auto &matching) {
+			return count_if(al(matching),
+					[&](const auto x) { return x != -1; });
+		};
+		dbg(matching);
+		assert((matching_size(matching) == 2 * 2));
+	}
+	{
+		vector<vl> g(6);
+		// 0, 2, 4 on one side, 1, 3, 5 on the other side
+		add_edge(g, 0, 1);
+		add_edge(g, 0, 3);
+		add_edge(g, 2, 3);
+		add_edge(g, 2, 5);
+		add_edge(g, 4, 1);
+		add_edge(g, 4, 5);
+		const auto matching = max_match(g);
+		auto matching_size = [](const auto &matching) {
+			return count_if(al(matching),
+					[&](const auto x) { return x != -1; });
+		};
+		dbg(matching);
+		assert((matching_size(matching) == 2 * 3));
+	}
+	{
+		vector<vl> g(6);
+		// 0, 2, 4 on one side, 1, 3, 5 on the other side
+		add_edge(g, 0, 1);
+		add_edge(g, 0, 3);
+		add_edge(g, 2, 1);
+		add_edge(g, 2, 5);
+		add_edge(g, 4, 1);
+		add_edge(g, 4, 5);
+		const auto matching = max_match(g);
+		auto matching_size = [](const auto &matching) {
+			return count_if(al(matching),
+					[&](const auto x) { return x != -1; });
+		};
+		dbg(matching);
+		assert((matching_size(matching) == 2 * 3));
+	}
+}
 void test_add_edge() {
 	vector<vl> g(10);
 	add_edge(g, 3, 4);
@@ -350,6 +416,7 @@ void test_graph_theory() {
 	test_bfs();
 	test_bipartite();
 	test_scc();
+	test_max_match();
 }
 } // namespace graph_theory
 using namespace graph_theory;
