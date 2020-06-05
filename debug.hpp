@@ -1,4 +1,5 @@
 #pragma once
+#include "operations.hpp"
 #include "range.hpp"
 /*! Debugging tools */
 namespace debug_tools {

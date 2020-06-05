@@ -188,6 +188,7 @@ void test_dlog() {
 	}
 }
 modulo primitive_root() {
+	/*! Returns a primitive root modulo M*/
 	if (modulo::modulus == 1) {
 		return 0;
 	}

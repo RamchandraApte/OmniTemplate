@@ -1,6 +1,6 @@
 #pragma once
 #include "core.hpp"
-namespace modulo_name {
+namespace modulo_namespace {
 template <typename T> T power(T a, size_t b) {
 	/*! Return \f$a^b\f$ */
 	T ret{1};
@@ -11,9 +11,6 @@ template <typename T> T power(T a, size_t b) {
 	}
 	return ret;
 }
-} // namespace modulo_name
-using namespace modulo_name;
-// FIXME add more stuff in modulo namespace
 struct no_mod {};
 struct modulo {
 	inline static ll modulus =
@@ -28,12 +25,15 @@ struct modulo {
 	modulo(ll x_, no_mod) : x(x_) {}
 	explicit operator auto() const { return x; }
 };
+// FIXME add more stuff in modulo namespace
 modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;
 	return {sum >= modulo::modulus ? sum - modulo::modulus : sum, no_mod{}};
 }
 modulo operator++(modulo &a) { return a += 1; }
 modulo operator-(modulo const &a) { return {modulo::modulus - a.x, no_mod{}}; }
+// To avoid ADL issues
+using ::operator-;
 bin(==, modulo);
 modulo operator*(modulo const &a, modulo const &b) {
 	/*! Computes a times b modulo modulo::modulus using long double */
@@ -53,11 +53,10 @@ modulo operator/(id, modulo const &b) {
 	assert(b != 0);
 	return power(b, modulo::modulus - 2);
 }
-// auto operator/(modulo const &a, modulo const &b) { return a * (id{} / b); }
+using ::operator/;
 template <typename Stream> auto &operator<<(Stream &os, modulo const &m) {
 	return os << m.x;
 }
-
 void test_power() {
 	assert(power(2, 3) == 8);
 	assert(power(3, 10) == 59049);
@@ -69,6 +68,8 @@ void test_md() {
 	assert(modulo{34} / modulo{-2} == modulo{4});
 	assert(modulo{2} - modulo{6} == modulo{3});
 }
+} // namespace modulo_namespace
+using namespace modulo_namespace;
 namespace std {
 template <> struct hash<modulo> {
 	size_t operator()(modulo const &x) const { return x.x; }
