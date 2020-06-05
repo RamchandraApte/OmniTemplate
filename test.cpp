@@ -14,6 +14,7 @@ void test_all() {
 	test_string();
 	test_coroutine();
 	test_linear_algebra();
+	test_permutation();
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 void main2() { test_all(); }
