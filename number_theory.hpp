@@ -8,7 +8,7 @@ auto prime(ll n) {
 	if (n < divs.size()) {
 		return divs[n] == n;
 	}
-	with _m{n, M};
+	with _m{n, modulo::modulus};
 	ll tz = __builtin_ctz(n - 1);
 	auto b = (n - 1) >> tz;
 	auto prime_a = [&](modulo const &a) {
@@ -93,7 +93,7 @@ um fac(ll n) {
 	if (n < divs.size()) {
 		g = divs[n];
 	} else if (!prime(n)) {
-		with _m{n, M};
+		with _m{n, modulo::modulus};
 		for (modulo c = 0; g == n; ++c) {
 			auto const f = [&](const auto &x) {
 				return x * x + x + c;
@@ -149,12 +149,12 @@ ll dlog(const modulo a, const modulo b) {
 	/* Finds x such that a^x = b (mod M) using baby-step giant-step
 	   algorithm. a and M must be coprime.
 	*/
-	assert(gcd(static_cast<ll>(a), M) == 1);
+	assert(gcd(static_cast<ll>(a), modulo::modulus) == 1);
 	auto check = [&](ll x) {
 		assert(power(a, x) == b);
 		return x;
 	};
-	ll sq = sqrt(static_cast<long long int>(M)) + 1;
+	ll sq = sqrt(static_cast<long long int>(modulo::modulus)) + 1;
 	unordered_map<modulo, ll> powers;
 	const auto a_sq = power(a, sq);
 	modulo pw = 1;
@@ -165,14 +165,15 @@ ll dlog(const modulo a, const modulo b) {
 	auto x = b;
 	for (ll cnt = 0;; ++cnt) {
 		if (auto it = powers.find(x); it != end(powers)) {
-			return check((it->second * sq - cnt) % totient(M));
+			return check((it->second * sq - cnt) %
+				     totient(modulo::modulus));
 		}
 		x *= a;
 	}
 }
 void test_dlog() {
 	auto check = [](modulo a, ll x, ll m) {
-		with _m{m, M};
+		with _m{m, modulo::modulus};
 		auto b = power(a, x);
 		dlog(a, b);
 	};
@@ -187,14 +188,14 @@ void test_dlog() {
 	}
 }
 modulo primitive_root() {
-	if (M == 1) {
+	if (modulo::modulus == 1) {
 		return 0;
 	}
-	auto tot = totient(M);
+	auto tot = totient(modulo::modulus);
 	auto pfactor = fac(tot);
-	fo(i, 1, M) {
+	fo(i, 1, modulo::modulus) {
 		auto is_primitive_root = [&]() {
-			if (gcd(i, M) != 1) {
+			if (gcd(i, modulo::modulus) != 1) {
 				return false;
 			}
 			for (auto p : pfactor) {
@@ -211,7 +212,7 @@ modulo primitive_root() {
 }
 void test_primitive_root() {
 	auto check = [&](ll m, ll x) {
-		with _m{m, M};
+		with _m{m, modulo::modulus};
 		assert(primitive_root() == x);
 	};
 	check(1, 0);

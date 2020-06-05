@@ -7,7 +7,7 @@ struct hash_str {
 	vector<modulo> h, p;
 	explicit hash_str(const string_view str)
 	    : st(str.data()), h(str.size() + 1), p(str.size()) {
-		with _w{lcg_mod, M};
+		with _w{lcg_mod, modulo::modulus};
 		modulo g = 1;
 		fo(i, 0, str.size()) {
 			g *= modulo{0x51a3e995948c0deULL};
@@ -22,7 +22,7 @@ struct hash_str {
 		}
 	}
 	size_t operator()(const string_view v) const {
-		with _w{lcg_mod, M};
+		with _w{lcg_mod, modulo::modulus};
 		ll l = v.data() - st;
 		return ll((h[l + v.size()] - h[l]) * p[l]);
 	}

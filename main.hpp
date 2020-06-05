@@ -1,5 +1,6 @@
 #pragma once
 #include "core.hpp"
+#include "time.hpp"
 void main2();
 #if 0
 string s = __FILE__;

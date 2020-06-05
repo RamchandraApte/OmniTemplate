@@ -63,7 +63,7 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	*/
 	assert(a.rows_n == a.cols_n);
 	assert(a.rows_n == b.rows_n);
-	T det = 1;
+	T det{1};
 	fo(i, a.rows_n) {
 		const auto div = a[i][i];
 		det *= div;

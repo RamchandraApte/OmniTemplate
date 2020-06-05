@@ -1,5 +1,9 @@
 #pragma once
 #include "range.hpp"
+struct id {};
+template <typename Group> Group operator/(Group const &a, Group const &b) {
+	return a * (id{} / b);
+}
 template <typename T1, typename T2>
 auto constexpr operator-(const T1 &a, const T2 &b) {
 	return a + -b;
