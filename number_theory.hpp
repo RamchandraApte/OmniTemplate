@@ -210,6 +210,7 @@ modulo primitive_root() {
 			return i;
 		}
 	}
+	throw invalid_argument{"M has no primitive root!"};
 }
 void test_primitive_root() {
 	auto check = [&](ll m, ll x) {

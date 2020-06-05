@@ -76,7 +76,7 @@ mixll(+) mixll(/) mixll(*) mixll(<) mixll(==) mixll(%) mixll(&) mixll(>>)
 	auto &operator<<(Stream &os, ll const &a) {
 	return os << a.x;
 }
-ll operator"" M(unsigned long long int x) { return x; }
+ll operator"" _ll(unsigned long long int x) { return x; }
 auto ceil_div(ll x, ll y) { return (x + y - 1) / y; }
 namespace std {
 #define inh(cls) template <> struct cls<ll> : cls<lli>

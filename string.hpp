@@ -145,6 +145,7 @@ auto operator<(search_it const &a, search_it const &b) {
 template <typename... Ts> auto search_ra(const Ts &... args) {
 	return range{search_it(args...), search_it()};
 }
+#if 0
 class trie_node {
 	vector<trie_node *> adj;
 	ll start, end;
@@ -156,6 +157,7 @@ class trie_node {
 	}
 };
 void test_trie_node() {}
+#endif
 void test_string() {
 	test_hash_str();
 	test_bytehash();

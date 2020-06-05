@@ -2,11 +2,11 @@
 #include "range.hpp"
 namespace utility {
 // TODO templatize this
-struct with {
+struct [[nodiscard]] with {
 	/*! Sets v to new_ temporary while with object is alive */
 	ll old; //!< Original value of the variable
 	ll &v;	//!< Reference to variable
-	[[nodiscard]] with(ll new_, ll &v_) : old(v_), v(v_) { v = new_; }
+	with(ll new_, ll & v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
 void test_with() {
@@ -56,7 +56,7 @@ void test_uniq() {
 }
 template <typename T = less<>, typename Func>
 auto map_args(const Func &f, T g = T{}) {
-	return [&](const auto &... args) { return g(f(args)...); };
+	return [=](const auto &... args) { return g(f(args)...); };
 }
 void test_map_args() {
 	vl a{24, 25};
