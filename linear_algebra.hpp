@@ -85,8 +85,7 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	return {move(b), det};
 }
 tm(...) auto operator/(matrix<T...> b, matrix<T...> a) {
-	/*! Returns \f$ba^{-1}\f$*/
-	// TODO or is it the other way round 🤔?
+	/*! Returns \f$a^{-1}b\f$*/
 	return gauss(b, a).first;
 }
 template <typename T> T det(const matrix<T> &a) {
@@ -104,10 +103,9 @@ auto &operator<<(Stream &os, matrix<T...> const &m) {
 	return os << "}";
 }
 void test_matrix() {
-	matrix<ld> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
-	matrix<ld> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
-	auto x = b / a;
-	// TODO 😩 there are no asserts here
+	matrix<modulo> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
+	matrix<modulo> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
+	assert(a * (b / a) == b);
 }
 template <typename T> auto lin_recur(vector<T> const &c, const ll n) {
 	/*! Returns nth term of linear recurrence described by c. \f$x(i) =

@@ -125,7 +125,6 @@ tm() using ar_t = typename ar<T>::type;
 template <typename T, size_t n> struct ar<T[n]> {
 	using type = array<ar_t<T>, n>;
 };
-
 void test_ar() {
 	using std::is_same_v; // FIXME
 	static_assert(is_same_v<ar_t<ll[2][3]>, array<array<ll, 3>, 2>>);
@@ -143,9 +142,11 @@ struct random_device_patch {
 	}
 	double entropy() { return 0.0; }
 };
-// TODO activate only on windows
-using default_random_device = random_device_patch;
-default_random_engine reng{default_random_device{}()};
+// TODO test this macro on codeforces
+#ifdef __MINGW32__
+using random_device = random_device_patch;
+#endif
+default_random_engine reng{std::random_device{}()};
 void test_utility() {
 	test_with();
 	test_uniq();
