@@ -1,5 +1,8 @@
 #pragma once
 #include "core.hpp"
+/*! Coroutine library
+ * CO_SWITCH for using switch-based coroutines
+ * CO_JMP for using setjmp-based coroutines */
 #define CO_SWITCH
 #ifdef CO_SWITCH
 #define cobegin                                                                \
@@ -7,8 +10,9 @@
 	switch (pos) {                                                         \
 	case 0:
 #define coend                                                                  \
-	throw out_of_range("Coroutine reached end.");                          \
-	}
+	default:                                                               \
+		throw out_of_range("Coroutine reached end.");                  \
+		}
 #define coreturn(x)                                                            \
 	pos = __LINE__;                                                        \
 	return x;                                                              \
@@ -42,7 +46,7 @@ void test_coroutine() {
 		while (true) {
 			v.push_back(coro(a));
 		}
-	} catch (out_of_range) {
+	} catch (out_of_range &) {
 	}
 	assert((v == vl{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));
 }

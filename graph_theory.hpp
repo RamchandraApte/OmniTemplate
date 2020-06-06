@@ -28,7 +28,7 @@ auto shortest_dist(vector<vector<pr>> graph, ll source) {
 	/*! Given an adjacency-list of a graph, returns the shortest distance to
 	 * each vertex from the source. Algorithm: Dijkstra*/
 	vl d(graph.size(), inf), pv(graph.size(), -1);
-	pq<pr> q;
+	prio_queue_t<pr, greater<>> q;
 	d[source] = 0;
 	fo(i, d.size()) { q.push({d[i], i}); }
 	while (q.size()) {

@@ -13,8 +13,8 @@
 #include <experimental/iterator>
 #include <experimental/source_location>
 #endif
-#define fo(i, ...) for ([[maybe_unused]] auto i : ra{__VA_ARGS__})
-#define fr(i, ...) for ([[maybe_unused]] auto i : rev(ra{__VA_ARGS__}))
+#define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})
+#define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))
 #define tm(...) template <typename __VA_ARGS__ T>
 #define this (*this)
 #define al(v) begin(v), end(v)
@@ -25,12 +25,11 @@
 #define vc vector
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
-#define rel_assert(...)
+#define rel_assert(...) s
 #define WARN(msg)                                                              \
 	[[deprecated(msg)]] auto warn = []() { rel_assert(msg); };             \
 	warn();
-//#define TODO(msg) WARN("TODO: " msg)
-#define TODO(msg)
+#define TODO(msg) WARN("TODO: " msg)
 #define paste2(x, y) x##y
 #define paste(x, y) paste2(x, y)
 #define lets_count lets_add paste(_l, __COUNTER__)
@@ -66,7 +65,8 @@ let(com, complex<double>);
 let(point, complex<ll>);
 let(ull, unsigned long long);
 using bt = bitset<numeric_limits<ll>::digits>;
-tm() using pq = std::priority_queue<T, vector<T>, greater<>>;
+template <typename T, typename Comp>
+using prio_queue_t = std::priority_queue<T, vector<T>, Comp>;
 let(clock_, high_resolution_clock);
 import(this_thread);
 let(um, unordered_map<ll, ll>);

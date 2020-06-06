@@ -59,7 +59,7 @@ void test_ccw() {
 	auto test_collinear = [&](point a, point b, point c) {
 		try {
 			ccw(a, b, c);
-		} catch (invalid_argument) {
+		} catch (invalid_argument &) {
 			return;
 		}
 		assert(false);

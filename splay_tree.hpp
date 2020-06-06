@@ -193,7 +193,6 @@ void test_splay_tree() {
 	for (auto x : expected) {
 		assert(sp.find(x)->value == x);
 	}
-	SplayTree<int>::iterator::value_type x1{};
 	vl vec;
 	copy(sp.begin(), sp.end(), back_inserter(vec));
 	assert(vec == expected);
