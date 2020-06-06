@@ -7,12 +7,13 @@ tm() struct matrix {
 	/*! Matrix class*/
 	ll rows_n, cols_n; //!< Row, column
 	vector<T> a; //! Array storing the data, in row-major order
-	matrix(ll r_, ll c_, df(v, 0LL))
+	explicit matrix(ll r_, ll c_, df(v, 0LL))
 	    : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) {
 		assert(rows_n >= 1 && cols_n >= 1);
 	}
-	matrix(T d) : rows_n(1), cols_n(1), a{d} {}
-	matrix(vector<vector<pr>> const &g) : matrix(g.size(), g.size(), inf) {
+	explicit matrix(T d) : rows_n(1), cols_n(1), a{d} {}
+	explicit matrix(vector<vector<pr>> const &g)
+	    : matrix(g.size(), g.size(), inf) {
 		fo(i, rows_n) {
 			for (const auto &p : g[i]) {
 				auto [x, w] = p;
@@ -21,7 +22,7 @@ tm() struct matrix {
 		}
 		fo(i, rows_n) { this[i][i] = 0; }
 	}
-	matrix(const initializer_list<initializer_list<ll>> &vals)
+	explicit matrix(const initializer_list<initializer_list<ll>> &vals)
 	    : matrix(size(vals), size(begin(vals)[0])) {
 		fo(i, rows_n) {
 			assert(size(begin(vals)[i]) == cols_n);
@@ -36,6 +37,22 @@ tm() struct matrix {
 		return this.rows_n == 1 && this.cols_n == 1 && this[0][0] == 1;
 	}
 };
+template <typename... Ts>
+auto operator+(const matrix<Ts...> &a, const matrix<Ts...> &b) {
+	assert(a.rows_n == b.rows_n && a.rows_n == b.rows_n);
+	matrix c(a.rows_n, a.cols_n);
+	fo(i, a.rows_n) {
+		fo(j, a.col_n) { c[i][j] = a[i][j] + b[i][j]; }
+	}
+	return c;
+}
+template <typename... Ts> auto operator-(const matrix<Ts...> &a) {
+	matrix c(a.rows_n, a.cols_n);
+	fo(i, a.rows_n) {
+		fo(j, a.col_n) { c[i][j] = -a[i][j]; }
+	}
+	return c;
+}
 tm(...) bool operator==(matrix<T...> const &a, matrix<T...> const &b) {
 	return a.rows_n == b.rows_n && a.cols_n == b.cols_n && a.a == b.a;
 }

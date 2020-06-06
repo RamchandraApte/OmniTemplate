@@ -1,6 +1,13 @@
 #pragma once
 #include "operations.hpp"
 #include "range.hpp"
+// Enabling LOCAL enables debug features
+#ifdef LOCAL
+#define dbg(x) (++depth, debug(x, #x##s))
+#else
+#define NDEBUG
+#define dbg(x) (x)
+#endif
 /*! Debugging tools */
 namespace debug_tools {
 tm() auto type_name([[maybe_unused]] T const &v) {
@@ -26,7 +33,6 @@ template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
 	}
 	return s;
 }
-// FIXME depth?
 ll depth = -1;
 template <typename T>
 auto debug(const T &x, const string &name,

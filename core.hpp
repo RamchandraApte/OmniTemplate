@@ -13,13 +13,6 @@
 #include <experimental/iterator>
 #include <experimental/source_location>
 #endif
-// Enabling LOCAL enables debug features
-#ifdef LOCAL
-#define dbg(x) (++depth, debug(x, #x##s))
-#else
-#define NDEBUG
-#define dbg(x) (x)
-#endif
 #define fo(i, ...) for ([[maybe_unused]] auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] auto i : rev(ra{__VA_ARGS__}))
 #define tm(...) template <typename __VA_ARGS__ T>
