@@ -1,7 +1,8 @@
 \hypertarget{geometry_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/geometry.hpp File Reference}
 \label{geometry_8hpp}\index{/home/ram/OmniTemplate/geometry.hpp@{/home/ram/OmniTemplate/geometry.hpp}}
 {\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
-Include dependency graph for geometry.\+hpp\+:\nopagebreak
+Include dependency graph for geometry.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,7 +31,7 @@ struct \mbox{\hyperlink{structgeometry_1_1cht}{geometry\+::cht}}
 \item 
 bool \mbox{\hyperlink{geometry_8hpp_a18b063c150d95a5ec77dab71218c4f48}{std\+::operator$<$}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&b)
 \item 
-void \mbox{\hyperlink{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824}{std\+::test\+\_\+less}} ()
+void \mbox{\hyperlink{namespacegeometry_a6f5b94d51a13ddc8282f8ef617de73bb}{geometry\+::test\+\_\+less}} ()
 \item 
 auto \mbox{\hyperlink{namespacegeometry_a307816ea40ce680d3c4eb34968b52520}{geometry\+::dot}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&b)
 \item 
@@ -40,13 +41,13 @@ auto \mbox{\hyperlink{namespacegeometry_aabae68a797dfbc044ca0ed89cc6cc1af}{geome
 \item 
 void \mbox{\hyperlink{namespacegeometry_af24e139ee1704a4aa6452a7fec700995}{geometry\+::test\+\_\+wedge}} ()
 \item 
-auto \mbox{\hyperlink{namespacegeometry_ac4305c26988f1a68345c8b24370f0d4c}{geometry\+::area}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} b, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} c)
+auto \mbox{\hyperlink{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3}{geometry\+::area}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \item 
-auto \mbox{\hyperlink{namespacegeometry_a639388ad011f5842dfd4b81cb6a91c93}{geometry\+::ccw}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} b, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} c)
+auto \mbox{\hyperlink{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}{geometry\+::ccw}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \item 
 void \mbox{\hyperlink{namespacegeometry_a18ead2a577ff9e1f661e55515285809b}{geometry\+::test\+\_\+ccw}} ()
 \item 
-auto \mbox{\hyperlink{namespacegeometry_a0cef2145f28cbec7c561075942baf6e3}{geometry\+::hull}} (\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
+auto \mbox{\hyperlink{namespacegeometry_acdc6602c58d77b560832434cc2e25b89}{geometry\+::hull}} (vector$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
 \item 
 {\footnotesize template$<$typename Range , typename Func $>$ }\\auto \mbox{\hyperlink{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}{geometry\+::convex\+\_\+min}} (const Range \&r, const Func \&f)
 \item 
@@ -67,39 +68,17 @@ void \mbox{\hyperlink{namespacegeometry_aad3419586eb6065d81469c30417d5530}{geome
 \doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
 {\footnotesize\ttfamily bool std\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
 
-Compare points a and b lexicographicallyHere is the call graph for this function\+:
-\nopagebreak
+Compare points a and b lexicographicallyHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=301pt]{geometry_8hpp_a18b063c150d95a5ec77dab71218c4f48_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=167pt]{geometry_8hpp_a18b063c150d95a5ec77dab71218c4f48_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824}\label{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824}} 
-\index{geometry.hpp@{geometry.hpp}!test\_less@{test\_less}}
-\index{test\_less@{test\_less}!geometry.hpp@{geometry.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_less()}{test\_less()}}
-{\footnotesize\ttfamily void std\+::test\+\_\+less (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=161pt]{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{geometry_8hpp_a71cdfa5d9036b0b67622772eb7c7e824_icgraph}
+\includegraphics[width=167pt]{geometry_8hpp_a18b063c150d95a5ec77dab71218c4f48_icgraph}
 \end{center}
 \end{figure}

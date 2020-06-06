@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ndebug_868',['NDEBUG',['../core_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e',1,'core.hpp']]]
+  ['opi_888',['opi',['../my__int_8hpp.html#a896acbe39c98c053f809a8001774ab6f',1,'my_int.hpp']]]
 ];

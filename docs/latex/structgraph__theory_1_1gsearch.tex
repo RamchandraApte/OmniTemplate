@@ -15,7 +15,8 @@ Inheritance diagram for graph\+\_\+theory\+::gsearch\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for graph\+\_\+theory\+::gsearch\+:\nopagebreak
+Collaboration diagram for graph\+\_\+theory\+::gsearch\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,52 +26,54 @@ Collaboration diagram for graph\+\_\+theory\+::gsearch\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structgraph__theory_1_1gsearch_ac63cf44b74fbcd2a036892655be4df33}{gsearch}} (const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&g\+\_\+)
+\mbox{\hyperlink{structgraph__theory_1_1gsearch_ac63cf44b74fbcd2a036892655be4df33}{gsearch}} (const vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&g\+\_\+)
 \item 
 virtual void \mbox{\hyperlink{structgraph__theory_1_1gsearch_abdf4ecadc6bff94aea75e416101d52fe}{operator()}} (\mbox{\hyperlink{structll}{ll}})=0
 \item 
 void \mbox{\hyperlink{structgraph__theory_1_1gsearch_a79bc289c42f43fab13401803e10b942c}{operator()}} ()
 \item 
-auto \mbox{\hyperlink{structgraph__theory_1_1gsearch_ae258e3c4ebcc9e5ae8e24b281ac9c72a}{add}} (\mbox{\hyperlink{structll}{ll}} j, \mbox{\hyperlink{structll}{ll}} i)
+void \mbox{\hyperlink{structgraph__theory_1_1gsearch_a379377c6b0d12b33e583601f1ab7b77a}{add}} (const \mbox{\hyperlink{structll}{ll}} child, const \mbox{\hyperlink{structll}{ll}} par)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \& \mbox{\hyperlink{structgraph__theory_1_1gsearch_a37b44bcbcc59b248f4834380ecc703e3}{g}}
+const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \& \mbox{\hyperlink{structgraph__theory_1_1gsearch_a3d807b2f6b3b593bb8f81e1764f46bdf}{graph}}
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structgraph__theory_1_1gsearch_aaf730677878c7da56a3b4728d9300e03}{n}}
-\item 
-\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} \mbox{\hyperlink{structgraph__theory_1_1gsearch_a59b589d8c2f5fa5ee0967b20d013a6c4}{v}}
-\item 
+vector$<$ char $>$ \mbox{\hyperlink{structgraph__theory_1_1gsearch_a2be0da3d01cfdd0e3b28b2ce49311c08}{visited}}
+\begin{DoxyCompactList}\small\item\em Whether vertex idx is visited. \end{DoxyCompactList}\item 
 deque$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structgraph__theory_1_1gsearch_a8946a36638700e258f278abfb2f92b1c}{q}}
-\item 
-\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} \mbox{\hyperlink{structgraph__theory_1_1gsearch_a7bad3224d34e2150f372f183ddc6ba97}{p}}
-\item 
-\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} \mbox{\hyperlink{structgraph__theory_1_1gsearch_a3ae3429c387e83af67204fd0cdaa6d9d}{d}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgraph__theory_1_1gsearch_a3cd16fd5db690a13e06334a29b80f88c}{parent}}
+\begin{DoxyCompactList}\small\item\em Parent of vertex idx. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgraph__theory_1_1gsearch_a22118f70c758143c3800c205fe7bf0f5}{distance}}
+\begin{DoxyCompactList}\small\item\em Distance from source to vertex idx. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Generalized graph searcher/visitor 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structgraph__theory_1_1gsearch_ac63cf44b74fbcd2a036892655be4df33}\label{structgraph__theory_1_1gsearch_ac63cf44b74fbcd2a036892655be4df33}} 
 \index{graph\_theory::gsearch@{graph\_theory::gsearch}!gsearch@{gsearch}}
 \index{gsearch@{gsearch}!graph\_theory::gsearch@{graph\_theory::gsearch}}
 \doxysubsubsection{\texorpdfstring{gsearch()}{gsearch()}}
-{\footnotesize\ttfamily graph\+\_\+theory\+::gsearch\+::gsearch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&}]{g\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily graph\+\_\+theory\+::gsearch\+::gsearch (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&}]{g\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structgraph__theory_1_1gsearch_ae258e3c4ebcc9e5ae8e24b281ac9c72a}\label{structgraph__theory_1_1gsearch_ae258e3c4ebcc9e5ae8e24b281ac9c72a}} 
+\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a379377c6b0d12b33e583601f1ab7b77a}\label{structgraph__theory_1_1gsearch_a379377c6b0d12b33e583601f1ab7b77a}} 
 \index{graph\_theory::gsearch@{graph\_theory::gsearch}!add@{add}}
 \index{add@{add}!graph\_theory::gsearch@{graph\_theory::gsearch}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}}
-{\footnotesize\ttfamily auto graph\+\_\+theory\+::gsearch\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{j,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void graph\+\_\+theory\+::gsearch\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{child,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{par }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Add vertex j as a child of already visited vertex i in the searcher treeHere is the caller graph for this function\+:\nopagebreak
+Add vertex j as a child of already visited vertex i in the searcher treeHere is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{structgraph__theory_1_1gsearch_ae258e3c4ebcc9e5ae8e24b281ac9c72a_icgraph}
+\includegraphics[width=350pt]{structgraph__theory_1_1gsearch_a379377c6b0d12b33e583601f1ab7b77a_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{structgraph__theory_1_1gsearch_a79bc289c42f43fab13401803e10b942c}\label{structgraph__theory_1_1gsearch_a79bc289c42f43fab13401803e10b942c}} 
@@ -87,34 +90,36 @@ Add vertex j as a child of already visited vertex i in the searcher treeHere is 
 
 
 
-Implemented in \mbox{\hyperlink{structgraph__theory_1_1bfs_adedad40628b7db9317842705122446bd}{graph\+\_\+theory\+::bfs}}, and \mbox{\hyperlink{structgraph__theory_1_1dfs_a1a3ba25e0132919c9aa1392f93490927}{graph\+\_\+theory\+::dfs}}.
+Implemented in \mbox{\hyperlink{structgraph__theory_1_1bfs_aee6e92efe0a47f5858b8ba6e6f683acb}{graph\+\_\+theory\+::bfs}}, and \mbox{\hyperlink{structgraph__theory_1_1dfs_a06079c284fde77987c6685fbac4d91d3}{graph\+\_\+theory\+::dfs}}.
 
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a3ae3429c387e83af67204fd0cdaa6d9d}\label{structgraph__theory_1_1gsearch_a3ae3429c387e83af67204fd0cdaa6d9d}} 
-\index{graph\_theory::gsearch@{graph\_theory::gsearch}!d@{d}}
-\index{d@{d}!graph\_theory::gsearch@{graph\_theory::gsearch}}
-\doxysubsubsection{\texorpdfstring{d}{d}}
-{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} graph\+\_\+theory\+::gsearch\+::d}
+\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a22118f70c758143c3800c205fe7bf0f5}\label{structgraph__theory_1_1gsearch_a22118f70c758143c3800c205fe7bf0f5}} 
+\index{graph\_theory::gsearch@{graph\_theory::gsearch}!distance@{distance}}
+\index{distance@{distance}!graph\_theory::gsearch@{graph\_theory::gsearch}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} graph\+\_\+theory\+::gsearch\+::distance}
 
-\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a37b44bcbcc59b248f4834380ecc703e3}\label{structgraph__theory_1_1gsearch_a37b44bcbcc59b248f4834380ecc703e3}} 
-\index{graph\_theory::gsearch@{graph\_theory::gsearch}!g@{g}}
-\index{g@{g}!graph\_theory::gsearch@{graph\_theory::gsearch}}
-\doxysubsubsection{\texorpdfstring{g}{g}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}}$>$\& graph\+\_\+theory\+::gsearch\+::g}
 
-Generalized graph searcher/visitor \mbox{\Hypertarget{structgraph__theory_1_1gsearch_aaf730677878c7da56a3b4728d9300e03}\label{structgraph__theory_1_1gsearch_aaf730677878c7da56a3b4728d9300e03}} 
-\index{graph\_theory::gsearch@{graph\_theory::gsearch}!n@{n}}
-\index{n@{n}!graph\_theory::gsearch@{graph\_theory::gsearch}}
-\doxysubsubsection{\texorpdfstring{n}{n}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} graph\+\_\+theory\+::gsearch\+::n}
 
-\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a7bad3224d34e2150f372f183ddc6ba97}\label{structgraph__theory_1_1gsearch_a7bad3224d34e2150f372f183ddc6ba97}} 
-\index{graph\_theory::gsearch@{graph\_theory::gsearch}!p@{p}}
-\index{p@{p}!graph\_theory::gsearch@{graph\_theory::gsearch}}
-\doxysubsubsection{\texorpdfstring{p}{p}}
-{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} graph\+\_\+theory\+::gsearch\+::p}
+Distance from source to vertex idx. 
+
+\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a3d807b2f6b3b593bb8f81e1764f46bdf}\label{structgraph__theory_1_1gsearch_a3d807b2f6b3b593bb8f81e1764f46bdf}} 
+\index{graph\_theory::gsearch@{graph\_theory::gsearch}!graph@{graph}}
+\index{graph@{graph}!graph\_theory::gsearch@{graph\_theory::gsearch}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily const vector$<$\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}}$>$\& graph\+\_\+theory\+::gsearch\+::graph}
+
+\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a3cd16fd5db690a13e06334a29b80f88c}\label{structgraph__theory_1_1gsearch_a3cd16fd5db690a13e06334a29b80f88c}} 
+\index{graph\_theory::gsearch@{graph\_theory::gsearch}!parent@{parent}}
+\index{parent@{parent}!graph\_theory::gsearch@{graph\_theory::gsearch}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} graph\+\_\+theory\+::gsearch\+::parent}
+
+
+
+Parent of vertex idx. 
 
 \mbox{\Hypertarget{structgraph__theory_1_1gsearch_a8946a36638700e258f278abfb2f92b1c}\label{structgraph__theory_1_1gsearch_a8946a36638700e258f278abfb2f92b1c}} 
 \index{graph\_theory::gsearch@{graph\_theory::gsearch}!q@{q}}
@@ -122,11 +127,19 @@ Generalized graph searcher/visitor \mbox{\Hypertarget{structgraph__theory_1_1gse
 \doxysubsubsection{\texorpdfstring{q}{q}}
 {\footnotesize\ttfamily deque$<$\mbox{\hyperlink{structll}{ll}}$>$ graph\+\_\+theory\+::gsearch\+::q}
 
-\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a59b589d8c2f5fa5ee0967b20d013a6c4}\label{structgraph__theory_1_1gsearch_a59b589d8c2f5fa5ee0967b20d013a6c4}} 
-\index{graph\_theory::gsearch@{graph\_theory::gsearch}!v@{v}}
-\index{v@{v}!graph\_theory::gsearch@{graph\_theory::gsearch}}
-\doxysubsubsection{\texorpdfstring{v}{v}}
-{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} graph\+\_\+theory\+::gsearch\+::v}
+
+
+Queue. 
+
+\mbox{\Hypertarget{structgraph__theory_1_1gsearch_a2be0da3d01cfdd0e3b28b2ce49311c08}\label{structgraph__theory_1_1gsearch_a2be0da3d01cfdd0e3b28b2ce49311c08}} 
+\index{graph\_theory::gsearch@{graph\_theory::gsearch}!visited@{visited}}
+\index{visited@{visited}!graph\_theory::gsearch@{graph\_theory::gsearch}}
+\doxysubsubsection{\texorpdfstring{visited}{visited}}
+{\footnotesize\ttfamily vector$<$char$>$ graph\+\_\+theory\+::gsearch\+::visited}
+
+
+
+Whether vertex idx is visited. 
 
 
 

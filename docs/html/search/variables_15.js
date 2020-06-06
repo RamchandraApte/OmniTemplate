@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['w_803',['w',['../structedge.html#ae1956b073448bd37adb2d9ba2b9dd3f4',1,'edge']]]
+  ['weight_825',['weight',['../structgraph__theory_1_1edge.html#afd1df0689bec85ffbdb52d3735a2edc6',1,'graph_theory::edge']]]
 ];

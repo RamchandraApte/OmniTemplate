@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for dsu\+\_\+ds\+::dsu\+:\nopagebreak
+Collaboration diagram for dsu\+\_\+ds\+::dsu\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,18 +19,21 @@ Collaboration diagram for dsu\+\_\+ds\+::dsu\+:\nopagebreak
 \item 
 \mbox{\hyperlink{structdsu__ds_1_1dsu_a1e6ba03b0b186d48a5082d6c403d1719}{dsu}} (\mbox{\hyperlink{structll}{ll}} n)
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a4b0c8664978805f43fcf44e3ce465d69}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{structll}{ll}} x) const
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}{find}} (\mbox{\hyperlink{structll}{ll}} x) const
 \item 
-auto \mbox{\hyperlink{structdsu__ds_1_1dsu_ae8ad024ba75086c1f5dd11d9ac77c90a}{operator()}} (\mbox{\hyperlink{structll}{ll}} x, \mbox{\hyperlink{structll}{ll}} y)
+bool \mbox{\hyperlink{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}{join}} (\mbox{\hyperlink{structll}{ll}} x, \mbox{\hyperlink{structll}{ll}} y)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} \mbox{\hyperlink{structdsu__ds_1_1dsu_ade11b833f6689409a0a595a9c3586223}{p}}
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a4cb38e70b100ef23db7b89dc51016273}{parent}}
 \item 
-\mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} \mbox{\hyperlink{structdsu__ds_1_1dsu_afc6efa4f289a652843e2f9b814ae0041}{s}}
+\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a0c383f06009a0b2b40b33030cc5ff5dc}{size\+\_\+}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Disjoint-\/set data structure 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_a1e6ba03b0b186d48a5082d6c403d1719}\label{structdsu__ds_1_1dsu_a1e6ba03b0b186d48a5082d6c403d1719}} 
@@ -41,34 +45,50 @@ auto \mbox{\hyperlink{structdsu__ds_1_1dsu_ae8ad024ba75086c1f5dd11d9ac77c90a}{op
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structdsu__ds_1_1dsu_ae8ad024ba75086c1f5dd11d9ac77c90a}\label{structdsu__ds_1_1dsu_ae8ad024ba75086c1f5dd11d9ac77c90a}} 
-\index{dsu\_ds::dsu@{dsu\_ds::dsu}!operator()@{operator()}}
-\index{operator()@{operator()}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
-{\footnotesize\ttfamily auto dsu\+\_\+ds\+::dsu\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}\label{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!find@{find}}
+\index{find@{find}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dsu\+\_\+ds\+::dsu\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Joins the set containing x with the set containing y\mbox{\Hypertarget{structdsu__ds_1_1dsu_a4b0c8664978805f43fcf44e3ce465d69}\label{structdsu__ds_1_1dsu_a4b0c8664978805f43fcf44e3ce465d69}} 
-\index{dsu\_ds::dsu@{dsu\_ds::dsu}!operator\mbox{[}\mbox{]}@{operator[]}}
-\index{operator\mbox{[}\mbox{]}@{operator[]}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dsu\+\_\+ds\+::dsu\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+Returns the representative element of xHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}\label{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!join@{join}}
+\index{join@{join}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily bool dsu\+\_\+ds\+::dsu\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the representative element of x
+Joins the set containing x with the set containing yHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph}
+\end{center}
+\end{figure}
+
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structdsu__ds_1_1dsu_ade11b833f6689409a0a595a9c3586223}\label{structdsu__ds_1_1dsu_ade11b833f6689409a0a595a9c3586223}} 
-\index{dsu\_ds::dsu@{dsu\_ds::dsu}!p@{p}}
-\index{p@{p}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{p}{p}}
-{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} dsu\+\_\+ds\+::dsu\+::p\hspace{0.3cm}{\ttfamily [mutable]}}
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_a4cb38e70b100ef23db7b89dc51016273}\label{structdsu__ds_1_1dsu_a4cb38e70b100ef23db7b89dc51016273}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!parent@{parent}}
+\index{parent@{parent}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} dsu\+\_\+ds\+::dsu\+::parent\hspace{0.3cm}{\ttfamily [mutable]}}
 
-Disjoint-\/set data structure \mbox{\Hypertarget{structdsu__ds_1_1dsu_afc6efa4f289a652843e2f9b814ae0041}\label{structdsu__ds_1_1dsu_afc6efa4f289a652843e2f9b814ae0041}} 
-\index{dsu\_ds::dsu@{dsu\_ds::dsu}!s@{s}}
-\index{s@{s}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{s}{s}}
-{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} dsu\+\_\+ds\+::dsu\+::s}
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_a0c383f06009a0b2b40b33030cc5ff5dc}\label{structdsu__ds_1_1dsu_a0c383f06009a0b2b40b33030cc5ff5dc}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!size\_@{size\_}}
+\index{size\_@{size\_}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} dsu\+\_\+ds\+::dsu\+::size\+\_\+}
 
-
+Size of set of representative element idx 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

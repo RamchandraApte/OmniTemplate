@@ -8,6 +8,8 @@ struct \mbox{\hyperlink{structgeometry_1_1cht}{cht}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{namespacegeometry_a6f5b94d51a13ddc8282f8ef617de73bb}{test\+\_\+less}} ()
+\item 
 auto \mbox{\hyperlink{namespacegeometry_a307816ea40ce680d3c4eb34968b52520}{dot}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&b)
 \item 
 void \mbox{\hyperlink{namespacegeometry_afaf01b71e2401cde2a17f7de0c7589f4}{test\+\_\+dot}} ()
@@ -16,13 +18,13 @@ auto \mbox{\hyperlink{namespacegeometry_aabae68a797dfbc044ca0ed89cc6cc1af}{wedge
 \item 
 void \mbox{\hyperlink{namespacegeometry_af24e139ee1704a4aa6452a7fec700995}{test\+\_\+wedge}} ()
 \item 
-auto \mbox{\hyperlink{namespacegeometry_ac4305c26988f1a68345c8b24370f0d4c}{area}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} b, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} c)
+auto \mbox{\hyperlink{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3}{area}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \item 
-auto \mbox{\hyperlink{namespacegeometry_a639388ad011f5842dfd4b81cb6a91c93}{ccw}} (\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} a, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} b, \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} c)
+auto \mbox{\hyperlink{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}{ccw}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \item 
 void \mbox{\hyperlink{namespacegeometry_a18ead2a577ff9e1f661e55515285809b}{test\+\_\+ccw}} ()
 \item 
-auto \mbox{\hyperlink{namespacegeometry_a0cef2145f28cbec7c561075942baf6e3}{hull}} (\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
+auto \mbox{\hyperlink{namespacegeometry_acdc6602c58d77b560832434cc2e25b89}{hull}} (vector$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
 \item 
 {\footnotesize template$<$typename Range , typename Func $>$ }\\auto \mbox{\hyperlink{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}{convex\+\_\+min}} (const Range \&r, const Func \&f)
 \item 
@@ -37,18 +39,18 @@ void \mbox{\hyperlink{namespacegeometry_aad3419586eb6065d81469c30417d5530}{test\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacegeometry_ac4305c26988f1a68345c8b24370f0d4c}\label{namespacegeometry_ac4305c26988f1a68345c8b24370f0d4c}} 
+\mbox{\Hypertarget{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3}\label{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3}} 
 \index{geometry@{geometry}!area@{area}}
 \index{area@{area}!geometry@{geometry}}
 \doxysubsubsection{\texorpdfstring{area()}{area()}}
-{\footnotesize\ttfamily auto geometry\+::area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}}}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}}}]{b,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto geometry\+::area (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{a,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{b,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{c }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=308pt]{namespacegeometry_ac4305c26988f1a68345c8b24370f0d4c_cgraph}
+\includegraphics[width=308pt]{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -56,21 +58,21 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_ac4305c26988f1a68345c8b24370f0d4c_icgraph}
+\includegraphics[width=350pt]{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacegeometry_a639388ad011f5842dfd4b81cb6a91c93}\label{namespacegeometry_a639388ad011f5842dfd4b81cb6a91c93}} 
+\mbox{\Hypertarget{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}\label{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}} 
 \index{geometry@{geometry}!ccw@{ccw}}
 \index{ccw@{ccw}!geometry@{geometry}}
 \doxysubsubsection{\texorpdfstring{ccw()}{ccw()}}
-{\footnotesize\ttfamily auto geometry\+::ccw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}}}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}}}]{b,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto geometry\+::ccw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{a,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{b,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{c }\end{DoxyParamCaption})}
 
 Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. Throws std\+::invalid\+\_\+argument if a, b, c are collinear.Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_a639388ad011f5842dfd4b81cb6a91c93_cgraph}
+\includegraphics[width=350pt]{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -78,7 +80,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_a639388ad011f5842dfd4b81cb6a91c93_icgraph}
+\includegraphics[width=350pt]{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}\label{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}} 
@@ -101,26 +103,25 @@ Returns x in Range r that minimizes the value of a convex function f(x).Here is 
 \doxysubsubsection{\texorpdfstring{dot()}{dot()}}
 {\footnotesize\ttfamily auto geometry\+::dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
 
-returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$Here is the caller graph for this function\+:
-\nopagebreak
+returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespacegeometry_a307816ea40ce680d3c4eb34968b52520_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacegeometry_a0cef2145f28cbec7c561075942baf6e3}\label{namespacegeometry_a0cef2145f28cbec7c561075942baf6e3}} 
+\mbox{\Hypertarget{namespacegeometry_acdc6602c58d77b560832434cc2e25b89}\label{namespacegeometry_acdc6602c58d77b560832434cc2e25b89}} 
 \index{geometry@{geometry}!hull@{hull}}
 \index{hull@{hull}!geometry@{geometry}}
 \doxysubsubsection{\texorpdfstring{hull()}{hull()}}
-{\footnotesize\ttfamily auto geometry\+::hull (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ \&}]{v,  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(true)$>$}]{do\+\_\+sort = {\ttfamily true} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto geometry\+::hull (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$}]{v,  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(true)$>$}]{do\+\_\+sort = {\ttfamily true} }\end{DoxyParamCaption})}
 
 Returns the convex hull of the points in vHere is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_a0cef2145f28cbec7c561075942baf6e3_cgraph}
+\includegraphics[width=350pt]{namespacegeometry_acdc6602c58d77b560832434cc2e25b89_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -128,7 +129,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_a0cef2145f28cbec7c561075942baf6e3_icgraph}
+\includegraphics[width=350pt]{namespacegeometry_acdc6602c58d77b560832434cc2e25b89_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacegeometry_a18ead2a577ff9e1f661e55515285809b}\label{namespacegeometry_a18ead2a577ff9e1f661e55515285809b}} 
@@ -158,8 +159,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_cht()}{test\_cht()}}
 {\footnotesize\ttfamily void geometry\+::test\+\_\+cht (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,8 +199,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_dot()}{test\_dot()}}
 {\footnotesize\ttfamily void geometry\+::test\+\_\+dot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -256,14 +255,27 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespacegeometry_a27118bb54df18fa8cdda0a971ad58027_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespacegeometry_a6f5b94d51a13ddc8282f8ef617de73bb}\label{namespacegeometry_a6f5b94d51a13ddc8282f8ef617de73bb}} 
+\index{geometry@{geometry}!test\_less@{test\_less}}
+\index{test\_less@{test\_less}!geometry@{geometry}}
+\doxysubsubsection{\texorpdfstring{test\_less()}{test\_less()}}
+{\footnotesize\ttfamily void geometry\+::test\+\_\+less (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacegeometry_a6f5b94d51a13ddc8282f8ef617de73bb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacegeometry_af24e139ee1704a4aa6452a7fec700995}\label{namespacegeometry_af24e139ee1704a4aa6452a7fec700995}} 
 \index{geometry@{geometry}!test\_wedge@{test\_wedge}}
 \index{test\_wedge@{test\_wedge}!geometry@{geometry}}
 \doxysubsubsection{\texorpdfstring{test\_wedge()}{test\_wedge()}}
 {\footnotesize\ttfamily void geometry\+::test\+\_\+wedge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -283,7 +295,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{wedge()}{wedge()}}
 {\footnotesize\ttfamily auto geometry\+::wedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
 
-Returns the wedge product of 2D vectors a and b, $a \wedge b$Here is the caller graph for this function\+:
+Returns the wedge product of 2D vectors a and b, $a \wedge b$. This is the signed area of the parallelogram spanned by vectors $\vec{f}$ and $\vec{b}$.Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}

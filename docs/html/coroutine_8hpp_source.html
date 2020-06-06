@@ -107,14 +107,28 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">static</span> <a class="code" href="structll.html">ll</a> i = 0; i &lt; a; i++) {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(i * i);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(-1);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(505);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a8b33d6ed6b7b80530df506021b0428ed">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="coroutine_8hpp.html#a8b33d6ed6b7b80530df506021b0428ed">test_coroutine</a>() {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> a = 4;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.push_back(<a class="code" href="coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa">coro</a>(a));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    } <span class="keywordflow">catch</span> (out_of_range) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    assert((<a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a> == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:70</div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a66452cd96cc7e445f9d343e47d1afefa"><div class="ttname"><a href="coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa">coro</a></div><div class="ttdeci">ll coro(ll a)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:30</div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a904227d8e8b2e67adef1e140e9990a5c"><div class="ttname"><a href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div><div class="ttdeci">#define coend</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:9</div></div>
+<div class="ttc" id="acoroutine_8hpp_html_a8b33d6ed6b7b80530df506021b0428ed"><div class="ttname"><a href="coroutine_8hpp.html#a8b33d6ed6b7b80530df506021b0428ed">test_coroutine</a></div><div class="ttdeci">void test_coroutine()</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:38</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a1672ec864a13c8374fa9bfc6595e67d6"><div class="ttname"><a href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a></div><div class="ttdeci">#define cobegin</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:5</div></div>
+<div class="ttc" id="asegment__tree_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:149</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:8</div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a40b2517161c64f0179823b67d4af0242"><div class="ttname"><a href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a></div><div class="ttdeci">#define coreturn(x)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:12</div></div>
 <!-- start footer part -->

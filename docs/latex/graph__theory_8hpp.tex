@@ -3,7 +3,8 @@
 {\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}dsu.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}linear\+\_\+algebra.\+hpp\char`\"{}}\newline
-Include dependency graph for graph\+\_\+theory.\+hpp\+:\nopagebreak
+Include dependency graph for graph\+\_\+theory.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,8 +21,8 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structedge}{edge}}
-\item 
+struct \mbox{\hyperlink{structgraph__theory_1_1edge}{graph\+\_\+theory\+::edge}}
+\begin{DoxyCompactList}\small\item\em $<$ Edge with weight weight from a to b \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structgraph__theory_1_1gsearch}{graph\+\_\+theory\+::gsearch}}
 \item 
 struct \mbox{\hyperlink{structgraph__theory_1_1dfs}{graph\+\_\+theory\+::dfs}}
@@ -36,79 +37,47 @@ struct \mbox{\hyperlink{structgraph__theory_1_1bfs}{graph\+\_\+theory\+::bfs}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af}{operator$<$}} (\mbox{\hyperlink{structedge}{edge}} const \&a, \mbox{\hyperlink{structedge}{edge}} const \&b)
+bool \mbox{\hyperlink{namespacegraph__theory_a4dbe54e2a6c2e93add66dc32c647c876}{graph\+\_\+theory\+::operator$<$}} (\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&a, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&b)
 \item 
-bool \mbox{\hyperlink{graph__theory_8hpp_a3899b9c13b95304df918101d4c4f4d4f}{operator==}} (\mbox{\hyperlink{structedge}{edge}} const \&a, \mbox{\hyperlink{structedge}{edge}} const \&b)
+bool \mbox{\hyperlink{namespacegraph__theory_a9112d064de59f0aa5737bc1d90e9bf32}{graph\+\_\+theory\+::operator==}} (\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&a, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&b)
 \item 
-{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{graph__theory_8hpp_a18e4531fb24d91bacaab3071e73938f5}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structedge}{edge}} const \&e)
+{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacegraph__theory_a283db7058efe0355744471a1532e4960}{graph\+\_\+theory\+::operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&e)
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a39a0a5f2c23a2facdf6251a142a88e1b}{graph\+\_\+theory\+::add\+\_\+edge}} (\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+auto \mbox{\hyperlink{namespacegraph__theory_a7baea0d3e99864e50ed82e6e93a88eb5}{graph\+\_\+theory\+::add\+\_\+edge}} (vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph, \mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a8167523c5325380ddf6d2903dd654271}{graph\+\_\+theory\+::dist}} (\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$ g, \mbox{\hyperlink{structll}{ll}} s)
+auto \mbox{\hyperlink{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}{graph\+\_\+theory\+::shortest\+\_\+dist}} (vector$<$ vector$<$ \mbox{\hyperlink{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$ graph, \mbox{\hyperlink{structll}{ll}} source)
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a66ff0982db8d7fb695cb456602d362f0}{graph\+\_\+theory\+::dist}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&g)
+auto \mbox{\hyperlink{namespacegraph__theory_ae6ad3f54671798a8d8f3c4253ea83db4}{graph\+\_\+theory\+::shortest\+\_\+dist}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&graph)
 \item 
-void \mbox{\hyperlink{namespacegraph__theory_a2b593631b45e50c3345b1026e2a65c32}{graph\+\_\+theory\+::test\+\_\+dist}} ()
+void \mbox{\hyperlink{namespacegraph__theory_ae36eab02a5882508df9bcd38fed73b1f}{graph\+\_\+theory\+::test\+\_\+shortest\+\_\+dist}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_adc41c5f6146aaa8dce40082a7f310161}{graph\+\_\+theory\+::mst}} (\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{structedge}{edge}} $>$ es)
+auto \mbox{\hyperlink{namespacegraph__theory_ac47e32c1c40eb2d6e367f4d5b34d9ccc}{graph\+\_\+theory\+::mst}} (vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$ edges)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_a84ac78302ab327b1a880654a74f696b3}{graph\+\_\+theory\+::test\+\_\+mst}} ()
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_a2aea60be1c24dc82badd96e40923038b}{graph\+\_\+theory\+::test\+\_\+bfs}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a5b4fccebd731ef29c9050b946d57c8c9}{graph\+\_\+theory\+::trans}} (const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \&g)
+auto \mbox{\hyperlink{namespacegraph__theory_af33d0502161df2d1b82be4b1e8dcaa13}{graph\+\_\+theory\+::trans}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_a734cad165e9d3343718dea3cab4febc3}{graph\+\_\+theory\+::test\+\_\+trans}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a14c5caae4119d720412cda7748174301}{graph\+\_\+theory\+::scc}} (const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \&g)
+auto \mbox{\hyperlink{namespacegraph__theory_abf42c204d44caae5b7ea48d8261dfd9e}{graph\+\_\+theory\+::scc}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_a67e1bb0651ba8b410525f0a06c154f10}{graph\+\_\+theory\+::test\+\_\+scc}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_abacb9f1cecd2284dd5fb2bcfaf256b74}{graph\+\_\+theory\+::bipartite}} (const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \&g)
+auto \mbox{\hyperlink{namespacegraph__theory_abc2dae699efd9d44942e1a27d801d9cb}{graph\+\_\+theory\+::bipartite}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_aeebcf017acc0533f31c46d62d0cebe72}{graph\+\_\+theory\+::test\+\_\+bipartite}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a3aa84048435079e1235a2ab9abb93467}{graph\+\_\+theory\+::max\+\_\+match}} (const \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \&g)
+auto \mbox{\hyperlink{namespacegraph__theory_a178da2acee19545ba0378a75ffea2fdb}{graph\+\_\+theory\+::max\+\_\+match}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacegraph__theory_a998798d5fc2c45a6ce50b16c3a620fbd}{graph\+\_\+theory\+::matching\+\_\+size}} (const \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&matching)
+\item 
+void \mbox{\hyperlink{namespacegraph__theory_abbe5b980d32347acbd0811f9c189d097}{graph\+\_\+theory\+::test\+\_\+max\+\_\+match}} ()
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_af419fd09d176890f30126a49064cbd9b}{graph\+\_\+theory\+::test\+\_\+add\+\_\+edge}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_a305e818c99814cd465186b57c0a73f50}{graph\+\_\+theory\+::graph\+\_\+in}} (\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ \mbox{\hyperlink{core_8hpp_a8113bb7c76fe54dd16115679b04b12d9}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} m)
+auto \mbox{\hyperlink{namespacegraph__theory_a305e818c99814cd465186b57c0a73f50}{graph\+\_\+theory\+::graph\+\_\+in}} (vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&g, \mbox{\hyperlink{structll}{ll}} m)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_aa2b38897f4c429325f0eb73b1137755a}{graph\+\_\+theory\+::test\+\_\+graph\+\_\+theory}} ()
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af}\label{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!operator$<$@{operator$<$}}
-\index{operator$<$@{operator$<$}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
-{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structedge}{edge}} const \&}]{a,  }\item[{\mbox{\hyperlink{structedge}{edge}} const \&}]{b }\end{DoxyParamCaption})}
-
-Compare the edges by weight, with ties compared by a and bHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=268pt]{graph__theory_8hpp_a876c191f8c72538f5b74fc1de66571af_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{graph__theory_8hpp_a18e4531fb24d91bacaab3071e73938f5}\label{graph__theory_8hpp_a18e4531fb24d91bacaab3071e73938f5}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
-{\footnotesize\ttfamily template$<$typename Stream $>$ \\
-auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structedge}{edge}} const \&}]{e }\end{DoxyParamCaption})}
-
-Print the edge\mbox{\Hypertarget{graph__theory_8hpp_a3899b9c13b95304df918101d4c4f4d4f}\label{graph__theory_8hpp_a3899b9c13b95304df918101d4c4f4d4f}} 
-\index{graph\_theory.hpp@{graph\_theory.hpp}!operator==@{operator==}}
-\index{operator==@{operator==}!graph\_theory.hpp@{graph\_theory.hpp}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structedge}{edge}} const \&}]{a,  }\item[{\mbox{\hyperlink{structedge}{edge}} const \&}]{b }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=276pt]{graph__theory_8hpp_a3899b9c13b95304df918101d4c4f4d4f_cgraph}
-\end{center}
-\end{figure}

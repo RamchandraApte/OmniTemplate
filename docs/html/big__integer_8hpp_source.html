@@ -85,7 +85,7 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">return</span> os &lt;&lt; a.<a class="code" href="structbigint_1_1bigint.html#a9c73973c3aeb34e64a5077b75eb8b0c2">v</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">auto</span> <a class="code" href="modulo_8hpp.html#aff442628ab569d8669a7f5a0c6d44040">operator+</a>(<a class="code" href="namespacebigint.html">bigint</a> <span class="keyword">const</span>&amp; a, <a class="code" href="namespacebigint.html">bigint</a> <span class="keyword">const</span>&amp; b){</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacemodulo__namespace.html#aa39044c62fae2707474b9960d257d9dd">operator+</a>(<a class="code" href="namespacebigint.html">bigint</a> <span class="keyword">const</span>&amp; a, <a class="code" href="namespacebigint.html">bigint</a> <span class="keyword">const</span>&amp; b){</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define addo __builtin_add_overflow</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    initializer_list xs{a,b};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="core_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a> sm = 0;</div>
@@ -93,26 +93,24 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="namespacebigint.html">bigint</a> c(sm+1);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i,sm){</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x: xs){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="core_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a>(i);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            c.v[i+1] |= <a class="code" href="core_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a>(addo(c.v[i], x[i], c.v.data()+i));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> c;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;} <span class="comment">// namespace bigint</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacebigint.html">bigint</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            c.v[i+1] |= addo(c.v[i], x[i], c.v.data()+i);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;} <span class="comment">// namespace bigint</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacebigint.html">bigint</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacemodulo__namespace_html_aa39044c62fae2707474b9960d257d9dd"><div class="ttname"><a href="namespacemodulo__namespace.html#aa39044c62fae2707474b9960d257d9dd">modulo_namespace::operator+</a></div><div class="ttdeci">modulo operator+(modulo const &amp;a, modulo const &amp;b)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:29</div></div>
 <div class="ttc" id="anamespacebigint_html_af4352ea3f90e44bbfe72018e96a89bce"><div class="ttname"><a href="namespacebigint.html#af4352ea3f90e44bbfe72018e96a89bce">bigint::operator&lt;&lt;</a></div><div class="ttdeci">auto &amp; operator&lt;&lt;(Stream &amp;os, bigint const &amp;a)</div><div class="ttdef"><b>Definition:</b> big_integer.hpp:9</div></div>
 <div class="ttc" id="astructbigint_1_1bigint_html_a9c73973c3aeb34e64a5077b75eb8b0c2"><div class="ttname"><a href="structbigint_1_1bigint.html#a9c73973c3aeb34e64a5077b75eb8b0c2">bigint::bigint::v</a></div><div class="ttdeci">vector&lt; ull &gt; v</div><div class="ttdef"><b>Definition:</b> big_integer.hpp:5</div></div>
 <div class="ttc" id="anamespacebigint_html"><div class="ttname"><a href="namespacebigint.html">bigint</a></div><div class="ttdef"><b>Definition:</b> big_integer.hpp:3</div></div>
 <div class="ttc" id="astructbigint_1_1bigint_html_a2104d28d86c22e149f16f912b8d4e39e"><div class="ttname"><a href="structbigint_1_1bigint.html#a2104d28d86c22e149f16f912b8d4e39e">bigint::bigint::bigint</a></div><div class="ttdeci">bigint(const vector&lt; ull &gt; &amp;v_)</div><div class="ttdef"><b>Definition:</b> big_integer.hpp:6</div></div>
-<div class="ttc" id="amodulo_8hpp_html_aff442628ab569d8669a7f5a0c6d44040"><div class="ttname"><a href="modulo_8hpp.html#aff442628ab569d8669a7f5a0c6d44040">operator+</a></div><div class="ttdeci">modulo operator+(modulo const &amp;a, modulo const &amp;b)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:29</div></div>
-<div class="ttc" id="acore_8hpp_html_a49bc164f30e64702250d2cbea09bf86c"><div class="ttname"><a href="core_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a></div><div class="ttdeci">#define dbg(x)</div><div class="ttdef"><b>Definition:</b> core.hpp:19</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
-<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:28</div></div>
-<div class="ttc" id="acore_8hpp_html_aa5114a4fed348a29fb92123470476b1b"><div class="ttname"><a href="core_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a></div><div class="ttdeci">unsigned long long ull</div><div class="ttdef"><b>Definition:</b> core.hpp:76</div></div>
-<div class="ttc" id="asegment__tree_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:153</div></div>
+<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:23</div></div>
+<div class="ttc" id="acore_8hpp_html_aa5114a4fed348a29fb92123470476b1b"><div class="ttname"><a href="core_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a></div><div class="ttdeci">unsigned long long ull</div><div class="ttdef"><b>Definition:</b> core.hpp:68</div></div>
+<div class="ttc" id="asegment__tree_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:149</div></div>
 <div class="ttc" id="astructbigint_1_1bigint_html_a976d2ec97121424c6ce6b4bb05f6ec86"><div class="ttname"><a href="structbigint_1_1bigint.html#a976d2ec97121424c6ce6b4bb05f6ec86">bigint::bigint::operator[]</a></div><div class="ttdeci">auto operator[](size_t i) const</div><div class="ttdef"><b>Definition:</b> big_integer.hpp:7</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

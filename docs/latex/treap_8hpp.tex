@@ -1,7 +1,8 @@
 \hypertarget{treap_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/treap.hpp File Reference}
 \label{treap_8hpp}\index{/home/ram/OmniTemplate/treap.hpp@{/home/ram/OmniTemplate/treap.hpp}}
 {\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
-Include dependency graph for treap.\+hpp\+:\nopagebreak
+Include dependency graph for treap.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,7 +38,7 @@ struct \mbox{\hyperlink{structsize__data}{size\+\_\+data$<$ Key $>$}}
 \item 
 {\footnotesize template$<$typename Key $>$ }\\\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ \mbox{\hyperlink{treap_8hpp_a8e26670f57733242dc7312c4072c49b6}{operator+}} (\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&l, \mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&r)
 \item 
-{\footnotesize template$<$typename Stream , typename Key $>$ }\\auto \& \mbox{\hyperlink{treap_8hpp_a650f755f8c99e25e39d93616c8c866df}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&data)
+{\footnotesize template$<$typename Stream , typename Key $>$ }\\ostream \& \mbox{\hyperlink{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&data)
 \item 
 {\footnotesize template$<$typename Key , typename Data $>$ }\\Data \mbox{\hyperlink{treap_8hpp_a88d816c35d3a703c27719dabc1631d79}{get\+\_\+data}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$trp)
 \item 
@@ -67,9 +68,9 @@ struct \mbox{\hyperlink{structsize__data}{size\+\_\+data$<$ Key $>$}}
 \item 
 {\footnotesize template$<$typename Stream , typename... Ts$>$ }\\auto \& \mbox{\hyperlink{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structtreap}{treap}}$<$ Ts... $>$ $\ast$trp)
 \item 
-{\footnotesize template$<$typename Key , typename Data $>$ }\\void \mbox{\hyperlink{treap_8hpp_ad72c7dcf3afbf183a09f2220922543d5}{to\+\_\+array}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$trp, \mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ Key $>$ \&out)
+{\footnotesize template$<$typename Key , typename Data $>$ }\\void \mbox{\hyperlink{treap_8hpp_ad72c7dcf3afbf183a09f2220922543d5}{to\+\_\+array}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$trp, vector$<$ Key $>$ \&out)
 \item 
-{\footnotesize template$<$typename Key , typename Data $>$ }\\\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ Key $>$ \mbox{\hyperlink{treap_8hpp_a8627d817d1d1564b415505110432d65d}{to\+\_\+array}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$trp)
+{\footnotesize template$<$typename Key , typename Data $>$ }\\vector$<$ Key $>$ \mbox{\hyperlink{treap_8hpp_a8627d817d1d1564b415505110432d65d}{to\+\_\+array}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$trp)
 \end{DoxyCompactItemize}
 
 
@@ -268,12 +269,12 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Key $>$ \\
 \mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$Key$>$ operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{l,  }\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{r }\end{DoxyParamCaption})}
 
-Returns the data for a node given the data for the children.\mbox{\Hypertarget{treap_8hpp_a650f755f8c99e25e39d93616c8c866df}\label{treap_8hpp_a650f755f8c99e25e39d93616c8c866df}} 
+Returns the data for a node given the data for the children.\mbox{\Hypertarget{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}\label{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}} 
 \index{treap.hpp@{treap.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!treap.hpp@{treap.hpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename Key $>$ \\
-auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{data }\end{DoxyParamCaption})}
+ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{data }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}\label{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}} 
 \index{treap.hpp@{treap.hpp}!operator$<$$<$@{operator$<$$<$}}
@@ -329,7 +330,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{to\_array@{to\_array}!treap.hpp@{treap.hpp}}
 \doxysubsubsection{\texorpdfstring{to\_array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Key , typename Data $>$ \\
-\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$Key$>$ to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp }\end{DoxyParamCaption})}
+vector$<$Key$>$ to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp }\end{DoxyParamCaption})}
 
 Returns the array of keys for an implicit treap.Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -343,7 +344,7 @@ Returns the array of keys for an implicit treap.Here is the call graph for this 
 \index{to\_array@{to\_array}!treap.hpp@{treap.hpp}}
 \doxysubsubsection{\texorpdfstring{to\_array()}{to\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Key , typename Data $>$ \\
-void to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp,  }\item[{\mbox{\hyperlink{core_8hpp_add93f942eb3d18a8f8e108404869156f}{vector}}$<$ Key $>$ \&}]{out }\end{DoxyParamCaption})}
+void to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp,  }\item[{vector$<$ Key $>$ \&}]{out }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

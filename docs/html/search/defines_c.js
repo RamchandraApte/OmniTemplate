@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rel_5fassert_874',['rel_assert',['../core_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db',1,'core.hpp']]],
-  ['ret_875',['ret',['../operations_8hpp.html#afcd538daef660984ecb8abf34697904b',1,'operations.hpp']]]
+  ['sig_894',['sig',['../segment__tree_8hpp.html#adff0a7b40e9b24ea63a29da40e60da96',1,'sig():&#160;segment_tree.hpp'],['../segment__tree_8hpp.html#adff0a7b40e9b24ea63a29da40e60da96',1,'sig():&#160;segment_tree.hpp']]]
 ];

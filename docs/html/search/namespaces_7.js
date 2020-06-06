@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['persistent_486',['persistent',['../namespacepersistent.html',1,'']]]
+  ['permutation_495',['permutation',['../namespacepermutation.html',1,'']]],
+  ['persistent_496',['persistent',['../namespacepersistent.html',1,'']]]
 ];

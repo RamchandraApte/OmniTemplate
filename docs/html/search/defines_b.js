@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['paste_871',['paste',['../core_8hpp.html#a396f7338a30cd5803df5ae220da88711',1,'core.hpp']]],
-  ['paste2_872',['paste2',['../core_8hpp.html#a38dec4d2a6700e0c88ced9eeebb3dfaa',1,'core.hpp']]],
-  ['pb_873',['pb',['../core_8hpp.html#a276c5a0e984cf60015b27252fe04fe6b',1,'core.hpp']]]
+  ['rel_5fassert_892',['rel_assert',['../core_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db',1,'core.hpp']]],
+  ['ret_893',['ret',['../operations_8hpp.html#afcd538daef660984ecb8abf34697904b',1,'operations.hpp']]]
 ];

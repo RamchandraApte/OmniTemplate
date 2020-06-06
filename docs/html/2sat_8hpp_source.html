@@ -77,61 +77,63 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8hpp.html">core.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph__theory_8hpp.html">graph_theory.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespacesat2.html">    4</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesat2.html">sat2</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">    5</a></span>&#160;optional&lt;vector&lt;char&gt;&gt; <a class="code" href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">sat2</a>(<span class="keyword">const</span> vector&lt;pr&gt; &amp;<a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>) {</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">    5</a></span>&#160;optional&lt;vector&lt;char&gt;&gt; <a class="code" href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">sat2</a>(<span class="keyword">const</span> vector&lt;pr&gt; &amp;cnf) {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="structll.html">ll</a> n = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;p : <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        n = max&lt;ll&gt;(n, max(abs(p.first), abs(p.second)));</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    vector&lt;vl&gt; g(2 * n + 1);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;p : <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> (p.first) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            g[n - p.first].pb(n + p.second);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (p.second) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            g[n - p.second].pb(n + p.first);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="structgraph__theory_1_1dfs.html">dfs</a> topo{g};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    topo();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="core_8hpp.html#a8113bb7c76fe54dd16115679b04b12d9">vl</a> idx(size(g));</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, size(topo.q)) { idx[topo.q[i]] = i; }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    vector&lt;char&gt; vals(n + 1, -1);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">auto</span> comp = <a class="code" href="namespacegraph__theory.html#a14c5caae4119d720412cda7748174301">scc</a>(g);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 1, n + 1) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">auto</span> x = idx[comp[n + i]], nx = idx[comp[n - i]];</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (nx == x) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> nullopt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        vals[i] = nx &lt; x;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> vals;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacesat2.html#a25e1814f70e51eb57308bc0dea349406">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacesat2.html#a25e1814f70e51eb57308bc0dea349406">test_sat2</a>() {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret1 = <a class="code" href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">sat2</a>({{2, 1}, {-2, 3}}).value();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    assert(ret1[1] || ret1[2]);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    assert(!ret1[2] || ret1[3]);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret2 = <a class="code" href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">sat2</a>({{2, 1}, {3, 2}, {-2, -1}}).value();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    assert(ret2[1] || ret2[2]);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    assert(ret2[2] || ret2[3]);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    assert(!ret2[2] || !ret2[1]);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret3 = <a class="code" href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">sat2</a>({{1, 1}, {-1, -1}});</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    assert(!ret3);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret4 = <a class="code" href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">sat2</a>({{1, 2}, {3, 2}, {-1, -1}, {-2, -2}});</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    assert(!ret4);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <span class="comment">// namespace sat2</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesat2.html">sat2</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;clause : cnf) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="namespaceutility.html#a1507417750abfb917c914c44e07ed713">max_eq</a>(n, <span class="keyword">static_cast&lt;</span><a class="code" href="structll.html">ll</a><span class="keyword">&gt;</span>(</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                  max(abs(clause.first), abs(clause.second))));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    vector&lt;vl&gt; graph(2 * n + 1);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;clause : cnf) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">// TODO why if statement?</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span> (clause.first) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            graph[n - clause.first].push_back(n + clause.second);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (clause.second) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            graph[n - clause.second].push_back(n + clause.first);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="structgraph__theory_1_1dfs.html">dfs</a> topo{graph};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    topo();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> idx(size(graph));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, size(topo.q)) { idx[topo.q[i]] = i; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    vector&lt;char&gt; vals(n + 1, -1);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">auto</span> comp = <a class="code" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">scc</a>(graph);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 1, n + 1) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">auto</span> x = idx[comp[n + i]], nx = idx[comp[n - i]];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (nx == x) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> nullopt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        vals[i] = nx &lt; x;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> vals;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="namespacesat2.html#a25e1814f70e51eb57308bc0dea349406">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacesat2.html#a25e1814f70e51eb57308bc0dea349406">test_sat2</a>() {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret1 = <a class="code" href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">sat2</a>({{2, 1}, {-2, 3}}).value();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    assert(ret1[1] || ret1[2]);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    assert(!ret1[2] || ret1[3]);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret2 = <a class="code" href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">sat2</a>({{2, 1}, {3, 2}, {-2, -1}}).value();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    assert(ret2[1] || ret2[2]);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    assert(ret2[2] || ret2[3]);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    assert(!ret2[2] || !ret2[1]);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret3 = <a class="code" href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">sat2</a>({{1, 1}, {-1, -1}});</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    assert(!ret3);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ret4 = <a class="code" href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">sat2</a>({{1, 2}, {3, 2}, {-1, -1}, {-2, -2}});</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    assert(!ret4);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <span class="comment">// namespace sat2</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesat2.html">sat2</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacegraph__theory_html_a14c5caae4119d720412cda7748174301"><div class="ttname"><a href="namespacegraph__theory.html#a14c5caae4119d720412cda7748174301">graph_theory::scc</a></div><div class="ttdeci">auto scc(const vector&lt; vl &gt; &amp;g)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:211</div></div>
-<div class="ttc" id="acore_8hpp_html_a8113bb7c76fe54dd16115679b04b12d9"><div class="ttname"><a href="core_8hpp.html#a8113bb7c76fe54dd16115679b04b12d9">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:78</div></div>
+<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:70</div></div>
+<div class="ttc" id="anamespaceutility_html_a1507417750abfb917c914c44e07ed713"><div class="ttname"><a href="namespaceutility.html#a1507417750abfb917c914c44e07ed713">utility::max_eq</a></div><div class="ttdeci">auto max_eq(T &amp;x, const T &amp;y)</div><div class="ttdef"><b>Definition:</b> utility.hpp:32</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_abf42c204d44caae5b7ea48d8261dfd9e"><div class="ttname"><a href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">graph_theory::scc</a></div><div class="ttdeci">auto scc(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:203</div></div>
+<div class="ttc" id="anamespacesat2_html_a784d98eee2b8c4df5227ca2d0a218adc"><div class="ttname"><a href="namespacesat2.html#a784d98eee2b8c4df5227ca2d0a218adc">sat2::sat2</a></div><div class="ttdeci">optional&lt; vector&lt; char &gt; &gt; sat2(const vector&lt; pr &gt; &amp;cnf)</div><div class="ttdef"><b>Definition:</b> 2sat.hpp:5</div></div>
 <div class="ttc" id="anamespacesat2_html"><div class="ttname"><a href="namespacesat2.html">sat2</a></div><div class="ttdef"><b>Definition:</b> 2sat.hpp:4</div></div>
 <div class="ttc" id="agraph__theory_8hpp_html"><div class="ttname"><a href="graph__theory_8hpp.html">graph_theory.hpp</a></div></div>
-<div class="ttc" id="anamespacesat2_html_a58a9bce79f062d77b1d07d506494b46d"><div class="ttname"><a href="namespacesat2.html#a58a9bce79f062d77b1d07d506494b46d">sat2::sat2</a></div><div class="ttdeci">optional&lt; vector&lt; char &gt; &gt; sat2(const vector&lt; pr &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> 2sat.hpp:5</div></div>
-<div class="ttc" id="astructgraph__theory_1_1dfs_html"><div class="ttname"><a href="structgraph__theory_1_1dfs.html">graph_theory::dfs</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:150</div></div>
+<div class="ttc" id="astructgraph__theory_1_1dfs_html"><div class="ttname"><a href="structgraph__theory_1_1dfs.html">graph_theory::dfs</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:142</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
-<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:28</div></div>
-<div class="ttc" id="anamespacesat2_html_a25e1814f70e51eb57308bc0dea349406"><div class="ttname"><a href="namespacesat2.html#a25e1814f70e51eb57308bc0dea349406">sat2::test_sat2</a></div><div class="ttdeci">void test_sat2()</div><div class="ttdef"><b>Definition:</b> 2sat.hpp:39</div></div>
-<div class="ttc" id="asegment__tree_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:153</div></div>
+<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:23</div></div>
+<div class="ttc" id="anamespacesat2_html_a25e1814f70e51eb57308bc0dea349406"><div class="ttname"><a href="namespacesat2.html#a25e1814f70e51eb57308bc0dea349406">sat2::test_sat2</a></div><div class="ttdeci">void test_sat2()</div><div class="ttdef"><b>Definition:</b> 2sat.hpp:41</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
