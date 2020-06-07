@@ -128,7 +128,7 @@ template <typename T> auto lin_recur(vector<T> const &c, const ll n) {
 	/*! Returns nth term of linear recurrence described by c. \f$x(i) =
 	 * x_{i-1}c_0 + x_{i-2}c_1 + \dots \f$ and \f$x(0) = 1\f$*/
 	// TODO support constant term
-	matrix<T> m{size(c), size(c)};
+	matrix<T> m(size(c), size(c));
 	copy(al(c), m[0]);
 	fo(i, 1, size(c)) { m[i][i - 1] = 1; }
 	return power(m, n)[0][0];

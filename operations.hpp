@@ -1,5 +1,15 @@
 #pragma once
 #include "range.hpp"
+// namespace operations {
+#define aug(op)                                                                \
+	template <typename T1, typename T2>                                    \
+	auto operator op##=(T1 &a, const T2 &b) {                              \
+		return a = a op b;                                             \
+	}
+aug(+);
+aug(-);
+aug(*);
+aug(/);
 struct id {};
 template <typename Group> Group operator/(Group const &a, Group const &b) {
 	return a * (id{} / b);
@@ -93,3 +103,5 @@ constexpr ll identity(bin_op<ll> const &f) {
 	ret(gcd<ll>, 0);
 	abort();
 }
+//} // namespace operations
+// using namespace operations;

@@ -30,6 +30,10 @@ modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;
 	return {sum >= modulo::modulus ? sum - modulo::modulus : sum, no_mod{}};
 }
+/*using ::operator+=;
+using ::operator-=;
+using ::operator*=;
+using ::operator/=;*/
 modulo operator++(modulo &a) { return a += 1; }
 modulo operator-(modulo const &a) { return {modulo::modulus - a.x, no_mod{}}; }
 // To avoid ADL issues

@@ -1,11 +1,7 @@
 #pragma once
 #include "core.hpp"
-#define aug(op)                                                                \
-	template <typename T1, typename T2>                                    \
-	auto operator op##=(T1 &a, const T2 &b) {                              \
-		return a = a op b;                                             \
-	}
-// TODO kill all this 🦀
+/*! \deprecated{Custom int class where a%b always return a nonnegative
+ * remainder}*/
 struct ll {
 	lli x;
 	constexpr ll(long long int x_ = 0) : x(x_) {}
@@ -35,10 +31,6 @@ struct ll {
 using int128 = __int128;
 using uint128 = __uint128_t;
 #endif
-aug(+);
-aug(-);
-aug(*);
-aug(/);
 #ifdef __SIZEOF_INT128__
 #define MIX128(op, T1) mix(op, T1, int128)
 #else
