@@ -5,6 +5,7 @@
 #include "core.hpp"
 #include "coroutine.hpp"
 #include "dsu.hpp"
+#include "fenwick_tree.hpp"
 #include "fft.hpp"
 #include "geometry.hpp"
 #include "graph_theory.hpp"

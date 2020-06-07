@@ -5,6 +5,7 @@
 	auto operator op##=(T1 &a, const T2 &b) {                              \
 		return a = a op b;                                             \
 	}
+// TODO kill all this 🦀
 struct ll {
 	lli x;
 	constexpr ll(long long int x_ = 0) : x(x_) {}
