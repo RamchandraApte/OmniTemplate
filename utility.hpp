@@ -77,7 +77,7 @@ template <typename T> auto prev_less(const T &v) {
 	}
 	return l;
 }
-ll next_pow_of_2(ll x) {
+ll bit_ceil(ll x) {
 	/*! Return the smallest power of two at least x*/
 	if (x == 0) {
 		return 1;
@@ -85,14 +85,14 @@ ll next_pow_of_2(ll x) {
 	return 1LL << ll(ceil(log2(lli(x))));
 }
 void test_next_pow_of_2() {
-	assert(next_pow_of_2(0) == 1);
-	assert(next_pow_of_2(1) == 1);
-	assert(next_pow_of_2(2) == 2);
-	assert(next_pow_of_2(3) == 4);
-	assert(next_pow_of_2(4) == 4);
-	assert(next_pow_of_2(5) == 8);
-	assert(next_pow_of_2((1LL << 45) - 100) == 1LL << 45);
-	assert(next_pow_of_2((1LL << 45)) == 1LL << 45);
+	assert(bit_ceil(0) == 1);
+	assert(bit_ceil(1) == 1);
+	assert(bit_ceil(2) == 2);
+	assert(bit_ceil(3) == 4);
+	assert(bit_ceil(4) == 4);
+	assert(bit_ceil(5) == 8);
+	assert(bit_ceil((1LL << 45) - 100) == 1LL << 45);
+	assert(bit_ceil((1LL << 45)) == 1LL << 45);
 }
 [[nodiscard]] ll next_comb(ll x) {
 	/*! Formally, returns the smallest integer y > x such that popcount(y) =
