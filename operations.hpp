@@ -103,5 +103,15 @@ constexpr ll identity(bin_op<ll> const &f) {
 	ret(gcd<ll>, 0);
 	abort();
 }
+ll identity(plus<>, ll) { return 0; }
+ll identity(multiplies<>, ll) { return 1; }
+struct Max {
+	template <typename T> auto operator()(T a, T b) const { return max(a, b); }
+};
+ll identity(Max, ll) { return -inf; }
+struct Min {
+	template <typename T> auto operator()(T a, T b) const { return min(a, b); }
+};
+ll identity(Min, ll) { return inf; }
 //} // namespace operations
 // using namespace operations;

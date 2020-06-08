@@ -10,14 +10,15 @@
 template <typename T, typename Query, typename Update> class SegmentTree {
       public:
 	SegmentTree(const size_t size_arg)
-	    : size_{size_arg}, qsum(2 * bit_ceil(size_arg)), lazy(2 * bit_ceil(size_arg), 0) {}
+	    : size_{size_arg}, qsum(2 * bit_ceil(size_arg), identity(Query{}, T{})),
+	      lazy(2 * bit_ceil(size_arg), identity(Update{}, T{})) {}
 	void down(const size_t idx) {
 		/*! Push lazy update down*/
 		qsum[idx] = Update{}(qsum[idx], lazy[idx]);
 		if (2 * idx < lazy.size()) {
 			fo(i, 2) { lazy[2 * idx + i] += lazy[idx]; }
 		}
-		lazy[idx] = 0;
+		lazy[idx] = identity(Update{}, lazy[idx]);
 	}
 	T query(const size_t l, const size_t r, const size_t idx, const size_t node_l,
 		const size_t node_r) {
@@ -66,11 +67,9 @@ template <typename T, typename Query, typename Update> class SegmentTree {
 	vector<T> qsum;
 	vector<T> lazy;
 };
-struct Max {
-	template <typename T> auto operator()(T a, T b) const { return max(a, b); }
-};
 void test_segment_tree() {
 	SegmentTree<ll, Max, plus<>> seg{10};
+	seg.update(0, 10, inf);
 	assert(seg.query(0, 10) == 0);
 	assert(seg.query(3, 4) == 0);
 	seg.update(3, 4, 10);
