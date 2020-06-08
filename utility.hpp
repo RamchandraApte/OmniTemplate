@@ -28,7 +28,7 @@ template <typename Func> struct fix {
 		return func(this, forward<decltype(args)>(args)...);
 	}
 };
-#define lambda(f) [&](auto... args) { return f(args...); }
+#define lambda(f) [](auto... args) { return f(args...); }
 template <typename T> auto max_eq(T &x, const T &y) { x = max(x, y); }
 template <typename T> auto min_eq(T &x, const T &y) { x = min(x, y); }
 template <typename T> auto cache(const T &f) {
@@ -82,7 +82,7 @@ size_t bit_ceil(size_t x) {
 	if (x <= 1) {
 		return 1;
 	}
-	return 1ULL << dbg(sizeof(size_t) * CHAR_BIT - __builtin_clzll(x - 1));
+	return 1ULL << (sizeof(size_t) * CHAR_BIT - __builtin_clzll(x - 1));
 }
 void test_next_pow_of_2() {
 	assert(bit_ceil(0) == 1);

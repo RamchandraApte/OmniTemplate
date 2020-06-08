@@ -8,24 +8,77 @@
  * multiplicative monoid of a semiring
  */
 template <typename T, typename Query, typename Update> class SegmentTree {
-	size_t size_{};
-	vector<T> sums;
-	SegmentTree(const size_t size_arg) : size_{bit_ceil(size_arg)}, sums(2 * size_) {}
+      public:
+	SegmentTree(const size_t size_arg)
+	    : size_{size_arg}, qsum(2 * bit_ceil(size_arg)), lazy(2 * bit_ceil(size_arg), 0) {}
+	void down(const size_t idx) {
+		/*! Push lazy update down*/
+		qsum[idx] = Update{}(qsum[idx], lazy[idx]);
+		if (2 * idx < lazy.size()) {
+			fo(i, 2) { lazy[2 * idx + i] += lazy[idx]; }
+		}
+		lazy[idx] = 0;
+	}
 	T query(const size_t l, const size_t r, const size_t idx, const size_t node_l,
 		const size_t node_r) {
 		/*! Returns the sum over the intersection of [query_l, query_r) with [node_l,
 		 * node_r) */
-		if (node_r <= l) {
-			return {};
+		down(idx);
+		if (node_r <= l || r <= node_l) {
+			return 0;
 		}
 		if (l <= node_l && node_r <= r) {
-			return sums[idx];
+			return qsum[idx];
 		}
-		const size_t mid = (l + r) / 2;
-		return query(l, r, 2 * idx, node_l, mid) + query(l, r, 2 * idx, mid, node_r);
+		const size_t mid = (node_l + node_r) / 2;
+		return Query{}(query(l, r, 2 * idx, node_l, mid),
+			       query(l, r, 2 * idx + 1, mid, node_r));
 	}
-	T query(const size_t l, const size_t r) { return query(l, r, 1, 0, size_); }
+	T query(const size_t l, const size_t r) {
+		if (!(0 <= l && l <= r && r <= size_)) {
+			throw out_of_range{"Segment tree query out of bounds"};
+		}
+		return query(l, r, 1, 0, qsum.size() / 2);
+	}
+	void update(const size_t l, const size_t r, const T val, const size_t idx,
+		    const size_t node_l, const size_t node_r) {
+		/*! Update the range l to r with the update val*/
+		down(idx);
+		if (node_r <= l || r <= node_l) {
+			return;
+		}
+		if (l <= node_l && node_r <= r) {
+			lazy[idx] += val;
+			down(idx);
+			return;
+		}
+		const size_t mid = (node_l + node_r) / 2;
+		update(l, r, val, 2 * idx, node_l, mid);
+		update(l, r, val, 2 * idx + 1, mid, node_r);
+		qsum[idx] = Query{}(qsum[2 * idx], qsum[2 * idx + 1]);
+	}
 	void update(const size_t l, const size_t r, const T val) {
-		// TODO
+		update(l, r, val, 1, 0, qsum.size() / 2);
 	}
+
+      private:
+	size_t size_;
+	vector<T> qsum;
+	vector<T> lazy;
 };
+struct Max {
+	template <typename T> auto operator()(T a, T b) const { return max(a, b); }
+};
+void test_segment_tree() {
+	SegmentTree<ll, Max, plus<>> seg{10};
+	assert(seg.query(0, 10) == 0);
+	assert(seg.query(3, 4) == 0);
+	seg.update(3, 4, 10);
+	seg.update(2, 4, 20);
+	assert(seg.query(3, 4) == 30);
+	assert(seg.query(2, 4) == 30);
+	assert(seg.query(2, 3) == 20);
+	assert(seg.query(1, 10) == 30);
+	seg.update(0, 2, 10);
+	assert(seg.query(1, 10) == 30);
+}
