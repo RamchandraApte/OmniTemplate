@@ -120,7 +120,7 @@ void test_fac() {
 }
 void egcd(const ll a, const ll b, ll &x, ll &y) {
 	/*! Sets x and y so that \f$x\cdot a + y\cdot b = \gcd(a,b)\f$*/
-	a ? egcd(b % a, a, y, x), x -= b / a * y : (x = 0, y = 1);
+	a ? egcd(mod(b, a), a, y, x), x -= b / a * y : (x = 0, y = 1);
 }
 void test_egcd(ll a, ll b) {
 	ll x, y;
@@ -165,8 +165,7 @@ ll dlog(const modulo a, const modulo b) {
 	auto x = b;
 	for (ll cnt = 0;; ++cnt) {
 		if (auto it = powers.find(x); it != end(powers)) {
-			return check((it->second * sq - cnt) %
-				     totient(modulo::modulus));
+			return check(mod(it->second * sq - cnt, totient(modulo::modulus)));
 		}
 		x *= a;
 	}

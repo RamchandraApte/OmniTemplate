@@ -11,6 +11,14 @@ template <typename T> T power(T a, size_t b) {
 	}
 	return ret;
 }
+ll mod(ll a, const ll b) {
+	a %= b;
+	if (a < 0) {
+		a += b;
+	}
+	return a;
+}
+ll mod_eq(ll &a, const ll b) { return a = mod(a, b); }
 struct no_mod {};
 struct modulo {
 	inline static ll modulus =
@@ -19,9 +27,8 @@ struct modulo {
 	/*! Modular arithmetic class */
 	ll x; //!< The representative element, which is in [0, M)
 	modulo() : x{0LL} {}
-	template <typename T,
-		  typename = enable_if_t<is_integral<T>::value, void>>
-	modulo(T x_) : x(ll(x_) % modulo::modulus) {}
+	template <typename T, typename = enable_if_t<is_integral<T>::value, void>>
+	modulo(T x_) : x(mod(x_, modulo::modulus)) {}
 	modulo(ll x_, no_mod) : x(x_) {}
 	explicit operator auto() const { return x; }
 };
