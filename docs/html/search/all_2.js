@@ -9,5 +9,5 @@ var searchData=
   ['ar_5ft_8',['ar_t',['../namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0',1,'utility']]],
   ['area_9',['area',['../namespacegeometry.html#ab8556a4c9ecf62f348ba9d0635bf8cb3',1,'geometry']]],
   ['attach_10',['attach',['../structsplay__tree_1_1SplayTree.html#ac91c4a1fa163994e18084f90e0921b08',1,'splay_tree::SplayTree']]],
-  ['aug_11',['aug',['../my__int_8hpp.html#a2e3fb564092d70d9bee87555035d8711',1,'my_int.hpp']]]
+  ['aug_11',['aug',['../operations_8hpp.html#a2e3fb564092d70d9bee87555035d8711',1,'operations.hpp']]]
 ];

@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -99,15 +100,22 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacedebug__tools"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html">debug_tools</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e">NDEBUG</a></td></tr>
+<tr class="separator:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49bc164f30e64702250d2cbea09bf86c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a>(x)&#160;&#160;&#160;(x)</td></tr>
+<tr class="separator:a49bc164f30e64702250d2cbea09bf86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a991f9f01ab3a0e664fabf0bd17fab95c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a991f9f01ab3a0e664fabf0bd17fab95c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#a991f9f01ab3a0e664fabf0bd17fab95c">debug_tools::type_name</a> ([[maybe_unused]] T const &amp;<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
+<tr class="memitem:a991f9f01ab3a0e664fabf0bd17fab95c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#a991f9f01ab3a0e664fabf0bd17fab95c">debug_tools::type_name</a> ([[maybe_unused]] T const &amp;<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
 <tr class="separator:a991f9f01ab3a0e664fabf0bd17fab95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b613fd4caa0fb48d04eb7e6f3bf6dff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#a2b613fd4caa0fb48d04eb7e6f3bf6dff">debug_tools::replace</a> (string s, const string &amp;a, const string &amp;b)</td></tr>
 <tr class="separator:a2b613fd4caa0fb48d04eb7e6f3bf6dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa6fe2ec65b64f87ad431efde3822c7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3aa6fe2ec65b64f87ad431efde3822c7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#a3aa6fe2ec65b64f87ad431efde3822c7">debug_tools::simple_tp</a> ([[maybe_unused]] const T &amp;<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
+<tr class="memitem:a3aa6fe2ec65b64f87ad431efde3822c7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#a3aa6fe2ec65b64f87ad431efde3822c7">debug_tools::simple_tp</a> ([[maybe_unused]] const T &amp;<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
 <tr class="separator:a3aa6fe2ec65b64f87ad431efde3822c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4190b5d045c8cfeb1e9a7332d55d9374"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4190b5d045c8cfeb1e9a7332d55d9374"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#a4190b5d045c8cfeb1e9a7332d55d9374">debug_tools::debug</a> (const T &amp;x, const string &amp;name, source_location const &amp;loc=source_location::current())</td></tr>
@@ -118,6 +126,39 @@ Variables</h2></td></tr>
 <tr class="memitem:ab312673925f42718bafe74a18eae6685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedebug__tools.html#ab312673925f42718bafe74a18eae6685">debug_tools::depth</a> = -1</td></tr>
 <tr class="separator:ab312673925f42718bafe74a18eae6685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a49bc164f30e64702250d2cbea09bf86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49bc164f30e64702250d2cbea09bf86c">&#9670;&nbsp;</a></span>dbg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dbg</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de3ed741dadc9c979a4ff17c0a9116e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de3ed741dadc9c979a4ff17c0a9116e">&#9670;&nbsp;</a></span>NDEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NDEBUG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

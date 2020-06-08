@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['v_757',['v',['../structseg__base.html#ad05224442279f2966fdbfc335ac3fa12',1,'seg_base::v()'],['../structseg__base_3_01no__impl_3_01T_01_4_01_4.html#ae01d4305c38ee7d28f71aa0e7be1cb84',1,'seg_base&lt; no_impl&lt; T &gt; &gt;::v()']]]
+  ['uniq_768',['uniq',['../namespaceutility.html#a531cc980b5de78f0c2f36ae3210cb9cf',1,'utility']]],
+  ['up_769',['up',['../structseg.html#aa44bb7f037de2a3f92ec2183bcef1523',1,'seg::up()'],['../structseg2.html#ac5f5941581818e5e5f708d984a480deb',1,'seg2::up(T const &amp;val, ll l, remove_const_t&lt; decltype(def)&gt; r=def, remove_const_t&lt; decltype(1LL)&gt; i=1LL, remove_const_t&lt; decltype(0LL)&gt; nl=0LL, remove_const_t&lt; decltype(def)&gt; nr=def)'],['../structseg2.html#a63ce6762943493718ad2fb6796ce2458',1,'seg2::up(const T &amp;val, ll l_, ll r_)'],['../structseg2.html#a8fce86584ae8e479f89b2f94b65d38cd',1,'seg2::up(T val, ll l)']]],
+  ['up_5finv_770',['up_inv',['../seg__old_8hpp.html#aee065d5582449ca9f96b80c630882b7a',1,'seg_old.hpp']]],
+  ['update_771',['update',['../classBIT.html#a20ea8eb0ea2065179c756ec96417227f',1,'BIT']]],
+  ['update_5fdata_772',['update_data',['../treap_8hpp.html#a9321be3a55db4ee924a0e968e12734a2',1,'treap.hpp']]]
 ];

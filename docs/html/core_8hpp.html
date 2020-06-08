@@ -81,7 +81,6 @@ $(function() {
 <div class="textblock"><code>#include &lt;bits/stdc++.h&gt;</code><br />
 <code>#include &lt;experimental/iterator&gt;</code><br />
 <code>#include &lt;experimental/source_location&gt;</code><br />
-<code>#include &quot;<a class="el" href="my__int_8hpp_source.html">my_int.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="io_8hpp_source.html">io.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="debug_8hpp_source.html">debug.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="operations_8hpp_source.html">operations.hpp</a>&quot;</code><br />
@@ -109,19 +108,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e">NDEBUG</a></td></tr>
-<tr class="separator:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49bc164f30e64702250d2cbea09bf86c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a49bc164f30e64702250d2cbea09bf86c">dbg</a>(x)&#160;&#160;&#160;(x)</td></tr>
-<tr class="separator:a49bc164f30e64702250d2cbea09bf86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td></tr>
+<tr class="memitem:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td></tr>
 <tr class="separator:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b724588414fb77283c807a1ad82313c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] auto i : <a class="el" href="range_8hpp.html#af05d016fe174cf99a33f4ddac30c9b05">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td></tr>
+<tr class="memitem:a7b724588414fb77283c807a1ad82313c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#af05d016fe174cf99a33f4ddac30c9b05">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td></tr>
 <tr class="separator:a7b724588414fb77283c807a1ad82313c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6779ef315f4a9c289636c8f466c823e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a6779ef315f4a9c289636c8f466c823e3">tm</a>(...)&#160;&#160;&#160;template &lt;typename __VA_ARGS__ T&gt;</td></tr>
 <tr class="separator:a6779ef315f4a9c289636c8f466c823e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50383951d2a9d4f1a855b2cec5e03274"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a50383951d2a9d4f1a855b2cec5e03274">this</a>&#160;&#160;&#160;(*this)</td></tr>
 <tr class="separator:a50383951d2a9d4f1a855b2cec5e03274"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f9ddbc7133cc3a48efbc824006bd3cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&#160;&#160;&#160;begin(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), end(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
+<tr class="memitem:a2f9ddbc7133cc3a48efbc824006bd3cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&#160;&#160;&#160;begin(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), end(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
 <tr class="separator:a2f9ddbc7133cc3a48efbc824006bd3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64daeab6d74dffeca723fbb620b687cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb">I</a>(x)</td></tr>
 <tr class="separator:a64daeab6d74dffeca723fbb620b687cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,11 +124,11 @@ Macros</h2></td></tr>
 <tr class="separator:a276c5a0e984cf60015b27252fe04fe6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff943633016deb6c62a519ffe92c6819"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#aff943633016deb6c62a519ffe92c6819">vc</a>&#160;&#160;&#160;vector</td></tr>
 <tr class="separator:aff943633016deb6c62a519ffe92c6819"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f10cc81a560bb73b2eb647dfb10c9db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a>(...)</td></tr>
+<tr class="memitem:a7f10cc81a560bb73b2eb647dfb10c9db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a>(...)&#160;&#160;&#160;s</td></tr>
 <tr class="separator:a7f10cc81a560bb73b2eb647dfb10c9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108d6c5c51dd46e82a62b262394f0242"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a108d6c5c51dd46e82a62b262394f0242">WARN</a>(msg)</td></tr>
 <tr class="separator:a108d6c5c51dd46e82a62b262394f0242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47194c03eba4b38147c9d01c0166802"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#ad47194c03eba4b38147c9d01c0166802">TODO</a>(msg)</td></tr>
+<tr class="memitem:ad47194c03eba4b38147c9d01c0166802"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#ad47194c03eba4b38147c9d01c0166802">TODO</a>(msg)&#160;&#160;&#160;<a class="el" href="core_8hpp.html#a108d6c5c51dd46e82a62b262394f0242">WARN</a>(&quot;TODO: &quot; msg)</td></tr>
 <tr class="separator:ad47194c03eba4b38147c9d01c0166802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38dec4d2a6700e0c88ced9eeebb3dfaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a38dec4d2a6700e0c88ced9eeebb3dfaa">paste2</a>(x,  y)&#160;&#160;&#160;x##y</td></tr>
 <tr class="separator:a38dec4d2a6700e0c88ced9eeebb3dfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +140,7 @@ Macros</h2></td></tr>
 <tr class="separator:a30d2d6ecdd50cafce635775b6e4e1cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7796040cab730b2436f078c78d117cab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a7796040cab730b2436f078c78d117cab">import</a>(a)</td></tr>
 <tr class="separator:a7796040cab730b2436f078c78d117cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a5cedaa2166b87bc174d54c6a9aae47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a1a5cedaa2166b87bc174d54c6a9aae47">df</a>(x,  <a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&#160;&#160;&#160;remove_const_t&lt;decltype(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&gt; x = <a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></td></tr>
+<tr class="memitem:a1a5cedaa2166b87bc174d54c6a9aae47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a1a5cedaa2166b87bc174d54c6a9aae47">df</a>(x,  <a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&#160;&#160;&#160;remove_const_t&lt;decltype(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&gt; x = <a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></td></tr>
 <tr class="separator:a1a5cedaa2166b87bc174d54c6a9aae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -154,6 +149,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a583d558126ab02babe89a77ae06a4156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5114a4fed348a29fb92123470476b1b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a> = unsigned long long</td></tr>
 <tr class="separator:aa5114a4fed348a29fb92123470476b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54dde638d1ae3e9bb08956f539b1883"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a> = long long</td></tr>
+<tr class="separator:ad54dde638d1ae3e9bb08956f539b1883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8634e9b99169b29bc9a86927e715da54"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> = vector&lt; <a class="el" href="structll.html">ll</a> &gt;</td></tr>
 <tr class="separator:a8634e9b99169b29bc9a86927e715da54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e2e73e53fc509e05f252ef083503838"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a> = long double</td></tr>
@@ -166,9 +163,9 @@ Typedefs</h2></td></tr>
 <tr class="separator:ae6bbe80dfafc6e30f518f3de1cafec50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52c977d91e62bd8e617e5cb2926547e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1">bt</a> = bitset&lt; numeric_limits&lt; <a class="el" href="structll.html">ll</a> &gt;::digits &gt;</td></tr>
 <tr class="separator:a52c977d91e62bd8e617e5cb2926547e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d04d13bbae0dc608f2d47771a2ef783"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1d04d13bbae0dc608f2d47771a2ef783"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a1d04d13bbae0dc608f2d47771a2ef783">pq</a> = std::priority_queue&lt; T, vector&lt; T &gt;, greater&lt;&gt; &gt;</td></tr>
-<tr class="separator:a1d04d13bbae0dc608f2d47771a2ef783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b978e8ffc2c44656160a679f86e22a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Comp &gt; </td></tr>
+<tr class="memitem:ac0b978e8ffc2c44656160a679f86e22a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="core_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a">prio_queue_t</a> = std::priority_queue&lt; T, vector&lt; T &gt;, Comp &gt;</td></tr>
+<tr class="separator:ac0b978e8ffc2c44656160a679f86e22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71fb2247d044e41f5345bcdb26020926"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a71fb2247d044e41f5345bcdb26020926">clock_</a> = high_resolution_clock</td></tr>
 <tr class="separator:a71fb2247d044e41f5345bcdb26020926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9925e7a8568cf11b8431a0e634ada482"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#a9925e7a8568cf11b8431a0e634ada482">um</a> = unordered_map&lt; <a class="el" href="structll.html">ll</a>, <a class="el" href="structll.html">ll</a> &gt;</td></tr>
@@ -202,26 +199,8 @@ Variables</h2></td></tr>
           <td class="memname">#define al</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></td><td>)</td>
-          <td>&#160;&#160;&#160;begin(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), end(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a49bc164f30e64702250d2cbea09bf86c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49bc164f30e64702250d2cbea09bf86c">&#9670;&nbsp;</a></span>dbg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define dbg</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;(x)</td>
+          <td class="paramname"><a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></td><td>)</td>
+          <td>&#160;&#160;&#160;begin(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), end(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -244,12 +223,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>&#160;</td>
+          <td class="paramname"><a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;remove_const_t&lt;decltype(<a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&gt; x = <a class="el" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></td>
+          <td></td><td>&#160;&#160;&#160;remove_const_t&lt;decltype(<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)&gt; x = <a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -277,10 +256,11 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;for ([[maybe_unused]] auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td>
+          <td></td><td>&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Contains core files for the template </p>
 
 </div>
 </div>
@@ -305,7 +285,7 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;for ([[maybe_unused]] auto i : <a class="el" href="range_8hpp.html#af05d016fe174cf99a33f4ddac30c9b05">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td>
+          <td></td><td>&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#af05d016fe174cf99a33f4ddac30c9b05">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -396,21 +376,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8de3ed741dadc9c979a4ff17c0a9116e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de3ed741dadc9c979a4ff17c0a9116e">&#9670;&nbsp;</a></span>NDEBUG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NDEBUG</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Contains core files for the template </p>
-
-</div>
-</div>
 <a id="a396f7338a30cd5803df5ae220da88711"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a396f7338a30cd5803df5ae220da88711">&#9670;&nbsp;</a></span>paste</h2>
 
@@ -492,7 +457,7 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;s</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -542,7 +507,7 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">msg</td><td>)</td>
-          <td></td>
+          <td>&#160;&#160;&#160;<a class="el" href="core_8hpp.html#a108d6c5c51dd46e82a62b262394f0242">WARN</a>(&quot;TODO: &quot; msg)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -640,6 +605,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ad54dde638d1ae3e9bb08956f539b1883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54dde638d1ae3e9bb08956f539b1883">&#9670;&nbsp;</a></span>ll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structll.html">ll</a> =  long long</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a583d558126ab02babe89a77ae06a4156"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a583d558126ab02babe89a77ae06a4156">&#9670;&nbsp;</a></span>lli</h2>
 
@@ -668,22 +647,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1d04d13bbae0dc608f2d47771a2ef783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d04d13bbae0dc608f2d47771a2ef783">&#9670;&nbsp;</a></span>pq</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="core_8hpp.html#a1d04d13bbae0dc608f2d47771a2ef783">pq</a> =  std::priority_queue&lt;T, vector&lt;T&gt;, greater&lt;&gt; &gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a58e2677d80a09b5be0f0e56ef70d4507"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58e2677d80a09b5be0f0e56ef70d4507">&#9670;&nbsp;</a></span>pr</h2>
 
@@ -692,6 +655,22 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="core_8hpp.html#a58e2677d80a09b5be0f0e56ef70d4507">pr</a> =  pair&lt;<a class="el" href="structll.html">ll</a>, <a class="el" href="structll.html">ll</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0b978e8ffc2c44656160a679f86e22a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b978e8ffc2c44656160a679f86e22a">&#9670;&nbsp;</a></span>prio_queue_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Comp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a">prio_queue_t</a> =  std::priority_queue&lt;T, vector&lt;T&gt;, Comp&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -862,8 +841,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="acore_8hpp_html_a7f10cc81a560bb73b2eb647dfb10c9db"><div class="ttname"><a href="core_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a></div><div class="ttdeci">#define rel_assert(...)</div><div class="ttdef"><b>Definition:</b> core.hpp:35</div></div>
-<div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:8</div></div>
+<div class="ttc" id="acore_8hpp_html_a7f10cc81a560bb73b2eb647dfb10c9db"><div class="ttname"><a href="core_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a></div><div class="ttdeci">#define rel_assert(...)</div><div class="ttdef"><b>Definition:</b> core.hpp:28</div></div>
+<div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

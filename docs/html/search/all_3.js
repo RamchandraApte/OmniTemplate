@@ -12,6 +12,9 @@ var searchData=
   ['bin_21',['bin',['../range_8hpp.html#a198fc8d7aeb577c1c390bbf3cf9ade86',1,'range.hpp']]],
   ['bin_5fop_22',['bin_op',['../operations_8hpp.html#a391ecbfa26a20f6287fb4048f56b0978',1,'operations.hpp']]],
   ['bipartite_23',['bipartite',['../namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb',1,'graph_theory']]],
-  ['bt_24',['bt',['../core_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1',1,'core.hpp']]],
-  ['bytehash_25',['bytehash',['../structstring__tools_1_1bytehash.html',1,'string_tools']]]
+  ['bit_24',['BIT',['../classBIT.html',1,'BIT&lt; Value, MonoidOp &gt;'],['../classBIT.html#a6408bcee08d49c8ab90ac83bdba0f2f1',1,'BIT::BIT()']]],
+  ['bit_2ehpp_25',['bit.hpp',['../bit_8hpp.html',1,'']]],
+  ['bit_5fceil_26',['bit_ceil',['../namespaceutility.html#a005fc5d8af9bba651f00c74372466b83',1,'utility']]],
+  ['bt_27',['bt',['../core_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1',1,'core.hpp']]],
+  ['bytehash_28',['bytehash',['../structstring__tools_1_1bytehash.html',1,'string_tools']]]
 ];

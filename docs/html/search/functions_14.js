@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wedge_758',['wedge',['../namespacegeometry.html#aabae68a797dfbc044ca0ed89cc6cc1af',1,'geometry']]],
-  ['with_759',['with',['../structutility_1_1with.html#ad5705a9ea2cdba42769360a65b7bc85d',1,'utility::with']]]
+  ['v_773',['v',['../structseg__base.html#ad05224442279f2966fdbfc335ac3fa12',1,'seg_base::v()'],['../structseg__base_3_01no__impl_3_01T_01_4_01_4.html#ae01d4305c38ee7d28f71aa0e7be1cb84',1,'seg_base&lt; no_impl&lt; T &gt; &gt;::v()']]]
 ];

@@ -2,7 +2,7 @@
 \label{structseg}\index{seg$<$ op, id\_ $>$@{seg$<$ op, id\_ $>$}}
 
 
-{\ttfamily \#include $<$segment\+\_\+tree.\+hpp$>$}
+{\ttfamily \#include $<$seg\+\_\+old.\+hpp$>$}
 
 
 
@@ -16,12 +16,12 @@ Collaboration diagram for seg$<$ op, id\+\_\+ $>$\+:\nopagebreak
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} = decltype(\mbox{\hyperlink{segment__tree_8hpp_a79eb3560607dcadc86816675cb88146e}{identity}}(op))
+using \mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} = decltype(\mbox{\hyperlink{seg__old_8hpp_a79eb3560607dcadc86816675cb88146e}{identity}}(op))
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structseg_a71b2f9f35c3edacf1a431f8ab6b1b952}{seg}} (const Cont \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structseg_a71b2f9f35c3edacf1a431f8ab6b1b952}{seg}} (const Cont \&\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
 auto \mbox{\hyperlink{structseg_abe9e9d5eca61fc8414635dd7f6c2cce3}{fix}} (\mbox{\hyperlink{structll}{ll}} l, \mbox{\hyperlink{structll}{ll}} \&r, \mbox{\hyperlink{structll}{ll}} nl, \mbox{\hyperlink{structll}{ll}} \&nr) const
 \item 
@@ -29,7 +29,7 @@ auto \mbox{\hyperlink{structseg_a47c33b5e0170ed5349eb68520ee245c6}{down}} (\mbox
 \item 
 \mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} \mbox{\hyperlink{structseg_a335fb2d0d59eec6986073813d40614b2}{gt}} (\mbox{\hyperlink{structll}{ll}} l, remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$ r=\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}, remove\+\_\+const\+\_\+t$<$ decltype(1LL)$>$ i=1LL, remove\+\_\+const\+\_\+t$<$ decltype(0\+LL)$>$ nl=0\+LL, remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$ nr=\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}) const
 \item 
-auto \mbox{\hyperlink{structseg_aa44bb7f037de2a3f92ec2183bcef1523}{up}} (\mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, \mbox{\hyperlink{structll}{ll}} l, remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$ r=\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}, remove\+\_\+const\+\_\+t$<$ decltype(1LL)$>$ i=1LL, remove\+\_\+const\+\_\+t$<$ decltype(0\+LL)$>$ nl=0\+LL, remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$ nr=\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})
+auto \mbox{\hyperlink{structseg_aa44bb7f037de2a3f92ec2183bcef1523}{up}} (\mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, \mbox{\hyperlink{structll}{ll}} l, remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$ r=\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}, remove\+\_\+const\+\_\+t$<$ decltype(1LL)$>$ i=1LL, remove\+\_\+const\+\_\+t$<$ decltype(0\+LL)$>$ nl=0\+LL, remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$ nr=\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -55,7 +55,7 @@ const static auto \mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{
 \index{T@{T}!seg$<$ op, id\_ $>$@{seg$<$ op, id\_ $>$}}
 \doxysubsubsection{\texorpdfstring{T}{T}}
 {\footnotesize\ttfamily template$<$auto op, lli id\+\_\+ = identity(op)$>$ \\
-using \mbox{\hyperlink{structseg}{seg}}$<$ op, id\+\_\+ $>$\+::\mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} =  decltype(\mbox{\hyperlink{segment__tree_8hpp_a79eb3560607dcadc86816675cb88146e}{identity}}(op))}
+using \mbox{\hyperlink{structseg}{seg}}$<$ op, id\+\_\+ $>$\+::\mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} =  decltype(\mbox{\hyperlink{seg__old_8hpp_a79eb3560607dcadc86816675cb88146e}{identity}}(op))}
 
 
 
@@ -115,8 +115,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily template$<$auto op, lli id\+\_\+ = identity(op)$>$ \\
 \mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}} \mbox{\hyperlink{structseg}{seg}}$<$ op, id\+\_\+ $>$\+::gt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$}]{r = {\ttfamily \mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}},  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(1LL)$>$}]{i = {\ttfamily 1LL},  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(0\+LL)$>$}]{nl = {\ttfamily 0LL},  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$}]{nr = {\ttfamily \mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -138,8 +137,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily template$<$auto op, lli id\+\_\+ = identity(op)$>$ \\
 auto \mbox{\hyperlink{structseg}{seg}}$<$ op, id\+\_\+ $>$\+::up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}}}]{v,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$}]{r = {\ttfamily \mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}},  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(1LL)$>$}]{i = {\ttfamily 1LL},  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(0\+LL)$>$}]{nl = {\ttfamily 0LL},  }\item[{remove\+\_\+const\+\_\+t$<$ decltype(\mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}})$>$}]{nr = {\ttfamily \mbox{\hyperlink{structseg_aee612dceef417b2d76fcf2cf2a560852}{def}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -188,4 +186,4 @@ vector$<$\mbox{\hyperlink{structseg_a36b9d2f5614b71814a226c0285c24d5c}{T}}$>$ \m
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/\mbox{\hyperlink{segment__tree_8hpp}{segment\+\_\+tree.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{seg__old_8hpp}{seg\+\_\+old.\+hpp}}\end{DoxyCompactItemize}

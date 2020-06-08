@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['v_898',['v',['../segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23',1,'segment_tree.hpp']]],
-  ['vc_899',['vc',['../core_8hpp.html#aff943633016deb6c62a519ffe92c6819',1,'core.hpp']]]
+  ['v_915',['v',['../seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23',1,'seg_old.hpp']]],
+  ['vc_916',['vc',['../core_8hpp.html#aff943633016deb6c62a519ffe92c6819',1,'core.hpp']]]
 ];

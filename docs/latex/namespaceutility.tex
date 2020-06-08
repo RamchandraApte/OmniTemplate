@@ -29,7 +29,7 @@ void \mbox{\hyperlink{namespaceutility_a2f611269d39535446ae5f89e3de27d9b}{test\+
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a6e069fcf8b422fbc525eba2543e36a6e}{cache}} (const T \&f)
 \item 
-{\footnotesize template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ }\\auto \mbox{\hyperlink{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}{uniq}} (Cont \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, Eq const \&up=Eq\{\}, T const \&sp=T\{\})
+{\footnotesize template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ }\\auto \mbox{\hyperlink{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}{uniq}} (Cont \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, Eq const \&up=Eq\{\}, T const \&sp=T\{\})
 \item 
 void \mbox{\hyperlink{namespaceutility_a393602f329243516ab6a008f905aa82d}{test\+\_\+uniq}} ()
 \item 
@@ -37,9 +37,9 @@ void \mbox{\hyperlink{namespaceutility_a393602f329243516ab6a008f905aa82d}{test\+
 \item 
 void \mbox{\hyperlink{namespaceutility_ab69832291ff66469b755de5c5e5d6700}{test\+\_\+map\+\_\+args}} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a50e9430d1096ce6997ae910135a9533f}{prev\+\_\+less}} (const T \&\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a50e9430d1096ce6997ae910135a9533f}{prev\+\_\+less}} (const T \&\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_ab7607d20f1e0cd61af5d3f58bf2faa06}{next\+\_\+pow\+\_\+of\+\_\+2}} (\mbox{\hyperlink{structll}{ll}} x)
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a005fc5d8af9bba651f00c74372466b83}{bit\+\_\+ceil}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
 void \mbox{\hyperlink{namespaceutility_afec0dcf698aef9d3f51eb06de4dce70d}{test\+\_\+next\+\_\+pow\+\_\+of\+\_\+2}} ()
 \item 
@@ -69,6 +69,20 @@ using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utili
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceutility_a005fc5d8af9bba651f00c74372466b83}\label{namespaceutility_a005fc5d8af9bba651f00c74372466b83}} 
+\index{utility@{utility}!bit\_ceil@{bit\_ceil}}
+\index{bit\_ceil@{bit\_ceil}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{bit\_ceil()}{bit\_ceil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::bit\+\_\+ceil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
+
+Return the smallest power of two at least xHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutility_a005fc5d8af9bba651f00c74372466b83_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespaceutility_a6e069fcf8b422fbc525eba2543e36a6e}\label{namespaceutility_a6e069fcf8b422fbc525eba2543e36a6e}} 
 \index{utility@{utility}!cache@{cache}}
 \index{cache@{cache}!utility@{utility}}
@@ -83,8 +97,7 @@ Cache calls to f using a map of type T\mbox{\Hypertarget{namespaceutility_a3bd14
 {\footnotesize\ttfamily template$<$typename T  = less$<$$>$, typename Func $>$ \\
 auto utility\+::map\+\_\+args (\begin{DoxyParamCaption}\item[{const Func \&}]{f,  }\item[{T}]{g = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -98,8 +111,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto utility\+::max\+\_\+eq (\begin{DoxyParamCaption}\item[{T \&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,19 +136,6 @@ Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespaceutility_ab7607d20f1e0cd61af5d3f58bf2faa06}\label{namespaceutility_ab7607d20f1e0cd61af5d3f58bf2faa06}} 
-\index{utility@{utility}!next\_pow\_of\_2@{next\_pow\_of\_2}}
-\index{next\_pow\_of\_2@{next\_pow\_of\_2}!utility@{utility}}
-\doxysubsubsection{\texorpdfstring{next\_pow\_of\_2()}{next\_pow\_of\_2()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::next\+\_\+pow\+\_\+of\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
-
-Return the smallest power of two at least xHere is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespaceutility_ab7607d20f1e0cd61af5d3f58bf2faa06_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceutility_a50e9430d1096ce6997ae910135a9533f}\label{namespaceutility_a50e9430d1096ce6997ae910135a9533f}} 
@@ -205,11 +204,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_next\_pow\_of\_2()}{test\_next\_pow\_of\_2()}}
 {\footnotesize\ttfamily void utility\+::test\+\_\+next\+\_\+pow\+\_\+of\+\_\+2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=336pt]{namespaceutility_afec0dcf698aef9d3f51eb06de4dce70d_cgraph}
+\includegraphics[width=298pt]{namespaceutility_afec0dcf698aef9d3f51eb06de4dce70d_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -245,7 +245,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_utility()}{test\_utility()}}
 {\footnotesize\ttfamily void utility\+::test\+\_\+utility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

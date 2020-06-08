@@ -8,6 +8,10 @@ struct \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a297c703d12bd9b758de47e299044d8f2}{operator+}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&b)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a2585fee5a1476634e4acdd3a76e8d606}{operator-\/}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
+\item 
 {\footnotesize template$<$typename ... T$>$ }\\bool \mbox{\hyperlink{namespacelinear__algebra_a030fbbd0e40aa66bc02cb2d74ae80d57}{operator==}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&a, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&b)
 \item 
 {\footnotesize template$<$typename ... T$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a6233529d7882aa9ce30e9bb40fa6c865}{operator$\ast$}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&a, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&b)
@@ -45,8 +49,7 @@ Returns the determinant of matrix aHere is the call graph for this function\+:\n
 \includegraphics[width=345pt]{namespacelinear__algebra_ab7a7f1a8ba225710625d5af10f317b6a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -67,8 +70,7 @@ Returns matrix x such that $ax = b$ and the determinant of $a$ via Gaussian elim
 \includegraphics[width=345pt]{namespacelinear__algebra_a5f11a84a98295be55e830b6d14fc5f1a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,16 +84,14 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto linear\+\_\+algebra\+::lin\+\_\+recur (\begin{DoxyParamCaption}\item[{vector$<$ T $>$ const \&}]{c,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
 
-Returns nth term of linear recurrence described by c. $x(i) = x_{i-1}c_0 + x_{i-2}c_1 + \dots $ and $x(0) = 1$Here is the call graph for this function\+:
-\nopagebreak
+Returns nth term of linear recurrence described by c. $x(i) = x_{i-1}c_0 + x_{i-2}c_1 + \dots $ and $x(0) = 1$Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespacelinear__algebra_ad80debbf481bb22b5347633cd83e2c77_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -105,7 +105,21 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily template$<$typename ... T$>$ \\
 auto linear\+\_\+algebra\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&}]{b }\end{DoxyParamCaption})}
 
-Returns the matrix product of a and b\mbox{\Hypertarget{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}\label{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}} 
+Returns the matrix product of a and b\mbox{\Hypertarget{namespacelinear__algebra_a297c703d12bd9b758de47e299044d8f2}\label{namespacelinear__algebra_a297c703d12bd9b758de47e299044d8f2}} 
+\index{linear\_algebra@{linear\_algebra}!operator+@{operator+}}
+\index{operator+@{operator+}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+auto linear\+\_\+algebra\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelinear__algebra_a2585fee5a1476634e4acdd3a76e8d606}\label{namespacelinear__algebra_a2585fee5a1476634e4acdd3a76e8d606}} 
+\index{linear\_algebra@{linear\_algebra}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+auto linear\+\_\+algebra\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}\label{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}} 
 \index{linear\_algebra@{linear\_algebra}!operator/@{operator/}}
 \index{operator/@{operator/}!linear\_algebra@{linear\_algebra}}
 \doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
@@ -139,16 +153,14 @@ bool linear\+\_\+algebra\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hy
 \doxysubsubsection{\texorpdfstring{test\_lin\_recur()}{test\_lin\_recur()}}
 {\footnotesize\ttfamily void linear\+\_\+algebra\+::test\+\_\+lin\+\_\+recur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespacelinear__algebra_ae1cd9afafb1f7ca00e88e73d262c0704_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -161,16 +173,14 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{test\_linear\_algebra()}{test\_linear\_algebra()}}
 {\footnotesize\ttfamily void linear\+\_\+algebra\+::test\+\_\+linear\+\_\+algebra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespacelinear__algebra_ad92ef518c8439f84b4414ff16ec2cdcc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,8 +193,7 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{test\_matrix()}{test\_matrix()}}
 {\footnotesize\ttfamily void linear\+\_\+algebra\+::test\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

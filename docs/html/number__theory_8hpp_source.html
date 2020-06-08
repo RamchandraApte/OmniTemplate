@@ -101,8 +101,8 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>{2, 325, 9375, 28178, 450775, 9780504, 1795265022};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> all_of(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), prime_a);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>{2, 325, 9375, 28178, 450775, 9780504, 1795265022};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> all_of(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), prime_a);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="number__theory_8hpp.html#a87d7c3ba2489977a16ec40544a918e00">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="number__theory_8hpp.html#a87d7c3ba2489977a16ec40544a918e00">test_prime</a>() {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    assert(<a class="code" href="number__theory_8hpp.html#a02e886c6eb18cd3b8894ea2ba9ca9784">prime</a>(2));</div>
@@ -114,19 +114,19 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="number__theory_8hpp.html#af88afa289696363eee6d6caed35edfb5">   41</a></span>&#160;<a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="number__theory_8hpp.html#af88afa289696363eee6d6caed35edfb5">divisors</a>(<a class="code" href="structll.html">ll</a> x) {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    assert(x &gt;= 1);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(d, 1, x + 1) <span class="keywordflow">if</span> (!(x % d)) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="structll.html">ll</a> y = x / d;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (y &lt; d) {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.push_back(d);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.push_back(d);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (d &lt; y) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.push_back(y);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.push_back(y);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="number__theory_8hpp.html#a3e935b9aca6e9dfa6b0a8ef9a4c7e153">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="number__theory_8hpp.html#a3e935b9aca6e9dfa6b0a8ef9a4c7e153">test_divisors</a>() {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    assert((<a class="code" href="number__theory_8hpp.html#af88afa289696363eee6d6caed35edfb5">divisors</a>(1) == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{1}));</div>
@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">return</span> x * x + x + c;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            };</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> a = 0, b = a; a = f(a), b = f(f(b)),</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    (g = gcd(<a class="code" href="structll.html">ll</a>(a - b), n)) == 1;) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    (g = gcd(<a class="code" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>(a - b), n)) == 1;) {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
@@ -304,9 +304,11 @@ $(function() {
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="number__theory_8hpp.html#ae2f84cd254fbf1373fc273141ce470ed">test_egcd</a>();</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:70</div></div>
-<div class="ttc" id="acore_8hpp_html_a9925e7a8568cf11b8431a0e634ada482"><div class="ttname"><a href="core_8hpp.html#a9925e7a8568cf11b8431a0e634ada482">um</a></div><div class="ttdeci">unordered_map&lt; ll, ll &gt; um</div><div class="ttdef"><b>Definition:</b> core.hpp:79</div></div>
-<div class="ttc" id="acore_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> core.hpp:27</div></div>
+<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:62</div></div>
+<div class="ttc" id="acore_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> core.hpp:61</div></div>
+<div class="ttc" id="aseg__old_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> seg_old.hpp:149</div></div>
+<div class="ttc" id="acore_8hpp_html_a9925e7a8568cf11b8431a0e634ada482"><div class="ttname"><a href="core_8hpp.html#a9925e7a8568cf11b8431a0e634ada482">um</a></div><div class="ttdeci">unordered_map&lt; ll, ll &gt; um</div><div class="ttdef"><b>Definition:</b> core.hpp:72</div></div>
+<div class="ttc" id="acore_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> core.hpp:20</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_aa6039763e84c50eb24fdee392c581898"><div class="ttname"><a href="number__theory_8hpp.html#aa6039763e84c50eb24fdee392c581898">egcd</a></div><div class="ttdeci">void egcd(const ll a, const ll b, ll &amp;x, ll &amp;y)</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:121</div></div>
 <div class="ttc" id="anamespacecombinatorics_html_a20e5a1b40f76572aa1e18b228b6e4849"><div class="ttname"><a href="namespacecombinatorics.html#a20e5a1b40f76572aa1e18b228b6e4849">combinatorics::fact</a></div><div class="ttdeci">T fact(const T n)</div><div class="ttdef"><b>Definition:</b> combinatorics.hpp:18</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a7aac53ce82614d79c7098a1de32ed1e7"><div class="ttname"><a href="number__theory_8hpp.html#a7aac53ce82614d79c7098a1de32ed1e7">test_dlog</a></div><div class="ttdeci">void test_dlog()</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:174</div></div>
@@ -329,11 +331,10 @@ $(function() {
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a3e935b9aca6e9dfa6b0a8ef9a4c7e153"><div class="ttname"><a href="number__theory_8hpp.html#a3e935b9aca6e9dfa6b0a8ef9a4c7e153">test_divisors</a></div><div class="ttdeci">void test_divisors()</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:58</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a8119b9949ade11ba2f554e41cc0830df"><div class="ttname"><a href="number__theory_8hpp.html#a8119b9949ade11ba2f554e41cc0830df">fac</a></div><div class="ttdeci">um fac(ll n)</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:85</div></div>
-<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:23</div></div>
+<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:16</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_af88afa289696363eee6d6caed35edfb5"><div class="ttname"><a href="number__theory_8hpp.html#af88afa289696363eee6d6caed35edfb5">divisors</a></div><div class="ttdeci">vl divisors(ll x)</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:41</div></div>
-<div class="ttc" id="asegment__tree_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="segment__tree_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:149</div></div>
 <div class="ttc" id="amodulo_8hpp_html"><div class="ttname"><a href="modulo_8hpp.html">modulo.hpp</a></div></div>
-<div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:8</div></div>
+<div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

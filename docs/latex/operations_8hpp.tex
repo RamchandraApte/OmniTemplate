@@ -25,6 +25,8 @@ struct \mbox{\hyperlink{structid}{id}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
+\#define \mbox{\hyperlink{operations_8hpp_a2e3fb564092d70d9bee87555035d8711}{aug}}(op)
+\item 
 \#define \mbox{\hyperlink{operations_8hpp_afcd538daef660984ecb8abf34697904b}{ret}}(x,  \mbox{\hyperlink{structid}{id}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
@@ -36,6 +38,14 @@ struct \mbox{\hyperlink{structid}{id}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a141476c36a8f609ac7c776be162abb92}{operator+=}} (T1 \&a, const T2 \&b)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a566f5b78944cfa1ff2b470ecd0522ce1}{operator-\/=}} (T1 \&a, const T2 \&b)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ac66e5f2d4fb3a7d5076a44e419736713}{operator$\ast$=}} (T1 \&a, const T2 \&b)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a35c5f7ec97de94c93f2301e16d3f7efa}{operator/=}} (T1 \&a, const T2 \&b)
 \item 
 {\footnotesize template$<$typename Group $>$ }\\Group \mbox{\hyperlink{operations_8hpp_ae9e59a2d15287021fd21d14d2eb206c4}{operator/}} (Group const \&a, Group const \&b)
 \item 
@@ -72,6 +82,20 @@ constexpr \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a1927
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{operations_8hpp_a2e3fb564092d70d9bee87555035d8711}\label{operations_8hpp_a2e3fb564092d70d9bee87555035d8711}} 
+\index{operations.hpp@{operations.hpp}!aug@{aug}}
+\index{aug@{aug}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{aug}{aug}}
+{\footnotesize\ttfamily \#define aug(\begin{DoxyParamCaption}\item[{}]{op }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{template} <\textcolor{keyword}{typename} T1, \textcolor{keyword}{typename} T2>                                    \(\backslash\)}
+\DoxyCodeLine{    auto \textcolor{keyword}{operator} op\#\#=(T1 \&a, \textcolor{keyword}{const} T2 \&b) \{                              \(\backslash\)}
+\DoxyCodeLine{        return a = a op b;                                             \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{operations_8hpp_afcd538daef660984ecb8abf34697904b}\label{operations_8hpp_afcd538daef660984ecb8abf34697904b}} 
 \index{operations.hpp@{operations.hpp}!ret@{ret}}
 \index{ret@{ret}!operations.hpp@{operations.hpp}}
@@ -138,6 +162,13 @@ auto operator\& (\begin{DoxyParamCaption}\item[{unordered\+\_\+set$<$ T $>$ cons
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto operator$\ast$ (\begin{DoxyParamCaption}\item[{vector$<$ T $>$}]{a,  }\item[{vector$<$ T $>$}]{b }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{operations_8hpp_ac66e5f2d4fb3a7d5076a44e419736713}\label{operations_8hpp_ac66e5f2d4fb3a7d5076a44e419736713}} 
+\index{operations.hpp@{operations.hpp}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+auto operator$\ast$= (\begin{DoxyParamCaption}\item[{T1 \&}]{a,  }\item[{const T2 \&}]{b }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{operations_8hpp_a68d494b3aed867c33d40cb82f49a3e26}\label{operations_8hpp_a68d494b3aed867c33d40cb82f49a3e26}} 
 \index{operations.hpp@{operations.hpp}!operator+@{operator+}}
 \index{operator+@{operator+}!operations.hpp@{operations.hpp}}
@@ -150,6 +181,13 @@ auto operator+ (\begin{DoxyParamCaption}\item[{Iterator}]{it,  }\item[{enable\+\
 \index{operator+@{operator+}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}}}]{a,  }\item[{\mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operations_8hpp_a141476c36a8f609ac7c776be162abb92}\label{operations_8hpp_a141476c36a8f609ac7c776be162abb92}} 
+\index{operations.hpp@{operations.hpp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+auto operator+= (\begin{DoxyParamCaption}\item[{T1 \&}]{a,  }\item[{const T2 \&}]{b }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_ab6822e2f5527212c7db6dd31be7f3ba6}\label{operations_8hpp_ab6822e2f5527212c7db6dd31be7f3ba6}} 
 \index{operations.hpp@{operations.hpp}!operator-\/@{operator-\/}}
@@ -165,20 +203,33 @@ constexpr auto operator-\/ (\begin{DoxyParamCaption}\item[{const T1 \&}]{a,  }\i
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto operator-\/ (\begin{DoxyParamCaption}\item[{unordered\+\_\+set$<$ T $>$ const \&}]{a,  }\item[{unordered\+\_\+set$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=231pt]{operations_8hpp_af237204859d16b6fadb92d576c7b33b1_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{operations_8hpp_a566f5b78944cfa1ff2b470ecd0522ce1}\label{operations_8hpp_a566f5b78944cfa1ff2b470ecd0522ce1}} 
+\index{operations.hpp@{operations.hpp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+auto operator-\/= (\begin{DoxyParamCaption}\item[{T1 \&}]{a,  }\item[{const T2 \&}]{b }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{operations_8hpp_ae9e59a2d15287021fd21d14d2eb206c4}\label{operations_8hpp_ae9e59a2d15287021fd21d14d2eb206c4}} 
 \index{operations.hpp@{operations.hpp}!operator/@{operator/}}
 \index{operator/@{operator/}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
 {\footnotesize\ttfamily template$<$typename Group $>$ \\
 Group operator/ (\begin{DoxyParamCaption}\item[{Group const \&}]{a,  }\item[{Group const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{operations_8hpp_a35c5f7ec97de94c93f2301e16d3f7efa}\label{operations_8hpp_a35c5f7ec97de94c93f2301e16d3f7efa}} 
+\index{operations.hpp@{operations.hpp}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+auto operator/= (\begin{DoxyParamCaption}\item[{T1 \&}]{a,  }\item[{const T2 \&}]{b }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_a1297749985d820e08c6c88a285dc80eb}\label{operations_8hpp_a1297749985d820e08c6c88a285dc80eb}} 
 \index{operations.hpp@{operations.hpp}!operator$<$=@{operator$<$=}}
@@ -208,8 +259,7 @@ auto operator$>$= (\begin{DoxyParamCaption}\item[{const T1 \&}]{a,  }\item[{cons
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto operator$^\wedge$ (\begin{DoxyParamCaption}\item[{unordered\+\_\+set$<$ T $>$ const \&}]{a,  }\item[{unordered\+\_\+set$<$ T $>$ const \&}]{b }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -230,8 +280,7 @@ auto operator$\vert$ (\begin{DoxyParamCaption}\item[{unordered\+\_\+set$<$ T $>$
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto sub\+\_\+set (\begin{DoxyParamCaption}\item[{unordered\+\_\+set$<$ T $>$ const \&}]{a,  }\item[{unordered\+\_\+set$<$ T $>$ const \&}]{b,  }\item[{unordered\+\_\+set$<$ T $>$ \&}]{ret }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

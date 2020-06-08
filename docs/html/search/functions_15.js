@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7esplaytree_760',['~SplayTree',['../structsplay__tree_1_1SplayTree.html#a04a5fff3d078c370872ba89bbc90b979',1,'splay_tree::SplayTree']]],
-  ['_7etimer_761',['~timer',['../structtime__tools_1_1timer.html#a9dec58724371809e1822c943cb94bfba',1,'time_tools::timer']]],
-  ['_7ewith_762',['~with',['../structutility_1_1with.html#a3900d427720a5c565899287af0db7e0e',1,'utility::with']]]
+  ['wedge_774',['wedge',['../namespacegeometry.html#aabae68a797dfbc044ca0ed89cc6cc1af',1,'geometry']]],
+  ['with_775',['with',['../structutility_1_1with.html#ad5705a9ea2cdba42769360a65b7bc85d',1,'utility::with']]]
 ];

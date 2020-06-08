@@ -3,7 +3,6 @@
 {\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
 {\ttfamily \#include $<$experimental/iterator$>$}\newline
 {\ttfamily \#include $<$experimental/source\+\_\+location$>$}\newline
-{\ttfamily \#include \char`\"{}my\+\_\+int.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}io.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}debug.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}operations.\+hpp\char`\"{}}\newline
@@ -33,19 +32,15 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{core_8hpp_a8de3ed741dadc9c979a4ff17c0a9116e}{N\+D\+E\+B\+UG}}
+\#define \mbox{\hyperlink{core_8hpp_a9d597f42af7d85fd96c46aa17cc610d9}{fo}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})
 \item 
-\#define \mbox{\hyperlink{core_8hpp_a49bc164f30e64702250d2cbea09bf86c}{dbg}}(x)~(x)
-\item 
-\#define \mbox{\hyperlink{core_8hpp_a9d597f42af7d85fd96c46aa17cc610d9}{fo}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})
-\item 
-\#define \mbox{\hyperlink{core_8hpp_a7b724588414fb77283c807a1ad82313c}{fr}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} auto i \+: \mbox{\hyperlink{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))
+\#define \mbox{\hyperlink{core_8hpp_a7b724588414fb77283c807a1ad82313c}{fr}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))
 \item 
 \#define \mbox{\hyperlink{core_8hpp_a6779ef315f4a9c289636c8f466c823e3}{tm}}(...)~template $<$typename \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ T$>$
 \item 
 \#define \mbox{\hyperlink{core_8hpp_a50383951d2a9d4f1a855b2cec5e03274}{this}}~($\ast$this)
 \item 
-\#define \mbox{\hyperlink{core_8hpp_a2f9ddbc7133cc3a48efbc824006bd3cb}{al}}(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})~begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), end(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+\#define \mbox{\hyperlink{core_8hpp_a2f9ddbc7133cc3a48efbc824006bd3cb}{al}}(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})~begin(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), end(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
 \#define \mbox{\hyperlink{core_8hpp_a64daeab6d74dffeca723fbb620b687cb}{I}}(x)
 \item 
@@ -53,11 +48,11 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 \item 
 \#define \mbox{\hyperlink{core_8hpp_aff943633016deb6c62a519ffe92c6819}{vc}}~vector
 \item 
-\#define \mbox{\hyperlink{core_8hpp_a7f10cc81a560bb73b2eb647dfb10c9db}{rel\+\_\+assert}}(...)
+\#define \mbox{\hyperlink{core_8hpp_a7f10cc81a560bb73b2eb647dfb10c9db}{rel\+\_\+assert}}(...)~s
 \item 
 \#define \mbox{\hyperlink{core_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(msg)
 \item 
-\#define \mbox{\hyperlink{core_8hpp_ad47194c03eba4b38147c9d01c0166802}{T\+O\+DO}}(msg)
+\#define \mbox{\hyperlink{core_8hpp_ad47194c03eba4b38147c9d01c0166802}{T\+O\+DO}}(msg)~\mbox{\hyperlink{core_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(\char`\"{}T\+O\+D\+O\+: \char`\"{} msg)
 \item 
 \#define \mbox{\hyperlink{core_8hpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}{paste2}}(x,  y)~x\#\#y
 \item 
@@ -69,7 +64,7 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 \item 
 \#define \mbox{\hyperlink{core_8hpp_a7796040cab730b2436f078c78d117cab}{import}}(a)
 \item 
-\#define \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(x,  \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})~remove\+\_\+const\+\_\+t$<$decltype(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})$>$ x = \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}
+\#define \mbox{\hyperlink{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(x,  \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})~remove\+\_\+const\+\_\+t$<$decltype(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})$>$ x = \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -77,6 +72,8 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 using \mbox{\hyperlink{core_8hpp_a583d558126ab02babe89a77ae06a4156}{lli}} = long long
 \item 
 using \mbox{\hyperlink{core_8hpp_aa5114a4fed348a29fb92123470476b1b}{ull}} = unsigned long long
+\item 
+using \mbox{\hyperlink{core_8hpp_ad54dde638d1ae3e9bb08956f539b1883}{ll}} = long long
 \item 
 using \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} = vector$<$ \mbox{\hyperlink{structll}{ll}} $>$
 \item 
@@ -90,7 +87,7 @@ using \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} = co
 \item 
 using \mbox{\hyperlink{core_8hpp_a52c977d91e62bd8e617e5cb2926547e1}{bt}} = bitset$<$ numeric\+\_\+limits$<$ \mbox{\hyperlink{structll}{ll}} $>$\+::digits $>$
 \item 
-{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{core_8hpp_a1d04d13bbae0dc608f2d47771a2ef783}{pq}} = std\+::priority\+\_\+queue$<$ T, vector$<$ T $>$, greater$<$$>$ $>$
+{\footnotesize template$<$typename T , typename Comp $>$ }\\using \mbox{\hyperlink{core_8hpp_ac0b978e8ffc2c44656160a679f86e22a}{prio\+\_\+queue\+\_\+t}} = std\+::priority\+\_\+queue$<$ T, vector$<$ T $>$, Comp $>$
 \item 
 using \mbox{\hyperlink{core_8hpp_a71fb2247d044e41f5345bcdb26020926}{clock\+\_\+}} = high\+\_\+resolution\+\_\+clock
 \item 
@@ -120,31 +117,25 @@ bool \mbox{\hyperlink{core_8hpp_a5da77c5a58b4193f997d91f2130efd53}{multitest}} =
 \index{core.hpp@{core.hpp}!al@{al}}
 \index{al@{al}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{al}{al}}
-{\footnotesize\ttfamily \#define al(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}} }\end{DoxyParamCaption})~begin(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), end(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})}
-
-\mbox{\Hypertarget{core_8hpp_a49bc164f30e64702250d2cbea09bf86c}\label{core_8hpp_a49bc164f30e64702250d2cbea09bf86c}} 
-\index{core.hpp@{core.hpp}!dbg@{dbg}}
-\index{dbg@{dbg}!core.hpp@{core.hpp}}
-\doxysubsubsection{\texorpdfstring{dbg}{dbg}}
-{\footnotesize\ttfamily \#define dbg(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+{\footnotesize\ttfamily \#define al(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}} }\end{DoxyParamCaption})~begin(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}), end(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})}
 
 \mbox{\Hypertarget{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}\label{core_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}} 
 \index{core.hpp@{core.hpp}!df@{df}}
 \index{df@{df}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{df}{df}}
-{\footnotesize\ttfamily \#define df(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}} }\end{DoxyParamCaption})~remove\+\_\+const\+\_\+t$<$decltype(\mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})$>$ x = \mbox{\hyperlink{segment__tree_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}}
+{\footnotesize\ttfamily \#define df(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}} }\end{DoxyParamCaption})~remove\+\_\+const\+\_\+t$<$decltype(\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})$>$ x = \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}}
 
 \mbox{\Hypertarget{core_8hpp_a9d597f42af7d85fd96c46aa17cc610d9}\label{core_8hpp_a9d597f42af7d85fd96c46aa17cc610d9}} 
 \index{core.hpp@{core.hpp}!fo@{fo}}
 \index{fo@{fo}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{fo}{fo}}
-{\footnotesize\ttfamily \#define fo(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})}
+{\footnotesize\ttfamily \#define fo(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})}
 
-\mbox{\Hypertarget{core_8hpp_a7b724588414fb77283c807a1ad82313c}\label{core_8hpp_a7b724588414fb77283c807a1ad82313c}} 
+Contains core files for the template \mbox{\Hypertarget{core_8hpp_a7b724588414fb77283c807a1ad82313c}\label{core_8hpp_a7b724588414fb77283c807a1ad82313c}} 
 \index{core.hpp@{core.hpp}!fr@{fr}}
 \index{fr@{fr}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{fr}{fr}}
-{\footnotesize\ttfamily \#define fr(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} auto i \+: \mbox{\hyperlink{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))}
+{\footnotesize\ttfamily \#define fr(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_af05d016fe174cf99a33f4ddac30c9b05}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))}
 
 \mbox{\Hypertarget{core_8hpp_a64daeab6d74dffeca723fbb620b687cb}\label{core_8hpp_a64daeab6d74dffeca723fbb620b687cb}} 
 \index{core.hpp@{core.hpp}!I@{I}}
@@ -188,13 +179,7 @@ bool \mbox{\hyperlink{core_8hpp_a5da77c5a58b4193f997d91f2130efd53}{multitest}} =
 \doxysubsubsection{\texorpdfstring{lets\_count}{lets\_count}}
 {\footnotesize\ttfamily \#define lets\+\_\+count~\mbox{\hyperlink{structlets__add}{lets\+\_\+add}} \mbox{\hyperlink{core_8hpp_a396f7338a30cd5803df5ae220da88711}{paste}}(\+\_\+l, \+\_\+\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+\_\+)}
 
-\mbox{\Hypertarget{core_8hpp_a8de3ed741dadc9c979a4ff17c0a9116e}\label{core_8hpp_a8de3ed741dadc9c979a4ff17c0a9116e}} 
-\index{core.hpp@{core.hpp}!NDEBUG@{NDEBUG}}
-\index{NDEBUG@{NDEBUG}!core.hpp@{core.hpp}}
-\doxysubsubsection{\texorpdfstring{NDEBUG}{NDEBUG}}
-{\footnotesize\ttfamily \#define N\+D\+E\+B\+UG}
-
-Contains core files for the template \mbox{\Hypertarget{core_8hpp_a396f7338a30cd5803df5ae220da88711}\label{core_8hpp_a396f7338a30cd5803df5ae220da88711}} 
+\mbox{\Hypertarget{core_8hpp_a396f7338a30cd5803df5ae220da88711}\label{core_8hpp_a396f7338a30cd5803df5ae220da88711}} 
 \index{core.hpp@{core.hpp}!paste@{paste}}
 \index{paste@{paste}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{paste}{paste}}
@@ -216,7 +201,7 @@ Contains core files for the template \mbox{\Hypertarget{core_8hpp_a396f7338a30cd
 \index{core.hpp@{core.hpp}!rel\_assert@{rel\_assert}}
 \index{rel\_assert@{rel\_assert}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{rel\_assert}{rel\_assert}}
-{\footnotesize\ttfamily \#define rel\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define rel\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~s}
 
 \mbox{\Hypertarget{core_8hpp_a50383951d2a9d4f1a855b2cec5e03274}\label{core_8hpp_a50383951d2a9d4f1a855b2cec5e03274}} 
 \index{core.hpp@{core.hpp}!this@{this}}
@@ -234,7 +219,7 @@ Contains core files for the template \mbox{\Hypertarget{core_8hpp_a396f7338a30cd
 \index{core.hpp@{core.hpp}!TODO@{TODO}}
 \index{TODO@{TODO}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{TODO}{TODO}}
-{\footnotesize\ttfamily \#define T\+O\+DO(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define T\+O\+DO(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~\mbox{\hyperlink{core_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(\char`\"{}T\+O\+D\+O\+: \char`\"{} msg)}
 
 \mbox{\Hypertarget{core_8hpp_aff943633016deb6c62a519ffe92c6819}\label{core_8hpp_aff943633016deb6c62a519ffe92c6819}} 
 \index{core.hpp@{core.hpp}!vc@{vc}}
@@ -281,6 +266,12 @@ Contains core files for the template \mbox{\Hypertarget{core_8hpp_a396f7338a30cd
 \doxysubsubsection{\texorpdfstring{ld}{ld}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{core_8hpp_a2e2e73e53fc509e05f252ef083503838}{ld}} =  long double}
 
+\mbox{\Hypertarget{core_8hpp_ad54dde638d1ae3e9bb08956f539b1883}\label{core_8hpp_ad54dde638d1ae3e9bb08956f539b1883}} 
+\index{core.hpp@{core.hpp}!ll@{ll}}
+\index{ll@{ll}!core.hpp@{core.hpp}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structll}{ll}} =  long long}
+
 \mbox{\Hypertarget{core_8hpp_a583d558126ab02babe89a77ae06a4156}\label{core_8hpp_a583d558126ab02babe89a77ae06a4156}} 
 \index{core.hpp@{core.hpp}!lli@{lli}}
 \index{lli@{lli}!core.hpp@{core.hpp}}
@@ -293,18 +284,18 @@ Contains core files for the template \mbox{\Hypertarget{core_8hpp_a396f7338a30cd
 \doxysubsubsection{\texorpdfstring{point}{point}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} =  complex$<$\mbox{\hyperlink{structll}{ll}}$>$}
 
-\mbox{\Hypertarget{core_8hpp_a1d04d13bbae0dc608f2d47771a2ef783}\label{core_8hpp_a1d04d13bbae0dc608f2d47771a2ef783}} 
-\index{core.hpp@{core.hpp}!pq@{pq}}
-\index{pq@{pq}!core.hpp@{core.hpp}}
-\doxysubsubsection{\texorpdfstring{pq}{pq}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-using \mbox{\hyperlink{core_8hpp_a1d04d13bbae0dc608f2d47771a2ef783}{pq}} =  std\+::priority\+\_\+queue$<$T, vector$<$T$>$, greater$<$$>$ $>$}
-
 \mbox{\Hypertarget{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}\label{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}} 
 \index{core.hpp@{core.hpp}!pr@{pr}}
 \index{pr@{pr}!core.hpp@{core.hpp}}
 \doxysubsubsection{\texorpdfstring{pr}{pr}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{core_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} =  pair$<$\mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}}$>$}
+
+\mbox{\Hypertarget{core_8hpp_ac0b978e8ffc2c44656160a679f86e22a}\label{core_8hpp_ac0b978e8ffc2c44656160a679f86e22a}} 
+\index{core.hpp@{core.hpp}!prio\_queue\_t@{prio\_queue\_t}}
+\index{prio\_queue\_t@{prio\_queue\_t}!core.hpp@{core.hpp}}
+\doxysubsubsection{\texorpdfstring{prio\_queue\_t}{prio\_queue\_t}}
+{\footnotesize\ttfamily template$<$typename T , typename Comp $>$ \\
+using \mbox{\hyperlink{core_8hpp_ac0b978e8ffc2c44656160a679f86e22a}{prio\+\_\+queue\+\_\+t}} =  std\+::priority\+\_\+queue$<$T, vector$<$T$>$, Comp$>$}
 
 \mbox{\Hypertarget{core_8hpp_aa5114a4fed348a29fb92123470476b1b}\label{core_8hpp_aa5114a4fed348a29fb92123470476b1b}} 
 \index{core.hpp@{core.hpp}!ull@{ull}}
