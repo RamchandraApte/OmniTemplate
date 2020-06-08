@@ -77,12 +77,12 @@ template <typename T> auto prev_less(const T &v) {
 	}
 	return l;
 }
-ll bit_ceil(ll x) {
-	/*! Return the smallest power of two at least x*/
-	if (x == 0) {
+size_t bit_ceil(size_t x) {
+	/*! Return the smallest power of two that is at least x*/
+	if (x <= 1) {
 		return 1;
 	}
-	return 1LL << ll(ceil(log2(lli(x))));
+	return 1ULL << dbg(sizeof(size_t) * CHAR_BIT - __builtin_clzll(x - 1));
 }
 void test_next_pow_of_2() {
 	assert(bit_ceil(0) == 1);

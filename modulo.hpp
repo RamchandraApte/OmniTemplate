@@ -32,7 +32,6 @@ struct modulo {
 	modulo(ll x_, no_mod) : x(x_) {}
 	explicit operator auto() const { return x; }
 };
-// FIXME add more stuff in modulo namespace
 modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;
 	return {sum >= modulo::modulus ? sum - modulo::modulus : sum, no_mod{}};
@@ -79,6 +78,10 @@ void test_md() {
 	assert(modulo{34} / modulo{-2} == modulo{4});
 	assert(modulo{2} - modulo{6} == modulo{3});
 }
+void test_modulo() {
+	test_power();
+	test_md();
+}
 } // namespace modulo_namespace
 using namespace modulo_namespace;
 namespace std {
@@ -86,7 +89,3 @@ template <> struct hash<modulo> {
 	size_t operator()(modulo const &x) const { return x.x; }
 };
 } // namespace std
-void test_modulo() {
-	test_power();
-	test_md();
-}
