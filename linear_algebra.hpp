@@ -2,6 +2,7 @@
 #include "core.hpp"
 #include "modulo.hpp"
 // TODO Tensors? Also, matrix_row class.
+// TODO fix default constructor causing segfault
 namespace linear_algebra {
 tm() struct matrix {
 	/*! Matrix class*/
@@ -37,6 +38,15 @@ tm() struct matrix {
 		return this.rows_n == 1 && this.cols_n == 1 && this[0][0] == 1;
 	}
 };
+template <typename T> auto identity(const plus<>, const matrix<T> &mat) {
+	return matrix(mat.rows_n, mat.cols_n);
+}
+template <typename T> auto identity(const multiplies<>, const matrix<T> &mat) {
+	assert(mat.rows_n == mat.cols_n);
+	matrix<T> id(mat.rows_n, mat.cols_n);
+	fo(i, mat.rows_n) { id[i][i] = 1; }
+	return id;
+}
 template <typename... Ts>
 auto operator+(const matrix<Ts...> &a, const matrix<Ts...> &b) {
 	assert(a.rows_n == b.rows_n && a.rows_n == b.rows_n);

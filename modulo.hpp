@@ -3,7 +3,7 @@
 namespace modulo_namespace {
 template <typename T> T power(T a, size_t b) {
 	/*! Return \f$a^b\f$ */
-	T ret{1};
+	T ret = identity(multiplies<>{}, a);
 	for (; b; b >>= 1, a *= a) {
 		if (b & 1) {
 			ret *= a;
@@ -32,6 +32,8 @@ struct modulo {
 	modulo(ll x_, no_mod) : x(x_) {}
 	explicit operator auto() const { return x; }
 };
+modulo identity(plus<>, modulo) { return 0; }
+modulo identity(multiplies<>, modulo) { return 1; }
 modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;
 	return {sum >= modulo::modulus ? sum - modulo::modulus : sum, no_mod{}};
