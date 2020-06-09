@@ -16,18 +16,21 @@ size_t base_ceil(const size_t x, const size_t base) {
  * multiplicative monoid of a semiring
  * base is the segment tree base. Default is 2.
  */
-template <typename T, typename Query, typename Update, size_t base = 2> class SegmentTree {
+template <typename T, typename Query, typename Update, bool has_lazy = false, size_t base = 2>
+class SegmentTree {
       public:
 	SegmentTree(const size_t size_arg)
 	    : size_{size_arg}, qsum(base * base_ceil(size_arg, base), identity(Query{}, T{})),
-	      lazy(qsum.size(), identity(Update{}, T{})) {}
+	      lazy(has_lazy ? qsum.size() : 0, identity(Update{}, T{})) {}
 	void down(const size_t idx) {
-		/*! Push lazy update down*/
-		qsum[idx] = Update{}(qsum[idx], lazy[idx]);
-		if (base * idx < lazy.size()) {
-			fo(i, base) { lazy[base * idx + i] += lazy[idx]; }
+		if constexpr (has_lazy) {
+			/*! Push lazy update down*/
+			qsum[idx] = Update{}(qsum[idx], lazy[idx]);
+			if (base * idx < lazy.size()) {
+				fo(i, base) { lazy[base * idx + i] += lazy[idx]; }
+			}
+			lazy[idx] = identity(Update{}, lazy[idx]);
 		}
-		lazy[idx] = identity(Update{}, lazy[idx]);
 	}
 	T query(const size_t l, const size_t r, const size_t idx, const size_t node_l,
 		const size_t node_r) {
@@ -63,8 +66,12 @@ template <typename T, typename Query, typename Update, size_t base = 2> class Se
 			return;
 		}
 		if (l <= node_l && node_r <= r) {
-			lazy[idx] += val;
-			down(idx);
+			if constexpr (has_lazy) {
+				lazy[idx] = Update{}(lazy[idx], val);
+				down(idx);
+			} else {
+				qsum[idx] = Update{}(qsum[idx], val);
+			}
 			return;
 		}
 		const auto mid = [&](size_t i) {
@@ -78,6 +85,9 @@ template <typename T, typename Query, typename Update, size_t base = 2> class Se
 		}
 	}
 	void update(const size_t l, const size_t r, const T val) {
+		if constexpr (!has_lazy) {
+			assert(l + 1 == r);
+		}
 		update(l, r, val, 1, 0, qsum.size() / base);
 	}
 
@@ -87,16 +97,30 @@ template <typename T, typename Query, typename Update, size_t base = 2> class Se
 	vector<T> lazy;
 };
 void test_segment_tree() {
-	SegmentTree<ll, Max, plus<>> seg{10};
-	seg.update(0, 10, inf);
+	constexpr bool has_lazy = false;
+	SegmentTree<ll, Max, plus<>, has_lazy> seg{10};
+	fo(i, 0, 10) { seg.update(i, i + 1, inf); }
 	assert(seg.query(0, 10) == 0);
 	assert(seg.query(3, 4) == 0);
-	seg.update(3, 4, 10);
-	seg.update(2, 4, 20);
-	assert(seg.query(3, 4) == 30);
-	assert(seg.query(2, 4) == 30);
-	assert(seg.query(2, 3) == 20);
-	assert(seg.query(1, 10) == 30);
-	seg.update(0, 2, 10);
-	assert(seg.query(1, 10) == 30);
+	seg.update(2, 3, 2);
+	seg.update(4, 5, 3);
+	assert(seg.query(0, 10) == 3);
+	assert(seg.query(3, 4) == 0);
+	assert(seg.query(2, 4) == 2);
+	seg.update(2, 3, -2);
+	seg.update(4, 5, -3);
+	assert(seg.query(2, 4) == 0);
+	assert(seg.query(0, 10) == 0);
+	fo(i, 0, 10) { seg.update(i, i + 1, -inf); }
+	if constexpr (has_lazy) {
+		seg.update(0, 10, inf);
+		seg.update(3, 4, 10);
+		seg.update(2, 4, 20);
+		assert(seg.query(3, 4) == 30);
+		assert(seg.query(2, 4) == 30);
+		assert(seg.query(2, 3) == 20);
+		assert(seg.query(1, 10) == 30);
+		seg.update(0, 2, 10);
+		assert(seg.query(1, 10) == 30);
+	}
 }
