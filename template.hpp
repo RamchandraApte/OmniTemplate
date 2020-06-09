@@ -15,6 +15,7 @@
 #include "number_theory.hpp"
 #include "permutation.hpp"
 #include "persistent.hpp"
+#include "polynomial.hpp"
 #include "queue.hpp"
 #include "segment_tree.hpp"
 #include "splay_tree.hpp"

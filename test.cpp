@@ -16,6 +16,7 @@ void test_all() {
 	test_permutation();
 	test_bit();
 	test_segment_tree();
+	test_polynomial();
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 void main2() { test_all(); }
