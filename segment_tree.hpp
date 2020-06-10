@@ -17,9 +17,7 @@ size_t base_ceil(const size_t x, const size_t base) {
  * base is the segment tree base. Default is 2.
  */
 struct Empty {};
-template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true,
-	  size_t base = 2>
-class SegmentTree {
+template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, size_t base = 2> class SegmentTree {
       public:
 	SegmentTree(const size_t size_arg) : size_{size_arg}, ceil_size{base_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
 		if constexpr (!has_ptr) {
@@ -28,6 +26,8 @@ class SegmentTree {
 			root = new NodeExp{};
 		}
 	}
+	static_assert(!has_pers || has_ptr, "Pointers required for persistency");
+	static_assert(base > 1, "Base must be at least 1");
 	struct LazyPart {
 		T lazy{identity(Update{}, T{})};
 	};
@@ -40,7 +40,7 @@ class SegmentTree {
 	using Node = conditional_t<has_ptr, NodeExp *, size_t>;
 	auto &get_core(NodeExp *const &obj) { return *obj; }
 	auto &get_core(const size_t idx) { return nodes[idx]; }
-	auto get_child(NodeExp *const &obj, const size_t i) { return obj->child[i]; }
+	auto &get_child(NodeExp *const &obj, const size_t i) { return obj->child[i]; }
 	auto get_child(const size_t idx, const size_t i) { return base * idx + i; }
 	void down(const Node idx, const size_t node_l, const size_t node_r) {
 		const bool leaf = node_r - node_l == 1;
@@ -80,19 +80,24 @@ class SegmentTree {
 		fo(inc, base) { ret = Query{}(ret, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1))); }
 		return ret;
 	}
-	T query(const size_t l, const size_t r) {
+	T query(const size_t l, const size_t r, const Node custom_root) {
 		if (!(0 <= l && l <= r && r <= size_)) {
 			throw out_of_range{"Segment tree query out of bounds"};
 		}
-		return query(l, r, root, 0, ceil_size);
+		return query(l, r, custom_root, 0, ceil_size);
 	}
-	void update(const size_t l, const size_t r, const T val, const Node idx,
-		    const size_t node_l, const size_t node_r) {
-		/*! Update the range l to r with the update val*/
+	T query(const size_t l, const size_t r) { return query(l, r, root); }
+	Node update(const size_t l, const size_t r, const T val, Node idx, const size_t node_l, const size_t node_r) {
+		/*! Update the range l to r with the update val
+		 * returns the new node
+		 */
 		if (node_r <= l || r <= node_l) {
-			return;
+			return idx;
 		}
 		down(idx, node_l, node_r);
+		if constexpr (has_pers) {
+			idx = new NodeExp{*idx};
+		}
 		if (l <= node_l && node_r <= r) {
 			if constexpr (has_lazy) {
 				get_core(idx).lazy = Update{}(get_core(idx).lazy, val);
@@ -100,22 +105,28 @@ class SegmentTree {
 			} else {
 				get_core(idx).qsum = Update{}(get_core(idx).qsum, val);
 			}
-			return;
+			return idx;
 		}
 		const auto mid = [&](size_t i) {
 			return (node_l * (base - i) + node_r * i) / base;
 		};
 		get_core(idx).qsum = identity(Query{}, T{});
 		fo(inc, base) {
-			update(l, r, val, get_child(idx, inc), mid(inc), mid(inc + 1));
+			auto get_update = [&]() { return update(l, r, val, get_child(idx, inc), mid(inc), mid(inc + 1)); };
+			if constexpr (has_pers) {
+				get_child(idx, inc) = get_update();
+			} else {
+				get_update();
+			}
 			get_core(idx).qsum = Query{}(get_core(idx).qsum, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1)));
 		}
+		return idx;
 	}
-	void update(const size_t l, const size_t r, const T val) {
+	Node update(const size_t l, const size_t r, const T val) {
 		if constexpr (!has_lazy) {
 			assert(l + 1 == r);
 		}
-		update(l, r, val, root, 0, ceil_size);
+		return root = update(l, r, val, root, 0, ceil_size);
 	}
 
       private:
@@ -130,21 +141,28 @@ void test_segment_tree() {
 	assert(seg.query(1, 3) == -inf);
 	assert(seg.query(7, 9) == -inf);
 	fo(i, 0, 10) { seg.update(i, i + 1, inf); }
+	auto old = seg.update(0, 1, 0);
 	assert(seg.query(0, 10) == 0);
 	assert(seg.query(3, 4) == 0);
 	seg.update(2, 3, 2);
-	seg.update(4, 5, 3);
+	auto old2 = seg.update(4, 5, 3);
+	assert(seg.query(0, 10, old) == 0);
 	assert(seg.query(0, 10) == 3);
 	assert(seg.query(3, 4) == 0);
 	assert(seg.query(2, 4) == 2);
+	assert(seg.query(2, 4, old2) == 2);
 	seg.update(2, 3, -2);
 	seg.update(4, 5, -3);
 	assert(seg.query(2, 4) == 0);
 	assert(seg.query(0, 10) == 0);
+	assert(seg.query(0, 10, old) == 0);
+	assert(seg.query(2, 4, old2) == 2);
 	fo(i, 0, 10) { seg.update(i, i + 1, -inf); }
 	if constexpr (has_lazy) {
 		seg.update(0, 10, inf);
-		seg.update(3, 4, 10);
+		auto old_lazy = seg.update(3, 4, 10);
+		assert(seg.query(0, 10) == 10);
+		assert(seg.query(0, 10, old_lazy) == 10);
 		seg.update(2, 4, 20);
 		assert(seg.query(3, 4) == 30);
 		assert(seg.query(2, 4) == 30);
@@ -152,5 +170,8 @@ void test_segment_tree() {
 		assert(seg.query(1, 10) == 30);
 		seg.update(0, 2, 10);
 		assert(seg.query(1, 10) == 30);
+		assert(seg.query(0, 10, old) == 0);
+		assert(seg.query(2, 4, old2) == 2);
+		assert(seg.query(0, 10, old_lazy) == 10);
 	}
 }
