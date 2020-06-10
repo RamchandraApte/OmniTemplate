@@ -7,8 +7,8 @@ size_t base_ceil(const size_t x, const size_t base) {
 		;
 	return pw;
 }
-// TODO persistent dynamic multidimensional
-/*! Generic implicit lazy based segment tree
+// TODO persistent multidimensional
+/*! Generic explicit/implicit lazy based segment tree
  * T is the value type of the segment tree
  * Query is the monoid for queries
  * Update is the monoid for queries
@@ -42,18 +42,19 @@ class SegmentTree {
 	auto &get_lazy(const size_t idx) { return lazy[idx]; }
 	auto get_child(const size_t idx, const size_t i) { return base * idx + i; }
 	auto &get_qsum(const size_t idx) { return qsum[idx]; }
-	void down(const Node idx) {
-		if constexpr (has_ptr) {
-			for (auto &ptr : idx->child) {
-				if (!ptr) {
-					ptr = new NodeObj{};
-				}
-			}
-		}
+	void down(const Node idx, const size_t node_l, const size_t node_r) {
 		if constexpr (has_lazy) {
 			/*! Push lazy update down*/
 			get_qsum(idx) = Update{}(get_qsum(idx), get_lazy(idx));
-			if (base * idx < lazy.size()) {
+			// if (base * idx < lazy.size()) {
+			if (node_r - node_l > 1) {
+				if constexpr (has_ptr) {
+					for (auto &ptr : idx->child) {
+						if (!ptr) {
+							ptr = new NodeObj{};
+						}
+					}
+				}
 				fo(i, base) { get_lazy(get_child(idx, i)) += get_lazy(idx); }
 			}
 			get_lazy(idx) = identity(Update{}, get_lazy(idx));
@@ -64,9 +65,9 @@ class SegmentTree {
 		/*! Returns the sum over the intersection of [query_l, query_r) with [node_l,
 		 * node_r) */
 		if (node_r <= l || r <= node_l) {
-			return 0;
+			return identity(Query{}, T{});
 		}
-		down(idx);
+		down(idx, node_l, node_r);
 		if (l <= node_l && node_r <= r) {
 			return get_qsum(idx);
 		}
@@ -92,11 +93,11 @@ class SegmentTree {
 		if (node_r <= l || r <= node_l) {
 			return;
 		}
-		down(idx);
+		down(idx, node_l, node_r);
 		if (l <= node_l && node_r <= r) {
 			if constexpr (has_lazy) {
 				get_lazy(idx) = Update{}(get_lazy(idx), val);
-				down(idx);
+				down(idx, node_l, node_r);
 			} else {
 				get_qsum(idx) = Update{}(get_qsum(idx), val);
 			}
@@ -127,8 +128,10 @@ class SegmentTree {
 	vector<T> lazy;
 };
 void test_segment_tree() {
-	constexpr bool has_lazy = false;
-	SegmentTree<ll, Max, plus<>, has_lazy> seg{10};
+	constexpr bool has_lazy = true;
+	SegmentTree<ll, Max, plus<>, has_lazy> seg{1000};
+	assert(seg.query(1, 3) == -inf);
+	assert(seg.query(7, 9) == -inf);
 	fo(i, 0, 10) { seg.update(i, i + 1, inf); }
 	assert(seg.query(0, 10) == 0);
 	assert(seg.query(3, 4) == 0);
