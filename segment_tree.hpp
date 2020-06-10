@@ -16,48 +16,50 @@ size_t base_ceil(const size_t x, const size_t base) {
  * multiplicative monoid of a semiring
  * base is the segment tree base. Default is 2.
  */
+struct Empty {};
 template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true,
 	  size_t base = 2>
 class SegmentTree {
       public:
-	SegmentTree(const size_t size_arg)
-	    : size_{size_arg}, ceil_size{base_ceil(size_arg, base)},
-	      qsum(!has_ptr ? base * ceil_size : 0, identity(Query{}, T{})),
-	      lazy(!has_ptr && has_lazy ? qsum.size() : 0, identity(Update{}, T{})) {
+	SegmentTree(const size_t size_arg) : size_{size_arg}, ceil_size{base_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
 		if constexpr (!has_ptr) {
 			root = 1;
 		} else {
-			root = new NodeObj{};
+			root = new NodeExp{};
 		}
 	}
-	struct NodeObj {
-		T qsum{identity(Query{}, T{})};
+	struct LazyPart {
 		T lazy{identity(Update{}, T{})};
-		array<NodeObj *, base> child{};
 	};
-	using Node = conditional_t<has_ptr, NodeObj *, size_t>;
-	auto &get_lazy(NodeObj *const &obj) { return obj->lazy; }
-	auto get_child(NodeObj *const &obj, const size_t i) { return obj->child[i]; }
-	auto &get_qsum(NodeObj *const &obj) { return obj->qsum; }
-	auto &get_lazy(const size_t idx) { return lazy[idx]; }
+	struct NodeCore : public conditional_t<has_lazy, LazyPart, Empty> {
+		T qsum{identity(Query{}, T{})};
+	};
+	struct NodeExp : public NodeCore {
+		array<NodeExp *, base> child{};
+	};
+	using Node = conditional_t<has_ptr, NodeExp *, size_t>;
+	auto &get_core(NodeExp *const &obj) { return *obj; }
+	auto &get_core(const size_t idx) { return nodes[idx]; }
+	auto get_child(NodeExp *const &obj, const size_t i) { return obj->child[i]; }
 	auto get_child(const size_t idx, const size_t i) { return base * idx + i; }
-	auto &get_qsum(const size_t idx) { return qsum[idx]; }
 	void down(const Node idx, const size_t node_l, const size_t node_r) {
-		if constexpr (has_lazy) {
-			/*! Push lazy update down*/
-			get_qsum(idx) = Update{}(get_qsum(idx), get_lazy(idx));
-			// if (base * idx < lazy.size()) {
-			if (node_r - node_l > 1) {
-				if constexpr (has_ptr) {
-					for (auto &ptr : idx->child) {
-						if (!ptr) {
-							ptr = new NodeObj{};
-						}
+		const bool leaf = node_r - node_l == 1;
+		if constexpr (has_ptr) {
+			if (!leaf) {
+				for (auto &ptr : idx->child) {
+					if (!ptr) {
+						ptr = new NodeExp{};
 					}
 				}
-				fo(i, base) { get_lazy(get_child(idx, i)) += get_lazy(idx); }
 			}
-			get_lazy(idx) = identity(Update{}, get_lazy(idx));
+		}
+		if constexpr (has_lazy) {
+			/*! Push lazy update down*/
+			get_core(idx).qsum = Update{}(get_core(idx).qsum, get_core(idx).lazy);
+			if (!leaf) {
+				fo(i, base) { get_core(get_child(idx, i)).lazy += get_core(idx).lazy; }
+			}
+			get_core(idx).lazy = identity(Update{}, get_core(idx).lazy);
 		}
 	}
 	T query(const size_t l, const size_t r, const Node idx, const size_t node_l,
@@ -69,16 +71,13 @@ class SegmentTree {
 		}
 		down(idx, node_l, node_r);
 		if (l <= node_l && node_r <= r) {
-			return get_qsum(idx);
+			return get_core(idx).qsum;
 		}
 		auto ret = identity(Query{}, T{});
 		const auto mid = [&](size_t i) {
 			return (node_l * (base - i) + node_r * i) / base;
 		};
-		fo(inc, base) {
-			ret =
-			    Query{}(ret, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1)));
-		}
+		fo(inc, base) { ret = Query{}(ret, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1))); }
 		return ret;
 	}
 	T query(const size_t l, const size_t r) {
@@ -96,21 +95,20 @@ class SegmentTree {
 		down(idx, node_l, node_r);
 		if (l <= node_l && node_r <= r) {
 			if constexpr (has_lazy) {
-				get_lazy(idx) = Update{}(get_lazy(idx), val);
+				get_core(idx).lazy = Update{}(get_core(idx).lazy, val);
 				down(idx, node_l, node_r);
 			} else {
-				get_qsum(idx) = Update{}(get_qsum(idx), val);
+				get_core(idx).qsum = Update{}(get_core(idx).qsum, val);
 			}
 			return;
 		}
 		const auto mid = [&](size_t i) {
 			return (node_l * (base - i) + node_r * i) / base;
 		};
-		get_qsum(idx) = identity(Query{}, T{});
+		get_core(idx).qsum = identity(Query{}, T{});
 		fo(inc, base) {
 			update(l, r, val, get_child(idx, inc), mid(inc), mid(inc + 1));
-			get_qsum(idx) = Query{}(get_qsum(idx), query(l, r, get_child(idx, inc),
-								     mid(inc), mid(inc + 1)));
+			get_core(idx).qsum = Query{}(get_core(idx).qsum, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1)));
 		}
 	}
 	void update(const size_t l, const size_t r, const T val) {
@@ -124,8 +122,7 @@ class SegmentTree {
 	size_t size_;
 	size_t ceil_size;
 	Node root;
-	vector<T> qsum;
-	vector<T> lazy;
+	vector<NodeCore> nodes;
 };
 void test_segment_tree() {
 	constexpr bool has_lazy = true;
