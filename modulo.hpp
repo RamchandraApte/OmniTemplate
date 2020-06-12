@@ -1,8 +1,12 @@
 #pragma once
 #include "core.hpp"
 namespace modulo_namespace {
-template <typename T> T power(T a, size_t b) {
+template <typename T> T power(T a, ll b) {
 	/*! Return \f$a^b\f$ */
+	/*if(b < 0){
+		a = identity(a, {})/a;
+		b = -b;
+	}*/
 	T ret = identity(multiplies<>{}, a);
 	for (; b; b >>= 1, a *= a) {
 		if (b & 1) {

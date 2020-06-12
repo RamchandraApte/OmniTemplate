@@ -118,10 +118,8 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 				get_update();
 			}
 		}
-		if constexpr (true) {
-			get_core(idx).qsum = identity(Query{}, T{});
-			fo(inc, base) { get_core(idx).qsum = Query{}(get_core(idx).qsum, get_core(get_child(idx, inc)).qsum); }
-		}
+		get_core(idx).qsum = identity(Query{}, T{});
+		fo(inc, base) { get_core(idx).qsum = Query{}(get_core(idx).qsum, get_core(get_child(idx, inc)).qsum); }
 		return idx;
 	}
 	Node update(const size_t l, const size_t r, const T val) {
