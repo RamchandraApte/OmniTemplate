@@ -7,8 +7,8 @@ size_t base_ceil(const size_t x, const size_t base) {
 		;
 	return pw;
 }
-// TODO persistent multidimensional
-/*! Generic explicit/implicit lazy based segment tree
+// TODO multidimensional
+/*! Generic persistent explicit/implicit lazy based segment tree
  * T is the value type of the segment tree
  * Query is the monoid for queries
  * Update is the monoid for queries
@@ -20,10 +20,10 @@ struct Empty {};
 template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, size_t base = 2> class SegmentTree {
       public:
 	SegmentTree(const size_t size_arg) : size_{size_arg}, ceil_size{base_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
-		if constexpr (!has_ptr) {
-			root = 1;
-		} else {
+		if constexpr (has_ptr) {
 			root = new NodeExp{};
+		} else {
+			root = 1;
 		}
 	}
 	static_assert(!has_pers || has_ptr, "Pointers required for persistency");
@@ -38,10 +38,15 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		array<NodeExp *, base> child{};
 	};
 	using Node = conditional_t<has_ptr, NodeExp *, size_t>;
+
 	auto &get_core(NodeExp *const &obj) { return *obj; }
 	auto &get_core(const size_t idx) { return nodes[idx]; }
 	auto &get_child(NodeExp *const &obj, const size_t i) { return obj->child[i]; }
 	auto get_child(const size_t idx, const size_t i) { return base * idx + i; }
+	static size_t mid(const size_t node_l, const size_t node_r, const size_t i) {
+		const auto df = (node_r - node_l) / base;
+		return node_l + df * i;
+	};
 	void down(const Node idx, const size_t node_l, const size_t node_r) {
 		const bool leaf = node_r - node_l == 1;
 		if constexpr (has_ptr) {
@@ -73,11 +78,9 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		if (l <= node_l && node_r <= r) {
 			return get_core(idx).qsum;
 		}
+
 		auto ret = identity(Query{}, T{});
-		const auto mid = [&](size_t i) {
-			return (node_l * (base - i) + node_r * i) / base;
-		};
-		fo(inc, base) { ret = Query{}(ret, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1))); }
+		fo(inc, base) { ret = Query{}(ret, query(l, r, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1))); }
 		return ret;
 	}
 	T query(const size_t l, const size_t r, const Node custom_root) {
@@ -107,18 +110,17 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 			}
 			return idx;
 		}
-		const auto mid = [&](size_t i) {
-			return (node_l * (base - i) + node_r * i) / base;
-		};
-		get_core(idx).qsum = identity(Query{}, T{});
 		fo(inc, base) {
-			auto get_update = [&]() { return update(l, r, val, get_child(idx, inc), mid(inc), mid(inc + 1)); };
+			auto get_update = [&]() { return update(l, r, val, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1)); };
 			if constexpr (has_pers) {
 				get_child(idx, inc) = get_update();
 			} else {
 				get_update();
 			}
-			get_core(idx).qsum = Query{}(get_core(idx).qsum, query(l, r, get_child(idx, inc), mid(inc), mid(inc + 1)));
+		}
+		if constexpr (true) {
+			get_core(idx).qsum = identity(Query{}, T{});
+			fo(inc, base) { get_core(idx).qsum = Query{}(get_core(idx).qsum, get_core(get_child(idx, inc)).qsum); }
 		}
 		return idx;
 	}
@@ -135,34 +137,54 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 	Node root;
 	vector<NodeCore> nodes;
 };
-void test_segment_tree() {
-	constexpr bool has_lazy = true;
-	SegmentTree<ll, Max, plus<>, has_lazy> seg{1000};
+template <bool has_lazy, bool has_ptr, bool has_pers, size_t base> void test_segment_tree_impl() {
+	SegmentTree<ll, Max, plus<>, has_lazy, has_ptr, has_pers, base> seg{1000};
 	assert(seg.query(1, 3) == -inf);
 	assert(seg.query(7, 9) == -inf);
 	fo(i, 0, 10) { seg.update(i, i + 1, inf); }
-	auto old = seg.update(0, 1, 0);
+	auto upd_old = [&]() { return seg.update(0, 1, 0); };
+	using NodePtr = typename decltype(seg)::NodeExp *;
+	NodePtr old;
+	if constexpr (has_pers) {
+		old = upd_old();
+	} else {
+		upd_old();
+	}
 	assert(seg.query(0, 10) == 0);
 	assert(seg.query(3, 4) == 0);
 	seg.update(2, 3, 2);
 	auto old2 = seg.update(4, 5, 3);
-	assert(seg.query(0, 10, old) == 0);
+	if constexpr (has_pers) {
+		assert(seg.query(0, 10, old) == 0);
+	}
 	assert(seg.query(0, 10) == 3);
 	assert(seg.query(3, 4) == 0);
 	assert(seg.query(2, 4) == 2);
-	assert(seg.query(2, 4, old2) == 2);
+	if constexpr (has_pers) {
+		assert(seg.query(2, 4, old2) == 2);
+	}
 	seg.update(2, 3, -2);
 	seg.update(4, 5, -3);
 	assert(seg.query(2, 4) == 0);
 	assert(seg.query(0, 10) == 0);
-	assert(seg.query(0, 10, old) == 0);
-	assert(seg.query(2, 4, old2) == 2);
+	if constexpr (has_pers) {
+		assert(seg.query(0, 10, old) == 0);
+		assert(seg.query(2, 4, old2) == 2);
+	}
 	fo(i, 0, 10) { seg.update(i, i + 1, -inf); }
 	if constexpr (has_lazy) {
 		seg.update(0, 10, inf);
-		auto old_lazy = seg.update(3, 4, 10);
+		auto upd1 = [&]() { return seg.update(3, 4, 10); };
+		NodePtr old_lazy;
+		if constexpr (has_pers) {
+			old_lazy = upd1();
+		} else {
+			upd1();
+		}
 		assert(seg.query(0, 10) == 10);
-		assert(seg.query(0, 10, old_lazy) == 10);
+		if constexpr (has_pers) {
+			assert(seg.query(0, 10, old_lazy) == 10);
+		}
 		seg.update(2, 4, 20);
 		assert(seg.query(3, 4) == 30);
 		assert(seg.query(2, 4) == 30);
@@ -170,8 +192,25 @@ void test_segment_tree() {
 		assert(seg.query(1, 10) == 30);
 		seg.update(0, 2, 10);
 		assert(seg.query(1, 10) == 30);
-		assert(seg.query(0, 10, old) == 0);
-		assert(seg.query(2, 4, old2) == 2);
-		assert(seg.query(0, 10, old_lazy) == 10);
+		if constexpr (has_pers) {
+			assert(seg.query(0, 10, old) == 0);
+			assert(seg.query(2, 4, old2) == 2);
+			assert(seg.query(0, 10, old_lazy) == 10);
+		}
 	}
+}
+void test_segment_tree() {
+	test_segment_tree_impl<false, false, false, 2>();
+	// Test base
+	test_segment_tree_impl<false, false, false, 3>();
+	// Test lazy
+	test_segment_tree_impl<true, false, false, 2>();
+	// Test ptr
+	test_segment_tree_impl<false, true, false, 2>();
+	// test lazy and ptr
+	test_segment_tree_impl<false, true, false, 2>();
+	// test ptr and pers
+	test_segment_tree_impl<false, true, true, 2>();
+	// test lazy and ptr and pers
+	test_segment_tree_impl<true, true, true, 2>();
 }
