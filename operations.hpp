@@ -10,10 +10,8 @@ aug(+);
 aug(-);
 aug(*);
 aug(/);
-struct id {};
-template <typename Group> Group operator/(Group const &a, Group const &b) {
-	return a * (id{} / b);
-}
+template <typename T> enable_if_t<is_floating_point_v<T>, T> invert(const T &x) { return 1 / x; }
+template <typename Group> Group operator/(Group const &a, Group const &b) { return a * invert(b); }
 template <typename T1, typename T2>
 auto constexpr operator-(const T1 &a, const T2 &b) {
 	return a + -b;

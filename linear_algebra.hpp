@@ -111,6 +111,7 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	}
 	return {move(b), det};
 }
+// TODO invert() for matrix
 tm(...) auto operator/(matrix<T...> b, matrix<T...> a) {
 	/*! Returns \f$a^{-1}b\f$*/
 	return gauss(b, a).first;

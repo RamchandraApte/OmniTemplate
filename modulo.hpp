@@ -1,12 +1,17 @@
 #pragma once
 #include "core.hpp"
 namespace modulo_namespace {
+template <typename... Args> using invert_t = decltype(invert(std::declval<Args>()...));
 template <typename T> T power(T a, ll b) {
 	/*! Return \f$a^b\f$ */
-	/*if(b < 0){
-		a = identity(a, {})/a;
-		b = -b;
-	}*/
+	if (b < 0) {
+		if constexpr (experimental::is_detected_v<invert_t, decltype(a)>) {
+			a = invert(a);
+			b = -b;
+		} else {
+			assert(("b < 0 but unable to inverse a", false));
+		}
+	}
 	T ret = identity(multiplies<>{}, a);
 	for (; b; b >>= 1, a *= a) {
 		if (b & 1) {
@@ -64,7 +69,7 @@ modulo operator*(modulo const &a, modulo const &b) {
 	}
 	return {rem, no_mod{}};
 }
-modulo operator/(id, modulo const &b) {
+modulo invert(modulo const &b) {
 	/*! Computes the modular inverse \f$b^{-1}\f$ */
 	assert(b != 0);
 	return power(b, modulo::modulus - 2);
@@ -78,6 +83,8 @@ void test_power() {
 	assert(power(3, 10) == 59049);
 	with _m{static_cast<ll>(1e9 + 7), modulo::modulus};
 	assert(power(modulo{3}, 1000) == modulo{56888193});
+	assert(power(modulo{3}, -1000) * power(modulo{3}, 1000) == 1);
+	assert(power(modulo{1}, 0) == 1);
 }
 void test_md() {
 	with _m{7, modulo::modulus};
