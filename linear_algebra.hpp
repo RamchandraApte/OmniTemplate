@@ -111,9 +111,11 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	}
 	return {move(b), det};
 }
-// TODO test invert()
 template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) { return identity(multiplies<>{}, a) / a; }
-template <typename... Ts> void test_invert_impl(const matrix<Ts...> &a) { assert(invert(a) * a == identity(multiplies<>{}, a)); }
+template <typename... Ts> void test_invert_impl(const matrix<Ts...> &a) {
+	assert(invert(a) * a == identity(multiplies<>{}, a));
+	assert(a * invert(a) == identity(multiplies<>{}, a));
+}
 void test_invert() {
 	with _m{ll(1e9 + 7), modulo::modulus};
 	matrix<modulo> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};

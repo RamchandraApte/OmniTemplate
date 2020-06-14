@@ -48,7 +48,7 @@ template <typename Trp>[[nodiscard]] Trp *join(Trp *l, Trp *r) {
 	/*! All the keys in l are less than the keys in r*/
 	down(l);
 	down(r);
-	auto ret = [&]() {
+	auto ret = [&] {
 		if (!l) {
 			return r;
 		} else if (!r) {

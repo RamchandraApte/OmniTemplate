@@ -194,7 +194,7 @@ modulo primitive_root() {
 	auto tot = totient(modulo::modulus);
 	auto pfactor = fac(tot);
 	fo(i, 1, modulo::modulus) {
-		auto is_primitive_root = [&]() {
+		auto is_primitive_root = [&] {
 			if (gcd(i, modulo::modulus) != 1) {
 				return false;
 			}

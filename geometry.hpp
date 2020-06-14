@@ -45,8 +45,7 @@ auto area(const point &a, const point &b, const point &c) {
 auto ccw(const point &a, const point &b, const point &c) {
 	/*! Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
 	 * is counterclockwise. Throws std::invalid_argument if a, b, c are
-	 * collinear. */
-	// TODO what if points are identical?
+	 * collinear and distinct. */
 	ll w = area(a, b, c);
 	if (!(a == b || a == c || b == c || w)) {
 		throw invalid_argument{"Points are collinear."};

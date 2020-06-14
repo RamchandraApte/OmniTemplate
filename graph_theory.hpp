@@ -37,9 +37,8 @@ auto shortest_dist(vector<vector<pr>> graph, ll source) {
 		if (di != d[a]) {
 			continue;
 		}
-		for (const auto &pb : graph[a]) {
-			// TODO Why doesn't the macro pb expand?
-			const auto &[b, w] = pb;
+		for (const auto &edge : graph[a]) {
+			const auto &[b, w] = edge;
 			auto &x = d[b];
 			auto nw = di + w;
 			if (nw < x) {

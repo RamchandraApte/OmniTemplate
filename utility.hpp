@@ -10,7 +10,7 @@ template <typename T> struct [[nodiscard]] with {
 };
 void test_with() {
 	ll var = 12;
-	auto inner_func = [&]() {
+	auto inner_func = [&] {
 		with _w(23, var);
 		assert(var == 23);
 		var = 45;
@@ -40,7 +40,6 @@ template <typename T> auto cache(const T &f) {
 		return ch[arg];
 	};
 }
-// TODO why doesn't [[nodiscard]] generated a compiler warning?
 template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 [[nodiscard]] auto uniq(Cont v, Eq const &up = Eq{}, T const &sp = T{}) {
 	/*! Remove all duplicates element from v so that all elements in v are

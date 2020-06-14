@@ -2,26 +2,17 @@
 #include "core.hpp"
 #include "graph_theory.hpp"
 namespace sat2 {
-optional<vector<char>> sat2(const vector<pr> &cnf) {
+optional<vector<char>> sat2(const vector<array<ll, 2>> &cnf, const ll n) {
 	/*!
 	Takes a 2 SAT instance and returns a solution.
 	Numerical negation represents logical negation.
 	0 means empty
 	*/
-	ll n = 0;
-	for (const auto &clause : cnf) {
-		max_eq(n, static_cast<ll>(
-			      max(abs(clause.first), abs(clause.second))));
-	}
 	vector<vl> graph(2 * n + 1);
 	for (const auto &clause : cnf) {
-		// TODO why if statement?
-		if (clause.first) {
-			graph[n - clause.first].push_back(n + clause.second);
-		}
-		if (clause.second) {
-			graph[n - clause.second].push_back(n + clause.first);
-		}
+		// Construct two implications that represent the clause
+		graph[n - clause[0]].push_back(n + clause[1]);
+		graph[n - clause[1]].push_back(n + clause[0]);
 	}
 	dfs topo{graph};
 	topo();
@@ -39,16 +30,16 @@ optional<vector<char>> sat2(const vector<pr> &cnf) {
 	return vals;
 }
 void test_sat2() {
-	const auto ret1 = sat2({{2, 1}, {-2, 3}}).value();
+	const auto ret1 = sat2({{2, 1}, {-2, 3}}, 3).value();
 	assert(ret1[1] || ret1[2]);
 	assert(!ret1[2] || ret1[3]);
-	const auto ret2 = sat2({{2, 1}, {3, 2}, {-2, -1}}).value();
+	const auto ret2 = sat2({{2, 1}, {3, 2}, {-2, -1}}, 3).value();
 	assert(ret2[1] || ret2[2]);
 	assert(ret2[2] || ret2[3]);
 	assert(!ret2[2] || !ret2[1]);
-	const auto ret3 = sat2({{1, 1}, {-1, -1}});
+	const auto ret3 = sat2({{1, 1}, {-1, -1}}, 1);
 	assert(!ret3);
-	const auto ret4 = sat2({{1, 2}, {3, 2}, {-1, -1}, {-2, -2}});
+	const auto ret4 = sat2({{1, 2}, {3, 2}, {-1, -1}, {-2, -2}}, 3);
 	assert(!ret4);
 }
 } // namespace sat2

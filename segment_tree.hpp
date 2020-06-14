@@ -111,7 +111,7 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 			return idx;
 		}
 		fo(inc, base) {
-			auto get_update = [&]() { return update(l, r, val, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1)); };
+			auto get_update = [&] { return update(l, r, val, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1)); };
 			if constexpr (has_pers) {
 				get_child(idx, inc) = get_update();
 			} else {
@@ -156,7 +156,7 @@ template <bool has_lazy, bool has_ptr, bool has_pers, size_t base> void test_seg
 	assert(seg.query(1, 3) == -inf);
 	assert(seg.query(7, 9) == -inf);
 	fo(i, 0, 10) { seg.update(i, i + 1, inf); }
-	auto upd_old = [&]() { return seg.update(0, 1, 0); };
+	auto upd_old = [&] { return seg.update(0, 1, 0); };
 	using NodePtr = typename decltype(seg)::NodeExp *;
 	NodePtr old;
 	if constexpr (has_pers) {
@@ -188,7 +188,7 @@ template <bool has_lazy, bool has_ptr, bool has_pers, size_t base> void test_seg
 	fo(i, 0, 10) { seg.update(i, i + 1, -inf); }
 	if constexpr (has_lazy) {
 		seg.update(0, 10, inf);
-		auto upd1 = [&]() { return seg.update(3, 4, 10); };
+		auto upd1 = [&] { return seg.update(3, 4, 10); };
 		NodePtr old_lazy;
 		if constexpr (has_pers) {
 			old_lazy = upd1();
