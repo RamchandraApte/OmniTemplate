@@ -198,6 +198,7 @@ template <bool has_lazy, bool has_ptr, bool has_pers, size_t base> void test_seg
 	}
 }
 void test_segment_tree() {
+	timer time_seg;
 	test_segment_tree_impl<false, false, false, 2>();
 	// Test base
 	test_segment_tree_impl<false, false, false, 3>();
