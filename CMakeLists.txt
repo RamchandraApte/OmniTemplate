@@ -8,4 +8,4 @@ add_executable(test test.cpp)
 
 set (CMAKE_CXX_FLAGS "-DDEBUG")
 
-target_precompile_headers(test PRIVATE template.hpp)
+# target_precompile_headers(test PRIVATE template.hpp)

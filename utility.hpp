@@ -1,12 +1,11 @@
 #pragma once
 #include "range.hpp"
 namespace utility {
-// TODO templatize this
-struct [[nodiscard]] with {
+template <typename T> struct [[nodiscard]] with {
 	/*! Sets v to new_ temporary while with object is alive */
-	ll old; //!< Original value of the variable
-	ll &v;	//!< Reference to variable
-	with(ll new_, ll & v_) : old(v_), v(v_) { v = new_; }
+	T old; //!< Original value of the variable
+	T &v;  //!< Reference to variable
+	template <typename Tp> with(const Tp new_, T &v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
 void test_with() {

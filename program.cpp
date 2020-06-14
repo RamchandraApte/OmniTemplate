@@ -1,4 +1,4 @@
-#include "template.h"
+#include "template.hpp"
 void main2() {
   I(a);
   I(b);

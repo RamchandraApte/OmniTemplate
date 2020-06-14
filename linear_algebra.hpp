@@ -111,8 +111,17 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	}
 	return {move(b), det};
 }
-// TODO invert() for matrix
-tm(...) auto operator/(matrix<T...> b, matrix<T...> a) {
+// TODO test invert()
+template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) { return identity(multiplies<>{}, a) / a; }
+template <typename... Ts> void test_invert_impl(const matrix<Ts...> &a) { assert(invert(a) * a == identity(multiplies<>{}, a)); }
+void test_invert() {
+	with _m{ll(1e9 + 7), modulo::modulus};
+	matrix<modulo> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
+	matrix<modulo> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
+	test_invert_impl(a);
+	test_invert_impl(b);
+}
+tm(...) auto operator/(const matrix<T...> &b, const matrix<T...> &a) {
 	/*! Returns \f$a^{-1}b\f$*/
 	return gauss(b, a).first;
 }
@@ -131,6 +140,7 @@ auto &operator<<(Stream &os, matrix<T...> const &m) {
 	return os << "}";
 }
 void test_matrix() {
+	with _m{ll(1e9 + 7), modulo::modulus};
 	matrix<modulo> a{{2, 3, 5}, {3, 6, 10}, {5, 9, 16}};
 	matrix<modulo> b{{1, 2, 3}, {4, 5, 6}, {9, 7, 8}};
 	assert(a * (b / a) == b);
@@ -151,6 +161,7 @@ void test_lin_recur() {
 void test_linear_algebra() {
 	test_matrix();
 	test_lin_recur();
+	test_invert();
 }
 } // namespace linear_algebra
 using namespace linear_algebra;
