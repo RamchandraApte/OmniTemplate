@@ -2,7 +2,7 @@
 #include "core.hpp"
 #include "modulo.hpp"
 namespace permutation {
-// TODO(ram): lazily computed permutation
+// TODO: lazily computed permutation
 class Permutation : public vector<ll> {
       public:
 	using vector<ll>::vector;
@@ -35,7 +35,7 @@ class Permutation : public vector<ll> {
 		}
 	}
 };
-Permutation identity(multiplies<> /*unused*/, const Permutation &perm) { return Permutation(perm.size()); }
+Permutation identity(multiplies<>, const Permutation &perm) { return Permutation(perm.size()); }
 Permutation operator*(const Permutation &a, const Permutation &b) {
 	/*! Returns the composition of permutations a and b.*/
 	assert(a.size() == b.size());
