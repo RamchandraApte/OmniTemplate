@@ -128,6 +128,22 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		}
 		return root = update(l, r, val, root, 0, ceil_size);
 	}
+	void destroy(Node node) {
+		/*! Deallocate memory associated with the subtree of node*/
+		if constexpr (has_ptr && !has_pers) {
+			if (!node) {
+				return;
+			}
+			fo(inc, base) { destroy(get_child(node, inc)); }
+			delete node;
+		}
+	}
+	~SegmentTree() {
+		/*! Free memory allocator by the segment tree. Note: does not work for persistent*/
+		if constexpr (has_ptr && !has_pers) {
+			destroy(root);
+		}
+	}
 
       private:
 	size_t size_;
