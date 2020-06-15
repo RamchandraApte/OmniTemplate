@@ -12,6 +12,7 @@ template <typename T, typename Semilattice> class SparseTable {
 				meet[pw][i] = Semilattice{}(meet[pw - 1][i], meet[pw - 1][min(i + half, static_cast<ll>(arr.size()) - 1)]);
 			}
 		}
+		dbg(meet);
 	}
 	T query(ll l, ll r) const {
 		const auto len = r - l;
