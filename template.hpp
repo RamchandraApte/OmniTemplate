@@ -18,6 +18,7 @@
 #include "polynomial.hpp"
 #include "queue.hpp"
 #include "segment_tree.hpp"
+#include "sparse_table.hpp"
 #include "splay_tree.hpp"
 #include "string.hpp"
 #include "time.hpp"

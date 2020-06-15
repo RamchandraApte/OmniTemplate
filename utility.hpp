@@ -82,7 +82,7 @@ size_t bit_ceil(size_t x) {
 	}
 	return 1ULL << (sizeof(size_t) * CHAR_BIT - __builtin_clzll(x - 1));
 }
-void test_next_pow_of_2() {
+void test_bit_ceil() {
 	assert(bit_ceil(0) == 1);
 	assert(bit_ceil(1) == 1);
 	assert(bit_ceil(2) == 2);
@@ -91,6 +91,18 @@ void test_next_pow_of_2() {
 	assert(bit_ceil(5) == 8);
 	assert(bit_ceil((1LL << 45) - 100) == 1LL << 45);
 	assert(bit_ceil((1LL << 45)) == 1LL << 45);
+}
+size_t base_ceil(const size_t x, const size_t base) {
+	ll pw = 1;
+	for (; pw < x; pw *= base)
+		;
+	return pw;
+}
+size_t ceil_log(const size_t x, const size_t base) {
+	ll pw = 1, cnt = 0;
+	for (; pw < x; pw *= base, ++cnt) {
+	}
+	return cnt;
 }
 [[nodiscard]] ll next_comb(ll x) {
 	/*! Formally, returns the smallest integer y > x such that popcount(y) =
@@ -150,7 +162,7 @@ void test_utility() {
 	test_uniq();
 	test_next_comb();
 	test_ar();
-	test_next_pow_of_2();
+	test_bit_ceil();
 	test_map_args();
 }
 } // namespace utility

@@ -1,12 +1,6 @@
 #pragma once
 #include "core.hpp"
 // TODO non commutative monoids, specify the ordering
-size_t base_ceil(const size_t x, const size_t base) {
-	ll pw = 1;
-	for (; pw < x; pw *= base)
-		;
-	return pw;
-}
 // TODO multidimensional
 /*! Generic persistent explicit/implicit lazy based segment tree
  * T is the value type of the segment tree
