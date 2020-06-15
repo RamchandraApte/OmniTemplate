@@ -12,7 +12,6 @@ template <typename T, typename Semilattice> class SparseTable {
 				meet[pw][i] = Semilattice{}(meet[pw - 1][i], meet[pw - 1][min(i + half, static_cast<ll>(arr.size()) - 1)]);
 			}
 		}
-		dbg(meet);
 	}
 	T query(ll l, ll r) const {
 		const auto len = r - l;
@@ -24,7 +23,6 @@ template <typename T, typename Semilattice> class SparseTable {
       private:
 	vc<vl> meet; //!< meet[pw][i] stores the meet of elements in range [i, i+2^pw)
 };
-// TODO Fix debug
 template <typename T, typename Monoid> class DisjointSparseTable {
       public:
 	explicit DisjointSparseTable(vector<T> arr) : sum(ceil_log(arr.size(), 2), vector<T>(base_ceil(arr.size(), 2))) {
@@ -52,6 +50,7 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 	}
 	T query(ll l, ll r) const {
 		/*! Returns sum of Monoid over range [l, r)*/
+		assert(l < r);
 		--r;
 		const auto num_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);
 		const auto lvl = sum.size() - 1 - num_diff;
@@ -66,7 +65,6 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 	vector<vector<T>> sum;
 };
 template <template <typename...> typename Table, typename T, typename Monoid> void test_sparse_table_impl() {
-	// TODO test non idempotent for disjoint sparse table
 	vector<T> data{6, 2, 4, 1, 7, 3, 4, 2, 7, 2, 4, 1, 6};
 	Table<T, Monoid> sp{data};
 	fo(start, data.size()) {

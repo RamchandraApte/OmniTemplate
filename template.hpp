@@ -9,6 +9,7 @@
 #include "fft.hpp"
 #include "geometry.hpp"
 #include "graph_theory.hpp"
+#include "hld.hpp"
 #include "linear_algebra.hpp"
 #include "main.hpp"
 #include "modulo.hpp"

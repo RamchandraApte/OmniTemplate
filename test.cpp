@@ -18,6 +18,7 @@ void test_all() {
 	test_segment_tree();
 	test_polynomial();
 	test_sparse_table();
+	test_hld();
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 void main2() { test_all(); }

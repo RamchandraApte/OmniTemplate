@@ -3,7 +3,7 @@
 #include "range.hpp"
 // Enabling LOCAL enables debug features
 #ifdef LOCAL
-#define dbg(x) (++depth, debug(x, #x##s))
+#define dbg(x) (++debug_tools::depth, debug(x, #x##s))
 #else
 #define NDEBUG
 #define dbg(x) (x)
