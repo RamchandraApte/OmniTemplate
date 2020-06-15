@@ -26,14 +26,15 @@ template <typename T, typename Semilattice> class SparseTable {
 // TODO Fix debug
 template <typename T, typename Monoid> class DisjointSparseTable {
       public:
-	explicit DisjointSparseTable(vector<T> arr) : sum(ceil_log(arr.size(), 2), vector<ll>(base_ceil(arr.size(), 2))) {
+	explicit DisjointSparseTable(vector<T> arr) : sum(ceil_log(arr.size(), 2), vector<T>(base_ceil(arr.size(), 2))) {
 		arr.resize(sum[0].size(), identity(Monoid{}, T{}));
 		fo(lvl, sum.size()) {
 			fo(blk, 1LL << lvl) {
+				// The first half of the block contains suffix sums, the second half contains prefix sums
 				const auto st = blk << (sum.size() - lvl);
 				const auto ed = (blk + 1) << (sum.size() - lvl);
 				const auto mid = (ed + st) / 2;
-				ll val = arr[mid];
+				auto val = arr[mid];
 				sum[lvl][mid] = val;
 				fo(x, mid + 1, ed) {
 					val = Monoid{}(val, arr[x]);
@@ -47,36 +48,34 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 				}
 			}
 		}
-		for (auto &x : sum) {
-			for (auto &y : x) {
-				cout << y << " ";
-			}
-			cout << endl;
-		}
-		cout << endl;
 	}
 	T query(ll l, ll r) const {
+		/*! Returns sum of Monoid over range [l, r)*/
+		--r;
 		const auto num_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);
 		const auto lvl = sum.size() - 1 - num_diff;
 		auto ret = sum[lvl][l];
 		if (l != r) {
-			ret = Monoid{}(ret, sum[lvl][r - 1]);
+			ret = Monoid{}(ret, sum[lvl][r]);
 		}
 		return ret;
 	}
 
       private:
-	vector<vector<ll>> sum;
+	vector<vector<T>> sum;
 };
-template <template <typename...> typename Table> void test_sparse_table_impl() {
+template <template <typename...> typename Table, typename T, typename Monoid> void test_sparse_table_impl() {
 	// TODO test non idempotent for disjoint sparse table
-	vector<ll> data{6, 2, 4, 1, 7, 3, 4, 2, 7, 2, 4, 1, 6};
-	Table<ll, Min> sp{data};
+	vector<T> data{6, 2, 4, 1, 7, 3, 4, 2, 7, 2, 4, 1, 6};
+	Table<T, Monoid> sp{data};
 	fo(start, data.size()) {
-		fo(end, start + 1, data.size()) { assert(sp.query(start, end) == *min_element(begin(data) + start, begin(data) + end)); }
+		fo(end, start + 1, data.size()) { assert(sp.query(start, end) == accumulate(begin(data) + start, begin(data) + end, identity(Monoid{}, T{}), Monoid{})); }
 	}
 }
 void test_sparse_table() {
-	test_sparse_table_impl<SparseTable>();
-	test_sparse_table_impl<DisjointSparseTable>();
+	with _m{ll(1e9 + 7), modulo::modulus};
+	test_sparse_table_impl<SparseTable, ll, Min>();
+	test_sparse_table_impl<DisjointSparseTable, ll, Min>();
+	test_sparse_table_impl<DisjointSparseTable, ll, plus<>>();
+	test_sparse_table_impl<DisjointSparseTable, modulo, multiplies<>>();
 }
