@@ -83,7 +83,7 @@ using order_stat_map =
 auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
 auto const delim = ", "s; /*!< Delimiter for debug output */
 auto constexpr tau = 2 * 3.1415926535897932384626433L; /*!< Pi */
-bool multitest = false;
+extern bool multitest;
 
 #include "io.hpp"
 #include "debug.hpp"

@@ -1,4 +1,5 @@
 #include "template.hpp"
+bool multitest{};
 void test_all() {
 	test_utility();
 	test_graph_theory();

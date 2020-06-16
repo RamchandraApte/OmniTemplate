@@ -23,11 +23,9 @@ template <typename Func> struct fix {
 	 * passed to Func as the first argument.*/
 	Func func;
 	fix(const Func &func_) : func(func_) {}
-	template <typename... Ts> auto operator()(Ts &&... args) const {
-		return func(this, forward<decltype(args)>(args)...);
-	}
+	template <typename... Args> decltype(auto) operator()(Args &&... args) const { return func(this, forward<Args>(args)...); }
 };
-#define lambda(f) [](auto... args) { return f(args...); }
+#define lambda(f) [](auto &&... args) { return f(forward<decltype(args)>(args)...); }
 template <typename T> auto max_eq(T &x, const T &y) { x = max(x, y); }
 template <typename T> auto min_eq(T &x, const T &y) { x = min(x, y); }
 template <typename T> auto cache(const T &f) {
@@ -35,7 +33,7 @@ template <typename T> auto cache(const T &f) {
 	T ch;
 	return [=](const auto &arg) mutable {
 		if (ch.find(arg) == end(ch)) {
-			ch[arg] = f(arg);
+			return ch[arg] = f(arg);
 		}
 		return ch[arg];
 	};
@@ -54,7 +52,7 @@ void test_uniq() {
 }
 template <typename T = less<>, typename Func>
 auto map_args(const Func &f, T g = T{}) {
-	return [=](const auto &... args) { return g(f(args)...); };
+	return [=](auto &&... args) -> decltype(auto) { return g(f(forward<decltype(args)>(args))...); };
 }
 void test_map_args() {
 	vl a{24, 25};
