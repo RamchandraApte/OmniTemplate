@@ -20,7 +20,8 @@ template <typename Func> void bench(Func a) {
 			ans += ((-i) % (j));
 		}
 	}
-	// TODO avoid optimization of ans?
+	// To avoid the benchmark from being optimized out. I don't know if this actually works.
+	const auto volatile _unused = ans;
 }
 } // namespace time_tools
 using namespace time_tools;

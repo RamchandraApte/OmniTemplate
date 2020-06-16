@@ -50,13 +50,12 @@ void test_uniq() {
 	assert((uniq(vl{2, -1, 3, -1, 2, 3}) == vl{-1, 2, 3}));
 	assert((uniq<equal_to<>, greater<>>(vl{1, -3, 5}) == vl{5, 1, -3}));
 }
-template <typename T = less<>, typename Func>
-auto map_args(const Func &f, T g = T{}) {
+template <typename T = less<>, typename Func> auto key_compare(const Func &f, T g = T{}) {
 	return [=](auto &&... args) -> decltype(auto) { return g(f(forward<decltype(args)>(args))...); };
 }
-void test_map_args() {
+void test_key_compare() {
 	vl a{24, 25};
-	assert(map_args<greater<>>([&](ll i) { return a[i]; })(1, 0));
+	assert(key_compare<greater<>>([&](ll i) { return a[i]; })(1, 0));
 }
 template <typename T> auto prev_less(const T &v) {
 	ll n = v.size();
@@ -167,7 +166,7 @@ void test_utility() {
 	test_next_comb();
 	test_ar();
 	test_bit_ceil();
-	test_map_args();
+	test_key_compare();
 }
 } // namespace utility
 using namespace utility;

@@ -3,7 +3,7 @@
 namespace std {
 bool operator<(point const &a, point const &b) {
 	/*! Compare points a and b lexicographically*/
-	return map_args([](auto x) { return tuple{real(x), imag(x)}; })(a, b);
+	return key_compare([](auto x) { return tuple{real(x), imag(x)}; })(a, b);
 }
 } // namespace std
 namespace geometry {
@@ -72,10 +72,7 @@ auto hull(vector<point> v, df(do_sort, true)) {
 	/*! Returns the convex hull of the points in v*/
 	vector<point> h;
 	if (do_sort) {
-		const auto p =
-		    *min_element(al(v), map_args([](point a) {
-					 return tuple{imag(a), real(a)};
-				 }));
+		const auto p = *min_element(al(v), key_compare([](point a) { return tuple{imag(a), real(a)}; }));
 		sort(al(v), bind(ccw, p, _1, _2));
 		h.push_back(p);
 	}
@@ -106,8 +103,7 @@ void test_convex_min() {
 struct cht {
 	vector<point> lines; //!< The lines, specified as (a,b) for ax+b.
 	explicit cht(vector<point> v) {
-		v = uniq(v, map_args(lambda(imag), equal_to{}),
-			 map_args(lambda(conj)));
+		v = uniq(v, key_compare(lambda(imag), equal_to{}), key_compare(lambda(conj)));
 		lines = hull(v, false);
 	}
 	auto min(ll x) {
