@@ -128,6 +128,12 @@ void test_next_comb() {
 	x = next_comb(x);
 	assert(x == 0b100);
 }
+template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
+	/*! Stable sorts a and b by func.*/
+	if (func(a) > func(b)) {
+		swap(a, b);
+	}
+}
 tm() struct ar { using type = T; };
 tm() using ar_t = typename ar<T>::type;
 template <typename T, size_t n> struct ar<T[n]> {
