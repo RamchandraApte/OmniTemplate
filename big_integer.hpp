@@ -4,7 +4,7 @@ namespace bigint {
 struct bigint {
 	vector<ull> v;
 	explicit bigint(const vector<ull> &v_) : v(v_) {}
-	auto operator[](size_t i) const { return i < v.size() ? v[i] : 0; }
+	auto operator[](ll i) const { return i < ssize(v) ? v[i] : 0; }
 };
 template <typename Stream> auto &operator<<(Stream &os, bigint const &a) {
 	return os << a.v;

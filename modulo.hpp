@@ -5,8 +5,8 @@ template <typename... Args> using invert_t = decltype(invert(std::declval<Args>(
 template <typename T> T power(T a, ll b) {
 	/*! Return \f$a^b\f$ */
 	if (b < 0) {
-		if constexpr (experimental::is_detected_v<invert_t, decltype(a)>) {
-			a = invert(a);
+		if constexpr (experimental::is_detected_v<invert_t, multiplies<>, decltype(a)>) {
+			a = invert(multiplies{}, a);
 			b = -b;
 		} else {
 			assert(("b < 0 but unable to inverse a", false));
@@ -69,7 +69,7 @@ modulo operator*(modulo const &a, modulo const &b) {
 	}
 	return {rem, no_mod{}};
 }
-modulo invert(modulo const &b) {
+modulo invert(multiplies<>, modulo const &b) {
 	/*! Computes the modular inverse \f$b^{-1}\f$ */
 	assert(b != 0);
 	return power(b, modulo::modulus - 2);
@@ -99,6 +99,6 @@ void test_modulo() {
 using namespace modulo_namespace;
 namespace std {
 template <> struct hash<modulo> {
-	size_t operator()(modulo const &x) const { return x.x; }
+	ll operator()(modulo const &x) const { return x.x; }
 };
 } // namespace std

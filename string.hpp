@@ -21,7 +21,7 @@ struct hash_str {
 			x *= modulo{inv};
 		}
 	}
-	size_t operator()(const string_view v) const {
+	ll operator()(const string_view v) const {
 		with _w{lcg_mod, modulo::modulus};
 		ll l = v.data() - st;
 		return ll((h[l + v.size()] - h[l]) * p[l]);

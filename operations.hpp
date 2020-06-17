@@ -10,8 +10,8 @@ aug(+);
 aug(-);
 aug(*);
 aug(/);
-template <typename T> enable_if_t<is_floating_point_v<T>, T> invert(const T &x) { return 1 / x; }
-template <typename Group> Group operator/(Group const &a, Group const &b) { return a * invert(b); }
+template <typename T> enable_if_t<is_floating_point_v<T>, T> invert(multiplies<>, const T &x) { return 1 / x; }
+template <typename Group> Group operator/(Group const &a, Group const &b) { return a * invert(multiplies{}, b); }
 template <typename T1, typename T2>
 auto constexpr operator-(const T1 &a, const T2 &b) {
 	return a + -b;
@@ -76,14 +76,7 @@ tm() auto operator*(vector<T> a, vector<T> b) {
 	fo(i, a.size()) { c[i] = a[i] * b[i]; }
 	return c;
 }
-template <typename Iterator>
-auto operator+(
-    Iterator it,
-    enable_if_t<
-	!is_same<typename iterator_traits<decltype(it)>::iterator_category,
-		 random_access_iterator_tag>::value,
-	size_t>
-	n) {
+template <typename Iterator> auto operator+(Iterator it, enable_if_t<!is_same<typename iterator_traits<decltype(it)>::iterator_category, random_access_iterator_tag>::value, ll> n) {
 	advance(it, n);
 	return it;
 }

@@ -7,7 +7,6 @@ template <typename T> struct SplayTree {
 	/*! Splay tree node */
 	struct Node {
 	      public:
-		// TODO Constructor?
 		T value;
 		array<Node *, 2> child{};
 		Node *parent{};
@@ -39,7 +38,7 @@ template <typename T> struct SplayTree {
 		}
 	};
 	Node *root{}; /*!< Root node */
-	size_t size_{}; /*!< Size of the splay tree*/
+	ll size_{};   /*!< Size of the splay tree*/
 	SplayTree() {}
 	~SplayTree() { destroy(root); }
 	static void destroy(Node *const node) {
@@ -60,7 +59,6 @@ template <typename T> struct SplayTree {
 	}
 	static bool side(Node *const child) {
 		/*! Returns true if child is on the right, and false otherwise*/
-		// TODO use an enum for this
 		return child->parent->child[1] == child;
 	}
 	static void rotate(Node *const x) {
@@ -163,7 +161,7 @@ template <typename T> struct SplayTree {
 			;
 		return x;
 	}
-	size_t size() { return size_; }
+	ll size() { return size_; }
 	bool empty() { return size() == 0; }
 	iterator begin() { return iterator{extremum<false>(root)}; }
 	iterator end() { return iterator{nullptr}; }

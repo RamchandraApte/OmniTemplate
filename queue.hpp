@@ -97,7 +97,7 @@ class MinStack : public Base {
       public:
 	using container_type = T;
 	using value_type = T;
-	using size_type = size_t;
+	using size_type = ll;
 	using reference = value_type &;
 	using const_reference = const value_type &;
 	void push(const T &val) { Base::push({val, ::min(val, min())}); }

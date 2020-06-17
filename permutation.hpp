@@ -2,12 +2,14 @@
 #include "core.hpp"
 #include "modulo.hpp"
 namespace permutation {
-// TODO: lazily computed permutation
 class Permutation : public vector<ll> {
       public:
-	using vector<ll>::vector;
 	using vector<ll>::operator[];
-	explicit Permutation(size_t n) : vector<ll>(n) { iota(this.begin(), this.end(), 0LL); }
+	explicit Permutation(ll n) : vector<ll>(n) {
+		iota(this.begin(), this.end(), 0LL);
+		dbg(this);
+	}
+	explicit Permutation(const initializer_list<ll> &arr) : vector<ll>{arr} {}
 	[[nodiscard]] vector<vector<ll>> to_cycles() const {
 		/*! Returns vector of cycles*/
 		vector<ll> vis(this.size());
@@ -26,16 +28,16 @@ class Permutation : public vector<ll> {
 		}
 		return cycles;
 	}
-	explicit Permutation(const vector<vector<ll>> &cycles, const size_t n, const ll shift = 1) : Permutation(n) {
+	explicit Permutation(const vector<vector<ll>> &cycles, const ll n, const ll shift = 1) : Permutation(n) {
 		for (const auto &cycle : cycles) {
 			fo(i, cycle.size()) {
-				with _m{static_cast<ll>(cycle.size()), modulo::modulus};
+				with _m{ssize(cycle), modulo::modulus};
 				this[cycle[i]] = cycle[static_cast<ll>(modulo{i} + shift)];
 			}
 		}
 	}
 };
-Permutation identity(multiplies<>, const Permutation &perm) { return Permutation(perm.size()); }
+Permutation identity(multiplies<>, const Permutation &perm) { return Permutation(ssize(perm)); }
 Permutation operator*(const Permutation &a, const Permutation &b) {
 	/*! Returns the composition of permutations a and b.*/
 	assert(a.size() == b.size());
@@ -43,12 +45,12 @@ Permutation operator*(const Permutation &a, const Permutation &b) {
 	fo(i, a.size()) { c[i] = a[b[i]]; }
 	return c;
 }
-Permutation invert(const Permutation &p) {
+Permutation invert(multiplies<>, const Permutation &p) {
 	Permutation inv(p.size());
 	fo(i, p.size()) { inv[p[i]] = i; }
 	return inv;
 }
-Permutation power(const Permutation &perm, size_t n) {
+Permutation power(const Permutation &perm, ll n) {
 	/*! Returns in linear-time, perm^n using cycle-decomposition */
 	return Permutation(perm.to_cycles(), perm.size(), n);
 }
@@ -68,7 +70,7 @@ void test_cycles() {
 }
 void test_power() {
 	Permutation perm{2, 1, 6, 4, 5, 3, 0};
-	assert(permutation::power(perm, 10) == modulo_namespace::power(perm, 10));
+	assert(dbg(permutation::power(perm, 10)) == dbg(modulo_namespace::power(perm, 10)));
 	assert(permutation::power(perm, -10) == modulo_namespace::power(perm, -10));
 }
 void test_permutation() {

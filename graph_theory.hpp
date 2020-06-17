@@ -85,16 +85,11 @@ void test_shortest_dist() {
 		assert((dijkstra == floyd));
 	}
 }
-auto mst(vector<edge> edges) {
-	/*! Returns the minimum spanning tree of the set of edges es, as a set
+auto mst(vector<edge> edges, const ll n) {
+	/*! Returns the minimum spanning forest of the set of edges es, as a set
 	 * of edges*/
-	// TODO what happens if no MST?
 	sort(al(edges));
-	auto mi = -inf;
-	for (const auto &e : edges) {
-		mi = max(mi, max(e.a, e.b));
-	}
-	dsu d{mi + 1};
+	dsu d{n};
 	vector<edge> ret;
 	for (const auto &e : edges) {
 		if (!d.join(e.a, e.b)) {
@@ -106,7 +101,7 @@ auto mst(vector<edge> edges) {
 }
 void test_mst() {
 	vector<edge> edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};
-	auto ret = mst(edges);
+	auto ret = mst(edges, 6);
 	sort(al(ret));
 	assert((ret == vector<edge>{edges[3], edges[1], edges[0]}));
 }
@@ -339,7 +334,7 @@ auto max_match(const vector<vl> &graph) {
 	}
 	return match;
 }
-size_t matching_size(const vl &matching) {
+ll matching_size(const vl &matching) {
 	return count_if(al(matching), [&](const auto x) { return x != -1; });
 }
 void test_max_match() {

@@ -72,12 +72,12 @@ template <typename T> auto prev_less(const T &v) {
 	}
 	return l;
 }
-size_t bit_ceil(size_t x) {
+ll bit_ceil(ll x) {
 	/*! Return the smallest power of two that is at least x*/
 	if (x <= 1) {
 		return 1;
 	}
-	return 1ULL << (sizeof(size_t) * CHAR_BIT - __builtin_clzll(x - 1));
+	return 1LL << (sizeof(ll) * CHAR_BIT - __builtin_clzll(x - 1));
 }
 void test_bit_ceil() {
 	assert(bit_ceil(0) == 1);
@@ -89,13 +89,13 @@ void test_bit_ceil() {
 	assert(bit_ceil((1LL << 45) - 100) == 1LL << 45);
 	assert(bit_ceil((1LL << 45)) == 1LL << 45);
 }
-size_t base_ceil(const size_t x, const size_t base) {
+ll base_ceil(const ll x, const ll base) {
 	ll pw = 1;
 	for (; pw < x; pw *= base)
 		;
 	return pw;
 }
-size_t ceil_log(const size_t x, const size_t base) {
+ll ceil_log(const ll x, const ll base) {
 	ll pw = 1, cnt = 0;
 	for (; pw < x; pw *= base, ++cnt) {
 	}
@@ -131,11 +131,11 @@ template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
 		swap(a, b);
 	}
 }
+template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
+// TODO split up utility.hpp maybe?
 tm() struct ar { using type = T; };
 tm() using ar_t = typename ar<T>::type;
-template <typename T, size_t n> struct ar<T[n]> {
-	using type = array<ar_t<T>, n>;
-};
+template <typename T, ll n> struct ar<T[n]> { using type = array<ar_t<T>, n>; };
 void test_ar() {
 	static_assert(is_same_v<ar_t<ll[2][3]>, array<array<ll, 3>, 2>>);
 	static_assert(is_same_v<ar_t<array<ll, 200>[2][3]>,

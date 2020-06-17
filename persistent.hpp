@@ -3,7 +3,6 @@
 namespace persistent {
 struct first_cmp {
 	/*! Compare based on the first member of a variable*/
-	// TODO make a key-based comparision class
 	template <typename T> bool operator()(T a, T b) const {
 		return a.first < b.first;
 	}

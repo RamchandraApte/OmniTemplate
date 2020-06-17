@@ -34,9 +34,6 @@ tm() struct matrix {
 		return const_cast<T *>(const_cast<matrix const &>(this)[i]);
 	}
 	auto operator[](const ll i) const { return &a[i * cols_n]; }
-	auto id() const {
-		return this.rows_n == 1 && this.cols_n == 1 && this[0][0] == 1;
-	}
 };
 template <typename T> auto identity(const plus<>, const matrix<T> &mat) {
 	return matrix(mat.rows_n, mat.cols_n);
@@ -68,12 +65,6 @@ tm(...) bool operator==(matrix<T...> const &a, matrix<T...> const &b) {
 }
 tm(...) auto operator*(matrix<T...> const &a, matrix<T...> const &b) {
 	/*! Returns the matrix product of a and b*/
-	if (a.id()) {
-		return b;
-	}
-	if (b.id()) {
-		return a;
-	}
 	assert(a.cols_n == b.rows_n);
 	matrix<T...> c{a.rows_n, b.cols_n};
 	fo(i, c.rows_n) {
