@@ -104,8 +104,6 @@ size_t ceil_log(const size_t x, const size_t base) {
 [[nodiscard]] ll next_comb(ll x) {
 	/*! Formally, returns the smallest integer y > x such that popcount(y) =
 	 * popcount(x). Note, such y must exist. */
-	// Uses algorithm from some blog online, I think
-	// TODO credit author
 	ll tz = __builtin_ctzll(x);
 	ll y = x + (ll{1} << tz);
 	const auto ret = y | (y ^ x) >> (2 + tz);
@@ -139,7 +137,6 @@ template <typename T, size_t n> struct ar<T[n]> {
 	using type = array<ar_t<T>, n>;
 };
 void test_ar() {
-	using std::is_same_v; // FIXME
 	static_assert(is_same_v<ar_t<ll[2][3]>, array<array<ll, 3>, 2>>);
 	static_assert(is_same_v<ar_t<array<ll, 200>[2][3]>,
 				array<array<array<ll, 200>, 3>, 2>>);
@@ -147,19 +144,15 @@ void test_ar() {
 struct random_device_patch {
 	/*! Random device patch to fix libstdc++'s broken implementation on
 	 * Windows*/
-	unsigned int operator()() {
-		return clock_::now()
-		    .time_since_epoch()
-		    .count(); // TODO Probably random enough, but could be
-			      // improved?
-	}
+	unsigned int operator()() { return clock_::now().time_since_epoch().count(); }
 	double entropy() { return 0.0; }
 };
-// TODO test this macro on codeforces
-#ifdef __MINGW32__
+
+#define USE_RANDOM_DEVICE_PATCH
+#ifdef USE_RANDOM_DEVICE_PATCH
 using random_device = random_device_patch;
 #endif
-default_random_engine reng{std::random_device{}()};
+default_random_engine reng{random_device{}()};
 void test_utility() {
 	test_with();
 	test_uniq();

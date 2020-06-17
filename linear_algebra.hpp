@@ -134,7 +134,7 @@ template <typename T> T det(const matrix<T> &a) {
 template <typename Stream, typename... T>
 auto &operator<<(Stream &os, matrix<T...> const &m) {
 	/*! Print the matrix rows, line by line*/
-	os << "mat{" << endl;
+	os << simple_tp(m) << endl;
 	fo(i, m.rows_n) {
 		copy(m[i], m[i] + m.cols_n, make_ostream_joiner(os, delim));
 		os << endl;

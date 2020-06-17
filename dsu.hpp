@@ -17,15 +17,12 @@ struct dsu {
 		if (x == y) {
 			return false;
 		}
-		if (size_[x] > size_[y]) {
-			swap(x, y);
-		}
+		swap2(x, y, [&](auto idx) { return size_[idx]; });
 		size_[y] += size_[x];
 		parent[x] = y;
 		return true;
 	}
 };
-// TODO create set class?
 template <typename Stream> auto &operator<<(Stream &os, dsu const &d) {
 	/*! Prints the set of each DSU node*/
 	os << "dsu{";
@@ -40,11 +37,11 @@ template <typename Stream> auto &operator<<(Stream &os, dsu const &d) {
 void test_dsu() {
 	dsu d{100};
 	fo(i, 100) { assert(d.find(i) == i); }
-	// TODO check return value of d()
-	d.join(3, 4);
-	d.join(6, 10);
-	d.join(6, 6);
-	d.join(10, 3);
+	assert(d.join(3, 4));
+	assert(d.join(6, 10));
+	assert(!d.join(6, 6));
+	assert(d.join(10, 3));
+	assert(!d.join(6, 3));
 	vl idx{d.find(3), d.find(4), d.find(6), d.find(10)};
 	assert(all_of(al(idx), [&](auto x) { return x == idx[0]; }));
 	fo(i, 99) { d.join(i, i + 1); }

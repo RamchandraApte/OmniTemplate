@@ -52,7 +52,7 @@ tm() auto operator<(range<T> const &a, range<T> const &b) {
 tm() auto operator&(range<T> const &a, range<T> const &b) {
 	return range<T>{max(a.bg, b.bg), min(a.ed, b.ed)};
 }
-template <typename T> auto rev(const range<T> &r) {
+template <typename Range> auto rev(const Range &r) {
 	using rev_it = reverse_iterator<decltype(begin(r))>;
 	return range{rev_it{end(r)}, rev_it{begin(r)}};
 }

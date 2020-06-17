@@ -137,6 +137,15 @@ struct gsearch {
 		parent[child] = par;
 	}
 };
+template <typename Searcher> vector<ll> get_size(const Searcher &search) {
+	vector<ll> sz(search.parent.size(), 1);
+	for (auto idx : rev(search.q)) {
+		if (search.parent[idx] != -1) {
+			sz[search.parent[idx]] += sz[idx];
+		}
+	}
+	return sz;
+}
 /*! Depth-first search */
 struct dfs : public gsearch {
 	using gsearch::operator(), gsearch::gsearch;
