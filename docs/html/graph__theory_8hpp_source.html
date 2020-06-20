@@ -106,440 +106,445 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">if</span> (di != d[a]) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="core_8hpp.html#a276c5a0e984cf60015b27252fe04fe6b">pb</a> : graph[a]) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// TODO Why doesn&#39;t the macro pb expand?</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;[b, w] = <a class="code" href="core_8hpp.html#a276c5a0e984cf60015b27252fe04fe6b">pb</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">auto</span> &amp;x = d[b];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">auto</span> nw = di + w;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (nw &lt; x) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                pv[b] = a;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                x = nw;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                q.push({x, b});</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> array&lt;vl, 2&gt;{d, pv};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#ae6ad3f54671798a8d8f3c4253ea83db4">   54</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">shortest_dist</a>(<a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <span class="keyword">const</span> &amp;graph) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// TODO do we want to consider zero-length paths?</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    assert(graph.<a class="code" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a> == graph.<a class="code" href="structlinear__algebra_1_1matrix.html#a4b8d6b65104e322826ecf447078cb953">cols_n</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">auto</span> n = graph.<a class="code" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">auto</span> d = graph;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(k, n) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, n) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keyword">auto</span> &amp;x = d[i][j];</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                x = min(x, d[i][k] + d[k][j]);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> d;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">test_shortest_dist</a>() {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    assert(<a class="code" href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">shortest_dist</a>(g) == short_dist);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> n = g.rows_n;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    vector&lt;vector&lt;pr&gt;&gt; adj(n);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, n) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, 0, n) { adj[i].push_back({j, g[i][j]}); }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(s, 0, n) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// TODO test pv</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dijkstra = <a class="code" href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">shortest_dist</a>(adj, s)[0];</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">auto</span> floyd = <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>(short_dist[s], short_dist[s] + n);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        floyd[s] = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        assert((dijkstra == floyd));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#ac47e32c1c40eb2d6e367f4d5b34d9ccc">   89</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#ac47e32c1c40eb2d6e367f4d5b34d9ccc">mst</a>(vector&lt;edge&gt; edges) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// TODO what happens if no MST?</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(edges));</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">auto</span> mi = -<a class="code" href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;e : edges) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        mi = max(mi, max(e.a, e.b));</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="structdsu__ds_1_1dsu.html">dsu</a> d{mi + 1};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    vector&lt;edge&gt; <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;e : edges) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (!d.join(e.a, e.b)) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>.push_back(e);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">  108</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">test_mst</a>() {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    vector&lt;edge&gt; edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">auto</span> <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a> = <a class="code" href="namespacegraph__theory.html#ac47e32c1c40eb2d6e367f4d5b34d9ccc">mst</a>(edges);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>));</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    assert((<a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a> == vector&lt;edge&gt;{edges[3], edges[1], edges[0]}));</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html">  115</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgraph__theory_1_1gsearch.html">gsearch</a> {</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">  116</a></span>&#160;    vector&lt;vl&gt; <span class="keyword">const</span> &amp;<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">  117</a></span>&#160;    vc&lt;char&gt; <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">  118</a></span>&#160;    deque&lt;ll&gt; <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>;      </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">  119</a></span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">parent</a>;    </div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">  120</a></span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>;      </div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">  121</a></span>&#160;    <a class="code" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">gsearch</a>(<span class="keyword">const</span> vector&lt;vector&lt;ll&gt;&gt; &amp;g_)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        : <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>(g_), <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>(<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size()), <a class="code" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">parent</a>(<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size(), -1),</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;          <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>(<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size(), <a class="code" href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>) {}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">operator()</a>(<a class="code" href="structll.html">ll</a>) = 0;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">  125</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">operator()</a>() {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="comment">/* Run the searcher on all vertices. Useful for visiting the</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">         * entire graph, and not just one connected component. */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size()) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[i]) {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keyword">this</span>(i);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">  134</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">add</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> child, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> par) {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>[child] = <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>[par] + 1;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">parent</a>[child] = par;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;};</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1dfs.html">  142</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgraph__theory_1_1dfs.html">dfs</a> : <span class="keyword">public</span> <a class="code" href="structgraph__theory_1_1gsearch.html">gsearch</a> {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">using</span> gsearch::operator(), <a class="code" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">gsearch::gsearch</a>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1dfs.html#a06079c284fde77987c6685fbac4d91d3">  144</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1dfs.html#a06079c284fde77987c6685fbac4d91d3">operator()</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> source) {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[source] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j : <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>[source]) {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[j]) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <a class="code" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">add</a>(j, source);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keyword">this</span>(j);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.push_front(source);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1bfs.html">  157</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> : <span class="keyword">public</span> <a class="code" href="structgraph__theory_1_1gsearch.html">gsearch</a> {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">using</span> gsearch::operator(), <a class="code" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">gsearch::gsearch</a>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1bfs.html#aee6e92efe0a47f5858b8ba6e6f683acb">  159</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1bfs.html#aee6e92efe0a47f5858b8ba6e6f683acb">operator()</a>(<a class="code" href="structll.html">ll</a> source) {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="structll.html">ll</a> old_size = <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.size();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.push_back(source);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[source] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>[source] = 0;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> idx = old_size; idx &lt; <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.size(); ++idx) {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keyword">auto</span> i = <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>[idx];</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j : <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>[i]) {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[j]) {</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.push_back(j);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[j] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <a class="code" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">add</a>(j, i);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;};</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">  177</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">test_bfs</a>() {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    vector&lt;vl&gt; g(4);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 1, 2);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 1, 3);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 3);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> b{g};</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    b(0);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    assert((b.parent == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{-1, 0, 1, 1}));</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    assert((b.distance == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{0, 1, 2, 2}));</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">  188</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="structll.html">ll</a> n = size(graph);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    vector&lt;vl&gt; h(n);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : graph[i]) {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            h[j].push_back(i);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> h;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">  198</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">test_trans</a>() {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    assert((<a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(vector&lt;vl&gt;{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) ==</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        vector&lt;vl&gt;{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    assert((<a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(vector&lt;vl&gt;{}) == vector&lt;vl&gt;{}));</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">  203</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">scc</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">auto</span> h = <a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(graph);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> cm(size(graph), -1);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">auto</span> assign = <a class="code" href="namespacefix.html">fix</a>{[&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;assign, <a class="code" href="structll.html">ll</a> u, <a class="code" href="structll.html">ll</a> c) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">if</span> (cm[u] != -1) {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        cm[u] = c;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a> : h[u]) {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            assign(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>, c);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="structgraph__theory_1_1edge.html">edge</a> : graph[a]) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;[b, w] = <a class="code" href="structgraph__theory_1_1edge.html">edge</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">auto</span> &amp;x = d[b];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">auto</span> nw = di + w;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span> (nw &lt; x) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                pv[b] = a;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                x = nw;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                q.push({x, b});</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> array&lt;vl, 2&gt;{d, pv};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// TODO do we want to consider zero-length paths?</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#ae6ad3f54671798a8d8f3c4253ea83db4">   57</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">shortest_dist</a>(<a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <span class="keyword">const</span> &amp;graph) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    assert(graph.<a class="code" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a> == graph.<a class="code" href="structlinear__algebra_1_1matrix.html#a4b8d6b65104e322826ecf447078cb953">cols_n</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">auto</span> n = graph.<a class="code" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">auto</span> d = graph;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(k, n) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, n) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">auto</span> &amp;x = d[i][j];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                x = min(x, d[i][k] + d[k][j]);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> d;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">test_shortest_dist</a>() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> short_dist{{4, 2, 3}, {2, 3, 1}, {3, 2, 3}};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    assert(<a class="code" href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">shortest_dist</a>(g) == short_dist);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> n = g.rows_n;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    vector&lt;vector&lt;pr&gt;&gt; adj(n);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, n) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, 0, n) { adj[i].push_back({j, g[i][j]}); }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(s, 0, n) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// TODO test pv</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dijkstra = <a class="code" href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">shortest_dist</a>(adj, s)[0];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">auto</span> floyd = <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>(short_dist[s], short_dist[s] + n);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        floyd[s] = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        assert((dijkstra == floyd));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a43f33335bd84b91252969b3b17f8b09d">   89</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a43f33335bd84b91252969b3b17f8b09d">mst</a>(vector&lt;edge&gt; edges, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> n) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(edges));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="structdsu__ds_1_1dsu.html">dsu</a> d{n};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    vector&lt;edge&gt; <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;e : edges) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (!d.join(e.a, e.b)) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>.push_back(e);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">test_mst</a>() {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    vector&lt;edge&gt; edges{{5, 0, 3}, {2, 1, 2}, {3, 1, 3}, {1, 3, 2}};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">auto</span> <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a> = <a class="code" href="namespacegraph__theory.html#a43f33335bd84b91252969b3b17f8b09d">mst</a>(edges, 6);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    assert((<a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a> == vector&lt;edge&gt;{edges[3], edges[1], edges[0]}));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html">  108</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgraph__theory_1_1gsearch.html">gsearch</a> {</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">  109</a></span>&#160;    vector&lt;vl&gt; <span class="keyword">const</span> &amp;<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">  110</a></span>&#160;    vc&lt;char&gt; <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">  111</a></span>&#160;    deque&lt;ll&gt; <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>;      </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">  112</a></span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">parent</a>;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">  113</a></span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>;      </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">  114</a></span>&#160;    <a class="code" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">gsearch</a>(<span class="keyword">const</span> vector&lt;vector&lt;ll&gt;&gt; &amp;g_)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        : <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>(g_), <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>(<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size()), <a class="code" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">parent</a>(<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size(), -1),</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>(<a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size(), <a class="code" href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>) {}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">operator()</a>(<a class="code" href="structll.html">ll</a>) = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">  118</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">operator()</a>() {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">/* Run the searcher on all vertices. Useful for visiting the</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">         * entire graph, and not just one connected component. */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>.size()) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[i]) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keyword">this</span>(i);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">  127</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">add</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> child, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> par) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>[child] = <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>[par] + 1;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">parent</a>[child] = par;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a1fa8a9b42e79b9ce10e89e4659164f8d">  135</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Searcher&gt; vector&lt;ll&gt; <a class="code" href="namespacegraph__theory.html#a1fa8a9b42e79b9ce10e89e4659164f8d">get_size</a>(<span class="keyword">const</span> Searcher &amp;search) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    vector&lt;ll&gt; <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>(search.parent.size(), 1);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> idx : <a class="code" href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a>(search.q)) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">if</span> (search.parent[idx] != -1) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>[search.parent[idx]] += <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>[idx];</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1dfs.html">  145</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgraph__theory_1_1dfs.html">dfs</a> : <span class="keyword">public</span> <a class="code" href="structgraph__theory_1_1gsearch.html">gsearch</a> {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">using</span> gsearch::operator(), <a class="code" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">gsearch::gsearch</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1dfs.html#a06079c284fde77987c6685fbac4d91d3">  147</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1dfs.html#a06079c284fde77987c6685fbac4d91d3">operator()</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> source) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[source] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j : <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>[source]) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[j]) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">add</a>(j, source);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keyword">this</span>(j);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.push_front(source);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;};</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1bfs.html">  160</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> : <span class="keyword">public</span> <a class="code" href="structgraph__theory_1_1gsearch.html">gsearch</a> {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">using</span> gsearch::operator(), <a class="code" href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">gsearch::gsearch</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="structgraph__theory_1_1bfs.html#aee6e92efe0a47f5858b8ba6e6f683acb">  162</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structgraph__theory_1_1bfs.html#aee6e92efe0a47f5858b8ba6e6f683acb">operator()</a>(<a class="code" href="structll.html">ll</a> source) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="structll.html">ll</a> old_size = <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.size();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.push_back(source);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[source] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">distance</a>[source] = 0;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> idx = old_size; idx &lt; <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.size(); ++idx) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keyword">auto</span> i = <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>[idx];</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j : <a class="code" href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph</a>[i]) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[j]) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <a class="code" href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">q</a>.push_back(j);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <a class="code" href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">visited</a>[j] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <a class="code" href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">add</a>(j, i);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;};</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">  180</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">test_bfs</a>() {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    vector&lt;vl&gt; g(4);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 1, 2);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 1, 3);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 3);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> b{g};</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    b(0);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    assert((b.parent == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{-1, 0, 1, 1}));</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    assert((b.distance == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{0, 1, 2, 2}));</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">  192</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="structll.html">ll</a> n = size(graph);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    vector&lt;vl&gt; h(n);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : graph[i]) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            h[j].push_back(i);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> h;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">  202</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">test_trans</a>() {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    assert((<a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(vector&lt;vl&gt;{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) ==</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        vector&lt;vl&gt;{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    assert((<a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(vector&lt;vl&gt;{}) == vector&lt;vl&gt;{}));</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">  207</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">scc</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">auto</span> h = <a class="code" href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">trans</a>(graph);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> cm(size(graph), -1);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">auto</span> assign = <a class="code" href="structutility_1_1fix.html">fix</a>{[&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;assign, <a class="code" href="structll.html">ll</a> u, <a class="code" href="structll.html">ll</a> c) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span> (cm[u] != -1) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }};</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="structgraph__theory_1_1dfs.html">dfs</a> s{graph};</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    s();</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> i : s.q) {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        assign(i, i);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">return</span> cm;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">  224</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">test_scc</a>() {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    vector&lt;vl&gt; g(5);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    g[0].push_back(3);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    g[3].push_back(1);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    g[1].push_back(2);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    g[2].push_back(0);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    g[0].push_back(4);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    g[2].push_back(4);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> cm = <a class="code" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">scc</a>(g);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>{cm[0], cm[1], cm[2], cm[3]};</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="comment">// TODO refactor this into a function</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    assert((all_of(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), [&amp;](<span class="keyword">auto</span> x) { <span class="keywordflow">return</span> x == <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>[0]; })));</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    assert(cm[4] != cm[0]);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
-<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">  238</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">bipartite</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> b{graph};</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    b();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">auto</span> n = size(graph);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> s(n);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : b.q) {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> par = b.parent[i]; par != -1) {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            s[i] = !s[par];</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">bool</span> bi = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> j : graph[i]) {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            bi &amp;= s[i] != s[j];</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> bi ? optional{s} : nullopt;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">  257</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">test_bipartite</a>() {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    vector&lt;vl&gt; g(6);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">// (2,1,4) is one side, and (5,3,0) is another side</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// connected component 1</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 3);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// connected component 2</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 1, 0);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 0);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> col = <a class="code" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">bipartite</a>(g).value();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, g.size()) {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : g[i]) {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            assert(col[i] ^ col[j]);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
-<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">  274</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">auto</span> side = <a class="code" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">bipartite</a>(graph).value();</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <a class="code" href="structll.html">ll</a> n = graph.size();</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> match(n, -1);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">/* Construct a directed graph to find aug_pathmenting paths*/</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="comment">// TODO refactor this to use lazy graphs</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        vector&lt;vl&gt; aug_path(n + 2);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dummy_a = n;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dummy_b = n + 1;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : graph[i]) {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                <span class="keywordflow">if</span> ((j == match[i]) == side[i]) {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    aug_path[i].push_back(j);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">if</span> (match[i] != -1) {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">if</span> (side[i]) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                aug_path[i].push_back(dummy_b);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                aug_path[dummy_a].push_back(i);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> b{aug_path};</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        b(dummy_a);</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">if</span> (b.distance[dummy_b] == <a class="code" href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>) {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> vis(aug_path.size());</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keyword">auto</span> path = <a class="code" href="namespacefix.html">fix</a>{[&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;path, <a class="code" href="structll.html">ll</a> i) -&gt; <span class="keywordtype">bool</span> {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">if</span> (vis[i]) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            vis[i] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span> (i == dummy_b) {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        cm[u] = c;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a> : h[u]) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            assign(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>, c);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }};</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="structgraph__theory_1_1dfs.html">dfs</a> s{graph};</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    s();</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> i : s.q) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        assign(i, i);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">return</span> cm;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">  228</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">test_scc</a>() {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    vector&lt;vl&gt; g(5);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    g[0].push_back(3);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    g[3].push_back(1);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    g[1].push_back(2);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    g[2].push_back(0);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    g[0].push_back(4);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    g[2].push_back(4);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> cm = <a class="code" href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">scc</a>(g);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>{cm[0], cm[1], cm[2], cm[3]};</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">// TODO refactor this into a function</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    assert((all_of(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>), [&amp;](<span class="keyword">auto</span> x) { <span class="keywordflow">return</span> x == <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>[0]; })));</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    assert(cm[4] != cm[0]);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">  242</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">bipartite</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> b{graph};</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    b();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">auto</span> n = size(graph);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> s(n);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : b.q) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> par = b.parent[i]; par != -1) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            s[i] = !s[par];</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">bool</span> bi = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> j : graph[i]) {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            bi &amp;= s[i] != s[j];</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> bi ? optional{s} : nullopt;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">  261</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">test_bipartite</a>() {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    vector&lt;vl&gt; g(6);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// (2,1,4) is one side, and (5,3,0) is another side</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// connected component 1</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 3);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// connected component 2</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 1, 0);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 0);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> col = <a class="code" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">bipartite</a>(g).value();</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, g.size()) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : g[i]) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            assert(col[i] ^ col[j]);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">  280</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">auto</span> side = <a class="code" href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">bipartite</a>(graph).value();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="structll.html">ll</a> n = graph.size();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> match(n, -1);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">/* Construct a directed graph to find aug_pathmenting paths*/</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="comment">// TODO refactor this to use lazy graphs</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        vector&lt;vl&gt; aug_path(n + 2);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dummy_a = n;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dummy_b = n + 1;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : graph[i]) {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="keywordflow">if</span> ((j == match[i]) == side[i]) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    aug_path[i].push_back(j);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">if</span> (match[i] != -1) {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keywordflow">if</span> (side[i]) {</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                aug_path[i].push_back(dummy_b);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                aug_path[dummy_a].push_back(i);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="structgraph__theory_1_1bfs.html">bfs</a> b{aug_path};</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        b(dummy_a);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">if</span> (b.distance[dummy_b] == <a class="code" href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> vis(aug_path.size());</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keyword">auto</span> path = <a class="code" href="structutility_1_1fix.html">fix</a>{[&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;path, <a class="code" href="structll.html">ll</a> i) -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span> (vis[i]) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : aug_path[i]) {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">if</span> (b.distance[j] == b.distance[i] + 1) {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    <span class="keywordflow">if</span> (path(j)) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                        <span class="keywordflow">if</span> (i &lt; n &amp;&amp; j &lt; n) {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                            match[i] = j;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                            match[j] = i;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                        }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }};</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        path(dummy_a);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> match;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
-<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">  334</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<span class="keyword">const</span> <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> &amp;matching) {</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span> count_if(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(matching), [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> x) { <span class="keywordflow">return</span> x != -1; });</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
-<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">  337</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">test_max_match</a>() {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        vector&lt;vl&gt; g(3);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="comment">// 0, 2 on one side, 1 on the other side</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 1));</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            vis[i] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">if</span> (i == dummy_b) {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : aug_path[i]) {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <span class="keywordflow">if</span> (b.distance[j] == b.distance[i] + 1) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    <span class="keywordflow">if</span> (path(j)) {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        <span class="keywordflow">if</span> (i &lt; n &amp;&amp; j &lt; n) {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                            match[i] = j;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                            match[j] = i;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }};</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        path(dummy_a);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">return</span> match;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">  341</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<span class="keyword">const</span> <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> &amp;matching) {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordflow">return</span> count_if(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(matching), [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> x) { <span class="keywordflow">return</span> x != -1; });</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;}</div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">  344</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">test_max_match</a>() {</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        vector&lt;vl&gt; g(4);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="comment">// 0, 2 on one side, 1, 3 on the other side</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        vector&lt;vl&gt; g(3);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="comment">// 0, 2 on one side, 1 on the other side</span></div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 3);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 2));</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        vector&lt;vl&gt; g(6);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 3);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 3);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 1);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> matching = <a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 3));</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        vector&lt;vl&gt; g(6);</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 3);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 1);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 3));</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        vector&lt;vl&gt; g(6);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 1);</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 2));</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        vector&lt;vl&gt; g(10);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, g.size() / 2) {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">if</span> (2 * i - 1 &gt;= 0) {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2 * i, 2 * i - 1);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="keywordflow">if</span> (2 * i + 1 &lt; g.size()) {</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2 * i, 2 * i + 1);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        }</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * g.size() / 2));</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    }</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;}</div>
-<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">  400</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">test_add_edge</a>() {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    vector&lt;vl&gt; g(10);</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 3, 4);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 6, 4);</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 9, 2);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="comment">// Order doesn&#39;t matter</span></div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;x : g) {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(x));</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    assert(</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        (g == vector&lt;vl&gt;{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;}</div>
-<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50">  412</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50">graph_in</a>(vector&lt;vl&gt; &amp;g, <a class="code" href="structll.html">ll</a> m) {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, m) {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <a class="code" href="core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb">I</a>(u);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <a class="code" href="core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb">I</a>(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, --u, --<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}</div>
-<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a">  420</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a">test_graph_theory</a>() {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <a class="code" href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">test_add_edge</a>();</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <a class="code" href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">test_trans</a>();</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <a class="code" href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">test_shortest_dist</a>();</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <a class="code" href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">test_mst</a>();</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <a class="code" href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">test_bfs</a>();</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <a class="code" href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">test_bipartite</a>();</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <a class="code" href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">test_scc</a>();</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <a class="code" href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">test_max_match</a>();</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;}</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;} <span class="comment">// namespace graph_theory</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacegraph__theory.html">graph_theory</a>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 1));</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        vector&lt;vl&gt; g(4);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">// 0, 2 on one side, 1, 3 on the other side</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 3);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 2));</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        vector&lt;vl&gt; g(6);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 3);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 3);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 1);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> matching = <a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 3));</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        vector&lt;vl&gt; g(6);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 3);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 1);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 3));</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        vector&lt;vl&gt; g(6);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 0, 1);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 1);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2, 5);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 1);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 4, 5);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * 2));</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        vector&lt;vl&gt; g(10);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="comment">// 0, 2, 4 on one side, 1, 3, 5 on the other side</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, g.size() / 2) {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="keywordflow">if</span> (2 * i - 1 &gt;= 0) {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2 * i, 2 * i - 1);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            }</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            <span class="keywordflow">if</span> (2 * i + 1 &lt; g.size()) {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 2 * i, 2 * i + 1);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        }</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        assert((<a class="code" href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">matching_size</a>(<a class="code" href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">max_match</a>(g)) == 2 * g.size() / 2));</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">  407</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">test_add_edge</a>() {</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    vector&lt;vl&gt; g(10);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 3, 4);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 6, 4);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, 9, 2);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="comment">// Order doesn&#39;t matter</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;x : g) {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        sort(<a class="code" href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(x));</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    }</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    assert(</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        (g == vector&lt;vl&gt;{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;}</div>
+<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50">  419</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50">graph_in</a>(vector&lt;vl&gt; &amp;g, <a class="code" href="structll.html">ll</a> m) {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, 0, m) {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <a class="code" href="core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb">I</a>(u);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <a class="code" href="core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb">I</a>(<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(g, --u, --<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;}</div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a">  427</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a">test_graph_theory</a>() {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <a class="code" href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">test_add_edge</a>();</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <a class="code" href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">test_trans</a>();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    <a class="code" href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">test_shortest_dist</a>();</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <a class="code" href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">test_mst</a>();</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <a class="code" href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">test_bfs</a>();</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <a class="code" href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">test_bipartite</a>();</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <a class="code" href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">test_scc</a>();</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">test_max_match</a>();</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;}</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;} <span class="comment">// namespace graph_theory</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacegraph__theory.html">graph_theory</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacegraph__theory_html_a283db7058efe0355744471a1532e4960"><div class="ttname"><a href="namespacegraph__theory.html#a283db7058efe0355744471a1532e4960">graph_theory::operator&lt;&lt;</a></div><div class="ttdeci">auto &amp; operator&lt;&lt;(Stream &amp;os, edge const &amp;e)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:18</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a178da2acee19545ba0378a75ffea2fdb"><div class="ttname"><a href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">graph_theory::max_match</a></div><div class="ttdeci">auto max_match(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:274</div></div>
-<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:62</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_aeebcf017acc0533f31c46d62d0cebe72"><div class="ttname"><a href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">graph_theory::test_bipartite</a></div><div class="ttdeci">void test_bipartite()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:257</div></div>
-<div class="ttc" id="aoperations_8hpp_html_afcd538daef660984ecb8abf34697904b"><div class="ttname"><a href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a></div><div class="ttdeci">#define ret(x, id)</div><div class="ttdef"><b>Definition:</b> operations.hpp:93</div></div>
-<div class="ttc" id="acore_8hpp_html_ac0b978e8ffc2c44656160a679f86e22a"><div class="ttname"><a href="core_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a">prio_queue_t</a></div><div class="ttdeci">std::priority_queue&lt; T, vector&lt; T &gt;, Comp &gt; prio_queue_t</div><div class="ttdef"><b>Definition:</b> core.hpp:69</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_af419fd09d176890f30126a49064cbd9b"><div class="ttname"><a href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">graph_theory::test_add_edge</a></div><div class="ttdeci">void test_add_edge()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:400</div></div>
-<div class="ttc" id="astructlinear__algebra_1_1matrix_html_a4b8d6b65104e322826ecf447078cb953"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html#a4b8d6b65104e322826ecf447078cb953">linear_algebra::matrix::cols_n</a></div><div class="ttdeci">ll cols_n</div><div class="ttdoc">Row, column.</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:8</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a178da2acee19545ba0378a75ffea2fdb"><div class="ttname"><a href="namespacegraph__theory.html#a178da2acee19545ba0378a75ffea2fdb">graph_theory::max_match</a></div><div class="ttdeci">auto max_match(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:280</div></div>
+<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:65</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_aeebcf017acc0533f31c46d62d0cebe72"><div class="ttname"><a href="namespacegraph__theory.html#aeebcf017acc0533f31c46d62d0cebe72">graph_theory::test_bipartite</a></div><div class="ttdeci">void test_bipartite()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:261</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a1fa8a9b42e79b9ce10e89e4659164f8d"><div class="ttname"><a href="namespacegraph__theory.html#a1fa8a9b42e79b9ce10e89e4659164f8d">graph_theory::get_size</a></div><div class="ttdeci">vector&lt; ll &gt; get_size(const Searcher &amp;search)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:135</div></div>
+<div class="ttc" id="aoperations_8hpp_html_afcd538daef660984ecb8abf34697904b"><div class="ttname"><a href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a></div><div class="ttdeci">#define ret(x, id)</div><div class="ttdef"><b>Definition:</b> operations.hpp:92</div></div>
+<div class="ttc" id="acore_8hpp_html_ac0b978e8ffc2c44656160a679f86e22a"><div class="ttname"><a href="core_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a">prio_queue_t</a></div><div class="ttdeci">std::priority_queue&lt; T, vector&lt; T &gt;, Comp &gt; prio_queue_t</div><div class="ttdef"><b>Definition:</b> core.hpp:72</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_af419fd09d176890f30126a49064cbd9b"><div class="ttname"><a href="namespacegraph__theory.html#af419fd09d176890f30126a49064cbd9b">graph_theory::test_add_edge</a></div><div class="ttdeci">void test_add_edge()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:407</div></div>
+<div class="ttc" id="astructlinear__algebra_1_1matrix_html_a4b8d6b65104e322826ecf447078cb953"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html#a4b8d6b65104e322826ecf447078cb953">linear_algebra::matrix::cols_n</a></div><div class="ttdeci">ll cols_n</div><div class="ttdoc">Row, column.</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:9</div></div>
 <div class="ttc" id="aseg__old_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> seg_old.hpp:149</div></div>
-<div class="ttc" id="astructgraph__theory_1_1dfs_html_a06079c284fde77987c6685fbac4d91d3"><div class="ttname"><a href="structgraph__theory_1_1dfs.html#a06079c284fde77987c6685fbac4d91d3">graph_theory::dfs::operator()</a></div><div class="ttdeci">void operator()(const ll source)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:144</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a84ac78302ab327b1a880654a74f696b3"><div class="ttname"><a href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">graph_theory::test_mst</a></div><div class="ttdeci">void test_mst()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:108</div></div>
-<div class="ttc" id="astructlinear__algebra_1_1matrix_html_a4cfdcefa6c7acb00a47c68d78a05082e"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">linear_algebra::matrix::rows_n</a></div><div class="ttdeci">ll rows_n</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:8</div></div>
+<div class="ttc" id="astructgraph__theory_1_1dfs_html_a06079c284fde77987c6685fbac4d91d3"><div class="ttname"><a href="structgraph__theory_1_1dfs.html#a06079c284fde77987c6685fbac4d91d3">graph_theory::dfs::operator()</a></div><div class="ttdeci">void operator()(const ll source)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:147</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a84ac78302ab327b1a880654a74f696b3"><div class="ttname"><a href="namespacegraph__theory.html#a84ac78302ab327b1a880654a74f696b3">graph_theory::test_mst</a></div><div class="ttdeci">void test_mst()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:101</div></div>
+<div class="ttc" id="astructlinear__algebra_1_1matrix_html_a4cfdcefa6c7acb00a47c68d78a05082e"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">linear_algebra::matrix::rows_n</a></div><div class="ttdeci">ll rows_n</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:9</div></div>
 <div class="ttc" id="adsu_8hpp_html"><div class="ttname"><a href="dsu_8hpp.html">dsu.hpp</a></div></div>
-<div class="ttc" id="anamespacegraph__theory_html_ae36eab02a5882508df9bcd38fed73b1f"><div class="ttname"><a href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">graph_theory::test_shortest_dist</a></div><div class="ttdeci">void test_shortest_dist()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:72</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a43f33335bd84b91252969b3b17f8b09d"><div class="ttname"><a href="namespacegraph__theory.html#a43f33335bd84b91252969b3b17f8b09d">graph_theory::mst</a></div><div class="ttdeci">auto mst(vector&lt; edge &gt; edges, const ll n)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:89</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_ae36eab02a5882508df9bcd38fed73b1f"><div class="ttname"><a href="namespacegraph__theory.html#ae36eab02a5882508df9bcd38fed73b1f">graph_theory::test_shortest_dist</a></div><div class="ttdeci">void test_shortest_dist()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:71</div></div>
 <div class="ttc" id="acore_8hpp_html_a64daeab6d74dffeca723fbb620b687cb"><div class="ttname"><a href="core_8hpp.html#a64daeab6d74dffeca723fbb620b687cb">I</a></div><div class="ttdeci">#define I(x)</div><div class="ttdef"><b>Definition:</b> core.hpp:21</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_abf42c204d44caae5b7ea48d8261dfd9e"><div class="ttname"><a href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">graph_theory::scc</a></div><div class="ttdeci">auto scc(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:203</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_abf42c204d44caae5b7ea48d8261dfd9e"><div class="ttname"><a href="namespacegraph__theory.html#abf42c204d44caae5b7ea48d8261dfd9e">graph_theory::scc</a></div><div class="ttdeci">auto scc(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:207</div></div>
 <div class="ttc" id="acore_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> core.hpp:20</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a3cd16fd5db690a13e06334a29b80f88c"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">graph_theory::gsearch::parent</a></div><div class="ttdeci">vl parent</div><div class="ttdoc">Parent of vertex idx.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:119</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a3cd16fd5db690a13e06334a29b80f88c"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a3cd16fd5db690a13e06334a29b80f88c">graph_theory::gsearch::parent</a></div><div class="ttdeci">vl parent</div><div class="ttdoc">Parent of vertex idx.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:112</div></div>
 <div class="ttc" id="anamespacegraph__theory_html_a7baea0d3e99864e50ed82e6e93a88eb5"><div class="ttname"><a href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">graph_theory::add_edge</a></div><div class="ttdeci">auto add_edge(vector&lt; vl &gt; &amp;graph, ll u, ll v)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:22</div></div>
 <div class="ttc" id="astructgraph__theory_1_1edge_html"><div class="ttname"><a href="structgraph__theory_1_1edge.html">graph_theory::edge</a></div><div class="ttdoc">&lt; Edge with weight weight from a to b</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:7</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html">graph_theory::gsearch</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:115</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html">graph_theory::gsearch</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:108</div></div>
 <div class="ttc" id="anamespacegraph__theory_html_a9112d064de59f0aa5737bc1d90e9bf32"><div class="ttname"><a href="namespacegraph__theory.html#a9112d064de59f0aa5737bc1d90e9bf32">graph_theory::operator==</a></div><div class="ttdeci">bool operator==(edge const &amp;a, edge const &amp;b)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:15</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a3d807b2f6b3b593bb8f81e1764f46bdf"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph_theory::gsearch::graph</a></div><div class="ttdeci">const vector&lt; vl &gt; &amp; graph</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:116</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a3d807b2f6b3b593bb8f81e1764f46bdf"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a3d807b2f6b3b593bb8f81e1764f46bdf">graph_theory::gsearch::graph</a></div><div class="ttdeci">const vector&lt; vl &gt; &amp; graph</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:109</div></div>
+<div class="ttc" id="astructutility_1_1fix_html"><div class="ttname"><a href="structutility_1_1fix.html">utility::fix</a></div><div class="ttdef"><b>Definition:</b> utility.hpp:23</div></div>
 <div class="ttc" id="alinear__algebra_8hpp_html"><div class="ttname"><a href="linear__algebra_8hpp.html">linear_algebra.hpp</a></div></div>
-<div class="ttc" id="acore_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> core.hpp:80</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a2aea60be1c24dc82badd96e40923038b"><div class="ttname"><a href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">graph_theory::test_bfs</a></div><div class="ttdeci">void test_bfs()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:177</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_abbe5b980d32347acbd0811f9c189d097"><div class="ttname"><a href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">graph_theory::test_max_match</a></div><div class="ttdeci">void test_max_match()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:337</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a379377c6b0d12b33e583601f1ab7b77a"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">graph_theory::gsearch::add</a></div><div class="ttdeci">void add(const ll child, const ll par)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:134</div></div>
+<div class="ttc" id="acore_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> core.hpp:83</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a2aea60be1c24dc82badd96e40923038b"><div class="ttname"><a href="namespacegraph__theory.html#a2aea60be1c24dc82badd96e40923038b">graph_theory::test_bfs</a></div><div class="ttdeci">void test_bfs()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:180</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_abbe5b980d32347acbd0811f9c189d097"><div class="ttname"><a href="namespacegraph__theory.html#abbe5b980d32347acbd0811f9c189d097">graph_theory::test_max_match</a></div><div class="ttdeci">void test_max_match()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:344</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a379377c6b0d12b33e583601f1ab7b77a"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a379377c6b0d12b33e583601f1ab7b77a">graph_theory::gsearch::add</a></div><div class="ttdeci">void add(const ll child, const ll par)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:127</div></div>
 <div class="ttc" id="astructgraph__theory_1_1edge_html_ae8364c3bd91a36e17fc27897682b793b"><div class="ttname"><a href="structgraph__theory_1_1edge.html#ae8364c3bd91a36e17fc27897682b793b">graph_theory::edge::a</a></div><div class="ttdeci">ll a</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:8</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a8946a36638700e258f278abfb2f92b1c"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">graph_theory::gsearch::q</a></div><div class="ttdeci">deque&lt; ll &gt; q</div><div class="ttdoc">Queue.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:118</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a305e818c99814cd465186b57c0a73f50"><div class="ttname"><a href="namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50">graph_theory::graph_in</a></div><div class="ttdeci">auto graph_in(vector&lt; vl &gt; &amp;g, ll m)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:412</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a2be0da3d01cfdd0e3b28b2ce49311c08"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">graph_theory::gsearch::visited</a></div><div class="ttdeci">vector&lt; char &gt; visited</div><div class="ttdoc">Whether vertex idx is visited.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:117</div></div>
-<div class="ttc" id="acore_8hpp_html_a276c5a0e984cf60015b27252fe04fe6b"><div class="ttname"><a href="core_8hpp.html#a276c5a0e984cf60015b27252fe04fe6b">pb</a></div><div class="ttdeci">#define pb</div><div class="ttdef"><b>Definition:</b> core.hpp:24</div></div>
-<div class="ttc" id="astructgraph__theory_1_1bfs_html"><div class="ttname"><a href="structgraph__theory_1_1bfs.html">graph_theory::bfs</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:157</div></div>
-<div class="ttc" id="astructgraph__theory_1_1dfs_html"><div class="ttname"><a href="structgraph__theory_1_1dfs.html">graph_theory::dfs</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:142</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a998798d5fc2c45a6ce50b16c3a620fbd"><div class="ttname"><a href="namespacegraph__theory.html#a998798d5fc2c45a6ce50b16c3a620fbd">graph_theory::matching_size</a></div><div class="ttdeci">size_t matching_size(const vl &amp;matching)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:334</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a8946a36638700e258f278abfb2f92b1c"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a8946a36638700e258f278abfb2f92b1c">graph_theory::gsearch::q</a></div><div class="ttdeci">deque&lt; ll &gt; q</div><div class="ttdoc">Queue.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:111</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a305e818c99814cd465186b57c0a73f50"><div class="ttname"><a href="namespacegraph__theory.html#a305e818c99814cd465186b57c0a73f50">graph_theory::graph_in</a></div><div class="ttdeci">auto graph_in(vector&lt; vl &gt; &amp;g, ll m)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:419</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a2be0da3d01cfdd0e3b28b2ce49311c08"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a2be0da3d01cfdd0e3b28b2ce49311c08">graph_theory::gsearch::visited</a></div><div class="ttdeci">vector&lt; char &gt; visited</div><div class="ttdoc">Whether vertex idx is visited.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:110</div></div>
+<div class="ttc" id="arange_8hpp_html_a438bd5fc0a79e42a6a2abb632203f925"><div class="ttname"><a href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a></div><div class="ttdeci">auto rev(const Range &amp;r)</div><div class="ttdef"><b>Definition:</b> range.hpp:56</div></div>
+<div class="ttc" id="astructgraph__theory_1_1bfs_html"><div class="ttname"><a href="structgraph__theory_1_1bfs.html">graph_theory::bfs</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:160</div></div>
+<div class="ttc" id="astructgraph__theory_1_1dfs_html"><div class="ttname"><a href="structgraph__theory_1_1dfs.html">graph_theory::dfs</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:145</div></div>
 <div class="ttc" id="astructgraph__theory_1_1edge_html_afd1df0689bec85ffbdb52d3735a2edc6"><div class="ttname"><a href="structgraph__theory_1_1edge.html#afd1df0689bec85ffbdb52d3735a2edc6">graph_theory::edge::weight</a></div><div class="ttdeci">ll weight</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:8</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a22118f70c758143c3800c205fe7bf0f5"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">graph_theory::gsearch::distance</a></div><div class="ttdeci">vl distance</div><div class="ttdoc">Distance from source to vertex idx.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:120</div></div>
-<div class="ttc" id="anamespacefix_html"><div class="ttname"><a href="namespacefix.html">fix</a></div><div class="ttdef"><b>Definition:</b> fix.py:1</div></div>
-<div class="ttc" id="astructgraph__theory_1_1bfs_html_aee6e92efe0a47f5858b8ba6e6f683acb"><div class="ttname"><a href="structgraph__theory_1_1bfs.html#aee6e92efe0a47f5858b8ba6e6f683acb">graph_theory::bfs::operator()</a></div><div class="ttdeci">void operator()(ll source)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:159</div></div>
+<div class="ttc" id="anamespacetree_html_abbd5aff5c7f9d3fd17bb986aae13ca53"><div class="ttname"><a href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">tree::sz</a></div><div class="ttdeci">const ll sz</div><div class="ttdef"><b>Definition:</b> tree.hpp:4</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a22118f70c758143c3800c205fe7bf0f5"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a22118f70c758143c3800c205fe7bf0f5">graph_theory::gsearch::distance</a></div><div class="ttdeci">vl distance</div><div class="ttdoc">Distance from source to vertex idx.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:113</div></div>
+<div class="ttc" id="astructgraph__theory_1_1bfs_html_aee6e92efe0a47f5858b8ba6e6f683acb"><div class="ttname"><a href="structgraph__theory_1_1bfs.html#aee6e92efe0a47f5858b8ba6e6f683acb">graph_theory::bfs::operator()</a></div><div class="ttdeci">void operator()(ll source)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:162</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
-<div class="ttc" id="astructlinear__algebra_1_1matrix_html"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix</a></div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:6</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a79bc289c42f43fab13401803e10b942c"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">graph_theory::gsearch::operator()</a></div><div class="ttdeci">void operator()()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:125</div></div>
-<div class="ttc" id="astructdsu__ds_1_1dsu_html"><div class="ttname"><a href="structdsu__ds_1_1dsu.html">dsu_ds::dsu</a></div><div class="ttdef"><b>Definition:</b> dsu.hpp:5</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_aa2b38897f4c429325f0eb73b1137755a"><div class="ttname"><a href="namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a">graph_theory::test_graph_theory</a></div><div class="ttdeci">void test_graph_theory()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:420</div></div>
-<div class="ttc" id="astructgraph__theory_1_1gsearch_html_ac63cf44b74fbcd2a036892655be4df33"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">graph_theory::gsearch::gsearch</a></div><div class="ttdeci">gsearch(const vector&lt; vector&lt; ll &gt;&gt; &amp;g_)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:121</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_ac47e32c1c40eb2d6e367f4d5b34d9ccc"><div class="ttname"><a href="namespacegraph__theory.html#ac47e32c1c40eb2d6e367f4d5b34d9ccc">graph_theory::mst</a></div><div class="ttdeci">auto mst(vector&lt; edge &gt; edges)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:89</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_af33d0502161df2d1b82be4b1e8dcaa13"><div class="ttname"><a href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">graph_theory::trans</a></div><div class="ttdeci">auto trans(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:188</div></div>
+<div class="ttc" id="astructlinear__algebra_1_1matrix_html"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix</a></div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:7</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_a79bc289c42f43fab13401803e10b942c"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#a79bc289c42f43fab13401803e10b942c">graph_theory::gsearch::operator()</a></div><div class="ttdeci">void operator()()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:118</div></div>
+<div class="ttc" id="astructdsu__ds_1_1dsu_html"><div class="ttname"><a href="structdsu__ds_1_1dsu.html">dsu_ds::dsu</a></div><div class="ttdoc">Disjoint-set data structure.</div><div class="ttdef"><b>Definition:</b> dsu.hpp:5</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_aa2b38897f4c429325f0eb73b1137755a"><div class="ttname"><a href="namespacegraph__theory.html#aa2b38897f4c429325f0eb73b1137755a">graph_theory::test_graph_theory</a></div><div class="ttdeci">void test_graph_theory()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:427</div></div>
+<div class="ttc" id="astructgraph__theory_1_1gsearch_html_ac63cf44b74fbcd2a036892655be4df33"><div class="ttname"><a href="structgraph__theory_1_1gsearch.html#ac63cf44b74fbcd2a036892655be4df33">graph_theory::gsearch::gsearch</a></div><div class="ttdeci">gsearch(const vector&lt; vector&lt; ll &gt;&gt; &amp;g_)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:114</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_af33d0502161df2d1b82be4b1e8dcaa13"><div class="ttname"><a href="namespacegraph__theory.html#af33d0502161df2d1b82be4b1e8dcaa13">graph_theory::trans</a></div><div class="ttdeci">auto trans(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:192</div></div>
 <div class="ttc" id="anamespacegraph__theory_html"><div class="ttname"><a href="namespacegraph__theory.html">graph_theory</a></div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:5</div></div>
 <div class="ttc" id="astructgraph__theory_1_1edge_html_a57daf64fddd9cbc445c13c4a828a2a06"><div class="ttname"><a href="structgraph__theory_1_1edge.html#a57daf64fddd9cbc445c13c4a828a2a06">graph_theory::edge::b</a></div><div class="ttdeci">ll b</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:8</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_abc2dae699efd9d44942e1a27d801d9cb"><div class="ttname"><a href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">graph_theory::bipartite</a></div><div class="ttdeci">auto bipartite(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:238</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a734cad165e9d3343718dea3cab4febc3"><div class="ttname"><a href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">graph_theory::test_trans</a></div><div class="ttdeci">void test_trans()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:198</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_abc2dae699efd9d44942e1a27d801d9cb"><div class="ttname"><a href="namespacegraph__theory.html#abc2dae699efd9d44942e1a27d801d9cb">graph_theory::bipartite</a></div><div class="ttdeci">auto bipartite(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:242</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a734cad165e9d3343718dea3cab4febc3"><div class="ttname"><a href="namespacegraph__theory.html#a734cad165e9d3343718dea3cab4febc3">graph_theory::test_trans</a></div><div class="ttdeci">void test_trans()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:202</div></div>
 <div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:16</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a2c4ec732b90bd1beb930f2dc68e47294"><div class="ttname"><a href="namespacegraph__theory.html#a2c4ec732b90bd1beb930f2dc68e47294">graph_theory::matching_size</a></div><div class="ttdeci">ll matching_size(const vl &amp;matching)</div><div class="ttdoc">Returns the size of the matching.</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:341</div></div>
 <div class="ttc" id="anamespacegraph__theory_html_a934a24e545f14f58f25359de518e8d1d"><div class="ttname"><a href="namespacegraph__theory.html#a934a24e545f14f58f25359de518e8d1d">graph_theory::shortest_dist</a></div><div class="ttdeci">auto shortest_dist(vector&lt; vector&lt; pr &gt;&gt; graph, ll source)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:27</div></div>
 <div class="ttc" id="anamespacegraph__theory_html_a4dbe54e2a6c2e93add66dc32c647c876"><div class="ttname"><a href="namespacegraph__theory.html#a4dbe54e2a6c2e93add66dc32c647c876">graph_theory::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(edge const &amp;a, edge const &amp;b)</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:11</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
-<div class="ttc" id="anamespacegraph__theory_html_a67e1bb0651ba8b410525f0a06c154f10"><div class="ttname"><a href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">graph_theory::test_scc</a></div><div class="ttdeci">void test_scc()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:224</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a67e1bb0651ba8b410525f0a06c154f10"><div class="ttname"><a href="namespacegraph__theory.html#a67e1bb0651ba8b410525f0a06c154f10">graph_theory::test_scc</a></div><div class="ttdeci">void test_scc()</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:228</div></div>
 <div class="ttc" id="astructgraph__theory_1_1edge_html_ac97b1e4068cb11d040a30689327e322f"><div class="ttname"><a href="structgraph__theory_1_1edge.html#ac97b1e4068cb11d040a30689327e322f">graph_theory::edge::to_tuple</a></div><div class="ttdeci">auto to_tuple() const</div><div class="ttdef"><b>Definition:</b> graph_theory.hpp:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

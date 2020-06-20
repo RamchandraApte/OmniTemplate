@@ -42,15 +42,22 @@ void test_wedge() {
 auto area(const point &a, const point &b, const point &c) {
 	return wedge(b - a, c - a);
 }
-auto ccw(const point &a, const point &b, const point &c) {
-	/*! Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
-	 * is counterclockwise. Throws std::invalid_argument if a, b, c are
-	 * collinear and distinct. */
-	ll w = area(a, b, c);
+/**
+ * @brief Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
+	 * is counterclockwise. @throw std::invalid_argument if a, b, c are
+	 * collinear and distinct.
+ * 
+ * @param a 
+ * @param b 
+ * @param c 
+ * @return bool true if counterclockwise, false otherwise.
+ */
+bool ccw(const point &a, const point &b, const point &c) {
+	ll area_pts = area(a, b, c);
 	if (!(a == b || a == c || b == c || w)) {
 		throw invalid_argument{"Points are collinear."};
 	}
-	return w > 0;
+	return area_pts > 0;
 }
 void test_ccw() {
 	assert((ccw({1, 0}, {1, 1}, {0, 1})));

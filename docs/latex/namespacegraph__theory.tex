@@ -28,9 +28,11 @@ auto \mbox{\hyperlink{namespacegraph__theory_ae6ad3f54671798a8d8f3c4253ea83db4}{
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_ae36eab02a5882508df9bcd38fed73b1f}{test\+\_\+shortest\+\_\+dist}} ()
 \item 
-auto \mbox{\hyperlink{namespacegraph__theory_ac47e32c1c40eb2d6e367f4d5b34d9ccc}{mst}} (vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$ edges)
+auto \mbox{\hyperlink{namespacegraph__theory_a43f33335bd84b91252969b3b17f8b09d}{mst}} (vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$ edges, const \mbox{\hyperlink{structll}{ll}} n)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_a84ac78302ab327b1a880654a74f696b3}{test\+\_\+mst}} ()
+\item 
+{\footnotesize template$<$typename Searcher $>$ }\\vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}{get\+\_\+size}} (const Searcher \&search)
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_a2aea60be1c24dc82badd96e40923038b}{test\+\_\+bfs}} ()
 \item 
@@ -48,8 +50,8 @@ void \mbox{\hyperlink{namespacegraph__theory_aeebcf017acc0533f31c46d62d0cebe72}{
 \item 
 auto \mbox{\hyperlink{namespacegraph__theory_a178da2acee19545ba0378a75ffea2fdb}{max\+\_\+match}} (const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
 \item 
-size\+\_\+t \mbox{\hyperlink{namespacegraph__theory_a998798d5fc2c45a6ce50b16c3a620fbd}{matching\+\_\+size}} (const \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&matching)
-\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacegraph__theory_a2c4ec732b90bd1beb930f2dc68e47294}{matching\+\_\+size}} (const \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&matching)
+\begin{DoxyCompactList}\small\item\em Returns the size of the matching. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacegraph__theory_abbe5b980d32347acbd0811f9c189d097}{test\+\_\+max\+\_\+match}} ()
 \item 
 void \mbox{\hyperlink{namespacegraph__theory_af419fd09d176890f30126a49064cbd9b}{test\+\_\+add\+\_\+edge}} ()
@@ -87,6 +89,20 @@ Returns a bipartite coloring if possibleHere is the caller graph for this functi
 \includegraphics[width=350pt]{namespacegraph__theory_abc2dae699efd9d44942e1a27d801d9cb_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}\label{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}} 
+\index{graph\_theory@{graph\_theory}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!graph\_theory@{graph\_theory}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily template$<$typename Searcher $>$ \\
+vector$<$\mbox{\hyperlink{structll}{ll}}$>$ graph\+\_\+theory\+::get\+\_\+size (\begin{DoxyParamCaption}\item[{const Searcher \&}]{search }\end{DoxyParamCaption})}
+
+Given a searcher object, returns an array containing the size of each subtree Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacegraph__theory_a305e818c99814cd465186b57c0a73f50}\label{namespacegraph__theory_a305e818c99814cd465186b57c0a73f50}} 
 \index{graph\_theory@{graph\_theory}!graph\_in@{graph\_in}}
 \index{graph\_in@{graph\_in}!graph\_theory@{graph\_theory}}
@@ -100,17 +116,27 @@ Reads 1-\/indexed list of edges into graph gHere is the call graph for this func
 \includegraphics[width=350pt]{namespacegraph__theory_a305e818c99814cd465186b57c0a73f50_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacegraph__theory_a998798d5fc2c45a6ce50b16c3a620fbd}\label{namespacegraph__theory_a998798d5fc2c45a6ce50b16c3a620fbd}} 
+\mbox{\Hypertarget{namespacegraph__theory_a2c4ec732b90bd1beb930f2dc68e47294}\label{namespacegraph__theory_a2c4ec732b90bd1beb930f2dc68e47294}} 
 \index{graph\_theory@{graph\_theory}!matching\_size@{matching\_size}}
 \index{matching\_size@{matching\_size}!graph\_theory@{graph\_theory}}
 \doxysubsubsection{\texorpdfstring{matching\_size()}{matching\_size()}}
-{\footnotesize\ttfamily size\+\_\+t graph\+\_\+theory\+::matching\+\_\+size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&}]{matching }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} graph\+\_\+theory\+::matching\+\_\+size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&}]{matching }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Returns the size of the matching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Matching} & must be a a vector where idx is matched with matching\mbox{[}idx\mbox{]}, or not matched if matching\mbox{[}idx\mbox{]} = -\/1 \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegraph__theory_a998798d5fc2c45a6ce50b16c3a620fbd_icgraph}
+\includegraphics[width=350pt]{namespacegraph__theory_a2c4ec732b90bd1beb930f2dc68e47294_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacegraph__theory_a178da2acee19545ba0378a75ffea2fdb}\label{namespacegraph__theory_a178da2acee19545ba0378a75ffea2fdb}} 
@@ -119,7 +145,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{max\_match()}{max\_match()}}
 {\footnotesize\ttfamily auto graph\+\_\+theory\+::max\+\_\+match (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{graph }\end{DoxyParamCaption})}
 
-Returns a maximum matching of bipartite graph using the Hopcroft-\/\+Karp algorithm.Here is the call graph for this function\+:\nopagebreak
+Returns a maximum matching of bipartite graph using the Hopcroft-\/\+Karp algorithm. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -133,17 +159,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespacegraph__theory_a178da2acee19545ba0378a75ffea2fdb_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacegraph__theory_ac47e32c1c40eb2d6e367f4d5b34d9ccc}\label{namespacegraph__theory_ac47e32c1c40eb2d6e367f4d5b34d9ccc}} 
+\mbox{\Hypertarget{namespacegraph__theory_a43f33335bd84b91252969b3b17f8b09d}\label{namespacegraph__theory_a43f33335bd84b91252969b3b17f8b09d}} 
 \index{graph\_theory@{graph\_theory}!mst@{mst}}
 \index{mst@{mst}!graph\_theory@{graph\_theory}}
 \doxysubsubsection{\texorpdfstring{mst()}{mst()}}
-{\footnotesize\ttfamily auto graph\+\_\+theory\+::mst (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$}]{edges }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto graph\+\_\+theory\+::mst (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$}]{edges,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
 
-Returns the minimum spanning tree of the set of edges es, as a set of edgesHere is the caller graph for this function\+:\nopagebreak
+Returns the minimum spanning forest of the set of edges es, as a set of edges Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegraph__theory_ac47e32c1c40eb2d6e367f4d5b34d9ccc_icgraph}
+\includegraphics[width=350pt]{namespacegraph__theory_a43f33335bd84b91252969b3b17f8b09d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacegraph__theory_a4dbe54e2a6c2e93add66dc32c647c876}\label{namespacegraph__theory_a4dbe54e2a6c2e93add66dc32c647c876}} 
@@ -205,7 +231,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{shortest\_dist()}{shortest\_dist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily auto graph\+\_\+theory\+::shortest\+\_\+dist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&}]{graph }\end{DoxyParamCaption})}
 
-Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances. We do not consider paths of length zero. Algorithm\+: Floyd-\/\+Warshall\mbox{\Hypertarget{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}\label{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}} 
+Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances. We do not consider paths of length zero. Algorithm\+: Floyd-\/\+Warshall \mbox{\Hypertarget{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}\label{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}} 
 \index{graph\_theory@{graph\_theory}!shortest\_dist@{shortest\_dist}}
 \index{shortest\_dist@{shortest\_dist}!graph\_theory@{graph\_theory}}
 \doxysubsubsection{\texorpdfstring{shortest\_dist()}{shortest\_dist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -284,7 +310,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_graph\_theory()}{test\_graph\_theory()}}
 {\footnotesize\ttfamily void graph\+\_\+theory\+::test\+\_\+graph\+\_\+theory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -304,7 +331,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{test\_max\_match()}{test\_max\_match()}}
 {\footnotesize\ttfamily void graph\+\_\+theory\+::test\+\_\+max\+\_\+match (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -404,7 +432,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{trans()}{trans()}}
 {\footnotesize\ttfamily auto graph\+\_\+theory\+::trans (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{graph }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Returns the transpose graph of directed graph Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

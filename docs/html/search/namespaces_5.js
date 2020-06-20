@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_5falgebra_503',['linear_algebra',['../namespacelinear__algebra.html',1,'']]]
+  ['modulo_5fnamespace_559',['modulo_namespace',['../namespacemodulo__namespace.html',1,'']]]
 ];

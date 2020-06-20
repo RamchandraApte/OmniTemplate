@@ -1,7 +1,15 @@
 #pragma once
 #include "core.hpp"
 #include "modulo.hpp"
+/**
+ * @brief Permutation namespace. Contains the Permutation class and tools related to permutations.
+ * 
+ */
 namespace permutation {
+/**
+* @brief Permutation class
+* 
+*/
 class Permutation : public vector<ll> {
       public:
 	using vector<ll>::operator[];
@@ -10,8 +18,12 @@ class Permutation : public vector<ll> {
 		dbg(this);
 	}
 	explicit Permutation(const initializer_list<ll> &arr) : vector<ll>{arr} {}
+    /**
+    * @brief Returns the cycle decomposition of the permutation.
+    * 
+    * @return A vector containing a vector of the indices in the cycle.
+    */
 	[[nodiscard]] vector<vector<ll>> to_cycles() const {
-		/*! Returns vector of cycles*/
 		vector<ll> vis(this.size());
 		vector<vector<ll>> cycles;
 		fo(i, this.size()) {
@@ -38,20 +50,35 @@ class Permutation : public vector<ll> {
 	}
 };
 Permutation identity(multiplies<>, const Permutation &perm) { return Permutation(ssize(perm)); }
+/** @brief Returns the composition of permutations a and b, so that ret[i] = a[b[i]].
+ * @return \f$ab\f$
+ */
 Permutation operator*(const Permutation &a, const Permutation &b) {
-	/*! Returns the composition of permutations a and b.*/
 	assert(a.size() == b.size());
 	Permutation c(a.size());
-	fo(i, a.size()) { c[i] = a[b[i]]; }
+    fo(i, a.size()) { c[i] = a[b[i]]; }
 	return c;
 }
+
+/**
+ * @brief Inverts a permutation.
+ * 
+ * @param p Permutation.
+ * @return Inverse of the permutation.
+ */
 Permutation invert(multiplies<>, const Permutation &p) {
 	Permutation inv(p.size());
 	fo(i, p.size()) { inv[p[i]] = i; }
 	return inv;
 }
+/**
+* @brief Returns in linear-time, perm^n using cycle-decomposition
+* 
+* @param perm A permutation.
+* @param n The exponent. If negative, returns the power of the inverse permutation.
+* @return \f$\left(perm\right)^n\f$
+*/
 Permutation power(const Permutation &perm, ll n) {
-	/*! Returns in linear-time, perm^n using cycle-decomposition */
 	return Permutation(perm.to_cycles(), perm.size(), n);
 }
 void test_ops() {

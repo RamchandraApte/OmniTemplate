@@ -1,6 +1,9 @@
 #pragma once
 #include "core.hpp"
-/*! Sparse table. T is the type of the data, Semilattice is a bounded semilattice.*/
+// TODO return identity when l = r
+/*! Sparse table.
+ * @param T is the type of the data,
+ * @param Semilattice is a bounded semilattice.*/
 template <typename T, typename Semilattice> class SparseTable {
       public:
 	explicit SparseTable(const vector<T> &arr) : meet(ceil_log(arr.size(), 2), vector<ll>(arr.size())) {
@@ -22,6 +25,12 @@ template <typename T, typename Semilattice> class SparseTable {
       private:
 	vc<vl> meet; //!< meet[pw][i] stores the meet of elements in range [i, i+2^pw)
 };
+/*! @brief Disjoint sparse table.
+ * 
+ * Space complexity: \f$O(n \log n)\f$.
+ * 
+ * Time complexity: \f$O(n \log n)\f$ to construct, \f$O(1)\f$ per query.
+ */
 template <typename T, typename Monoid> class DisjointSparseTable {
       public:
 	explicit DisjointSparseTable(vector<T> arr) : sum(ceil_log(arr.size(), 2), vector<T>(base_ceil(arr.size(), 2))) {
@@ -47,8 +56,8 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 			}
 		}
 	}
+    /*! Returns Monoid sum over range [l, r)*/
 	T query(ll l, ll r) const {
-		/*! Returns sum of Monoid over range [l, r)*/
 		assert(l < r);
 		--r;
 		const auto num_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);

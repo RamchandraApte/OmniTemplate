@@ -18,7 +18,7 @@ Collaboration diagram for string\+\_\+tools\+::hash\+\_\+str\+:\nopagebreak
 \item 
 \mbox{\hyperlink{structstring__tools_1_1hash__str_aba56bc5901a45e72721a12256a831e69}{hash\+\_\+str}} (const string\+\_\+view str)
 \item 
-size\+\_\+t \mbox{\hyperlink{structstring__tools_1_1hash__str_aa225e4c97fdcb936db7de44168d13f09}{operator()}} (const string\+\_\+view \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}) const
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structstring__tools_1_1hash__str_a75581b5cc9b3b8bfc41efbe0b395818d}{operator()}} (const string\+\_\+view \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -36,6 +36,11 @@ static constexpr auto \mbox{\hyperlink{structstring__tools_1_1hash__str_a6a815a0
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Fast rolling hash on a specific string\textquotesingle{}s substrings.
+
+Time complexity\+: $O(n)$ to build, $O(1)$ to query. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structstring__tools_1_1hash__str_aba56bc5901a45e72721a12256a831e69}\label{structstring__tools_1_1hash__str_aba56bc5901a45e72721a12256a831e69}} 
 \index{string\_tools::hash\_str@{string\_tools::hash\_str}!hash\_str@{hash\_str}}
@@ -46,11 +51,11 @@ static constexpr auto \mbox{\hyperlink{structstring__tools_1_1hash__str_a6a815a0
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structstring__tools_1_1hash__str_aa225e4c97fdcb936db7de44168d13f09}\label{structstring__tools_1_1hash__str_aa225e4c97fdcb936db7de44168d13f09}} 
+\mbox{\Hypertarget{structstring__tools_1_1hash__str_a75581b5cc9b3b8bfc41efbe0b395818d}\label{structstring__tools_1_1hash__str_a75581b5cc9b3b8bfc41efbe0b395818d}} 
 \index{string\_tools::hash\_str@{string\_tools::hash\_str}!operator()@{operator()}}
 \index{operator()@{operator()}!string\_tools::hash\_str@{string\_tools::hash\_str}}
 \doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
-{\footnotesize\ttfamily size\+\_\+t string\+\_\+tools\+::hash\+\_\+str\+::operator() (\begin{DoxyParamCaption}\item[{const string\+\_\+view}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} string\+\_\+tools\+::hash\+\_\+str\+::operator() (\begin{DoxyParamCaption}\item[{const string\+\_\+view}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

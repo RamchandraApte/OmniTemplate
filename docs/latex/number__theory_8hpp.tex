@@ -2,8 +2,7 @@
 \label{number__theory_8hpp}\index{/home/ram/OmniTemplate/number\_theory.hpp@{/home/ram/OmniTemplate/number\_theory.hpp}}
 {\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}modulo.\+hpp\char`\"{}}\newline
-Include dependency graph for number\+\_\+theory.\+hpp\+:
-\nopagebreak
+Include dependency graph for number\+\_\+theory.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,44 +13,44 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=224pt]{number__theory_8hpp__dep__incl}
+\includegraphics[width=350pt]{number__theory_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 auto \mbox{\hyperlink{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784}{prime}} (\mbox{\hyperlink{structll}{ll}} n)
-\item 
+\begin{DoxyCompactList}\small\item\em Return whether integer n $>$= 2 is prime. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_a87d7c3ba2489977a16ec40544a918e00}{test\+\_\+prime}} ()
 \item 
 \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{number__theory_8hpp_af88afa289696363eee6d6caed35edfb5}{divisors}} (\mbox{\hyperlink{structll}{ll}} x)
-\item 
+\begin{DoxyCompactList}\small\item\em Return all divisors of x in sorted order. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153}{test\+\_\+divisors}} ()
 \item 
-auto \mbox{\hyperlink{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944}{sieve}} (\mbox{\hyperlink{structll}{ll}} n)
-\item 
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{number__theory_8hpp_ae8dd217fd3a3de037c6a1031aef548aa}{sieve}} (\mbox{\hyperlink{structll}{ll}} n)
+\begin{DoxyCompactList}\small\item\em Linear time prime sieve. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_a8956d5feae5d2dd01656f6f960d568c7}{test\+\_\+sieve}} ()
 \item 
 \mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} \mbox{\hyperlink{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df}{fac}} (\mbox{\hyperlink{structll}{ll}} n)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the factorization of n. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_afcfd3b1e3415393029bc6a496d825459}{test\+\_\+fac}} ()
 \item 
 void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egcd}} (const \mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} b, \mbox{\hyperlink{structll}{ll}} \&x, \mbox{\hyperlink{structll}{ll}} \&y)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets x and y so that $x\cdot a + y\cdot b = \gcd(a,b)$. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_ae2f84cd254fbf1373fc273141ce470ed}{test\+\_\+egcd}} (\mbox{\hyperlink{structll}{ll}} a, \mbox{\hyperlink{structll}{ll}} b)
 \item 
 void \mbox{\hyperlink{number__theory_8hpp_a1764567e56d415f536db0a4aa89e782f}{test\+\_\+egcd}} ()
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f}{totient}} (\mbox{\hyperlink{structll}{ll}} n)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the totient of the integer n. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_a8ae320acad5e35d58ca5ad7adc6ddd78}{test\+\_\+totient}} ()
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}{dlog}} (const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} a, const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} b)
-\item 
+\begin{DoxyCompactList}\small\item\em Finds x such that a$^\wedge$x = b (mod M) using baby-\/step giant-\/step algorithm. a and M must be coprime. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_a7aac53ce82614d79c7098a1de32ed1e7}{test\+\_\+dlog}} ()
 \item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{number__theory_8hpp_a6542b189f3759f43899a8b1978d58e2c}{primitive\+\_\+root}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns a primitive root modulo M. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{number__theory_8hpp_a0ff115471f41e78245b5dc48eaf8032f}{test\+\_\+primitive\+\_\+root}} ()
 \item 
 void \mbox{\hyperlink{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef}{test\+\_\+number\+\_\+theory}} ()
@@ -70,7 +69,11 @@ void \mbox{\hyperlink{number__theory_8hpp_aed36f6b8b9706133e9b5302b1618e9ef}{tes
 \doxysubsubsection{\texorpdfstring{divisors()}{divisors()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} divisors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
-Return all divisors of x in sorted orderHere is the caller graph for this function\+:\nopagebreak
+
+
+Return all divisors of x in sorted order. 
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,6 +85,10 @@ Return all divisors of x in sorted orderHere is the caller graph for this functi
 \index{dlog@{dlog}!number\_theory.hpp@{number\_theory.hpp}}
 \doxysubsubsection{\texorpdfstring{dlog()}{dlog()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dlog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}}}]{a,  }\item[{const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Finds x such that a$^\wedge$x = b (mod M) using baby-\/step giant-\/step algorithm. a and M must be coprime. 
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -103,7 +110,18 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{egcd()}{egcd()}}
 {\footnotesize\ttfamily void egcd (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{a,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{b,  }\item[{\mbox{\hyperlink{structll}{ll}} \&}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}} \&}]{y }\end{DoxyParamCaption})}
 
-Sets x and y so that $x\cdot a + y\cdot b = \gcd(a,b)$Here is the caller graph for this function\+:\nopagebreak
+
+
+Sets x and y so that $x\cdot a + y\cdot b = \gcd(a,b)$. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,6 +134,13 @@ Sets x and y so that $x\cdot a + y\cdot b = \gcd(a,b)$Here is the caller graph f
 \doxysubsubsection{\texorpdfstring{fac()}{fac()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} fac (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
 
+
+
+Returns the factorization of n. 
+
+\begin{DoxyReturn}{Returns}
+a map from the prime to the exponent 
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -136,11 +161,15 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{prime()}{prime()}}
 {\footnotesize\ttfamily auto prime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
 
-Return whether integer n $>$= 2 is primeHere is the call graph for this function\+:\nopagebreak
+
+
+Return whether integer n $>$= 2 is prime. 
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=312pt]{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784_cgraph}
+\includegraphics[width=350pt]{number__theory_8hpp_a02e886c6eb18cd3b8894ea2ba9ca9784_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -156,7 +185,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{primitive\_root()}{primitive\_root()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} primitive\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns a primitive root modulo MHere is the call graph for this function\+:\nopagebreak
+
+
+Returns a primitive root modulo M. 
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -170,17 +203,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{number__theory_8hpp_a6542b189f3759f43899a8b1978d58e2c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944}\label{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944}} 
+\mbox{\Hypertarget{number__theory_8hpp_ae8dd217fd3a3de037c6a1031aef548aa}\label{number__theory_8hpp_ae8dd217fd3a3de037c6a1031aef548aa}} 
 \index{number\_theory.hpp@{number\_theory.hpp}!sieve@{sieve}}
 \index{sieve@{sieve}!number\_theory.hpp@{number\_theory.hpp}}
 \doxysubsubsection{\texorpdfstring{sieve()}{sieve()}}
-{\footnotesize\ttfamily auto sieve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structll}{ll}}$>$ sieve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
 
+
+
+Linear time prime sieve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Sieve numbers in \mbox{[}0,n) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector where ret\mbox{[}idx\mbox{]} is the smallest prime divisor of idx 
+\end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{number__theory_8hpp_a08a5d3143912e850f2a0e799c20b7944_icgraph}
+\includegraphics[width=350pt]{number__theory_8hpp_ae8dd217fd3a3de037c6a1031aef548aa_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153}\label{number__theory_8hpp_a3e935b9aca6e9dfa6b0a8ef9a4c7e153}} 
@@ -233,7 +278,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=320pt]{number__theory_8hpp_a1764567e56d415f536db0a4aa89e782f_cgraph}
+\includegraphics[width=350pt]{number__theory_8hpp_a1764567e56d415f536db0a4aa89e782f_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{number__theory_8hpp_ae2f84cd254fbf1373fc273141ce470ed}\label{number__theory_8hpp_ae2f84cd254fbf1373fc273141ce470ed}} 
@@ -246,7 +291,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=220pt]{number__theory_8hpp_ae2f84cd254fbf1373fc273141ce470ed_cgraph}
+\includegraphics[width=350pt]{number__theory_8hpp_ae2f84cd254fbf1373fc273141ce470ed_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -382,6 +427,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{totient()}{totient()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} totient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
 
+
+
+Returns the totient of the integer n. 
+
+\begin{DoxyPrecond}{Precondition}
+n $>$= 1 
+\end{DoxyPrecond}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

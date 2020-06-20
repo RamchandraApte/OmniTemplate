@@ -1,16 +1,14 @@
 \hypertarget{utility_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/utility.hpp File Reference}
 \label{utility_8hpp}\index{/home/ram/OmniTemplate/utility.hpp@{/home/ram/OmniTemplate/utility.hpp}}
 {\ttfamily \#include \char`\"{}range.\+hpp\char`\"{}}\newline
-Include dependency graph for utility.\+hpp\+:
-\nopagebreak
+Include dependency graph for utility.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{utility_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,12 +18,12 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structutility_1_1with}{utility\+::with}}
+struct \mbox{\hyperlink{structutility_1_1with}{utility\+::with$<$ T $>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix$<$ Func $>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1ar}{utility\+::ar$<$ T $>$}}
-\item 
+\begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{utility\+::ar$<$ T\mbox{[}n\mbox{]}$>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1random__device__patch}{utility\+::random\+\_\+device\+\_\+patch}}
@@ -38,12 +36,16 @@ struct \mbox{\hyperlink{structutility_1_1random__device__patch}{utility\+::rando
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{utility_8hpp_a76cdb96860b77886867832efcffeeb32}{lambda}}(f)~\mbox{[}\&\mbox{]}(auto... args) \{ return f(args...); \}
+\#define \mbox{\hyperlink{utility_8hpp_a76cdb96860b77886867832efcffeeb32}{lambda}}(f)~\mbox{[}$\,$\mbox{]}(auto \&\&... args) \{ return f(forward$<$decltype(args)$>$(args)...); \}
+\item 
+\#define \mbox{\hyperlink{utility_8hpp_a4072e106efe575805c4864dbbd387090}{U\+S\+E\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+P\+A\+T\+CH}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utility\+::ar\+\_\+t}} = typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$ T $>$\+::type
+\item 
+using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utility\+::random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -60,19 +62,27 @@ void \mbox{\hyperlink{namespaceutility_a2f611269d39535446ae5f89e3de27d9b}{utilit
 \item 
 void \mbox{\hyperlink{namespaceutility_a393602f329243516ab6a008f905aa82d}{utility\+::test\+\_\+uniq}} ()
 \item 
-{\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_a3bd1495c0bc9744b584e2294d8cb4693}{utility\+::map\+\_\+args}} (const Func \&f, T g=T\{\})
+{\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}{utility\+::key\+\_\+compare}} (const Func \&f, T g=T\{\})
 \item 
-void \mbox{\hyperlink{namespaceutility_ab69832291ff66469b755de5c5e5d6700}{utility\+::test\+\_\+map\+\_\+args}} ()
+void \mbox{\hyperlink{namespaceutility_aff1da1538e8456d30c0528faba66b50b}{utility\+::test\+\_\+key\+\_\+compare}} ()
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a50e9430d1096ce6997ae910135a9533f}{utility\+::prev\+\_\+less}} (const T \&\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a005fc5d8af9bba651f00c74372466b83}{utility\+::bit\+\_\+ceil}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
-void \mbox{\hyperlink{namespaceutility_afec0dcf698aef9d3f51eb06de4dce70d}{utility\+::test\+\_\+next\+\_\+pow\+\_\+of\+\_\+2}} ()
+void \mbox{\hyperlink{namespaceutility_a712d50fe014f71ad2d85897f9c243680}{utility\+::test\+\_\+bit\+\_\+ceil}} ()
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a0379f3e7751f5d40389e23da6faa0997}{utility\+::base\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a8f3300f337ef573fa74299812180c11c}{utility\+::ceil\+\_\+log}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{utility\+::next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
 void \mbox{\hyperlink{namespaceutility_ad358004e1f554321202b4e29f8470c5e}{utility\+::test\+\_\+next\+\_\+comb}} ()
+\item 
+{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{utility\+::swap2}} (T \&a, T \&b, const Func \&func)
+\item 
+{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{utility\+::ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
 \item 
 void \mbox{\hyperlink{namespaceutility_a46672014ead1e91eeafec896f61036db}{utility\+::test\+\_\+ar}} ()
 \item 
@@ -81,7 +91,7 @@ void \mbox{\hyperlink{namespaceutility_a5037ce073dfbaeaf7083a725780cdaf1}{utilit
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{utility\+::reng}} \{std\+::random\+\_\+device\{\}()\}
+default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{utility\+::reng}} \{\mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}}\{\}()\}
 \end{DoxyCompactItemize}
 
 
@@ -90,5 +100,11 @@ default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915
 \index{utility.hpp@{utility.hpp}!lambda@{lambda}}
 \index{lambda@{lambda}!utility.hpp@{utility.hpp}}
 \doxysubsubsection{\texorpdfstring{lambda}{lambda}}
-{\footnotesize\ttfamily \#define lambda(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{[}\&\mbox{]}(auto... args) \{ return f(args...); \}}
+{\footnotesize\ttfamily \#define lambda(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{[}$\,$\mbox{]}(auto \&\&... args) \{ return f(forward$<$decltype(args)$>$(args)...); \}}
+
+\mbox{\Hypertarget{utility_8hpp_a4072e106efe575805c4864dbbd387090}\label{utility_8hpp_a4072e106efe575805c4864dbbd387090}} 
+\index{utility.hpp@{utility.hpp}!USE\_RANDOM\_DEVICE\_PATCH@{USE\_RANDOM\_DEVICE\_PATCH}}
+\index{USE\_RANDOM\_DEVICE\_PATCH@{USE\_RANDOM\_DEVICE\_PATCH}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{USE\_RANDOM\_DEVICE\_PATCH}{USE\_RANDOM\_DEVICE\_PATCH}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+P\+A\+T\+CH}
 

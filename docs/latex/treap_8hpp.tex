@@ -1,8 +1,7 @@
 \hypertarget{treap_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/treap.hpp File Reference}
 \label{treap_8hpp}\index{/home/ram/OmniTemplate/treap.hpp@{/home/ram/OmniTemplate/treap.hpp}}
 {\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
-Include dependency graph for treap.\+hpp\+:
-\nopagebreak
+Include dependency graph for treap.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,7 +12,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=224pt]{treap_8hpp__dep__incl}
+\includegraphics[width=350pt]{treap_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -47,7 +46,7 @@ struct \mbox{\hyperlink{structsize__data}{size\+\_\+data$<$ Key $>$}}
 {\footnotesize template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ }\\void \mbox{\hyperlink{treap_8hpp_ab4b19e3c8f0a975627a7261ed3e2c29b}{split}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$trp, const Key \&key, Trp $\ast$\&l, Trp $\ast$\&r)
 \item 
 {\footnotesize template$<$typename Trp $>$ }\\Trp $\ast$ \mbox{\hyperlink{treap_8hpp_a4338e31f2a01e882efc6adf47768c076}{join}} (Trp $\ast$l, Trp $\ast$r)
-\item 
+\begin{DoxyCompactList}\small\item\em Joins treap l and treap r. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Trp $>$ }\\void \mbox{\hyperlink{treap_8hpp_ad45b31cb3a5a560af114abfcbce83936}{insert}} (Trp $\ast$\&trp, Trp $\ast$x)
 \item 
 {\footnotesize template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ }\\auto \mbox{\hyperlink{treap_8hpp_a14ea768f9d1a656b814be126c0a631c8}{insert}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$\&trp, const Key \&key)
@@ -248,7 +247,26 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Trp $>$ \\
 Trp$\ast$ join (\begin{DoxyParamCaption}\item[{Trp $\ast$}]{l,  }\item[{Trp $\ast$}]{r }\end{DoxyParamCaption})}
 
-All the keys in l are less than the keys in rHere is the call graph for this function\+:\nopagebreak
+
+
+Joins treap l and treap r. 
+
+\begin{DoxyPrecond}{Precondition}
+All the keys in l must be less than the keys in r. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Trp} & p\+\_\+\+Trp\+: A treap type. \\
+\hline
+{\em l} & p\+\_\+l\+: The left half \\
+\hline
+{\em r} & p\+\_\+r\+: The right half \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Trp$\ast$\+: The union of l and r. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

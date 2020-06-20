@@ -1,15 +1,15 @@
 #pragma once
 #include "core.hpp"
 namespace splay_tree {
-/*! Implements a splay tree*/
+/** @brief Implements a splay tree*/
 template <typename T> struct SplayTree {
       public:
-	/*! Splay tree node */
+	/** @brief Splay tree node */
 	struct Node {
 	      public:
-		T value;
-		array<Node *, 2> child{};
-		Node *parent{};
+		T value; //!< Value associated with node
+		array<Node *, 2> child{}; //!< Left and right children
+		Node *parent{}; //!< Pointer to parent
 	};
 	/*! Splay tree iterator */
 	struct iterator : public it_base<T> {
@@ -127,6 +127,7 @@ template <typename T> struct SplayTree {
 		delete x;
 		--size_;
 	}
+	/** @brief Erases the node with key key from the splay tree */
 	void erase(const T &key) { erase(find(key)); }
 	template <bool i> static Node *extremum(Node *const x) {
 		/*! Return the extremum of the subtree x. Minimum if i is false,
@@ -154,14 +155,17 @@ template <typename T> struct SplayTree {
 		}
 		return {x, x->child[1]};
 	}
+    /*! Returns node with key key*/
 	Node *find(const T &key) {
-		/*! Returns node with key key*/
 		auto x = root;
 		for (; x && key != x->value; x = x->child[key > x->value])
 			;
 		return x;
 	}
-	ll size() { return size_; }
+	/**
+     * @brief Returns the number of nodes in the splay tree.
+     */
+    ll size() { return size_; }
 	bool empty() { return size() == 0; }
 	iterator begin() { return iterator{extremum<false>(root)}; }
 	iterator end() { return iterator{nullptr}; }

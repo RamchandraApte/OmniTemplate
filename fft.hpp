@@ -36,7 +36,10 @@ auto ifft(auto& v){
 }
 #endif
 #if 1
-/*! O(n log n) FFT algorithm */
+/** @brief FFT using Cooley–Tukey FFT algorithm
+ * 
+ * Time complexity: \f$ O(n log n)\f$
+ */
 template <typename Cont> vector<com> fft(Cont v) {
 	auto n = bit_ceil(v.size());
 	if (n == 1) {
@@ -55,6 +58,7 @@ template <typename Cont> vector<com> fft(Cont v) {
 	}
 	return f;
 }
+/** Returns the inverse FFT */
 template <typename Cont> vector<com> ifft(Cont v) {
 	reverse(begin(v) + 1, end(v));
 	auto r = fft(v);

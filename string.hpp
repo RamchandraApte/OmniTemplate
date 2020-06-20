@@ -1,6 +1,10 @@
 #pragma once
 #include "core.hpp"
 namespace string_tools {
+/*! Fast rolling hash on a specific string's substrings.
+ * 
+ * Time complexity: \f$O(n)\f$ to build, \f$O(1)\f$ to query.
+ */
 struct hash_str {
 	static auto constexpr lcg_mod = (1ULL << 62) - 57;
 	const char *st;
@@ -40,6 +44,10 @@ void test_hash_str() {
 	assert(mapping[omni2] == 42);
 	assert(mapping[omn] == 0);
 }
+/*! Hashes the bytes in an object.
+ * 
+ * NOTE: not sure if this is really standards-compliant
+ */
 struct bytehash {
 	template <typename T> constexpr auto operator()(const T &x) const {
 		return hash<string_view>{}(
@@ -54,6 +62,7 @@ void test_bytehash() {
 			func(tuple{to_string(i), i + 1})));
 	}
 }
+/*! Returns prefix function of string s*/
 vl prefix(string const &s) {
 	ll n = s.size();
 	vl p(n);
@@ -70,6 +79,7 @@ vl prefix(string const &s) {
 	}
 	return p;
 }
+/*! Find all substrings of t equal to s*/
 auto search_all(string const &t, string const &s) {
 	auto p = prefix(s + '\0' + t);
 	vl v;
@@ -81,6 +91,7 @@ auto search_all(string const &t, string const &s) {
 	return v;
 }
 string empstr = "";
+/*! Search iterator for looping through all matches of a string s in t*/
 struct search_it : it_base<ll> {
 	using iterator_category = input_iterator_tag;
 	string const &t, s;

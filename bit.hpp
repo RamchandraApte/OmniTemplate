@@ -1,9 +1,11 @@
 #pragma once
 #include "core.hpp"
 #include "utility.hpp"
-/*! Binary indexed tree (also called Fenwick tree)
- * Value is the type of the value
- * MonoidOp is a Monoid on the Value type */
+/**
+ * @brief Binary indexed tree (also called Fenwick tree)
+ * @param Value is the type of the value
+ * @param MonoidOp is a Monoid operating on the Value type
+ */
 template <typename Value, typename MonoidOp = plus<>> class BIT {
 	//! The array storing the BIT's internal values. Each element of this represents a range of
 	//! elements.
@@ -21,9 +23,12 @@ template <typename Value, typename MonoidOp = plus<>> class BIT {
 		}
 		return sum;
 	}
+	/**
+     * @brief  Update the value at idx by value. Note that this does _not_ set the value to value.
+     * @param idx the index of the element
+     * @param value the value the element will be updated by
+     */
 	void update(ll idx, const Value value) {
-		/*! Update the value at idx by value. Note that this does _not_
-		 * set the value to value*/
 		++idx;
 		for (; idx < arr.size(); idx += get_len(idx)) {
 			arr[idx] = op(arr[idx], value);

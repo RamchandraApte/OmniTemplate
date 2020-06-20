@@ -88,16 +88,21 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0dc72e4b470b6c975318e9127706510f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1fix.html#a0dc72e4b470b6c975318e9127706510f">fix</a> (const Func &amp;func_)</td></tr>
 <tr class="separator:a0dc72e4b470b6c975318e9127706510f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71588d2f2e349fed9b375f15227b5966"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:a71588d2f2e349fed9b375f15227b5966"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structutility_1_1fix.html#a71588d2f2e349fed9b375f15227b5966">operator()</a> (Ts &amp;&amp;... args) const</td></tr>
-<tr class="separator:a71588d2f2e349fed9b375f15227b5966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b091b536b383499aaf376d12f92fa7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a93b091b536b383499aaf376d12f92fa7"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structutility_1_1fix.html#a93b091b536b383499aaf376d12f92fa7">operator()</a> (Args &amp;&amp;... args) const</td></tr>
+<tr class="separator:a93b091b536b383499aaf376d12f92fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3afbbbf98d76d3123362956f5b586940"><td class="memItemLeft" align="right" valign="top">Func&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1fix.html#a3afbbbf98d76d3123362956f5b586940">func</a></td></tr>
 <tr class="separator:a3afbbbf98d76d3123362956f5b586940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Func&gt;<br />
+struct utility::fix&lt; Func &gt;</h3>
+
+<p>Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0dc72e4b470b6c975318e9127706510f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0dc72e4b470b6c975318e9127706510f">&#9670;&nbsp;</a></span>fix()</h2>
 
@@ -127,23 +132,23 @@ template&lt;typename Func &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a71588d2f2e349fed9b375f15227b5966"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71588d2f2e349fed9b375f15227b5966">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a93b091b536b383499aaf376d12f92fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b091b536b383499aaf376d12f92fa7">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Func &gt; </div>
 <div class="memtemplate">
-template&lt;typename... Ts&gt; </div>
+template&lt;typename... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="structutility_1_1fix.html">utility::fix</a>&lt; Func &gt;::operator() </td>
+          <td class="memname">decltype(auto) <a class="el" href="structutility_1_1fix.html">utility::fix</a>&lt; Func &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -171,7 +176,6 @@ template&lt;typename Func &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. </p>
 
 </div>
 </div>

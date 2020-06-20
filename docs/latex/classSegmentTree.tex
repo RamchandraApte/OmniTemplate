@@ -1,0 +1,464 @@
+\hypertarget{classSegmentTree}{}\doxysection{Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$ Class Template Reference}
+\label{classSegmentTree}\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+
+
+{\ttfamily \#include $<$segment\+\_\+tree.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSegmentTree_1_1LazyPart}{Lazy\+Part}}
+\item 
+struct \mbox{\hyperlink{structSegmentTree_1_1NodeCore}{Node\+Core}}
+\item 
+struct \mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}}
+\item 
+struct \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} = conditional\+\_\+t$<$ has\+\_\+ptr, \mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$, \mbox{\hyperlink{structll}{ll}} $>$
+\item 
+using \mbox{\hyperlink{classSegmentTree_afba544d564a42497c23bb83786c8530f}{Node}} = conditional\+\_\+t$<$ has\+\_\+ptr, \mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$, \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSegmentTree_adb7a7bf899bb690d84283257baa678c4}{Segment\+Tree}} (const \mbox{\hyperlink{structll}{ll}} size\+\_\+arg)
+\item 
+auto \& \mbox{\hyperlink{classSegmentTree_a49a185b358936de0e027b42bb32017d4}{get\+\_\+core}} (\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&obj)
+\item 
+auto \& \mbox{\hyperlink{classSegmentTree_ac5881ec5bcb5658a80ecca16660503cd}{get\+\_\+core}} (const \mbox{\hyperlink{structll}{ll}} idx)
+\item 
+auto \& \mbox{\hyperlink{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc}{get\+\_\+child}} (\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&obj, const \mbox{\hyperlink{structll}{ll}} i)
+\item 
+auto \mbox{\hyperlink{classSegmentTree_a251001698b3243d2adadc13c84b10458}{get\+\_\+child}} (const \mbox{\hyperlink{structll}{ll}} idx, const \mbox{\hyperlink{structll}{ll}} i)
+\item 
+void \mbox{\hyperlink{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}{down}} (const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} idx, const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r)
+\item 
+T \mbox{\hyperlink{classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e}{query}} (const \mbox{\hyperlink{structll}{ll}} l, const \mbox{\hyperlink{structll}{ll}} r, const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} idx, const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r)
+\item 
+T \mbox{\hyperlink{classSegmentTree_a9f9282f29c2d91d1ef3989ea7384892b}{query}} (const \mbox{\hyperlink{structll}{ll}} l, const \mbox{\hyperlink{structll}{ll}} r, const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} custom\+\_\+root)
+\item 
+T \mbox{\hyperlink{classSegmentTree_a15af5893144423311e3c41a53de3d59e}{query}} (const \mbox{\hyperlink{structll}{ll}} l, const \mbox{\hyperlink{structll}{ll}} r)
+\item 
+\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree_a00e7570a50ddee7944c35de35d8924ff}{update}} (const \mbox{\hyperlink{structll}{ll}} l, const \mbox{\hyperlink{structll}{ll}} r, const T val, \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} idx, const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r)
+\item 
+\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree_a6565444d7616870fd1d4c36028ed0c4d}{update}} (const \mbox{\hyperlink{structll}{ll}} l, const \mbox{\hyperlink{structll}{ll}} r, const T val)
+\item 
+void \mbox{\hyperlink{classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3}{destroy}} (\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} node)
+\item 
+\mbox{\hyperlink{classSegmentTree_a334b6dc9e4d6a407c04c89f4c9bca7cb}{$\sim$\+Segment\+Tree}} ()
+\item 
+\mbox{\hyperlink{classSegmentTree_adb7a7bf899bb690d84283257baa678c4}{Segment\+Tree}} (const \mbox{\hyperlink{structll}{ll}} size\+\_\+arg)
+\item 
+auto \& \mbox{\hyperlink{classSegmentTree_a49a185b358936de0e027b42bb32017d4}{get\+\_\+core}} (\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&obj)
+\item 
+auto \& \mbox{\hyperlink{classSegmentTree_afa035757c1304cbb912560c2e7a5658c}{get\+\_\+core}} (const \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}} idx)
+\item 
+auto \& \mbox{\hyperlink{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc}{get\+\_\+child}} (\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&obj, const \mbox{\hyperlink{structll}{ll}} i)
+\item 
+\mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}} \mbox{\hyperlink{classSegmentTree_a5d94f182b8dce5dc8e76ec30e73f8ce7}{get\+\_\+child}} (const \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}} idx, const \mbox{\hyperlink{structll}{ll}} i)
+\item 
+void \mbox{\hyperlink{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}{down}} (const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} idx, const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r)
+\item 
+{\footnotesize template$<$typename... Bounds$>$ }\\T \mbox{\hyperlink{classSegmentTree_a691d643b2872c8d23c062cc050341983}{query\+\_\+impl}} (const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} idx, const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r, const \mbox{\hyperlink{segment__tree__multi_8hpp_a64307e6ade8234a4bb7d57cb28f71f93}{Bound}} bound, const Bounds... bounds)
+\item 
+{\footnotesize template$<$typename... Bounds$>$ }\\T \mbox{\hyperlink{classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31}{query\+\_\+pers}} (const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} custom\+\_\+root, const Bounds... bounds)
+\item 
+{\footnotesize template$<$typename... Bounds$>$ }\\T \mbox{\hyperlink{classSegmentTree_a54816e3b51b87889fc2038329fed254b}{query}} (const Bounds... bounds)
+\item 
+{\footnotesize template$<$typename... Bounds$>$ }\\\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9}{update\+\_\+impl}} (\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} idx, const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r, const T val, const \mbox{\hyperlink{segment__tree__multi_8hpp_a64307e6ade8234a4bb7d57cb28f71f93}{Bound}} bound, const Bounds... bounds)
+\item 
+{\footnotesize template$<$typename... Bounds$>$ }\\\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree_aef5bdc8818b9c0da150ad1f4d6d87360}{update}} (const T val, const Bounds... bounds)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d}{mid}} (const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r, const \mbox{\hyperlink{structll}{ll}} i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}\label{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!Node@{Node}}
+\index{Node@{Node}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+using \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} =  conditional\+\_\+t$<$has\+\_\+ptr, \mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$, \mbox{\hyperlink{structll}{ll}}$>$}
+
+\mbox{\Hypertarget{classSegmentTree_afba544d564a42497c23bb83786c8530f}\label{classSegmentTree_afba544d564a42497c23bb83786c8530f}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!Node@{Node}}
+\index{Node@{Node}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+using \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} =  conditional\+\_\+t$<$has\+\_\+ptr, \mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$, \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSegmentTree_adb7a7bf899bb690d84283257baa678c4}\label{classSegmentTree_adb7a7bf899bb690d84283257baa678c4}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!SegmentTree@{SegmentTree}}
+\index{SegmentTree@{SegmentTree}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{SegmentTree()}{SegmentTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+\mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\mbox{\hyperlink{classSegmentTree}{Segment\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{size\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_a334b6dc9e4d6a407c04c89f4c9bca7cb}\label{classSegmentTree_a334b6dc9e4d6a407c04c89f4c9bca7cb}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!````~SegmentTree@{$\sim$SegmentTree}}
+\index{````~SegmentTree@{$\sim$SegmentTree}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SegmentTree()}{~SegmentTree()}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+\mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::$\sim$\mbox{\hyperlink{classSegmentTree}{Segment\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Free memory allocator by the segment tree. Note\+: does not work for persistentHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a334b6dc9e4d6a407c04c89f4c9bca7cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_adb7a7bf899bb690d84283257baa678c4}\label{classSegmentTree_adb7a7bf899bb690d84283257baa678c4}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!SegmentTree@{SegmentTree}}
+\index{SegmentTree@{SegmentTree}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{SegmentTree()}{SegmentTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+\mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\mbox{\hyperlink{classSegmentTree}{Segment\+Tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{size\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3}\label{classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+void \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deallocate memory associated with the subtree of nodeHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}\label{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!down@{down}}
+\index{down@{down}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{down()}{down()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+void \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::down (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push lazy updates down Push lazy update downHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}\label{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!down@{down}}
+\index{down@{down}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{down()}{down()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+void \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::down (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Push lazy update downHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a251001698b3243d2adadc13c84b10458}\label{classSegmentTree_a251001698b3243d2adadc13c84b10458}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_child@{get\_child}}
+\index{get\_child@{get\_child}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_child()}{get\_child()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+child (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_a5d94f182b8dce5dc8e76ec30e73f8ce7}\label{classSegmentTree_a5d94f182b8dce5dc8e76ec30e73f8ce7}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_child@{get\_child}}
+\index{get\_child@{get\_child}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_child()}{get\_child()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+\mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}} \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+child (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc}\label{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_child@{get\_child}}
+\index{get\_child@{get\_child}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_child()}{get\_child()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto\& \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&}]{obj,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc}\label{classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_child@{get\_child}}
+\index{get\_child@{get\_child}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_child()}{get\_child()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto\& \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&}]{obj,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_ac5881ec5bcb5658a80ecca16660503cd}\label{classSegmentTree_ac5881ec5bcb5658a80ecca16660503cd}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_core@{get\_core}}
+\index{get\_core@{get\_core}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_core()}{get\_core()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto\& \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+core (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_afa035757c1304cbb912560c2e7a5658c}\label{classSegmentTree_afa035757c1304cbb912560c2e7a5658c}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_core@{get\_core}}
+\index{get\_core@{get\_core}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_core()}{get\_core()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto\& \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+core (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSegmentTree_1_1NodeImp}{Node\+Imp}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_a49a185b358936de0e027b42bb32017d4}\label{classSegmentTree_a49a185b358936de0e027b42bb32017d4}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_core@{get\_core}}
+\index{get\_core@{get\_core}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_core()}{get\_core()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto\& \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a49a185b358936de0e027b42bb32017d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a49a185b358936de0e027b42bb32017d4}\label{classSegmentTree_a49a185b358936de0e027b42bb32017d4}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!get\_core@{get\_core}}
+\index{get\_core@{get\_core}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{get\_core()}{get\_core()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+auto\& \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::get\+\_\+core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Node\+Exp}} $\ast$const \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d}\label{classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!mid@{mid}}
+\index{mid@{mid}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{mid()}{mid()}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::mid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a54816e3b51b87889fc2038329fed254b}\label{classSegmentTree_a54816e3b51b87889fc2038329fed254b}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!query@{query}}
+\index{query@{query}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+template$<$typename... Bounds$>$ \\
+T \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::query (\begin{DoxyParamCaption}\item[{const Bounds...}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a54816e3b51b87889fc2038329fed254b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a15af5893144423311e3c41a53de3d59e}\label{classSegmentTree_a15af5893144423311e3c41a53de3d59e}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!query@{query}}
+\index{query@{query}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+T \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classSegmentTree_a15af5893144423311e3c41a53de3d59e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classSegmentTree_a15af5893144423311e3c41a53de3d59e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a9f9282f29c2d91d1ef3989ea7384892b}\label{classSegmentTree_a9f9282f29c2d91d1ef3989ea7384892b}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!query@{query}}
+\index{query@{query}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+T \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{r,  }\item[{const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{custom\+\_\+root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a9f9282f29c2d91d1ef3989ea7384892b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e}\label{classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!query@{query}}
+\index{query@{query}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+T \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{r,  }\item[{const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the sum over the intersection of \mbox{[}query\+\_\+l, query\+\_\+r) with \mbox{[}node\+\_\+l, node\+\_\+r)Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a691d643b2872c8d23c062cc050341983}\label{classSegmentTree_a691d643b2872c8d23c062cc050341983}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!query\_impl@{query\_impl}}
+\index{query\_impl@{query\_impl}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{query\_impl()}{query\_impl()}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+template$<$typename... Bounds$>$ \\
+T \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::query\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r,  }\item[{const \mbox{\hyperlink{segment__tree__multi_8hpp_a64307e6ade8234a4bb7d57cb28f71f93}{Bound}}}]{bound,  }\item[{const Bounds...}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the sum over the intersection of \mbox{[}query\+\_\+l, query\+\_\+r) with \mbox{[}node\+\_\+l, node\+\_\+r)Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a691d643b2872c8d23c062cc050341983_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a691d643b2872c8d23c062cc050341983_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31}\label{classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!query\_pers@{query\_pers}}
+\index{query\_pers@{query\_pers}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{query\_pers()}{query\_pers()}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+template$<$typename... Bounds$>$ \\
+T \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::query\+\_\+pers (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{custom\+\_\+root,  }\item[{const Bounds...}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a6565444d7616870fd1d4c36028ed0c4d}\label{classSegmentTree_a6565444d7616870fd1d4c36028ed0c4d}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!update@{update}}
+\index{update@{update}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{r,  }\item[{const T}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a6565444d7616870fd1d4c36028ed0c4d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a00e7570a50ddee7944c35de35d8924ff}\label{classSegmentTree_a00e7570a50ddee7944c35de35d8924ff}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!update@{update}}
+\index{update@{update}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{r,  }\item[{const T}]{val,  }\item[{\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the range l to r with the update val returns the new nodeHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_aef5bdc8818b9c0da150ad1f4d6d87360}\label{classSegmentTree_aef5bdc8818b9c0da150ad1f4d6d87360}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!update@{update}}
+\index{update@{update}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+template$<$typename... Bounds$>$ \\
+\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::update (\begin{DoxyParamCaption}\item[{const T}]{val,  }\item[{const Bounds...}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_aef5bdc8818b9c0da150ad1f4d6d87360_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9}\label{classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9}} 
+\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}!update\_impl@{update\_impl}}
+\index{update\_impl@{update\_impl}!SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
+\doxysubsubsection{\texorpdfstring{update\_impl()}{update\_impl()}}
+{\footnotesize\ttfamily template$<$typename T , typename Query , typename Update , bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$ \\
+template$<$typename... Bounds$>$ \\
+\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}} \mbox{\hyperlink{classSegmentTree}{Segment\+Tree}}$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::update\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSegmentTree_a1737e3385e2a9842bb67546ff7960acd}{Node}}}]{idx,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+l,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{node\+\_\+r,  }\item[{const T}]{val,  }\item[{const \mbox{\hyperlink{segment__tree__multi_8hpp_a64307e6ade8234a4bb7d57cb28f71f93}{Bound}}}]{bound,  }\item[{const Bounds...}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the range l to r with the update val returns the new nodeHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{segment__tree_8hpp}{segment\+\_\+tree.\+hpp}}\item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{segment__tree__multi_8hpp}{segment\+\_\+tree\+\_\+multi.\+hpp}}\end{DoxyCompactItemize}

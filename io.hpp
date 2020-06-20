@@ -1,5 +1,9 @@
 #pragma once
 #include "debug.hpp"
+/*! Reverse input class. This allows reusing output operators for input.
+ *
+ * @warning This is a hack, but it works.
+ */
 struct rin {
 	istream &in;
 	rin(istream &in_) : in(in_) {}

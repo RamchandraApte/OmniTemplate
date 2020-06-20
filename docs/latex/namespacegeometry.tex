@@ -20,8 +20,8 @@ void \mbox{\hyperlink{namespacegeometry_af24e139ee1704a4aa6452a7fec700995}{test\
 \item 
 auto \mbox{\hyperlink{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3}{area}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \item 
-auto \mbox{\hyperlink{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}{ccw}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
-\item 
+bool \mbox{\hyperlink{namespacegeometry_a5f1383116499536e16ded93d8a011900}{ccw}} (const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
+\begin{DoxyCompactList}\small\item\em Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacegeometry_a18ead2a577ff9e1f661e55515285809b}{test\+\_\+ccw}} ()
 \item 
 auto \mbox{\hyperlink{namespacegeometry_acdc6602c58d77b560832434cc2e25b89}{hull}} (vector$<$ \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ \mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}}, remove\+\_\+const\+\_\+t$<$ decltype(true)$>$ do\+\_\+sort=true)
@@ -59,24 +59,45 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespacegeometry_ab8556a4c9ecf62f348ba9d0635bf8cb3_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}\label{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7}} 
+\mbox{\Hypertarget{namespacegeometry_a5f1383116499536e16ded93d8a011900}\label{namespacegeometry_a5f1383116499536e16ded93d8a011900}} 
 \index{geometry@{geometry}!ccw@{ccw}}
 \index{ccw@{ccw}!geometry@{geometry}}
 \doxysubsubsection{\texorpdfstring{ccw()}{ccw()}}
-{\footnotesize\ttfamily auto geometry\+::ccw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{a,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{b,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool geometry\+::ccw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{a,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{b,  }\item[{const \mbox{\hyperlink{core_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{c }\end{DoxyParamCaption})}
 
-Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. Throws std\+::invalid\+\_\+argument if a, b, c are collinear.Here is the call graph for this function\+:\nopagebreak
+
+
+Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if a, b, c are collinear and distinct.\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if counterclockwise, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7_cgraph}
+\includegraphics[width=350pt]{namespacegeometry_a5f1383116499536e16ded93d8a011900_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7_icgraph}
+\includegraphics[width=350pt]{namespacegeometry_a5f1383116499536e16ded93d8a011900_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}\label{namespacegeometry_a8143f89812fca762e08ba1a5d984c46b}} 

@@ -84,25 +84,24 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utility.hpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utility_8hpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utility_8hpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utility_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="utility_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="utility_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1with.html">utility::with</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1with.html">utility::with&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1fix.html">utility::fix&lt; Func &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1ar.html">utility::ar&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array convenience template. Converts C style array type to std::array type.  <a href="structutility_1_1ar.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1ar_3_01T_0fn_0e_4.html">utility::ar&lt; T[n]&gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,14 +115,18 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a76cdb96860b77886867832efcffeeb32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a76cdb96860b77886867832efcffeeb32">lambda</a>(f)&#160;&#160;&#160;[&amp;](auto... args) { return f(args...); }</td></tr>
+<tr class="memitem:a76cdb96860b77886867832efcffeeb32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a76cdb96860b77886867832efcffeeb32">lambda</a>(f)&#160;&#160;&#160;[](auto &amp;&amp;... args) { return f(forward&lt;decltype(args)&gt;(args)...); }</td></tr>
 <tr class="separator:a76cdb96860b77886867832efcffeeb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4072e106efe575805c4864dbbd387090"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utility_8hpp.html#a4072e106efe575805c4864dbbd387090">USE_RANDOM_DEVICE_PATCH</a></td></tr>
+<tr class="separator:a4072e106efe575805c4864dbbd387090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0">utility::ar_t</a> = typename <a class="el" href="structutility_1_1ar.html">ar</a>&lt; T &gt;::type</td></tr>
 <tr class="separator:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8575a7ae9db3044c9cef77ddcc62ab7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">utility::random_device</a> = <a class="el" href="structutility_1_1random__device__patch.html">random_device_patch</a></td></tr>
+<tr class="separator:a8575a7ae9db3044c9cef77ddcc62ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -143,22 +146,32 @@ Functions</h2></td></tr>
 <tr class="separator:a531cc980b5de78f0c2f36ae3210cb9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a393602f329243516ab6a008f905aa82d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a393602f329243516ab6a008f905aa82d">utility::test_uniq</a> ()</td></tr>
 <tr class="separator:a393602f329243516ab6a008f905aa82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd1495c0bc9744b584e2294d8cb4693"><td class="memTemplParams" colspan="2">template&lt;typename T  = less&lt;&gt;, typename Func &gt; </td></tr>
-<tr class="memitem:a3bd1495c0bc9744b584e2294d8cb4693"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a3bd1495c0bc9744b584e2294d8cb4693">utility::map_args</a> (const Func &amp;f, T g=T{})</td></tr>
-<tr class="separator:a3bd1495c0bc9744b584e2294d8cb4693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab69832291ff66469b755de5c5e5d6700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#ab69832291ff66469b755de5c5e5d6700">utility::test_map_args</a> ()</td></tr>
-<tr class="separator:ab69832291ff66469b755de5c5e5d6700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa705afaf267f70799bd4ec8cbf040455"><td class="memTemplParams" colspan="2">template&lt;typename T  = less&lt;&gt;, typename Func &gt; </td></tr>
+<tr class="memitem:aa705afaf267f70799bd4ec8cbf040455"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aa705afaf267f70799bd4ec8cbf040455">utility::key_compare</a> (const Func &amp;f, T g=T{})</td></tr>
+<tr class="separator:aa705afaf267f70799bd4ec8cbf040455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1da1538e8456d30c0528faba66b50b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aff1da1538e8456d30c0528faba66b50b">utility::test_key_compare</a> ()</td></tr>
+<tr class="separator:aff1da1538e8456d30c0528faba66b50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e9430d1096ce6997ae910135a9533f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a50e9430d1096ce6997ae910135a9533f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a50e9430d1096ce6997ae910135a9533f">utility::prev_less</a> (const T &amp;<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
 <tr class="separator:a50e9430d1096ce6997ae910135a9533f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a005fc5d8af9bba651f00c74372466b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a005fc5d8af9bba651f00c74372466b83">utility::bit_ceil</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
 <tr class="separator:a005fc5d8af9bba651f00c74372466b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec0dcf698aef9d3f51eb06de4dce70d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#afec0dcf698aef9d3f51eb06de4dce70d">utility::test_next_pow_of_2</a> ()</td></tr>
-<tr class="separator:afec0dcf698aef9d3f51eb06de4dce70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712d50fe014f71ad2d85897f9c243680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a712d50fe014f71ad2d85897f9c243680">utility::test_bit_ceil</a> ()</td></tr>
+<tr class="separator:a712d50fe014f71ad2d85897f9c243680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0379f3e7751f5d40389e23da6faa0997"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a0379f3e7751f5d40389e23da6faa0997">utility::base_ceil</a> (const <a class="el" href="structll.html">ll</a> x, const <a class="el" href="structll.html">ll</a> base)</td></tr>
+<tr class="separator:a0379f3e7751f5d40389e23da6faa0997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3300f337ef573fa74299812180c11c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a8f3300f337ef573fa74299812180c11c">utility::ceil_log</a> (const <a class="el" href="structll.html">ll</a> x, const <a class="el" href="structll.html">ll</a> base)</td></tr>
+<tr class="separator:a8f3300f337ef573fa74299812180c11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd324d23686536d1d4eeb92afb61ed4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7cd324d23686536d1d4eeb92afb61ed4">utility::next_comb</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
 <tr class="separator:a7cd324d23686536d1d4eeb92afb61ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad358004e1f554321202b4e29f8470c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#ad358004e1f554321202b4e29f8470c5e">utility::test_next_comb</a> ()</td></tr>
 <tr class="separator:ad358004e1f554321202b4e29f8470c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72cfb348ae79fd2bdb5ded63cd36ef2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Func &gt; </td></tr>
+<tr class="memitem:aa72cfb348ae79fd2bdb5ded63cd36ef2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aa72cfb348ae79fd2bdb5ded63cd36ef2">utility::swap2</a> (T &amp;a, T &amp;b, const Func &amp;func)</td></tr>
+<tr class="separator:aa72cfb348ae79fd2bdb5ded63cd36ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafa966f1819210cf795fff85b2a40c5"><td class="memTemplParams" colspan="2">template&lt;typename Cont &gt; </td></tr>
+<tr class="memitem:adafa966f1819210cf795fff85b2a40c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">utility::ssize</a> (const Cont &amp;<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e">cont</a>)</td></tr>
+<tr class="separator:adafa966f1819210cf795fff85b2a40c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46672014ead1e91eeafec896f61036db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a46672014ead1e91eeafec896f61036db">utility::test_ar</a> ()</td></tr>
 <tr class="separator:a46672014ead1e91eeafec896f61036db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5037ce073dfbaeaf7083a725780cdaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a5037ce073dfbaeaf7083a725780cdaf1">utility::test_utility</a> ()</td></tr>
@@ -166,7 +179,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memItemLeft" align="right" valign="top">default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">utility::reng</a> {std::random_device{}()}</td></tr>
+<tr class="memitem:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memItemLeft" align="right" valign="top">default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">utility::reng</a> {<a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a>{}()}</td></tr>
 <tr class="separator:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -181,7 +194,21 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">f</td><td>)</td>
-          <td>&#160;&#160;&#160;[&amp;](auto... args) { return f(args...); }</td>
+          <td>&#160;&#160;&#160;[](auto &amp;&amp;... args) { return f(forward&lt;decltype(args)&gt;(args)...); }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4072e106efe575805c4864dbbd387090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4072e106efe575805c4864dbbd387090">&#9670;&nbsp;</a></span>USE_RANDOM_DEVICE_PATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_RANDOM_DEVICE_PATCH</td>
         </tr>
       </table>
 </div><div class="memdoc">

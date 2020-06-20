@@ -1,0 +1,96 @@
+\hypertarget{classBIT}{}\doxysection{B\+IT$<$ Value, Monoid\+Op $>$ Class Template Reference}
+\label{classBIT}\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+
+
+Binary indexed tree (also called Fenwick tree)  
+
+
+
+
+{\ttfamily \#include $<$bit.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}{B\+IT}} (const \mbox{\hyperlink{structll}{ll}} size\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg. \end{DoxyCompactList}\item 
+Value \mbox{\hyperlink{classBIT_a495d58c744095867ad69123897c60700}{query}} (\mbox{\hyperlink{structll}{ll}} r) const
+\item 
+void \mbox{\hyperlink{classBIT_a20ea8eb0ea2065179c756ec96417227f}{update}} (\mbox{\hyperlink{structll}{ll}} idx, const Value value)
+\begin{DoxyCompactList}\small\item\em Update the value at idx by value. Note that this does {\itshape not} set the value to value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Value, typename Monoid\+Op = plus$<$$>$$>$\newline
+class B\+I\+T$<$ Value, Monoid\+Op $>$}
+
+Binary indexed tree (also called Fenwick tree) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & is the type of the value \\
+\hline
+{\em Monoid\+Op} & is a Monoid operating on the Value type \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}\label{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!BIT@{BIT}}
+\index{BIT@{BIT}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{BIT()}{BIT()}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+\mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::\mbox{\hyperlink{classBIT}{B\+IT}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{size\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBIT_a495d58c744095867ad69123897c60700}\label{classBIT_a495d58c744095867ad69123897c60700}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!query@{query}}
+\index{query@{query}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+Value \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns sum of Monoid over elements in \mbox{[}0, r)Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBIT_a495d58c744095867ad69123897c60700_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBIT_a20ea8eb0ea2065179c756ec96417227f}\label{classBIT_a20ea8eb0ea2065179c756ec96417227f}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!update@{update}}
+\index{update@{update}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+void \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{idx,  }\item[{const Value}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the value at idx by value. Note that this does {\itshape not} set the value to value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & the index of the element \\
+\hline
+{\em value} & the value the element will be updated by \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBIT_a20ea8eb0ea2065179c756ec96417227f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{bit_8hpp}{bit.\+hpp}}\end{DoxyCompactItemize}

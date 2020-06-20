@@ -35,6 +35,8 @@ var menudata={children:[
 {text:"f",url:"namespacemembers.html#index_f"},
 {text:"g",url:"namespacemembers.html#index_g"},
 {text:"h",url:"namespacemembers.html#index_h"},
+{text:"i",url:"namespacemembers.html#index_i"},
+{text:"k",url:"namespacemembers.html#index_k"},
 {text:"l",url:"namespacemembers.html#index_l"},
 {text:"m",url:"namespacemembers.html#index_m"},
 {text:"n",url:"namespacemembers.html#index_n"},
@@ -53,6 +55,8 @@ var menudata={children:[
 {text:"f",url:"namespacemembers_func.html#index_f"},
 {text:"g",url:"namespacemembers_func.html#index_g"},
 {text:"h",url:"namespacemembers_func.html#index_h"},
+{text:"i",url:"namespacemembers_func.html#index_i"},
+{text:"k",url:"namespacemembers_func.html#index_k"},
 {text:"l",url:"namespacemembers_func.html#index_l"},
 {text:"m",url:"namespacemembers_func.html#index_m"},
 {text:"n",url:"namespacemembers_func.html#index_n"},
@@ -172,6 +176,7 @@ var menudata={children:[
 {text:"v",url:"globals_v.html#index_v"},
 {text:"w",url:"globals_w.html#index_w"}]},
 {text:"Functions",url:"globals_func.html",children:[
+{text:"b",url:"globals_func.html#index_b"},
 {text:"c",url:"globals_func.html#index_c"},
 {text:"d",url:"globals_func.html#index_d"},
 {text:"e",url:"globals_func.html#index_e"},
@@ -205,5 +210,6 @@ var menudata={children:[
 {text:"r",url:"globals_defs.html#index_r"},
 {text:"s",url:"globals_defs.html#index_s"},
 {text:"t",url:"globals_defs.html#index_t"},
+{text:"u",url:"globals_defs.html#index_u"},
 {text:"v",url:"globals_defs.html#index_v"},
 {text:"w",url:"globals_defs.html#index_w"}]}]}]}]}

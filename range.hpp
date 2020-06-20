@@ -37,6 +37,7 @@ tm() struct int_it : it_base<T> {
 	auto operator op(Tp const &a, Tp const &b) { return a.x op b.x; }
 tm() bin(==, int_it<T>);
 tm() bin(<, int_it<T>);
+/*! Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a range object. */
 tm() struct range {
 	T bg, ed;
 	explicit range(T ed_) : range(0LL, ed_) {}

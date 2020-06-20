@@ -96,8 +96,9 @@ Functions</h2></td></tr>
 <tr class="separator:af24e139ee1704a4aa6452a7fec700995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8556a4c9ecf62f348ba9d0635bf8cb3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegeometry.html#ab8556a4c9ecf62f348ba9d0635bf8cb3">area</a> (const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;a, const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;b, const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;c)</td></tr>
 <tr class="separator:ab8556a4c9ecf62f348ba9d0635bf8cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a81e5af76081bea2b65b48e31179ec7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegeometry.html#a5a81e5af76081bea2b65b48e31179ec7">ccw</a> (const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;a, const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;b, const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;c)</td></tr>
-<tr class="separator:a5a81e5af76081bea2b65b48e31179ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1383116499536e16ded93d8a011900"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegeometry.html#a5f1383116499536e16ded93d8a011900">ccw</a> (const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;a, const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;b, const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;c)</td></tr>
+<tr class="memdesc:a5f1383116499536e16ded93d8a011900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether moving through \(a \rightarrow b \rightarrow c\) is counterclockwise.  <a href="namespacegeometry.html#a5f1383116499536e16ded93d8a011900">More...</a><br /></td></tr>
+<tr class="separator:a5f1383116499536e16ded93d8a011900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ead2a577ff9e1f661e55515285809b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegeometry.html#a18ead2a577ff9e1f661e55515285809b">test_ccw</a> ()</td></tr>
 <tr class="separator:a18ead2a577ff9e1f661e55515285809b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc6602c58d77b560832434cc2e25b89"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegeometry.html#acdc6602c58d77b560832434cc2e25b89">hull</a> (vector&lt; <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &gt; <a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>, remove_const_t&lt; decltype(true)&gt; do_sort=true)</td></tr>
@@ -159,14 +160,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5a81e5af76081bea2b65b48e31179ec7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a81e5af76081bea2b65b48e31179ec7">&#9670;&nbsp;</a></span>ccw()</h2>
+<a id="a5f1383116499536e16ded93d8a011900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1383116499536e16ded93d8a011900">&#9670;&nbsp;</a></span>ccw()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">auto geometry::ccw </td>
+          <td class="memname">bool geometry::ccw </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="core_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> &amp;&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -190,16 +191,32 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns whether moving through \(a \rightarrow b \rightarrow c\) is counterclockwise. Throws std::invalid_argument if a, b, c are collinear.</p>
+
+<p>Returns whether moving through \(a \rightarrow b \rightarrow c\) is counterclockwise. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if a, b, c are collinear and distinct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+    <tr><td class="paramname">c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool true if counterclockwise, false otherwise. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7_cgraph.svg" width="480" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacegeometry_a5f1383116499536e16ded93d8a011900_cgraph.svg" width="480" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacegeometry_a5a81e5af76081bea2b65b48e31179ec7_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacegeometry_a5f1383116499536e16ded93d8a011900_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -303,7 +320,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacegeometry_acdc6602c58d77b560832434cc2e25b89_cgraph.svg" width="658" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacegeometry_acdc6602c58d77b560832434cc2e25b89_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -438,7 +455,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacegeometry_aad3419586eb6065d81469c30417d5530_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacegeometry_aad3419586eb6065d81469c30417d5530_cgraph.svg" width="100%" height="558"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>

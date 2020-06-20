@@ -1,8 +1,8 @@
 #pragma once
 #include "range.hpp"
 namespace utility {
+/*! Sets v to new_ temporary while with object is alive */
 template <typename T> struct [[nodiscard]] with {
-	/*! Sets v to new_ temporary while with object is alive */
 	T old; //!< Original value of the variable
 	T &v;  //!< Reference to variable
 	template <typename Tp> with(const Tp new_, T &v_) : old(v_), v(v_) { v = new_; }
@@ -18,9 +18,9 @@ void test_with() {
 	inner_func();
 	assert(var == 12);
 }
+/*! Helper for lambda recursive functions. The recursive function is
+* passed to Func as the first argument.*/
 template <typename Func> struct fix {
-	/*! Helper for lambda recursive functions. The recursive function is
-	 * passed to Func as the first argument.*/
 	Func func;
 	fix(const Func &func_) : func(func_) {}
 	template <typename... Args> decltype(auto) operator()(Args &&... args) const { return func(this, forward<Args>(args)...); }
@@ -38,10 +38,10 @@ template <typename T> auto cache(const T &f) {
 		return ch[arg];
 	};
 }
+/*! Remove all duplicates element from v so that all elements in v are
+	 * distinct and sorted */
 template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 [[nodiscard]] auto uniq(Cont v, Eq const &up = Eq{}, T const &sp = T{}) {
-	/*! Remove all duplicates element from v so that all elements in v are
-	 * distinct and sorted */
 	sort(al(v), sp);
 	v.resize(unique(al(v), up) - begin(v));
 	return v;
@@ -133,6 +133,7 @@ template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
 }
 template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 // TODO split up utility.hpp maybe?
+/*! @brief Array convenience template. Converts C style array type to std::array type. */
 tm() struct ar { using type = T; };
 tm() using ar_t = typename ar<T>::type;
 template <typename T, ll n> struct ar<T[n]> { using type = array<ar_t<T>, n>; };

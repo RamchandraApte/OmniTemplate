@@ -9,7 +9,7 @@
 \item 
 \mbox{\hyperlink{structutility_1_1fix_a0dc72e4b470b6c975318e9127706510f}{fix}} (const Func \&func\+\_\+)
 \item 
-{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{structutility_1_1fix_a71588d2f2e349fed9b375f15227b5966}{operator()}} (Ts \&\&... args) const
+{\footnotesize template$<$typename... Args$>$ }\\decltype(auto) \mbox{\hyperlink{structutility_1_1fix_a93b091b536b383499aaf376d12f92fa7}{operator()}} (Args \&\&... args) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -17,6 +17,12 @@
 Func \mbox{\hyperlink{structutility_1_1fix_a3afbbbf98d76d3123362956f5b586940}{func}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Func$>$\newline
+struct utility\+::fix$<$ Func $>$}
+
+Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structutility_1_1fix_a0dc72e4b470b6c975318e9127706510f}\label{structutility_1_1fix_a0dc72e4b470b6c975318e9127706510f}} 
@@ -29,13 +35,13 @@ Func \mbox{\hyperlink{structutility_1_1fix_a3afbbbf98d76d3123362956f5b586940}{fu
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structutility_1_1fix_a71588d2f2e349fed9b375f15227b5966}\label{structutility_1_1fix_a71588d2f2e349fed9b375f15227b5966}} 
+\mbox{\Hypertarget{structutility_1_1fix_a93b091b536b383499aaf376d12f92fa7}\label{structutility_1_1fix_a93b091b536b383499aaf376d12f92fa7}} 
 \index{utility::fix$<$ Func $>$@{utility::fix$<$ Func $>$}!operator()@{operator()}}
 \index{operator()@{operator()}!utility::fix$<$ Func $>$@{utility::fix$<$ Func $>$}}
 \doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
 {\footnotesize\ttfamily template$<$typename Func $>$ \\
-template$<$typename... Ts$>$ \\
-auto \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix}}$<$ Func $>$\+::operator() (\begin{DoxyParamCaption}\item[{Ts \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+template$<$typename... Args$>$ \\
+decltype(auto) \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix}}$<$ Func $>$\+::operator() (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -47,7 +53,7 @@ auto \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix}}$<$ Func $>$\+::oper
 {\footnotesize\ttfamily template$<$typename Func $>$ \\
 Func \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix}}$<$ Func $>$\+::func}
 
-Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. 
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

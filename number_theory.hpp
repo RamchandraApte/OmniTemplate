@@ -2,8 +2,8 @@
 #include "core.hpp"
 #include "modulo.hpp"
 vl divs;
+/** @brief Return whether integer n >= 2 is prime*/
 auto prime(ll n) {
-	/*! Return whether integer n >= 2 is prime*/
 	assert(n >= 2);
 	if (n < divs.size()) {
 		return divs[n] == n;
@@ -38,8 +38,8 @@ void test_prime() {
 	assert(!prime(static_cast<ll>(1e9 + 6)));
 	assert(prime(static_cast<ll>(1e9 + 7)));
 }
+/*! @brief Return all divisors of x in sorted order*/
 vl divisors(ll x) {
-	/*! Return all divisors of x in sorted order*/
 	assert(x >= 1);
 	vl v;
 	fo(d, 1, x + 1) if (!(x % d)) {
@@ -63,7 +63,13 @@ void test_divisors() {
 	assert((divisors(36) == vl{1, 2, 3, 4, 6, 9, 12, 18, 36}));
 	assert((divisors(49) == vl{1, 7, 49}));
 }
-auto sieve(ll n) {
+/**
+ * @brief Linear time prime sieve.
+ * 
+ * @param n Sieve numbers in [0,n)
+ * @return a vector where ret[idx] is the smallest prime divisor of idx
+ */
+vector<ll> sieve(ll n) {
 	vl d(n), ps;
 	fo(i, 2, n) {
 		if (d[i] == 0) {
@@ -82,9 +88,10 @@ auto sieve(ll n) {
 void test_sieve() {
 	assert((sieve(11) == vl{0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2}));
 }
+/** @brief Returns the factorization of n.
+ * @return a map from the prime to the exponent
+ */
 um fac(ll n) {
-	// Returns the factorization of n as a mapping from the prime to the
-	// exponent.
 	assert(n >= 1);
 	if (n == 1) {
 		return {};
@@ -118,8 +125,8 @@ void test_fac() {
 	assert((fac(36) == um{{2, 2}, {3, 2}}));
 	assert((fac(49) == um{{7, 2}}));
 }
+/** @brief Sets x and y so that \f$x\cdot a + y\cdot b = \gcd(a,b)\f$*/
 void egcd(const ll a, const ll b, ll &x, ll &y) {
-	/*! Sets x and y so that \f$x\cdot a + y\cdot b = \gcd(a,b)\f$*/
 	a ? egcd(mod(b, a), a, y, x), x -= b / a * y : (x = 0, y = 1);
 }
 void test_egcd(ll a, ll b) {
@@ -134,7 +141,11 @@ void test_egcd() {
 	test_egcd(2, 1);
 	test_egcd(63, 12);
 }
+/** @brief Returns the totient of the integer n
+ * @pre n >= 1
+ */
 ll totient(ll n) {
+    assert(n>=1);
 	auto fact = fac(n);
 	for (const auto &p : fact) {
 		n -= n / p.first;
@@ -145,10 +156,9 @@ void test_totient() {
 	assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 &&
 	       totient(84) == 24 && totient(127) == 126);
 }
+/** @brief Finds x such that a^x = b (mod M) using baby-step giant-step
+ * algorithm. a and M must be coprime.*/
 ll dlog(const modulo a, const modulo b) {
-	/* Finds x such that a^x = b (mod M) using baby-step giant-step
-	   algorithm. a and M must be coprime.
-	*/
 	assert(gcd(static_cast<ll>(a), modulo::modulus) == 1);
 	auto check = [&](ll x) {
 		assert(power(a, x) == b);
@@ -186,8 +196,8 @@ void test_dlog() {
 		}
 	}
 }
+/** @brief Returns a primitive root modulo M*/
 modulo primitive_root() {
-	/*! Returns a primitive root modulo M*/
 	if (modulo::modulus == 1) {
 		return 0;
 	}

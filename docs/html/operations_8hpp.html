@@ -82,28 +82,28 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for operations.hpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="operations_8hpp__incl.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="operations_8hpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="operations_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="operations_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="operations_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structid.html">id</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMax.html">Max</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMin.html">Min</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2e3fb564092d70d9bee87555035d8711"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a2e3fb564092d70d9bee87555035d8711">aug</a>(op)</td></tr>
 <tr class="separator:a2e3fb564092d70d9bee87555035d8711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcd538daef660984ecb8abf34697904b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>(x,  <a class="el" href="structid.html">id</a>)</td></tr>
+<tr class="memitem:afcd538daef660984ecb8abf34697904b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>(x,  id)</td></tr>
 <tr class="separator:afcd538daef660984ecb8abf34697904b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -129,6 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a35c5f7ec97de94c93f2301e16d3f7efa"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a35c5f7ec97de94c93f2301e16d3f7efa"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a35c5f7ec97de94c93f2301e16d3f7efa">operator/=</a> (T1 &amp;a, const T2 &amp;b)</td></tr>
 <tr class="separator:a35c5f7ec97de94c93f2301e16d3f7efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb6b7e98aadd3fa7ffc759c5e14596d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4cb6b7e98aadd3fa7ffc759c5e14596d"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; is_floating_point_v&lt; T &gt;, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a4cb6b7e98aadd3fa7ffc759c5e14596d">invert</a> (multiplies&lt;&gt;, const T &amp;x)</td></tr>
+<tr class="separator:a4cb6b7e98aadd3fa7ffc759c5e14596d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e59a2d15287021fd21d14d2eb206c4"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
 <tr class="memitem:ae9e59a2d15287021fd21d14d2eb206c4"><td class="memTemplItemLeft" align="right" valign="top">Group&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#ae9e59a2d15287021fd21d14d2eb206c4">operator/</a> (Group const &amp;a, Group const &amp;b)</td></tr>
 <tr class="separator:ae9e59a2d15287021fd21d14d2eb206c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,10 +152,11 @@ Functions</h2></td></tr>
 <tr class="separator:ad8f1353b1f5665443a78d860006e9920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d3fb5fed45f1a54221f7a8705addb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8hpp.html#a9925e7a8568cf11b8431a0e634ada482">um</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a87d3fb5fed45f1a54221f7a8705addb9">operator+</a> (<a class="el" href="core_8hpp.html#a9925e7a8568cf11b8431a0e634ada482">um</a> a, <a class="el" href="core_8hpp.html#a9925e7a8568cf11b8431a0e634ada482">um</a> const &amp;b)</td></tr>
 <tr class="separator:a87d3fb5fed45f1a54221f7a8705addb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8acbbd6e305005c27020dfb9bbe27d5a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8acbbd6e305005c27020dfb9bbe27d5a"><td class="memTemplParams" colspan="2">template&lt;T &gt; </td></tr>
 <tr class="memitem:a8acbbd6e305005c27020dfb9bbe27d5a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a8acbbd6e305005c27020dfb9bbe27d5a">operator|</a> (unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</td></tr>
+<tr class="memdesc:a8acbbd6e305005c27020dfb9bbe27d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns union of sets a and b.  <a href="operations_8hpp.html#a8acbbd6e305005c27020dfb9bbe27d5a">More...</a><br /></td></tr>
 <tr class="separator:a8acbbd6e305005c27020dfb9bbe27d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e98ecb7739ca6a5c0069a9a26d2a731"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9e98ecb7739ca6a5c0069a9a26d2a731"><td class="memTemplParams" colspan="2">template&lt;T &gt; </td></tr>
 <tr class="memitem:a9e98ecb7739ca6a5c0069a9a26d2a731"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a9e98ecb7739ca6a5c0069a9a26d2a731">operator&amp;</a> (unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</td></tr>
 <tr class="separator:a9e98ecb7739ca6a5c0069a9a26d2a731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17c44ba56ddae051a9fdf806cab4bb7b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -167,13 +171,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a7fcf9006b0b6d5ce6b426ac6dea3b567"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7fcf9006b0b6d5ce6b426ac6dea3b567"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a7fcf9006b0b6d5ce6b426ac6dea3b567">operator*</a> (vector&lt; T &gt; a, vector&lt; T &gt; b)</td></tr>
 <tr class="separator:a7fcf9006b0b6d5ce6b426ac6dea3b567"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d494b3aed867c33d40cb82f49a3e26"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a68d494b3aed867c33d40cb82f49a3e26"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a68d494b3aed867c33d40cb82f49a3e26">operator+</a> (Iterator it, enable_if_t&lt; !is_same&lt; typename iterator_traits&lt; decltype(it)&gt;::iterator_category, random_access_iterator_tag &gt;::value, size_t &gt; n)</td></tr>
-<tr class="separator:a68d494b3aed867c33d40cb82f49a3e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af877591533298d5fba3df85680cabb60"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:af877591533298d5fba3df85680cabb60"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#af877591533298d5fba3df85680cabb60">operator+</a> (Iterator it, enable_if_t&lt;!is_same&lt; typename iterator_traits&lt; decltype(it)&gt;::iterator_category, random_access_iterator_tag &gt;::value, <a class="el" href="structll.html">ll</a> &gt; n)</td></tr>
+<tr class="separator:af877591533298d5fba3df85680cabb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac969ae49524a67aba9be0f061955ef23"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#ac969ae49524a67aba9be0f061955ef23">identity</a> (<a class="el" href="operations_8hpp.html#a391ecbfa26a20f6287fb4048f56b0978">bin_op</a>&lt; <a class="el" href="structll.html">ll</a> const &amp; &gt; const &amp;f)</td></tr>
 <tr class="separator:ac969ae49524a67aba9be0f061955ef23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1927210d55cc1384803f4a609d7174ee"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a1927210d55cc1384803f4a609d7174ee">identity</a> (<a class="el" href="operations_8hpp.html#a391ecbfa26a20f6287fb4048f56b0978">bin_op</a>&lt; <a class="el" href="structll.html">ll</a> &gt; const &amp;f)</td></tr>
 <tr class="separator:a1927210d55cc1384803f4a609d7174ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09af32a8d21cf0ca5017ce40502a2a09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">identity</a> (plus&lt;&gt;, <a class="el" href="structll.html">ll</a>)</td></tr>
+<tr class="separator:a09af32a8d21cf0ca5017ce40502a2a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5a0ae67ef6a3bd347c85cab4a15313"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#acc5a0ae67ef6a3bd347c85cab4a15313">identity</a> (multiplies&lt;&gt;, <a class="el" href="structll.html">ll</a>)</td></tr>
+<tr class="separator:acc5a0ae67ef6a3bd347c85cab4a15313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19000e539a20acfdcd7e8fdce1d970f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a19000e539a20acfdcd7e8fdce1d970f4">identity</a> (<a class="el" href="structMax.html">Max</a>, <a class="el" href="structll.html">ll</a>)</td></tr>
+<tr class="separator:a19000e539a20acfdcd7e8fdce1d970f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ba94adf14b5b5566e3a750fa5255b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#aa9ba94adf14b5b5566e3a750fa5255b3">identity</a> (<a class="el" href="structMin.html">Min</a>, <a class="el" href="structll.html">ll</a>)</td></tr>
+<tr class="separator:aa9ba94adf14b5b5566e3a750fa5255b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a2e3fb564092d70d9bee87555035d8711"></a>
@@ -214,7 +226,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="structid.html">id</a>&#160;</td>
+          <td class="paramname">id&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,7 +236,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (f == <span class="keyword">static_cast&lt;</span>decltype(f)<span class="keyword">&gt;</span>(x)) {                                \</div>
-<div class="line">        return <a class="code" href="structid.html">id</a>;                                                     \</div>
+<div class="line">        return id;                                                     \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 </div>
@@ -264,7 +276,7 @@ template&lt;typename T &gt; </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a1927210d55cc1384803f4a609d7174ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1927210d55cc1384803f4a609d7174ee">&#9670;&nbsp;</a></span>identity() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1927210d55cc1384803f4a609d7174ee">&#9670;&nbsp;</a></span>identity() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +302,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ac969ae49524a67aba9be0f061955ef23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac969ae49524a67aba9be0f061955ef23">&#9670;&nbsp;</a></span>identity() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac969ae49524a67aba9be0f061955ef23">&#9670;&nbsp;</a></span>identity() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,6 +324,153 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19000e539a20acfdcd7e8fdce1d970f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19000e539a20acfdcd7e8fdce1d970f4">&#9670;&nbsp;</a></span>identity() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> identity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMax.html">Max</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9ba94adf14b5b5566e3a750fa5255b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ba94adf14b5b5566e3a750fa5255b3">&#9670;&nbsp;</a></span>identity() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> identity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMin.html">Min</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc5a0ae67ef6a3bd347c85cab4a15313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5a0ae67ef6a3bd347c85cab4a15313">&#9670;&nbsp;</a></span>identity() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> identity </td>
+          <td>(</td>
+          <td class="paramtype">multiplies&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09af32a8d21cf0ca5017ce40502a2a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09af32a8d21cf0ca5017ce40502a2a09">&#9670;&nbsp;</a></span>identity() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> identity </td>
+          <td>(</td>
+          <td class="paramtype">plus&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cb6b7e98aadd3fa7ffc759c5e14596d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb6b7e98aadd3fa7ffc759c5e14596d">&#9670;&nbsp;</a></span>invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">enable_if_t&lt;is_floating_point_v&lt;T&gt;, T&gt; invert </td>
+          <td>(</td>
+          <td class="paramtype">multiplies&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d_icgraph.svg" width="200" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -359,7 +518,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">auto operator&amp; </td>
@@ -443,8 +602,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a68d494b3aed867c33d40cb82f49a3e26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68d494b3aed867c33d40cb82f49a3e26">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/2]</span></h2>
+<a id="af877591533298d5fba3df85680cabb60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af877591533298d5fba3df85680cabb60">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +619,7 @@ template&lt;typename Iterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">enable_if_t&lt; !is_same&lt; typename iterator_traits&lt; decltype(it)&gt;::iterator_category, random_access_iterator_tag &gt;::value, size_t &gt;&#160;</td>
+          <td class="paramtype">enable_if_t&lt;!is_same&lt; typename iterator_traits&lt; decltype(it)&gt;::iterator_category, random_access_iterator_tag &gt;::value, <a class="el" href="structll.html">ll</a> &gt;&#160;</td>
           <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
@@ -661,6 +820,11 @@ template&lt;typename Group &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="operations_8hpp_ae9e59a2d15287021fd21d14d2eb206c4_cgraph.svg" width="200" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -825,7 +989,7 @@ Here is the call graph for this function:</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">auto operator| </td>
@@ -846,6 +1010,17 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns union of sets a and b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>p_T: </td></tr>
+    <tr><td class="paramname">a</td><td>p_a:... </td></tr>
+    <tr><td class="paramname">b</td><td>p_b:... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
 
 </div>
 </div>
@@ -891,7 +1066,6 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="astructid_html"><div class="ttname"><a href="structid.html">id</a></div><div class="ttdef"><b>Definition:</b> operations.hpp:13</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

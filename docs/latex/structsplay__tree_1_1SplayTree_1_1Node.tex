@@ -2,12 +2,16 @@
 \label{structsplay__tree_1_1SplayTree_1_1Node}\index{splay\_tree::SplayTree$<$ T $>$::Node@{splay\_tree::SplayTree$<$ T $>$::Node}}
 
 
+Splay tree node.  
+
+
+
+
 {\ttfamily \#include $<$splay\+\_\+tree.\+hpp$>$}
 
 
 
-Collaboration diagram for splay\+\_\+tree\+::Splay\+Tree$<$ T $>$\+::Node\+:
-\nopagebreak
+Collaboration diagram for splay\+\_\+tree\+::Splay\+Tree$<$ T $>$\+::Node\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,18 +22,18 @@ Collaboration diagram for splay\+\_\+tree\+::Splay\+Tree$<$ T $>$\+::Node\+:
 \begin{DoxyCompactItemize}
 \item 
 T \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node_af7edb0c0a9e668e2262c2e0c952ffed2}{value}}
-\item 
+\begin{DoxyCompactList}\small\item\em Value associated with node. \end{DoxyCompactList}\item 
 array$<$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node}{Node}} $\ast$, 2 $>$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node_a180bb2086974ef98e56bf9c5e89243f1}{child}} \{\}
-\item 
+\begin{DoxyCompactList}\small\item\em Left and right children. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node_a06af521d7f0b00fc55b764903a46709d}{parent}} \{\}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pointer to parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$\newline
 struct splay\+\_\+tree\+::\+Splay\+Tree$<$ T $>$\+::\+Node}
 
-Splay tree node 
+Splay tree node. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_1_1Node_a180bb2086974ef98e56bf9c5e89243f1}\label{structsplay__tree_1_1SplayTree_1_1Node_a180bb2086974ef98e56bf9c5e89243f1}} 
@@ -39,6 +43,10 @@ Splay tree node
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 array$<$\mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node}{Node}} $\ast$, 2$>$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::Node\+::child \{\}}
 
+
+
+Left and right children. 
+
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_1_1Node_a06af521d7f0b00fc55b764903a46709d}\label{structsplay__tree_1_1SplayTree_1_1Node_a06af521d7f0b00fc55b764903a46709d}} 
 \index{splay\_tree::SplayTree$<$ T $>$::Node@{splay\_tree::SplayTree$<$ T $>$::Node}!parent@{parent}}
 \index{parent@{parent}!splay\_tree::SplayTree$<$ T $>$::Node@{splay\_tree::SplayTree$<$ T $>$::Node}}
@@ -46,12 +54,20 @@ array$<$\mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node}{Node}} $\ast$, 
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1Node}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::Node\+::parent \{\}}
 
+
+
+Pointer to parent. 
+
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_1_1Node_af7edb0c0a9e668e2262c2e0c952ffed2}\label{structsplay__tree_1_1SplayTree_1_1Node_af7edb0c0a9e668e2262c2e0c952ffed2}} 
 \index{splay\_tree::SplayTree$<$ T $>$::Node@{splay\_tree::SplayTree$<$ T $>$::Node}!value@{value}}
 \index{value@{value}!splay\_tree::SplayTree$<$ T $>$::Node@{splay\_tree::SplayTree$<$ T $>$::Node}}
 \doxysubsubsection{\texorpdfstring{value}{value}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 T \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::Node\+::value}
+
+
+
+Value associated with node. 
 
 
 

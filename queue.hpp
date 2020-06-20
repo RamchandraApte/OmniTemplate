@@ -1,16 +1,18 @@
 #pragma once
 #include "core.hpp"
 namespace queue_tools {
-/* Queue adaptor, creates a queue using two Stacks left, right
+/**
+ * @brief Queue adaptor, creates a queue using two Stacks left, right
  * If there are at least two elements, left and right are not empty.
  * If there is one element, it is in left.
+ * 
  */
 template <typename Stack> class QueueAdaptor {
       public:
 	using container_type = Stack;
 	using value_type = typename Stack::value_type;
 	using size_type = typename Stack::size_type;
-	using reference = typename Stack::reference;
+    using reference = typename Stack::reference;
 	using const_reference = typename Stack::const_reference;
 	const_reference front() const {
 		return (left.empty() ? right : left).top();
@@ -101,7 +103,9 @@ class MinStack : public Base {
 	using reference = value_type &;
 	using const_reference = const value_type &;
 	void push(const T &val) { Base::push({val, ::min(val, min())}); }
+	/*! Return the top of the stack*/
 	const T &top() const { return Base::top().first; }
+	/*! Return the minimum element of the stack */
 	T min() const { return Base::empty() ? inf : Base::top().second; }
 };
 void test_minstack() {

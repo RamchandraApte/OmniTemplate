@@ -8,6 +8,10 @@ struct \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_aac11793366a8aa7d2396775fdb1ba8ca}{identity}} (const plus$<$$>$, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&mat)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a30be90e8c8b57bcd04237e9b1d5b2fe9}{identity}} (const multiplies$<$$>$, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&mat)
+\item 
 {\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a297c703d12bd9b758de47e299044d8f2}{operator+}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&b)
 \item 
 {\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a2585fee5a1476634e4acdd3a76e8d606}{operator-\/}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
@@ -18,7 +22,13 @@ struct \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}
 \item 
 {\footnotesize template$<$typename T $>$ }\\pair$<$ \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&\&, T $>$ \mbox{\hyperlink{namespacelinear__algebra_a5f11a84a98295be55e830b6d14fc5f1a}{gauss}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ b, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ a)
 \item 
-{\footnotesize template$<$typename ... T$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}{operator/}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ b, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ a)
+{\footnotesize template$<$typename... Ts$>$ }\\\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \mbox{\hyperlink{namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da}{invert}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\void \mbox{\hyperlink{namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629}{test\+\_\+invert\+\_\+impl}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
+\item 
+void \mbox{\hyperlink{namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec}{test\+\_\+invert}} ()
+\item 
+{\footnotesize template$<$typename ... T$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a2b7036bfe170c860f3c08deea3fec213}{operator/}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ \&b, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ \&a)
 \item 
 {\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacelinear__algebra_ab7a7f1a8ba225710625d5af10f317b6a}{det}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&a)
 \item 
@@ -77,6 +87,48 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespacelinear__algebra_a5f11a84a98295be55e830b6d14fc5f1a_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespacelinear__algebra_a30be90e8c8b57bcd04237e9b1d5b2fe9}\label{namespacelinear__algebra_a30be90e8c8b57bcd04237e9b1d5b2fe9}} 
+\index{linear\_algebra@{linear\_algebra}!identity@{identity}}
+\index{identity@{identity}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto linear\+\_\+algebra\+::identity (\begin{DoxyParamCaption}\item[{const multiplies$<$$>$}]{,  }\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&}]{mat }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelinear__algebra_aac11793366a8aa7d2396775fdb1ba8ca}\label{namespacelinear__algebra_aac11793366a8aa7d2396775fdb1ba8ca}} 
+\index{linear\_algebra@{linear\_algebra}!identity@{identity}}
+\index{identity@{identity}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto linear\+\_\+algebra\+::identity (\begin{DoxyParamCaption}\item[{const plus$<$$>$}]{,  }\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&}]{mat }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_aac11793366a8aa7d2396775fdb1ba8ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da}\label{namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da}} 
+\index{linear\_algebra@{linear\_algebra}!invert@{invert}}
+\index{invert@{invert}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{invert()}{invert()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$Ts...$>$ linear\+\_\+algebra\+::invert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&}]{a }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacelinear__algebra_ad80debbf481bb22b5347633cd83e2c77}\label{namespacelinear__algebra_ad80debbf481bb22b5347633cd83e2c77}} 
 \index{linear\_algebra@{linear\_algebra}!lin\_recur@{lin\_recur}}
 \index{lin\_recur@{lin\_recur}!linear\_algebra@{linear\_algebra}}
@@ -119,18 +171,18 @@ auto linear\+\_\+algebra\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbo
 {\footnotesize\ttfamily template$<$typename... Ts$>$ \\
 auto linear\+\_\+algebra\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&}]{a }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}\label{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889}} 
+\mbox{\Hypertarget{namespacelinear__algebra_a2b7036bfe170c860f3c08deea3fec213}\label{namespacelinear__algebra_a2b7036bfe170c860f3c08deea3fec213}} 
 \index{linear\_algebra@{linear\_algebra}!operator/@{operator/}}
 \index{operator/@{operator/}!linear\_algebra@{linear\_algebra}}
 \doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
 {\footnotesize\ttfamily template$<$typename ... T$>$ \\
-auto linear\+\_\+algebra\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$}]{b,  }\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$}]{a }\end{DoxyParamCaption})}
+auto linear\+\_\+algebra\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ \&}]{b,  }\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ \&}]{a }\end{DoxyParamCaption})}
 
 Returns $a^{-1}b$Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889_cgraph}
+\includegraphics[width=350pt]{namespacelinear__algebra_a2b7036bfe170c860f3c08deea3fec213_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacelinear__algebra_abc53825de93c8054c2935e2cb216be7b}\label{namespacelinear__algebra_abc53825de93c8054c2935e2cb216be7b}} 
@@ -140,13 +192,61 @@ Returns $a^{-1}b$Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Stream , typename... T$>$ \\
 auto\& linear\+\_\+algebra\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&}]{m }\end{DoxyParamCaption})}
 
-Print the matrix rows, line by line\mbox{\Hypertarget{namespacelinear__algebra_a030fbbd0e40aa66bc02cb2d74ae80d57}\label{namespacelinear__algebra_a030fbbd0e40aa66bc02cb2d74ae80d57}} 
+Print the matrix rows, line by lineHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_abc53825de93c8054c2935e2cb216be7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelinear__algebra_a030fbbd0e40aa66bc02cb2d74ae80d57}\label{namespacelinear__algebra_a030fbbd0e40aa66bc02cb2d74ae80d57}} 
 \index{linear\_algebra@{linear\_algebra}!operator==@{operator==}}
 \index{operator==@{operator==}!linear\_algebra@{linear\_algebra}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily template$<$typename ... T$>$ \\
 bool linear\+\_\+algebra\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&}]{a,  }\item[{\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T... $>$ const \&}]{b }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec}\label{namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec}} 
+\index{linear\_algebra@{linear\_algebra}!test\_invert@{test\_invert}}
+\index{test\_invert@{test\_invert}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{test\_invert()}{test\_invert()}}
+{\footnotesize\ttfamily void linear\+\_\+algebra\+::test\+\_\+invert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629}\label{namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629}} 
+\index{linear\_algebra@{linear\_algebra}!test\_invert\_impl@{test\_invert\_impl}}
+\index{test\_invert\_impl@{test\_invert\_impl}!linear\_algebra@{linear\_algebra}}
+\doxysubsubsection{\texorpdfstring{test\_invert\_impl()}{test\_invert\_impl()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+void linear\+\_\+algebra\+::test\+\_\+invert\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&}]{a }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacelinear__algebra_ae1cd9afafb1f7ca00e88e73d262c0704}\label{namespacelinear__algebra_ae1cd9afafb1f7ca00e88e73d262c0704}} 
 \index{linear\_algebra@{linear\_algebra}!test\_lin\_recur@{test\_lin\_recur}}
 \index{test\_lin\_recur@{test\_lin\_recur}!linear\_algebra@{linear\_algebra}}

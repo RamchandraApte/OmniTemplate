@@ -82,6 +82,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1ar.html">ar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array convenience template. Converts C style array type to std::array type.  <a href="structutility_1_1ar.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1ar_3_01T_0fn_0e_4.html">ar&lt; T[n]&gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +98,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0">ar_t</a> = typename <a class="el" href="structutility_1_1ar.html">ar</a>&lt; T &gt;::type</td></tr>
 <tr class="separator:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8575a7ae9db3044c9cef77ddcc62ab7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a> = <a class="el" href="structutility_1_1random__device__patch.html">random_device_patch</a></td></tr>
+<tr class="separator:a8575a7ae9db3044c9cef77ddcc62ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -116,22 +119,32 @@ Functions</h2></td></tr>
 <tr class="separator:a531cc980b5de78f0c2f36ae3210cb9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a393602f329243516ab6a008f905aa82d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a393602f329243516ab6a008f905aa82d">test_uniq</a> ()</td></tr>
 <tr class="separator:a393602f329243516ab6a008f905aa82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd1495c0bc9744b584e2294d8cb4693"><td class="memTemplParams" colspan="2">template&lt;typename T  = less&lt;&gt;, typename Func &gt; </td></tr>
-<tr class="memitem:a3bd1495c0bc9744b584e2294d8cb4693"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a3bd1495c0bc9744b584e2294d8cb4693">map_args</a> (const Func &amp;f, T g=T{})</td></tr>
-<tr class="separator:a3bd1495c0bc9744b584e2294d8cb4693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab69832291ff66469b755de5c5e5d6700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#ab69832291ff66469b755de5c5e5d6700">test_map_args</a> ()</td></tr>
-<tr class="separator:ab69832291ff66469b755de5c5e5d6700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa705afaf267f70799bd4ec8cbf040455"><td class="memTemplParams" colspan="2">template&lt;typename T  = less&lt;&gt;, typename Func &gt; </td></tr>
+<tr class="memitem:aa705afaf267f70799bd4ec8cbf040455"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aa705afaf267f70799bd4ec8cbf040455">key_compare</a> (const Func &amp;f, T g=T{})</td></tr>
+<tr class="separator:aa705afaf267f70799bd4ec8cbf040455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1da1538e8456d30c0528faba66b50b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aff1da1538e8456d30c0528faba66b50b">test_key_compare</a> ()</td></tr>
+<tr class="separator:aff1da1538e8456d30c0528faba66b50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e9430d1096ce6997ae910135a9533f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a50e9430d1096ce6997ae910135a9533f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a50e9430d1096ce6997ae910135a9533f">prev_less</a> (const T &amp;<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
 <tr class="separator:a50e9430d1096ce6997ae910135a9533f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a005fc5d8af9bba651f00c74372466b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a005fc5d8af9bba651f00c74372466b83">bit_ceil</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
 <tr class="separator:a005fc5d8af9bba651f00c74372466b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec0dcf698aef9d3f51eb06de4dce70d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#afec0dcf698aef9d3f51eb06de4dce70d">test_next_pow_of_2</a> ()</td></tr>
-<tr class="separator:afec0dcf698aef9d3f51eb06de4dce70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712d50fe014f71ad2d85897f9c243680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a712d50fe014f71ad2d85897f9c243680">test_bit_ceil</a> ()</td></tr>
+<tr class="separator:a712d50fe014f71ad2d85897f9c243680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0379f3e7751f5d40389e23da6faa0997"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a0379f3e7751f5d40389e23da6faa0997">base_ceil</a> (const <a class="el" href="structll.html">ll</a> x, const <a class="el" href="structll.html">ll</a> base)</td></tr>
+<tr class="separator:a0379f3e7751f5d40389e23da6faa0997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f3300f337ef573fa74299812180c11c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a8f3300f337ef573fa74299812180c11c">ceil_log</a> (const <a class="el" href="structll.html">ll</a> x, const <a class="el" href="structll.html">ll</a> base)</td></tr>
+<tr class="separator:a8f3300f337ef573fa74299812180c11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd324d23686536d1d4eeb92afb61ed4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7cd324d23686536d1d4eeb92afb61ed4">next_comb</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
 <tr class="separator:a7cd324d23686536d1d4eeb92afb61ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad358004e1f554321202b4e29f8470c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#ad358004e1f554321202b4e29f8470c5e">test_next_comb</a> ()</td></tr>
 <tr class="separator:ad358004e1f554321202b4e29f8470c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72cfb348ae79fd2bdb5ded63cd36ef2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Func &gt; </td></tr>
+<tr class="memitem:aa72cfb348ae79fd2bdb5ded63cd36ef2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aa72cfb348ae79fd2bdb5ded63cd36ef2">swap2</a> (T &amp;a, T &amp;b, const Func &amp;func)</td></tr>
+<tr class="separator:aa72cfb348ae79fd2bdb5ded63cd36ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafa966f1819210cf795fff85b2a40c5"><td class="memTemplParams" colspan="2">template&lt;typename Cont &gt; </td></tr>
+<tr class="memitem:adafa966f1819210cf795fff85b2a40c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">ssize</a> (const Cont &amp;<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e">cont</a>)</td></tr>
+<tr class="separator:adafa966f1819210cf795fff85b2a40c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46672014ead1e91eeafec896f61036db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a46672014ead1e91eeafec896f61036db">test_ar</a> ()</td></tr>
 <tr class="separator:a46672014ead1e91eeafec896f61036db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5037ce073dfbaeaf7083a725780cdaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a5037ce073dfbaeaf7083a725780cdaf1">test_utility</a> ()</td></tr>
@@ -139,7 +152,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memItemLeft" align="right" valign="top">default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">reng</a> {std::random_device{}()}</td></tr>
+<tr class="memitem:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memItemLeft" align="right" valign="top">default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">reng</a> {<a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a>{}()}</td></tr>
 <tr class="separator:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -159,7 +172,49 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a8575a7ae9db3044c9cef77ddcc62ab7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8575a7ae9db3044c9cef77ddcc62ab7c">&#9670;&nbsp;</a></span>random_device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">utility::random_device</a> = typedef <a class="el" href="structutility_1_1random__device__patch.html">random_device_patch</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a0379f3e7751f5d40389e23da6faa0997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0379f3e7751f5d40389e23da6faa0997">&#9670;&nbsp;</a></span>base_ceil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::base_ceil </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a005fc5d8af9bba651f00c74372466b83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a005fc5d8af9bba651f00c74372466b83">&#9670;&nbsp;</a></span>bit_ceil()</h2>
 
@@ -175,12 +230,11 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the smallest power of two at least x</p>
+<p>Return the smallest power of two that is at least x</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a005fc5d8af9bba651f00c74372466b83_icgraph.svg" width="100%" height="391"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a005fc5d8af9bba651f00c74372466b83_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -206,8 +260,36 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a3bd1495c0bc9744b584e2294d8cb4693"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bd1495c0bc9744b584e2294d8cb4693">&#9670;&nbsp;</a></span>map_args()</h2>
+<a id="a8f3300f337ef573fa74299812180c11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f3300f337ef573fa74299812180c11c">&#9670;&nbsp;</a></span>ceil_log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::ceil_log </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa705afaf267f70799bd4ec8cbf040455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa705afaf267f70799bd4ec8cbf040455">&#9670;&nbsp;</a></span>key_compare()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +297,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename T  = less&lt;&gt;, typename Func &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto utility::map_args </td>
+          <td class="memname">auto utility::key_compare </td>
           <td>(</td>
           <td class="paramtype">const Func &amp;&#160;</td>
           <td class="paramname"><em>f</em>, </td>
@@ -236,7 +318,7 @@ template&lt;typename T  = less&lt;&gt;, typename Func &gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a3bd1495c0bc9744b584e2294d8cb4693_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_aa705afaf267f70799bd4ec8cbf040455_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -268,11 +350,6 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a1507417750abfb917c914c44e07ed713_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
 
 </div>
 </div>
@@ -350,6 +427,73 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="adafa966f1819210cf795fff85b2a40c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafa966f1819210cf795fff85b2a40c5">&#9670;&nbsp;</a></span>ssize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Cont &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::ssize </td>
+          <td>(</td>
+          <td class="paramtype">const Cont &amp;&#160;</td>
+          <td class="paramname"><em>cont</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_adafa966f1819210cf795fff85b2a40c5_icgraph.svg" width="350" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa72cfb348ae79fd2bdb5ded63cd36ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72cfb348ae79fd2bdb5ded63cd36ef2">&#9670;&nbsp;</a></span>swap2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Func &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void utility::swap2 </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Func &amp;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stable sorts a and b by func.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2_icgraph.svg" width="450" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a46672014ead1e91eeafec896f61036db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46672014ead1e91eeafec896f61036db">&#9670;&nbsp;</a></span>test_ar()</h2>
 
@@ -372,14 +516,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab69832291ff66469b755de5c5e5d6700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab69832291ff66469b755de5c5e5d6700">&#9670;&nbsp;</a></span>test_map_args()</h2>
+<a id="a712d50fe014f71ad2d85897f9c243680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712d50fe014f71ad2d85897f9c243680">&#9670;&nbsp;</a></span>test_bit_ceil()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void utility::test_map_args </td>
+          <td class="memname">void utility::test_bit_ceil </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -389,12 +533,39 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_ab69832291ff66469b755de5c5e5d6700_cgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_a712d50fe014f71ad2d85897f9c243680_cgraph.svg" width="320" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_ab69832291ff66469b755de5c5e5d6700_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a712d50fe014f71ad2d85897f9c243680_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="aff1da1538e8456d30c0528faba66b50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1da1538e8456d30c0528faba66b50b">&#9670;&nbsp;</a></span>test_key_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void utility::test_key_compare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_aff1da1538e8456d30c0528faba66b50b_cgraph.svg" width="400" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_aff1da1538e8456d30c0528faba66b50b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -422,34 +593,6 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_ad358004e1f554321202b4e29f8470c5e_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="afec0dcf698aef9d3f51eb06de4dce70d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afec0dcf698aef9d3f51eb06de4dce70d">&#9670;&nbsp;</a></span>test_next_pow_of_2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void utility::test_next_pow_of_2 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_afec0dcf698aef9d3f51eb06de4dce70d_cgraph.svg" width="302" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_afec0dcf698aef9d3f51eb06de4dce70d_icgraph.svg" width="656" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -498,8 +641,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_a5037ce073dfbaeaf7083a725780cdaf1_cgraph.svg" width="554" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_a5037ce073dfbaeaf7083a725780cdaf1_cgraph.svg" width="586" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -564,7 +706,7 @@ template&lt;typename Eq  = equal_to&lt;&gt;, typename T  = less&lt;&gt;, typenam
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Remove all duplicates element from v so that all elements in v are distinct and sorted</p>
+<p>Remove all duplicates element from v so that all elements in v are distinct and sorted </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -581,7 +723,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">default_random_engine utility::reng {std::random_device{}()}</td>
+          <td class="memname">default_random_engine utility::reng {<a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a>{}()}</td>
         </tr>
       </table>
 </div><div class="memdoc">

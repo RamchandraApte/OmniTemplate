@@ -1,16 +1,20 @@
 #pragma once
 #include "core.hpp"
 namespace persistent {
+/*! Compare based on the first member of a variable*/
 struct first_cmp {
-	/*! Compare based on the first member of a variable*/
 	template <typename T> bool operator()(T a, T b) const {
 		return a.first < b.first;
 	}
 };
+/*! Persistent variable. The old values can be retrieved by changing the
+* time tim
+* 
+* Time complexity: \f$O(log n)\f for setting and getting the value.
+* 
+* Space complexity: \f$O(1)\f$ per assignment.
+*/
 tm() struct pers {
-	/*! Persistent variable. The old values can be retrieved by changing the
-	 * time tim*/
-
 	static inline auto tim = 0LL; //!< Time for the persistent variable
 	using event = pair<ll, T>;
 	set<event, first_cmp> s;

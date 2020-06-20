@@ -36,13 +36,21 @@ um operator+(um a, um const &b) {
 	}
 	return a;
 }
-tm() auto operator|(unordered_set<T> const &a, unordered_set<T> const &b) {
+/**
+ * @brief Returns union of sets a and b.
+ * 
+ * @param T p_T:
+ * @param a p_a:...
+ * @param b p_b:...
+ * @return auto
+ */
+template<T> auto operator|(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);
 	auto ret = bg;
 	ret.insert(al(sm));
 	return ret;
 };
-tm() auto operator&(unordered_set<T> const &a, unordered_set<T> const &b) {
+template<T> auto operator&(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);
 	unordered_set<T> ret;
 	for (const auto &x : sm) {

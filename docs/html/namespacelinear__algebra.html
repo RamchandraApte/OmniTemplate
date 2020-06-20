@@ -84,6 +84,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aac11793366a8aa7d2396775fdb1ba8ca"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aac11793366a8aa7d2396775fdb1ba8ca"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a> (const plus&lt;&gt;, const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; &amp;mat)</td></tr>
+<tr class="separator:aac11793366a8aa7d2396775fdb1ba8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30be90e8c8b57bcd04237e9b1d5b2fe9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a30be90e8c8b57bcd04237e9b1d5b2fe9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#a30be90e8c8b57bcd04237e9b1d5b2fe9">identity</a> (const multiplies&lt;&gt;, const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; &amp;mat)</td></tr>
+<tr class="separator:a30be90e8c8b57bcd04237e9b1d5b2fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a297c703d12bd9b758de47e299044d8f2"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
 <tr class="memitem:a297c703d12bd9b758de47e299044d8f2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#a297c703d12bd9b758de47e299044d8f2">operator+</a> (const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt; &amp;a, const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt; &amp;b)</td></tr>
 <tr class="separator:a297c703d12bd9b758de47e299044d8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,9 +105,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a5f11a84a98295be55e830b6d14fc5f1a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5f11a84a98295be55e830b6d14fc5f1a"><td class="memTemplItemLeft" align="right" valign="top">pair&lt; <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; &amp;&amp;, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#a5f11a84a98295be55e830b6d14fc5f1a">gauss</a> (<a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; b, <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; a)</td></tr>
 <tr class="separator:a5f11a84a98295be55e830b6d14fc5f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb6e46a3a7889f6b0c7824515c997889"><td class="memTemplParams" colspan="2">template&lt;typename ... T&gt; </td></tr>
-<tr class="memitem:abb6e46a3a7889f6b0c7824515c997889"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#abb6e46a3a7889f6b0c7824515c997889">operator/</a> (<a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt; b, <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt; a)</td></tr>
-<tr class="separator:abb6e46a3a7889f6b0c7824515c997889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5881f67135c45bc7c2b2a3de9cec5da"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:ac5881f67135c45bc7c2b2a3de9cec5da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#ac5881f67135c45bc7c2b2a3de9cec5da">invert</a> (const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt; &amp;a)</td></tr>
+<tr class="separator:ac5881f67135c45bc7c2b2a3de9cec5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374c06877fb866b1df88bd50c7ea4629"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a374c06877fb866b1df88bd50c7ea4629"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#a374c06877fb866b1df88bd50c7ea4629">test_invert_impl</a> (const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt; &amp;a)</td></tr>
+<tr class="separator:a374c06877fb866b1df88bd50c7ea4629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da52bf2b92d06eeb430122c3ec209ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#a2da52bf2b92d06eeb430122c3ec209ec">test_invert</a> ()</td></tr>
+<tr class="separator:a2da52bf2b92d06eeb430122c3ec209ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7036bfe170c860f3c08deea3fec213"><td class="memTemplParams" colspan="2">template&lt;typename ... T&gt; </td></tr>
+<tr class="memitem:a2b7036bfe170c860f3c08deea3fec213"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#a2b7036bfe170c860f3c08deea3fec213">operator/</a> (const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt; &amp;b, const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt; &amp;a)</td></tr>
+<tr class="separator:a2b7036bfe170c860f3c08deea3fec213"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7a7f1a8ba225710625d5af10f317b6a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab7a7f1a8ba225710625d5af10f317b6a"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelinear__algebra.html#ab7a7f1a8ba225710625d5af10f317b6a">det</a> (const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; &amp;a)</td></tr>
 <tr class="separator:ab7a7f1a8ba225710625d5af10f317b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +205,101 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a30be90e8c8b57bcd04237e9b1d5b2fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30be90e8c8b57bcd04237e9b1d5b2fe9">&#9670;&nbsp;</a></span>identity() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto linear_algebra::identity </td>
+          <td>(</td>
+          <td class="paramtype">const multiplies&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac11793366a8aa7d2396775fdb1ba8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac11793366a8aa7d2396775fdb1ba8ca">&#9670;&nbsp;</a></span>identity() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto linear_algebra::identity </td>
+          <td>(</td>
+          <td class="paramtype">const plus&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_aac11793366a8aa7d2396775fdb1ba8ca_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ac5881f67135c45bc7c2b2a3de9cec5da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5881f67135c45bc7c2b2a3de9cec5da">&#9670;&nbsp;</a></span>invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt;Ts...&gt; linear_algebra::invert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da_cgraph.svg" width="394" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="ad80debbf481bb22b5347633cd83e2c77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad80debbf481bb22b5347633cd83e2c77">&#9670;&nbsp;</a></span>lin_recur()</h2>
 
@@ -222,7 +331,7 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ad80debbf481bb22b5347633cd83e2c77_cgraph.svg" width="399" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ad80debbf481bb22b5347633cd83e2c77_cgraph.svg" width="658" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -313,8 +422,8 @@ template&lt;typename... Ts&gt; </div>
 
 </div>
 </div>
-<a id="abb6e46a3a7889f6b0c7824515c997889"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb6e46a3a7889f6b0c7824515c997889">&#9670;&nbsp;</a></span>operator/()</h2>
+<a id="a2b7036bfe170c860f3c08deea3fec213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b7036bfe170c860f3c08deea3fec213">&#9670;&nbsp;</a></span>operator/()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,13 +433,13 @@ template&lt;typename ... T&gt; </div>
         <tr>
           <td class="memname">auto linear_algebra::operator/ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt; &amp;&#160;</td>
           <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; T... &gt; &amp;&#160;</td>
           <td class="paramname"><em>a</em>&#160;</td>
         </tr>
         <tr>
@@ -344,7 +453,7 @@ template&lt;typename ... T&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_abb6e46a3a7889f6b0c7824515c997889_cgraph.svg" width="595" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a2b7036bfe170c860f3c08deea3fec213_cgraph.svg" width="595" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -377,6 +486,11 @@ template&lt;typename Stream , typename... T&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Print the matrix rows, line by line</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_abc53825de93c8054c2935e2cb216be7b_cgraph.svg" width="663" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -410,6 +524,63 @@ template&lt;typename ... T&gt; </div>
 
 </div>
 </div>
+<a id="a2da52bf2b92d06eeb430122c3ec209ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da52bf2b92d06eeb430122c3ec209ec">&#9670;&nbsp;</a></span>test_invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void linear_algebra::test_invert </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a2da52bf2b92d06eeb430122c3ec209ec_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a374c06877fb866b1df88bd50c7ea4629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374c06877fb866b1df88bd50c7ea4629">&#9670;&nbsp;</a></span>test_invert_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void linear_algebra::test_invert_impl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a>&lt; Ts... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629_cgraph.svg" width="590" height="71"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a374c06877fb866b1df88bd50c7ea4629_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="ae1cd9afafb1f7ca00e88e73d262c0704"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1cd9afafb1f7ca00e88e73d262c0704">&#9670;&nbsp;</a></span>test_lin_recur()</h2>
 
@@ -427,7 +598,7 @@ template&lt;typename ... T&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ae1cd9afafb1f7ca00e88e73d262c0704_cgraph.svg" width="595" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ae1cd9afafb1f7ca00e88e73d262c0704_cgraph.svg" width="100%" height="372"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -454,7 +625,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ad92ef518c8439f84b4414ff16ec2cdcc_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_ad92ef518c8439f84b4414ff16ec2cdcc_cgraph.svg" width="100%" height="461"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -481,7 +652,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a14b8a1cd669e604f8c4c121e723f17b6_icgraph.svg" width="100%" height="361"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacelinear__algebra_a14b8a1cd669e604f8c4c121e723f17b6_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

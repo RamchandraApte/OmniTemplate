@@ -94,8 +94,8 @@ Collaboration diagram for string_tools::hash_str:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aba56bc5901a45e72721a12256a831e69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1hash__str.html#aba56bc5901a45e72721a12256a831e69">hash_str</a> (const string_view str)</td></tr>
 <tr class="separator:aba56bc5901a45e72721a12256a831e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa225e4c97fdcb936db7de44168d13f09"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1hash__str.html#aa225e4c97fdcb936db7de44168d13f09">operator()</a> (const string_view <a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>) const</td></tr>
-<tr class="separator:aa225e4c97fdcb936db7de44168d13f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75581b5cc9b3b8bfc41efbe0b395818d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1hash__str.html#a75581b5cc9b3b8bfc41efbe0b395818d">operator()</a> (const string_view <a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>) const</td></tr>
+<tr class="separator:a75581b5cc9b3b8bfc41efbe0b395818d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -111,7 +111,10 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a6a815a0256e241866570471a3f19e1ea"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1hash__str.html#a6a815a0256e241866570471a3f19e1ea">lcg_mod</a> = (1ULL &lt;&lt; 62) - 57</td></tr>
 <tr class="separator:a6a815a0256e241866570471a3f19e1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Fast rolling hash on a specific string's substrings.</p>
+<p>Time complexity: \(O(n)\) to build, \(O(1)\) to query. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aba56bc5901a45e72721a12256a831e69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba56bc5901a45e72721a12256a831e69">&#9670;&nbsp;</a></span>hash_str()</h2>
 
@@ -139,8 +142,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa225e4c97fdcb936db7de44168d13f09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa225e4c97fdcb936db7de44168d13f09">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a75581b5cc9b3b8bfc41efbe0b395818d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75581b5cc9b3b8bfc41efbe0b395818d">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +152,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t string_tools::hash_str::operator() </td>
+          <td class="memname"><a class="el" href="structll.html">ll</a> string_tools::hash_str::operator() </td>
           <td>(</td>
           <td class="paramtype">const string_view&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>

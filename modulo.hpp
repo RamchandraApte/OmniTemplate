@@ -2,8 +2,13 @@
 #include "core.hpp"
 namespace modulo_namespace {
 template <typename... Args> using invert_t = decltype(invert(std::declval<Args>()...));
+/*! @brief Returns \f$a^b\f$
+ * @param a the base
+ * @param b the exponent
+ * 
+ * Time complexity: \f$O(\log_2 |b|)\f$ multiplications
+*/
 template <typename T> T power(T a, ll b) {
-	/*! Return \f$a^b\f$ */
 	if (b < 0) {
 		if constexpr (experimental::is_detected_v<invert_t, multiplies<>, decltype(a)>) {
 			a = invert(multiplies{}, a);
@@ -20,6 +25,7 @@ template <typename T> T power(T a, ll b) {
 	}
 	return ret;
 }
+/*! @brief Returns the remainder of a divided by b as a nonnegative integer in [0, b).*/
 ll mod(ll a, const ll b) {
 	a %= b;
 	if (a < 0) {
@@ -27,7 +33,9 @@ ll mod(ll a, const ll b) {
 	}
 	return a;
 }
+/*! Set a to the remainder when divided by b. */
 ll mod_eq(ll &a, const ll b) { return a = mod(a, b); }
+/*! no_mod tag class allows a modulo object to be quickly constructed from an integer in the range [0, b) without performing a modulo operation.*/
 struct no_mod {};
 struct modulo {
 	inline static ll modulus =
@@ -47,14 +55,10 @@ modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;
 	return {sum >= modulo::modulus ? sum - modulo::modulus : sum, no_mod{}};
 }
-/*using ::operator+=;
-using ::operator-=;
-using ::operator*=;
-using ::operator/=;*/
 modulo operator++(modulo &a) { return a += 1; }
 modulo operator-(modulo const &a) { return {modulo::modulus - a.x, no_mod{}}; }
 // To avoid ADL issues
-using ::operator-;
+//using ::operator-;
 bin(==, modulo);
 modulo operator*(modulo const &a, modulo const &b) {
 	/*! Computes a times b modulo modulo::modulus using long double */
@@ -70,7 +74,7 @@ modulo operator*(modulo const &a, modulo const &b) {
 	return {rem, no_mod{}};
 }
 modulo invert(multiplies<>, modulo const &b) {
-	/*! Computes the modular inverse \f$b^{-1}\f$ */
+	/*! Computes the modular inverse \f$b^{-1} \pmod{M}\f$ */
 	assert(b != 0);
 	return power(b, modulo::modulus - 2);
 }

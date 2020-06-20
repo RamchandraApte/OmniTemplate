@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['modulo_5fnamespace_504',['modulo_namespace',['../namespacemodulo__namespace.html',1,'']]]
+  ['permutation_560',['permutation',['../namespacepermutation.html',1,'']]],
+  ['persistent_561',['persistent',['../namespacepersistent.html',1,'']]]
 ];

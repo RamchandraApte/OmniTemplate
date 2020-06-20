@@ -2,6 +2,11 @@
 \label{structdsu__ds_1_1dsu}\index{dsu\_ds::dsu@{dsu\_ds::dsu}}
 
 
+Disjoint-\/set data structure.  
+
+
+
+
 {\ttfamily \#include $<$dsu.\+hpp$>$}
 
 
@@ -16,32 +21,32 @@ Collaboration diagram for dsu\+\_\+ds\+::dsu\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structdsu__ds_1_1dsu_a1e6ba03b0b186d48a5082d6c403d1719}{dsu}} (\mbox{\hyperlink{structll}{ll}} n)
+\mbox{\hyperlink{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}{dsu}} (const \mbox{\hyperlink{structll}{ll}} n)
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}{find}} (\mbox{\hyperlink{structll}{ll}} x) const
 \item 
 bool \mbox{\hyperlink{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}{join}} (\mbox{\hyperlink{structll}{ll}} x, \mbox{\hyperlink{structll}{ll}} y)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a4cb38e70b100ef23db7b89dc51016273}{parent}}
-\item 
+\begin{DoxyCompactList}\small\item\em The parent of each element. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a0c383f06009a0b2b40b33030cc5ff5dc}{size\+\_\+}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Disjoint-\/set data structure 
+Disjoint-\/set data structure. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{structdsu__ds_1_1dsu_a1e6ba03b0b186d48a5082d6c403d1719}\label{structdsu__ds_1_1dsu_a1e6ba03b0b186d48a5082d6c403d1719}} 
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}\label{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}} 
 \index{dsu\_ds::dsu@{dsu\_ds::dsu}!dsu@{dsu}}
 \index{dsu@{dsu}!dsu\_ds::dsu@{dsu\_ds::dsu}}
 \doxysubsubsection{\texorpdfstring{dsu()}{dsu()}}
-{\footnotesize\ttfamily dsu\+\_\+ds\+::dsu\+::dsu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+{\footnotesize\ttfamily dsu\+\_\+ds\+::dsu\+::dsu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
-
+Construct a dsu with n elements. Initially each element is in its own set. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}\label{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}} 
@@ -50,7 +55,7 @@ Disjoint-\/set data structure
 \doxysubsubsection{\texorpdfstring{find()}{find()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dsu\+\_\+ds\+::dsu\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the representative element of xHere is the caller graph for this function\+:\nopagebreak
+Returns the representative element of x Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -63,7 +68,11 @@ Returns the representative element of xHere is the caller graph for this functio
 \doxysubsubsection{\texorpdfstring{join()}{join()}}
 {\footnotesize\ttfamily bool dsu\+\_\+ds\+::dsu\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Joins the set containing x with the set containing yHere is the call graph for this function\+:\nopagebreak
+
+
+Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. 
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -78,6 +87,10 @@ Joins the set containing x with the set containing yHere is the call graph for t
 \index{parent@{parent}!dsu\_ds::dsu@{dsu\_ds::dsu}}
 \doxysubsubsection{\texorpdfstring{parent}{parent}}
 {\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} dsu\+\_\+ds\+::dsu\+::parent\hspace{0.3cm}{\ttfamily [mutable]}}
+
+
+
+The parent of each element. 
 
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_a0c383f06009a0b2b40b33030cc5ff5dc}\label{structdsu__ds_1_1dsu_a0c383f06009a0b2b40b33030cc5ff5dc}} 
 \index{dsu\_ds::dsu@{dsu\_ds::dsu}!size\_@{size\_}}

@@ -1,14 +1,15 @@
 #pragma once
 #include "core.hpp"
+#include "time.hpp"
 // TODO non commutative monoids, specify the ordering
 // TODO multidimensional
-/*! Generic persistent explicit/implicit lazy based segment tree
- * T is the value type of the segment tree
- * Query is the monoid for queries
- * Update is the monoid for queries
- * Query must be an additive monoid of a semiring, and Update must be a
- * multiplicative monoid of a semiring
- * base is the segment tree base. Default is 2.
+/*! @brief Generic persistent explicit/implicit lazy based segment tree
+ * @param T is the value type of the segment tree
+ * @param Query is the monoid for queries
+ * @param Update is the monoid for queries
+ * @param Query must be an additive monoid of a semiring
+ * @param Update must be a multiplicative monoid of a semiring
+ * @param base is the segment tree base. Default is 2.
  */
 struct Empty {};
 template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2> class SegmentTree {
@@ -41,6 +42,7 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		const auto df = (node_r - node_l) / base;
 		return node_l + df * i;
 	};
+    /*! Push lazy updates down*/
 	void down(const Node idx, const ll node_l, const ll node_r) {
 		const bool leaf = node_r - node_l == 1;
 		if constexpr (has_ptr) {
@@ -141,8 +143,8 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
       private:
 	ll size_;
 	ll ceil_size;
-	Node root;
-	vector<NodeCore> nodes;
+	Node root; /*< Root node */
+	vector<NodeCore> nodes; /*< 1-indexed implicit array of nodes */
 };
 template <bool has_lazy, bool has_ptr, bool has_pers, ll base> void test_segment_tree_impl() {
 	SegmentTree<ll, Max, plus<>, has_lazy, has_ptr, has_pers, base> seg{1000};

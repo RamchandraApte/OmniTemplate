@@ -1,11 +1,11 @@
 #pragma once
 #include "core.hpp"
-/*! Polynomial class
- * poly[i] = the coefficient for x^i
+/**
+ * @brief  Polynomial class. poly[i] is coefficient for x^i
+ * 
  */
 template <typename T> class Polynomial : public vector<T> {
 	using vector<T>::vector;
-
       public:
 	void shrink() {
 		while (!this.empty() && this.back() == 0) {

@@ -50,11 +50,11 @@ auto shortest_dist(vector<vector<pr>> graph, ll source) {
 	}
 	return array<vl, 2>{d, pv};
 }
+/*! Given a 2D matrix of distances for each edge in g, returns a 2D
+    * matrix of the shortest distances. We do not consider paths of length
+    * zero. Algorithm: Floyd-Warshall*/
+// TODO do we want to consider zero-length paths?
 auto shortest_dist(matrix<ll> const &graph) {
-	/*! Given a 2D matrix of distances for each edge in g, returns a 2D
-	 * matrix of the shortest distances. We do not consider paths of length
-	 * zero. Algorithm: Floyd-Warshall*/
-	// TODO do we want to consider zero-length paths?
 	assert(graph.rows_n == graph.cols_n);
 	auto n = graph.rows_n;
 	auto d = graph;
@@ -85,9 +85,8 @@ void test_shortest_dist() {
 		assert((dijkstra == floyd));
 	}
 }
+/*! Returns the minimum spanning forest of the set of edges es, as a set of edges*/
 auto mst(vector<edge> edges, const ll n) {
-	/*! Returns the minimum spanning forest of the set of edges es, as a set
-	 * of edges*/
 	sort(al(edges));
 	dsu d{n};
 	vector<edge> ret;
@@ -132,6 +131,7 @@ struct gsearch {
 		parent[child] = par;
 	}
 };
+/*! Given a searcher object, returns an array containing the size of each subtree */
 template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	vector<ll> sz(search.parent.size(), 1);
 	for (auto idx : rev(search.q)) {
@@ -188,6 +188,7 @@ void test_bfs() {
 	assert((b.parent == vl{-1, 0, 1, 1}));
 	assert((b.distance == vl{0, 1, 2, 2}));
 }
+/** Returns the transpose graph of directed graph */
 auto trans(const vector<vl> &graph) {
 	ll n = size(graph);
 	vector<vl> h(n);
@@ -274,9 +275,9 @@ void test_bipartite() {
 		}
 	}
 }
+/*! Returns a maximum matching of bipartite graph using the
+    * Hopcroft-Karp algorithm.*/
 auto max_match(const vector<vl> &graph) {
-	/*! Returns a maximum matching of bipartite graph using the
-	 * Hopcroft-Karp algorithm.*/
 	auto side = bipartite(graph).value();
 	ll n = graph.size();
 	vl match(n, -1);
@@ -334,6 +335,9 @@ auto max_match(const vector<vl> &graph) {
 	}
 	return match;
 }
+/*! @brief Returns the size of the matching.
+ * @param matching must be a a vector where idx is matched with matching[idx], or not matched if matching[idx] = -1
+ */
 ll matching_size(const vl &matching) {
 	return count_if(al(matching), [&](const auto x) { return x != -1; });
 }

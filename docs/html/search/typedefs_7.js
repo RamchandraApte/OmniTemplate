@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['mylazy_857',['mylazy',['../seg__old_8hpp.html#aa4cefbed832d0d4d4cfb40f2341e9a2e',1,'seg_old.hpp']]],
-  ['mypers_858',['mypers',['../seg__old_8hpp.html#a962063b214f65a5ee40a74f768d237a7',1,'seg_old.hpp']]]
+  ['node_955',['Node',['../classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd',1,'SegmentTree::Node()'],['../classSegmentTree.html#afba544d564a42497c23bb83786c8530f',1,'SegmentTree::Node()']]]
 ];
