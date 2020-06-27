@@ -14,7 +14,7 @@
 struct Empty {};
 template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2> class SegmentTree {
       public:
-	SegmentTree(const ll size_arg) : size_{size_arg}, ceil_size{base_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
+	SegmentTree(const ll size_arg) : size_{size_arg}, ceil_size{power_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
 		if constexpr (has_ptr) {
 			root = new NodeExp{};
 		} else {

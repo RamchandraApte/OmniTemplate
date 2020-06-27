@@ -54,7 +54,7 @@ auto area(const point &a, const point &b, const point &c) {
  */
 bool ccw(const point &a, const point &b, const point &c) {
 	ll area_pts = area(a, b, c);
-	if (!(a == b || a == c || b == c || w)) {
+	if (!(a == b || a == c || b == c || area_pts)) {
 		throw invalid_argument{"Points are collinear."};
 	}
 	return area_pts > 0;

@@ -8,5 +8,6 @@ add_executable(test test.cpp)
 
 set (CMAKE_CXX_FLAGS_DEBUG "-fsanitize=address,undefined -ggdb3 -D_GLIBCXX_DEBUG")
 set (CMAKE_CXX_FLAGS_RELWITHDEBINFO "-g -D_GLIBCXX_ASSERTIONS -DLOCAL")
+set (CMAKE_EXPORT_COMPILE_COMMANDS True)
 
 # target_precompile_headers(test PRIVATE template.hpp)

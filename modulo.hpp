@@ -58,7 +58,7 @@ modulo operator+(modulo const &a, modulo const &b) {
 modulo operator++(modulo &a) { return a += 1; }
 modulo operator-(modulo const &a) { return {modulo::modulus - a.x, no_mod{}}; }
 // To avoid ADL issues
-//using ::operator-;
+using ::operator-;
 bin(==, modulo);
 modulo operator*(modulo const &a, modulo const &b) {
 	/*! Computes a times b modulo modulo::modulus using long double */

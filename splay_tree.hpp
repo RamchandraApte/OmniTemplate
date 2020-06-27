@@ -10,6 +10,50 @@ template <typename T> struct SplayTree {
 		T value; //!< Value associated with node
 		array<Node *, 2> child{}; //!< Left and right children
 		Node *parent{}; //!< Pointer to parent
+		bool side() const {
+			/*! Returns true if child is on the right, and false otherwise*/
+			return parent->child[1] == &this;
+		}
+		void rotate() {
+			/*! Rotate node x around its parent */
+			const auto p = parent;
+
+			const bool i = side();
+
+			if (p->parent) {
+				attach(p->parent, p->side(), &this);
+			} else {
+				parent = nullptr;
+			}
+			attach(p, i, child[!i]);
+			attach(&this, !i, p);
+		}
+		void splay() {
+			/*! Splay node x. x will become the root of the tree*/
+			while (parent) {
+				if (!parent->parent) {
+					// Zig step
+					rotate();
+					return;
+				} else if (side() == parent->side()) {
+					// Zig-zig step
+					parent->rotate();
+					rotate();
+				} else {
+					// Zig-zag step
+					rotate();
+					rotate();
+				}
+			}
+		}
+		array<Node *, 2> split() {
+			splay();
+			// TODO use detach function
+			if (child[1]) {
+				child[1]->parent = nullptr;
+			}
+			return {&this, child[1]};
+		}
 	};
 	/*! Splay tree iterator */
 	struct iterator : public it_base<T> {
@@ -31,8 +75,7 @@ template <typename T> struct SplayTree {
 				node = extremum<!dir>(node->child[1]);
 				return;
 			}
-			for (; node->parent && side(node) == dir;
-			     node = node->parent)
+			for (; node->parent && node->side() == dir; node = node->parent)
 				;
 			node = node->parent;
 		}
@@ -57,43 +100,6 @@ template <typename T> struct SplayTree {
 		}
 		par->child[side] = new_;
 	}
-	static bool side(Node *const child) {
-		/*! Returns true if child is on the right, and false otherwise*/
-		return child->parent->child[1] == child;
-	}
-	static void rotate(Node *const x) {
-		/*! Rotate node x around its parent */
-		const auto p = x->parent;
-
-		const bool i = side(x);
-
-		if (p->parent) {
-			attach(p->parent, side(p), x);
-		} else {
-			x->parent = nullptr;
-		}
-		attach(p, i, x->child[!i]);
-		attach(x, !i, p);
-	}
-	static void splay(Node *const x) {
-		/*! Splay node x. x will become the root of the tree*/
-		while (x->parent) {
-			if (!x->parent->parent) {
-				// Zig step
-				rotate(x);
-				return;
-			}
-			if (side(x) == side(x->parent)) {
-				// Zig-zig step
-				rotate(x->parent);
-				rotate(x);
-			} else {
-				// Zig-zag step
-				rotate(x);
-				rotate(x);
-			}
-		}
-	}
 	void insert(Node *const x) {
 		/*! Insert node x into the splay tree*/
 		++size_;
@@ -108,7 +114,7 @@ template <typename T> struct SplayTree {
 				nw = x;
 				nw->parent = y;
 				root = nw;
-				splay(nw);
+				nw->splay();
 				return;
 			}
 			y = nw;
@@ -122,7 +128,7 @@ template <typename T> struct SplayTree {
 	void erase(Node *const x) {
 		/*! Erase node x from the splay tree*/
 		assert(x);
-		splay(x);
+		x->splay();
 		root = join(x->child[0], x->child[1]);
 		delete x;
 		--size_;
@@ -141,19 +147,11 @@ template <typename T> struct SplayTree {
 			return b;
 		}
 		Node *const mx = extremum<true>(a);
-		splay(mx);
+		mx->splay();
 		assert(mx->child[1] == nullptr);
 		mx->child[1] = b;
 		mx->parent = nullptr;
 		return mx;
-	}
-	array<Node *, 2> split(Node *const x) {
-		splay(x);
-		// TODO use detach function
-		if (x->child[1]) {
-			x->child[1]->parent = nullptr;
-		}
-		return {x, x->child[1]};
 	}
     /*! Returns node with key key*/
 	Node *find(const T &key) {

@@ -6,7 +6,7 @@
  * @param Semilattice is a bounded semilattice.*/
 template <typename T, typename Semilattice> class SparseTable {
       public:
-	explicit SparseTable(const vector<T> &arr) : meet(ceil_log(arr.size(), 2), vector<ll>(arr.size())) {
+	explicit SparseTable(const vector<T> &arr) : meet(log_ceil(arr.size(), 2), vector<ll>(arr.size())) {
 		meet[0] = arr;
 		fo(pw, 1, meet.size()) {
 			fo(i, arr.size()) {
@@ -33,25 +33,25 @@ template <typename T, typename Semilattice> class SparseTable {
  */
 template <typename T, typename Monoid> class DisjointSparseTable {
       public:
-	explicit DisjointSparseTable(vector<T> arr) : sum(ceil_log(arr.size(), 2), vector<T>(base_ceil(arr.size(), 2))) {
+	explicit DisjointSparseTable(vector<T> arr) : sum(log_ceil(arr.size(), 2), vector<T>(power_ceil(arr.size(), 2))) {
 		arr.resize(sum[0].size(), identity(Monoid{}, T{}));
-		fo(lvl, sum.size()) {
-			fo(blk, 1LL << lvl) {
+		fo(level, sum.size()) {
+			fo(block, 1LL << level) {
 				// The first half of the block contains suffix sums, the second half contains prefix sums
-				const auto st = blk << (sum.size() - lvl);
-				const auto ed = (blk + 1) << (sum.size() - lvl);
-				const auto mid = (ed + st) / 2;
-				auto val = arr[mid];
-				sum[lvl][mid] = val;
-				fo(x, mid + 1, ed) {
+				const auto start = block << (sum.size() - level);
+				const auto end = (block + 1) << (sum.size() - level);
+				const auto middle = (end + start) / 2;
+				auto val = arr[middle];
+				sum[level][middle] = val;
+				fo(x, middle + 1, end) {
 					val = Monoid{}(val, arr[x]);
-					sum[lvl][x] = val;
+					sum[level][x] = val;
 				}
-				val = arr[mid - 1];
-				sum[lvl][mid - 1] = val;
-				fr(x, st, mid - 1) {
+				val = arr[middle - 1];
+				sum[level][middle - 1] = val;
+				fr(x, start, middle - 1) {
 					val = Monoid{}(val, arr[x]);
-					sum[lvl][x] = val;
+					sum[level][x] = val;
 				}
 			}
 		}
@@ -61,10 +61,10 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 		assert(l < r);
 		--r;
 		const auto num_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);
-		const auto lvl = sum.size() - 1 - num_diff;
-		auto ret = sum[lvl][l];
+		const auto level = sum.size() - 1 - num_diff;
+		auto ret = sum[level][l];
 		if (l != r) {
-			ret = Monoid{}(ret, sum[lvl][r]);
+			ret = Monoid{}(ret, sum[level][r]);
 		}
 		return ret;
 	}

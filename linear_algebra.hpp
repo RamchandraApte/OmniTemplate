@@ -1,6 +1,7 @@
 #pragma once
 #include "core.hpp"
 #include "modulo.hpp"
+#include "polynomial.hpp"
 // TODO Tensors? Also, matrix_row class.
 // TODO fix default constructor causing segfault
 namespace linear_algebra {
@@ -151,10 +152,13 @@ void test_lin_recur() {
 	assert(lin_recur(vl{1, 2}, 5) == 21);
 	assert(lin_recur(vl{2, 3, 1}, 4) == 65);
 }
+
+template <typename T> Polynomial<T> lin_recur_coef(vector<T> const &c) {}
 void test_linear_algebra() {
 	test_matrix();
 	test_lin_recur();
 	test_invert();
+	// test_lin_recur_coef();
 }
 } // namespace linear_algebra
 using namespace linear_algebra;

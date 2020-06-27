@@ -89,13 +89,13 @@ void test_bit_ceil() {
 	assert(bit_ceil((1LL << 45) - 100) == 1LL << 45);
 	assert(bit_ceil((1LL << 45)) == 1LL << 45);
 }
-ll base_ceil(const ll x, const ll base) {
+ll power_ceil(const ll x, const ll base) {
 	ll pw = 1;
 	for (; pw < x; pw *= base)
 		;
 	return pw;
 }
-ll ceil_log(const ll x, const ll base) {
+ll log_ceil(const ll x, const ll base) {
 	ll pw = 1, cnt = 0;
 	for (; pw < x; pw *= base, ++cnt) {
 	}

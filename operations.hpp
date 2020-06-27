@@ -44,13 +44,13 @@ um operator+(um a, um const &b) {
  * @param b p_b:...
  * @return auto
  */
-template<T> auto operator|(unordered_set<T> const &a, unordered_set<T> const &b) {
+template <typename T> auto operator|(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);
 	auto ret = bg;
 	ret.insert(al(sm));
 	return ret;
 };
-template<T> auto operator&(unordered_set<T> const &a, unordered_set<T> const &b) {
+template <typename T> auto operator&(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);
 	unordered_set<T> ret;
 	for (const auto &x : sm) {
