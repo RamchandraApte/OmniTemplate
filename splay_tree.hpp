@@ -10,6 +10,7 @@ template <typename T> struct SplayTree {
 		T value; //!< Value associated with node
 		array<Node *, 2> child{}; //!< Left and right children
 		Node *parent{}; //!< Pointer to parent
+		Node *path_parent{};
 		bool side() const {
 			/*! Returns true if child is on the right, and false otherwise*/
 			return parent->child[1] == &this;
@@ -27,6 +28,9 @@ template <typename T> struct SplayTree {
 			}
 			attach(p, i, child[!i]);
 			attach(&this, !i, p);
+			/*path_parent = p->path_parent;
+			p->path_parent = nullptr;*/
+			swap(path_parent, p->path_parent);
 		}
 		void splay() {
 			/*! Splay node x. x will become the root of the tree*/

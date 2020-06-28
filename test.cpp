@@ -20,6 +20,7 @@ void test_all() {
 	test_polynomial();
 	test_sparse_table();
 	test_hld();
+	test_link_cut_tree();
 	cout << "\e[0;32mAccepted\e[0m" << endl;
 }
 void main2() { test_all(); }

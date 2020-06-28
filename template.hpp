@@ -11,6 +11,7 @@
 #include "graph_theory.hpp"
 #include "hld.hpp"
 #include "linear_algebra.hpp"
+#include "link_cut.hpp"
 #include "main.hpp"
 #include "modulo.hpp"
 #include "number_theory.hpp"
