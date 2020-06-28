@@ -2,9 +2,12 @@
 #include "core.hpp"
 #include "splay_tree.hpp"
 using Node = SplayTree<ll>::Node;
-Node *make_tree() { return new Node{}; }
+Node *make_tree() {
+	/*! Make a new tree */
+	return new Node{};
+}
 void access(Node *node) {
-	// Moves node to the root of the auxillary tree containing the root node of the tree
+	/* Moves node to the root of the auxillary tree containing the root node of the tree*/
 	node->splay();
 	if (node->child[1]) {
 		node->child[1]->path_parent = node;
@@ -27,7 +30,7 @@ void access(Node *node) {
 	node->splay();
 }
 Node *find_root(Node *node) {
-	// Finds the root of the tree containing node
+	/** Finds the root of the tree containing node*/
 	access(node);
 	for (; node->child[0]; node = node->child[0])
 		;
@@ -35,13 +38,13 @@ Node *find_root(Node *node) {
 	return node;
 }
 void cut(Node *node) {
-	// Detaches the subtree of node from the tree of node's parent
+	/* Detaches the subtree of node from the tree of node's parent*/
 	access(node);
 	node->child[0]->parent = nullptr;
 	node->child[0] = nullptr;
 }
 void link(Node *par, Node *child) {
-	// Makes child the child of par
+	/* Makes child the child of par*/
 	access(child);
 	access(par);
 	child->child[0] = par;
@@ -69,4 +72,7 @@ void test_link_cut_tree() {
 	assert(find_root(nodes[3]) == nodes[3]);
 	assert(find_root(nodes[4]) == nodes[3]);
 	assert(find_root(nodes[5]) == nodes[3]);
+	cut(nodes[4]);
+	link(nodes[0], nodes[4]);
+	assert(find_root(nodes[5]) == nodes[0]);
 }

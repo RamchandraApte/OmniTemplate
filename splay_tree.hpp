@@ -28,9 +28,9 @@ template <typename T> struct SplayTree {
 			}
 			attach(p, i, child[!i]);
 			attach(&this, !i, p);
-			/*path_parent = p->path_parent;
-			p->path_parent = nullptr;*/
-			swap(path_parent, p->path_parent);
+			path_parent = p->path_parent;
+			// p->path_parent = nullptr;
+			// swap(path_parent, p->path_parent);
 		}
 		void splay() {
 			/*! Splay node x. x will become the root of the tree*/
