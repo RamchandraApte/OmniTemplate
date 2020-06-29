@@ -148,7 +148,7 @@ struct random_device_patch {
 	unsigned int operator()() { return clock_::now().time_since_epoch().count(); }
 	double entropy() { return 0.0; }
 };
-
+struct Empty {};
 #define USE_RANDOM_DEVICE_PATCH
 #ifdef USE_RANDOM_DEVICE_PATCH
 using random_device = random_device_patch;

@@ -11,7 +11,6 @@
  * @param Update must be a multiplicative monoid of a semiring
  * @param base is the segment tree base. Default is 2.
  */
-struct Empty {};
 template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2> class SegmentTree {
       public:
 	SegmentTree(const ll size_arg) : size_{size_arg}, ceil_size{power_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
@@ -209,7 +208,6 @@ template <bool has_lazy, bool has_ptr, bool has_pers, ll base> void test_segment
 	}
 }
 void test_segment_tree() {
-	timer time_seg;
 	test_segment_tree_impl<false, false, false, 2>();
 	// Test base
 	test_segment_tree_impl<false, false, false, 3>();

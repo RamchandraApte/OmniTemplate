@@ -2,6 +2,11 @@
 \label{classSegmentTree}\index{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$@{SegmentTree$<$ T, Query, Update, has\_lazy, has\_ptr, has\_pers, base $>$}}
 
 
+Generic persistent explicit/implicit lazy based segment tree.  
+
+
+
+
 {\ttfamily \#include $<$segment\+\_\+tree.\+hpp$>$}
 
 \doxysubsection*{Classes}
@@ -78,6 +83,29 @@ void \mbox{\hyperlink{classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d}{down}}
 \item 
 static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d}{mid}} (const \mbox{\hyperlink{structll}{ll}} node\+\_\+l, const \mbox{\hyperlink{structll}{ll}} node\+\_\+r, const \mbox{\hyperlink{structll}{ll}} i)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Query, typename Update, bool has\+\_\+lazy = true, bool has\+\_\+ptr = true, bool has\+\_\+pers = true, ll base = 2$>$\newline
+class Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$}
+
+Generic persistent explicit/implicit lazy based segment tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & is the value type of the segment tree \\
+\hline
+{\em Query} & is the monoid for queries \\
+\hline
+{\em Update} & is the monoid for queries \\
+\hline
+{\em Query} & must be an additive monoid of a semiring \\
+\hline
+{\em Update} & must be a multiplicative monoid of a semiring \\
+\hline
+{\em base} & is the segment tree base. Default is 2. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Typedef Documentation}

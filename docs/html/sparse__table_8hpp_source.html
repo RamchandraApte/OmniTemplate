@@ -78,7 +78,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// TODO return identity when l = r</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classSparseTable.html">    7</a></span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Semilattice&gt; <span class="keyword">class </span><a class="code" href="classSparseTable.html">SparseTable</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classSparseTable.html#a8a0ff315be302f4e9fb2fe03f846492f">    9</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classSparseTable.html#a8a0ff315be302f4e9fb2fe03f846492f">SparseTable</a>(<span class="keyword">const</span> vector&lt;T&gt; &amp;arr) : meet(<a class="code" href="namespaceutility.html#a8f3300f337ef573fa74299812180c11c">ceil_log</a>(arr.size(), 2), vector&lt;<a class="code" href="structll.html">ll</a>&gt;(arr.size())) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classSparseTable.html#a8a0ff315be302f4e9fb2fe03f846492f">    9</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classSparseTable.html#a8a0ff315be302f4e9fb2fe03f846492f">SparseTable</a>(<span class="keyword">const</span> vector&lt;T&gt; &amp;arr) : meet(<a class="code" href="namespaceutility.html#a750478c01441fac1c27f14bea2cb74ea">log_ceil</a>(arr.size(), 2), vector&lt;<a class="code" href="structll.html">ll</a>&gt;(arr.size())) {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        meet[0] = arr;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(pw, 1, meet.size()) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, arr.size()) {</div>
@@ -99,61 +99,63 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classDisjointSparseTable.html">   34</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Mono<span class="keywordtype">id</span>&gt; <span class="keyword">class </span><a class="code" href="classDisjointSparseTable.html">DisjointSparseTable</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classDisjointSparseTable.html#ac2802dd0b3e2e42478b66bf7b78cbfef">   36</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classDisjointSparseTable.html#ac2802dd0b3e2e42478b66bf7b78cbfef">DisjointSparseTable</a>(vector&lt;T&gt; arr) : sum(<a class="code" href="namespaceutility.html#a8f3300f337ef573fa74299812180c11c">ceil_log</a>(arr.size(), 2), vector&lt;T&gt;(<a class="code" href="segment__tree__multi_8hpp.html#a2c8dc430594634528f96338e23135663">base_ceil</a>(arr.size(), 2))) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classDisjointSparseTable.html#ac2802dd0b3e2e42478b66bf7b78cbfef">   36</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classDisjointSparseTable.html#ac2802dd0b3e2e42478b66bf7b78cbfef">DisjointSparseTable</a>(vector&lt;T&gt; arr) : sum(<a class="code" href="namespaceutility.html#a750478c01441fac1c27f14bea2cb74ea">log_ceil</a>(arr.size(), 2), vector&lt;T&gt;(<a class="code" href="namespaceutility.html#a14dc21f495425ccdc1ec35fe45d45591">power_ceil</a>(arr.size(), 2))) {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        arr.resize(sum[0].size(), <a class="code" href="seg__old_8hpp.html#aea41afc9d2c06ef4ab4b3b44a683ccb4">identity</a>(Monoid{}, T{}));</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(lvl, sum.size()) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(blk, 1LL &lt;&lt; lvl) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(level, sum.size()) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(block, 1LL &lt;&lt; level) {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="comment">// The first half of the block contains suffix sums, the second half contains prefix sums</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> st = blk &lt;&lt; (sum.size() - lvl);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> ed = (blk + 1) &lt;&lt; (sum.size() - lvl);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> mid = (ed + st) / 2;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keyword">auto</span> val = arr[mid];</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                sum[lvl][mid] = val;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(x, mid + 1, ed) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> start = block &lt;&lt; (sum.size() - level);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> end = (block + 1) &lt;&lt; (sum.size() - level);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> middle = (end + start) / 2;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keyword">auto</span> val = arr[middle];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                sum[level][middle] = val;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(x, middle + 1, end) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    val = Monoid{}(val, arr[x]);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    sum[lvl][x] = val;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    sum[level][x] = val;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                val = arr[mid - 1];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                sum[lvl][mid - 1] = val;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="core_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a>(x, st, mid - 1) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                val = arr[middle - 1];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                sum[level][middle - 1] = val;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="core_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a>(x, start, middle - 1) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    val = Monoid{}(val, arr[x]);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    sum[lvl][x] = val;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    sum[level][x] = val;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classDisjointSparseTable.html#ad35bb60605d83b2468cf5a4f2d2cd8aa">   60</a></span>&#160;    T <a class="code" href="classDisjointSparseTable.html#ad35bb60605d83b2468cf5a4f2d2cd8aa">query</a>(<a class="code" href="structll.html">ll</a> l, <a class="code" href="structll.html">ll</a> r)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        assert(l &lt; r);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        --r;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> num_diff = (<span class="keyword">sizeof</span>(<a class="code" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> lvl = sum.size() - 1 - num_diff;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">auto</span> <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a> = sum[lvl][l];</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (l != r) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a> = Monoid{}(<a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>, sum[lvl][r]);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    vector&lt;vector&lt;T&gt;&gt; sum;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="sparse__table_8hpp.html#a5cda9a81cfe846fae5e2df903be8dce7">   75</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>...&gt; <span class="keyword">typename</span> Table, <span class="keyword">typename</span> T, <span class="keyword">typename</span> Monoid&gt; <span class="keywordtype">void</span> <a class="code" href="sparse__table_8hpp.html#a5cda9a81cfe846fae5e2df903be8dce7">test_sparse_table_impl</a>() {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    vector&lt;T&gt; data{6, 2, 4, 1, 7, 3, 4, 2, 7, 2, 4, 1, 6};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    Table&lt;T, Monoid&gt; sp{data};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(start, data.size()) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(end, start + 1, data.size()) { assert(sp.query(start, end) == accumulate(begin(data) + start, begin(data) + end, <a class="code" href="seg__old_8hpp.html#aea41afc9d2c06ef4ab4b3b44a683ccb4">identity</a>(Monoid{}, T{}), Monoid{})); }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="sparse__table_8hpp.html#aaa7fb37aeaaecd158ac4f8c623858753">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="sparse__table_8hpp.html#aaa7fb37aeaaecd158ac4f8c623858753">test_sparse_table</a>() {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{<a class="code" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>(1e9 + 7), modulo::modulus};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    test_sparse_table_impl&lt;SparseTable, ll, Min&gt;();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    test_sparse_table_impl&lt;DisjointSparseTable, ll, Min&gt;();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    test_sparse_table_impl&lt;DisjointSparseTable, ll, plus&lt;&gt;&gt;();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    test_sparse_table_impl&lt;DisjointSparseTable, modulo, multiplies&lt;&gt;&gt;();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// Convert half open interval to closed interval</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        --r;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span>(l == r){</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> sum.back()[l];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// Position of the leftmost different bit from the right</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> pos_diff = (<span class="keyword">sizeof</span>(<a class="code" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> level = sum.size() - 1 - pos_diff;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> Monoid{}(sum[level][l], sum[level][r]);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    vector&lt;vector&lt;T&gt;&gt; sum;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="sparse__table_8hpp.html#a5cda9a81cfe846fae5e2df903be8dce7">   76</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>...&gt; <span class="keyword">typename</span> Table, <span class="keyword">typename</span> T, <span class="keyword">typename</span> Monoid&gt; <span class="keywordtype">void</span> <a class="code" href="sparse__table_8hpp.html#a5cda9a81cfe846fae5e2df903be8dce7">test_sparse_table_impl</a>() {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    vector&lt;T&gt; data{6, 2, 4, 1, 7, 3, 4, 2, 7, 2, 4, 1, 6};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Table&lt;T, Monoid&gt; sp{data};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(start, data.size()) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(end, start + 1, data.size()) { assert(sp.query(start, end) == accumulate(begin(data) + start, begin(data) + end, <a class="code" href="seg__old_8hpp.html#aea41afc9d2c06ef4ab4b3b44a683ccb4">identity</a>(Monoid{}, T{}), Monoid{})); }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="sparse__table_8hpp.html#aaa7fb37aeaaecd158ac4f8c623858753">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="sparse__table_8hpp.html#aaa7fb37aeaaecd158ac4f8c623858753">test_sparse_table</a>() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{<a class="code" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>(1e9 + 7), modulo::modulus};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    test_sparse_table_impl&lt;SparseTable, ll, Min&gt;();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    test_sparse_table_impl&lt;DisjointSparseTable, ll, Min&gt;();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    test_sparse_table_impl&lt;DisjointSparseTable, ll, plus&lt;&gt;&gt;();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    test_sparse_table_impl&lt;DisjointSparseTable, modulo, multiplies&lt;&gt;&gt;();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aoperations_8hpp_html_afcd538daef660984ecb8abf34697904b"><div class="ttname"><a href="operations_8hpp.html#afcd538daef660984ecb8abf34697904b">ret</a></div><div class="ttdeci">#define ret(x, id)</div><div class="ttdef"><b>Definition:</b> operations.hpp:92</div></div>
+<div class="ttc" id="anamespaceutility_html_a14dc21f495425ccdc1ec35fe45d45591"><div class="ttname"><a href="namespaceutility.html#a14dc21f495425ccdc1ec35fe45d45591">utility::power_ceil</a></div><div class="ttdeci">ll power_ceil(const ll x, const ll base)</div><div class="ttdef"><b>Definition:</b> utility.hpp:92</div></div>
 <div class="ttc" id="acore_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> core.hpp:64</div></div>
+<div class="ttc" id="anamespaceutility_html_a750478c01441fac1c27f14bea2cb74ea"><div class="ttname"><a href="namespaceutility.html#a750478c01441fac1c27f14bea2cb74ea">utility::log_ceil</a></div><div class="ttdeci">ll log_ceil(const ll x, const ll base)</div><div class="ttdef"><b>Definition:</b> utility.hpp:98</div></div>
 <div class="ttc" id="aclassDisjointSparseTable_html"><div class="ttname"><a href="classDisjointSparseTable.html">DisjointSparseTable</a></div><div class="ttdoc">Disjoint sparse table.</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:34</div></div>
 <div class="ttc" id="aclassDisjointSparseTable_html_ad35bb60605d83b2468cf5a4f2d2cd8aa"><div class="ttname"><a href="classDisjointSparseTable.html#ad35bb60605d83b2468cf5a4f2d2cd8aa">DisjointSparseTable::query</a></div><div class="ttdeci">T query(ll l, ll r) const</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:60</div></div>
 <div class="ttc" id="acore_8hpp_html_a7b724588414fb77283c807a1ad82313c"><div class="ttname"><a href="core_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a></div><div class="ttdeci">#define fr(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:17</div></div>
@@ -162,14 +164,12 @@ $(function() {
 <div class="ttc" id="aclassDisjointSparseTable_html_ac2802dd0b3e2e42478b66bf7b78cbfef"><div class="ttname"><a href="classDisjointSparseTable.html#ac2802dd0b3e2e42478b66bf7b78cbfef">DisjointSparseTable::DisjointSparseTable</a></div><div class="ttdeci">DisjointSparseTable(vector&lt; T &gt; arr)</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:36</div></div>
 <div class="ttc" id="aclassSparseTable_html"><div class="ttname"><a href="classSparseTable.html">SparseTable</a></div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:7</div></div>
 <div class="ttc" id="astructutility_1_1with_html"><div class="ttname"><a href="structutility_1_1with.html">utility::with</a></div><div class="ttdef"><b>Definition:</b> utility.hpp:5</div></div>
-<div class="ttc" id="asparse__table_8hpp_html_a5cda9a81cfe846fae5e2df903be8dce7"><div class="ttname"><a href="sparse__table_8hpp.html#a5cda9a81cfe846fae5e2df903be8dce7">test_sparse_table_impl</a></div><div class="ttdeci">void test_sparse_table_impl()</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:75</div></div>
+<div class="ttc" id="asparse__table_8hpp_html_a5cda9a81cfe846fae5e2df903be8dce7"><div class="ttname"><a href="sparse__table_8hpp.html#a5cda9a81cfe846fae5e2df903be8dce7">test_sparse_table_impl</a></div><div class="ttdeci">void test_sparse_table_impl()</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:76</div></div>
 <div class="ttc" id="aclassSparseTable_html_a52186d743b9f6a0495a279d72c014ca3"><div class="ttname"><a href="classSparseTable.html#a52186d743b9f6a0495a279d72c014ca3">SparseTable::query</a></div><div class="ttdeci">T query(ll l, ll r) const</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:18</div></div>
-<div class="ttc" id="asegment__tree__multi_8hpp_html_a2c8dc430594634528f96338e23135663"><div class="ttname"><a href="segment__tree__multi_8hpp.html#a2c8dc430594634528f96338e23135663">base_ceil</a></div><div class="ttdeci">ll base_ceil(const ll x, const ll base)</div><div class="ttdef"><b>Definition:</b> segment_tree_multi.hpp:4</div></div>
 <div class="ttc" id="anamespaceutility_html_adafa966f1819210cf795fff85b2a40c5"><div class="ttname"><a href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">utility::ssize</a></div><div class="ttdeci">ll ssize(const Cont &amp;cont)</div><div class="ttdef"><b>Definition:</b> utility.hpp:134</div></div>
-<div class="ttc" id="asparse__table_8hpp_html_aaa7fb37aeaaecd158ac4f8c623858753"><div class="ttname"><a href="sparse__table_8hpp.html#aaa7fb37aeaaecd158ac4f8c623858753">test_sparse_table</a></div><div class="ttdeci">void test_sparse_table()</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:82</div></div>
+<div class="ttc" id="asparse__table_8hpp_html_aaa7fb37aeaaecd158ac4f8c623858753"><div class="ttname"><a href="sparse__table_8hpp.html#aaa7fb37aeaaecd158ac4f8c623858753">test_sparse_table</a></div><div class="ttdeci">void test_sparse_table()</div><div class="ttdef"><b>Definition:</b> sparse_table.hpp:83</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:16</div></div>
-<div class="ttc" id="anamespaceutility_html_a8f3300f337ef573fa74299812180c11c"><div class="ttname"><a href="namespaceutility.html#a8f3300f337ef573fa74299812180c11c">utility::ceil_log</a></div><div class="ttdeci">ll ceil_log(const ll x, const ll base)</div><div class="ttdef"><b>Definition:</b> utility.hpp:98</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

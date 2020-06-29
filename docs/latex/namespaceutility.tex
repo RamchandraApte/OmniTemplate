@@ -7,6 +7,8 @@ struct \mbox{\hyperlink{structutility_1_1ar}{ar}}
 \begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{ar$<$ T\mbox{[}n\mbox{]}$>$}}
 \item 
+struct \mbox{\hyperlink{structutility_1_1Empty}{Empty}}
+\item 
 struct \mbox{\hyperlink{structutility_1_1fix}{fix}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
@@ -45,9 +47,9 @@ void \mbox{\hyperlink{namespaceutility_aff1da1538e8456d30c0528faba66b50b}{test\+
 \item 
 void \mbox{\hyperlink{namespaceutility_a712d50fe014f71ad2d85897f9c243680}{test\+\_\+bit\+\_\+ceil}} ()
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a0379f3e7751f5d40389e23da6faa0997}{base\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a14dc21f495425ccdc1ec35fe45d45591}{power\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a8f3300f337ef573fa74299812180c11c}{ceil\+\_\+log}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}{log\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
@@ -85,12 +87,6 @@ using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utili
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceutility_a0379f3e7751f5d40389e23da6faa0997}\label{namespaceutility_a0379f3e7751f5d40389e23da6faa0997}} 
-\index{utility@{utility}!base\_ceil@{base\_ceil}}
-\index{base\_ceil@{base\_ceil}!utility@{utility}}
-\doxysubsubsection{\texorpdfstring{base\_ceil()}{base\_ceil()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::base\+\_\+ceil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{base }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{namespaceutility_a005fc5d8af9bba651f00c74372466b83}\label{namespaceutility_a005fc5d8af9bba651f00c74372466b83}} 
 \index{utility@{utility}!bit\_ceil@{bit\_ceil}}
 \index{bit\_ceil@{bit\_ceil}!utility@{utility}}
@@ -111,13 +107,7 @@ Return the smallest power of two that is at least xHere is the caller graph for 
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto utility\+::cache (\begin{DoxyParamCaption}\item[{const T \&}]{f }\end{DoxyParamCaption})}
 
-Cache calls to f using a map of type T\mbox{\Hypertarget{namespaceutility_a8f3300f337ef573fa74299812180c11c}\label{namespaceutility_a8f3300f337ef573fa74299812180c11c}} 
-\index{utility@{utility}!ceil\_log@{ceil\_log}}
-\index{ceil\_log@{ceil\_log}!utility@{utility}}
-\doxysubsubsection{\texorpdfstring{ceil\_log()}{ceil\_log()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::ceil\+\_\+log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{base }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}\label{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}} 
+Cache calls to f using a map of type T\mbox{\Hypertarget{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}\label{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}} 
 \index{utility@{utility}!key\_compare@{key\_compare}}
 \index{key\_compare@{key\_compare}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{key\_compare()}{key\_compare()}}
@@ -131,6 +121,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceutility_aa705afaf267f70799bd4ec8cbf040455_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}\label{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}} 
+\index{utility@{utility}!log\_ceil@{log\_ceil}}
+\index{log\_ceil@{log\_ceil}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{log\_ceil()}{log\_ceil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::log\+\_\+ceil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{base }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{namespaceutility_a1507417750abfb917c914c44e07ed713}\label{namespaceutility_a1507417750abfb917c914c44e07ed713}} 
 \index{utility@{utility}!max\_eq@{max\_eq}}
 \index{max\_eq@{max\_eq}!utility@{utility}}
@@ -158,6 +154,12 @@ Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(
 \includegraphics[width=350pt]{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespaceutility_a14dc21f495425ccdc1ec35fe45d45591}\label{namespaceutility_a14dc21f495425ccdc1ec35fe45d45591}} 
+\index{utility@{utility}!power\_ceil@{power\_ceil}}
+\index{power\_ceil@{power\_ceil}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{power\_ceil()}{power\_ceil()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::power\+\_\+ceil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{base }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{namespaceutility_a50e9430d1096ce6997ae910135a9533f}\label{namespaceutility_a50e9430d1096ce6997ae910135a9533f}} 
 \index{utility@{utility}!prev\_less@{prev\_less}}
 \index{prev\_less@{prev\_less}!utility@{utility}}

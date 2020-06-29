@@ -80,6 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Generic persistent explicit/implicit lazy based segment tree.  
+ <a href="classSegmentTree.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="segment__tree_8hpp_source.html">segment_tree.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -161,7 +164,23 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a60de928bef44ff17754a2a7c8c39f39d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a60de928bef44ff17754a2a7c8c39f39d">mid</a> (const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r, const <a class="el" href="structll.html">ll</a> i)</td></tr>
 <tr class="separator:a60de928bef44ff17754a2a7c8c39f39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt;<br />
+class SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</h3>
+
+<p>Generic persistent explicit/implicit lazy based segment tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>is the value type of the segment tree </td></tr>
+    <tr><td class="paramname">Query</td><td>is the monoid for queries </td></tr>
+    <tr><td class="paramname">Update</td><td>is the monoid for queries </td></tr>
+    <tr><td class="paramname">Query</td><td>must be an additive monoid of a semiring </td></tr>
+    <tr><td class="paramname">Update</td><td>must be a multiplicative monoid of a semiring </td></tr>
+    <tr><td class="paramname">base</td><td>is the segment tree base. Default is 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a1737e3385e2a9842bb67546ff7960acd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1737e3385e2a9842bb67546ff7960acd">&#9670;&nbsp;</a></span>Node <span class="overload">[1/2]</span></h2>
 

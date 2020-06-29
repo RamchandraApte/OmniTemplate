@@ -43,6 +43,7 @@ auto &operator<<(Stream &os, tuple<T...> t) {
 }
 template <typename T1, typename... Ts>
 auto print(const T1 &arg1, const Ts &... args) {
+	/*! Print arguments separated by spaces to stdout*/
 	cout << arg1;
 	((cout << " " << args), ...);
 	cout << endl;

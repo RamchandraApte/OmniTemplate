@@ -59,14 +59,15 @@ template <typename T, typename Monoid> class DisjointSparseTable {
     /*! Returns Monoid sum over range [l, r)*/
 	T query(ll l, ll r) const {
 		assert(l < r);
+		// Convert half open interval to closed interval
 		--r;
-		const auto num_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);
-		const auto level = sum.size() - 1 - num_diff;
-		auto ret = sum[level][l];
-		if (l != r) {
-			ret = Monoid{}(ret, sum[level][r]);
+		if(l == r){
+			return sum.back()[l];
 		}
-		return ret;
+		// Position of the leftmost different bit from the right
+		const auto pos_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);
+		const auto level = sum.size() - 1 - pos_diff;
+		return Monoid{}(sum[level][l], sum[level][r]);
 	}
 
       private:

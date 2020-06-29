@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -84,23 +85,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Implements a splay tree.  
- <a href="structsplay__tree_1_1SplayTree.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="splay__tree_8hpp_source.html">splay_tree.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for splay_tree::SplayTree&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree__coll__graph.svg" width="515" height="260"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree__coll__graph.svg" width="100%" height="436"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splay tree node.  <a href="structsplay__tree_1_1SplayTree_1_1iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splay tree node.  <a href="structsplay__tree_1_1SplayTree_1_1Node.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7ebf6727cb412c312c2da10112ff4db4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> = <a class="el" href="structsplay__tree_1_1SplayNode.html">SplayNode</a>&lt; T &gt;</td></tr>
+<tr class="separator:a7ebf6727cb412c312c2da10112ff4db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -108,24 +110,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa627e1ec6a9f5f62cb2aba123f47df0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a5fff3d078c370872ba89bbc90b979"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a04a5fff3d078c370872ba89bbc90b979">~SplayTree</a> ()</td></tr>
 <tr class="separator:a04a5fff3d078c370872ba89bbc90b979"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80ab90fbd7be1405ae05399b0fc2f2f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a80ab90fbd7be1405ae05399b0fc2f2f1">insert</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const x)</td></tr>
+<tr class="memitem:a80ab90fbd7be1405ae05399b0fc2f2f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a80ab90fbd7be1405ae05399b0fc2f2f1">insert</a> (<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const x)</td></tr>
 <tr class="separator:a80ab90fbd7be1405ae05399b0fc2f2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bf075a9e6a46e3f9b61e7b00b546707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a2bf075a9e6a46e3f9b61e7b00b546707">insert</a> (const T &amp;key)</td></tr>
 <tr class="separator:a2bf075a9e6a46e3f9b61e7b00b546707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a967e320e3d33cad8b0a9c30cd51ed924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a967e320e3d33cad8b0a9c30cd51ed924">erase</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const x)</td></tr>
+<tr class="memitem:a967e320e3d33cad8b0a9c30cd51ed924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a967e320e3d33cad8b0a9c30cd51ed924">erase</a> (<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const x)</td></tr>
 <tr class="separator:a967e320e3d33cad8b0a9c30cd51ed924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c4ae0ba499f4f13a60602ca082365fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a3c4ae0ba499f4f13a60602ca082365fc">erase</a> (const T &amp;key)</td></tr>
 <tr class="memdesc:a3c4ae0ba499f4f13a60602ca082365fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases the node with key key from the splay tree.  <a href="structsplay__tree_1_1SplayTree.html#a3c4ae0ba499f4f13a60602ca082365fc">More...</a><br /></td></tr>
 <tr class="separator:a3c4ae0ba499f4f13a60602ca082365fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70d72238898de04e4524586a060609b2"><td class="memItemLeft" align="right" valign="top">array&lt; <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a70d72238898de04e4524586a060609b2">split</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const x)</td></tr>
-<tr class="separator:a70d72238898de04e4524586a060609b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ec7e70e6422bbf64cb0b2e1bf497a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a63ec7e70e6422bbf64cb0b2e1bf497a9">find</a> (const T &amp;key)</td></tr>
+<tr class="memitem:a63ec7e70e6422bbf64cb0b2e1bf497a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a63ec7e70e6422bbf64cb0b2e1bf497a9">find</a> (const T &amp;key)</td></tr>
 <tr class="separator:a63ec7e70e6422bbf64cb0b2e1bf497a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac55722d97be7471af8bc147492347afa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#ac55722d97be7471af8bc147492347afa">size</a> ()</td></tr>
-<tr class="memdesc:ac55722d97be7471af8bc147492347afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of nodes in the splay tree.  <a href="structsplay__tree_1_1SplayTree.html#ac55722d97be7471af8bc147492347afa">More...</a><br /></td></tr>
-<tr class="separator:ac55722d97be7471af8bc147492347afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e1d11e9d19124bb01c9669a7d1ebd7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a8e1d11e9d19124bb01c9669a7d1ebd7b">empty</a> ()</td></tr>
-<tr class="separator:a8e1d11e9d19124bb01c9669a7d1ebd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc668b2583940705651fc11072d47da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a9dc668b2583940705651fc11072d47da">size</a> () const</td></tr>
+<tr class="memdesc:a9dc668b2583940705651fc11072d47da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of nodes in the splay tree.  <a href="structsplay__tree_1_1SplayTree.html#a9dc668b2583940705651fc11072d47da">More...</a><br /></td></tr>
+<tr class="separator:a9dc668b2583940705651fc11072d47da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91876a3a77e0f9c9c8550bf527a2f96f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a91876a3a77e0f9c9c8550bf527a2f96f">empty</a> () const</td></tr>
+<tr class="separator:a91876a3a77e0f9c9c8550bf527a2f96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f4c63a201ae3d63d08229382dcbfc67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a2f4c63a201ae3d63d08229382dcbfc67">begin</a> ()</td></tr>
 <tr class="separator:a2f4c63a201ae3d63d08229382dcbfc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45aa483490efb984be745d3847061eba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a45aa483490efb984be745d3847061eba">end</a> ()</td></tr>
@@ -133,35 +133,39 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac6144f6ba3df06f3eb31da230d62a50b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#ac6144f6ba3df06f3eb31da230d62a50b">destroy</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const node)</td></tr>
+<tr class="memitem:ac6144f6ba3df06f3eb31da230d62a50b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#ac6144f6ba3df06f3eb31da230d62a50b">destroy</a> (<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const node)</td></tr>
 <tr class="separator:ac6144f6ba3df06f3eb31da230d62a50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac91c4a1fa163994e18084f90e0921b08"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#ac91c4a1fa163994e18084f90e0921b08">attach</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const par, bool <a class="el" href="structsplay__tree_1_1SplayTree.html#a12959724650bbd9fcf143c22ca674a9e">side</a>, <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const new_)</td></tr>
-<tr class="separator:ac91c4a1fa163994e18084f90e0921b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12959724650bbd9fcf143c22ca674a9e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a12959724650bbd9fcf143c22ca674a9e">side</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const child)</td></tr>
-<tr class="separator:a12959724650bbd9fcf143c22ca674a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9b38d0cd5740cf94899eddbcbca05e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a5e9b38d0cd5740cf94899eddbcbca05e">rotate</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const x)</td></tr>
-<tr class="separator:a5e9b38d0cd5740cf94899eddbcbca05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3db8f486eeed38868355ebc740ae893e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a3db8f486eeed38868355ebc740ae893e">splay</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const x)</td></tr>
-<tr class="separator:a3db8f486eeed38868355ebc740ae893e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc59d753ddb6ffa3361b242bbb3fe9f0"><td class="memTemplParams" colspan="2">template&lt;bool i&gt; </td></tr>
-<tr class="memitem:abc59d753ddb6ffa3361b242bbb3fe9f0"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#abc59d753ddb6ffa3361b242bbb3fe9f0">extremum</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const x)</td></tr>
+<tr class="memitem:abc59d753ddb6ffa3361b242bbb3fe9f0"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#abc59d753ddb6ffa3361b242bbb3fe9f0">extremum</a> (<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const x)</td></tr>
 <tr class="separator:abc59d753ddb6ffa3361b242bbb3fe9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a513a7ac2715f280d2a89b3890722a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a21a513a7ac2715f280d2a89b3890722a">join</a> (<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const a, <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const b)</td></tr>
+<tr class="memitem:a21a513a7ac2715f280d2a89b3890722a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a21a513a7ac2715f280d2a89b3890722a">join</a> (<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const a, <a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const b)</td></tr>
 <tr class="separator:a21a513a7ac2715f280d2a89b3890722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a673d3706c5c3e58495775af5aac944c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a673d3706c5c3e58495775af5aac944c9">root</a> {}</td></tr>
+<tr class="memitem:a673d3706c5c3e58495775af5aac944c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a673d3706c5c3e58495775af5aac944c9">root</a> {}</td></tr>
 <tr class="separator:a673d3706c5c3e58495775af5aac944c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7adb23c86a9cb77d3a9d8afbaba65cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7adb23c86a9cb77d3a9d8afbaba65cf7">size_</a> {}</td></tr>
 <tr class="separator:a7adb23c86a9cb77d3a9d8afbaba65cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-struct splay_tree::SplayTree&lt; T &gt;</h3>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a7ebf6727cb412c312c2da10112ff4db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebf6727cb412c312c2da10112ff4db4">&#9670;&nbsp;</a></span>Node</h2>
 
-<p>Implements a splay tree. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> =  <a class="el" href="structsplay__tree_1_1SplayNode.html">SplayNode</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa627e1ec6a9f5f62cb2aba123f47df0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa627e1ec6a9f5f62cb2aba123f47df0b">&#9670;&nbsp;</a></span>SplayTree()</h2>
 
@@ -222,60 +226,6 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac91c4a1fa163994e18084f90e0921b08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac91c4a1fa163994e18084f90e0921b08">&#9670;&nbsp;</a></span>attach()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::attach </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
-          <td class="paramname"><em>par</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>side</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
-          <td class="paramname"><em>new_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_ac91c4a1fa163994e18084f90e0921b08_cgraph.svg" width="382" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_ac91c4a1fa163994e18084f90e0921b08_icgraph.svg" width="100%" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
 <a id="a2f4c63a201ae3d63d08229382dcbfc67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f4c63a201ae3d63d08229382dcbfc67">&#9670;&nbsp;</a></span>begin()</h2>
 
@@ -322,7 +272,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">static void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::destroy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -342,8 +292,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8e1d11e9d19124bb01c9669a7d1ebd7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e1d11e9d19124bb01c9669a7d1ebd7b">&#9670;&nbsp;</a></span>empty()</h2>
+<a id="a91876a3a77e0f9c9c8550bf527a2f96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91876a3a77e0f9c9c8550bf527a2f96f">&#9670;&nbsp;</a></span>empty()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +307,7 @@ template&lt;typename T &gt; </div>
           <td class="memname">bool <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::empty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -369,12 +319,14 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a8e1d11e9d19124bb01c9669a7d1ebd7b_cgraph.svg" width="382" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f_cgraph.svg" width="382" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a8e1d11e9d19124bb01c9669a7d1ebd7b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -465,7 +417,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::erase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -480,7 +432,8 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -504,9 +457,9 @@ template&lt;bool i&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::extremum </td>
+          <td class="memname">static <a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::extremum </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -533,7 +486,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::find </td>
+          <td class="memname"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::find </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
@@ -584,7 +537,8 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -603,7 +557,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::insert </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -618,7 +572,8 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -640,15 +595,15 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::join </td>
+          <td class="memname">static <a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::join </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *const&#160;</td>
           <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
@@ -666,7 +621,8 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -676,81 +632,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5e9b38d0cd5740cf94899eddbcbca05e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e9b38d0cd5740cf94899eddbcbca05e">&#9670;&nbsp;</a></span>rotate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::rotate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Rotate node x around its parent</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a5e9b38d0cd5740cf94899eddbcbca05e_cgraph.svg" width="591" height="82"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a5e9b38d0cd5740cf94899eddbcbca05e_icgraph.svg" width="100%" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="a12959724650bbd9fcf143c22ca674a9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12959724650bbd9fcf143c22ca674a9e">&#9670;&nbsp;</a></span>side()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::side </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
-          <td class="paramname"><em>child</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns true if child is on the right, and false otherwise</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a12959724650bbd9fcf143c22ca674a9e_icgraph.svg" width="100%" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="ac55722d97be7471af8bc147492347afa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac55722d97be7471af8bc147492347afa">&#9670;&nbsp;</a></span>size()</h2>
+<a id="a9dc668b2583940705651fc11072d47da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc668b2583940705651fc11072d47da">&#9670;&nbsp;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -764,7 +647,7 @@ template&lt;typename T &gt; </div>
           <td class="memname"><a class="el" href="structll.html">ll</a> <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -778,79 +661,8 @@ template&lt;typename T &gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_ac55722d97be7471af8bc147492347afa_icgraph.svg" width="100%" height="361"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da_icgraph.svg" width="100%" height="361"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-
-</div>
-</div>
-<a id="a3db8f486eeed38868355ebc740ae893e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3db8f486eeed38868355ebc740ae893e">&#9670;&nbsp;</a></span>splay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::splay </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Splay node x. x will become the root of the tree</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a3db8f486eeed38868355ebc740ae893e_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a3db8f486eeed38868355ebc740ae893e_icgraph.svg" width="100%" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="a70d72238898de04e4524586a060609b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70d72238898de04e4524586a060609b2">&#9670;&nbsp;</a></span>split()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">array&lt;<a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *, 2&gt; <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::split </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a> *const&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_a70d72238898de04e4524586a060609b2_cgraph.svg" width="100%" height="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -865,7 +677,7 @@ Here is the call graph for this function:</div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsplay__tree_1_1SplayTree_1_1Node.html">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::root {}</td>
+          <td class="memname"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::root {}</td>
         </tr>
       </table>
 </div><div class="memdoc">

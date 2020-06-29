@@ -15,7 +15,6 @@ class Permutation : public vector<ll> {
 	using vector<ll>::operator[];
 	explicit Permutation(ll n) : vector<ll>(n) {
 		iota(this.begin(), this.end(), 0LL);
-		dbg(this);
 	}
 	explicit Permutation(const initializer_list<ll> &arr) : vector<ll>{arr} {}
     /**
@@ -97,7 +96,7 @@ void test_cycles() {
 }
 void test_power() {
 	Permutation perm{2, 1, 6, 4, 5, 3, 0};
-	assert(dbg(permutation::power(perm, 10)) == dbg(modulo_namespace::power(perm, 10)));
+	assert(permutation::power(perm, 10) == modulo_namespace::power(perm, 10));
 	assert(permutation::power(perm, -10) == modulo_namespace::power(perm, -10));
 }
 void test_permutation() {

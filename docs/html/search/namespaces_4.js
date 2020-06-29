@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['linear_5falgebra_558',['linear_algebra',['../namespacelinear__algebra.html',1,'']]]
+  ['geometry_574',['geometry',['../namespacegeometry.html',1,'']]],
+  ['graph_5ftheory_575',['graph_theory',['../namespacegraph__theory.html',1,'']]]
 ];
