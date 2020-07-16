@@ -5,4 +5,6 @@ program.cpp is an example program utilizing the template. You need to include th
 
 Requires GNU G++ compiler and C++17.
 
-[Doxygen documentation](https://ramchandraapte.github.io/OmniTemplate/)
+[Documentation](https://ramchandraapte.github.io/OmniTemplate/)
+
+(this is generated from the source code comments using Doxygen)
