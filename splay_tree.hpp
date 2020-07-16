@@ -172,6 +172,7 @@ template <typename T> struct SplayTree {
 	iterator end() { return iterator{nullptr}; }
 };
 void test_splay_tree() {
+	/*! Tests the splay tree*/
 	SplayTree<int> sp;
 	sp.insert(4);
 	sp.insert(3);
