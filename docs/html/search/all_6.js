@@ -10,5 +10,5 @@ var searchData=
   ['eq_94',['eq',['../range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015',1,'range.hpp']]],
   ['erase_95',['erase',['../structsplay__tree_1_1SplayTree.html#a967e320e3d33cad8b0a9c30cd51ed924',1,'splay_tree::SplayTree::erase(Node *const x)'],['../structsplay__tree_1_1SplayTree.html#a3c4ae0ba499f4f13a60602ca082365fc',1,'splay_tree::SplayTree::erase(const T &amp;key)'],['../treap_8hpp.html#add90798283a022be36a018723badda5b',1,'erase():&#160;treap.hpp']]],
   ['erase_5fimp_96',['erase_imp',['../treap_8hpp.html#a5029123d55b27e0746b8616a6f79eda3',1,'treap.hpp']]],
-  ['extremum_97',['extremum',['../structsplay__tree_1_1SplayTree.html#abc59d753ddb6ffa3361b242bbb3fe9f0',1,'splay_tree::SplayTree']]]
+  ['extremum_97',['extremum',['../structsplay__tree_1_1SplayTree.html#ac3a1a0fa259a0f23787211fb94152acd',1,'splay_tree::SplayTree']]]
 ];

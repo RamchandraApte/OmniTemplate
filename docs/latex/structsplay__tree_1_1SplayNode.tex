@@ -1,0 +1,206 @@
+\hypertarget{structsplay__tree_1_1SplayNode}{}\doxysection{splay\+\_\+tree\+::Splay\+Node$<$ T, has\+\_\+link\+\_\+cut $>$ Struct Template Reference}
+\label{structsplay__tree_1_1SplayNode}\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+
+
+{\ttfamily \#include $<$splay\+\_\+tree.\+hpp$>$}
+
+
+
+Inheritance diagram for splay\+\_\+tree\+::Splay\+Node$<$ T, has\+\_\+link\+\_\+cut $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structsplay__tree_1_1SplayNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for splay\+\_\+tree\+::Splay\+Node$<$ T, has\+\_\+link\+\_\+cut $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayNode_a8fd96533069082b51ae1a58346c08f94}{Splay\+Node}} ()
+\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayNode_a6f8ea4b8bc92264b47e93ce969e53d54}{Splay\+Node}} (T value\+\_\+arg)
+\item 
+bool \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a73de7d8fe94fc66a6a43427751e8a546}{side}} () const
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a099b6b1b7632cb57ee28bc474d86343e}{rotate}} ()
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a34a54d6c33025f4be7b37065e584b8c5}{splay}} ()
+\item 
+array$<$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} $\ast$, 2 $>$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a82d47b54b62b9e59f594af8db601fc05}{split}} ()
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a510653918c7b8181c888bbb608a9e6ee}{attach}} (bool \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a73de7d8fe94fc66a6a43427751e8a546}{side}}, \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} $\ast$const new\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{structsplay__tree_1_1SplayNode_aeb587346f51a8c188a0cf74da7770be4}{value}} \{\}
+\begin{DoxyCompactList}\small\item\em Value associated with node. \end{DoxyCompactList}\item 
+array$<$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} $\ast$, 2 $>$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode_a093b72ce317727a267a5d019b810942f}{child}} \{\}
+\begin{DoxyCompactList}\small\item\em Left and right children. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode_abd2f93c825b0b351f9f29d731150688f}{parent}} \{\}
+\begin{DoxyCompactList}\small\item\em Pointer to parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a8fd96533069082b51ae1a58346c08f94}\label{structsplay__tree_1_1SplayNode_a8fd96533069082b51ae1a58346c08f94}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!SplayNode@{SplayNode}}
+\index{SplayNode@{SplayNode}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{SplayNode()}{SplayNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a6f8ea4b8bc92264b47e93ce969e53d54}\label{structsplay__tree_1_1SplayNode_a6f8ea4b8bc92264b47e93ce969e53d54}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!SplayNode@{SplayNode}}
+\index{SplayNode@{SplayNode}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{SplayNode()}{SplayNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} (\begin{DoxyParamCaption}\item[{T}]{value\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a510653918c7b8181c888bbb608a9e6ee}\label{structsplay__tree_1_1SplayNode_a510653918c7b8181c888bbb608a9e6ee}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!attach@{attach}}
+\index{attach@{attach}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::attach (\begin{DoxyParamCaption}\item[{bool}]{side,  }\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$ $\ast$const}]{new\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attach node new\+\_\+ as the node\textquotesingle{}s side childrenHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a510653918c7b8181c888bbb608a9e6ee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a510653918c7b8181c888bbb608a9e6ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a099b6b1b7632cb57ee28bc474d86343e}\label{structsplay__tree_1_1SplayNode_a099b6b1b7632cb57ee28bc474d86343e}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!rotate@{rotate}}
+\index{rotate@{rotate}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Rotate node x around its parentHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a099b6b1b7632cb57ee28bc474d86343e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a099b6b1b7632cb57ee28bc474d86343e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a73de7d8fe94fc66a6a43427751e8a546}\label{structsplay__tree_1_1SplayNode_a73de7d8fe94fc66a6a43427751e8a546}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!side@{side}}
+\index{side@{side}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{side()}{side()}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+bool \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if child is on the right, and false otherwiseHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a73de7d8fe94fc66a6a43427751e8a546_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a34a54d6c33025f4be7b37065e584b8c5}\label{structsplay__tree_1_1SplayNode_a34a54d6c33025f4be7b37065e584b8c5}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!splay@{splay}}
+\index{splay@{splay}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{splay()}{splay()}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::splay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Splay node x. x will become the root of the treeHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a34a54d6c33025f4be7b37065e584b8c5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a34a54d6c33025f4be7b37065e584b8c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a82d47b54b62b9e59f594af8db601fc05}\label{structsplay__tree_1_1SplayNode_a82d47b54b62b9e59f594af8db601fc05}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!split@{split}}
+\index{split@{split}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+array$<$\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} $\ast$, 2$>$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::split (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayNode_a82d47b54b62b9e59f594af8db601fc05_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_a093b72ce317727a267a5d019b810942f}\label{structsplay__tree_1_1SplayNode_a093b72ce317727a267a5d019b810942f}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!child@{child}}
+\index{child@{child}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{child}{child}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+array$<$\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}} $\ast$, 2$>$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::child \{\}}
+
+
+
+Left and right children. 
+
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_abd2f93c825b0b351f9f29d731150688f}\label{structsplay__tree_1_1SplayNode_abd2f93c825b0b351f9f29d731150688f}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!parent@{parent}}
+\index{parent@{parent}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::parent \{\}}
+
+
+
+Pointer to parent. 
+
+\mbox{\Hypertarget{structsplay__tree_1_1SplayNode_aeb587346f51a8c188a0cf74da7770be4}\label{structsplay__tree_1_1SplayNode_aeb587346f51a8c188a0cf74da7770be4}} 
+\index{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}!value@{value}}
+\index{value@{value}!splay\_tree::SplayNode$<$ T, has\_link\_cut $>$@{splay\_tree::SplayNode$<$ T, has\_link\_cut $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T , bool has\+\_\+link\+\_\+cut = false$>$ \\
+T \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{splay\+\_\+tree\+::\+Splay\+Node}}$<$ T, has\+\_\+link\+\_\+cut $>$\+::value \{\}}
+
+
+
+Value associated with node. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{splay__tree_8hpp}{splay\+\_\+tree.\+hpp}}\end{DoxyCompactItemize}

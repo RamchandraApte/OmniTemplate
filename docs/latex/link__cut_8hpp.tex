@@ -1,0 +1,210 @@
+\hypertarget{link__cut_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/link\+\_\+cut.hpp File Reference}
+\label{link__cut_8hpp}\index{/home/ram/OmniTemplate/link\_cut.hpp@{/home/ram/OmniTemplate/link\_cut.hpp}}
+{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}splay\+\_\+tree.\+hpp\char`\"{}}\newline
+Include dependency graph for link\+\_\+cut.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} = \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$ \mbox{\hyperlink{structll}{ll}}, true $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$ \mbox{\hyperlink{link__cut_8hpp_af124103e4649e58cb832c00c79a58ed1}{make\+\_\+tree}} ()
+\item 
+void \mbox{\hyperlink{link__cut_8hpp_aa6d8f02358cbad26bd5d0a48a608002e}{detach\+\_\+child}} (\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$node)
+\item 
+\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$ \mbox{\hyperlink{link__cut_8hpp_a6d130eaad5cd2a8cec8a77c0932abb29}{access}} (\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$node)
+\item 
+\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$ \mbox{\hyperlink{link__cut_8hpp_af2023ad828dc7b552bfb5c19b197e8a8}{find\+\_\+root}} (\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{link__cut_8hpp_aee90268d7b5985314517951d6e69543c}{cut}} (\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{link__cut_8hpp_a6f35606505d7f40059acd4d66875d81d}{link}} (\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$par, \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$child)
+\item 
+\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$ \mbox{\hyperlink{link__cut_8hpp_a9cc2d4090d8e477ad393975565bb9cc4}{lca}} (\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$u, \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+\item 
+void \mbox{\hyperlink{link__cut_8hpp_a343a0ee0a29d19210e328e8f6bc5dfd3}{test\+\_\+link\+\_\+cut\+\_\+tree}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}\label{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!Node@{Node}}
+\index{Node@{Node}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} =  \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$\mbox{\hyperlink{structll}{ll}}, true$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{link__cut_8hpp_a6d130eaad5cd2a8cec8a77c0932abb29}\label{link__cut_8hpp_a6d130eaad5cd2a8cec8a77c0932abb29}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!access@{access}}
+\index{access@{access}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{access()}{access()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}}$\ast$ access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Moves node to the root of the auxillary tree containing the root node of the tree. Returns last path-\/parent of node as it moves up the treeHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a6d130eaad5cd2a8cec8a77c0932abb29_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a6d130eaad5cd2a8cec8a77c0932abb29_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_aee90268d7b5985314517951d6e69543c}\label{link__cut_8hpp_aee90268d7b5985314517951d6e69543c}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!cut@{cut}}
+\index{cut@{cut}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{cut()}{cut()}}
+{\footnotesize\ttfamily void cut (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Detaches the subtree of node from the tree of node\textquotesingle{}s parentHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_aee90268d7b5985314517951d6e69543c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_aee90268d7b5985314517951d6e69543c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_aa6d8f02358cbad26bd5d0a48a608002e}\label{link__cut_8hpp_aa6d8f02358cbad26bd5d0a48a608002e}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!detach\_child@{detach\_child}}
+\index{detach\_child@{detach\_child}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{detach\_child()}{detach\_child()}}
+{\footnotesize\ttfamily void detach\+\_\+child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Converts node\textquotesingle{}s preferred child edge to a path parent edgeHere is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_aa6d8f02358cbad26bd5d0a48a608002e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_af2023ad828dc7b552bfb5c19b197e8a8}\label{link__cut_8hpp_af2023ad828dc7b552bfb5c19b197e8a8}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!find\_root@{find\_root}}
+\index{find\_root@{find\_root}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{find\_root()}{find\_root()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}}$\ast$ find\+\_\+root (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Finds the root of the tree containing nodeHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_af2023ad828dc7b552bfb5c19b197e8a8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_af2023ad828dc7b552bfb5c19b197e8a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_a9cc2d4090d8e477ad393975565bb9cc4}\label{link__cut_8hpp_a9cc2d4090d8e477ad393975565bb9cc4}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!lca@{lca}}
+\index{lca@{lca}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{lca()}{lca()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}}$\ast$ lca (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{u,  }\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{v }\end{DoxyParamCaption})}
+
+Returns lowest common ancestor of nodes u and v or nullptr if u and v are in different treesHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a9cc2d4090d8e477ad393975565bb9cc4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a9cc2d4090d8e477ad393975565bb9cc4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_a6f35606505d7f40059acd4d66875d81d}\label{link__cut_8hpp_a6f35606505d7f40059acd4d66875d81d}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!link@{link}}
+\index{link@{link}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{link()}{link()}}
+{\footnotesize\ttfamily void link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{par,  }\item[{\mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}} $\ast$}]{child }\end{DoxyParamCaption})}
+
+Makes child the child of parHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a6f35606505d7f40059acd4d66875d81d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a6f35606505d7f40059acd4d66875d81d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_af124103e4649e58cb832c00c79a58ed1}\label{link__cut_8hpp_af124103e4649e58cb832c00c79a58ed1}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!make\_tree@{make\_tree}}
+\index{make\_tree@{make\_tree}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{make\_tree()}{make\_tree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{link__cut_8hpp_a9c17052b56940fcc7b32f63707d41a6e}{Node}}$\ast$ make\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Make a new treeHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_af124103e4649e58cb832c00c79a58ed1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{link__cut_8hpp_a343a0ee0a29d19210e328e8f6bc5dfd3}\label{link__cut_8hpp_a343a0ee0a29d19210e328e8f6bc5dfd3}} 
+\index{link\_cut.hpp@{link\_cut.hpp}!test\_link\_cut\_tree@{test\_link\_cut\_tree}}
+\index{test\_link\_cut\_tree@{test\_link\_cut\_tree}!link\_cut.hpp@{link\_cut.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_link\_cut\_tree()}{test\_link\_cut\_tree()}}
+{\footnotesize\ttfamily void test\+\_\+link\+\_\+cut\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a343a0ee0a29d19210e328e8f6bc5dfd3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{link__cut_8hpp_a343a0ee0a29d19210e328e8f6bc5dfd3_icgraph}
+\end{center}
+\end{figure}

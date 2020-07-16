@@ -6,7 +6,7 @@ var searchData=
   ['lazy_170',['lazy',['../structSegmentTree_1_1LazyPart.html#a8c0cb4f21fc9c3f63b694f3539350c43',1,'SegmentTree::LazyPart']]],
   ['lazy_5fptr_171',['lazy_ptr',['../structlazy__ptr.html',1,'lazy_ptr&lt; T &gt;'],['../structlazy__ptr.html#a8067d4abb926381d2112c94e38f23f47',1,'lazy_ptr::lazy_ptr()']]],
   ['lazypart_172',['LazyPart',['../structSegmentTree_1_1LazyPart.html',1,'SegmentTree']]],
-  ['lca_173',['lca',['../namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419',1,'tree']]],
+  ['lca_173',['lca',['../link__cut_8hpp.html#a9cc2d4090d8e477ad393975565bb9cc4',1,'lca():&#160;link_cut.hpp'],['../namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419',1,'tree::lca()']]],
   ['lcg_5fmod_174',['lcg_mod',['../structstring__tools_1_1hash__str.html#a6a815a0256e241866570471a3f19e1ea',1,'string_tools::hash_str']]],
   ['ld_175',['ld',['../core_8hpp.html#a2e2e73e53fc509e05f252ef083503838',1,'core.hpp']]],
   ['let_176',['let',['../core_8hpp.html#a30d2d6ecdd50cafce635775b6e4e1cf2',1,'core.hpp']]],
