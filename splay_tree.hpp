@@ -14,7 +14,6 @@ struct SplayNode : public conditional_t<has_link_cut, PathParent<SplayNode<T, ha
 	T value{}; //!< Value associated with node
 	array<SplayNode *, 2> child{}; //!< Left and right children
 	SplayNode *parent{}; //!< Pointer to parent
-	//Node *path_parent{};
 	bool side() const {
 		/*! Returns true if child is on the right, and false otherwise*/
 		return parent->child[1] == &this;
