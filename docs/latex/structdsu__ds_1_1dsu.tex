@@ -26,6 +26,12 @@ Collaboration diagram for dsu\+\_\+ds\+::dsu\+:\nopagebreak
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}{find}} (\mbox{\hyperlink{structll}{ll}} x) const
 \item 
 bool \mbox{\hyperlink{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}{join}} (\mbox{\hyperlink{structll}{ll}} x, \mbox{\hyperlink{structll}{ll}} y)
+\item 
+\mbox{\hyperlink{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}{dsu}} (const \mbox{\hyperlink{structll}{ll}} n)
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}{find}} (\mbox{\hyperlink{structll}{ll}} x) const
+\item 
+bool \mbox{\hyperlink{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}{join}} (\mbox{\hyperlink{structll}{ll}} x, \mbox{\hyperlink{structll}{ll}} y)
 \begin{DoxyCompactList}\small\item\em Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -43,7 +49,13 @@ Disjoint-\/set data structure.
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}\label{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}} 
 \index{dsu\_ds::dsu@{dsu\_ds::dsu}!dsu@{dsu}}
 \index{dsu@{dsu}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{dsu()}{dsu()}}
+\doxysubsubsection{\texorpdfstring{dsu()}{dsu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dsu\+\_\+ds\+::dsu\+::dsu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}\label{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!dsu@{dsu}}
+\index{dsu@{dsu}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{dsu()}{dsu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily dsu\+\_\+ds\+::dsu\+::dsu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
 Construct a dsu with n elements. Initially each element is in its own set. 
@@ -52,10 +64,23 @@ Construct a dsu with n elements. Initially each element is in its own set.
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}\label{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}} 
 \index{dsu\_ds::dsu@{dsu\_ds::dsu}!find@{find}}
 \index{find@{find}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{find()}{find()}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dsu\+\_\+ds\+::dsu\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the representative element of x Here is the caller graph for this function\+:\nopagebreak
+Returns the representative element of x Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}\label{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!find@{find}}
+\index{find@{find}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dsu\+\_\+ds\+::dsu\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,18 +90,32 @@ Returns the representative element of x Here is the caller graph for this functi
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}\label{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}} 
 \index{dsu\_ds::dsu@{dsu\_ds::dsu}!join@{join}}
 \index{join@{join}!dsu\_ds::dsu@{dsu\_ds::dsu}}
-\doxysubsubsection{\texorpdfstring{join()}{join()}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily bool dsu\+\_\+ds\+::dsu\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. 
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}\label{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}} 
+\index{dsu\_ds::dsu@{dsu\_ds::dsu}!join@{join}}
+\index{join@{join}!dsu\_ds::dsu@{dsu\_ds::dsu}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool dsu\+\_\+ds\+::dsu\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=312pt]{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph}
+\includegraphics[width=296pt]{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph}
 \end{center}
 \end{figure}
 
@@ -100,6 +139,7 @@ The parent of each element.
 
 Size of set of representative element idx 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
+/home/ram/\+Omni\+Template/\mbox{\hyperlink{d__compiled_8cpp}{d\+\_\+compiled.\+cpp}}\item 
 /home/ram/\+Omni\+Template/\mbox{\hyperlink{dsu_8hpp}{dsu.\+hpp}}\end{DoxyCompactItemize}

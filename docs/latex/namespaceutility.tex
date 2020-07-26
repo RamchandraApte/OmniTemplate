@@ -20,7 +20,7 @@ struct \mbox{\hyperlink{structutility_1_1with}{with}}
 \item 
 {\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{ar\+\_\+t}} = typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$ T $>$\+::type
 \item 
-using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
+using \mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -66,7 +66,7 @@ void \mbox{\hyperlink{namespaceutility_a5037ce073dfbaeaf7083a725780cdaf1}{test\+
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{reng}} \{\mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}}\{\}()\}
+default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{reng}} \{\mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}}\{\}()\}
 \end{DoxyCompactItemize}
 
 
@@ -78,11 +78,11 @@ default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utility\+::ar\+\_\+t}} = typedef typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$T$>$\+::type}
 
-\mbox{\Hypertarget{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}\label{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}} 
+\mbox{\Hypertarget{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}\label{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}} 
 \index{utility@{utility}!random\_device@{random\_device}}
 \index{random\_device@{random\_device}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{random\_device}{random\_device}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utility\+::random\+\_\+device}} = typedef \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}} \mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{utility\+::random\+\_\+device}}}
 
 
 
@@ -92,6 +92,8 @@ using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utili
 \index{bit\_ceil@{bit\_ceil}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{bit\_ceil()}{bit\_ceil()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::bit\+\_\+ceil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
+
+Return the smallest power of two that is at least x
 
 Return the smallest power of two that is at least xHere is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -106,6 +108,8 @@ Return the smallest power of two that is at least xHere is the caller graph for 
 \doxysubsubsection{\texorpdfstring{cache()}{cache()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto utility\+::cache (\begin{DoxyParamCaption}\item[{const T \&}]{f }\end{DoxyParamCaption})}
+
+Cache calls to f using a map of type T
 
 Cache calls to f using a map of type T\mbox{\Hypertarget{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}\label{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}} 
 \index{utility@{utility}!key\_compare@{key\_compare}}
@@ -147,6 +151,8 @@ auto utility\+::min\+\_\+eq (\begin{DoxyParamCaption}\item[{T \&}]{x,  }\item[{c
 \doxysubsubsection{\texorpdfstring{next\_comb()}{next\_comb()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::next\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
+Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.
+
 Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -187,6 +193,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{swap2()}{swap2()}}
 {\footnotesize\ttfamily template$<$typename T , typename Func $>$ \\
 void utility\+::swap2 (\begin{DoxyParamCaption}\item[{T \&}]{a,  }\item[{T \&}]{b,  }\item[{const Func \&}]{func }\end{DoxyParamCaption})}
+
+Stable sorts a and b by func.
 
 Stable sorts a and b by func.Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -342,5 +350,5 @@ Remove all duplicates element from v so that all elements in v are distinct and 
 \index{utility@{utility}!reng@{reng}}
 \index{reng@{reng}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{reng}{reng}}
-{\footnotesize\ttfamily default\+\_\+random\+\_\+engine utility\+::reng \{\mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}}\{\}()\}}
+{\footnotesize\ttfamily default\+\_\+random\+\_\+engine utility\+::reng \{\mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}}\{\}()\}}
 

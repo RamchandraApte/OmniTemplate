@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Program Listing for File operations.hpp &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-operations-hpp">
+<span id="program-listing-file-operations-hpp"></span><h1>Program Listing for File operations.hpp<a class="headerlink" href="#program-listing-for-file-operations-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_operations.hpp.html#file-operations-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">operations.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#include</span> <span class="cpf">&quot;range.hpp&quot;</span><span class="cp"></span>
+<span class="c1">// namespace operations {</span>
+<span class="cp">#define aug(op)                                                                \</span>
+<span class="cp">    template &lt;typename T1, typename T2&gt;                                    \</span>
+<span class="cp">    auto operator op##=(T1 &amp;a, const T2 &amp;b) {                              \</span>
+<span class="cp">        return a = a op b;                                             \</span>
+<span class="cp">    }</span>
+<span class="n">aug</span><span class="p">(</span><span class="o">+</span><span class="p">);</span>
+<span class="n">aug</span><span class="p">(</span><span class="o">-</span><span class="p">);</span>
+<span class="n">aug</span><span class="p">(</span><span class="o">*</span><span class="p">);</span>
+<span class="n">aug</span><span class="p">(</span><span class="o">/</span><span class="p">);</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">enable_if_t</span><span class="o">&lt;</span><span class="n">is_floating_point_v</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">invert</span><span class="p">(</span><span class="n">multiplies</span><span class="o">&lt;&gt;</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Group</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="k">operator</span><span class="o">/</span><span class="p">(</span><span class="n">Group</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">Group</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">invert</span><span class="p">(</span><span class="n">multiplies</span><span class="p">{},</span> <span class="n">b</span><span class="p">);</span> <span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="k">constexpr</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="o">-</span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="k">constexpr</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">&lt;=</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">&gt;=</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">&gt;</span><span class="p">(</span><span class="k">const</span> <span class="n">T1</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T2</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">tm</span><span class="p">()</span> <span class="k">using</span> <span class="n">uset</span> <span class="o">=</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">um</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">um</span> <span class="n">a</span><span class="p">,</span> <span class="n">um</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="nl">p</span> <span class="p">:</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">a</span><span class="p">[</span><span class="n">p</span><span class="p">.</span><span class="n">first</span><span class="p">]</span> <span class="o">+=</span> <span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">|</span><span class="p">(</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="p">[</span><span class="n">sm</span><span class="p">,</span> <span class="n">bg</span><span class="p">]</span> <span class="o">=</span> <span class="n">minmax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">bg</span><span class="p">;</span>
+    <span class="n">ret</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">al</span><span class="p">(</span><span class="n">sm</span><span class="p">));</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">&amp;</span><span class="p">(</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="p">[</span><span class="n">sm</span><span class="p">,</span> <span class="n">bg</span><span class="p">]</span> <span class="o">=</span> <span class="n">minmax</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+    <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="nl">x</span> <span class="p">:</span> <span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">bg</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">ret</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">tm</span><span class="p">()</span> <span class="k">auto</span> <span class="n">sub_set</span><span class="p">(</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">,</span>
+          <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">ret</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="nl">x</span> <span class="p">:</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">ret</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">tm</span><span class="p">()</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">sub_set</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">ret</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">tm</span><span class="p">()</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">^</span><span class="p">(</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">unordered_set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">sub_set</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">ret</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">tm</span><span class="p">()</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+    <span class="n">fo</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="p">{</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Iterator</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Iterator</span> <span class="n">it</span><span class="p">,</span> <span class="n">enable_if_t</span><span class="o">&lt;!</span><span class="n">is_same</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">iterator_traits</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">&gt;::</span><span class="n">iterator_category</span><span class="p">,</span> <span class="n">random_access_iterator_tag</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">advance</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">it</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">tm</span><span class="p">()</span> <span class="k">using</span> <span class="n">bin_op</span> <span class="o">=</span> <span class="n">T</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="p">);</span>
+<span class="cp">#define ret(x, id)                                                             \</span>
+<span class="cp">    if (f == static_cast&lt;decltype(f)&gt;(x)) {                                \</span>
+<span class="cp">        return id;                                                     \</span>
+<span class="cp">    }</span>
+<span class="k">constexpr</span> <span class="n">ll</span> <span class="nf">identity</span><span class="p">(</span><span class="n">bin_op</span><span class="o">&lt;</span><span class="n">ll</span> <span class="k">const</span> <span class="o">&amp;&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ret</span><span class="p">(</span><span class="n">max</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">-</span><span class="n">inf</span><span class="p">);</span>
+    <span class="n">ret</span><span class="p">(</span><span class="n">min</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">inf</span><span class="p">);</span>
+    <span class="n">abort</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="k">constexpr</span> <span class="n">ll</span> <span class="nf">identity</span><span class="p">(</span><span class="n">bin_op</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ret</span><span class="p">(</span><span class="n">gcd</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">abort</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="n">ll</span> <span class="nf">identity</span><span class="p">(</span><span class="n">plus</span><span class="o">&lt;&gt;</span><span class="p">,</span> <span class="n">ll</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="n">ll</span> <span class="nf">identity</span><span class="p">(</span><span class="n">multiplies</span><span class="o">&lt;&gt;</span><span class="p">,</span> <span class="n">ll</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">struct</span> <span class="n">Max</span> <span class="p">{</span>
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="p">()(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="n">ll</span> <span class="nf">identity</span><span class="p">(</span><span class="n">Max</span><span class="p">,</span> <span class="n">ll</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">-</span><span class="n">inf</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">struct</span> <span class="n">Min</span> <span class="p">{</span>
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="k">operator</span><span class="p">()(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="n">ll</span> <span class="nf">identity</span><span class="p">(</span><span class="n">Min</span><span class="p">,</span> <span class="n">ll</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">inf</span><span class="p">;</span> <span class="p">}</span>
+<span class="c1">//} // namespace operations</span>
+<span class="c1">// using namespace operations;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/program_listing_file_operations.hpp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

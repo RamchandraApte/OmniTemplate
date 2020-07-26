@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="classMinQueue" kind="class" language="C++" prot="public">
+  <compounddef id="classMinQueue" kind="class" language="C++" prot="private">
     <compoundname>MinQueue</compoundname>
-    <basecompoundref refid="classQueueAdaptor" prot="public" virt="non-virtual">QueueAdaptor&lt; MinStack&lt; T &gt; &gt;</basecompoundref>
-    <includes refid="queue_8hpp" local="no">queue.hpp</includes>
+    <basecompoundref refid="classqueue__tools_1_1QueueAdaptor" prot="public" virt="non-virtual">queue_tools::QueueAdaptor&lt; MinStack&lt; T &gt; &gt;</basecompoundref>
     <templateparamlist>
       <param>
         <type>typename T</type>
@@ -21,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="120" column="3" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="120" bodyend="120"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="128" column="10" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="128" bodyend="128"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -30,46 +29,44 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
-        <label>QueueAdaptor&lt; MinStack&lt; T &gt; &gt;</label>
-        <link refid="classQueueAdaptor"/>
+        <label>queue_tools::QueueAdaptor&lt; MinStack&lt; T &gt; &gt;</label>
+        <link refid="classqueue__tools_1_1QueueAdaptor"/>
       </node>
       <node id="1">
         <label>MinQueue&lt; T &gt;</label>
-        <link refid="classMinQueue"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
       <node id="2">
-        <label>QueueAdaptor&lt; MinStack&lt; T &gt; &gt;</label>
-        <link refid="classQueueAdaptor"/>
+        <label>queue_tools::QueueAdaptor&lt; MinStack&lt; T &gt; &gt;</label>
+        <link refid="classqueue__tools_1_1QueueAdaptor"/>
       </node>
       <node id="1">
         <label>MinQueue&lt; T &gt;</label>
-        <link refid="classMinQueue"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/queue.hpp" line="118" column="49" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="118" bodyend="121"/>
+    <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="126" column="52" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="126" bodyend="129"/>
     <listofallmembers>
-      <member refid="classQueueAdaptor_1a7140ad57c092adb529df4212bbf62f92" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>back</name></member>
-      <member refid="classQueueAdaptor_1a86760f4e5f8f261a4199af7bfd6e175c" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>back</name></member>
-      <member refid="classQueueAdaptor_1a56ffcdcc62cfe0618fc90437ce482018" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>const_reference</name></member>
-      <member refid="classQueueAdaptor_1a7d8d187a304d8c0a2d5044966bfbb8a6" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>container_type</name></member>
-      <member refid="classQueueAdaptor_1a526c084a248a28ebec26d5934546f63d" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>empty</name></member>
-      <member refid="classQueueAdaptor_1ad3da3b616f21aa04d52328583eed51ed" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>front</name></member>
-      <member refid="classQueueAdaptor_1a66ac47ae5211e9ee3c81fdcb97f37451" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>front</name></member>
-      <member refid="classQueueAdaptor_1a93327b413fb302d9f9b533a21179d39f" prot="protected" virt="non-virtual"><scope>MinQueue</scope><name>get_left</name></member>
-      <member refid="classQueueAdaptor_1a9434246f808b040616e5bffb304fce43" prot="protected" virt="non-virtual"><scope>MinQueue</scope><name>get_right</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a70c630a800a12e880917ffc2ccbd1153" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>back</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1ad3a4f68bb1c2cbd0bedd8094e732bece" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>back</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1abfe056cff4a6a88624024d16b0442236" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>const_reference</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a0a12e0ff52602d46cea6f7bb072933f6" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>container_type</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a65573a420692f22b4274313469f3688b" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>empty</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a603c22db9148d592426c73e53ad88178" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>front</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1ac807754cdc69adb7dcfd12c02a21d7cb" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>front</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a409777bac8958f09bf99f9ca2ff64ab0" prot="protected" virt="non-virtual"><scope>MinQueue</scope><name>get_left</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a39e37c34ea5fd27421f3f8dabe733a28" prot="protected" virt="non-virtual"><scope>MinQueue</scope><name>get_right</name></member>
       <member refid="classMinQueue_1aa050a922fde794170ad24d639f42df36" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>min</name></member>
-      <member refid="classQueueAdaptor_1a81ec309acaf4e8ad47e49d2fbffb0000" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>pop</name></member>
-      <member refid="classQueueAdaptor_1ad0f545cec9fdfb5cdda40a51c9ff8648" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>push</name></member>
-      <member refid="classQueueAdaptor_1a879e8bf98a35a1ea6cc7d63b0de0783f" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>reference</name></member>
-      <member refid="classQueueAdaptor_1ac5d740b880e456d5a44cdba1f5acf2c1" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>size</name></member>
-      <member refid="classQueueAdaptor_1a9d1778a597097422d7545f38b7bc18ff" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>size_type</name></member>
-      <member refid="classQueueAdaptor_1a504a74bd62b9e4f0d7ac731fe07a8b8f" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>value_type</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>pop</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>push</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1aaad88193dddc1d17404808cb98e1e79f" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>reference</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1adfb78c6b9828b06e9c8f29ae56b43078" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>size</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a7eb2812a5b5f265784995e3b1d796c0b" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>size_type</name></member>
+      <member refid="classqueue__tools_1_1QueueAdaptor_1a41d9b80dbd9c412dbc7326586dbb3540" prot="public" virt="non-virtual"><scope>MinQueue</scope><name>value_type</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

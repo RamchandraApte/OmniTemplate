@@ -1,0 +1,13 @@
+.. _exhale_function_program__listing__file__utility_8hpp_8rst_8txt_1ac74c8b480a6687d40239f96799557894:
+
+Template Function swap2
+=======================
+
+- Defined in :ref:`file_docs__build_html__sources_api_program_listing_file_utility.hpp.rst.txt`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: swap2(T&, T&, const Func&)

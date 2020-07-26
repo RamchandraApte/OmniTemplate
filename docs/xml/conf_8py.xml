@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="conf_8py" kind="file" language="Python">
+    <compoundname>conf.py</compoundname>
+    <innernamespace refid="namespaceconf">conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">#<sp/>The<sp/>`extensions`<sp/>list<sp/>should<sp/>already<sp/>be<sp/>in<sp/>here<sp/>from<sp/>`sphinx-quickstart`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">extensions<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>there<sp/>may<sp/>be<sp/>others<sp/>here<sp/>already,<sp/>e.g.<sp/>&apos;sphinx.ext.mathjax&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;breathe&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;exhale&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">]</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Setup<sp/>the<sp/>breathe<sp/>extension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">breathe_projects<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;OmniTemplate&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;./xml&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">breathe_default_project<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;OmniTemplate&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Setup<sp/>the<sp/>exhale<sp/>extension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">exhale_args<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>These<sp/>arguments<sp/>are<sp/>required</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;containmentFolder&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;./api&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;rootFileName&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;library_root.rst&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;rootFileTitle&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Library<sp/>API&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;doxygenStripFromPath&quot;</highlight><highlight class="normal">:<sp/><sp/></highlight><highlight class="stringliteral">&quot;..&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Suggested<sp/>optional<sp/>arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;createTreeView&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>TIP:<sp/>if<sp/>using<sp/>the<sp/>sphinx-bootstrap-theme,<sp/>you<sp/>need</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>&quot;treeViewIsBootstrap&quot;:<sp/>True,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;exhaleExecutesDoxygen&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;exhaleDoxygenStdin&quot;</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;INPUT<sp/>=<sp/>..&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Tell<sp/>sphinx<sp/>what<sp/>the<sp/>primary<sp/>language<sp/>being<sp/>documented<sp/>is.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">primary_domain<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;cpp&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Tell<sp/>sphinx<sp/>what<sp/>the<sp/>pygments<sp/>highlight<sp/>language<sp/>should<sp/>be.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">highlight_language<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;cpp&apos;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="docs/conf.py"/>
+  </compounddef>
+</doxygen>

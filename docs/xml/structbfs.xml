@@ -2,27 +2,25 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="structbfs" kind="struct" language="C++" prot="public">
     <compoundname>bfs</compoundname>
-    <basecompoundref refid="structgsearch" prot="public" virt="non-virtual">gsearch</basecompoundref>
-    <includes refid="graph__theory_8hpp" local="no">graph_theory.hpp</includes>
+    <basecompoundref refid="structgraph__theory_1_1gsearch" prot="public" virt="non-virtual">graph_theory::gsearch</basecompoundref>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="structbfs_1a7f0c781accd2af82a51e4e95b758617d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="structbfs_1a91dde462b4f747bf50247fc4cb962b55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>void bfs::operator()</definition>
-        <argsstring>(ll s)</argsstring>
+        <argsstring>(ll source)</argsstring>
         <name>operator()</name>
-        <reimplements refid="structgsearch_1a3f44a83cbe6f9c20052e5409decccd87">operator()</reimplements>
+        <reimplements refid="structgraph__theory_1_1gsearch_1abdf4ecadc6bff94aea75e416101d52fe">operator()</reimplements>
         <param>
           <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>s</declname>
+          <declname>source</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Breadth-first search</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/graph_theory.hpp" line="112" column="75" bodyfile="/home/ram/OmniTemplate/graph_theory.hpp" bodystart="112" bodyend="126"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt" line="158" column="13" bodyfile="docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt" bodystart="158" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="structbfs_1a2947bb4418be3551585773e397d35fe6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -39,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/graph_theory.hpp" line="112" column="1" bodyfile="/home/ram/OmniTemplate/graph_theory.hpp" bodystart="78" bodyend="79"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt" line="157" column="1" bodyfile="docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt" bodystart="115" bodyend="117"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -48,8 +46,8 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
-        <label>gsearch</label>
-        <link refid="structgsearch"/>
+        <label>graph_theory::gsearch</label>
+        <link refid="structgraph__theory_1_1gsearch"/>
       </node>
       <node id="1">
         <label>bfs</label>
@@ -59,44 +57,9 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7">
-        <label>T</label>
-      </node>
-      <node id="6">
-        <label>std::vector&lt; T &gt;</label>
-        <childnode refid="7" relation="usage">
-          <edgelabel>elements</edgelabel>
-        </childnode>
-      </node>
       <node id="2">
-        <label>gsearch</label>
-        <link refid="structgsearch"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>n</edgelabel>
-        </childnode>
-        <childnode refid="4" relation="usage">
-          <edgelabel>p</edgelabel>
-          <edgelabel>d</edgelabel>
-          <edgelabel>v</edgelabel>
-        </childnode>
-        <childnode refid="5" relation="usage">
-          <edgelabel>g</edgelabel>
-        </childnode>
-        <childnode refid="8" relation="usage">
-          <edgelabel>q</edgelabel>
-        </childnode>
-      </node>
-      <node id="4">
-        <label>std::vector&lt; ll &gt;</label>
-        <childnode refid="3" relation="usage">
-          <edgelabel>elements</edgelabel>
-        </childnode>
-      </node>
-      <node id="8">
-        <label>std::deque&lt; ll &gt;</label>
-        <childnode refid="3" relation="usage">
-          <edgelabel>elements</edgelabel>
-        </childnode>
+        <label>graph_theory::gsearch</label>
+        <link refid="structgraph__theory_1_1gsearch"/>
       </node>
       <node id="1">
         <label>bfs</label>
@@ -104,30 +67,21 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3">
-        <label>ll</label>
-        <link refid="structll"/>
-      </node>
-      <node id="5">
-        <label>std::vector&lt; vl &gt;</label>
-        <childnode refid="6" relation="usage">
-          <edgelabel>elements</edgelabel>
-        </childnode>
-      </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/graph_theory.hpp" line="112" column="28" bodyfile="/home/ram/OmniTemplate/graph_theory.hpp" bodystart="112" bodyend="127"/>
+    <location file="docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt" line="156" column="28" bodyfile="docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt" bodystart="156" bodyend="175"/>
     <listofallmembers>
-      <member refid="structgsearch_1af3e34f320b6bf7f9c57a2f2cad674747" prot="public" virt="non-virtual"><scope>bfs</scope><name>add</name></member>
-      <member refid="structgsearch_1a8a8798107a301730f224547b6fd01ef7" prot="public" virt="non-virtual"><scope>bfs</scope><name>d</name></member>
-      <member refid="structgsearch_1ab98eef9a7b11ac9c53d3414ee0e2ad00" prot="public" virt="non-virtual"><scope>bfs</scope><name>g</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a379377c6b0d12b33e583601f1ab7b77a" prot="public" virt="non-virtual"><scope>bfs</scope><name>add</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a379377c6b0d12b33e583601f1ab7b77a" prot="public" virt="non-virtual"><scope>bfs</scope><name>add</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a379377c6b0d12b33e583601f1ab7b77a" prot="public" virt="non-virtual"><scope>bfs</scope><name>add</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1ab7ebdbdcf3719adb06a8dbc6ae85f2ea" prot="public" virt="non-virtual"><scope>bfs</scope><name>distance</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a5380da2d5e9fe502ca553a22e2b8663f" prot="public" virt="non-virtual"><scope>bfs</scope><name>graph</name></member>
       <member refid="structbfs_1a2947bb4418be3551585773e397d35fe6" prot="public" virt="non-virtual"><scope>bfs</scope><name>gsearch</name></member>
-      <member refid="structgsearch_1a2947bb4418be3551585773e397d35fe6" prot="public" virt="non-virtual" ambiguityscope="gsearch::"><scope>bfs</scope><name>gsearch</name></member>
-      <member refid="structgsearch_1abf2c48fcc1e2bcea14720192fdb497df" prot="public" virt="non-virtual"><scope>bfs</scope><name>n</name></member>
-      <member refid="structbfs_1a7f0c781accd2af82a51e4e95b758617d" prot="public" virt="virtual"><scope>bfs</scope><name>operator()</name></member>
-      <member refid="structgsearch_1a92a8ded190aadad238efe11b5ac3edcc" prot="public" virt="non-virtual" ambiguityscope="gsearch::"><scope>bfs</scope><name>operator()</name></member>
-      <member refid="structgsearch_1afa8e0680350061b5f45d444dfd9cc05b" prot="public" virt="non-virtual"><scope>bfs</scope><name>p</name></member>
-      <member refid="structgsearch_1a7f93010b6f8e7026b2300a03c4232d6c" prot="public" virt="non-virtual"><scope>bfs</scope><name>q</name></member>
-      <member refid="structgsearch_1a1e83146a3e390b704f7b55409e7ad7bd" prot="public" virt="non-virtual"><scope>bfs</scope><name>v</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1ac63cf44b74fbcd2a036892655be4df33" prot="public" virt="non-virtual" ambiguityscope="graph_theory::gsearch::"><scope>bfs</scope><name>gsearch</name></member>
+      <member refid="structbfs_1a91dde462b4f747bf50247fc4cb962b55" prot="public" virt="virtual"><scope>bfs</scope><name>operator()</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a79bc289c42f43fab13401803e10b942c" prot="public" virt="non-virtual" ambiguityscope="graph_theory::gsearch::"><scope>bfs</scope><name>operator()</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1ad7a4e51587768074471eb18c90a99d04" prot="public" virt="non-virtual"><scope>bfs</scope><name>parent</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a626b133ab7e8f8fba270a9f241b9999f" prot="public" virt="non-virtual"><scope>bfs</scope><name>q</name></member>
+      <member refid="structgraph__theory_1_1gsearch_1a8d303bfbdcca298105f815e76be55ff9" prot="public" virt="non-virtual"><scope>bfs</scope><name>visited</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

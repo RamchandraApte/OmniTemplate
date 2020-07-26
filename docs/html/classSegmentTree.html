@@ -100,6 +100,8 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:a1737e3385e2a9842bb67546ff7960acd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> = conditional_t&lt; has_ptr, <a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *, <a class="el" href="structll.html">ll</a> &gt;</td></tr>
 <tr class="separator:a1737e3385e2a9842bb67546ff7960acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1737e3385e2a9842bb67546ff7960acd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> = conditional_t&lt; has_ptr, <a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *, <a class="el" href="structll.html">ll</a> &gt;</td></tr>
+<tr class="separator:a1737e3385e2a9842bb67546ff7960acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba544d564a42497c23bb83786c8530f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#afba544d564a42497c23bb83786c8530f">Node</a> = conditional_t&lt; has_ptr, <a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *, <a class="el" href="structSegmentTree_1_1NodeImp.html">NodeImp</a> &gt;</td></tr>
 <tr class="separator:afba544d564a42497c23bb83786c8530f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -107,6 +109,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adb7a7bf899bb690d84283257baa678c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#adb7a7bf899bb690d84283257baa678c4">SegmentTree</a> (const <a class="el" href="structll.html">ll</a> size_arg)</td></tr>
 <tr class="separator:adb7a7bf899bb690d84283257baa678c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11490d67106ccf45a9474bcdd09510db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a11490d67106ccf45a9474bcdd09510db">SegmentTree</a> (const vector&lt; T &gt; &amp;arr)</td></tr>
+<tr class="separator:a11490d67106ccf45a9474bcdd09510db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49a185b358936de0e027b42bb32017d4"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a49a185b358936de0e027b42bb32017d4">get_core</a> (<a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;obj)</td></tr>
 <tr class="separator:a49a185b358936de0e027b42bb32017d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5881ec5bcb5658a80ecca16660503cd"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#ac5881ec5bcb5658a80ecca16660503cd">get_core</a> (const <a class="el" href="structll.html">ll</a> idx)</td></tr>
@@ -115,6 +119,42 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1eba29efb9fb95e7559e4480f52838cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a251001698b3243d2adadc13c84b10458"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a251001698b3243d2adadc13c84b10458">get_child</a> (const <a class="el" href="structll.html">ll</a> idx, const <a class="el" href="structll.html">ll</a> i)</td></tr>
 <tr class="separator:a251001698b3243d2adadc13c84b10458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf84a3e42be8f05d4f6c1dacd0f8fc8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#adf84a3e42be8f05d4f6c1dacd0f8fc8c">build</a> (const vector&lt; T &gt; &amp;arr)</td></tr>
+<tr class="separator:adf84a3e42be8f05d4f6c1dacd0f8fc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabaaa7303a83cf52dc1a8def8abfe9f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#aabaaa7303a83cf52dc1a8def8abfe9f0">build</a> (const vector&lt; T &gt; &amp;arr, const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
+<tr class="separator:aabaaa7303a83cf52dc1a8def8abfe9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcb8374e3b27c774bb7554133353a4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a4fcb8374e3b27c774bb7554133353a4d">down</a> (const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
+<tr class="separator:a4fcb8374e3b27c774bb7554133353a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6c56bef599124548c2ed1c90d6e87e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#abc6c56bef599124548c2ed1c90d6e87e">query</a> (const <a class="el" href="structll.html">ll</a> l, const <a class="el" href="structll.html">ll</a> r, const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
+<tr class="separator:abc6c56bef599124548c2ed1c90d6e87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9282f29c2d91d1ef3989ea7384892b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a9f9282f29c2d91d1ef3989ea7384892b">query</a> (const <a class="el" href="structll.html">ll</a> l, const <a class="el" href="structll.html">ll</a> r, const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> custom_root)</td></tr>
+<tr class="separator:a9f9282f29c2d91d1ef3989ea7384892b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15af5893144423311e3c41a53de3d59e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a15af5893144423311e3c41a53de3d59e">query</a> (const <a class="el" href="structll.html">ll</a> l, const <a class="el" href="structll.html">ll</a> r)</td></tr>
+<tr class="separator:a15af5893144423311e3c41a53de3d59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e7570a50ddee7944c35de35d8924ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a00e7570a50ddee7944c35de35d8924ff">update</a> (const <a class="el" href="structll.html">ll</a> l, const <a class="el" href="structll.html">ll</a> r, const T val, <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
+<tr class="separator:a00e7570a50ddee7944c35de35d8924ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6565444d7616870fd1d4c36028ed0c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a6565444d7616870fd1d4c36028ed0c4d">update</a> (const <a class="el" href="structll.html">ll</a> l, const <a class="el" href="structll.html">ll</a> r, const T val)</td></tr>
+<tr class="separator:a6565444d7616870fd1d4c36028ed0c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa065cdae0467e72ec4862dbbb3b7b8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#aa065cdae0467e72ec4862dbbb3b7b8d3">destroy</a> (<a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> node)</td></tr>
+<tr class="separator:aa065cdae0467e72ec4862dbbb3b7b8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334b6dc9e4d6a407c04c89f4c9bca7cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a334b6dc9e4d6a407c04c89f4c9bca7cb">~SegmentTree</a> ()</td></tr>
+<tr class="separator:a334b6dc9e4d6a407c04c89f4c9bca7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7a7bf899bb690d84283257baa678c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#adb7a7bf899bb690d84283257baa678c4">SegmentTree</a> (const <a class="el" href="structll.html">ll</a> size_arg)</td></tr>
+<tr class="separator:adb7a7bf899bb690d84283257baa678c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11490d67106ccf45a9474bcdd09510db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a11490d67106ccf45a9474bcdd09510db">SegmentTree</a> (const vector&lt; T &gt; &amp;arr)</td></tr>
+<tr class="separator:a11490d67106ccf45a9474bcdd09510db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a185b358936de0e027b42bb32017d4"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a49a185b358936de0e027b42bb32017d4">get_core</a> (<a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;obj)</td></tr>
+<tr class="separator:a49a185b358936de0e027b42bb32017d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5881ec5bcb5658a80ecca16660503cd"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#ac5881ec5bcb5658a80ecca16660503cd">get_core</a> (const <a class="el" href="structll.html">ll</a> idx)</td></tr>
+<tr class="separator:ac5881ec5bcb5658a80ecca16660503cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eba29efb9fb95e7559e4480f52838cc"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a1eba29efb9fb95e7559e4480f52838cc">get_child</a> (<a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;obj, const <a class="el" href="structll.html">ll</a> i)</td></tr>
+<tr class="separator:a1eba29efb9fb95e7559e4480f52838cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251001698b3243d2adadc13c84b10458"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a251001698b3243d2adadc13c84b10458">get_child</a> (const <a class="el" href="structll.html">ll</a> idx, const <a class="el" href="structll.html">ll</a> i)</td></tr>
+<tr class="separator:a251001698b3243d2adadc13c84b10458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf84a3e42be8f05d4f6c1dacd0f8fc8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#adf84a3e42be8f05d4f6c1dacd0f8fc8c">build</a> (const vector&lt; T &gt; &amp;arr)</td></tr>
+<tr class="separator:adf84a3e42be8f05d4f6c1dacd0f8fc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabaaa7303a83cf52dc1a8def8abfe9f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#aabaaa7303a83cf52dc1a8def8abfe9f0">build</a> (const vector&lt; T &gt; &amp;arr, const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
+<tr class="separator:aabaaa7303a83cf52dc1a8def8abfe9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fcb8374e3b27c774bb7554133353a4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a4fcb8374e3b27c774bb7554133353a4d">down</a> (const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
 <tr class="separator:a4fcb8374e3b27c774bb7554133353a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6c56bef599124548c2ed1c90d6e87e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#abc6c56bef599124548c2ed1c90d6e87e">query</a> (const <a class="el" href="structll.html">ll</a> l, const <a class="el" href="structll.html">ll</a> r, const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> idx, const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r)</td></tr>
@@ -163,6 +203,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a60de928bef44ff17754a2a7c8c39f39d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a60de928bef44ff17754a2a7c8c39f39d">mid</a> (const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r, const <a class="el" href="structll.html">ll</a> i)</td></tr>
 <tr class="separator:a60de928bef44ff17754a2a7c8c39f39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60de928bef44ff17754a2a7c8c39f39d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentTree.html#a60de928bef44ff17754a2a7c8c39f39d">mid</a> (const <a class="el" href="structll.html">ll</a> node_l, const <a class="el" href="structll.html">ll</a> node_r, const <a class="el" href="structll.html">ll</a> i)</td></tr>
+<tr class="separator:a60de928bef44ff17754a2a7c8c39f39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt;<br />
@@ -182,7 +224,7 @@ class SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a1737e3385e2a9842bb67546ff7960acd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1737e3385e2a9842bb67546ff7960acd">&#9670;&nbsp;</a></span>Node <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1737e3385e2a9842bb67546ff7960acd">&#9670;&nbsp;</a></span>Node <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +240,7 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="afba544d564a42497c23bb83786c8530f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afba544d564a42497c23bb83786c8530f">&#9670;&nbsp;</a></span>Node <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afba544d564a42497c23bb83786c8530f">&#9670;&nbsp;</a></span>Node <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,9 +255,25 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 
 </div>
 </div>
+<a id="a1737e3385e2a9842bb67546ff7960acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1737e3385e2a9842bb67546ff7960acd">&#9670;&nbsp;</a></span>Node <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::<a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> =  conditional_t&lt;has_ptr, <a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *, <a class="el" href="structll.html">ll</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adb7a7bf899bb690d84283257baa678c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb7a7bf899bb690d84283257baa678c4">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7a7bf899bb690d84283257baa678c4">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,8 +300,124 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 
 </div>
 </div>
+<a id="a11490d67106ccf45a9474bcdd09510db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11490d67106ccf45a9474bcdd09510db">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::<a class="el" href="classSegmentTree.html">SegmentTree</a> </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a334b6dc9e4d6a407c04c89f4c9bca7cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a334b6dc9e4d6a407c04c89f4c9bca7cb">&#9670;&nbsp;</a></span>~SegmentTree()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a334b6dc9e4d6a407c04c89f4c9bca7cb">&#9670;&nbsp;</a></span>~SegmentTree() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::~<a class="el" href="classSegmentTree.html">SegmentTree</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb7a7bf899bb690d84283257baa678c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7a7bf899bb690d84283257baa678c4">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::<a class="el" href="classSegmentTree.html">SegmentTree</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>size_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11490d67106ccf45a9474bcdd09510db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11490d67106ccf45a9474bcdd09510db">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::<a class="el" href="classSegmentTree.html">SegmentTree</a> </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a11490d67106ccf45a9474bcdd09510db_cgraph.svg" width="406" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a334b6dc9e4d6a407c04c89f4c9bca7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334b6dc9e4d6a407c04c89f4c9bca7cb">&#9670;&nbsp;</a></span>~SegmentTree() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,13 +444,13 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a334b6dc9e4d6a407c04c89f4c9bca7cb_cgraph.svg" width="656" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a334b6dc9e4d6a407c04c89f4c9bca7cb_cgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
 <a id="adb7a7bf899bb690d84283257baa678c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb7a7bf899bb690d84283257baa678c4">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7a7bf899bb690d84283257baa678c4">&#9670;&nbsp;</a></span>SegmentTree() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,8 +478,191 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="adf84a3e42be8f05d4f6c1dacd0f8fc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf84a3e42be8f05d4f6c1dacd0f8fc8c">&#9670;&nbsp;</a></span>build() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_adf84a3e42be8f05d4f6c1dacd0f8fc8c_cgraph.svg" width="158" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_adf84a3e42be8f05d4f6c1dacd0f8fc8c_icgraph.svg" width="406" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adf84a3e42be8f05d4f6c1dacd0f8fc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf84a3e42be8f05d4f6c1dacd0f8fc8c">&#9670;&nbsp;</a></span>build() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_adf84a3e42be8f05d4f6c1dacd0f8fc8c_icgraph.svg" width="406" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aabaaa7303a83cf52dc1a8def8abfe9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabaaa7303a83cf52dc1a8def8abfe9f0">&#9670;&nbsp;</a></span>build() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aabaaa7303a83cf52dc1a8def8abfe9f0_cgraph.svg" width="278" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aabaaa7303a83cf52dc1a8def8abfe9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabaaa7303a83cf52dc1a8def8abfe9f0">&#9670;&nbsp;</a></span>build() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aabaaa7303a83cf52dc1a8def8abfe9f0_cgraph.svg" width="278" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="aa065cdae0467e72ec4862dbbb3b7b8d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa065cdae0467e72ec4862dbbb3b7b8d3">&#9670;&nbsp;</a></span>destroy()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa065cdae0467e72ec4862dbbb3b7b8d3">&#9670;&nbsp;</a></span>destroy() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,18 +690,97 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3_cgraph.svg" width="398" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3_cgraph.svg" width="398" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="aa065cdae0467e72ec4862dbbb3b7b8d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa065cdae0467e72ec4862dbbb3b7b8d3">&#9670;&nbsp;</a></span>destroy() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3_icgraph.svg" width="434" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aa065cdae0467e72ec4862dbbb3b7b8d3_icgraph.svg" width="434" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
 <a id="a4fcb8374e3b27c774bb7554133353a4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fcb8374e3b27c774bb7554133353a4d">&#9670;&nbsp;</a></span>down() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcb8374e3b27c774bb7554133353a4d">&#9670;&nbsp;</a></span>down() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::down </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Push lazy update down</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph.svg" width="282" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4fcb8374e3b27c774bb7554133353a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcb8374e3b27c774bb7554133353a4d">&#9670;&nbsp;</a></span>down() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,18 +825,14 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph.svg" width="384" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph.svg" width="282" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <a id="a4fcb8374e3b27c774bb7554133353a4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fcb8374e3b27c774bb7554133353a4d">&#9670;&nbsp;</a></span>down() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcb8374e3b27c774bb7554133353a4d">&#9670;&nbsp;</a></span>down() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,17 +872,59 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Push lazy update down</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph.svg" width="384" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_cgraph.svg" width="282" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a4fcb8374e3b27c774bb7554133353a4d_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <a id="a251001698b3243d2adadc13c84b10458"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a251001698b3243d2adadc13c84b10458">&#9670;&nbsp;</a></span>get_child() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a251001698b3243d2adadc13c84b10458">&#9670;&nbsp;</a></span>get_child() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a251001698b3243d2adadc13c84b10458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251001698b3243d2adadc13c84b10458">&#9670;&nbsp;</a></span>get_child() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -488,7 +962,7 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="a5d94f182b8dce5dc8e76ec30e73f8ce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d94f182b8dce5dc8e76ec30e73f8ce7">&#9670;&nbsp;</a></span>get_child() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d94f182b8dce5dc8e76ec30e73f8ce7">&#9670;&nbsp;</a></span>get_child() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,7 +1000,83 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="a1eba29efb9fb95e7559e4480f52838cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1eba29efb9fb95e7559e4480f52838cc">&#9670;&nbsp;</a></span>get_child() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eba29efb9fb95e7559e4480f52838cc">&#9670;&nbsp;</a></span>get_child() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1eba29efb9fb95e7559e4480f52838cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eba29efb9fb95e7559e4480f52838cc">&#9670;&nbsp;</a></span>get_child() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1eba29efb9fb95e7559e4480f52838cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eba29efb9fb95e7559e4480f52838cc">&#9670;&nbsp;</a></span>get_child() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -563,13 +1113,13 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc_icgraph.svg" width="100%" height="508"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a1eba29efb9fb95e7559e4480f52838cc_icgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a1eba29efb9fb95e7559e4480f52838cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1eba29efb9fb95e7559e4480f52838cc">&#9670;&nbsp;</a></span>get_child() <span class="overload">[4/4]</span></h2>
+<a id="ac5881ec5bcb5658a80ecca16660503cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5881ec5bcb5658a80ecca16660503cd">&#9670;&nbsp;</a></span>get_core() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -580,21 +1130,11 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child </td>
+          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>i</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>idx</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -607,7 +1147,7 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="ac5881ec5bcb5658a80ecca16660503cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5881ec5bcb5658a80ecca16660503cd">&#9670;&nbsp;</a></span>get_core() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5881ec5bcb5658a80ecca16660503cd">&#9670;&nbsp;</a></span>get_core() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -635,7 +1175,7 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="afa035757c1304cbb912560c2e7a5658c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa035757c1304cbb912560c2e7a5658c">&#9670;&nbsp;</a></span>get_core() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afa035757c1304cbb912560c2e7a5658c">&#9670;&nbsp;</a></span>get_core() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,7 +1203,63 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="a49a185b358936de0e027b42bb32017d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49a185b358936de0e027b42bb32017d4">&#9670;&nbsp;</a></span>get_core() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a185b358936de0e027b42bb32017d4">&#9670;&nbsp;</a></span>get_core() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49a185b358936de0e027b42bb32017d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a185b358936de0e027b42bb32017d4">&#9670;&nbsp;</a></span>get_core() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49a185b358936de0e027b42bb32017d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a185b358936de0e027b42bb32017d4">&#9670;&nbsp;</a></span>get_core() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -690,13 +1286,13 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a49a185b358936de0e027b42bb32017d4_icgraph.svg" width="100%" height="465"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a49a185b358936de0e027b42bb32017d4_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a49a185b358936de0e027b42bb32017d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49a185b358936de0e027b42bb32017d4">&#9670;&nbsp;</a></span>get_core() <span class="overload">[4/4]</span></h2>
+<a id="a60de928bef44ff17754a2a7c8c39f39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60de928bef44ff17754a2a7c8c39f39d">&#9670;&nbsp;</a></span>mid() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -707,16 +1303,32 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto&amp; <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core </td>
+          <td class="memname">static <a class="el" href="structll.html">ll</a> <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::mid </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structSegmentTree_1_1NodeExp.html">NodeExp</a> *const &amp;&#160;</td>
-          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -724,7 +1336,7 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 </div>
 </div>
 <a id="a60de928bef44ff17754a2a7c8c39f39d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60de928bef44ff17754a2a7c8c39f39d">&#9670;&nbsp;</a></span>mid()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a60de928bef44ff17754a2a7c8c39f39d">&#9670;&nbsp;</a></span>mid() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,13 +1379,13 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a60de928bef44ff17754a2a7c8c39f39d_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <a id="a54816e3b51b87889fc2038329fed254b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54816e3b51b87889fc2038329fed254b">&#9670;&nbsp;</a></span>query() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a54816e3b51b87889fc2038329fed254b">&#9670;&nbsp;</a></span>query() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -802,13 +1414,61 @@ template&lt;typename... Bounds&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a54816e3b51b87889fc2038329fed254b_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a54816e3b51b87889fc2038329fed254b_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <a id="a15af5893144423311e3c41a53de3d59e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15af5893144423311e3c41a53de3d59e">&#9670;&nbsp;</a></span>query() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a15af5893144423311e3c41a53de3d59e">&#9670;&nbsp;</a></span>query() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a15af5893144423311e3c41a53de3d59e_cgraph.svg" width="163" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a15af5893144423311e3c41a53de3d59e_icgraph.svg" width="163" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a15af5893144423311e3c41a53de3d59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15af5893144423311e3c41a53de3d59e">&#9670;&nbsp;</a></span>query() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -856,7 +1516,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a9f9282f29c2d91d1ef3989ea7384892b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f9282f29c2d91d1ef3989ea7384892b">&#9670;&nbsp;</a></span>query() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9282f29c2d91d1ef3989ea7384892b">&#9670;&nbsp;</a></span>query() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -899,13 +1559,57 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a9f9282f29c2d91d1ef3989ea7384892b_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a9f9282f29c2d91d1ef3989ea7384892b_cgraph.svg" width="483" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
+<a id="a9f9282f29c2d91d1ef3989ea7384892b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9282f29c2d91d1ef3989ea7384892b">&#9670;&nbsp;</a></span>query() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>custom_root</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abc6c56bef599124548c2ed1c90d6e87e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc6c56bef599124548c2ed1c90d6e87e">&#9670;&nbsp;</a></span>query() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6c56bef599124548c2ed1c90d6e87e">&#9670;&nbsp;</a></span>query() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -961,12 +1665,74 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_cgraph.svg" width="584" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_cgraph.svg" width="283" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abc6c56bef599124548c2ed1c90d6e87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6c56bef599124548c2ed1c90d6e87e">&#9670;&nbsp;</a></span>query() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_cgraph.svg" width="283" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_icgraph.svg" width="363" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_abc6c56bef599124548c2ed1c90d6e87e_icgraph.svg" width="163" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1030,7 +1796,7 @@ template&lt;typename... Bounds&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a691d643b2872c8d23c062cc050341983_cgraph.svg" width="620" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a691d643b2872c8d23c062cc050341983_cgraph.svg" width="542" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1080,7 +1846,7 @@ template&lt;typename... Bounds&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a801baf5cdb91eda5d2c01c39e3953a31_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1091,7 +1857,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a6565444d7616870fd1d4c36028ed0c4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6565444d7616870fd1d4c36028ed0c4d">&#9670;&nbsp;</a></span>update() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6565444d7616870fd1d4c36028ed0c4d">&#9670;&nbsp;</a></span>update() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1134,13 +1900,57 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a6565444d7616870fd1d4c36028ed0c4d_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a6565444d7616870fd1d4c36028ed0c4d_cgraph.svg" width="499" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
+<a id="a6565444d7616870fd1d4c36028ed0c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6565444d7616870fd1d4c36028ed0c4d">&#9670;&nbsp;</a></span>update() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a00e7570a50ddee7944c35de35d8924ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00e7570a50ddee7944c35de35d8924ff">&#9670;&nbsp;</a></span>update() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e7570a50ddee7944c35de35d8924ff">&#9670;&nbsp;</a></span>update() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1202,18 +2012,86 @@ template&lt;typename T , typename Query , typename Update , bool has_lazy = true
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_cgraph.svg" width="592" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_cgraph.svg" width="291" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a00e7570a50ddee7944c35de35d8924ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e7570a50ddee7944c35de35d8924ff">&#9670;&nbsp;</a></span>update() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Query , typename Update , bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a> <a class="el" href="classSegmentTree.html">SegmentTree</a>&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSegmentTree.html#a1737e3385e2a9842bb67546ff7960acd">Node</a>&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>node_r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_cgraph.svg" width="291" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_icgraph.svg" width="379" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a00e7570a50ddee7944c35de35d8924ff_icgraph.svg" width="171" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
 <a id="aef5bdc8818b9c0da150ad1f4d6d87360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef5bdc8818b9c0da150ad1f4d6d87360">&#9670;&nbsp;</a></span>update() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5bdc8818b9c0da150ad1f4d6d87360">&#9670;&nbsp;</a></span>update() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1252,7 +2130,7 @@ template&lt;typename... Bounds&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aef5bdc8818b9c0da150ad1f4d6d87360_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classSegmentTree_aef5bdc8818b9c0da150ad1f4d6d87360_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1322,7 +2200,7 @@ template&lt;typename... Bounds&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9_cgraph.svg" width="628" height="164"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classSegmentTree_a89a183ae20045f72d80ef9ca1627d3b9_cgraph.svg" width="550" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1333,6 +2211,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/ram/OmniTemplate/<a class="el" href="e__compiled_8cpp.html">e_compiled.cpp</a></li>
 <li>/home/ram/OmniTemplate/<a class="el" href="segment__tree_8hpp_source.html">segment_tree.hpp</a></li>
 <li>/home/ram/OmniTemplate/<a class="el" href="segment__tree__multi_8hpp_source.html">segment_tree_multi.hpp</a></li>
 </ul>

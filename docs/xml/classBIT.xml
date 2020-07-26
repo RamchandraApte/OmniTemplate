@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classBIT" kind="class" language="C++" prot="public">
+    <compoundname>BIT</compoundname>
+    <includes refid="bit_8hpp" local="no">bit.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename Value</type>
+      </param>
+      <param>
+        <type>typename MonoidOp</type>
+        <defval>plus&lt;&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBIT_1a9d071c0f10d6aa215511828b7099806b" prot="private" static="no" mutable="no">
+        <type>vector&lt; Value &gt;</type>
+        <definition>vector&lt;Value&gt; BIT&lt; Value, MonoidOp &gt;::arr</definition>
+        <argsstring></argsstring>
+        <name>arr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The array storing the <ref refid="classBIT" kindref="compound">BIT</ref>&apos;s internal values. Each element of this represents a range of elements. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bit.hpp" line="12" column="8" bodyfile="bit.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" prot="private" static="no" mutable="no">
+        <type>MonoidOp</type>
+        <definition>MonoidOp BIT&lt; Value, MonoidOp &gt;::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>The monoid operation functor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bit.hpp" line="13" column="10" bodyfile="bit.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBIT_1a6408bcee08d49c8ab90ac83bdba0f2f1" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BIT&lt; Value, MonoidOp &gt;::BIT</definition>
+        <argsstring>(const ll size_arg)</argsstring>
+        <name>BIT</name>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>size_arg</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classBIT" kindref="compound">BIT</ref> of size size_arg. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bit.hpp" line="16" column="10" bodyfile="bit.hpp" bodystart="16" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classBIT_1a495d58c744095867ad69123897c60700" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Value</type>
+        <definition>Value BIT&lt; Value, MonoidOp &gt;::query</definition>
+        <argsstring>(ll r) const</argsstring>
+        <name>query</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns sum of Monoid over elements in [0, r)</para>
+        </inbodydescription>
+        <location file="bit.hpp" line="18" column="7" bodyfile="bit.hpp" bodystart="18" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classBIT_1a20ea8eb0ea2065179c756ec96417227f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BIT&lt; Value, MonoidOp &gt;::update</definition>
+        <argsstring>(ll idx, const Value value)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>const Value</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Update the value at idx by value. Note that this does <emphasis>not</emphasis> set the value to value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the index of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value the element will be updated by </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bit.hpp" line="31" column="6" bodyfile="bit.hpp" bodystart="31" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classBIT_1afaa408fe21402732f980204b6211425d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>static ll BIT&lt; Value, MonoidOp &gt;::get_len</definition>
+        <argsstring>(const ll idx)</argsstring>
+        <name>get_len</name>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns the length of the range of elements idx is responsible for</para>
+        </inbodydescription>
+        <location file="bit.hpp" line="38" column="11" bodyfile="bit.hpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Binary indexed tree (also called Fenwick tree) </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the type of the value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>MonoidOp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a Monoid operating on the Value type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="bit.hpp" line="9" column="26" bodyfile="bit.hpp" bodystart="9" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" prot="private" virt="non-virtual"><scope>BIT</scope><name>arr</name></member>
+      <member refid="classBIT_1a6408bcee08d49c8ab90ac83bdba0f2f1" prot="public" virt="non-virtual"><scope>BIT</scope><name>BIT</name></member>
+      <member refid="classBIT_1afaa408fe21402732f980204b6211425d" prot="private" virt="non-virtual"><scope>BIT</scope><name>get_len</name></member>
+      <member refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" prot="private" virt="non-virtual"><scope>BIT</scope><name>op</name></member>
+      <member refid="classBIT_1a495d58c744095867ad69123897c60700" prot="public" virt="non-virtual"><scope>BIT</scope><name>query</name></member>
+      <member refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" prot="public" virt="non-virtual"><scope>BIT</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

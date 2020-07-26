@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['combinatorics_570',['combinatorics',['../namespacecombinatorics.html',1,'']]]
+  ['combinatorics_593',['combinatorics',['../namespacecombinatorics.html',1,'']]]
 ];

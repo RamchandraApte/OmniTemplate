@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsplay__tree_1_1SplayNode" kind="struct" language="C++" prot="public">
+    <compoundname>splay_tree::SplayNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">conditional_t&lt; false, PathParent&lt; SplayNode&lt; T, false &gt; &gt;, Empty &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>has_link_cut</declname>
+        <defname>has_link_cut</defname>
+        <defval>false</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T splay_tree::SplayNode&lt; T, has_link_cut &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Value associated with node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="14" column="3" bodyfile="splay_tree.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" prot="public" static="no" mutable="no">
+        <type>array&lt; <ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref> *, 2 &gt;</type>
+        <definition>array&lt;SplayNode *, 2&gt; splay_tree::SplayNode&lt; T, has_link_cut &gt;::child</definition>
+        <argsstring></argsstring>
+        <name>child</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Left and right children. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="15" column="7" bodyfile="splay_tree.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" prot="public" static="no" mutable="no">
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref> *</type>
+        <definition>SplayNode* splay_tree::SplayNode&lt; T, has_link_cut &gt;::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Pointer to parent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="16" column="11" bodyfile="splay_tree.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a8fd96533069082b51ae1a58346c08f94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>splay_tree::SplayNode&lt; T, has_link_cut &gt;::SplayNode</definition>
+        <argsstring>()</argsstring>
+        <name>SplayNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="12" column="1" bodyfile="splay_tree.hpp" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a6f8ea4b8bc92264b47e93ce969e53d54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>splay_tree::SplayNode&lt; T, has_link_cut &gt;::SplayNode</definition>
+        <argsstring>(T value_arg)</argsstring>
+        <name>SplayNode</name>
+        <param>
+          <type>T</type>
+          <declname>value_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="13" column="1" bodyfile="splay_tree.hpp" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool splay_tree::SplayNode&lt; T, has_link_cut &gt;::side</definition>
+        <argsstring>() const</argsstring>
+        <name>side</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns true if child is on the right, and false otherwise</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="17" column="6" bodyfile="splay_tree.hpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayNode&lt; T, has_link_cut &gt;::rotate</definition>
+        <argsstring>()</argsstring>
+        <name>rotate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Rotate node x around its parent</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="21" column="6" bodyfile="splay_tree.hpp" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayNode&lt; T, has_link_cut &gt;::splay</definition>
+        <argsstring>()</argsstring>
+        <name>splay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Splay node x. x will become the root of the tree</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="35" column="6" bodyfile="splay_tree.hpp" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a82d47b54b62b9e59f594af8db601fc05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>array&lt; <ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref> *, 2 &gt;</type>
+        <definition>array&lt;SplayNode *, 2&gt; splay_tree::SplayNode&lt; T, has_link_cut &gt;::split</definition>
+        <argsstring>()</argsstring>
+        <name>split</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="43" column="7" bodyfile="splay_tree.hpp" bodystart="43" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayNode&lt; T, has_link_cut &gt;::attach</definition>
+        <argsstring>(bool side, SplayNode *const new_)</argsstring>
+        <name>attach</name>
+        <param>
+          <type>bool</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref> *const</type>
+          <declname>new_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Attach node new_ as the node&apos;s side children</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="53" column="6" bodyfile="splay_tree.hpp" bodystart="53" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>conditional_t&lt; false, PathParent&lt; SplayNode&lt; T, false &gt; &gt;, Empty &gt;</label>
+      </node>
+      <node id="1">
+        <label>splay_tree::SplayNode&lt; T, has_link_cut &gt;</label>
+        <link refid="structsplay__tree_1_1SplayNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>conditional_t&lt; false, PathParent&lt; SplayNode&lt; T, false &gt; &gt;, Empty &gt;</label>
+      </node>
+      <node id="1">
+        <label>splay_tree::SplayNode&lt; T, has_link_cut &gt;</label>
+        <link refid="structsplay__tree_1_1SplayNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="splay_tree.hpp" line="10" column="42" bodyfile="splay_tree.hpp" bodystart="10" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>attach</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>child</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>parent</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>rotate</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>side</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>splay</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a8fd96533069082b51ae1a58346c08f94" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>SplayNode</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a6f8ea4b8bc92264b47e93ce969e53d54" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>SplayNode</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1a82d47b54b62b9e59f594af8db601fc05" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>split</name></member>
+      <member refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" prot="public" virt="non-virtual"><scope>splay_tree::SplayNode</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

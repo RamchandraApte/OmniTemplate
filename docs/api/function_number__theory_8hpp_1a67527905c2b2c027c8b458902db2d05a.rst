@@ -1,0 +1,13 @@
+.. _exhale_function_number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a:
+
+Function dlog(const modulo, const modulo)
+=========================================
+
+- Defined in :ref:`file_number_theory.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: dlog(const modulo, const modulo)

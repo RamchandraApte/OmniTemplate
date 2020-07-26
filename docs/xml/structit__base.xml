@@ -3,8 +3,8 @@
   <compounddef id="structit__base" kind="struct" language="C++" prot="public">
     <compoundname>it_base</compoundname>
     <derivedcompoundref refid="structint__it" prot="public" virt="non-virtual">int_it&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structsplay__tree_1_1SplayTree_1_1iterator" prot="public" virt="non-virtual">splay_tree::SplayTree&lt; T &gt;::iterator</derivedcompoundref>
     <derivedcompoundref refid="structSplayTree_1_1iterator" prot="public" virt="non-virtual">SplayTree&lt; T &gt;::iterator</derivedcompoundref>
-    <includes refid="range_8hpp" local="no">range.hpp</includes>
     <templateparamlist>
       <param>
         <type>typename T</type>
@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/range.hpp" line="4" column="1" bodyfile="/home/ram/OmniTemplate/range.hpp" bodystart="4" bodyend="-1"/>
+        <location file="d_compiled.cpp" line="79" column="2" bodyfile="d_compiled.cpp" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" static="no">
         <type>T *</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/range.hpp" line="5" column="1" bodyfile="/home/ram/OmniTemplate/range.hpp" bodystart="5" bodyend="-1"/>
+        <location file="d_compiled.cpp" line="80" column="2" bodyfile="d_compiled.cpp" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" static="no">
         <type>T &amp;</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/range.hpp" line="6" column="1" bodyfile="/home/ram/OmniTemplate/range.hpp" bodystart="6" bodyend="-1"/>
+        <location file="d_compiled.cpp" line="81" column="2" bodyfile="d_compiled.cpp" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" static="no">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -61,7 +61,215 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/range.hpp" line="7" column="1" bodyfile="/home/ram/OmniTemplate/range.hpp" bodystart="7" bodyend="-1"/>
+        <location file="d_compiled.cpp" line="82" column="2" bodyfile="d_compiled.cpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" static="no">
+        <type>T</type>
+        <definition>using it_base&lt; T &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" line="91" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" static="no">
+        <type>T *</type>
+        <definition>using it_base&lt; T &gt;::pointer =  T *</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" line="92" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" static="no">
+        <type>T &amp;</type>
+        <definition>using it_base&lt; T &gt;::reference =  T &amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" line="93" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" static="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>using it_base&lt; T &gt;::difference_type =  ll</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" line="94" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_d_compiled.cpp.rst.txt" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" static="no">
+        <type>T</type>
+        <definition>using it_base&lt; T &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" line="91" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" static="no">
+        <type>T *</type>
+        <definition>using it_base&lt; T &gt;::pointer =  T *</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" line="92" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" static="no">
+        <type>T &amp;</type>
+        <definition>using it_base&lt; T &gt;::reference =  T &amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" line="93" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" static="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>using it_base&lt; T &gt;::difference_type =  ll</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" line="94" column="5" bodyfile="docs/_build/html/_sources/api/program_listing_file_e_compiled.cpp.rst.txt" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" static="no">
+        <type>T</type>
+        <definition>using it_base&lt; T &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="e_compiled.cpp" line="79" column="2" bodyfile="e_compiled.cpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" static="no">
+        <type>T *</type>
+        <definition>using it_base&lt; T &gt;::pointer =  T *</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="e_compiled.cpp" line="80" column="2" bodyfile="e_compiled.cpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" static="no">
+        <type>T &amp;</type>
+        <definition>using it_base&lt; T &gt;::reference =  T &amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="e_compiled.cpp" line="81" column="2" bodyfile="e_compiled.cpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" static="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>using it_base&lt; T &gt;::difference_type =  ll</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="e_compiled.cpp" line="82" column="2" bodyfile="e_compiled.cpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" static="no">
+        <type>T</type>
+        <definition>using it_base&lt; T &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="range.hpp" line="4" column="1" bodyfile="range.hpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" static="no">
+        <type>T *</type>
+        <definition>using it_base&lt; T &gt;::pointer =  T *</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="range.hpp" line="5" column="1" bodyfile="range.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" static="no">
+        <type>T &amp;</type>
+        <definition>using it_base&lt; T &gt;::reference =  T &amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="range.hpp" line="6" column="1" bodyfile="range.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" static="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>using it_base&lt; T &gt;::difference_type =  ll</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="range.hpp" line="7" column="1" bodyfile="range.hpp" bodystart="7" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -79,18 +287,40 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>SplayTree&lt; T &gt;::iterator</label>
         <link refid="structSplayTree_1_1iterator"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="3">
+        <label>splay_tree::SplayTree&lt; T &gt;::iterator</label>
+        <link refid="structsplay__tree_1_1SplayTree_1_1iterator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
-    <location file="/home/ram/OmniTemplate/range.hpp" line="3" column="29" bodyfile="/home/ram/OmniTemplate/range.hpp" bodystart="3" bodyend="8"/>
+    <location file="d_compiled.cpp" line="78" column="26" bodyfile="d_compiled.cpp" bodystart="78" bodyend="83"/>
     <listofallmembers>
       <member refid="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" virt="non-virtual"><scope>it_base</scope><name>difference_type</name></member>
+      <member refid="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" virt="non-virtual"><scope>it_base</scope><name>difference_type</name></member>
+      <member refid="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" virt="non-virtual"><scope>it_base</scope><name>difference_type</name></member>
+      <member refid="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" virt="non-virtual"><scope>it_base</scope><name>difference_type</name></member>
+      <member refid="structit__base_1a2f441c3115c3b785aedc6816276d7511" prot="public" virt="non-virtual"><scope>it_base</scope><name>difference_type</name></member>
+      <member refid="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" virt="non-virtual"><scope>it_base</scope><name>pointer</name></member>
+      <member refid="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" virt="non-virtual"><scope>it_base</scope><name>pointer</name></member>
+      <member refid="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" virt="non-virtual"><scope>it_base</scope><name>pointer</name></member>
+      <member refid="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" virt="non-virtual"><scope>it_base</scope><name>pointer</name></member>
       <member refid="structit__base_1aff4e3754839c1106ced2e57a47d44425" prot="public" virt="non-virtual"><scope>it_base</scope><name>pointer</name></member>
       <member refid="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" virt="non-virtual"><scope>it_base</scope><name>reference</name></member>
+      <member refid="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" virt="non-virtual"><scope>it_base</scope><name>reference</name></member>
+      <member refid="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" virt="non-virtual"><scope>it_base</scope><name>reference</name></member>
+      <member refid="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" virt="non-virtual"><scope>it_base</scope><name>reference</name></member>
+      <member refid="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" prot="public" virt="non-virtual"><scope>it_base</scope><name>reference</name></member>
+      <member refid="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" virt="non-virtual"><scope>it_base</scope><name>value_type</name></member>
+      <member refid="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" virt="non-virtual"><scope>it_base</scope><name>value_type</name></member>
+      <member refid="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" virt="non-virtual"><scope>it_base</scope><name>value_type</name></member>
+      <member refid="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" virt="non-virtual"><scope>it_base</scope><name>value_type</name></member>
       <member refid="structit__base_1a750730b3baf6464b16f1483c656f5dce" prot="public" virt="non-virtual"><scope>it_base</scope><name>value_type</name></member>
     </listofallmembers>
   </compounddef>

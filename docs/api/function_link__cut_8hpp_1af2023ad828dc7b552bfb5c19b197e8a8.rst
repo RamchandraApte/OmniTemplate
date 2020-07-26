@@ -1,0 +1,13 @@
+.. _exhale_function_link__cut_8hpp_1af2023ad828dc7b552bfb5c19b197e8a8:
+
+Function find_root(Node \*)
+===========================
+
+- Defined in :ref:`file_link_cut.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: find_root(Node *)

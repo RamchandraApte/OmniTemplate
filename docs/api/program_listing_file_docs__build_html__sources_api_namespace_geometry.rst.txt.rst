@@ -1,0 +1,65 @@
+
+.. _program_listing_file_docs__build_html__sources_api_namespace_geometry.rst.txt:
+
+Program Listing for File namespace_geometry.rst.txt
+===================================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_docs__build_html__sources_api_namespace_geometry.rst.txt>` (``docs/_build/html/_sources/api/namespace_geometry.rst.txt``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   .. _namespace_geometry:
+   
+   Namespace geometry
+   ==================
+   
+   
+   .. contents:: Contents
+      :local:
+      :backlinks: none
+   
+   
+   
+   
+   
+   Classes
+   -------
+   
+   
+   - :ref:`exhale_struct_structgeometry_1_1cht`
+   
+   
+   Functions
+   ---------
+   
+   
+   - :ref:`exhale_function_geometry_8hpp_1ab8556a4c9ecf62f348ba9d0635bf8cb3`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a5f1383116499536e16ded93d8a011900`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a8143f89812fca762e08ba1a5d984c46b`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a307816ea40ce680d3c4eb34968b52520`
+   
+   - :ref:`exhale_function_geometry_8hpp_1acdc6602c58d77b560832434cc2e25b89`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a18ead2a577ff9e1f661e55515285809b`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a403f2d9011246963c0e4b7a2101c5ec0`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a9ac8131722d15a1da83d0065f1093f1e`
+   
+   - :ref:`exhale_function_geometry_8hpp_1afaf01b71e2401cde2a17f7de0c7589f4`
+   
+   - :ref:`exhale_function_geometry_8hpp_1aad3419586eb6065d81469c30417d5530`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a27118bb54df18fa8cdda0a971ad58027`
+   
+   - :ref:`exhale_function_geometry_8hpp_1a6f5b94d51a13ddc8282f8ef617de73bb`
+   
+   - :ref:`exhale_function_geometry_8hpp_1af24e139ee1704a4aa6452a7fec700995`
+   
+   - :ref:`exhale_function_geometry_8hpp_1aabae68a797dfbc044ca0ed89cc6cc1af`

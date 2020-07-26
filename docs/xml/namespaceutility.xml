@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceutility" kind="namespace" language="C++">
+    <compoundname>utility</compoundname>
+    <innerclass refid="structutility_1_1ar" prot="public">utility::ar</innerclass>
+    <innerclass refid="structutility_1_1ar_3_01T_0fn_0e_4" prot="public">utility::ar&lt; T[n]&gt;</innerclass>
+    <innerclass refid="structutility_1_1Empty" prot="public">utility::Empty</innerclass>
+    <innerclass refid="structutility_1_1fix" prot="public">utility::fix</innerclass>
+    <innerclass refid="structutility_1_1random__device__patch" prot="public">utility::random_device_patch</innerclass>
+    <innerclass refid="structutility_1_1with" prot="public">utility::with</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d__compiled_8cpp_1a5527c46ab55c32f4bdf48a47564e3cf0" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structutility_1_1ar" kindref="compound">ar</ref>&lt; T &gt;::type</type>
+        <definition>using utility::ar_t = typedef typename ar&lt;T&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>ar_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="543" column="13" bodyfile="d_compiled.cpp" bodystart="543" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d__compiled_8cpp_1afaacd9ae54757a29e4d3e5381d8cfcdf" prot="public" static="no">
+        <type><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref></type>
+        <definition>typedef random_device_patch utility::random_device</definition>
+        <argsstring></argsstring>
+        <name>random_device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="559" column="1" bodyfile="d_compiled.cpp" bodystart="559" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d__compiled_8cpp_1a7fea553f6f915aa6c2affe79637d9b9f" prot="public" static="no" mutable="no">
+        <type>default_random_engine</type>
+        <definition>default_random_engine utility::reng</definition>
+        <argsstring></argsstring>
+        <name>reng</name>
+        <initializer>{<ref refid="structutility_1_1random__device__patch" kindref="compound">random_device</ref>{}()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="561" column="23" bodyfile="d_compiled.cpp" bodystart="561" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d__compiled_8cpp_1a2f611269d39535446ae5f89e3de27d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_with</definition>
+        <argsstring>()</argsstring>
+        <name>test_with</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="416" column="6" bodyfile="d_compiled.cpp" bodystart="416" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a1507417750abfb917c914c44e07ed713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::max_eq</definition>
+        <argsstring>(T &amp;x, const T &amp;y)</argsstring>
+        <name>max_eq</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="434" column="18" bodyfile="d_compiled.cpp" bodystart="434" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1ae423116f6315d5e998219f27f1f8c401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::min_eq</definition>
+        <argsstring>(T &amp;x, const T &amp;y)</argsstring>
+        <name>min_eq</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="435" column="18" bodyfile="d_compiled.cpp" bodystart="435" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a6e069fcf8b422fbc525eba2543e36a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::cache</definition>
+        <argsstring>(const T &amp;f)</argsstring>
+        <name>cache</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Cache calls to f using a map of type T</para>
+<para>Cache calls to f using a map of type T</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="436" column="18" bodyfile="d_compiled.cpp" bodystart="436" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a531cc980b5de78f0c2f36ae3210cb9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Eq</type>
+            <defval>equal_to&lt;&gt;</defval>
+          </param>
+          <param>
+            <type>typename T</type>
+            <defval>less&lt;&gt;</defval>
+          </param>
+          <param>
+            <type>typename Cont</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::uniq</definition>
+        <argsstring>(Cont v, Eq const &amp;up=Eq{}, T const &amp;sp=T{})</argsstring>
+        <name>uniq</name>
+        <param>
+          <type>Cont</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>Eq const &amp;</type>
+          <declname>up</declname>
+          <defval>Eq{}</defval>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>sp</declname>
+          <defval>T{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove all duplicates element from v so that all elements in v are distinct and sorted </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="449" column="7" bodyfile="d_compiled.cpp" bodystart="449" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a393602f329243516ab6a008f905aa82d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_uniq</definition>
+        <argsstring>()</argsstring>
+        <name>test_uniq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="454" column="6" bodyfile="d_compiled.cpp" bodystart="454" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aa705afaf267f70799bd4ec8cbf040455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval>less&lt;&gt;</defval>
+          </param>
+          <param>
+            <type>typename Func</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::key_compare</definition>
+        <argsstring>(const Func &amp;f, T g=T{})</argsstring>
+        <name>key_compare</name>
+        <param>
+          <type>const Func &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>g</declname>
+          <defval>T{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="458" column="22" bodyfile="d_compiled.cpp" bodystart="458" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aff1da1538e8456d30c0528faba66b50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_key_compare</definition>
+        <argsstring>()</argsstring>
+        <name>test_key_compare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="461" column="6" bodyfile="d_compiled.cpp" bodystart="461" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a50e9430d1096ce6997ae910135a9533f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::prev_less</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>prev_less</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="465" column="18" bodyfile="d_compiled.cpp" bodystart="465" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a005fc5d8af9bba651f00c74372466b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll utility::bit_ceil</definition>
+        <argsstring>(ll x)</argsstring>
+        <name>bit_ceil</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the smallest power of two that is at least x</para>
+<para>Return the smallest power of two that is at least x</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="480" column="4" bodyfile="d_compiled.cpp" bodystart="480" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a712d50fe014f71ad2d85897f9c243680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_bit_ceil</definition>
+        <argsstring>()</argsstring>
+        <name>test_bit_ceil</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="487" column="6" bodyfile="d_compiled.cpp" bodystart="487" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a14dc21f495425ccdc1ec35fe45d45591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll utility::power_ceil</definition>
+        <argsstring>(const ll x, const ll base)</argsstring>
+        <name>power_ceil</name>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="497" column="4" bodyfile="d_compiled.cpp" bodystart="497" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a750478c01441fac1c27f14bea2cb74ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll utility::log_ceil</definition>
+        <argsstring>(const ll x, const ll base)</argsstring>
+        <name>log_ceil</name>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="503" column="4" bodyfile="d_compiled.cpp" bodystart="503" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a7cd324d23686536d1d4eeb92afb61ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll utility::next_comb</definition>
+        <argsstring>(ll x)</argsstring>
+        <name>next_comb</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</para>
+<para>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="509" column="5" bodyfile="d_compiled.cpp" bodystart="509" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1ad358004e1f554321202b4e29f8470c5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_next_comb</definition>
+        <argsstring>()</argsstring>
+        <name>test_next_comb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="519" column="6" bodyfile="d_compiled.cpp" bodystart="519" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aa72cfb348ae79fd2bdb5ded63cd36ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Func</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void utility::swap2</definition>
+        <argsstring>(T &amp;a, T &amp;b, const Func &amp;func)</argsstring>
+        <name>swap2</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const Func &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Stable sorts a and b by func.</para>
+<para>Stable sorts a and b by func.</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="533" column="20" bodyfile="d_compiled.cpp" bodystart="533" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1adafa966f1819210cf795fff85b2a40c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Cont</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll utility::ssize</definition>
+        <argsstring>(const Cont &amp;cont)</argsstring>
+        <name>ssize</name>
+        <param>
+          <type>const Cont &amp;</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="539" column="16" bodyfile="d_compiled.cpp" bodystart="539" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a46672014ead1e91eeafec896f61036db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_ar</definition>
+        <argsstring>()</argsstring>
+        <name>test_ar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="545" column="6" bodyfile="d_compiled.cpp" bodystart="545" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a5037ce073dfbaeaf7083a725780cdaf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void utility::test_utility</definition>
+        <argsstring>()</argsstring>
+        <name>test_utility</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="562" column="6" bodyfile="d_compiled.cpp" bodystart="562" bodyend="569"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="d_compiled.cpp" line="408" column="17"/>
+  </compounddef>
+</doxygen>

@@ -3,21 +3,20 @@
   <compounddef id="time_8hpp" kind="file" language="C++">
     <compoundname>time.hpp</compoundname>
     <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/template.hpp</includedby>
+    <includedby refid="main_8hpp" local="yes">main.hpp</includedby>
+    <includedby refid="program__listing__file__main_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_main.hpp.rst.txt</includedby>
+    <includedby refid="program__listing__file__segment__tree_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_segment_tree.hpp.rst.txt</includedby>
+    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
+    <includedby refid="segment__tree_8hpp" local="yes">segment_tree.hpp</includedby>
+    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
       <node id="6">
-        <label>my_int.hpp</label>
-        <link refid="my__int_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
         <label>io.hpp</label>
-        <link refid="io_8hpp"/>
-        <childnode refid="2" relation="include">
+        <link refid="io_8hpp_source"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -26,31 +25,35 @@
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>utility.hpp</label>
-        <link refid="utility_8hpp"/>
-        <childnode refid="2" relation="include">
+        <link refid="utility_8hpp_source"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="7">
         <label>debug.hpp</label>
-        <link refid="debug_8hpp"/>
+        <link refid="debug_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="1">
-        <label>/home/ram/OmniTemplate/time.hpp</label>
+        <label>time.hpp</label>
         <link refid="time_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="9">
         <label>range.hpp</label>
-        <link refid="range_8hpp"/>
+        <link refid="range_8hpp_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>core.hpp</label>
-        <link refid="core_8hpp"/>
+        <link refid="core_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -67,89 +70,75 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
       </node>
       <node id="8">
         <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
+        <link refid="operations_8hpp_source"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>/home/ram/OmniTemplate/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
-      <node id="1">
-        <label>/home/ram/OmniTemplate/time.hpp</label>
-        <link refid="time_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>/home/ram/OmniTemplate/template.hpp</label>
-        <link refid="template_8hpp"/>
+        <label>main.hpp</label>
+        <link refid="main_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>segment_tree.hpp</label>
+        <link refid="segment__tree_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>time.hpp</label>
+        <link refid="time_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>template.hpp</label>
+        <link refid="template_8hpp_source"/>
+      </node>
     </invincdepgraph>
-    <innerclass refid="structtimer" prot="public">timer</innerclass>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="time_8hpp_1a425b2be37c7d8476b2e1a8c8cf2b9c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename Func</type>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void bench</definition>
-        <argsstring>(Func a)</argsstring>
-        <name>bench</name>
-        <param>
-          <type>Func</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/time.hpp" line="14" column="18" bodyfile="/home/ram/OmniTemplate/time.hpp" bodystart="14" bodyend="26"/>
-      </memberdef>
-      </sectiondef>
+    <innerclass refid="structtime__tools_1_1timer" prot="public">time_tools::timer</innerclass>
+    <innernamespace refid="namespacetime__tools">time_tools</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_8hpp" kindref="compound">core.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="structtimer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtimer" kindref="compound">timer</ref><sp/>{</highlight></codeline>
-<codeline lineno="6" refid="structtimer_1ade8e2872a3c7b23090970780c155dc41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(clock_::now())<sp/><ref refid="structtimer_1ade8e2872a3c7b23090970780c155dc41" kindref="member">t1</ref>;</highlight></codeline>
-<codeline lineno="7" refid="structtimer_1ae536faf93e02933cd025a6fbcbb48d0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtimer" kindref="compound">timer</ref>()<sp/>:<sp/><ref refid="structtimer_1ade8e2872a3c7b23090970780c155dc41" kindref="member">t1</ref>(<ref refid="core_8hpp_1a71fb2247d044e41f5345bcdb26020926" kindref="member">clock_</ref>::now())<sp/>{}</highlight></codeline>
-<codeline lineno="8" refid="structtimer_1aee05958ea6b0fbf36ea1fd22747cd546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtimer_1aee05958ea6b0fbf36ea1fd22747cd546" kindref="member">~timer</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>duration:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>duration&lt;ld&gt;(clock_::now()<sp/>-<sp/><ref refid="structtimer_1ade8e2872a3c7b23090970780c155dc41" kindref="member">t1</ref>).count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>s&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="14" refid="time_8hpp_1a425b2be37c7d8476b2e1a8c8cf2b9c44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="time_8hpp_1a425b2be37c7d8476b2e1a8c8cf2b9c44" kindref="member">bench</ref>(Func<sp/>a)<sp/>{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtimer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(<ref refid="structll" kindref="compound">ll</ref>(-5)<sp/>/<sp/><ref refid="structll" kindref="compound">ll</ref>(3));</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(<ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)(-5)<sp/>/<sp/><ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)(3));</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(<ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)(-6)<sp/>/<sp/><ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)(3));</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)<sp/>ans<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a;<sp/>++i)<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="core_8hpp_1ab025e87040bd241c89f5a880c12fc80c" kindref="member">tp</ref>(a)<sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>a;<sp/>++j)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans<sp/>+=<sp/>((-i)<sp/>%<sp/>(j));</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(ans);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">time_tools<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(clock_::now())<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref>()<sp/>:<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>(clock_::now())<sp/>{}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>duration:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>duration&lt;ld&gt;(clock_::now()<sp/>-<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>).count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>s&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bench(Func<sp/>a)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(a)<sp/>ans<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>a;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans<sp/>+=<sp/>((-i)<sp/>%<sp/>(j));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>avoid<sp/>the<sp/>benchmark<sp/>from<sp/>being<sp/>optimized<sp/>out.<sp/>I<sp/>don&apos;t<sp/>know<sp/>if<sp/>this<sp/>actually<sp/>works.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>_unused<sp/>=<sp/>ans;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>time_tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">time_tools;</highlight></codeline>
     </programlisting>
-    <location file="/home/ram/OmniTemplate/time.hpp"/>
+    <location file="time.hpp"/>
   </compounddef>
 </doxygen>

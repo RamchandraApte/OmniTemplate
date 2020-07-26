@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structstring__tools_1_1hash__str" kind="struct" language="C++" prot="public">
+    <compoundname>string_tools::hash_str</compoundname>
+    <includes refid="string_8hpp" local="no">string.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structstring__tools_1_1hash__str_1a6a815a0256e241866570471a3f19e1ea" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto string_tools::hash_str::lcg_mod</definition>
+        <argsstring></argsstring>
+        <name>lcg_mod</name>
+        <initializer>= (1ULL &lt;&lt; 62) - 57</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="string.hpp" line="9" column="23" bodyfile="string.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstring__tools_1_1hash__str_1ac76e86127435197776e56d58da7ac0fe" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* string_tools::hash_str::st</definition>
+        <argsstring></argsstring>
+        <name>st</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="string.hpp" line="10" column="12" bodyfile="string.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1hash__str_1afa31acfdc5552d831c95b7987963076b" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structmodulo" kindref="compound">modulo</ref> &gt;</type>
+        <definition>vector&lt;modulo&gt; string_tools::hash_str::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="string.hpp" line="11" column="8" bodyfile="string.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1hash__str_1a9fd079ff6e9ccf0a24a43a553a09358a" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structmodulo" kindref="compound">modulo</ref> &gt;</type>
+        <definition>vector&lt;modulo&gt; string_tools::hash_str::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="string.hpp" line="11" column="10" bodyfile="string.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstring__tools_1_1hash__str_1aba56bc5901a45e72721a12256a831e69" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>string_tools::hash_str::hash_str</definition>
+        <argsstring>(const string_view str)</argsstring>
+        <name>hash_str</name>
+        <param>
+          <type>const string_view</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="string.hpp" line="12" column="10" bodyfile="string.hpp" bodystart="12" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1hash__str_1a75581b5cc9b3b8bfc41efbe0b395818d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll string_tools::hash_str::operator()</definition>
+        <argsstring>(const string_view v) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const string_view</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="string.hpp" line="28" column="4" bodyfile="string.hpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Fast rolling hash on a specific string&apos;s substrings.</para>
+<para>Time complexity: <formula id="11">$O(n)$</formula> to build, <formula id="24">$O(1)$</formula> to query. </para>
+    </detaileddescription>
+    <location file="string.hpp" line="8" column="15" bodyfile="string.hpp" bodystart="8" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structstring__tools_1_1hash__str_1afa31acfdc5552d831c95b7987963076b" prot="public" virt="non-virtual"><scope>string_tools::hash_str</scope><name>h</name></member>
+      <member refid="structstring__tools_1_1hash__str_1aba56bc5901a45e72721a12256a831e69" prot="public" virt="non-virtual"><scope>string_tools::hash_str</scope><name>hash_str</name></member>
+      <member refid="structstring__tools_1_1hash__str_1a6a815a0256e241866570471a3f19e1ea" prot="public" virt="non-virtual"><scope>string_tools::hash_str</scope><name>lcg_mod</name></member>
+      <member refid="structstring__tools_1_1hash__str_1a75581b5cc9b3b8bfc41efbe0b395818d" prot="public" virt="non-virtual"><scope>string_tools::hash_str</scope><name>operator()</name></member>
+      <member refid="structstring__tools_1_1hash__str_1a9fd079ff6e9ccf0a24a43a553a09358a" prot="public" virt="non-virtual"><scope>string_tools::hash_str</scope><name>p</name></member>
+      <member refid="structstring__tools_1_1hash__str_1ac76e86127435197776e56d58da7ac0fe" prot="public" virt="non-virtual"><scope>string_tools::hash_str</scope><name>st</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

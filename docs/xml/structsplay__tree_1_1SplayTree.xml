@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsplay__tree_1_1SplayTree" kind="struct" language="C++" prot="public">
+    <compoundname>splay_tree::SplayTree</compoundname>
+    <innerclass refid="structsplay__tree_1_1SplayTree_1_1iterator" prot="public">splay_tree::SplayTree::iterator</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structsplay__tree_1_1SplayTree_1a7ebf6727cb412c312c2da10112ff4db4" prot="public" static="no">
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref>&lt; T &gt;</type>
+        <definition>using splay_tree::SplayTree&lt; T &gt;::Node =  SplayNode&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="63" column="1" bodyfile="splay_tree.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" prot="public" static="no" mutable="no">
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *</type>
+        <definition>Node* splay_tree::SplayTree&lt; T &gt;::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Root node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="90" column="6" bodyfile="splay_tree.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" prot="public" static="no" mutable="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll splay_tree::SplayTree&lt; T &gt;::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the splay tree </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="91" column="4" bodyfile="splay_tree.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1aa627e1ec6a9f5f62cb2aba123f47df0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>splay_tree::SplayTree&lt; T &gt;::SplayTree</definition>
+        <argsstring>()</argsstring>
+        <name>SplayTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="92" column="1" bodyfile="splay_tree.hpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a04a5fff3d078c370872ba89bbc90b979" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>splay_tree::SplayTree&lt; T &gt;::~SplayTree</definition>
+        <argsstring>()</argsstring>
+        <name>~SplayTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="93" column="1" bodyfile="splay_tree.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayTree&lt; T &gt;::insert</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>insert</name>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Insert node x into the splay tree</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="104" column="6" bodyfile="splay_tree.hpp" bodystart="104" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a2bf075a9e6a46e3f9b61e7b00b546707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayTree&lt; T &gt;::insert</definition>
+        <argsstring>(const T &amp;key)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Insert key key into the splay tree</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="125" column="6" bodyfile="splay_tree.hpp" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayTree&lt; T &gt;::erase</definition>
+        <argsstring>(Node *const x)</argsstring>
+        <name>erase</name>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *const</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Erase node x from the splay tree</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="129" column="6" bodyfile="splay_tree.hpp" bodystart="129" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void splay_tree::SplayTree&lt; T &gt;::erase</definition>
+        <argsstring>(const T &amp;key)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Erases the node with key key from the splay tree. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="138" column="6" bodyfile="splay_tree.hpp" bodystart="138" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *</type>
+        <definition>Node* splay_tree::SplayTree&lt; T &gt;::find</definition>
+        <argsstring>(const T &amp;key)</argsstring>
+        <name>find</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns node with key key </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="159" column="6" bodyfile="splay_tree.hpp" bodystart="159" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll splay_tree::SplayTree&lt; T &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Returns the number of nodes in the splay tree. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="168" column="8" bodyfile="splay_tree.hpp" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a91876a3a77e0f9c9c8550bf527a2f96f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool splay_tree::SplayTree&lt; T &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="169" column="6" bodyfile="splay_tree.hpp" bodystart="169" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a2f4c63a201ae3d63d08229382dcbfc67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator splay_tree::SplayTree&lt; T &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="170" column="10" bodyfile="splay_tree.hpp" bodystart="170" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a45aa483490efb984be745d3847061eba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref></type>
+        <definition>iterator splay_tree::SplayTree&lt; T &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="171" column="10" bodyfile="splay_tree.hpp" bodystart="171" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void splay_tree::SplayTree&lt; T &gt;::destroy</definition>
+        <argsstring>(Node *const node)</argsstring>
+        <name>destroy</name>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *const</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Destroy the subtree node</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="94" column="13" bodyfile="splay_tree.hpp" bodystart="94" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1ac3a1a0fa259a0f23787211fb94152acd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>i</declname>
+            <defname>i</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *</type>
+        <definition>static Node* splay_tree::SplayTree&lt; T &gt;::extremum</definition>
+        <argsstring>(Node *x)</argsstring>
+        <name>extremum</name>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the extremum of the subtree x. Minimum if i is false, maximum if i is true.</para>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="139" column="25" bodyfile="splay_tree.hpp" bodystart="139" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *</type>
+        <definition>static Node* splay_tree::SplayTree&lt; T &gt;::join</definition>
+        <argsstring>(Node *const a, Node *const b)</argsstring>
+        <name>join</name>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *const</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref> *const</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="splay_tree.hpp" line="146" column="13" bodyfile="splay_tree.hpp" bodystart="146" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>conditional_t&lt; false, PathParent&lt; SplayNode&lt; T, false &gt; &gt;, Empty &gt;</label>
+      </node>
+      <node id="1">
+        <label>splay_tree::SplayTree&lt; T &gt;</label>
+        <link refid="structsplay__tree_1_1SplayTree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>splay_tree::SplayNode&lt; T, has_link_cut &gt;</label>
+        <link refid="structsplay__tree_1_1SplayNode"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="splay_tree.hpp" line="61" column="28" bodyfile="splay_tree.hpp" bodystart="61" bodyend="172"/>
+    <listofallmembers>
+      <member refid="structsplay__tree_1_1SplayTree_1a2f4c63a201ae3d63d08229382dcbfc67" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>begin</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>destroy</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a91876a3a77e0f9c9c8550bf527a2f96f" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>empty</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a45aa483490efb984be745d3847061eba" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>end</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>erase</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>erase</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1ac3a1a0fa259a0f23787211fb94152acd" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>extremum</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>find</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>insert</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a2bf075a9e6a46e3f9b61e7b00b546707" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>insert</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>join</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a7ebf6727cb412c312c2da10112ff4db4" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>Node</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>root</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>size</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>size_</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1aa627e1ec6a9f5f62cb2aba123f47df0b" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>SplayTree</name></member>
+      <member refid="structsplay__tree_1_1SplayTree_1a04a5fff3d078c370872ba89bbc90b979" prot="public" virt="non-virtual"><scope>splay_tree::SplayTree</scope><name>~SplayTree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

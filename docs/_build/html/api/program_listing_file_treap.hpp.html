@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Program Listing for File treap.hpp &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-treap-hpp">
+<span id="program-listing-file-treap-hpp"></span><h1>Program Listing for File treap.hpp<a class="headerlink" href="#program-listing-for-file-treap-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_treap.hpp.html#file-treap-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">treap.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#include</span> <span class="cpf">&quot;core.hpp&quot;</span><span class="cp"></span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="n">treap</span> <span class="p">{</span>
+    <span class="n">treap</span> <span class="o">*</span><span class="n">l</span><span class="p">{},</span> <span class="o">*</span><span class="n">r</span><span class="p">{};</span>
+    <span class="n">ll</span> <span class="n">pri</span><span class="p">{};</span>
+    <span class="n">Key</span> <span class="n">key</span><span class="p">{};</span>
+    <span class="n">Data</span> <span class="n">data</span><span class="p">{};</span>
+    <span class="kt">bool</span> <span class="n">rev</span><span class="p">{};</span>
+    <span class="n">treap</span><span class="p">(</span><span class="n">Key</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">key_</span><span class="p">)</span> <span class="o">:</span> <span class="n">pri</span><span class="p">(</span><span class="n">reng</span><span class="p">()),</span> <span class="n">key</span><span class="p">{</span><span class="n">key_</span><span class="p">}</span> <span class="p">{</span> <span class="n">update_data</span><span class="p">(</span><span class="o">&amp;</span><span class="k">this</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="o">&gt;</span> <span class="k">typename</span> <span class="n">Data_Temp</span><span class="o">&gt;</span>
+<span class="k">using</span> <span class="n">treap_t</span> <span class="o">=</span> <span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data_Temp</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="n">size_data</span> <span class="p">{</span> <span class="n">ll</span> <span class="n">size</span><span class="p">{};</span> <span class="p">};</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="o">&gt;</span>
+<span class="n">size_data</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">size_data</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">l</span><span class="p">,</span> <span class="n">size_data</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">size_data</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span><span class="p">{</span><span class="n">l</span><span class="p">.</span><span class="n">size</span> <span class="o">+</span> <span class="n">r</span><span class="p">.</span><span class="n">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">};</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Stream</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Key</span><span class="o">&gt;</span>
+<span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">Stream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="n">size_data</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;size = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">data</span><span class="p">.</span><span class="n">size</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="n">Data</span> <span class="n">get_data</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">trp</span> <span class="o">?</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="nl">data</span> <span class="p">:</span> <span class="n">Data</span><span class="p">{};</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">update_data</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">trp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">)</span> <span class="o">+</span> <span class="n">get_data</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Trp</span> <span class="o">=</span> <span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;&gt;</span>
+<span class="kt">void</span> <span class="n">split</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">trp</span><span class="p">,</span> <span class="k">const</span> <span class="n">Key</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">l</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">r</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">key</span> <span class="o">&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">split</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">);</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">trp</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">split</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">trp</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">update_data</span><span class="p">(</span><span class="n">trp</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span> <span class="n">Trp</span> <span class="o">*</span><span class="n">join</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*</span><span class="n">l</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">down</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+    <span class="n">down</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">ret</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">]</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">l</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">r</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">l</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">pri</span> <span class="o">&lt;</span> <span class="n">r</span><span class="o">-&gt;</span><span class="n">pri</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">r</span><span class="o">-&gt;</span><span class="n">l</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">r</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">l</span><span class="o">-&gt;</span><span class="n">r</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">l</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}();</span>
+    <span class="n">update_data</span><span class="p">(</span><span class="n">ret</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">insert</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">trp</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">pri</span> <span class="o">&lt;</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">pri</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">split</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">,</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">),</span> <span class="n">trp</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">insert</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">?</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="nl">l</span> <span class="p">:</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">update_data</span><span class="p">(</span><span class="n">trp</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Trp</span> <span class="o">=</span> <span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;&gt;</span>
+<span class="k">auto</span> <span class="n">insert</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="k">const</span> <span class="n">Key</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">insert</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="k">new</span> <span class="n">Trp</span><span class="p">{</span><span class="n">key</span><span class="p">});</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Trp</span> <span class="o">=</span> <span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;&gt;</span>
+<span class="kt">void</span> <span class="n">erase</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="k">const</span> <span class="n">Key</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">trp</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">erase</span><span class="p">(</span><span class="n">key</span> <span class="o">&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">?</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="nl">l</span> <span class="p">:</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">update_data</span><span class="p">(</span><span class="n">trp</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Implicit treaps</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">down</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">trp</span> <span class="o">&amp;&amp;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">rev</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">);</span>
+<span class="cp">#define flip(x)                                                                \</span>
+<span class="cp">    if (trp-&gt;x) {                                                          \</span>
+<span class="cp">        trp-&gt;x-&gt;rev ^= 1;                                              \</span>
+<span class="cp">    }</span>
+    <span class="n">flip</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="n">flip</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="cp">#undef flip</span>
+        <span class="n">trp</span><span class="o">-&gt;</span><span class="n">rev</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">split_imp</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*</span><span class="n">trp</span><span class="p">,</span> <span class="n">ll</span> <span class="n">pos</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">l</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">r</span><span class="p">,</span> <span class="n">ll</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">r</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">down</span><span class="p">(</span><span class="n">trp</span><span class="p">);</span>
+    <span class="n">ll</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">get_data</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">).</span><span class="n">size</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">cur</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">split_imp</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">trp</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">split_imp</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">cur</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">trp</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">update_data</span><span class="p">(</span><span class="n">trp</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">insert_imp</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="n">Trp</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">ll</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Trp</span> <span class="o">*</span><span class="n">l</span><span class="p">,</span> <span class="o">*</span><span class="n">r</span><span class="p">;</span>
+    <span class="n">split_imp</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">trp</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">erase_imp</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="n">ll</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Trp</span> <span class="o">*</span><span class="n">l</span><span class="p">,</span> <span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">nr</span><span class="p">;</span>
+    <span class="n">split_imp</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">split_imp</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">nr</span><span class="p">);</span>
+    <span class="n">trp</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">nr</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Trp</span><span class="o">&gt;</span> <span class="k">auto</span> <span class="n">get_imp</span><span class="p">(</span><span class="n">Trp</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="n">ll</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Trp</span> <span class="o">*</span><span class="n">l</span><span class="p">,</span> <span class="o">*</span><span class="n">r</span><span class="p">,</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">nr</span><span class="p">;</span>
+    <span class="n">split_imp</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+    <span class="n">split_imp</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">nr</span><span class="p">);</span>
+    <span class="n">trp</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">nr</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Trp</span> <span class="o">=</span> <span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;&gt;</span>
+<span class="k">auto</span> <span class="n">insert_imp</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*&amp;</span><span class="n">trp</span><span class="p">,</span> <span class="n">Key</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">,</span> <span class="n">ll</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">insert_imp</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="k">new</span> <span class="n">Trp</span><span class="p">{</span><span class="n">key</span><span class="p">},</span> <span class="n">pos</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Stream</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Ts</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">Stream</span> <span class="o">&amp;</span><span class="n">os</span><span class="p">,</span> <span class="n">treap</span><span class="o">&lt;</span><span class="n">Ts</span><span class="p">...</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="n">ll</span> <span class="n">lvl</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">with</span> <span class="n">_w</span><span class="p">{</span><span class="n">lvl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lvl</span><span class="p">};</span>
+    <span class="n">string</span> <span class="nf">tab</span><span class="p">(</span><span class="n">lvl</span><span class="p">,</span> <span class="sc">&#39; &#39;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;key = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span>
+           <span class="o">&lt;&lt;</span> <span class="s">&quot;priority = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">pri</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Left&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span>
+           <span class="o">&lt;&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Right&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span>
+           <span class="o">&lt;&lt;</span> <span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">tab</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;null&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">os</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">to_array</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">trp</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">to_array</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">l</span><span class="p">,</span> <span class="n">out</span><span class="p">);</span>
+    <span class="n">out</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">key</span><span class="p">);</span>
+    <span class="n">to_array</span><span class="p">(</span><span class="n">trp</span><span class="o">-&gt;</span><span class="n">r</span><span class="p">,</span> <span class="n">out</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">Key</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Data</span><span class="o">&gt;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="n">to_array</span><span class="p">(</span><span class="n">treap</span><span class="o">&lt;</span><span class="n">Key</span><span class="p">,</span> <span class="n">Data</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">trp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">Key</span><span class="o">&gt;</span> <span class="n">out</span><span class="p">;</span>
+    <span class="n">to_array</span><span class="p">(</span><span class="n">trp</span><span class="p">,</span> <span class="n">out</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">out</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/program_listing_file_treap.hpp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

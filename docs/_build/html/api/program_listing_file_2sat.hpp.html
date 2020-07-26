@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Program Listing for File 2sat.hpp &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-2sat-hpp">
+<span id="program-listing-file-2sat-hpp"></span><h1>Program Listing for File 2sat.hpp<a class="headerlink" href="#program-listing-for-file-2sat-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_2sat.hpp.html#file-2sat-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">2sat.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+<span class="cp">#include</span> <span class="cpf">&quot;core.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;graph_theory.hpp&quot;</span><span class="cp"></span>
+<span class="k">namespace</span> <span class="n">sat2</span> <span class="p">{</span>
+<span class="n">optional</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;&gt;</span> <span class="n">sat2</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">array</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">cnf</span><span class="p">,</span> <span class="k">const</span> <span class="n">ll</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vl</span><span class="o">&gt;</span> <span class="n">graph</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="nl">clause</span> <span class="p">:</span> <span class="n">cnf</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Construct two implications that represent the clause</span>
+        <span class="n">graph</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="n">clause</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">clause</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="n">graph</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="n">clause</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">clause</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">dfs</span> <span class="n">topo</span><span class="p">{</span><span class="n">graph</span><span class="p">};</span>
+    <span class="n">topo</span><span class="p">();</span>
+    <span class="n">vl</span> <span class="nf">idx</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">graph</span><span class="p">));</span>
+    <span class="n">fo</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">size</span><span class="p">(</span><span class="n">topo</span><span class="p">.</span><span class="n">q</span><span class="p">))</span> <span class="p">{</span> <span class="n">idx</span><span class="p">[</span><span class="n">topo</span><span class="p">.</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">vals</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">scc</span><span class="p">(</span><span class="n">graph</span><span class="p">);</span>
+    <span class="n">fo</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">idx</span><span class="p">[</span><span class="n">comp</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="n">i</span><span class="p">]],</span> <span class="n">nx</span> <span class="o">=</span> <span class="n">idx</span><span class="p">[</span><span class="n">comp</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span><span class="p">]];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">nx</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">nullopt</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nx</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">vals</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">test_sat2</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">ret1</span> <span class="o">=</span> <span class="n">sat2</span><span class="p">({{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}},</span> <span class="mi">3</span><span class="p">).</span><span class="n">value</span><span class="p">();</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">ret1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">||</span> <span class="n">ret1</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">ret1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">||</span> <span class="n">ret1</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">ret2</span> <span class="o">=</span> <span class="n">sat2</span><span class="p">({{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">}},</span> <span class="mi">3</span><span class="p">).</span><span class="n">value</span><span class="p">();</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">ret2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">||</span> <span class="n">ret2</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">ret2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">||</span> <span class="n">ret2</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">ret2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">||</span> <span class="o">!</span><span class="n">ret2</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">ret3</span> <span class="o">=</span> <span class="n">sat2</span><span class="p">({{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">}},</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">ret3</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">ret4</span> <span class="o">=</span> <span class="n">sat2</span><span class="p">({{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">}},</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">ret4</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span> <span class="c1">// namespace sat2</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">sat2</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/program_listing_file_2sat.hpp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

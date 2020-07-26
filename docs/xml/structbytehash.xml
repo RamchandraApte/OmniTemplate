@@ -2,15 +2,19 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="structbytehash" kind="struct" language="C++" prot="public">
     <compoundname>bytehash</compoundname>
-    <includes refid="string_8hpp" local="no">string.hpp</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="structbytehash_1a9134bf96ee911825f045ee603d5970cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>auto</type>
-        <definition>auto bytehash::operator()</definition>
-        <argsstring>(const string &amp;x) const</argsstring>
+      <memberdef kind="function" id="structbytehash_1aa3499ed892714d07cb384be0258584e2" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto bytehash::operator()</definition>
+        <argsstring>(const T &amp;x) const</argsstring>
         <name>operator()</name>
         <param>
-          <type>const string &amp;</type>
+          <type>const T &amp;</type>
           <declname>x</declname>
         </param>
         <briefdescription>
@@ -19,16 +23,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/string.hpp" line="39" column="6" bodyfile="/home/ram/OmniTemplate/string.hpp" bodystart="39" bodyend="42"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_string.hpp.rst.txt" line="56" column="35" bodyfile="docs/_build/html/_sources/api/program_listing_file_string.hpp.rst.txt" bodystart="56" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/string.hpp" line="38" column="15" bodyfile="/home/ram/OmniTemplate/string.hpp" bodystart="38" bodyend="43"/>
+    <location file="docs/_build/html/_sources/api/program_listing_file_string.hpp.rst.txt" line="55" column="18" bodyfile="docs/_build/html/_sources/api/program_listing_file_string.hpp.rst.txt" bodystart="55" bodyend="60"/>
     <listofallmembers>
-      <member refid="structbytehash_1a9134bf96ee911825f045ee603d5970cd" prot="public" virt="non-virtual"><scope>bytehash</scope><name>operator()</name></member>
+      <member refid="structbytehash_1aa3499ed892714d07cb384be0258584e2" prot="public" virt="non-virtual"><scope>bytehash</scope><name>operator()</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

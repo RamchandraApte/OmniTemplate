@@ -1,0 +1,69 @@
+
+.. _program_listing_file_docs__build_html__sources_api_file_2sat.hpp.rst.txt:
+
+Program Listing for File file_2sat.hpp.rst.txt
+==============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_docs__build_html__sources_api_file_2sat.hpp.rst.txt>` (``docs/_build/html/_sources/api/file_2sat.hpp.rst.txt``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   .. _file_2sat.hpp:
+   
+   File 2sat.hpp
+   =============
+   
+   .. contents:: Contents
+      :local:
+      :backlinks: none
+   
+   Definition (``2sat.hpp``)
+   -------------------------
+   
+   
+   .. toctree::
+      :maxdepth: 1
+   
+      program_listing_file_2sat.hpp.rst
+   
+   
+   
+   
+   
+   Includes
+   --------
+   
+   
+   - ``core.hpp`` (:ref:`file_core.hpp`)
+   
+   - ``graph_theory.hpp`` (:ref:`file_graph_theory.hpp`)
+   
+   
+   
+   Included By
+   -----------
+   
+   
+   - :ref:`file_template.hpp`
+   
+   
+   
+   
+   Namespaces
+   ----------
+   
+   
+   - :ref:`namespace_sat2`
+   
+   
+   Functions
+   ---------
+   
+   
+   - :ref:`exhale_function_2sat_8hpp_1a7c5b410fc1eefa671c8e9531c2e29cec`
+   
+   - :ref:`exhale_function_2sat_8hpp_1a25e1814f70e51eb57308bc0dea349406`
+   

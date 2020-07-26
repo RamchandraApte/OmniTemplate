@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classSparseTable" kind="class" language="C++" prot="public">
+    <compoundname>SparseTable</compoundname>
+    <includes refid="sparse__table_8hpp" local="no">sparse_table.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename Semilattice</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSparseTable_1a5a412e80ff56a9a392331ff9bcc1a1f0" prot="private" static="no" mutable="no">
+        <type>vc&lt; vl &gt;</type>
+        <definition>vc&lt;vl&gt; SparseTable&lt; T, Semilattice &gt;::meet</definition>
+        <argsstring></argsstring>
+        <name>meet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" line="35" column="11" bodyfile="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSparseTable_1ab43082093969463f402576dae52fe095" prot="private" static="no" mutable="no">
+        <type>vector&lt; vl &gt;</type>
+        <definition>vector&lt;vl&gt; SparseTable&lt; T, Semilattice &gt;::meet</definition>
+        <argsstring></argsstring>
+        <name>meet</name>
+        <briefdescription>
+<para>meet[pw][i] stores the meet of elements in range [i, i+2^pw) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse_table.hpp" line="26" column="10" bodyfile="sparse_table.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSparseTable_1a8a0ff315be302f4e9fb2fe03f846492f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SparseTable&lt; T, Semilattice &gt;::SparseTable</definition>
+        <argsstring>(const vector&lt; T &gt; &amp;arr)</argsstring>
+        <name>SparseTable</name>
+        <param>
+          <type>const vector&lt; T &gt; &amp;</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" line="18" column="17" bodyfile="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classSparseTable_1a52186d743b9f6a0495a279d72c014ca3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T SparseTable&lt; T, Semilattice &gt;::query</definition>
+        <argsstring>(ll l, ll r) const</argsstring>
+        <name>query</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" line="27" column="10" bodyfile="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classSparseTable_1a8a0ff315be302f4e9fb2fe03f846492f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SparseTable&lt; T, Semilattice &gt;::SparseTable</definition>
+        <argsstring>(const vector&lt; T &gt; &amp;arr)</argsstring>
+        <name>SparseTable</name>
+        <param>
+          <type>const vector&lt; T &gt; &amp;</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse_table.hpp" line="9" column="10" bodyfile="sparse_table.hpp" bodystart="9" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classSparseTable_1a52186d743b9f6a0495a279d72c014ca3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T SparseTable&lt; T, Semilattice &gt;::query</definition>
+        <argsstring>(ll l, ll r) const</argsstring>
+        <name>query</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse_table.hpp" line="18" column="3" bodyfile="sparse_table.hpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Sparse table. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the type of the data, </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Semilattice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a bounded semilattice. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" line="16" column="40" bodyfile="docs/_build/html/_sources/api/program_listing_file_sparse_table.hpp.rst.txt" bodystart="16" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classSparseTable_1a5a412e80ff56a9a392331ff9bcc1a1f0" prot="private" virt="non-virtual"><scope>SparseTable</scope><name>meet</name></member>
+      <member refid="classSparseTable_1ab43082093969463f402576dae52fe095" prot="private" virt="non-virtual"><scope>SparseTable</scope><name>meet</name></member>
+      <member refid="classSparseTable_1a52186d743b9f6a0495a279d72c014ca3" prot="public" virt="non-virtual"><scope>SparseTable</scope><name>query</name></member>
+      <member refid="classSparseTable_1a52186d743b9f6a0495a279d72c014ca3" prot="public" virt="non-virtual"><scope>SparseTable</scope><name>query</name></member>
+      <member refid="classSparseTable_1a8a0ff315be302f4e9fb2fe03f846492f" prot="public" virt="non-virtual"><scope>SparseTable</scope><name>SparseTable</name></member>
+      <member refid="classSparseTable_1a8a0ff315be302f4e9fb2fe03f846492f" prot="public" virt="non-virtual"><scope>SparseTable</scope><name>SparseTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="program__listing__file__bit_8hpp_8rst_8txt" kind="file" language="C++">
+    <compoundname>program_listing_file_bit.hpp.rst.txt</compoundname>
+    <includes refid="core_8hpp" local="yes">core.hpp</includes>
+    <includes refid="utility_8hpp" local="yes">utility.hpp</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>bits/stdc++.h</label>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="4">
+        <label>experimental/iterator</label>
+      </node>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core.hpp</label>
+        <link refid="core_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt</label>
+        <link refid="program__listing__file__bit_8hpp_8rst_8txt"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="program__listing__file__bit_8hpp_8rst_8txt_1aeae3df48538c5f77d979a48432159438" prot="public" static="no" mutable="no">
+        <type>_program_listing_file_bit</type>
+        <definition>_program_listing_file_bit hpp</definition>
+        <argsstring></argsstring>
+        <name>hpp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt" line="2" column="27" bodyfile="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="program__listing__file__bit_8hpp_8rst_8txt_1ac8996a3795aa8f4c7af6163a7fa93f92" prot="public" static="no" mutable="no">
+        <type>_program_listing_file_bit</type>
+        <definition>_program_listing_file_bit MonoidOp</definition>
+        <argsstring></argsstring>
+        <name>MonoidOp</name>
+        <initializer>= plus&lt;&gt;&gt; class <ref refid="classBIT" kindref="compound">BIT</ref> {
+       vector&lt;Value&gt; arr;
+       MonoidOp op{}; 
+         public:
+       explicit <ref refid="classBIT" kindref="compound">BIT</ref>(const <ref refid="structll" kindref="compound">ll</ref> size_arg)
+           : arr(bit_ceil(size_arg) + 1, identity(MonoidOp{}, Value{})) {}
+       Value query(<ref refid="structll" kindref="compound">ll</ref> r) const {
+           auto sum = identity(MonoidOp{}, Value{});
+           for (; r; r -= get_len(r)) {
+               sum = op(sum, arr[r]);
+           }
+           return sum;
+       }
+       void update(<ref refid="structll" kindref="compound">ll</ref> idx, const Value value) {
+           ++idx;
+           for (; idx &lt; arr.size(); idx += get_len(idx)) {
+               arr[idx] = op(arr[idx], value);
+           }
+       }
+         private:
+       static <ref refid="structll" kindref="compound">ll</ref> get_len(const <ref refid="structll" kindref="compound">ll</ref> idx) {
+           return idx &amp; (-idx);
+       }
+   }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt" line="16" column="11" bodyfile="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="program__listing__file__bit_8hpp_8rst_8txt_1af86f570cf0a5201c700ffeec06aec7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_bit</definition>
+        <argsstring>()</argsstring>
+        <name>test_bit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt" line="40" column="9" bodyfile="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt" bodystart="40" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">..<sp/>_program_listing_file_bit.hpp:</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">Program<sp/>Listing<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>File<sp/>bit.hpp</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">================================</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">|exhale_lsh|<sp/>:ref:`Return<sp/>to<sp/>documentation<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>file<sp/>&lt;file_bit.hpp&gt;`<sp/>(``bit.hpp``)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">..<sp/>|exhale_lsh|<sp/>unicode::<sp/>U+021B0<sp/>..<sp/>UPWARDS<sp/>ARROW<sp/>WITH<sp/>TIP<sp/>LEFTWARDS</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">..<sp/>code-block::<sp/>cpp</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>#pragma<sp/>once</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>#include<sp/></highlight><highlight class="stringliteral">&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>#include<sp/></highlight><highlight class="stringliteral">&quot;utility.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MonoidOp<sp/>=<sp/>plus&lt;&gt;&gt;<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="classBIT" kindref="compound">BIT</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Value&gt;<sp/>arr;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MonoidOp<sp/>op{};<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classBIT" kindref="compound">BIT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>size_arg)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>arr(bit_ceil(size_arg)<sp/>+<sp/>1,<sp/>identity(MonoidOp{},<sp/>Value{}))<sp/>{}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Value<sp/>query(<ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>identity(MonoidOp{},<sp/>Value{});</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>r;<sp/>r<sp/>-=<sp/>get_len(r))<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>op(sum,<sp/>arr[r]);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update(<ref refid="structll" kindref="compound">ll</ref><sp/>idx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Value<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++idx;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>idx<sp/>&lt;<sp/>arr.size();<sp/>idx<sp/>+=<sp/>get_len(idx))<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr[idx]<sp/>=<sp/>op(arr[idx],<sp/>value);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>get_len(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>idx)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx<sp/>&amp;<sp/>(-idx);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_bit()<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBIT" kindref="compound">BIT&lt;ll&gt;</ref><sp/>bit(10);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit.update(3,<sp/>4);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(10)<sp/>==<sp/>4));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit.update(2,<sp/>3);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(2)<sp/>==<sp/>0));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(3)<sp/>==<sp/>3));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(4)<sp/>==<sp/>7));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit.update(0,<sp/>2);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit.update(9,<sp/>5);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(10)<sp/>==<sp/>4<sp/>+<sp/>3<sp/>+<sp/>2<sp/>+<sp/>5));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(0)<sp/>==<sp/>0));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((bit.query(1)<sp/>==<sp/>2));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="docs/_build/html/_sources/api/program_listing_file_bit.hpp.rst.txt"/>
+  </compounddef>
+</doxygen>

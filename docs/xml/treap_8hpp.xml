@@ -3,21 +3,16 @@
   <compounddef id="treap_8hpp" kind="file" language="C++">
     <compoundname>treap.hpp</compoundname>
     <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/template.hpp</includedby>
+    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
+    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
       <node id="6">
-        <label>my_int.hpp</label>
-        <link refid="my__int_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
         <label>io.hpp</label>
-        <link refid="io_8hpp"/>
-        <childnode refid="2" relation="include">
+        <link refid="io_8hpp_source"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -26,31 +21,35 @@
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>utility.hpp</label>
-        <link refid="utility_8hpp"/>
-        <childnode refid="2" relation="include">
+        <link refid="utility_8hpp_source"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="7">
         <label>debug.hpp</label>
-        <link refid="debug_8hpp"/>
+        <link refid="debug_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="1">
-        <label>/home/ram/OmniTemplate/treap.hpp</label>
+        <label>treap.hpp</label>
         <link refid="treap_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="9">
         <label>range.hpp</label>
-        <link refid="range_8hpp"/>
+        <link refid="range_8hpp_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>core.hpp</label>
-        <link refid="core_8hpp"/>
+        <link refid="core_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -67,32 +66,24 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
       </node>
       <node id="8">
         <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
+        <link refid="operations_8hpp_source"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>/home/ram/OmniTemplate/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
       <node id="1">
-        <label>/home/ram/OmniTemplate/treap.hpp</label>
+        <label>treap.hpp</label>
         <link refid="treap_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/ram/OmniTemplate/template.hpp</label>
-        <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
+        <label>template.hpp</label>
+        <link refid="template_8hpp_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structtreap" prot="public">treap</innerclass>
@@ -102,7 +93,7 @@
         <name>flip</name>
         <param><defname>x</defname></param>
         <initializer>	if (trp-&gt;x) {                                                          \
-		trp-&gt;x-&gt;<ref refid="range_8hpp_1af05d016fe174cf99a33f4ddac30c9b05" kindref="member">rev</ref> ^= 1;                                              \
+		trp-&gt;x-&gt;rev ^= 1;                                              \
 	}</initializer>
         <briefdescription>
         </briefdescription>
@@ -110,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="100" column="9"/>
+        <location file="treap.hpp" line="107" column="9"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -135,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="13" column="1" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="13" bodyend="-1"/>
+        <location file="treap.hpp" line="13" column="1" bodyfile="treap.hpp" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -164,9 +155,9 @@
         <inbodydescription>
 <para>Returns the data for a node given the data for the children.</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="16" column="11" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="16" bodyend="19"/>
+        <location file="treap.hpp" line="16" column="11" bodyfile="treap.hpp" bodystart="16" bodyend="19"/>
       </memberdef>
-      <memberdef kind="function" id="treap_8hpp_1a650f755f8c99e25e39d93616c8c866df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="treap_8hpp_1a1bb22f09c6a50d177b40b56d60bb62f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Stream</type>
@@ -175,8 +166,8 @@
             <type>typename Key</type>
           </param>
         </templateparamlist>
-        <type>auto &amp;</type>
-        <definition>auto&amp; operator&lt;&lt;</definition>
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
         <argsstring>(Stream &amp;os, size_data&lt; Key &gt; const &amp;data)</argsstring>
         <name>operator&lt;&lt;</name>
         <param>
@@ -193,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="21" column="2" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="21" bodyend="23"/>
+        <location file="treap.hpp" line="21" column="1" bodyfile="treap.hpp" bodystart="21" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a88d816c35d3a703c27719dabc1631d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -218,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="24" column="20" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="24" bodyend="26"/>
+        <location file="treap.hpp" line="24" column="20" bodyfile="treap.hpp" bodystart="24" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -240,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="27" column="18" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="27" bodyend="32"/>
+        <location file="treap.hpp" line="27" column="18" bodyfile="treap.hpp" bodystart="27" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -282,7 +273,7 @@
         <inbodydescription>
 <para>Splits the treap by key</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="34" column="6" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="34" bodyend="46"/>
+        <location file="treap.hpp" line="34" column="6" bodyfile="treap.hpp" bodystart="34" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -303,13 +294,43 @@
           <declname>r</declname>
         </param>
         <briefdescription>
+<para>Joins treap l and treap r. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="pre"><para>All the keys in l must be less than the keys in r. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Trp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>p_Trp: A treap type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>p_l: The left half </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>p_r: The right half </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Trp*: The union of l and r. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
-<para>All the keys in l are less than the keys in r</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="47" column="17" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="47" bodyend="66"/>
+        <location file="treap.hpp" line="55" column="17" bodyfile="treap.hpp" bodystart="55" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1ad45b31cb3a5a560af114abfcbce83936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -336,7 +357,7 @@
         <inbodydescription>
 <para>Insert node x into treap trp</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="67" column="18" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="67" bodyend="77"/>
+        <location file="treap.hpp" line="74" column="18" bodyfile="treap.hpp" bodystart="74" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a14ea768f9d1a656b814be126c0a631c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -370,7 +391,7 @@
         <inbodydescription>
 <para>Insert key into treap trp</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="79" column="6" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="79" bodyend="82"/>
+        <location file="treap.hpp" line="86" column="6" bodyfile="treap.hpp" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1add90798283a022be36a018723badda5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -404,7 +425,7 @@
         <inbodydescription>
 <para>Erase key from treap</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="84" column="6" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="84" bodyend="92"/>
+        <location file="treap.hpp" line="91" column="6" bodyfile="treap.hpp" bodystart="91" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -427,7 +448,7 @@
         <inbodydescription>
 <para>Push updates down one level of the treap</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="94" column="18" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="94" bodyend="107"/>
+        <location file="treap.hpp" line="101" column="18" bodyfile="treap.hpp" bodystart="101" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -467,7 +488,7 @@
         <inbodydescription>
 <para>Splits the treap by pos</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="109" column="6" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="109" bodyend="125"/>
+        <location file="treap.hpp" line="116" column="6" bodyfile="treap.hpp" bodystart="116" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1aa2a3eaf4c00318c5a4c9298b83d06003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -497,7 +518,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="126" column="18" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="126" bodyend="131"/>
+        <location file="treap.hpp" line="133" column="18" bodyfile="treap.hpp" bodystart="133" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a5029123d55b27e0746b8616a6f79eda3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -523,7 +544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="132" column="18" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="132" bodyend="137"/>
+        <location file="treap.hpp" line="139" column="18" bodyfile="treap.hpp" bodystart="139" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1aa2ab504328f4d744315ec1da21b666f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -549,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="138" column="18" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="138" bodyend="144"/>
+        <location file="treap.hpp" line="145" column="18" bodyfile="treap.hpp" bodystart="145" bodyend="151"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a4396c20ba2dc1e8172125ce5a28794e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -586,7 +607,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="146" column="6" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="146" bodyend="148"/>
+        <location file="treap.hpp" line="153" column="6" bodyfile="treap.hpp" bodystart="153" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1adc9b978577ebe26d5cef50ae4dde2362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -618,7 +639,7 @@
         <inbodydescription>
 <para>Debug print the treap</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="150" column="1" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="150" bodyend="165"/>
+        <location file="treap.hpp" line="157" column="1" bodyfile="treap.hpp" bodystart="157" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -647,7 +668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="167" column="6" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="167" bodyend="174"/>
+        <location file="treap.hpp" line="174" column="6" bodyfile="treap.hpp" bodystart="174" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a8627d817d1d1564b415505110432d65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -673,7 +694,7 @@
         <inbodydescription>
 <para>Returns the array of keys for an implicit treap.</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/treap.hpp" line="176" column="8" bodyfile="/home/ram/OmniTemplate/treap.hpp" bodystart="176" bodyend="181"/>
+        <location file="treap.hpp" line="183" column="8" bodyfile="treap.hpp" bodystart="183" bodyend="188"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -682,176 +703,176 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_8hpp" kindref="compound">core.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="structtreap" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtreap" kindref="compound">treap</ref><sp/>{</highlight></codeline>
-<codeline lineno="5" refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtreap" kindref="compound">treap</ref><sp/>*<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref>{},<sp/>*<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>{};<sp/></highlight></codeline>
-<codeline lineno="6" refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" kindref="member">pri</ref>{};<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="7" refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Key<sp/><ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref>{};<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="8" refid="structtreap_1ab40ce02fc95a404710848a91512ecc9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Data<sp/><ref refid="structtreap_1ab40ce02fc95a404710848a91512ecc9e" kindref="member">data</ref>{};<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="9" refid="structtreap_1adf92c9b58f215038c2ddb286124d1f1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structtreap_1adf92c9b58f215038c2ddb286124d1f1a" kindref="member">rev</ref>{};<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="10" refid="structtreap_1af0c6230acc49fe4a276950fd1934463b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtreap_1af0c6230acc49fe4a276950fd1934463b" kindref="member">treap</ref>(Key<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;key_)<sp/>:<sp/><ref refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" kindref="member">pri</ref>(<ref refid="utility_8hpp_1a9fc68ed025086c5affbd401726bc07b8" kindref="member">reng</ref>()),<sp/><ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref>{key_}<sp/>{<sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtreap" kindref="compound">treap</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtreap" kindref="compound">treap</ref><sp/>*<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref>{},<sp/>*<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>{};<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" kindref="member">pri</ref>{};<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>Key<sp/><ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref>{};<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>Data<sp/><ref refid="structtreap_1ab40ce02fc95a404710848a91512ecc9e" kindref="member">data</ref>{};<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structtreap_1adf92c9b58f215038c2ddb286124d1f1a" kindref="member">rev</ref>{};<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtreap" kindref="compound">treap</ref>(Key<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;key_)<sp/>:<sp/><ref refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" kindref="member">pri</ref>(reng()),<sp/><ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref>{key_}<sp/>{<sp/>update_data(&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data_Temp&gt;</highlight></codeline>
-<codeline lineno="13" refid="treap_8hpp_1a7c3f109eab4e8235dee6ef14bfdf920b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structtreap" kindref="compound">treap_t</ref><sp/>=<sp/><ref refid="structtreap" kindref="compound">treap&lt;Key, Data_Temp&lt;Key&gt;</ref>&gt;;</highlight></codeline>
-<codeline lineno="14" refid="structsize__data_1a80d59df6df3a4dd01fdf8b3919785ecc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsize__data" kindref="compound">size_data</ref><sp/>{<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structsize__data_1a80d59df6df3a4dd01fdf8b3919785ecc" kindref="member">size</ref>{};<sp/>};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structtreap" kindref="compound">treap_t</ref><sp/>=<sp/><ref refid="structtreap" kindref="compound">treap&lt;Key, Data_Temp&lt;Key&gt;</ref>&gt;;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsize__data" kindref="compound">size_data</ref><sp/>{<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>size{};<sp/>};</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key&gt;</highlight></codeline>
-<codeline lineno="16" refid="treap_8hpp_1a8e26670f57733242dc7312c4072c49b6" refkind="member"><highlight class="normal"><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/><ref refid="treap_8hpp_1a8e26670f57733242dc7312c4072c49b6" kindref="member">operator+</ref>(<ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;l,<sp/><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;r)<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref>{l.<ref refid="structsize__data_1a80d59df6df3a4dd01fdf8b3919785ecc" kindref="member">size</ref><sp/>+<sp/>r.<ref refid="structsize__data_1a80d59df6df3a4dd01fdf8b3919785ecc" kindref="member">size</ref><sp/>+<sp/>1};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/>operator+(<ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;l,<sp/><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;r)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref>{l.size<sp/>+<sp/>r.size<sp/>+<sp/>1};</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key&gt;</highlight></codeline>
-<codeline lineno="21" refid="treap_8hpp_1a650f755f8c99e25e39d93616c8c866df" refkind="member"><highlight class="normal"><ref refid="core_8hpp_1a652d32737dbd89449a99ce6a41dae81f" kindref="member">ostream</ref><sp/>&amp;<ref refid="treap_8hpp_1a650f755f8c99e25e39d93616c8c866df" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;data)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;size<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>data.<ref refid="structsize__data_1a80d59df6df3a4dd01fdf8b3919785ecc" kindref="member">size</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">ostream<sp/>&amp;operator&lt;&lt;(Stream<sp/>&amp;os,<sp/><ref refid="structsize__data" kindref="compound">size_data&lt;Key&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;data)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;size<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>data.size<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="24" refid="treap_8hpp_1a88d816c35d3a703c27719dabc1631d79" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;<sp/>Data<sp/><ref refid="treap_8hpp_1a88d816c35d3a703c27719dabc1631d79" kindref="member">get_data</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;<sp/>Data<sp/>get_data(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp)<sp/>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>trp<sp/>?<sp/>trp-&gt;<ref refid="structtreap_1ab40ce02fc95a404710848a91512ecc9e" kindref="member">data</ref><sp/>:<sp/>Data{};</highlight></codeline>
 <codeline lineno="26"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="27" refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(Trp<sp/>*trp)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_data(Trp<sp/>*trp)<sp/>{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>trp-&gt;data<sp/>=<sp/><ref refid="treap_8hpp_1a88d816c35d3a703c27719dabc1631d79" kindref="member">get_data</ref>(trp-&gt;l)<sp/>+<sp/><ref refid="treap_8hpp_1a88d816c35d3a703c27719dabc1631d79" kindref="member">get_data</ref>(trp-&gt;r);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>trp-&gt;data<sp/>=<sp/>get_data(trp-&gt;l)<sp/>+<sp/>get_data(trp-&gt;r);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
-<codeline lineno="34" refid="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" kindref="member">split</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Key<sp/>&amp;key,<sp/>Trp<sp/>*&amp;l,<sp/>Trp<sp/>*&amp;r)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>split(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Key<sp/>&amp;key,<sp/>Trp<sp/>*&amp;l,<sp/>Trp<sp/>*&amp;r)<sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/>r<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key<sp/>&lt;<sp/>trp-&gt;key)<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" kindref="member">split</ref>(trp-&gt;<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref>,<sp/>key,<sp/>l,<sp/>trp-&gt;<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split(trp-&gt;<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref>,<sp/>key,<sp/>l,<sp/>trp-&gt;<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref>);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/>trp;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" kindref="member">split</ref>(trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>key,<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>r);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split(trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>key,<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>r);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/>trp;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(trp);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>update_data(trp);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="47" refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;[[nodiscard]]<sp/>Trp<sp/>*<ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(Trp<sp/>*l,<sp/>Trp<sp/>*r)<sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" kindref="member">down</ref>(l);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" kindref="member">down</ref>(r);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/>[&amp;]()<sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!l)<sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!r)<sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(l-&gt;pri<sp/>&lt;<sp/>r-&gt;pri)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r-&gt;l<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(l,<sp/>r-&gt;l);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l-&gt;r<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(l-&gt;r,<sp/>r);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}();</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="67" refid="treap_8hpp_1ad45b31cb3a5a560af114abfcbce83936" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1ad45b31cb3a5a560af114abfcbce83936" kindref="member">insert</ref>(Trp<sp/>*&amp;trp,<sp/>Trp<sp/>*x)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trp-&gt;pri<sp/>&lt;<sp/>x-&gt;pri)<sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" kindref="member">split</ref>(trp,<sp/>x-&gt;key,<sp/>x-&gt;l,<sp/>x-&gt;r),<sp/>trp<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ad45b31cb3a5a560af114abfcbce83936" kindref="member">insert</ref>(x-&gt;key<sp/>&lt;<sp/>trp-&gt;key<sp/>?<sp/>trp-&gt;l<sp/>:<sp/>trp-&gt;r,<sp/>x);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(trp);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
-<codeline lineno="79" refid="treap_8hpp_1a14ea768f9d1a656b814be126c0a631c8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1ad45b31cb3a5a560af114abfcbce83936" kindref="member">insert</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*&amp;trp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Key<sp/>&amp;key)<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1ad45b31cb3a5a560af114abfcbce83936" kindref="member">insert</ref>(trp,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Trp{key});</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
-<codeline lineno="84" refid="treap_8hpp_1add90798283a022be36a018723badda5b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1add90798283a022be36a018723badda5b" kindref="member">erase</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*&amp;trp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Key<sp/>&amp;key)<sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trp-&gt;<ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref><sp/>==<sp/>key)<sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(trp-&gt;<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref>,<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1add90798283a022be36a018723badda5b" kindref="member">erase</ref>(key<sp/>&lt;<sp/>trp-&gt;key<sp/>?<sp/>trp-&gt;<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref><sp/>:<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>key);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(trp);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implicit<sp/>treaps</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94" refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" kindref="member">down</ref>(Trp<sp/>*trp)<sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(trp<sp/>&amp;&amp;<sp/>trp-&gt;rev))<sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>swap(trp-&gt;l,<sp/>trp-&gt;r);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flip(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(trp-&gt;x)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp-&gt;x-&gt;rev<sp/>^=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a75a87b416e4b63590fe320df19d3c513" kindref="member">flip</ref>(l)<sp/><ref refid="treap_8hpp_1a75a87b416e4b63590fe320df19d3c513" kindref="member">flip</ref>(r)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>flip</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp-&gt;rev<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;</highlight></codeline>
-<codeline lineno="109" refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(Trp<sp/>*trp,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos,<sp/>Trp<sp/>*&amp;l,<sp/>Trp<sp/>*&amp;r,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sum<sp/>=<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/>r<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" kindref="member">down</ref>(trp);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>cur<sp/>=<sp/>sum<sp/>+<sp/><ref refid="treap_8hpp_1a88d816c35d3a703c27719dabc1631d79" kindref="member">get_data</ref>(trp-&gt;l).size;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>&lt;=<sp/>cur)<sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(trp-&gt;l,<sp/>pos,<sp/>l,<sp/>trp-&gt;l,<sp/>sum);</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/>trp;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(trp-&gt;r,<sp/>pos,<sp/>trp-&gt;r,<sp/>r,<sp/>cur<sp/>+<sp/>1);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/>trp;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" kindref="member">update_data</ref>(trp);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="126" refid="treap_8hpp_1aa2a3eaf4c00318c5a4c9298b83d06003" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1aa2a3eaf4c00318c5a4c9298b83d06003" kindref="member">insert_imp</ref>(Trp<sp/>*&amp;trp,<sp/>Trp<sp/>*x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>Trp<sp/>*l,<sp/>*r;</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(trp,<sp/>pos,<sp/>l,<sp/>r);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>l<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(l,<sp/>x);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>trp<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(l,<sp/>r);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="132" refid="treap_8hpp_1a5029123d55b27e0746b8616a6f79eda3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1a5029123d55b27e0746b8616a6f79eda3" kindref="member">erase_imp</ref>(Trp<sp/>*&amp;trp,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>Trp<sp/>*l,<sp/>*r,<sp/>*x,<sp/>*nr;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(trp,<sp/>pos,<sp/>l,<sp/>r);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(r,<sp/>1,<sp/>x,<sp/>nr);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>trp<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(l,<sp/>nr);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="138" refid="treap_8hpp_1aa2ab504328f4d744315ec1da21b666f3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1aa2ab504328f4d744315ec1da21b666f3" kindref="member">get_imp</ref>(Trp<sp/>*&amp;trp,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>Trp<sp/>*l,<sp/>*r,<sp/>*x,<sp/>*nr;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(trp,<sp/>pos,<sp/>l,<sp/>r);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" kindref="member">split_imp</ref>(r,<sp/>1,<sp/>x,<sp/>nr);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>trp<sp/>=<sp/><ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(<ref refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" kindref="member">join</ref>(l,<sp/>x),<sp/>nr);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x-&gt;key;</highlight></codeline>
+<codeline lineno="55"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;[[nodiscard]]<sp/>Trp<sp/>*join(Trp<sp/>*l,<sp/>Trp<sp/>*r)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>down(l);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>down(r);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!l)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!r)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(l-&gt;pri<sp/>&lt;<sp/>r-&gt;pri)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r-&gt;l<sp/>=<sp/>join(l,<sp/>r-&gt;l);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l-&gt;r<sp/>=<sp/>join(l-&gt;r,<sp/>r);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>l;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>update_data(ret);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>insert(Trp<sp/>*&amp;trp,<sp/>Trp<sp/>*x)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trp-&gt;pri<sp/>&lt;<sp/>x-&gt;pri)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split(trp,<sp/>x-&gt;key,<sp/>x-&gt;l,<sp/>x-&gt;r),<sp/>trp<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>insert(x-&gt;key<sp/>&lt;<sp/>trp-&gt;key<sp/>?<sp/>trp-&gt;l<sp/>:<sp/>trp-&gt;r,<sp/>x);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>update_data(trp);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>insert(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*&amp;trp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Key<sp/>&amp;key)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>insert(trp,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Trp{key});</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>erase(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*&amp;trp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Key<sp/>&amp;key)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trp-&gt;<ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref><sp/>==<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp<sp/>=<sp/>join(trp-&gt;<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref>,<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>erase(key<sp/>&lt;<sp/>trp-&gt;key<sp/>?<sp/>trp-&gt;<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref><sp/>:<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>key);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>update_data(trp);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implicit<sp/>treaps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>down(Trp<sp/>*trp)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(trp<sp/>&amp;&amp;<sp/>trp-&gt;rev))<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>swap(trp-&gt;l,<sp/>trp-&gt;r);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flip(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(trp-&gt;x)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp-&gt;x-&gt;rev<sp/>^=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>flip(l)<sp/>flip(r)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>flip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trp-&gt;rev<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>split_imp(Trp<sp/>*trp,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos,<sp/>Trp<sp/>*&amp;l,<sp/>Trp<sp/>*&amp;r,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sum<sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/>r<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>down(trp);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>cur<sp/>=<sp/>sum<sp/>+<sp/>get_data(trp-&gt;l).size;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>&lt;=<sp/>cur)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_imp(trp-&gt;l,<sp/>pos,<sp/>l,<sp/>trp-&gt;l,<sp/>sum);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>=<sp/>trp;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split_imp(trp-&gt;r,<sp/>pos,<sp/>trp-&gt;r,<sp/>r,<sp/>cur<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/>trp;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>update_data(trp);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>insert_imp(Trp<sp/>*&amp;trp,<sp/>Trp<sp/>*x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>Trp<sp/>*l,<sp/>*r;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>split_imp(trp,<sp/>pos,<sp/>l,<sp/>r);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>l<sp/>=<sp/>join(l,<sp/>x);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>trp<sp/>=<sp/>join(l,<sp/>r);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>erase_imp(Trp<sp/>*&amp;trp,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>Trp<sp/>*l,<sp/>*r,<sp/>*x,<sp/>*nr;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>split_imp(trp,<sp/>pos,<sp/>l,<sp/>r);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>split_imp(r,<sp/>1,<sp/>x,<sp/>nr);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>trp<sp/>=<sp/>join(l,<sp/>nr);</highlight></codeline>
 <codeline lineno="144"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
-<codeline lineno="146" refid="treap_8hpp_1a4396c20ba2dc1e8172125ce5a28794e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1aa2a3eaf4c00318c5a4c9298b83d06003" kindref="member">insert_imp</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*&amp;trp,<sp/>Key<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;key,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1aa2a3eaf4c00318c5a4c9298b83d06003" kindref="member">insert_imp</ref>(trp,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Trp{key},<sp/>pos);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
-<codeline lineno="150" refid="treap_8hpp_1adc9b978577ebe26d5cef50ae4dde2362" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="treap_8hpp_1a650f755f8c99e25e39d93616c8c866df" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structtreap" kindref="compound">treap&lt;Ts...&gt;</ref><sp/>*trp)<sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>lvl<sp/>=<sp/>-1;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwith" kindref="compound">with</ref><sp/>_w{lvl<sp/>+<sp/>1,<sp/>lvl};</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tab(lvl,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trp)<sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;key<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;priority<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" kindref="member">pri</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1ab40ce02fc95a404710848a91512ecc9e" kindref="member">data</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Left&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref><sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Right&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;</highlight></codeline>
-<codeline lineno="167" refid="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" kindref="member">to_array</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp,<sp/>vector&lt;Key&gt;<sp/>&amp;out)<sp/>{</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>get_imp(Trp<sp/>*&amp;trp,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>Trp<sp/>*l,<sp/>*r,<sp/>*x,<sp/>*nr;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>split_imp(trp,<sp/>pos,<sp/>l,<sp/>r);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>split_imp(r,<sp/>1,<sp/>x,<sp/>nr);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>trp<sp/>=<sp/>join(join(l,<sp/>x),<sp/>nr);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x-&gt;key;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Trp<sp/>=<sp/>treap&lt;Key,<sp/>Data&gt;&gt;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>insert_imp(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*&amp;trp,<sp/>Key<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;key,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>insert_imp(trp,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Trp{key},<sp/>pos);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;operator&lt;&lt;(Stream<sp/>&amp;os,<sp/><ref refid="structtreap" kindref="compound">treap&lt;Ts...&gt;</ref><sp/>*trp)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>lvl<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_w{lvl<sp/>+<sp/>1,<sp/>lvl};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tab(lvl,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trp)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;key<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;priority<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a44d79f0b2ed82d18375892821cf2d08e" kindref="member">pri</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1ab40ce02fc95a404710848a91512ecc9e" kindref="member">data</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Left&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref><sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Right&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>tab<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;null&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" kindref="member">to_array</ref>(trp-&gt;<ref refid="structtreap_1af2bfe5a63eacc6519650e20655e9779f" kindref="member">l</ref>,<sp/>out);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>out.pb(trp-&gt;<ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref>);</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" kindref="member">to_array</ref>(trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>out);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;</highlight></codeline>
-<codeline lineno="176" refid="treap_8hpp_1a8627d817d1d1564b415505110432d65d" refkind="member"><highlight class="normal">vector&lt;Key&gt;<sp/><ref refid="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" kindref="member">to_array</ref>(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp)<sp/>{</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Key&gt;<sp/>out;</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="treap_8hpp_1ad72c7dcf3afbf183a09f2220922543d5" kindref="member">to_array</ref>(trp,<sp/>out);</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>to_array(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp,<sp/>vector&lt;Key&gt;<sp/>&amp;out)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!trp)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>to_array(trp-&gt;<ref refid="structtreap_1a405c76cc48ed19b4dec290a436d6722d" kindref="member">l</ref>,<sp/>out);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>out.push_back(trp-&gt;<ref refid="structtreap_1a6297c128b8cc434f2cb5110ea61368c1" kindref="member">key</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>to_array(trp-&gt;<ref refid="structtreap_1a4556aec43b8662ca209dc29fd1b2ae27" kindref="member">r</ref>,<sp/>out);</highlight></codeline>
 <codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Key,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Data&gt;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">vector&lt;Key&gt;<sp/>to_array(<ref refid="structtreap" kindref="compound">treap&lt;Key, Data&gt;</ref><sp/>*trp)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Key&gt;<sp/>out;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>to_array(trp,<sp/>out);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/ram/OmniTemplate/treap.hpp"/>
+    <location file="treap.hpp"/>
   </compounddef>
 </doxygen>

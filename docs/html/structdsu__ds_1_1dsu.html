@@ -99,6 +99,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a58bd229ccd7eac0892b762d178981c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a5a58bd229ccd7eac0892b762d178981c">find</a> (<a class="el" href="structll.html">ll</a> x) const</td></tr>
 <tr class="separator:a5a58bd229ccd7eac0892b762d178981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11446b57ae0bf69361258cb4ee2fd212"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a11446b57ae0bf69361258cb4ee2fd212">join</a> (<a class="el" href="structll.html">ll</a> x, <a class="el" href="structll.html">ll</a> y)</td></tr>
+<tr class="separator:a11446b57ae0bf69361258cb4ee2fd212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada73da3392d6444f9b29d60669f3c762"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#ada73da3392d6444f9b29d60669f3c762">dsu</a> (const <a class="el" href="structll.html">ll</a> n)</td></tr>
+<tr class="separator:ada73da3392d6444f9b29d60669f3c762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a58bd229ccd7eac0892b762d178981c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a5a58bd229ccd7eac0892b762d178981c">find</a> (<a class="el" href="structll.html">ll</a> x) const</td></tr>
+<tr class="separator:a5a58bd229ccd7eac0892b762d178981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11446b57ae0bf69361258cb4ee2fd212"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a11446b57ae0bf69361258cb4ee2fd212">join</a> (<a class="el" href="structll.html">ll</a> x, <a class="el" href="structll.html">ll</a> y)</td></tr>
 <tr class="memdesc:a11446b57ae0bf69361258cb4ee2fd212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.  <a href="structdsu__ds_1_1dsu.html#a11446b57ae0bf69361258cb4ee2fd212">More...</a><br /></td></tr>
 <tr class="separator:a11446b57ae0bf69361258cb4ee2fd212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -114,7 +120,33 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Disjoint-set data structure. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ada73da3392d6444f9b29d60669f3c762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada73da3392d6444f9b29d60669f3c762">&#9670;&nbsp;</a></span>dsu()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada73da3392d6444f9b29d60669f3c762">&#9670;&nbsp;</a></span>dsu() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dsu_ds::dsu::dsu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada73da3392d6444f9b29d60669f3c762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada73da3392d6444f9b29d60669f3c762">&#9670;&nbsp;</a></span>dsu() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +174,7 @@ Public Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5a58bd229ccd7eac0892b762d178981c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a58bd229ccd7eac0892b762d178981c">&#9670;&nbsp;</a></span>find()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a58bd229ccd7eac0892b762d178981c">&#9670;&nbsp;</a></span>find() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +198,37 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the representative element of x </p>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c_cgraph.svg" width="142" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5a58bd229ccd7eac0892b762d178981c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a58bd229ccd7eac0892b762d178981c">&#9670;&nbsp;</a></span>find() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> dsu_ds::dsu::find </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c_icgraph.svg" width="342" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -174,7 +237,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a11446b57ae0bf69361258cb4ee2fd212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11446b57ae0bf69361258cb4ee2fd212">&#9670;&nbsp;</a></span>join()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a11446b57ae0bf69361258cb4ee2fd212">&#9670;&nbsp;</a></span>join() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +274,49 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph.svg" width="320" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a11446b57ae0bf69361258cb4ee2fd212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11446b57ae0bf69361258cb4ee2fd212">&#9670;&nbsp;</a></span>join() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dsu_ds::dsu::join </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -256,7 +361,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/ram/OmniTemplate/<a class="el" href="d__compiled_8cpp.html">d_compiled.cpp</a></li>
 <li>/home/ram/OmniTemplate/<a class="el" href="dsu_8hpp_source.html">dsu.hpp</a></li>
 </ul>
 </div><!-- contents -->

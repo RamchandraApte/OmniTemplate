@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classqueue__tools_1_1MinStack" kind="class" language="C++" prot="public">
+    <compoundname>queue_tools::MinStack</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">stack&lt; pair&lt; T, T &gt;&gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename Base</type>
+        <defval>stack&lt;pair&lt;T, T&gt;&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classqueue__tools_1_1MinStack_1ac9ae47477c69e5faadb9c478a153c596" prot="public" static="no">
+        <type>T</type>
+        <definition>using queue_tools::MinStack&lt; T, Base &gt;::container_type =  T</definition>
+        <argsstring></argsstring>
+        <name>container_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="100" column="1" bodyfile="queue.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classqueue__tools_1_1MinStack_1ac879ccf41b218e3d75e227314e84e0c6" prot="public" static="no">
+        <type>T</type>
+        <definition>using queue_tools::MinStack&lt; T, Base &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="101" column="1" bodyfile="queue.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classqueue__tools_1_1MinStack_1aff2ea0311c1f8eb54918cc87d25673ba" prot="public" static="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>using queue_tools::MinStack&lt; T, Base &gt;::size_type =  ll</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="102" column="1" bodyfile="queue.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classqueue__tools_1_1MinStack_1aa0f4720a343e959a1c4539604b48e91f" prot="public" static="no">
+        <type>value_type &amp;</type>
+        <definition>using queue_tools::MinStack&lt; T, Base &gt;::reference =  value_type &amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="103" column="1" bodyfile="queue.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classqueue__tools_1_1MinStack_1a6fbd0283e2f3522ba2a795b8e3bfabd3" prot="public" static="no">
+        <type>const value_type &amp;</type>
+        <definition>using queue_tools::MinStack&lt; T, Base &gt;::const_reference =  const value_type &amp;</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="104" column="1" bodyfile="queue.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqueue__tools_1_1MinStack_1a9d9144961b94102610066192b64b6efa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void queue_tools::MinStack&lt; T, Base &gt;::push</definition>
+        <argsstring>(const T &amp;val)</argsstring>
+        <name>push</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="105" column="6" bodyfile="queue.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classqueue__tools_1_1MinStack_1af2d0b5ab34b19c4cca8f29aa0f382080" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; queue_tools::MinStack&lt; T, Base &gt;::top</definition>
+        <argsstring>() const</argsstring>
+        <name>top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the top of the stack </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="107" column="9" bodyfile="queue.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T queue_tools::MinStack&lt; T, Base &gt;::min</definition>
+        <argsstring>() const</argsstring>
+        <name>min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the minimum element of the stack </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="queue.hpp" line="109" column="3" bodyfile="queue.hpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>queue_tools::MinStack&lt; T, Base &gt;</label>
+        <link refid="classqueue__tools_1_1MinStack"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stack&lt; pair&lt; T, T &gt;&gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>queue_tools::MinStack&lt; T, Base &gt;</label>
+        <link refid="classqueue__tools_1_1MinStack"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stack&lt; pair&lt; T, T &gt;&gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="queue.hpp" line="98" column="27" bodyfile="queue.hpp" bodystart="98" bodyend="110"/>
+    <listofallmembers>
+      <member refid="classqueue__tools_1_1MinStack_1a6fbd0283e2f3522ba2a795b8e3bfabd3" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>const_reference</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1ac9ae47477c69e5faadb9c478a153c596" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>container_type</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>min</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1a9d9144961b94102610066192b64b6efa" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>push</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1aa0f4720a343e959a1c4539604b48e91f" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>reference</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1aff2ea0311c1f8eb54918cc87d25673ba" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>size_type</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1af2d0b5ab34b19c4cca8f29aa0f382080" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>top</name></member>
+      <member refid="classqueue__tools_1_1MinStack_1ac879ccf41b218e3d75e227314e84e0c6" prot="public" virt="non-virtual"><scope>queue_tools::MinStack</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

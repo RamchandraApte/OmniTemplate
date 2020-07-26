@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Program Listing for File CMakeCCompilerId.c &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-cmakeccompilerid-c">
+<span id="program-listing-file-build-cmakefiles-3-16-3-compileridc-cmakeccompilerid-c"></span><h1>Program Listing for File CMakeCCompilerId.c<a class="headerlink" href="#program-listing-for-file-cmakeccompilerid-c" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_build_CMakeFiles_3.16.3_CompilerIdC_CMakeCCompilerId.c.html#file-build-cmakefiles-3-16-3-compileridc-cmakeccompilerid-c"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef __cplusplus</span>
+<span class="cp"># error &quot;A C++ compiler has been selected for C.&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if defined(__18CXX)</span>
+<span class="cp"># define ID_VOID_MAIN</span>
+<span class="cp">#endif</span>
+<span class="cp">#if defined(__CLASSIC_C__)</span>
+<span class="cm">/* cv-qualifiers did not exist in K&amp;R C */</span>
+<span class="cp"># define const</span>
+<span class="cp"># define volatile</span>
+<span class="cp">#endif</span>
+
+
+<span class="cm">/* Version number components: V=Version, R=Revision, P=Patch</span>
+<span class="cm">   Version date components:   YYYY=Year, MM=Month,   DD=Day  */</span>
+
+<span class="cp">#if defined(__INTEL_COMPILER) || defined(__ICC)</span>
+<span class="cp"># define COMPILER_ID &quot;Intel&quot;</span>
+<span class="cp"># if defined(_MSC_VER)</span>
+<span class="cp">#  define SIMULATE_ID &quot;MSVC&quot;</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(__GNUC__)</span>
+<span class="cp">#  define SIMULATE_ID &quot;GNU&quot;</span>
+<span class="cp"># endif</span>
+  <span class="cm">/* __INTEL_COMPILER = VRP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__INTEL_COMPILER/100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__INTEL_COMPILER/10 % 10)</span>
+<span class="cp"># if defined(__INTEL_COMPILER_UPDATE)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__INTEL_COMPILER_UPDATE)</span>
+<span class="cp"># else</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__INTEL_COMPILER   % 10)</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(__INTEL_COMPILER_BUILD_DATE)</span>
+  <span class="cm">/* __INTEL_COMPILER_BUILD_DATE = YYYYMMDD */</span>
+<span class="cp">#  define COMPILER_VERSION_TWEAK DEC(__INTEL_COMPILER_BUILD_DATE)</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(_MSC_VER)</span>
+   <span class="cm">/* _MSC_VER = VVRR */</span>
+<span class="cp">#  define SIMULATE_VERSION_MAJOR DEC(_MSC_VER / 100)</span>
+<span class="cp">#  define SIMULATE_VERSION_MINOR DEC(_MSC_VER % 100)</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(__GNUC__)</span>
+<span class="cp">#  define SIMULATE_VERSION_MAJOR DEC(__GNUC__)</span>
+<span class="cp"># elif defined(__GNUG__)</span>
+<span class="cp">#  define SIMULATE_VERSION_MAJOR DEC(__GNUG__)</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(__GNUC_MINOR__)</span>
+<span class="cp">#  define SIMULATE_VERSION_MINOR DEC(__GNUC_MINOR__)</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(__GNUC_PATCHLEVEL__)</span>
+<span class="cp">#  define SIMULATE_VERSION_PATCH DEC(__GNUC_PATCHLEVEL__)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__PATHCC__)</span>
+<span class="cp"># define COMPILER_ID &quot;PathScale&quot;</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__PATHCC__)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__PATHCC_MINOR__)</span>
+<span class="cp"># if defined(__PATHCC_PATCHLEVEL__)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__PATHCC_PATCHLEVEL__)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__BORLANDC__) &amp;&amp; defined(__CODEGEARC_VERSION__)</span>
+<span class="cp"># define COMPILER_ID &quot;Embarcadero&quot;</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR HEX(__CODEGEARC_VERSION__&gt;&gt;24 &amp; 0x00FF)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR HEX(__CODEGEARC_VERSION__&gt;&gt;16 &amp; 0x00FF)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__CODEGEARC_VERSION__     &amp; 0xFFFF)</span>
+
+<span class="cp">#elif defined(__BORLANDC__)</span>
+<span class="cp"># define COMPILER_ID &quot;Borland&quot;</span>
+  <span class="cm">/* __BORLANDC__ = 0xVRR */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR HEX(__BORLANDC__&gt;&gt;8)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR HEX(__BORLANDC__ &amp; 0xFF)</span>
+
+<span class="cp">#elif defined(__WATCOMC__) &amp;&amp; __WATCOMC__ &lt; 1200</span>
+<span class="cp"># define COMPILER_ID &quot;Watcom&quot;</span>
+   <span class="cm">/* __WATCOMC__ = VVRR */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__WATCOMC__ / 100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC((__WATCOMC__ / 10) % 10)</span>
+<span class="cp"># if (__WATCOMC__ % 10) &gt; 0</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__WATCOMC__ % 10)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__WATCOMC__)</span>
+<span class="cp"># define COMPILER_ID &quot;OpenWatcom&quot;</span>
+   <span class="cm">/* __WATCOMC__ = VVRP + 1100 */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC((__WATCOMC__ - 1100) / 100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC((__WATCOMC__ / 10) % 10)</span>
+<span class="cp"># if (__WATCOMC__ % 10) &gt; 0</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__WATCOMC__ % 10)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__SUNPRO_C)</span>
+<span class="cp"># define COMPILER_ID &quot;SunPro&quot;</span>
+<span class="cp"># if __SUNPRO_C &gt;= 0x5100</span>
+   <span class="cm">/* __SUNPRO_C = 0xVRRP */</span>
+<span class="cp">#  define COMPILER_VERSION_MAJOR HEX(__SUNPRO_C&gt;&gt;12)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR HEX(__SUNPRO_C&gt;&gt;4 &amp; 0xFF)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH HEX(__SUNPRO_C    &amp; 0xF)</span>
+<span class="cp"># else</span>
+   <span class="cm">/* __SUNPRO_CC = 0xVRP */</span>
+<span class="cp">#  define COMPILER_VERSION_MAJOR HEX(__SUNPRO_C&gt;&gt;8)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR HEX(__SUNPRO_C&gt;&gt;4 &amp; 0xF)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH HEX(__SUNPRO_C    &amp; 0xF)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__HP_cc)</span>
+<span class="cp"># define COMPILER_ID &quot;HP&quot;</span>
+  <span class="cm">/* __HP_cc = VVRRPP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__HP_cc/10000)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__HP_cc/100 % 100)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__HP_cc     % 100)</span>
+
+<span class="cp">#elif defined(__DECC)</span>
+<span class="cp"># define COMPILER_ID &quot;Compaq&quot;</span>
+  <span class="cm">/* __DECC_VER = VVRRTPPPP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__DECC_VER/10000000)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__DECC_VER/100000  % 100)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__DECC_VER         % 10000)</span>
+
+<span class="cp">#elif defined(__IBMC__) &amp;&amp; defined(__COMPILER_VER__)</span>
+<span class="cp"># define COMPILER_ID &quot;zOS&quot;</span>
+  <span class="cm">/* __IBMC__ = VRP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__IBMC__/100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__IBMC__/10 % 10)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__IBMC__    % 10)</span>
+
+<span class="cp">#elif defined(__ibmxl__) &amp;&amp; defined(__clang__)</span>
+<span class="cp"># define COMPILER_ID &quot;XLClang&quot;</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__ibmxl_version__)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__ibmxl_release__)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__ibmxl_modification__)</span>
+<span class="cp"># define COMPILER_VERSION_TWEAK DEC(__ibmxl_ptf_fix_level__)</span>
+
+
+<span class="cp">#elif defined(__IBMC__) &amp;&amp; !defined(__COMPILER_VER__) &amp;&amp; __IBMC__ &gt;= 800</span>
+<span class="cp"># define COMPILER_ID &quot;XL&quot;</span>
+  <span class="cm">/* __IBMC__ = VRP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__IBMC__/100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__IBMC__/10 % 10)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__IBMC__    % 10)</span>
+
+<span class="cp">#elif defined(__IBMC__) &amp;&amp; !defined(__COMPILER_VER__) &amp;&amp; __IBMC__ &lt; 800</span>
+<span class="cp"># define COMPILER_ID &quot;VisualAge&quot;</span>
+  <span class="cm">/* __IBMC__ = VRP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__IBMC__/100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__IBMC__/10 % 10)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__IBMC__    % 10)</span>
+
+<span class="cp">#elif defined(__PGI)</span>
+<span class="cp"># define COMPILER_ID &quot;PGI&quot;</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__PGIC__)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__PGIC_MINOR__)</span>
+<span class="cp"># if defined(__PGIC_PATCHLEVEL__)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__PGIC_PATCHLEVEL__)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(_CRAYC)</span>
+<span class="cp"># define COMPILER_ID &quot;Cray&quot;</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(_RELEASE_MAJOR)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(_RELEASE_MINOR)</span>
+
+<span class="cp">#elif defined(__TI_COMPILER_VERSION__)</span>
+<span class="cp"># define COMPILER_ID &quot;TI&quot;</span>
+  <span class="cm">/* __TI_COMPILER_VERSION__ = VVVRRRPPP */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__TI_COMPILER_VERSION__/1000000)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__TI_COMPILER_VERSION__/1000   % 1000)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__TI_COMPILER_VERSION__        % 1000)</span>
+
+<span class="cp">#elif defined(__FUJITSU) || defined(__FCC_VERSION) || defined(__fcc_version)</span>
+<span class="cp"># define COMPILER_ID &quot;Fujitsu&quot;</span>
+
+<span class="cp">#elif defined(__ghs__)</span>
+<span class="cp"># define COMPILER_ID &quot;GHS&quot;</span>
+<span class="cm">/* __GHS_VERSION_NUMBER = VVVVRP */</span>
+<span class="cp"># ifdef __GHS_VERSION_NUMBER</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__GHS_VERSION_NUMBER / 100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__GHS_VERSION_NUMBER / 10 % 10)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__GHS_VERSION_NUMBER      % 10)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__TINYC__)</span>
+<span class="cp"># define COMPILER_ID &quot;TinyCC&quot;</span>
+
+<span class="cp">#elif defined(__BCC__)</span>
+<span class="cp"># define COMPILER_ID &quot;Bruce&quot;</span>
+
+<span class="cp">#elif defined(__SCO_VERSION__)</span>
+<span class="cp"># define COMPILER_ID &quot;SCO&quot;</span>
+
+<span class="cp">#elif defined(__ARMCC_VERSION) &amp;&amp; !defined(__clang__)</span>
+<span class="cp"># define COMPILER_ID &quot;ARMCC&quot;</span>
+<span class="cp">#if __ARMCC_VERSION &gt;= 1000000</span>
+  <span class="cm">/* __ARMCC_VERSION = VRRPPPP */</span>
+  <span class="cp"># define COMPILER_VERSION_MAJOR DEC(__ARMCC_VERSION/1000000)</span>
+  <span class="cp"># define COMPILER_VERSION_MINOR DEC(__ARMCC_VERSION/10000 % 100)</span>
+  <span class="cp"># define COMPILER_VERSION_PATCH DEC(__ARMCC_VERSION     % 10000)</span>
+<span class="cp">#else</span>
+  <span class="cm">/* __ARMCC_VERSION = VRPPPP */</span>
+  <span class="cp"># define COMPILER_VERSION_MAJOR DEC(__ARMCC_VERSION/100000)</span>
+  <span class="cp"># define COMPILER_VERSION_MINOR DEC(__ARMCC_VERSION/10000 % 10)</span>
+  <span class="cp"># define COMPILER_VERSION_PATCH DEC(__ARMCC_VERSION    % 10000)</span>
+<span class="cp">#endif</span>
+
+
+<span class="cp">#elif defined(__clang__) &amp;&amp; defined(__apple_build_version__)</span>
+<span class="cp"># define COMPILER_ID &quot;AppleClang&quot;</span>
+<span class="cp"># if defined(_MSC_VER)</span>
+<span class="cp">#  define SIMULATE_ID &quot;MSVC&quot;</span>
+<span class="cp"># endif</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__clang_major__)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__clang_minor__)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__clang_patchlevel__)</span>
+<span class="cp"># if defined(_MSC_VER)</span>
+   <span class="cm">/* _MSC_VER = VVRR */</span>
+<span class="cp">#  define SIMULATE_VERSION_MAJOR DEC(_MSC_VER / 100)</span>
+<span class="cp">#  define SIMULATE_VERSION_MINOR DEC(_MSC_VER % 100)</span>
+<span class="cp"># endif</span>
+<span class="cp"># define COMPILER_VERSION_TWEAK DEC(__apple_build_version__)</span>
+
+<span class="cp">#elif defined(__clang__) &amp;&amp; defined(__ARMCOMPILER_VERSION)</span>
+<span class="cp"># define COMPILER_ID &quot;ARMClang&quot;</span>
+  <span class="cp"># define COMPILER_VERSION_MAJOR DEC(__ARMCOMPILER_VERSION/1000000)</span>
+  <span class="cp"># define COMPILER_VERSION_MINOR DEC(__ARMCOMPILER_VERSION/10000 % 100)</span>
+  <span class="cp"># define COMPILER_VERSION_PATCH DEC(__ARMCOMPILER_VERSION     % 10000)</span>
+<span class="cp"># define COMPILER_VERSION_INTERNAL DEC(__ARMCOMPILER_VERSION)</span>
+
+<span class="cp">#elif defined(__clang__)</span>
+<span class="cp"># define COMPILER_ID &quot;Clang&quot;</span>
+<span class="cp"># if defined(_MSC_VER)</span>
+<span class="cp">#  define SIMULATE_ID &quot;MSVC&quot;</span>
+<span class="cp"># endif</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__clang_major__)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(__clang_minor__)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH DEC(__clang_patchlevel__)</span>
+<span class="cp"># if defined(_MSC_VER)</span>
+   <span class="cm">/* _MSC_VER = VVRR */</span>
+<span class="cp">#  define SIMULATE_VERSION_MAJOR DEC(_MSC_VER / 100)</span>
+<span class="cp">#  define SIMULATE_VERSION_MINOR DEC(_MSC_VER % 100)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__GNUC__)</span>
+<span class="cp"># define COMPILER_ID &quot;GNU&quot;</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(__GNUC__)</span>
+<span class="cp"># if defined(__GNUC_MINOR__)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR DEC(__GNUC_MINOR__)</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(__GNUC_PATCHLEVEL__)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__GNUC_PATCHLEVEL__)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(_MSC_VER)</span>
+<span class="cp"># define COMPILER_ID &quot;MSVC&quot;</span>
+  <span class="cm">/* _MSC_VER = VVRR */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR DEC(_MSC_VER / 100)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR DEC(_MSC_VER % 100)</span>
+<span class="cp"># if defined(_MSC_FULL_VER)</span>
+<span class="cp">#  if _MSC_VER &gt;= 1400</span>
+    <span class="cm">/* _MSC_FULL_VER = VVRRPPPPP */</span>
+<span class="cp">#   define COMPILER_VERSION_PATCH DEC(_MSC_FULL_VER % 100000)</span>
+<span class="cp">#  else</span>
+    <span class="cm">/* _MSC_FULL_VER = VVRRPPPP */</span>
+<span class="cp">#   define COMPILER_VERSION_PATCH DEC(_MSC_FULL_VER % 10000)</span>
+<span class="cp">#  endif</span>
+<span class="cp"># endif</span>
+<span class="cp"># if defined(_MSC_BUILD)</span>
+<span class="cp">#  define COMPILER_VERSION_TWEAK DEC(_MSC_BUILD)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__VISUALDSPVERSION__) || defined(__ADSPBLACKFIN__) || defined(__ADSPTS__) || defined(__ADSP21000__)</span>
+<span class="cp"># define COMPILER_ID &quot;ADSP&quot;</span>
+<span class="cp">#if defined(__VISUALDSPVERSION__)</span>
+  <span class="cm">/* __VISUALDSPVERSION__ = 0xVVRRPP00 */</span>
+<span class="cp"># define COMPILER_VERSION_MAJOR HEX(__VISUALDSPVERSION__&gt;&gt;24)</span>
+<span class="cp"># define COMPILER_VERSION_MINOR HEX(__VISUALDSPVERSION__&gt;&gt;16 &amp; 0xFF)</span>
+<span class="cp"># define COMPILER_VERSION_PATCH HEX(__VISUALDSPVERSION__&gt;&gt;8  &amp; 0xFF)</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#elif defined(__IAR_SYSTEMS_ICC__) || defined(__IAR_SYSTEMS_ICC)</span>
+<span class="cp"># define COMPILER_ID &quot;IAR&quot;</span>
+<span class="cp"># if defined(__VER__) &amp;&amp; defined(__ICCARM__)</span>
+<span class="cp">#  define COMPILER_VERSION_MAJOR DEC((__VER__) / 1000000)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR DEC(((__VER__) / 1000) % 1000)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC((__VER__) % 1000)</span>
+<span class="cp">#  define COMPILER_VERSION_INTERNAL DEC(__IAR_SYSTEMS_ICC__)</span>
+<span class="cp"># elif defined(__VER__) &amp;&amp; (defined(__ICCAVR__) || defined(__ICCRX__) || defined(__ICCRH850__) || defined(__ICCRL78__) || defined(__ICC430__) || defined(__ICCRISCV__) || defined(__ICCV850__) || defined(__ICC8051__))</span>
+<span class="cp">#  define COMPILER_VERSION_MAJOR DEC((__VER__) / 100)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR DEC((__VER__) - (((__VER__) / 100)*100))</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__SUBVERSION__)</span>
+<span class="cp">#  define COMPILER_VERSION_INTERNAL DEC(__IAR_SYSTEMS_ICC__)</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__SDCC_VERSION_MAJOR) || defined(SDCC)</span>
+<span class="cp"># define COMPILER_ID &quot;SDCC&quot;</span>
+<span class="cp"># if defined(__SDCC_VERSION_MAJOR)</span>
+<span class="cp">#  define COMPILER_VERSION_MAJOR DEC(__SDCC_VERSION_MAJOR)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR DEC(__SDCC_VERSION_MINOR)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(__SDCC_VERSION_PATCH)</span>
+<span class="cp"># else</span>
+  <span class="cm">/* SDCC = VRP */</span>
+<span class="cp">#  define COMPILER_VERSION_MAJOR DEC(SDCC/100)</span>
+<span class="cp">#  define COMPILER_VERSION_MINOR DEC(SDCC/10 % 10)</span>
+<span class="cp">#  define COMPILER_VERSION_PATCH DEC(SDCC    % 10)</span>
+<span class="cp"># endif</span>
+
+
+<span class="cm">/* These compilers are either not known or too old to define an</span>
+<span class="cm">  identification macro.  Try to identify the platform and guess that</span>
+<span class="cm">  it is the native compiler.  */</span>
+<span class="cp">#elif defined(__hpux) || defined(__hpua)</span>
+<span class="cp"># define COMPILER_ID &quot;HP&quot;</span>
+
+<span class="cp">#else </span><span class="cm">/* unknown compiler */</span><span class="cp"></span>
+<span class="cp"># define COMPILER_ID &quot;&quot;</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Construct the string literal in pieces to prevent the source from</span>
+<span class="cm">   getting matched.  Store it in a pointer rather than an array</span>
+<span class="cm">   because some compilers will just produce instructions to fill the</span>
+<span class="cm">   array rather than assigning a pointer to a static array.  */</span>
+<span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">info_compiler</span> <span class="o">=</span> <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;compiler[&quot;</span> <span class="n">COMPILER_ID</span> <span class="s">&quot;]&quot;</span><span class="p">;</span>
+<span class="cp">#ifdef SIMULATE_ID</span>
+<span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">info_simulate</span> <span class="o">=</span> <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;simulate[&quot;</span> <span class="n">SIMULATE_ID</span> <span class="s">&quot;]&quot;</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#ifdef __QNXNTO__</span>
+<span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">qnxnto</span> <span class="o">=</span> <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;qnxnto[]&quot;</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#if defined(__CRAYXE) || defined(__CRAYXC)</span>
+<span class="kt">char</span> <span class="k">const</span> <span class="o">*</span><span class="n">info_cray</span> <span class="o">=</span> <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;compiler_wrapper[CrayPrgEnv]&quot;</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+<span class="cp">#define STRINGIFY_HELPER(X) #X</span>
+<span class="cp">#define STRINGIFY(X) STRINGIFY_HELPER(X)</span>
+
+<span class="cm">/* Identify known platforms by name.  */</span>
+<span class="cp">#if defined(__linux) || defined(__linux__) || defined(linux)</span>
+<span class="cp"># define PLATFORM_ID &quot;Linux&quot;</span>
+
+<span class="cp">#elif defined(__CYGWIN__)</span>
+<span class="cp"># define PLATFORM_ID &quot;Cygwin&quot;</span>
+
+<span class="cp">#elif defined(__MINGW32__)</span>
+<span class="cp"># define PLATFORM_ID &quot;MinGW&quot;</span>
+
+<span class="cp">#elif defined(__APPLE__)</span>
+<span class="cp"># define PLATFORM_ID &quot;Darwin&quot;</span>
+
+<span class="cp">#elif defined(_WIN32) || defined(__WIN32__) || defined(WIN32)</span>
+<span class="cp"># define PLATFORM_ID &quot;Windows&quot;</span>
+
+<span class="cp">#elif defined(__FreeBSD__) || defined(__FreeBSD)</span>
+<span class="cp"># define PLATFORM_ID &quot;FreeBSD&quot;</span>
+
+<span class="cp">#elif defined(__NetBSD__) || defined(__NetBSD)</span>
+<span class="cp"># define PLATFORM_ID &quot;NetBSD&quot;</span>
+
+<span class="cp">#elif defined(__OpenBSD__) || defined(__OPENBSD)</span>
+<span class="cp"># define PLATFORM_ID &quot;OpenBSD&quot;</span>
+
+<span class="cp">#elif defined(__sun) || defined(sun)</span>
+<span class="cp"># define PLATFORM_ID &quot;SunOS&quot;</span>
+
+<span class="cp">#elif defined(_AIX) || defined(__AIX) || defined(__AIX__) || defined(__aix) || defined(__aix__)</span>
+<span class="cp"># define PLATFORM_ID &quot;AIX&quot;</span>
+
+<span class="cp">#elif defined(__hpux) || defined(__hpux__)</span>
+<span class="cp"># define PLATFORM_ID &quot;HP-UX&quot;</span>
+
+<span class="cp">#elif defined(__HAIKU__)</span>
+<span class="cp"># define PLATFORM_ID &quot;Haiku&quot;</span>
+
+<span class="cp">#elif defined(__BeOS) || defined(__BEOS__) || defined(_BEOS)</span>
+<span class="cp"># define PLATFORM_ID &quot;BeOS&quot;</span>
+
+<span class="cp">#elif defined(__QNX__) || defined(__QNXNTO__)</span>
+<span class="cp"># define PLATFORM_ID &quot;QNX&quot;</span>
+
+<span class="cp">#elif defined(__tru64) || defined(_tru64) || defined(__TRU64__)</span>
+<span class="cp"># define PLATFORM_ID &quot;Tru64&quot;</span>
+
+<span class="cp">#elif defined(__riscos) || defined(__riscos__)</span>
+<span class="cp"># define PLATFORM_ID &quot;RISCos&quot;</span>
+
+<span class="cp">#elif defined(__sinix) || defined(__sinix__) || defined(__SINIX__)</span>
+<span class="cp"># define PLATFORM_ID &quot;SINIX&quot;</span>
+
+<span class="cp">#elif defined(__UNIX_SV__)</span>
+<span class="cp"># define PLATFORM_ID &quot;UNIX_SV&quot;</span>
+
+<span class="cp">#elif defined(__bsdos__)</span>
+<span class="cp"># define PLATFORM_ID &quot;BSDOS&quot;</span>
+
+<span class="cp">#elif defined(_MPRAS) || defined(MPRAS)</span>
+<span class="cp"># define PLATFORM_ID &quot;MP-RAS&quot;</span>
+
+<span class="cp">#elif defined(__osf) || defined(__osf__)</span>
+<span class="cp"># define PLATFORM_ID &quot;OSF1&quot;</span>
+
+<span class="cp">#elif defined(_SCO_SV) || defined(SCO_SV) || defined(sco_sv)</span>
+<span class="cp"># define PLATFORM_ID &quot;SCO_SV&quot;</span>
+
+<span class="cp">#elif defined(__ultrix) || defined(__ultrix__) || defined(_ULTRIX)</span>
+<span class="cp"># define PLATFORM_ID &quot;ULTRIX&quot;</span>
+
+<span class="cp">#elif defined(__XENIX__) || defined(_XENIX) || defined(XENIX)</span>
+<span class="cp"># define PLATFORM_ID &quot;Xenix&quot;</span>
+
+<span class="cp">#elif defined(__WATCOMC__)</span>
+<span class="cp"># if defined(__LINUX__)</span>
+<span class="cp">#  define PLATFORM_ID &quot;Linux&quot;</span>
+
+<span class="cp"># elif defined(__DOS__)</span>
+<span class="cp">#  define PLATFORM_ID &quot;DOS&quot;</span>
+
+<span class="cp"># elif defined(__OS2__)</span>
+<span class="cp">#  define PLATFORM_ID &quot;OS2&quot;</span>
+
+<span class="cp"># elif defined(__WINDOWS__)</span>
+<span class="cp">#  define PLATFORM_ID &quot;Windows3x&quot;</span>
+
+<span class="cp"># else </span><span class="cm">/* unknown platform */</span><span class="cp"></span>
+<span class="cp">#  define PLATFORM_ID</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__INTEGRITY)</span>
+<span class="cp"># if defined(INT_178B)</span>
+<span class="cp">#  define PLATFORM_ID &quot;Integrity178&quot;</span>
+
+<span class="cp"># else </span><span class="cm">/* regular Integrity */</span><span class="cp"></span>
+<span class="cp">#  define PLATFORM_ID &quot;Integrity&quot;</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#else </span><span class="cm">/* unknown platform */</span><span class="cp"></span>
+<span class="cp"># define PLATFORM_ID</span>
+
+<span class="cp">#endif</span>
+
+<span class="cm">/* For windows compilers MSVC and Intel we can determine</span>
+<span class="cm">   the architecture of the compiler being used.  This is because</span>
+<span class="cm">   the compilers do not have flags that can change the architecture,</span>
+<span class="cm">   but rather depend on which compiler is being used</span>
+<span class="cm">*/</span>
+<span class="cp">#if defined(_WIN32) &amp;&amp; defined(_MSC_VER)</span>
+<span class="cp"># if defined(_M_IA64)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;IA64&quot;</span>
+
+<span class="cp"># elif defined(_M_X64) || defined(_M_AMD64)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;x64&quot;</span>
+
+<span class="cp"># elif defined(_M_IX86)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;X86&quot;</span>
+
+<span class="cp"># elif defined(_M_ARM64)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;ARM64&quot;</span>
+
+<span class="cp"># elif defined(_M_ARM)</span>
+<span class="cp">#  if _M_ARM == 4</span>
+<span class="cp">#   define ARCHITECTURE_ID &quot;ARMV4I&quot;</span>
+<span class="cp">#  elif _M_ARM == 5</span>
+<span class="cp">#   define ARCHITECTURE_ID &quot;ARMV5I&quot;</span>
+<span class="cp">#  else</span>
+<span class="cp">#   define ARCHITECTURE_ID &quot;ARMV&quot; STRINGIFY(_M_ARM)</span>
+<span class="cp">#  endif</span>
+
+<span class="cp"># elif defined(_M_MIPS)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;MIPS&quot;</span>
+
+<span class="cp"># elif defined(_M_SH)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;SHx&quot;</span>
+
+<span class="cp"># else </span><span class="cm">/* unknown architecture */</span><span class="cp"></span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;&quot;</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__WATCOMC__)</span>
+<span class="cp"># if defined(_M_I86)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;I86&quot;</span>
+
+<span class="cp"># elif defined(_M_IX86)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;X86&quot;</span>
+
+<span class="cp"># else </span><span class="cm">/* unknown architecture */</span><span class="cp"></span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;&quot;</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__IAR_SYSTEMS_ICC__) || defined(__IAR_SYSTEMS_ICC)</span>
+<span class="cp"># if defined(__ICCARM__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;ARM&quot;</span>
+
+<span class="cp"># elif defined(__ICCRX__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;RX&quot;</span>
+
+<span class="cp"># elif defined(__ICCRH850__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;RH850&quot;</span>
+
+<span class="cp"># elif defined(__ICCRL78__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;RL78&quot;</span>
+
+<span class="cp"># elif defined(__ICCRISCV__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;RISCV&quot;</span>
+
+<span class="cp"># elif defined(__ICCAVR__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;AVR&quot;</span>
+
+<span class="cp"># elif defined(__ICC430__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;MSP430&quot;</span>
+
+<span class="cp"># elif defined(__ICCV850__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;V850&quot;</span>
+
+<span class="cp"># elif defined(__ICC8051__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;8051&quot;</span>
+
+<span class="cp"># else </span><span class="cm">/* unknown architecture */</span><span class="cp"></span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;&quot;</span>
+<span class="cp"># endif</span>
+
+<span class="cp">#elif defined(__ghs__)</span>
+<span class="cp"># if defined(__PPC64__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;PPC64&quot;</span>
+
+<span class="cp"># elif defined(__ppc__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;PPC&quot;</span>
+
+<span class="cp"># elif defined(__ARM__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;ARM&quot;</span>
+
+<span class="cp"># elif defined(__x86_64__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;x64&quot;</span>
+
+<span class="cp"># elif defined(__i386__)</span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;X86&quot;</span>
+
+<span class="cp"># else </span><span class="cm">/* unknown architecture */</span><span class="cp"></span>
+<span class="cp">#  define ARCHITECTURE_ID &quot;&quot;</span>
+<span class="cp"># endif</span>
+<span class="cp">#else</span>
+<span class="cp">#  define ARCHITECTURE_ID</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Convert integer to decimal digit literals.  */</span>
+<span class="cp">#define DEC(n)                   \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 10000000)%10)), \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 1000000)%10)),  \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 100000)%10)),   \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 10000)%10)),    \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 1000)%10)),     \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 100)%10)),      \</span>
+<span class="cp">  (&#39;0&#39; + (((n) / 10)%10)),       \</span>
+<span class="cp">  (&#39;0&#39; +  ((n) % 10))</span>
+
+<span class="cm">/* Convert integer to hex digit literals.  */</span>
+<span class="cp">#define HEX(n)             \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;28 &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;24 &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;20 &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;16 &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;12 &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;8  &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)&gt;&gt;4  &amp; 0xF)), \</span>
+<span class="cp">  (&#39;0&#39; + ((n)     &amp; 0xF))</span>
+
+<span class="cm">/* Construct a string literal encoding the version number components. */</span>
+<span class="cp">#ifdef COMPILER_VERSION_MAJOR</span>
+<span class="kt">char</span> <span class="k">const</span> <span class="n">info_version</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="sc">&#39;I&#39;</span><span class="p">,</span> <span class="sc">&#39;N&#39;</span><span class="p">,</span> <span class="sc">&#39;F&#39;</span><span class="p">,</span> <span class="sc">&#39;O&#39;</span><span class="p">,</span> <span class="sc">&#39;:&#39;</span><span class="p">,</span>
+  <span class="sc">&#39;c&#39;</span><span class="p">,</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="sc">&#39;m&#39;</span><span class="p">,</span><span class="sc">&#39;p&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span><span class="sc">&#39;_&#39;</span><span class="p">,</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span><span class="sc">&#39;s&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="sc">&#39;n&#39;</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span>
+  <span class="n">COMPILER_VERSION_MAJOR</span><span class="p">,</span>
+<span class="cp"># ifdef COMPILER_VERSION_MINOR</span>
+  <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="n">COMPILER_VERSION_MINOR</span><span class="p">,</span>
+<span class="cp">#  ifdef COMPILER_VERSION_PATCH</span>
+   <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="n">COMPILER_VERSION_PATCH</span><span class="p">,</span>
+<span class="cp">#   ifdef COMPILER_VERSION_TWEAK</span>
+    <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="n">COMPILER_VERSION_TWEAK</span><span class="p">,</span>
+<span class="cp">#   endif</span>
+<span class="cp">#  endif</span>
+<span class="cp"># endif</span>
+  <span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Construct a string literal encoding the internal version number. */</span>
+<span class="cp">#ifdef COMPILER_VERSION_INTERNAL</span>
+<span class="kt">char</span> <span class="k">const</span> <span class="n">info_version_internal</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="sc">&#39;I&#39;</span><span class="p">,</span> <span class="sc">&#39;N&#39;</span><span class="p">,</span> <span class="sc">&#39;F&#39;</span><span class="p">,</span> <span class="sc">&#39;O&#39;</span><span class="p">,</span> <span class="sc">&#39;:&#39;</span><span class="p">,</span>
+  <span class="sc">&#39;c&#39;</span><span class="p">,</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="sc">&#39;m&#39;</span><span class="p">,</span><span class="sc">&#39;p&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span><span class="sc">&#39;_&#39;</span><span class="p">,</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span><span class="sc">&#39;s&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="sc">&#39;n&#39;</span><span class="p">,</span><span class="sc">&#39;_&#39;</span><span class="p">,</span>
+  <span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;n&#39;</span><span class="p">,</span><span class="sc">&#39;t&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span><span class="sc">&#39;n&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span>
+  <span class="n">COMPILER_VERSION_INTERNAL</span><span class="p">,</span><span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Construct a string literal encoding the version number components. */</span>
+<span class="cp">#ifdef SIMULATE_VERSION_MAJOR</span>
+<span class="kt">char</span> <span class="k">const</span> <span class="n">info_simulate_version</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="sc">&#39;I&#39;</span><span class="p">,</span> <span class="sc">&#39;N&#39;</span><span class="p">,</span> <span class="sc">&#39;F&#39;</span><span class="p">,</span> <span class="sc">&#39;O&#39;</span><span class="p">,</span> <span class="sc">&#39;:&#39;</span><span class="p">,</span>
+  <span class="sc">&#39;s&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;m&#39;</span><span class="p">,</span><span class="sc">&#39;u&#39;</span><span class="p">,</span><span class="sc">&#39;l&#39;</span><span class="p">,</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="sc">&#39;t&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;_&#39;</span><span class="p">,</span><span class="sc">&#39;v&#39;</span><span class="p">,</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="sc">&#39;r&#39;</span><span class="p">,</span><span class="sc">&#39;s&#39;</span><span class="p">,</span><span class="sc">&#39;i&#39;</span><span class="p">,</span><span class="sc">&#39;o&#39;</span><span class="p">,</span><span class="sc">&#39;n&#39;</span><span class="p">,</span><span class="sc">&#39;[&#39;</span><span class="p">,</span>
+  <span class="n">SIMULATE_VERSION_MAJOR</span><span class="p">,</span>
+<span class="cp"># ifdef SIMULATE_VERSION_MINOR</span>
+  <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="n">SIMULATE_VERSION_MINOR</span><span class="p">,</span>
+<span class="cp">#  ifdef SIMULATE_VERSION_PATCH</span>
+   <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="n">SIMULATE_VERSION_PATCH</span><span class="p">,</span>
+<span class="cp">#   ifdef SIMULATE_VERSION_TWEAK</span>
+    <span class="sc">&#39;.&#39;</span><span class="p">,</span> <span class="n">SIMULATE_VERSION_TWEAK</span><span class="p">,</span>
+<span class="cp">#   endif</span>
+<span class="cp">#  endif</span>
+<span class="cp"># endif</span>
+  <span class="sc">&#39;]&#39;</span><span class="p">,</span><span class="sc">&#39;\0&#39;</span><span class="p">};</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* Construct the string literal in pieces to prevent the source from</span>
+<span class="cm">   getting matched.  Store it in a pointer rather than an array</span>
+<span class="cm">   because some compilers will just produce instructions to fill the</span>
+<span class="cm">   array rather than assigning a pointer to a static array.  */</span>
+<span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">info_platform</span> <span class="o">=</span> <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;platform[&quot;</span> <span class="n">PLATFORM_ID</span> <span class="s">&quot;]&quot;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="k">const</span><span class="o">*</span> <span class="n">info_arch</span> <span class="o">=</span> <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;arch[&quot;</span> <span class="n">ARCHITECTURE_ID</span> <span class="s">&quot;]&quot;</span><span class="p">;</span>
+
+
+
+
+<span class="cp">#if !defined(__STDC__)</span>
+<span class="cp"># if (defined(_MSC_VER) &amp;&amp; !defined(__clang__)) \</span>
+<span class="cp">  || (defined(__ibmxl__) || defined(__IBMC__))</span>
+<span class="cp">#  define C_DIALECT &quot;90&quot;</span>
+<span class="cp"># else</span>
+<span class="cp">#  define C_DIALECT</span>
+<span class="cp"># endif</span>
+<span class="cp">#elif __STDC_VERSION__ &gt;= 201000L</span>
+<span class="cp"># define C_DIALECT &quot;11&quot;</span>
+<span class="cp">#elif __STDC_VERSION__ &gt;= 199901L</span>
+<span class="cp"># define C_DIALECT &quot;99&quot;</span>
+<span class="cp">#else</span>
+<span class="cp"># define C_DIALECT &quot;90&quot;</span>
+<span class="cp">#endif</span>
+<span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">info_language_dialect_default</span> <span class="o">=</span>
+  <span class="s">&quot;INFO&quot;</span> <span class="s">&quot;:&quot;</span> <span class="s">&quot;dialect_default[&quot;</span> <span class="n">C_DIALECT</span> <span class="s">&quot;]&quot;</span><span class="p">;</span>
+
+<span class="cm">/*--------------------------------------------------------------------------*/</span>
+
+<span class="cp">#ifdef ID_VOID_MAIN</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{}</span>
+<span class="cp">#else</span>
+<span class="cp"># if defined(__CLASSIC_C__)</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">)</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">;</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[];</span>
+<span class="cp"># else</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="cp"># endif</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">require</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_compiler</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_platform</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_arch</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+<span class="cp">#ifdef COMPILER_VERSION_MAJOR</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_version</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+<span class="cp">#endif</span>
+<span class="cp">#ifdef COMPILER_VERSION_INTERNAL</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_version_internal</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+<span class="cp">#endif</span>
+<span class="cp">#ifdef SIMULATE_ID</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_simulate</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+<span class="cp">#endif</span>
+<span class="cp">#ifdef SIMULATE_VERSION_MAJOR</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_simulate_version</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+<span class="cp">#endif</span>
+<span class="cp">#if defined(__CRAYXE) || defined(__CRAYXC)</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_cray</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+<span class="cp">#endif</span>
+  <span class="n">require</span> <span class="o">+=</span> <span class="n">info_language_dialect_default</span><span class="p">[</span><span class="n">argc</span><span class="p">];</span>
+  <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">argv</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">require</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/program_listing_file_build_CMakeFiles_3.16.3_CompilerIdC_CMakeCCompilerId.c.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

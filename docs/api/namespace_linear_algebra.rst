@@ -1,0 +1,61 @@
+
+.. _namespace_linear_algebra:
+
+Namespace linear_algebra
+========================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structlinear__algebra_1_1matrix`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_d__compiled_8cpp_1ab7a7f1a8ba225710625d5af10f317b6a`
+
+- :ref:`exhale_function_d__compiled_8cpp_1ad15ec6af6887423cb03ff23db2d94738`
+
+- :ref:`exhale_function_d__compiled_8cpp_1aac11793366a8aa7d2396775fdb1ba8ca`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a30be90e8c8b57bcd04237e9b1d5b2fe9`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a9857489fa641b19465aed9647a854219`
+
+- :ref:`exhale_function_d__compiled_8cpp_1ad80debbf481bb22b5347633cd83e2c77`
+
+- :ref:`exhale_function_d__compiled_8cpp_1abaec40e1e6a4ac4de9316a94f0516dbb`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a6233529d7882aa9ce30e9bb40fa6c865`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a297c703d12bd9b758de47e299044d8f2`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a2585fee5a1476634e4acdd3a76e8d606`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a2b7036bfe170c860f3c08deea3fec213`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a736cda2f4e9d62713f271320745b6d19`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a030fbbd0e40aa66bc02cb2d74ae80d57`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a2da52bf2b92d06eeb430122c3ec209ec`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a374c06877fb866b1df88bd50c7ea4629`
+
+- :ref:`exhale_function_d__compiled_8cpp_1ae1cd9afafb1f7ca00e88e73d262c0704`
+
+- :ref:`exhale_function_d__compiled_8cpp_1ad92ef518c8439f84b4414ff16ec2cdcc`
+
+- :ref:`exhale_function_d__compiled_8cpp_1a14b8a1cd669e604f8c4c121e723f17b6`

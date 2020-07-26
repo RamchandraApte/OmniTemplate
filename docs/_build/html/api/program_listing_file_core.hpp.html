@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Program Listing for File core.hpp &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-core-hpp">
+<span id="program-listing-file-core-hpp"></span><h1>Program Listing for File core.hpp<a class="headerlink" href="#program-listing-for-file-core-hpp" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_core.hpp.html#file-core-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">core.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+
+<span class="cp">#ifndef PRE</span>
+<span class="c1">//#if defined(__GNUC__) &amp;&amp; !defined(__clang__)</span>
+<span class="cp">#if 0</span><span class="c"></span>
+<span class="c">#define REALGCC</span>
+<span class="cp">#endif</span>
+<span class="cp">#ifdef REALGCC</span>
+<span class="cp">#include</span> <span class="cpf">&lt;bits/extc++.h&gt;</span><span class="cp"></span>
+<span class="cp">#else</span>
+<span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="cp">#endif</span>
+<span class="cp">#include</span> <span class="cpf">&lt;experimental/iterator&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;experimental/source_location&gt;</span><span class="cp"></span>
+<span class="cp">#endif</span>
+<span class="cp">#define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})</span>
+<span class="cp">#define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))</span>
+<span class="cp">#define tm(...) template &lt;typename __VA_ARGS__ T&gt;</span>
+<span class="cp">#define this (*this)</span>
+<span class="cp">#define al(v) begin(v), end(v)</span>
+<span class="cp">#define I(x)                                                                   \</span>
+<span class="cp">    ll x;                                                                  \</span>
+<span class="cp">    cin &gt;&gt; x;</span>
+<span class="cp">#define pb push_back</span>
+<span class="cp">#define vc vector</span>
+<span class="kt">bool</span> <span class="n">debug_mode</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="c1">//#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}</span>
+<span class="cp">#define rel_assert(...) s</span>
+<span class="cp">#define WARN(msg)                                                              \</span>
+<span class="cp">    [[deprecated(msg)]] auto warn = []() { rel_assert(msg); };             \</span>
+<span class="cp">    warn();</span>
+<span class="cp">#define TODO(msg) WARN(&quot;TODO: &quot; msg)</span>
+<span class="cp">#define paste2(x, y) x##y</span>
+<span class="cp">#define paste(x, y) paste2(x, y)</span>
+<span class="cp">#define lets_count lets_add paste(_l, __COUNTER__)</span>
+<span class="cp">#define let(a, ...)                                                            \</span>
+<span class="cp">    using a = __VA_ARGS__;                                                 \</span>
+<span class="cp">    lets_count{#__VA_ARGS__, #a};</span>
+<span class="cp">#define import(a)                                                              \</span>
+<span class="cp">    using namespace a;                                                     \</span>
+<span class="cp">    lets_count{#a &quot;::&quot;, &quot;&quot;};</span>
+<span class="cp">#define df(x, v) remove_const_t&lt;decltype(v)&gt; x = v</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">string</span><span class="o">&gt;&gt;</span> <span class="n">lets</span><span class="p">{{</span><span class="s">&quot;__debug::&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">},</span>
+                  <span class="p">{</span><span class="s">&quot;const &quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">},</span>
+                  <span class="p">{</span><span class="s">&quot;__cxx11::basic_string&lt;char&gt;&quot;</span><span class="p">,</span> <span class="s">&quot;string&quot;</span><span class="p">}};</span>
+<span class="k">struct</span> <span class="n">lets_add</span> <span class="p">{</span>
+    <span class="n">lets_add</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">lets</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">});</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="cp">#ifdef REALGCC</span>
+<span class="n">import</span><span class="p">(</span><span class="n">__gnu_pbds</span><span class="p">);</span>
+<span class="k">using</span> <span class="n">__gnu_cxx</span><span class="o">::</span><span class="n">power</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="p">;</span>
+<span class="n">import</span><span class="p">(</span><span class="n">std</span><span class="p">);</span>
+<span class="c1">// import(experimental);</span>
+<span class="k">using</span> <span class="n">experimental</span><span class="o">::</span><span class="n">make_ostream_joiner</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">experimental</span><span class="o">::</span><span class="n">ostream_joiner</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">experimental</span><span class="o">::</span><span class="n">source_location</span><span class="p">;</span>
+<span class="n">import</span><span class="p">(</span><span class="n">chrono</span><span class="p">);</span>
+<span class="n">import</span><span class="p">(</span><span class="n">literals</span><span class="p">);</span>
+<span class="n">import</span><span class="p">(</span><span class="n">placeholders</span><span class="p">)</span> <span class="n">let</span><span class="p">(</span><span class="n">lli</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">ull</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">ll</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">vl</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">ld</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">)</span> <span class="n">let</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">com</span><span class="p">,</span> <span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">complex</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">ull</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">);</span>
+<span class="k">using</span> <span class="n">bt</span> <span class="o">=</span> <span class="n">bitset</span><span class="o">&lt;</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;::</span><span class="n">digits</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Comp</span><span class="o">&gt;</span>
+<span class="k">using</span> <span class="n">prio_queue_t</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Comp</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">let</span><span class="p">(</span><span class="n">clock_</span><span class="p">,</span> <span class="n">high_resolution_clock</span><span class="p">);</span>
+<span class="n">import</span><span class="p">(</span><span class="n">this_thread</span><span class="p">);</span>
+<span class="n">let</span><span class="p">(</span><span class="n">um</span><span class="p">,</span> <span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span><span class="p">);</span>
+
+<span class="cp">#ifdef REALGCC</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">V</span> <span class="o">=</span> <span class="n">null_type</span><span class="o">&gt;</span>
+<span class="k">using</span> <span class="n">order_stat_map</span> <span class="o">=</span>
+    <span class="n">tree</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">less</span><span class="o">&lt;&gt;</span><span class="p">,</span> <span class="n">rb_tree_tag</span><span class="p">,</span> <span class="n">tree_order_statistics_node_update</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="cp">#endif</span>
+
+<span class="k">auto</span> <span class="k">constexpr</span> <span class="n">inf</span> <span class="o">=</span> <span class="n">ll</span><span class="p">(</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">())</span> <span class="o">/</span> <span class="mi">8</span><span class="p">;</span>
+<span class="k">auto</span> <span class="k">const</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&quot;, &quot;</span><span class="n">s</span><span class="p">;</span>
+<span class="k">auto</span> <span class="k">constexpr</span> <span class="n">tau</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.1415926535897932384626433</span><span class="n">L</span><span class="p">;</span>
+<span class="k">extern</span> <span class="kt">bool</span> <span class="n">multitest</span><span class="p">;</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;io.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;debug.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;operations.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;range.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;utility.hpp&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/program_listing_file_core.hpp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

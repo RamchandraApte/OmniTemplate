@@ -1,0 +1,13 @@
+.. _exhale_function_link__cut_8hpp_1a6f35606505d7f40059acd4d66875d81d:
+
+Function link(Node \*, Node \*)
+===============================
+
+- Defined in :ref:`file_link_cut.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: link(Node *, Node *)

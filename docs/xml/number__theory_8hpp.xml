@@ -4,29 +4,24 @@
     <compoundname>number_theory.hpp</compoundname>
     <includes refid="core_8hpp" local="yes">core.hpp</includes>
     <includes refid="modulo_8hpp" local="yes">modulo.hpp</includes>
-    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/template.hpp</includedby>
+    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
+    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
       <node id="1">
-        <label>/home/ram/OmniTemplate/number_theory.hpp</label>
+        <label>number_theory.hpp</label>
         <link refid="number__theory_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="6">
-        <label>my_int.hpp</label>
-        <link refid="my__int_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
         <label>io.hpp</label>
-        <link refid="io_8hpp"/>
-        <childnode refid="2" relation="include">
+        <link refid="io_8hpp_source"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -35,31 +30,35 @@
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>utility.hpp</label>
-        <link refid="utility_8hpp"/>
-        <childnode refid="2" relation="include">
+        <link refid="utility_8hpp_source"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="7">
         <label>debug.hpp</label>
-        <link refid="debug_8hpp"/>
+        <link refid="debug_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="12">
+      <node id="11">
         <label>modulo.hpp</label>
-        <link refid="modulo_8hpp"/>
+        <link refid="modulo_8hpp_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="9">
         <label>range.hpp</label>
-        <link refid="range_8hpp"/>
+        <link refid="range_8hpp_source"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>core.hpp</label>
-        <link refid="core_8hpp"/>
+        <link refid="core_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -76,37 +75,29 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
       </node>
       <node id="8">
         <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
+        <link refid="operations_8hpp_source"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="1">
-        <label>/home/ram/OmniTemplate/number_theory.hpp</label>
+        <label>number_theory.hpp</label>
         <link refid="number__theory_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>/home/ram/OmniTemplate/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
       <node id="2">
-        <label>/home/ram/OmniTemplate/template.hpp</label>
-        <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
+        <label>template.hpp</label>
+        <link refid="template_8hpp_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="var">
       <memberdef kind="variable" id="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" prot="public" static="no" mutable="no">
-        <type><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref></type>
+        <type>vl</type>
         <definition>vl divs</definition>
         <argsstring></argsstring>
         <name>divs</name>
@@ -116,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="4" column="4" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="4" bodyend="-1"/>
+        <location file="number_theory.hpp" line="4" column="4" bodyfile="number_theory.hpp" bodystart="4" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -130,13 +121,13 @@
           <declname>n</declname>
         </param>
         <briefdescription>
+<para>Return whether integer n &gt;= 2 is prime. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Return whether integer n &gt;= 2 is prime</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="5" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="5" bodyend="34"/>
+        <location file="number_theory.hpp" line="6" column="6" bodyfile="number_theory.hpp" bodystart="6" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a87d7c3ba2489977a16ec40544a918e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -149,10 +140,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="35" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="35" bodyend="42"/>
+        <location file="number_theory.hpp" line="33" column="6" bodyfile="number_theory.hpp" bodystart="33" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref></type>
+        <type>vl</type>
         <definition>vl divisors</definition>
         <argsstring>(ll x)</argsstring>
         <name>divisors</name>
@@ -161,13 +152,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
+<para>Return all divisors of x in sorted order. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Return all divisors of x in sorted order</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="43" column="4" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="43" bodyend="59"/>
+        <location file="number_theory.hpp" line="42" column="4" bodyfile="number_theory.hpp" bodystart="42" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a3e935b9aca6e9dfa6b0a8ef9a4c7e153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -180,11 +171,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="60" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="60" bodyend="67"/>
+        <location file="number_theory.hpp" line="58" column="6" bodyfile="number_theory.hpp" bodystart="58" bodyend="65"/>
       </memberdef>
-      <memberdef kind="function" id="number__theory_8hpp_1a08a5d3143912e850f2a0e799c20b7944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>auto</type>
-        <definition>auto sieve</definition>
+      <memberdef kind="function" id="number__theory_8hpp_1ae8dd217fd3a3de037c6a1031aef548aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
+        <definition>vector&lt;ll&gt; sieve</definition>
         <argsstring>(ll n)</argsstring>
         <name>sieve</name>
         <param>
@@ -192,15 +183,41 @@
           <declname>n</declname>
         </param>
         <briefdescription>
+<para>Linear time prime sieve. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sieve numbers in [0,n) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector where ret[idx] is the smallest prime divisor of idx </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="number_theory.hpp" line="72" column="8" bodyfile="number_theory.hpp" bodystart="72" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="number__theory_8hpp_1a8956d5feae5d2dd01656f6f960d568c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_sieve</definition>
+        <argsstring>()</argsstring>
+        <name>test_sieve</name>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="68" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="68" bodyend="83"/>
+        <location file="number_theory.hpp" line="88" column="6" bodyfile="number_theory.hpp" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref></type>
+        <type>um</type>
         <definition>um fac</definition>
         <argsstring>(ll n)</argsstring>
         <name>fac</name>
@@ -209,12 +226,16 @@
           <declname>n</declname>
         </param>
         <briefdescription>
+<para>Returns the factorization of n. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>a map from the prime to the exponent </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="84" column="4" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="84" bodyend="110"/>
+        <location file="number_theory.hpp" line="94" column="4" bodyfile="number_theory.hpp" bodystart="94" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1afcfd3b1e3415393029bc6a496d825459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -227,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="111" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="111" bodyend="119"/>
+        <location file="number_theory.hpp" line="119" column="6" bodyfile="number_theory.hpp" bodystart="119" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,12 +272,47 @@
           <declname>y</declname>
         </param>
         <briefdescription>
+<para>Sets x and y so that <formula id="20">$x\cdot a + y\cdot b = \gcd(a,b)$</formula>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="120" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="120" bodyend="122"/>
+        <location file="number_theory.hpp" line="129" column="6" bodyfile="number_theory.hpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="number__theory_8hpp_1ae2f84cd254fbf1373fc273141ce470ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_egcd</definition>
+        <argsstring>(ll a, ll b)</argsstring>
+        <name>test_egcd</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="number_theory.hpp" line="132" column="6" bodyfile="number_theory.hpp" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="number__theory_8hpp_1a1764567e56d415f536db0a4aa89e782f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test_egcd</definition>
+        <argsstring>()</argsstring>
+        <name>test_egcd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="number_theory.hpp" line="137" column="6" bodyfile="number_theory.hpp" bodystart="137" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -268,12 +324,16 @@
           <declname>n</declname>
         </param>
         <briefdescription>
+<para>Returns the totient of the integer n. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="pre"><para>n &gt;= 1 </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="123" column="4" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="123" bodyend="129"/>
+        <location file="number_theory.hpp" line="147" column="4" bodyfile="number_theory.hpp" bodystart="147" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -286,28 +346,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="130" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="130" bodyend="133"/>
+        <location file="number_theory.hpp" line="155" column="6" bodyfile="number_theory.hpp" bodystart="155" bodyend="158"/>
       </memberdef>
-      <memberdef kind="function" id="number__theory_8hpp_1a7fe167e7a6ffd6127f342baf3169d9e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
         <definition>ll dlog</definition>
-        <argsstring>(const md a, md b)</argsstring>
+        <argsstring>(const modulo a, const modulo b)</argsstring>
         <name>dlog</name>
         <param>
-          <type>const <ref refid="structmd" kindref="compound">md</ref></type>
+          <type>const <ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
           <declname>a</declname>
         </param>
         <param>
-          <type><ref refid="structmd" kindref="compound">md</ref></type>
+          <type>const <ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
           <declname>b</declname>
         </param>
         <briefdescription>
+<para>Finds x such that a^x = b (mod M) using baby-step giant-step algorithm. a and M must be coprime. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="134" column="4" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="134" bodyend="157"/>
+        <location file="number_theory.hpp" line="161" column="4" bodyfile="number_theory.hpp" bodystart="161" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,20 +381,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="158" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="158" bodyend="169"/>
+        <location file="number_theory.hpp" line="183" column="6" bodyfile="number_theory.hpp" bodystart="183" bodyend="198"/>
       </memberdef>
-      <memberdef kind="function" id="number__theory_8hpp_1a8a159e82910edb282085d6879d8c382d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structmd" kindref="compound">md</ref></type>
-        <definition>md primitive_root</definition>
+      <memberdef kind="function" id="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo primitive_root</definition>
         <argsstring>()</argsstring>
         <name>primitive_root</name>
         <briefdescription>
+<para>Returns a primitive root modulo M. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="170" column="4" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="170" bodyend="192"/>
+        <location file="number_theory.hpp" line="200" column="8" bodyfile="number_theory.hpp" bodystart="200" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -346,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="193" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="193" bodyend="202"/>
+        <location file="number_theory.hpp" line="224" column="6" bodyfile="number_theory.hpp" bodystart="224" bodyend="233"/>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1aed36f6b8b9706133e9b5302b1618e9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -359,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/number_theory.hpp" line="203" column="6" bodyfile="/home/ram/OmniTemplate/number_theory.hpp" bodystart="203" bodyend="210"/>
+        <location file="number_theory.hpp" line="234" column="6" bodyfile="number_theory.hpp" bodystart="234" bodyend="243"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -368,214 +430,231 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_8hpp" kindref="compound">core.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="modulo_8hpp" kindref="compound">modulo.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" refkind="member"><highlight class="normal"><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/><ref refid="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" kindref="member">divs</ref>;</highlight></codeline>
-<codeline lineno="5" refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;modulo.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">vl<sp/>divs;</highlight></codeline>
+<codeline lineno="6"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>prime(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n<sp/>&gt;=<sp/>2);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/><ref refid="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" kindref="member">divs</ref>.size())<sp/>{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" kindref="member">divs</ref>[n]<sp/>==<sp/>n;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/>divs.size())<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>divs[n]<sp/>==<sp/>n;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwith" kindref="compound">with</ref><sp/>_m{n,<sp/><ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{n,<sp/>modulo::modulus};</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>tz<sp/>=<sp/>__builtin_ctz(n<sp/>-<sp/>1);</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>(n<sp/>-<sp/>1)<sp/>&gt;&gt;<sp/>tz;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(b);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>prime_a<sp/>=<sp/>[&amp;](<ref refid="structmd" kindref="compound">md</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kindref="member">dbg</ref>(a);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="modulo_8hpp_1a18e6bf3063c827da07de67653546a850" kindref="member">power</ref>(a,<sp/>b);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>tz)<sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>*=<sp/>p;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>{2,<sp/>325,<sp/>9375,<sp/>28178,<sp/>450775,<sp/>9780504,<sp/>1795265022};</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>all_of(<ref refid="core_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>),<sp/>prime_a);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35" refid="number__theory_8hpp_1a87d7c3ba2489977a16ec40544a918e00" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a87d7c3ba2489977a16ec40544a918e00" kindref="member">test_prime</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(2));</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(3));</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(4));</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(5));</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(1e9<sp/>+<sp/>6)));</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(1e9<sp/>+<sp/>7)));</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43" refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" refkind="member"><highlight class="normal"><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/><ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>&gt;=<sp/>1);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(d,<sp/>1,<sp/>x<sp/>+<sp/>1)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(x<sp/>%<sp/>d))<sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y<sp/>=<sp/>x<sp/>/<sp/>d;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(y<sp/>&lt;<sp/>d)<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>.pb(d);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d<sp/>&lt;<sp/>y)<sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>.pb(y);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(<ref refid="core_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>));</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="segment__tree_8hpp_1a38bf1e5e0427bdeba2b469eea9befc23" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60" refid="number__theory_8hpp_1a3e935b9aca6e9dfa6b0a8ef9a4c7e153" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a3e935b9aca6e9dfa6b0a8ef9a4c7e153" kindref="member">test_divisors</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(1)<sp/>==<sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1}));</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(2)<sp/>==<sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1,<sp/>2}));</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(3)<sp/>==<sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1,<sp/>3}));</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(4)<sp/>==<sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1,<sp/>2,<sp/>4}));</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(36)<sp/>==<sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>6,<sp/>9,<sp/>12,<sp/>18,<sp/>36}));</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" kindref="member">divisors</ref>(49)<sp/>==<sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1,<sp/>7,<sp/>49}));</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="68" refid="number__theory_8hpp_1a08a5d3143912e850f2a0e799c20b7944" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a08a5d3143912e850f2a0e799c20b7944" kindref="member">sieve</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/>d(n),<sp/>ps;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>2,<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d[i]<sp/>==<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps.pb(d[i]<sp/>=<sp/>i);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/>ps)<sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(p<sp/>&lt;=<sp/>d[i]<sp/>&amp;&amp;<sp/>p<sp/>*<sp/>i<sp/>&lt;<sp/>n))<sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(d[p<sp/>*<sp/>i]<sp/>==<sp/>0);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d[p<sp/>*<sp/>i]<sp/>=<sp/>p;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="84" refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" refkind="member"><highlight class="normal"><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref><sp/><ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>factorization<sp/>of<sp/>n<sp/>as<sp/>a<sp/>mapping<sp/>from<sp/>the<sp/>prime<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>exponent.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n<sp/>&gt;=<sp/>1);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>g<sp/>=<sp/>n;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/><ref refid="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" kindref="member">divs</ref>.size())<sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g<sp/>=<sp/><ref refid="number__theory_8hpp_1a5e4d8030cfc837ebe1e18d2c764d8bab" kindref="member">divs</ref>[n];</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(n))<sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwith" kindref="compound">with</ref><sp/>_m{n,<sp/><ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>};</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmd" kindref="compound">md</ref><sp/>c<sp/>=<sp/>0;<sp/>g<sp/>==<sp/>n;<sp/>++c)<sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x)<sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>x<sp/>+<sp/>x<sp/>+<sp/>c;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmd" kindref="compound">md</ref><sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>a;<sp/>a<sp/>=<sp/>f(a),<sp/>b<sp/>=<sp/>f(f(b)),</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(g<sp/>=<sp/>gcd(<ref refid="structll" kindref="compound">ll</ref>(a<sp/>-<sp/>b),<sp/>n))<sp/>==<sp/>1;)<sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g<sp/>==<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{{n,<sp/>1}};</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(1<sp/>&lt;<sp/>g<sp/>&amp;&amp;<sp/>g<sp/>&lt;<sp/>n<sp/>&amp;&amp;<sp/>!(n<sp/>%<sp/>g));</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(g)<sp/>+<sp/><ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(n<sp/>/<sp/>g);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="111" refid="number__theory_8hpp_1afcfd3b1e3415393029bc6a496d825459" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1afcfd3b1e3415393029bc6a496d825459" kindref="member">test_fac</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(1)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{}));</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(1)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{}));</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(2)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{{2,<sp/>1}}));</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(3)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{{3,<sp/>1}}));</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(4)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{{2,<sp/>2}}));</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(36)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{{2,<sp/>2},<sp/>{3,<sp/>2}}));</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(49)<sp/>==<sp/><ref refid="core_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref>{{7,<sp/>2}}));</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="120" refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" kindref="member">egcd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;y)<sp/>{</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>?<sp/><ref refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" kindref="member">egcd</ref>(b<sp/>%<sp/>a,<sp/>a,<sp/>y,<sp/>x),<sp/>x<sp/>-=<sp/>b<sp/>/<sp/>a<sp/>*<sp/>y<sp/>:<sp/>(x<sp/>=<sp/>0,<sp/>y<sp/>=<sp/>1);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="123" refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="combinatorics_8hpp_1aed30b4e386e3e22247cd9d6aecc1e88f" kindref="member">fact</ref><sp/>=<sp/><ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(n);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/><ref refid="combinatorics_8hpp_1aed30b4e386e3e22247cd9d6aecc1e88f" kindref="member">fact</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>-=<sp/>n<sp/>/<sp/>p.first;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="130" refid="number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" kindref="member">test_totient</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(1)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(2)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(6)<sp/>==<sp/>2<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(84)<sp/>==<sp/>24<sp/>&amp;&amp;<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(127)<sp/>==<sp/>126);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="134" refid="number__theory_8hpp_1a7fe167e7a6ffd6127f342baf3169d9e9" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="number__theory_8hpp_1a7fe167e7a6ffd6127f342baf3169d9e9" kindref="member">dlog</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmd" kindref="compound">md</ref><sp/>a,<sp/><ref refid="structmd" kindref="compound">md</ref><sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Finds<sp/>x<sp/>such<sp/>that<sp/>a^x<sp/>=<sp/>b<sp/>(mod<sp/>M)<sp/>using<sp/>baby-step<sp/>giant-step</highlight></codeline>
-<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>algorithm.<sp/>M<sp/>must<sp/>be<sp/>prime</highlight></codeline>
-<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(<ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>));</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="modulo_8hpp_1a18e6bf3063c827da07de67653546a850" kindref="member">power</ref>(a,<sp/>x)<sp/>==<sp/>b);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sq<sp/>=<sp/>sqrt(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>))<sp/>+<sp/>1;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_map&lt;md,<sp/>ll&gt;<sp/>powers;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a_sq<sp/>=<sp/><ref refid="modulo_8hpp_1a18e6bf3063c827da07de67653546a850" kindref="member">power</ref>(a,<sp/>sq);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmd" kindref="compound">md</ref><sp/>pw<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>sq<sp/>+<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>powers[pw]<sp/>=<sp/>i;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pw<sp/>*=<sp/>a_sq;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structll" kindref="compound">ll</ref><sp/>cnt<sp/>=<sp/>0;;<sp/>++cnt)<sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>powers.find(b);<sp/>it<sp/>!=<sp/>end(powers))<sp/>{</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>check((it-&gt;second<sp/>*<sp/>sq<sp/>-<sp/>cnt)<sp/>%<sp/>(<ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref><sp/>-<sp/>1));</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>*=<sp/>a;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="158" refid="number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" kindref="member">test_dlog</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[](<ref refid="structll" kindref="compound">ll</ref><sp/>a2,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>m)<sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwith" kindref="compound">with</ref><sp/>_m{m,<sp/><ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>};</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmd" kindref="compound">md</ref><sp/>a{a2};</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="modulo_8hpp_1a18e6bf3063c827da07de67653546a850" kindref="member">power</ref>(a,<sp/>b);</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>check(2,<sp/>10,<sp/>1025);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>check(7,<sp/>1,<sp/>30);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>check(1,<sp/>1,<sp/>1);</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>check(23,<sp/>47,<sp/>153);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>check(15,<sp/>100,<sp/>45);</highlight></codeline>
-<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="170" refid="number__theory_8hpp_1a8a159e82910edb282085d6879d8c382d" refkind="member"><highlight class="normal"><ref refid="structmd" kindref="compound">md</ref><sp/><ref refid="number__theory_8hpp_1a8a159e82910edb282085d6879d8c382d" kindref="member">primitive_root</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref><sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tot<sp/>=<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(<ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>);</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pfactor<sp/>=<sp/><ref refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" kindref="member">fac</ref>(tot);</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>1,<sp/><ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>is_primitive_root<sp/>=<sp/>[&amp;]()<sp/>{</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gcd(i,<sp/><ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/>pfactor)<sp/>{</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="modulo_8hpp_1a18e6bf3063c827da07de67653546a850" kindref="member">power</ref>(<ref refid="structmd" kindref="compound">md</ref>{i},<sp/>tot<sp/>/<sp/>p.first)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_primitive_root())<sp/>{</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="193" refid="number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" kindref="member">test_primitive_root</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>m,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwith" kindref="compound">with</ref><sp/>_m{m,<sp/><ref refid="modulo_8hpp_1a5caab15f8b74a132460ac94fa9dab4a7" kindref="member">M</ref>};</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="number__theory_8hpp_1a8a159e82910edb282085d6879d8c382d" kindref="member">primitive_root</ref>()<sp/>==<sp/>x);</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>check(1,<sp/>0);</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>check(3,<sp/>2);</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>check(6,<sp/>5);</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>check(7,<sp/>3);</highlight></codeline>
-<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="203" refid="number__theory_8hpp_1aed36f6b8b9706133e9b5302b1618e9ef" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1aed36f6b8b9706133e9b5302b1618e9ef" kindref="member">test_number_theory</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1a87d7c3ba2489977a16ec40544a918e00" kindref="member">test_prime</ref>();</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1a3e935b9aca6e9dfa6b0a8ef9a4c7e153" kindref="member">test_divisors</ref>();</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1afcfd3b1e3415393029bc6a496d825459" kindref="member">test_fac</ref>();</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" kindref="member">test_totient</ref>();</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" kindref="member">test_dlog</ref>();</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" kindref="member">test_primitive_root</ref>();</highlight></codeline>
-<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>prime_a<sp/>=<sp/>[&amp;](<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>power(a,<sp/>b);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(i,<sp/>tz)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>*=<sp/>p;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/>v{2,<sp/>325,<sp/>9375,<sp/>28178,<sp/>450775,<sp/>9780504,<sp/>1795265022};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>all_of(al(v),<sp/>prime_a);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_prime()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(prime(2));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(prime(3));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!prime(4));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(prime(5));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!prime(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(1e9<sp/>+<sp/>6)));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(prime(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(1e9<sp/>+<sp/>7)));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">vl<sp/>divisors(<ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/>v;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(d,<sp/>1,<sp/>x<sp/>+<sp/>1)<sp/>if<sp/>(!(x<sp/>%<sp/>d))<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y<sp/>=<sp/>x<sp/>/<sp/>d;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(y<sp/>&lt;<sp/>d)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.push_back(d);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d<sp/>&lt;<sp/>y)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.push_back(y);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(al(v));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_divisors()<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((divisors(1)<sp/>==<sp/>vl{1}));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((divisors(2)<sp/>==<sp/>vl{1,<sp/>2}));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((divisors(3)<sp/>==<sp/>vl{1,<sp/>3}));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((divisors(4)<sp/>==<sp/>vl{1,<sp/>2,<sp/>4}));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((divisors(36)<sp/>==<sp/>vl{1,<sp/>2,<sp/>3,<sp/>4,<sp/>6,<sp/>9,<sp/>12,<sp/>18,<sp/>36}));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((divisors(49)<sp/>==<sp/>vl{1,<sp/>7,<sp/>49}));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">vector&lt;ll&gt;<sp/>sieve(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/>d(n),<sp/>ps;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>2,<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d[i]<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps.push_back(d[i]<sp/>=<sp/>i);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/>ps)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(p<sp/>&lt;=<sp/>d[i]<sp/>&amp;&amp;<sp/>p<sp/>*<sp/>i<sp/>&lt;<sp/>n))<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(d[p<sp/>*<sp/>i]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d[p<sp/>*<sp/>i]<sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_sieve()<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((sieve(11)<sp/>==<sp/>vl{0,<sp/>0,<sp/>2,<sp/>3,<sp/>2,<sp/>5,<sp/>2,<sp/>7,<sp/>2,<sp/>3,<sp/>2}));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">um<sp/>fac(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>g<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/>divs.size())<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g<sp/>=<sp/>divs[n];</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!prime(n))<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{n,<sp/>modulo::modulus};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>c<sp/>=<sp/>0;<sp/>g<sp/>==<sp/>n;<sp/>++c)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>x<sp/>+<sp/>x<sp/>+<sp/>c;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>a;<sp/>a<sp/>=<sp/>f(a),<sp/>b<sp/>=<sp/>f(f(b)),</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(g<sp/>=<sp/>gcd(<ref refid="structll" kindref="compound">ll</ref>(a<sp/>-<sp/>b),<sp/>n))<sp/>==<sp/>1;)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g<sp/>==<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{{n,<sp/>1}};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(1<sp/>&lt;<sp/>g<sp/>&amp;&amp;<sp/>g<sp/>&lt;<sp/>n<sp/>&amp;&amp;<sp/>!(n<sp/>%<sp/>g));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fac(g)<sp/>+<sp/>fac(n<sp/>/<sp/>g);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_fac()<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(1)<sp/>==<sp/>um{}));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(1)<sp/>==<sp/>um{}));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(2)<sp/>==<sp/>um{{2,<sp/>1}}));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(3)<sp/>==<sp/>um{{3,<sp/>1}}));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(4)<sp/>==<sp/>um{{2,<sp/>2}}));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(36)<sp/>==<sp/>um{{2,<sp/>2},<sp/>{3,<sp/>2}}));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((fac(49)<sp/>==<sp/>um{{7,<sp/>2}}));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>egcd(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;y)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>?<sp/>egcd(mod(b,<sp/>a),<sp/>a,<sp/>y,<sp/>x),<sp/>x<sp/>-=<sp/>b<sp/>/<sp/>a<sp/>*<sp/>y<sp/>:<sp/>(x<sp/>=<sp/>0,<sp/>y<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_egcd(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/>y;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>egcd(a,<sp/>b,<sp/>x,<sp/>y);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>*<sp/>a<sp/>+<sp/>y<sp/>*<sp/>b<sp/>==<sp/>gcd(a,<sp/>b));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_egcd()<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>test_egcd(6,<sp/>15);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>test_egcd(3,<sp/>4);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>test_egcd(6,<sp/>6);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>test_egcd(2,<sp/>1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>test_egcd(63,<sp/>12);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>totient(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n&gt;=1);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref><sp/>=<sp/>fac(n);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/>fact)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>-=<sp/>n<sp/>/<sp/>p.first;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_totient()<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(totient(1)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>totient(2)<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>totient(6)<sp/>==<sp/>2<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totient(84)<sp/>==<sp/>24<sp/>&amp;&amp;<sp/>totient(127)<sp/>==<sp/>126);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>dlog(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(gcd(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(a),<sp/>modulo::modulus)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(power(a,<sp/>x)<sp/>==<sp/>b);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sq<sp/>=<sp/>sqrt(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(modulo::modulus))<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_map&lt;modulo,<sp/>ll&gt;<sp/>powers;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a_sq<sp/>=<sp/>power(a,<sp/>sq);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>pw<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>sq<sp/>+<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>powers[pw]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pw<sp/>*=<sp/>a_sq;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structll" kindref="compound">ll</ref><sp/>cnt<sp/>=<sp/>0;;<sp/>++cnt)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>powers.find(x);<sp/>it<sp/>!=<sp/>end(powers))<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>check(mod(it-&gt;second<sp/>*<sp/>sq<sp/>-<sp/>cnt,<sp/>totient(modulo::modulus)));</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>*=<sp/>a;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_dlog()<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[](<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>m)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{m,<sp/>modulo::modulus};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>power(a,<sp/>x);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlog(a,<sp/>b);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(a,<sp/>20)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(x,<sp/>20)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(m,<sp/>1,<sp/>20)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gcd(a,<sp/>m)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>check(a,<sp/>x,<sp/>m);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>primitive_root()<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(modulo::modulus<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tot<sp/>=<sp/>totient(modulo::modulus);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pfactor<sp/>=<sp/>fac(tot);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>1,<sp/>modulo::modulus)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>is_primitive_root<sp/>=<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gcd(i,<sp/>modulo::modulus)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/>pfactor)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(power(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{i},<sp/>tot<sp/>/<sp/>p.first)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_primitive_root())<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>invalid_argument{</highlight><highlight class="stringliteral">&quot;M<sp/>has<sp/>no<sp/>primitive<sp/>root!&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_primitive_root()<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>m,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{m,<sp/>modulo::modulus};</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(primitive_root()<sp/>==<sp/>x);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>check(1,<sp/>0);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>check(3,<sp/>2);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>check(6,<sp/>5);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>check(7,<sp/>3);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_number_theory()<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>test_prime();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>test_divisors();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>test_fac();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>test_totient();</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>test_dlog();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>test_primitive_root();</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sieve();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>test_egcd();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/ram/OmniTemplate/number_theory.hpp"/>
+    <location file="number_theory.hpp"/>
   </compounddef>
 </doxygen>

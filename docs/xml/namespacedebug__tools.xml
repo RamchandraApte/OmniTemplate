@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacedebug__tools" kind="namespace" language="C++">
+    <compoundname>debug_tools</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacedebug__tools_1ab312673925f42718bafe74a18eae6685" prot="public" static="no" mutable="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll debug_tools::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="300" column="4" bodyfile="d_compiled.cpp" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacedebug__tools_1a991f9f01ab3a0e664fabf0bd17fab95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto debug_tools::type_name</definition>
+        <argsstring>([[maybe_unused]] T const &amp;v)</argsstring>
+        <name>type_name</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] T const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the type name of the type of value</para>
+<para>Return the type name of the type of value</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="277" column="18" bodyfile="d_compiled.cpp" bodystart="277" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto debug_tools::replace</definition>
+        <argsstring>(string s, const string &amp;a, const string &amp;b)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Replace all occurences of a in s with b</para>
+<para>Replace all occurences of a in s with b</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="283" column="6" bodyfile="d_compiled.cpp" bodystart="283" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto debug_tools::simple_tp</definition>
+        <argsstring>([[maybe_unused]] const T &amp;v)</argsstring>
+        <name>simple_tp</name>
+        <param>
+          <attributes>[[maybe_unused]</attributes>
+          <type>] const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Return the simplified type of v</para>
+<para>Return the simplified type of v</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="292" column="18" bodyfile="d_compiled.cpp" bodystart="292" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto debug_tools::debug</definition>
+        <argsstring>(const T &amp;x, const string &amp;name, source_location const &amp;loc=source_location::current())</argsstring>
+        <name>debug</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>source_location const &amp;</type>
+          <declname>loc</declname>
+          <defval>source_location::current()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Debug print x</para>
+<para>Debug print x</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="302" column="6" bodyfile="d_compiled.cpp" bodystart="302" bodyend="312"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Debugging tools </para>
+    </detaileddescription>
+    <location file="d_compiled.cpp" line="276" column="21"/>
+  </compounddef>
+</doxygen>

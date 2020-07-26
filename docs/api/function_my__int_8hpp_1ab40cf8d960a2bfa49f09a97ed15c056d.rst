@@ -1,0 +1,13 @@
+.. _exhale_function_my__int_8hpp_1ab40cf8d960a2bfa49f09a97ed15c056d:
+
+Function ceil_div(ll, ll)
+=========================
+
+- Defined in :ref:`file_my_int.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ceil_div(ll, ll)

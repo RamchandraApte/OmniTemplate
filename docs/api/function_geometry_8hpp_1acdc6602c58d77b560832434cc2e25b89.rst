@@ -1,0 +1,13 @@
+.. _exhale_function_geometry_8hpp_1acdc6602c58d77b560832434cc2e25b89:
+
+Function geometry::hull(vector<point>, remove_const_t<decltype(true)>)
+======================================================================
+
+- Defined in :ref:`file_geometry.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: geometry::hull(vector<point>, remove_const_t<decltype(true)>)

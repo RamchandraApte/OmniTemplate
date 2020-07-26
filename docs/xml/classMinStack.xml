@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="classMinStack" kind="class" language="C++" prot="public">
+  <compounddef id="classMinStack" kind="class" language="C++" prot="private">
     <compoundname>MinStack</compoundname>
     <basecompoundref prot="public" virt="non-virtual">stack&lt; pair&lt; T, T &gt;&gt;</basecompoundref>
-    <includes refid="queue_8hpp" local="no">queue.hpp</includes>
     <templateparamlist>
       <param>
         <type>typename T</type>
@@ -25,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="98" column="1" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="98" bodyend="-1"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="106" column="8" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classMinStack_1a28cd940fc80f2d8983d1ce270d803740" prot="public" static="no">
         <type>T</type>
@@ -38,11 +37,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="99" column="1" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="99" bodyend="-1"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="107" column="8" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="107" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="classMinStack_1ab6f486799ff38265a93d4de4bf047e6f" prot="public" static="no">
-        <type>size_t</type>
-        <definition>using MinStack&lt; T, Base &gt;::size_type =  size_t</definition>
+      <memberdef kind="typedef" id="classMinStack_1a0c3b6d016a349b5b51baf73a905d9b19" prot="public" static="no">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>using MinStack&lt; T, Base &gt;::size_type =  ll</definition>
         <argsstring></argsstring>
         <name>size_type</name>
         <briefdescription>
@@ -51,10 +50,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="100" column="1" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="100" bodyend="-1"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="108" column="8" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classMinStack_1ababec68b9c2f1fbf3e573f0c00fb55a0" prot="public" static="no">
-        <type><ref refid="classMinStack_1a28cd940fc80f2d8983d1ce270d803740" kindref="member">value_type</ref> &amp;</type>
+        <type>value_type &amp;</type>
         <definition>using MinStack&lt; T, Base &gt;::reference =  value_type &amp;</definition>
         <argsstring></argsstring>
         <name>reference</name>
@@ -64,10 +63,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="101" column="1" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="101" bodyend="-1"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="109" column="8" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classMinStack_1af778589a78b11f906c7f6da00c1c0043" prot="public" static="no">
-        <type>const <ref refid="classMinStack_1a28cd940fc80f2d8983d1ce270d803740" kindref="member">value_type</ref> &amp;</type>
+        <type>const value_type &amp;</type>
         <definition>using MinStack&lt; T, Base &gt;::const_reference =  const value_type &amp;</definition>
         <argsstring></argsstring>
         <name>const_reference</name>
@@ -77,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="102" column="1" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="102" bodyend="-1"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="110" column="8" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="110" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -96,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="103" column="6" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="103" bodyend="103"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="111" column="13" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="111" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="classMinStack_1ae98eca6ba51417aabdea04f6c223078f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const T &amp;</type>
@@ -109,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="104" column="9" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="104" bodyend="104"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="112" column="16" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="112" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="classMinStack_1abb4c7ff623765a0c24f2091a27855310" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -122,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/queue.hpp" line="105" column="3" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="105" bodyend="105"/>
+        <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="113" column="10" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="113" bodyend="113"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -132,7 +131,6 @@
     <inheritancegraph>
       <node id="1">
         <label>MinStack&lt; T, Base &gt;</label>
-        <link refid="classMinStack"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
@@ -143,7 +141,6 @@
     <collaborationgraph>
       <node id="1">
         <label>MinStack&lt; T, Base &gt;</label>
-        <link refid="classMinStack"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
@@ -151,14 +148,14 @@
         <label>stack&lt; pair&lt; T, T &gt;&gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/queue.hpp" line="96" column="27" bodyfile="/home/ram/OmniTemplate/queue.hpp" bodystart="96" bodyend="106"/>
+    <location file="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" line="104" column="30" bodyfile="docs/_build/html/_sources/api/program_listing_file_queue.hpp.rst.txt" bodystart="104" bodyend="114"/>
     <listofallmembers>
       <member refid="classMinStack_1af778589a78b11f906c7f6da00c1c0043" prot="public" virt="non-virtual"><scope>MinStack</scope><name>const_reference</name></member>
       <member refid="classMinStack_1a410d91ba73ecf060c4cf7c5d542c63e0" prot="public" virt="non-virtual"><scope>MinStack</scope><name>container_type</name></member>
       <member refid="classMinStack_1abb4c7ff623765a0c24f2091a27855310" prot="public" virt="non-virtual"><scope>MinStack</scope><name>min</name></member>
       <member refid="classMinStack_1a85a56f030b69fd1b4191f8318b6b9d28" prot="public" virt="non-virtual"><scope>MinStack</scope><name>push</name></member>
       <member refid="classMinStack_1ababec68b9c2f1fbf3e573f0c00fb55a0" prot="public" virt="non-virtual"><scope>MinStack</scope><name>reference</name></member>
-      <member refid="classMinStack_1ab6f486799ff38265a93d4de4bf047e6f" prot="public" virt="non-virtual"><scope>MinStack</scope><name>size_type</name></member>
+      <member refid="classMinStack_1a0c3b6d016a349b5b51baf73a905d9b19" prot="public" virt="non-virtual"><scope>MinStack</scope><name>size_type</name></member>
       <member refid="classMinStack_1ae98eca6ba51417aabdea04f6c223078f" prot="public" virt="non-virtual"><scope>MinStack</scope><name>top</name></member>
       <member refid="classMinStack_1a28cd940fc80f2d8983d1ce270d803740" prot="public" virt="non-virtual"><scope>MinStack</scope><name>value_type</name></member>
     </listofallmembers>

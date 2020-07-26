@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Program Listing for File conf.py &#8212; Python  documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="program-listing-for-file-conf-py">
+<span id="program-listing-file-docs-conf-py"></span><h1>Program Listing for File conf.py<a class="headerlink" href="#program-listing-for-file-conf-py" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_docs_conf.py.html#file-docs-conf-py"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">docs/conf.py</span></code>)</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `extensions` list should already be in here from `sphinx-quickstart`</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># there may be others here already, e.g. &#39;sphinx.ext.mathjax&#39;</span>
+    <span class="s1">&#39;breathe&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;exhale&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Setup the breathe extension</span>
+<span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;OmniTemplate&quot;</span><span class="p">:</span> <span class="s2">&quot;./xml&quot;</span>
+<span class="p">}</span>
+<span class="n">breathe_default_project</span> <span class="o">=</span> <span class="s2">&quot;OmniTemplate&quot;</span>
+
+<span class="c1"># Setup the exhale extension</span>
+<span class="n">exhale_args</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># These arguments are required</span>
+    <span class="s2">&quot;containmentFolder&quot;</span><span class="p">:</span>     <span class="s2">&quot;./api&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rootFileName&quot;</span><span class="p">:</span>          <span class="s2">&quot;library_root.rst&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rootFileTitle&quot;</span><span class="p">:</span>         <span class="s2">&quot;Library API&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doxygenStripFromPath&quot;</span><span class="p">:</span>  <span class="s2">&quot;..&quot;</span><span class="p">,</span>
+    <span class="c1"># Suggested optional arguments</span>
+    <span class="s2">&quot;createTreeView&quot;</span><span class="p">:</span>        <span class="bp">True</span><span class="p">,</span>
+    <span class="c1"># TIP: if using the sphinx-bootstrap-theme, you need</span>
+    <span class="c1"># &quot;treeViewIsBootstrap&quot;: True,</span>
+    <span class="s2">&quot;exhaleExecutesDoxygen&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+    <span class="s2">&quot;exhaleDoxygenStdin&quot;</span><span class="p">:</span>    <span class="s2">&quot;INPUT = ..&quot;</span>
+<span class="p">}</span>
+
+<span class="c1"># Tell sphinx what the primary language being documented is.</span>
+<span class="n">primary_domain</span> <span class="o">=</span> <span class="s1">&#39;cpp&#39;</span>
+
+<span class="c1"># Tell sphinx what the pygments highlight language should be.</span>
+<span class="n">highlight_language</span> <span class="o">=</span> <span class="s1">&#39;cpp&#39;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/program_listing_file_docs_conf.py.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

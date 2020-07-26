@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemodulo__namespace" kind="namespace" language="C++">
+    <compoundname>modulo_namespace</compoundname>
+    <innerclass refid="structmodulo__namespace_1_1modulo" prot="public">modulo_namespace::modulo</innerclass>
+    <innerclass refid="structmodulo__namespace_1_1no__mod" prot="public">modulo_namespace::no_mod</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d__compiled_8cpp_1a0329c7316dfca40b316f6ad7a6b60e87" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>decltype(invert(std::declval&lt; Args &gt;()...))</type>
+        <definition>using modulo_namespace::invert_t = typedef decltype(invert(std::declval&lt;Args&gt;()...))</definition>
+        <argsstring></argsstring>
+        <name>invert_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="638" column="13" bodyfile="d_compiled.cpp" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d__compiled_8cpp_1a8e6fc91a032b336ea0bbed9eabf54f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T modulo_namespace::power</definition>
+        <argsstring>(T a, ll b)</argsstring>
+        <name>power</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Returns <formula id="17">$a^b$</formula>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the exponent</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Time complexity: <formula id="18">$O(\log_2 |b|)$</formula> multiplications </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="645" column="15" bodyfile="d_compiled.cpp" bodystart="645" bodyend="661"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a2507e89fefa09a358a9de729b15dd642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll modulo_namespace::mod</definition>
+        <argsstring>(ll a, const ll b)</argsstring>
+        <name>mod</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Returns the remainder of a divided by b as a nonnegative integer in [0, b). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="663" column="4" bodyfile="d_compiled.cpp" bodystart="663" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a0a666ddbbb5d4d02c4aee66be7577292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll modulo_namespace::mod_eq</definition>
+        <argsstring>(ll &amp;a, const ll b)</argsstring>
+        <name>mod_eq</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set a to the remainder when divided by b. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="671" column="4" bodyfile="d_compiled.cpp" bodystart="671" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a55577c112e6d41b6314ad996f9e48842" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::identity</definition>
+        <argsstring>(plus&lt;&gt;, modulo)</argsstring>
+        <name>identity</name>
+        <param>
+          <type>plus&lt;&gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="686" column="8" bodyfile="d_compiled.cpp" bodystart="686" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aab105decd35962ad192ea2187706df9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::identity</definition>
+        <argsstring>(multiplies&lt;&gt;, modulo)</argsstring>
+        <name>identity</name>
+        <param>
+          <type>multiplies&lt;&gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="687" column="8" bodyfile="d_compiled.cpp" bodystart="687" bodyend="687"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aa39044c62fae2707474b9960d257d9dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::operator+</definition>
+        <argsstring>(modulo const &amp;a, modulo const &amp;b)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="688" column="8" bodyfile="d_compiled.cpp" bodystart="688" bodyend="691"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aef9f34a9358f523b5e12f6897a806e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::operator++</definition>
+        <argsstring>(modulo &amp;a)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="692" column="8" bodyfile="d_compiled.cpp" bodystart="692" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a19406485d1ce3b2430c67aea00dda27b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::operator-</definition>
+        <argsstring>(modulo const &amp;a)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="693" column="8" bodyfile="d_compiled.cpp" bodystart="693" bodyend="693"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a2f1a91608676548419fa75266f0a00bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto modulo_namespace::operator==</definition>
+        <argsstring>(modulo const &amp;a, modulo const &amp;b)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="696" column="6" bodyfile="d_compiled.cpp" bodystart="696" bodyend="696"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a7d1e0e6527c5e49efdc1ef0780a055c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::operator*</definition>
+        <argsstring>(modulo const &amp;a, modulo const &amp;b)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Computes a times b modulo <ref refid="structmodulo__namespace_1_1modulo_1aa226c570734645b30076408ca179e939" kindref="member">modulo::modulus</ref> using long double</para>
+<para>Computes a times b modulo <ref refid="structmodulo__namespace_1_1modulo_1aa226c570734645b30076408ca179e939" kindref="member">modulo::modulus</ref> using long double</para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="697" column="8" bodyfile="d_compiled.cpp" bodystart="697" bodyend="709"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1aac690d54b7665a90ca461724df8907c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
+        <definition>modulo modulo_namespace::invert</definition>
+        <argsstring>(multiplies&lt;&gt;, modulo const &amp;b)</argsstring>
+        <name>invert</name>
+        <param>
+          <type>multiplies&lt;&gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Computes the modular inverse <formula id="19">$b^{-1} \pmod{M}$</formula></para>
+<para>Computes the modular inverse <formula id="19">$b^{-1} \pmod{M}$</formula></para>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="710" column="8" bodyfile="d_compiled.cpp" bodystart="710" bodyend="714"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a561c93db625469ab20895dabddbae1b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Stream</type>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto &amp; modulo_namespace::operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;os, modulo const &amp;m)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref> const &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="716" column="13" bodyfile="d_compiled.cpp" bodystart="716" bodyend="718"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1ad997b1805adbf715af5d542dd68b9ce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modulo_namespace::test_power</definition>
+        <argsstring>()</argsstring>
+        <name>test_power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="719" column="6" bodyfile="d_compiled.cpp" bodystart="719" bodyend="726"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a7a46d634f9eced7af91b153683bf8a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modulo_namespace::test_md</definition>
+        <argsstring>()</argsstring>
+        <name>test_md</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="727" column="6" bodyfile="d_compiled.cpp" bodystart="727" bodyend="731"/>
+      </memberdef>
+      <memberdef kind="function" id="d__compiled_8cpp_1a0a6e5000e068f2fcb17d85038a64adf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void modulo_namespace::test_modulo</definition>
+        <argsstring>()</argsstring>
+        <name>test_modulo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="d_compiled.cpp" line="732" column="6" bodyfile="d_compiled.cpp" bodystart="732" bodyend="735"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="d_compiled.cpp" line="637" column="26"/>
+  </compounddef>
+</doxygen>
