@@ -20,6 +20,7 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 			root = 1;
 		}
 	}
+	SegmentTree(const vector<T> &arr) : SegmentTree(arr.size()) { build(arr); }
 	static_assert(!has_pers || has_ptr, "Pointers required for persistency");
 	static_assert(base > 1, "Base must be at least 1");
 	struct LazyPart {
@@ -41,6 +42,19 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		const auto df = (node_r - node_l) / base;
 		return node_l + df * i;
 	};
+	void build(const vector<T> &arr) { build(arr, root, 0, ceil_size); }
+	void build(const vector<T> &arr, const Node idx, const ll node_l, const ll node_r) {
+		if (node_r - node_l == 1) {
+			get_core(idx).qsum = node_l < arr.size() ? arr[node_l] : identity(Query{}, T{});
+			return;
+		}
+		auto ret = identity(Query{}, T{});
+		fo(inc, base) {
+			build(arr, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1));
+			ret = Query{}(ret, get_core(get_child(idx, inc)).qsum);
+		}
+		get_core(idx).qsum = ret;
+	}
     /*! Push lazy updates down*/
 	void down(const Node idx, const ll node_l, const ll node_r) {
 		const bool leaf = node_r - node_l == 1;
