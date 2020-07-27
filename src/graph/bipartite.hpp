@@ -1,5 +1,5 @@
 #pragma once
-#include "core.hpp"
+#include "core/all.hpp"
 auto bipartite(const vector<vl> &graph) {
 	/*! Returns a bipartite coloring if possible */
 	bfs b{graph};

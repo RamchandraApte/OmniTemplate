@@ -1,7 +1,7 @@
 #pragma once
-#include "core.hpp"
-#include "dsu.hpp"
-#include "linear_algebra.hpp"
+#include "algebra/linear_algebra.hpp"
+#include "core/all.hpp"
+#include "ds/dsu.hpp"
 namespace graph_theory {
 //!< Edge with weight weight from a to b
 struct edge {
@@ -205,7 +205,7 @@ void test_trans() {
 	assert((trans(vector<vl>{}) == vector<vl>{}));
 }
 #include "bipartite.hpp"
-#include "tree.hpp"
+#include "tree/tree.hpp"
 auto scc(const vector<vl> &graph) {
 	/*! Returns the strongly connected component for each vertex of the
 	 * graph g.*/
