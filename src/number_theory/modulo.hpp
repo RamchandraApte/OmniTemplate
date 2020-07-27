@@ -49,6 +49,7 @@ struct modulo {
 	modulo(ll x_, no_mod) : x(x_) {}
 	explicit operator auto() const { return x; }
 };
+modulo operator"" _M(const unsigned long long x) { return modulo{x}; }
 modulo identity(plus<>, modulo) { return 0; }
 modulo identity(multiplies<>, modulo) { return 1; }
 modulo operator+(modulo const &a, modulo const &b) {
