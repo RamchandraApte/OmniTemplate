@@ -3,6 +3,8 @@
 #include "core/all.hpp"
 #include "ds/dsu.hpp"
 namespace graph_theory {
+//!< Adjacency-list representation of graph
+using GraphAdj = vector<vector<ll>>;
 //!< Edge with weight weight from a to b
 struct edge {
 	ll weight, a, b;
@@ -204,6 +206,7 @@ void test_trans() {
 		vector<vl>{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
 	assert((trans(vector<vl>{}) == vector<vl>{}));
 }
+#include "biconnected.hpp"
 #include "bipartite.hpp"
 #include "tree/tree.hpp"
 auto scc(const vector<vl> &graph) {
@@ -275,6 +278,7 @@ void test_graph_theory() {
 	test_scc();
 	test_max_match();
 	test_tree_diameter();
+	test_biconnected();
 }
 } // namespace graph_theory
 using namespace graph_theory;
