@@ -1,4 +1,4 @@
-#pragma core
+#pragma once
 #include "core/all.hpp"
 pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
 	/*! Returns articulation points and bridges of \param graph. graph must be connected*/

@@ -26,4 +26,5 @@
 #include "number_theory/number_theory.hpp"
 #include "utility.hpp"
 #include "utility/coroutine.hpp"
+#include "utility/graph_draw.hpp"
 #include "utility/string.hpp"

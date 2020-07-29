@@ -53,9 +53,9 @@ template <typename Stream, typename... T>
 auto &operator<<(Stream &os, pair<T...> const &p) {
 	return os << simple_tp(p) << "{" << p.first << delim << p.second << "}";
 }
-template <typename Stream, typename Container>
-auto operator<<(Stream &os, const Container &v)
-    -> decltype(begin(v), declval<decltype(os)>()) {
+// enable_if is there to avoid problems with ostringstream
+// TODO fix this whole IO mess one day.
+template <typename Stream, typename Container> auto operator<<(Stream &os, const Container &v) -> enable_if_t<is_same_v<Stream, ostream>, decltype(begin(v), declval<decltype(os)>())> {
 	auto ed = begin(v);
 	auto big = v.size() > 20;
 	if (big) {
