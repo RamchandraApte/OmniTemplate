@@ -5,6 +5,14 @@ program.cpp is an example program utilizing the template. You need to include th
 
 Requires GNU G++ compiler and C++17.
 
+## Compilation
+
+```
+cmake -B build # Configure
+cmake --build build # Compile the code
+./build/test # Test the code
+```
+
 [Documentation](https://ramchandraapte.github.io/OmniTemplate/)
 
 (this is generated from the source code comments using Doxygen)
