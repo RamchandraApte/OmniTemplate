@@ -46,8 +46,71 @@ GraphAdj permute(const vector<ll> &perm, const GraphAdj &graph) {
 	}
 	return pgraph;
 }
+vector<vector<ll>> ear_decomp(const GraphAdj &graph) {
+	dfs d{graph};
+	d();
+	vector<ll> visited(graph.size());
+	vector<vector<ll>> ears;
+	for (const auto u : d.q) {
+		for (const auto v : graph[u]) {
+			if (d.parent[u] == v || d.parent[v] == u || !(d.distance[u] < d.distance[v])) {
+				continue;
+			}
+			// Backedge
+			vl ear{u};
+			visited[u] = true;
+			ll x = v;
+			while (true) {
+				ear.push_back(x);
+				if (visited[x]) {
+					break;
+				}
+				visited[x] = true;
+				x = d.parent[x];
+			}
+			ears.push_back(ear);
+		}
+	}
+	return ears;
+}
+pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
+	vector<char> art_points(graph.size());
+	vector<array<ll, 2>> bridges;
+	const auto ears = ear_decomp(graph);
+	fo(i, ears.size()) {
+		if (i != 0 && ears[i].front() == ears[i].back()) {
+			art_points[ears[i].front()] = 1;
+		}
+	}
+	for (auto &vec : graph) {
+		sort(al(vec));
+	}
+	vector<vector<ll>> ear_graph(graph.size());
+	for (const auto &ear : ears) {
+		fo(i, ear.size() - 1) { add_edge(ear_graph, ear[i], ear[i + 1]); }
+	}
+	// TODO add print overload for vector<char>
+	// TODO  get rid of set_intersection
+	fo(u, graph.size()) {
+		sort(al(ear_graph[u]));
+		vl out;
+		set_difference(al(graph[u]), al(ear_graph[u]), back_inserter(out));
+		for (const auto x : out) {
+			if (u < x) {
+				bridges.push_back({u, x});
+				if (graph[u].size() > 1) {
+					art_points[u] = true;
+				}
+				if (graph[x].size() > 1) {
+					art_points[x] = true;
+				}
+			}
+		}
+	}
+	return {art_points, bridges};
+};
 void test_biconnected() {
-	// TODO test root case and 1/2 vertices
+	// TODO test root case and 1/2 vertices and disconnected case
 	constexpr auto make_triangle = [](auto &graph, const ll offset) -> void {
 		add_edge(graph, offset + 0, offset + 1);
 		add_edge(graph, offset + 0, offset + 2);
@@ -80,8 +143,9 @@ void test_biconnected() {
 	using Exp = pair<vector<ll>, vector<array<ll, 2>>>;
 	auto make_test = [&](const auto &exp_func) {
 		return [&](const auto &graph, const auto &perm) {
-			const auto ret = biconnected(permute(perm, graph));
-			assert(check(ret, exp_func(perm)));
+			const auto check_func = [&, permuted = permute(perm, graph)](const auto &func) { assert(check(func(permuted), exp_func(perm))); };
+			check_func(biconnected);
+			check_func(biconnected_ear);
 		};
 	};
 	{
@@ -91,6 +155,7 @@ void test_biconnected() {
 		add_edge(graph, 2, 3);
 		make_triangle(graph, 3);
 		test_all_perms(graph, make_test([](const auto perm) { return Exp{{perm[2], perm[3]}, {{perm[2], perm[3]}}}; }));
+		ear_decomp(graph);
 	}
 	{
 		GraphAdj graph(8);
