@@ -80,7 +80,7 @@ class HLD {
 	vector<ll> heavy; //!< Heavy child
 	vector<ll> head;  //!< Head of heavy path
 	vector<ll> pos;	  //!< Position in segment tree
-	dfs d;		  // DFS of tree
+	DFS d;		  // DFS of tree
 	// TODO why doesn't vector<T>{1} work?
 	QueryDS ds{vector<T>{-100, -100}}; // DS used for querying
 };

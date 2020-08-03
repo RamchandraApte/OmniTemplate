@@ -2,7 +2,7 @@
 #include "core/all.hpp"
 auto bipartite(const vector<vl> &graph) {
 	/*! Returns a bipartite coloring if possible */
-	bfs b{graph};
+	BFS b{graph};
 	b();
 	auto n = size(graph);
 	vl s(n);
@@ -65,7 +65,7 @@ auto max_match(const vector<vl> &graph) {
 				aug_path[dummy_a].push_back(i);
 			}
 		}
-		bfs b{aug_path};
+		BFS b{aug_path};
 		b(dummy_a);
 		if (b.distance[dummy_b] == inf) {
 			break;

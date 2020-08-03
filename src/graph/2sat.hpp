@@ -14,7 +14,7 @@ optional<vector<char>> sat2(const vector<array<ll, 2>> &cnf, const ll n) {
 		graph[n - clause[0]].push_back(n + clause[1]);
 		graph[n - clause[1]].push_back(n + clause[0]);
 	}
-	dfs topo{graph};
+	DFS topo{graph};
 	topo();
 	vl idx(size(graph));
 	fo(i, size(topo.q)) { idx[topo.q[i]] = i; }

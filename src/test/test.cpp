@@ -1,4 +1,5 @@
 #include "core/template.hpp"
+#include "graph/test_biconnected.hpp"
 bool multitest{};
 void test_all() {
 	test_utility();

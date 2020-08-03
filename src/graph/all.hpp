@@ -107,22 +107,20 @@ void test_mst() {
 	assert((ret == vector<edge>{edges[3], edges[1], edges[0]}));
 }
 /*! Generalized graph searcher/visitor*/
-struct gsearch {
+template <typename Searcher> struct GeneralSearch {
 	vector<vl> const &graph;
 	vc<char> visited; //!< Whether vertex idx is visited
 	deque<ll> q;	  //!< Queue
 	vl parent;	  //!< Parent of vertex idx
 	vl distance;	  //!< Distance from source to vertex idx
-	gsearch(const vector<vector<ll>> &g_)
-	    : graph(g_), visited(graph.size()), parent(graph.size(), -1),
-	      distance(graph.size(), inf) {}
-	virtual void operator()(ll) = 0;
+	GeneralSearch(const vector<vector<ll>> &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
+	// virtual void operator()(ll) = 0;
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
 		 * entire graph, and not just one connected component. */
 		fo(i, graph.size()) {
 			if (!visited[i]) {
-				this(i);
+				(*static_cast<Searcher *>(&this))(i);
 			}
 		}
 	}
@@ -144,8 +142,8 @@ template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	return sz;
 }
 /*! Depth-first search */
-struct dfs : public gsearch {
-	using gsearch::operator(), gsearch::gsearch;
+struct DFS : public GeneralSearch<DFS> {
+	using GeneralSearch::operator(), GeneralSearch::GeneralSearch;
 	void operator()(const ll source) {
 		visited[source] = true;
 		for (const auto &j : graph[source]) {
@@ -159,8 +157,8 @@ struct dfs : public gsearch {
 	}
 };
 /*! Breadth-first search*/
-struct bfs : public gsearch {
-	using gsearch::operator(), gsearch::gsearch;
+struct BFS : public GeneralSearch<BFS> {
+	using GeneralSearch::operator(), GeneralSearch::GeneralSearch;
 	void operator()(ll source) {
 		ll old_size = q.size();
 		q.push_back(source);
@@ -179,13 +177,13 @@ struct bfs : public gsearch {
 		}
 	}
 };
-void test_bfs() {
+void test_BFS() {
 	vector<vl> g(4);
 	add_edge(g, 0, 1);
 	add_edge(g, 1, 2);
 	add_edge(g, 1, 3);
 	add_edge(g, 2, 3);
-	bfs b{g};
+	BFS b{g};
 	b(0);
 	assert((b.parent == vl{-1, 0, 1, 1}));
 	assert((b.distance == vl{0, 1, 2, 2}));
@@ -223,7 +221,7 @@ auto scc(const vector<vl> &graph) {
 			assign(v, c);
 		}
 	}};
-	dfs s{graph};
+	DFS s{graph};
 	s();
 	for (ll i : s.q) {
 		assign(i, i);
@@ -265,7 +263,7 @@ auto graph_in(vector<vl> &g, ll m) {
 	}
 }
 /*vector<vector<ll>> chain_decomposition(const vector<vector<ll>>& graph){
-	dfs d{graph};
+	DFS d{graph};
 	d();
 }*/
 void test_graph_theory() {
@@ -273,7 +271,7 @@ void test_graph_theory() {
 	test_trans();
 	test_shortest_dist();
 	test_mst();
-	test_bfs();
+	test_BFS();
 	test_bipartite();
 	test_scc();
 	test_max_match();

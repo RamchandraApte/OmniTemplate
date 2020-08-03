@@ -2,10 +2,10 @@
 #include "core/all.hpp"
 pair<array<ll, 2>, ll> tree_diameter(const vector<vector<ll>> &g) {
 	/*! Returns diameter and center of a tree :param: g*/
-	bfs b{g};
+	BFS b{g};
 	b();
 	const auto u = b.q.back();
-	bfs b2{g};
+	BFS b2{g};
 	b2(u);
 	const auto v = b2.q.back();
 	auto c = v;
