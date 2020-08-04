@@ -114,7 +114,6 @@ template <typename Searcher> struct GeneralSearch {
 	vl parent;	  //!< Parent of vertex idx
 	vl distance;	  //!< Distance from source to vertex idx
 	GeneralSearch(const vector<vector<ll>> &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
-	// virtual void operator()(ll) = 0;
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
 		 * entire graph, and not just one connected component. */
@@ -206,6 +205,8 @@ void test_trans() {
 }
 #include "biconnected.hpp"
 #include "bipartite.hpp"
+#include "flow.hpp"
+#include "test_flow.hpp"
 #include "tree/tree.hpp"
 auto scc(const vector<vl> &graph) {
 	/*! Returns the strongly connected component for each vertex of the
@@ -277,6 +278,7 @@ void test_graph_theory() {
 	test_max_match();
 	test_tree_diameter();
 	test_biconnected();
+	test_flow();
 }
 } // namespace graph_theory
 using namespace graph_theory;

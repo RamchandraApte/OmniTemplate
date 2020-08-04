@@ -5,14 +5,11 @@
 // TODO Tensors? Also, matrix_row class.
 // TODO fix default constructor causing segfault
 namespace linear_algebra {
-tm() struct matrix {
+template <typename T> struct matrix {
 	/*! Matrix class*/
 	ll rows_n, cols_n; //!< Row, column
 	vector<T> a; //! Array storing the data, in row-major order
-	explicit matrix(ll r_, ll c_, df(v, 0LL))
-	    : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) {
-		assert(rows_n >= 1 && cols_n >= 1);
-	}
+	explicit matrix(ll r_, ll c_, T v = {}) : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) { assert(rows_n >= 1 && cols_n >= 1); }
 	explicit matrix(T d) : rows_n(1), cols_n(1), a{d} {}
 	explicit matrix(vector<vector<pr>> const &g)
 	    : matrix(g.size(), g.size(), inf) {
@@ -35,12 +32,13 @@ tm() struct matrix {
 		return const_cast<T *>(const_cast<matrix const &>(this)[i]);
 	}
 	auto operator[](const ll i) const { return &a[i * cols_n]; }
+	bool is_square() const { return rows_n == cols_n; }
 };
 template <typename T> auto identity(const plus<>, const matrix<T> &mat) {
 	return matrix(mat.rows_n, mat.cols_n);
 }
 template <typename T> auto identity(const multiplies<>, const matrix<T> &mat) {
-	assert(mat.rows_n == mat.cols_n);
+	assert(mat.is_square());
 	matrix<T> id(mat.rows_n, mat.cols_n);
 	fo(i, mat.rows_n) { id[i][i] = 1; }
 	return id;
@@ -80,7 +78,7 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
 	via Gaussian elimination.
 	*/
-	assert(a.rows_n == a.cols_n);
+	assert(a.is_square());
 	assert(a.rows_n == b.rows_n);
 	T det{1};
 	fo(i, a.rows_n) {
