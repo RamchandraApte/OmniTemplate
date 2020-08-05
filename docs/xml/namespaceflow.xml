@@ -2,25 +2,65 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespaceflow" kind="namespace" language="C++">
     <compoundname>flow</compoundname>
+    <innerclass refid="structflow_1_1FlowEdge" prot="public">flow::FlowEdge</innerclass>
       <sectiondef kind="func">
-      <memberdef kind="function" id="flow_8cpp_1a1d2a6baffdf7fde3b5ae3b586e8434f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>flow::max_flow</definition>
-        <argsstring>()</argsstring>
-        <name>max_flow</name>
+      <memberdef kind="function" id="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
+        <definition>matrix&lt;ll&gt; flow::edmond_karp</definition>
+        <argsstring>(const matrix&lt; ll &gt; &amp;capacity)</argsstring>
+        <name>edmond_karp</name>
+        <param>
+          <type>const <ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &amp;</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Edmond-Karp maximum flow algorithm. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="9" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="9" bodyend="55"/>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
+        <references refid="namespaceutility_1ae423116f6315d5e998219f27f1f8c401" compoundref="utility_8hpp" startline="20" endline="20">utility::min_eq</references>
+        <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="10">linear_algebra::matrix&lt; T &gt;::rows_n</references>
+        <referencedby refid="test__flow_8hpp_1a73a08ae22ea0f40b5fa189008b61daa4" compoundref="test__flow_8hpp" startline="18" endline="18">test_flow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll flow::total_flow</definition>
+        <argsstring>(const matrix&lt; ll &gt; &amp;flow)</argsstring>
+        <name>total_flow</name>
+        <param>
+          <type>const <ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &amp;</type>
+          <declname>flow</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="flow.cpp" line="5" column="1" bodyfile="flow.cpp" bodystart="5" bodyend="7"/>
+        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="81" column="4" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="81" bodyend="81"/>
+        <referencedby refid="test__flow_8hpp_1a82d3aa2c1393b4a3e42f8bc27138c867" compoundref="test__flow_8hpp" startline="2" endline="17">test_flow_algo</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="flow.cpp" line="4" column="14"/>
+    <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="4" column="14"/>
   </compounddef>
 </doxygen>

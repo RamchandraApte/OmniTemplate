@@ -1,7 +1,7 @@
-\hypertarget{permutation_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/permutation.hpp File Reference}
-\label{permutation_8hpp}\index{/home/ram/OmniTemplate/permutation.hpp@{/home/ram/OmniTemplate/permutation.hpp}}
-{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}modulo.\+hpp\char`\"{}}\newline
+\hypertarget{permutation_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/combinatorics/permutation.hpp File Reference}
+\label{permutation_8hpp}\index{/home/ram/OmniTemplate/src/combinatorics/permutation.hpp@{/home/ram/OmniTemplate/src/combinatorics/permutation.hpp}}
+{\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}number\+\_\+theory/modulo.\+hpp\char`\"{}}\newline
 Include dependency graph for permutation.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -31,19 +31,9 @@ class \mbox{\hyperlink{classpermutation_1_1Permutation}{permutation\+::\+Permuta
 \item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a4c6e81c9c25d20631e5b1a63edeedb74}{permutation\+::identity}} (multiplies$<$$>$, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm)
 \item 
-\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}{permutation\+::operator$\ast$}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&a, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&b)
+\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}{permutation\+::operator$\ast$}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&a, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&\mbox{\hyperlink{range_8hpp_a49089473f43d9aad3d15c043cb1184af}{b}})
 \begin{DoxyCompactList}\small\item\em Returns the composition of permutations a and b, so that ret\mbox{[}i\mbox{]} = a\mbox{[}b\mbox{[}i\mbox{]}\mbox{]}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68e876731be5159eaefd46b1fb8fe031}{permutation\+::invert}} (multiplies$<$$>$, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&p)
 \begin{DoxyCompactList}\small\item\em Inverts a permutation. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed}{permutation\+::power}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm, \mbox{\hyperlink{structll}{ll}} n)
-\begin{DoxyCompactList}\small\item\em Returns in linear-\/time, perm$^\wedge$n using cycle-\/decomposition. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespacepermutation_acf8168de557ed1092dec6dafdca3721a}{permutation\+::test\+\_\+ops}} ()
-\item 
-void \mbox{\hyperlink{namespacepermutation_a0373557adc489168fb0138098ca354dc}{permutation\+::test\+\_\+cycles\+\_\+impl}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm)
-\item 
-void \mbox{\hyperlink{namespacepermutation_a0d218a444863e87f4f8ffdb3eb48b289}{permutation\+::test\+\_\+cycles}} ()
-\item 
-void \mbox{\hyperlink{namespacepermutation_a90736a636d503ca5341c3acc87cdb45f}{permutation\+::test\+\_\+power}} ()
-\item 
-void \mbox{\hyperlink{namespacepermutation_a62d1bd6c9055805cce7003ed56bd2e89}{permutation\+::test\+\_\+permutation}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns in linear-\/time, perm$^\wedge$n using cycle-\/decomposition. \end{DoxyCompactList}\end{DoxyCompactItemize}

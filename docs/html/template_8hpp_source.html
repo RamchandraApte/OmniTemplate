@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OmniTemplate: /home/ram/OmniTemplate/template.hpp Source File</title>
+<title>OmniTemplate: /home/ram/OmniTemplate/src/core/template.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -53,7 +53,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,46 +67,53 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/ram/OmniTemplate/template.hpp</div>  </div>
+<div class="title">template.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="template_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="2sat_8hpp.html">2sat.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="big__integer_8hpp.html">big_integer.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bit_8hpp.html">bit.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="combinatorics_8hpp.html">combinatorics.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8hpp.html">core.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coroutine_8hpp.html">coroutine.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dsu_8hpp.html">dsu.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fft_8hpp.html">fft.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="geometry_8hpp.html">geometry.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph__theory_8hpp.html">graph_theory.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hld_8hpp.html">hld.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="linear__algebra_8hpp.html">linear_algebra.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="link__cut_8hpp.html">link_cut.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main_8hpp.html">main.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="modulo_8hpp.html">modulo.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="number__theory_8hpp.html">number_theory.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="permutation_8hpp.html">permutation.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="persistent_8hpp.html">persistent.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="polynomial_8hpp.html">polynomial.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="queue_8hpp.html">queue.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="segment__tree_8hpp.html">segment_tree.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sparse__table_8hpp.html">sparse_table.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="splay__tree_8hpp.html">splay_tree.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string_8hpp.html">string.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time_8hpp.html">time.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="treap_8hpp.html">treap.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tree_8hpp.html">tree.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utility_8hpp.html">utility.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="big__integer_8hpp.html">algebra/big_integer.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fft_8hpp.html">algebra/fft.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="linear__algebra_8hpp.html">algebra/linear_algebra.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="polynomial_8hpp.html">algebra/polynomial.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="combinatorics_8hpp.html">combinatorics/combinatorics.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="permutation_8hpp.html">combinatorics/permutation.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main_8hpp.html">core/main.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time_8hpp.html">core/time.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bit_8hpp.html">ds/bit.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cht_8hpp.html">ds/cht.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dsu_8hpp.html">ds/dsu.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="persistent_8hpp.html">ds/persistent.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="queue_8hpp.html">ds/queue.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="segment__tree_8hpp.html">ds/segment_tree.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sparse__table_8hpp.html">ds/sparse_table.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="splay__tree_8hpp.html">ds/splay_tree.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="treap_8hpp.html">ds/treap.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="2sat_8hpp.html">graph/2sat.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph_2all_8hpp.html">graph/all.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hld_8hpp.html">graph/tree/hld.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="link__cut_8hpp.html">graph/tree/link_cut.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tree_8hpp.html">graph/tree/tree.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="modulo_8hpp.html">number_theory/modulo.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="number__theory_8hpp.html">number_theory/number_theory.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utility_8hpp.html">utility.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coroutine_8hpp.html">utility/coroutine.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph__draw_8hpp.html">utility/graph_draw.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string_8hpp.html">utility/string.hpp</a>&quot;</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="alink__cut_8hpp_html"><div class="ttname"><a href="link__cut_8hpp.html">link_cut.hpp</a></div></div>
 <div class="ttc" id="abit_8hpp_html"><div class="ttname"><a href="bit_8hpp.html">bit.hpp</a></div></div>
 <div class="ttc" id="anumber__theory_8hpp_html"><div class="ttname"><a href="number__theory_8hpp.html">number_theory.hpp</a></div></div>
 <div class="ttc" id="acombinatorics_8hpp_html"><div class="ttname"><a href="combinatorics_8hpp.html">combinatorics.hpp</a></div></div>
 <div class="ttc" id="apolynomial_8hpp_html"><div class="ttname"><a href="polynomial_8hpp.html">polynomial.hpp</a></div></div>
+<div class="ttc" id="agraph_2all_8hpp_html"><div class="ttname"><a href="graph_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="adsu_8hpp_html"><div class="ttname"><a href="dsu_8hpp.html">dsu.hpp</a></div></div>
 <div class="ttc" id="acoroutine_8hpp_html"><div class="ttname"><a href="coroutine_8hpp.html">coroutine.hpp</a></div></div>
 <div class="ttc" id="asparse__table_8hpp_html"><div class="ttname"><a href="sparse__table_8hpp.html">sparse_table.hpp</a></div></div>
@@ -118,18 +124,18 @@ $(function() {
 <div class="ttc" id="asplay__tree_8hpp_html"><div class="ttname"><a href="splay__tree_8hpp.html">splay_tree.hpp</a></div></div>
 <div class="ttc" id="abig__integer_8hpp_html"><div class="ttname"><a href="big__integer_8hpp.html">big_integer.hpp</a></div></div>
 <div class="ttc" id="a2sat_8hpp_html"><div class="ttname"><a href="2sat_8hpp.html">2sat.hpp</a></div></div>
+<div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="alinear__algebra_8hpp_html"><div class="ttname"><a href="linear__algebra_8hpp.html">linear_algebra.hpp</a></div></div>
-<div class="ttc" id="agraph__theory_8hpp_html"><div class="ttname"><a href="graph__theory_8hpp.html">graph_theory.hpp</a></div></div>
 <div class="ttc" id="atree_8hpp_html"><div class="ttname"><a href="tree_8hpp.html">tree.hpp</a></div></div>
+<div class="ttc" id="agraph__draw_8hpp_html"><div class="ttname"><a href="graph__draw_8hpp.html">graph_draw.hpp</a></div></div>
 <div class="ttc" id="atreap_8hpp_html"><div class="ttname"><a href="treap_8hpp.html">treap.hpp</a></div></div>
 <div class="ttc" id="aqueue_8hpp_html"><div class="ttname"><a href="queue_8hpp.html">queue.hpp</a></div></div>
-<div class="ttc" id="ageometry_8hpp_html"><div class="ttname"><a href="geometry_8hpp.html">geometry.hpp</a></div></div>
 <div class="ttc" id="afft_8hpp_html"><div class="ttname"><a href="fft_8hpp.html">fft.hpp</a></div></div>
-<div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="atime_8hpp_html"><div class="ttname"><a href="time_8hpp.html">time.hpp</a></div></div>
 <div class="ttc" id="asegment__tree_8hpp_html"><div class="ttname"><a href="segment__tree_8hpp.html">segment_tree.hpp</a></div></div>
 <div class="ttc" id="autility_8hpp_html"><div class="ttname"><a href="utility_8hpp.html">utility.hpp</a></div></div>
 <div class="ttc" id="apermutation_8hpp_html"><div class="ttname"><a href="permutation_8hpp.html">permutation.hpp</a></div></div>
+<div class="ttc" id="acht_8hpp_html"><div class="ttname"><a href="cht_8hpp.html">cht.hpp</a></div></div>
 <div class="ttc" id="amodulo_8hpp_html"><div class="ttname"><a href="modulo_8hpp.html">modulo.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

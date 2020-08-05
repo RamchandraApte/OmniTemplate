@@ -3,10 +3,44 @@
   <compounddef id="namespacepersistent" kind="namespace" language="C++">
     <compoundname>persistent</compoundname>
     <innerclass refid="structpersistent_1_1first__cmp" prot="public">persistent::first_cmp</innerclass>
+    <innerclass refid="structpersistent_1_1pers" prot="public">persistent::pers</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepersistent_1aafe71ec52739bdcd46b2a85ac35ec776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Stream</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto&amp; persistent::operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;os, pers&lt; T &gt; const &amp;p)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="structpersistent_1_1pers" kindref="compound">pers</ref>&lt; T &gt; const &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Print the current value of the persistent variable p</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="29" column="1" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="29" bodyend="32"/>
+        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="persistent.hpp" line="3" column="20"/>
+    <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="3" column="21"/>
   </compounddef>
 </doxygen>

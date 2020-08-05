@@ -1,33 +1,8 @@
-# The `extensions` list should already be in here from `sphinx-quickstart`
-extensions = [
-    # there may be others here already, e.g. 'sphinx.ext.mathjax'
-    'breathe',
-    'exhale'
+DOXYFILE = 'Doxyfile-mcss'
+STYLESHEETS = [
+    'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600',
+    '../css/m-light+documentation.compiled.css'
 ]
-
-# Setup the breathe extension
-breathe_projects = {
-    "OmniTemplate": "./xml"
-}
-breathe_default_project = "OmniTemplate"
-
-# Setup the exhale extension
-exhale_args = {
-    # These arguments are required
-    "containmentFolder":     "./api",
-    "rootFileName":          "library_root.rst",
-    "rootFileTitle":         "Library API",
-    "doxygenStripFromPath":  "..",
-    # Suggested optional arguments
-    "createTreeView":        True,
-    # TIP: if using the sphinx-bootstrap-theme, you need
-    # "treeViewIsBootstrap": True,
-    "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin":    "INPUT = ."
-}
-
-# Tell sphinx what the primary language being documented is.
-primary_domain = 'cpp'
-
-# Tell sphinx what the pygments highlight language should be.
-highlight_language = 'cpp'
+THEME_COLOR = '#cb4b16'
+FAVICON = 'favicon-light.png'
+SHOW_UNDOCUMENTED = True

@@ -47,9 +47,9 @@ void split(treap<Key, Data> *trp, const Key &key, Trp *&l, Trp *&r) {
 /**
  * @brief Joins treap l and treap r. 
  * @pre All the keys in l must be less than the keys in r.
- * @param Trp p_Trp: A treap type.
- * @param l p_l: The left half 
- * @param r p_r: The right half
+ * @tparam Trp A treap type.
+ * @param l The left half 
+ * @param r The right half
  * @return Trp*: The union of l and r.
  */
 template <typename Trp>[[nodiscard]] Trp *join(Trp *l, Trp *r) {

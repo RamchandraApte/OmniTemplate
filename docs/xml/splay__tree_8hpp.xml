@@ -2,56 +2,29 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="splay__tree_8hpp" kind="file" language="C++">
     <compoundname>splay_tree.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="program__listing__file__link__cut_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_link_cut.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="link__cut_8hpp" local="yes">link_cut.hpp</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="test__splay__tree_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</includedby>
+    <includedby refid="link__cut_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</includedby>
     <incdepgraph>
-      <node id="1">
-        <label>splay_tree.hpp</label>
-        <link refid="splay__tree_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>bits/stdc++.h</label>
-      </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
       </node>
       <node id="5">
         <label>experimental/source_location</label>
       </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -69,31 +42,71 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/ds/splay_tree.hpp</label>
+        <link refid="splay__tree_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1">
-        <label>splay_tree.hpp</label>
-        <link refid="splay__tree_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>link_cut.hpp</label>
-        <link refid="link__cut_8hpp_source"/>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</label>
+        <link refid="test__splay__tree_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/ds/splay_tree.hpp</label>
+        <link refid="splay__tree_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</label>
+        <link refid="link__cut_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structsplay__tree_1_1PathParent" prot="public">splay_tree::PathParent</innerclass>
@@ -105,193 +118,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">splay_tree<sp/>{</highlight></codeline>
-<codeline lineno="5"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Node&gt;</highlight></codeline>
-<codeline lineno="6" refid="structsplay__tree_1_1PathParent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1PathParent" kindref="compound">PathParent</ref><sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref>*<sp/>path_parent{};</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_link_cut<sp/>=<sp/>false&gt;</highlight></codeline>
-<codeline lineno="10" refid="structsplay__tree_1_1SplayNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>conditional_t&lt;has_link_cut,<sp/>PathParent&lt;SplayNode&lt;T,<sp/>has_link_cut&gt;&gt;,<sp/>Empty&gt;<sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref>(){}</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref>(T<sp/>value_arg):<sp/><ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>{value_arg}<sp/>{}</highlight></codeline>
-<codeline lineno="14" refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>{};<sp/></highlight></codeline>
-<codeline lineno="15" refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;SplayNode<sp/>*,<sp/>2&gt;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>{};<sp/></highlight></codeline>
-<codeline lineno="16" refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref><sp/>*<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>{};<sp/></highlight></codeline>
-<codeline lineno="17" refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]<sp/>==<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="21" refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>();</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p-&gt;parent)<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;parent-&gt;attach(p-&gt;side(),<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;attach(i,<sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[!i]);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" kindref="member">attach</ref>(!i,<sp/>p);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>constexpr(has_link_cut){this.path_parent<sp/>=<sp/>p-&gt;path_parent;}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="35" refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>;<ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>())<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>==<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>?<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>:<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;SplayNode<sp/>*,<sp/>2&gt;<sp/>split()<sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>use<sp/>detach<sp/>function</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>right<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1];</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(right)<sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>right-&gt;parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;right<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>right};</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53" refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" kindref="member">attach</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>,<sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>new_)<sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(new_)<sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>]<sp/>=<sp/>new_;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="61" refid="structsplay__tree_1_1SplayTree" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1SplayTree" kindref="compound">SplayTree</ref><sp/>{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode&lt;T&gt;</ref>;</highlight></codeline>
-<codeline lineno="66" refid="structsplay__tree_1_1SplayTree_1_1iterator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structit__base" kindref="compound">it_base</ref>&lt;T&gt;<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>iterator_category<sp/>=<sp/>bidirectional_iterator_tag;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator--()<sp/>{<sp/>advance&lt;false&gt;();<sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator++()<sp/>{<sp/>advance&lt;true&gt;();<sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;operator*()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*node;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*node_arg)<sp/>:<sp/>node(node_arg)<sp/>{}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator==(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/>oth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.node<sp/>==<sp/>oth.node;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dir&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>advance()<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1])<sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/>extremum&lt;!dir&gt;(node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>&amp;&amp;<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>==<sp/>dir;<sp/>node<sp/>=<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>)</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="90" refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>{};<sp/></highlight></codeline>
-<codeline lineno="91" refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>{};<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree" kindref="compound">SplayTree</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="structsplay__tree_1_1SplayTree" kindref="compound">SplayTree</ref>()<sp/>{<sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>);<sp/>}</highlight></codeline>
-<codeline lineno="94" refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>node)<sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!node)<sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>child<sp/>:<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(child);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>node;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104" refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref><sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;nw<sp/>=<sp/>y-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>&gt;<sp/>y-&gt;value];</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!nw)<sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/>y;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref><sp/>=<sp/>nw;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>nw;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="125" refid="structsplay__tree_1_1SplayTree_1a2bf075a9e6a46e3f9b61e7b00b546707" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a2bf075a9e6a46e3f9b61e7b00b546707" kindref="member">insert</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;key)<sp/>{</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref>{key});</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129" refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" kindref="member">erase</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(x);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref><sp/>=<sp/>join(x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[0],<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="138" refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" kindref="member">erase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;key)<sp/>{<sp/><ref refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" kindref="member">erase</ref>(<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(key));<sp/>}</highlight></codeline>
-<codeline lineno="139" refid="structsplay__tree_1_1SplayTree_1ac3a1a0fa259a0f23787211fb94152acd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i&gt;<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1ac3a1a0fa259a0f23787211fb94152acd" kindref="member">extremum</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(x);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[i];<sp/>x<sp/>=<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[i]);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*join(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>a,<sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!a)<sp/>{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>mx<sp/>=<sp/>extremum&lt;true&gt;(a);</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]<sp/>=<sp/>b;</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mx;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="159" refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;key)<sp/>{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>x<sp/>&amp;&amp;<sp/>key<sp/>!=<sp/>x-&gt;value;<sp/>x<sp/>=<sp/>x-&gt;child[key<sp/>&gt;<sp/>x-&gt;value])</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="168" refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>empty()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()<sp/>==<sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>iterator<sp/>begin()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iterator{extremum&lt;false&gt;(<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>)};<sp/>}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>iterator<sp/>end()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iterator{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};<sp/>}</highlight></codeline>
-<codeline lineno="172"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_splay_tree()<sp/>{</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree" kindref="compound">SplayTree&lt;int&gt;</ref><sp/>sp;</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(4);</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(3);</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(5);</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()<sp/>==<sp/>3);</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!sp.empty());</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(4)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>==<sp/>4);</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(3)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>==<sp/>3);</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(5)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>==<sp/>5);</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(2)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(6)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" kindref="member">erase</ref>(3);</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()<sp/>==<sp/>2);</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(3)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(5)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>==<sp/>5);</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(4)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>==<sp/>4);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(20);</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(-2);</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>sp.<ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(6);</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/>expected{-2,<sp/>4,<sp/>5,<sp/>6,<sp/>20};</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()<sp/>==<sp/>expected.size());</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>:<sp/>expected)<sp/>{</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(sp.<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(x)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>==<sp/>x);</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/>vec;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>copy(sp.begin(),<sp/>sp.end(),<sp/>back_inserter(vec));</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(vec<sp/>==<sp/>expected);</highlight></codeline>
-<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="203"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>splay_tree</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">splay_tree;</highlight></codeline>
-    </programlisting>
-    <location file="splay_tree.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp"/>
   </compounddef>
 </doxygen>

@@ -15,34 +15,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="300" column="4" bodyfile="d_compiled.cpp" bodystart="300" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="36" column="4" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="38" endline="48">debug</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacedebug__tools_1a991f9f01ab3a0e664fabf0bd17fab95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto debug_tools::type_name</definition>
-        <argsstring>([[maybe_unused]] T const &amp;v)</argsstring>
-        <name>type_name</name>
-        <param>
-          <attributes>[[maybe_unused]</attributes>
-          <type>] T const &amp;</type>
-          <declname>v</declname>
-        </param>
+      <memberdef kind="function" id="namespacedebug__tools_1a0a05a970de8929f9b8116e42c0bd48d8" prot="public" static="no" const="yes" explicit="no" inline="no" refqual="lvalue" virt="non-virtual">
+        <type></type>
+        <definition>debug_tools::tm</definition>
+        <argsstring>() auto type_name(T const &amp;v)</argsstring>
+        <name>tm</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
 <para>Return the type name of the type of value</para>
-<para>Return the type name of the type of value</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="277" column="18" bodyfile="d_compiled.cpp" bodystart="277" bodyend="282"/>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="13" column="1" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="13" bodyend="18"/>
       </memberdef>
       <memberdef kind="function" id="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -67,9 +57,10 @@
         </detaileddescription>
         <inbodydescription>
 <para>Replace all occurences of a in s with b</para>
-<para>Replace all occurences of a in s with b</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="283" column="6" bodyfile="d_compiled.cpp" bodystart="283" bodyend="291"/>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="19" column="6" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="19" bodyend="27"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <referencedby refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="28" endline="35">simple_tp</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -92,9 +83,12 @@
         </detaileddescription>
         <inbodydescription>
 <para>Return the simplified type of v</para>
-<para>Return the simplified type of v</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="292" column="18" bodyfile="d_compiled.cpp" bodystart="292" bodyend="299"/>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="28" column="18" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="28" bodyend="35"/>
+        <references refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" compoundref="core_2all_8hpp" startline="44">lets</references>
+        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
+        <references refid="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" compoundref="debug_8hpp" startline="19" endline="27">replace</references>
+        <referencedby refid="io_8hpp_1a40cf53faa8f3a9512c4dad9945ecb425" compoundref="io_8hpp" startline="53" endline="55">std::operator&lt;&lt;</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -125,9 +119,11 @@
         </detaileddescription>
         <inbodydescription>
 <para>Debug print x</para>
-<para>Debug print x</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="302" column="6" bodyfile="d_compiled.cpp" bodystart="302" bodyend="312"/>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="38" column="6" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="38" bodyend="48"/>
+        <references refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" compoundref="core_2all_8hpp" startline="26">debug_mode</references>
+        <references refid="namespacedebug__tools_1ab312673925f42718bafe74a18eae6685" compoundref="debug_8hpp" startline="36">depth</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -135,6 +131,6 @@
     <detaileddescription>
 <para>Debugging tools </para>
     </detaileddescription>
-    <location file="d_compiled.cpp" line="276" column="21"/>
+    <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="12" column="21"/>
   </compounddef>
 </doxygen>

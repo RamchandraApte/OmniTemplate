@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['v_926',['v',['../structseg__base.html#ad05224442279f2966fdbfc335ac3fa12',1,'seg_base::v()'],['../structseg__base_3_01no__impl_3_01T_01_4_01_4.html#ae01d4305c38ee7d28f71aa0e7be1cb84',1,'seg_base&lt; no_impl&lt; T &gt; &gt;::v()']]]
+  ['wedge_938',['wedge',['../namespaceconvex__hull__trick.html#a4f9b285a0e38652eb9839ac60b39e34a',1,'wedge():&#160;cht.hpp'],['../namespaceconvex__hull__trick.html#a4f9b285a0e38652eb9839ac60b39e34a',1,'convex_hull_trick::wedge()']]],
+  ['with_939',['with',['../structutility_1_1with.html#a20244f8d345341882e7ca37b49f2ca77',1,'utility::with']]]
 ];

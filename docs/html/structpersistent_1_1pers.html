@@ -1,245 +1,200 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OmniTemplate: persistent::pers&lt; T &gt; Struct Template Reference</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>persistent::pers struct | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
+  <link rel="icon" href="favicon-light.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#cb4b16" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">OmniTemplate
-   </div>
-   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
-  </td>
- </tr>
- </tbody>
-</table>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="persistent_8hpp.html">&lt;/home/ram/OmniTemplate/src/ds/persistent.hpp&gt;</a></div>
+          <div class="m-doc-template">template&lt;typename T&gt;</div>
+          <span class="m-breadcrumb"><a href="namespacepersistent.html">persistent</a>::<wbr/></span>pers <span class="m-thin">struct</span>
+        </h1>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#pub-static-attribs">Public static variables</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Persistent variable. The old values can be retrieved by changing the time tim</p><p>Time complexity: <svg class="m-math" style="width: 4.247em; height: 1.245em; vertical-align: -0.312em;" viewBox="0 -8.966376 40.775007 11.955168">
+<title>
+$O(log n)$
+</title>
+<defs>
+<path id='eq1-g1-40' d='M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z'/>
+<path id='eq1-g1-41' d='M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z'/>
+<path id='eq1-g0-79' d='M8.679452-5.236364C8.679452-7.208966 7.388294-8.416438 5.71457-8.416438C3.156164-8.416438 .573848-5.66675 .573848-2.905106C.573848-1.028144 1.817186 .251059 3.550685 .251059C6.06127 .251059 8.679452-2.367123 8.679452-5.236364ZM3.622416-.02391C2.642092-.02391 1.601993-.74122 1.601993-2.606227C1.601993-3.694147 1.996513-5.475467 2.976837-6.670984C3.849564-7.723039 4.853798-8.153425 5.654795-8.153425C6.706849-8.153425 7.723039-7.388294 7.723039-5.66675C7.723039-4.60274 7.268742-2.940971 6.467746-1.80523C5.595019-.585803 4.507098-.02391 3.622416-.02391Z'/>
+<path id='eq1-g0-103' d='M4.040847-1.518306C3.993026-1.327024 3.969116-1.279203 3.813699-1.099875C3.323537-.466252 2.82142-.239103 2.450809-.239103C2.056289-.239103 1.685679-.549938 1.685679-1.374844C1.685679-2.008468 2.044334-3.347447 2.307347-3.88543C2.654047-4.554919 3.19203-5.033126 3.694147-5.033126C4.483188-5.033126 4.638605-4.052802 4.638605-3.981071L4.60274-3.813699L4.040847-1.518306ZM4.782067-4.483188C4.62665-4.829888 4.291905-5.272229 3.694147-5.272229C2.391034-5.272229 .908593-3.634371 .908593-1.853051C.908593-.609714 1.661768 0 2.426899 0C3.060523 0 3.622416-.502117 3.837609-.74122L3.574595 .334745C3.407223 .992279 3.335492 1.291158 2.905106 1.709589C2.414944 2.199751 1.960648 2.199751 1.697634 2.199751C1.338979 2.199751 1.0401 2.175841 .74122 2.080199C1.123786 1.972603 1.219427 1.637858 1.219427 1.506351C1.219427 1.315068 1.075965 1.123786 .812951 1.123786C.526027 1.123786 .215193 1.362889 .215193 1.75741C.215193 2.247572 .705355 2.438854 1.721544 2.438854C3.263761 2.438854 4.064757 1.446575 4.220174 .800996L5.547198-4.554919C5.583064-4.698381 5.583064-4.722291 5.583064-4.746202C5.583064-4.913574 5.451557-5.045081 5.272229-5.045081C4.985305-5.045081 4.817933-4.805978 4.782067-4.483188Z'/>
+<path id='eq1-g0-108' d='M3.036613-7.998007C3.048568-8.045828 3.072478-8.117559 3.072478-8.177335C3.072478-8.296887 2.952927-8.296887 2.929016-8.296887C2.917061-8.296887 2.486675-8.261021 2.271482-8.237111C2.068244-8.225156 1.888917-8.201245 1.673724-8.18929C1.3868-8.16538 1.303113-8.153425 1.303113-7.938232C1.303113-7.81868 1.422665-7.81868 1.542217-7.81868C2.15193-7.81868 2.15193-7.711083 2.15193-7.591532C2.15193-7.543711 2.15193-7.519801 2.092154-7.304608L.609714-1.374844C.573848-1.243337 .549938-1.147696 .549938-.956413C.549938-.358655 .992279 .119552 1.601993 .119552C1.996513 .119552 2.259527-.143462 2.450809-.514072C2.654047-.908593 2.82142-1.661768 2.82142-1.709589C2.82142-1.769365 2.773599-1.817186 2.701868-1.817186C2.594271-1.817186 2.582316-1.75741 2.534496-1.578082C2.319303-.753176 2.10411-.119552 1.625903-.119552C1.267248-.119552 1.267248-.502117 1.267248-.669489C1.267248-.71731 1.267248-.968369 1.350934-1.303113L3.036613-7.998007Z'/>
+<path id='eq1-g0-110' d='M2.462765-3.502864C2.486675-3.574595 2.785554-4.172354 3.227895-4.554919C3.53873-4.841843 3.945205-5.033126 4.411457-5.033126C4.889664-5.033126 5.057036-4.674471 5.057036-4.196264C5.057036-3.514819 4.566874-2.15193 4.327771-1.506351C4.220174-1.219427 4.160399-1.06401 4.160399-.848817C4.160399-.310834 4.531009 .119552 5.104857 .119552C6.216687 .119552 6.635118-1.637858 6.635118-1.709589C6.635118-1.769365 6.587298-1.817186 6.515567-1.817186C6.40797-1.817186 6.396015-1.78132 6.336239-1.578082C6.06127-.597758 5.606974-.119552 5.140722-.119552C5.021171-.119552 4.829888-.131507 4.829888-.514072C4.829888-.812951 4.961395-1.171606 5.033126-1.338979C5.272229-1.996513 5.774346-3.335492 5.774346-4.016936C5.774346-4.734247 5.355915-5.272229 4.447323-5.272229C3.383313-5.272229 2.82142-4.519054 2.606227-4.220174C2.570361-4.901619 2.080199-5.272229 1.554172-5.272229C1.171606-5.272229 .908593-5.045081 .705355-4.638605C.490162-4.208219 .32279-3.490909 .32279-3.443088S.37061-3.335492 .454296-3.335492C.549938-3.335492 .561893-3.347447 .633624-3.622416C.824907-4.351681 1.0401-5.033126 1.518306-5.033126C1.793275-5.033126 1.888917-4.841843 1.888917-4.483188C1.888917-4.220174 1.769365-3.753923 1.685679-3.383313L1.350934-2.092154C1.303113-1.865006 1.171606-1.327024 1.111831-1.111831C1.028144-.800996 .896638-.239103 .896638-.179328C.896638-.011955 1.028144 .119552 1.207472 .119552C1.350934 .119552 1.518306 .047821 1.613948-.131507C1.637858-.191283 1.745455-.609714 1.80523-.848817L2.068244-1.924782L2.462765-3.502864Z'/>
+<path id='eq1-g0-111' d='M5.451557-3.287671C5.451557-4.423412 4.710336-5.272229 3.622416-5.272229C2.044334-5.272229 .490162-3.550685 .490162-1.865006C.490162-.729265 1.231382 .119552 2.319303 .119552C3.90934 .119552 5.451557-1.601993 5.451557-3.287671ZM2.331258-.119552C1.733499-.119552 1.291158-.597758 1.291158-1.43462C1.291158-1.984558 1.578082-3.203985 1.912827-3.801743C2.450809-4.722291 3.120299-5.033126 3.610461-5.033126C4.196264-5.033126 4.65056-4.554919 4.65056-3.718057C4.65056-3.239851 4.399502-1.960648 3.945205-1.231382C3.455044-.430386 2.797509-.119552 2.331258-.119552Z'/>
+</defs>
+<g id='eq1-page1'>
+<use x='0' y='0' xlink:href='#eq1-g0-79'/>
+<use x='9.271248' y='0' xlink:href='#eq1-g1-40'/>
+<use x='13.823574' y='0' xlink:href='#eq1-g0-108'/>
+<use x='17.573382' y='0' xlink:href='#eq1-g0-111'/>
+<use x='23.20082' y='0' xlink:href='#eq1-g0-103'/>
+<use x='29.235076' y='0' xlink:href='#eq1-g0-110'/>
+<use x='36.222682' y='0' xlink:href='#eq1-g1-41'/>
+</g>
+</svg> for setting and getting the value.</p><p>Space complexity: <svg class="m-math" style="width: 2.524em; height: 1.245em; vertical-align: -0.312em;" viewBox="0 -8.966376 24.22889 11.955168">
+<title>
+$O(1)$
+</title>
+<defs>
+<path id='eq2-g1-40' d='M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z'/>
+<path id='eq2-g1-41' d='M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z'/>
+<path id='eq2-g1-49' d='M3.443088-7.663263C3.443088-7.938232 3.443088-7.950187 3.203985-7.950187C2.917061-7.627397 2.319303-7.185056 1.08792-7.185056V-6.838356C1.362889-6.838356 1.960648-6.838356 2.618182-7.149191V-.920548C2.618182-.490162 2.582316-.3467 1.530262-.3467H1.159651V0C1.482441-.02391 2.642092-.02391 3.036613-.02391S4.578829-.02391 4.901619 0V-.3467H4.531009C3.478954-.3467 3.443088-.490162 3.443088-.920548V-7.663263Z'/>
+<path id='eq2-g0-79' d='M8.679452-5.236364C8.679452-7.208966 7.388294-8.416438 5.71457-8.416438C3.156164-8.416438 .573848-5.66675 .573848-2.905106C.573848-1.028144 1.817186 .251059 3.550685 .251059C6.06127 .251059 8.679452-2.367123 8.679452-5.236364ZM3.622416-.02391C2.642092-.02391 1.601993-.74122 1.601993-2.606227C1.601993-3.694147 1.996513-5.475467 2.976837-6.670984C3.849564-7.723039 4.853798-8.153425 5.654795-8.153425C6.706849-8.153425 7.723039-7.388294 7.723039-5.66675C7.723039-4.60274 7.268742-2.940971 6.467746-1.80523C5.595019-.585803 4.507098-.02391 3.622416-.02391Z'/>
+</defs>
+<g id='eq2-page1'>
+<use x='0' y='0' xlink:href='#eq2-g0-79'/>
+<use x='9.271248' y='0' xlink:href='#eq2-g1-40'/>
+<use x='13.823574' y='0' xlink:href='#eq2-g1-49'/>
+<use x='19.676564' y='0' xlink:href='#eq2-g1-41'/>
+</g>
+</svg> per assignment.</p>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="aca1368b7234aeaa330d30014ab74aecb">
+              using <a href="#aca1368b7234aeaa330d30014ab74aecb" class="m-doc-self">event</a> = pair&lt;<a href="structll.html" class="m-doc">ll</a>, T&gt;
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-static-attribs">
+          <h2><a href="#pub-static-attribs">Public static variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a7284254ccae070c4b705a05a8d118b92">
+              static auto <a href="#a7284254ccae070c4b705a05a8d118b92" class="m-doc-self">tim</a>
+            </dt>
+            <dd>Time for the persistent variable.</dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="ad16e2906f0acb5b44696b3e732756ea7">
+              <span class="m-doc-wrap-bumper"><a href="#ad16e2906f0acb5b44696b3e732756ea7" class="m-doc-self">operator auto</a>(</span><span class="m-doc-wrap">) const</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a11fc55a84cb1327a5797ea29352eb8b9">
+              <span class="m-doc-wrap-bumper">auto <a href="#a11fc55a84cb1327a5797ea29352eb8b9" class="m-doc-self">operator=</a>(</span><span class="m-doc-wrap">const T&amp; v) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="aa69f50e85db0c10e684390388ef6f23b">
+              set&lt;<a href="structpersistent_1_1pers.html#aca1368b7234aeaa330d30014ab74aecb" class="m-doc">event</a>, <a href="structpersistent_1_1first__cmp.html" class="m-doc">first_<wbr />cmp</a>&gt; <a href="#aa69f50e85db0c10e684390388ef6f23b" class="m-doc-self">s</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- end header part -->
-<!-- Generated by Doxygen 1.8.17 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Search');
-/* @license-end */
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacepersistent.html">persistent</a></li><li class="navelem"><a class="el" href="structpersistent_1_1pers.html">pers</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div class="header">
-  <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="structpersistent_1_1pers-members.html">List of all members</a>  </div>
-  <div class="headertitle">
-<div class="title">persistent::pers&lt; T &gt; Struct Template Reference</div>  </div>
-</div><!--header-->
-<div class="contents">
-
-<p><code>#include &lt;<a class="el" href="persistent_8hpp_source.html">persistent.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for persistent::pers&lt; T &gt;:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structpersistent_1_1pers__coll__graph.svg" width="238" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:aca1368b7234aeaa330d30014ab74aecb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpersistent_1_1pers.html#aca1368b7234aeaa330d30014ab74aecb">event</a> = pair&lt; <a class="el" href="structll.html">ll</a>, T &gt;</td></tr>
-<tr class="separator:aca1368b7234aeaa330d30014ab74aecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a11fc55a84cb1327a5797ea29352eb8b9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpersistent_1_1pers.html#a11fc55a84cb1327a5797ea29352eb8b9">operator=</a> (const T &amp;<a class="el" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>)</td></tr>
-<tr class="separator:a11fc55a84cb1327a5797ea29352eb8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16e2906f0acb5b44696b3e732756ea7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpersistent_1_1pers.html#ad16e2906f0acb5b44696b3e732756ea7">operator auto</a> () const</td></tr>
-<tr class="separator:ad16e2906f0acb5b44696b3e732756ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa69f50e85db0c10e684390388ef6f23b"><td class="memItemLeft" align="right" valign="top">set&lt; <a class="el" href="structpersistent_1_1pers.html#aca1368b7234aeaa330d30014ab74aecb">event</a>, <a class="el" href="structpersistent_1_1first__cmp.html">first_cmp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpersistent_1_1pers.html#aa69f50e85db0c10e684390388ef6f23b">s</a></td></tr>
-<tr class="separator:aa69f50e85db0c10e684390388ef6f23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a7284254ccae070c4b705a05a8d118b92"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpersistent_1_1pers.html#a7284254ccae070c4b705a05a8d118b92">tim</a> = 0LL</td></tr>
-<tr class="memdesc:a7284254ccae070c4b705a05a8d118b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time for the persistent variable.  <a href="structpersistent_1_1pers.html#a7284254ccae070c4b705a05a8d118b92">More...</a><br /></td></tr>
-<tr class="separator:a7284254ccae070c4b705a05a8d118b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="aca1368b7234aeaa330d30014ab74aecb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca1368b7234aeaa330d30014ab74aecb">&#9670;&nbsp;</a></span>event</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="structpersistent_1_1pers.html">persistent::pers</a>&lt; T &gt;::<a class="el" href="structpersistent_1_1pers.html#aca1368b7234aeaa330d30014ab74aecb">event</a> =  pair&lt;<a class="el" href="structll.html">ll</a>, T&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad16e2906f0acb5b44696b3e732756ea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad16e2906f0acb5b44696b3e732756ea7">&#9670;&nbsp;</a></span>operator auto()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structpersistent_1_1pers.html">persistent::pers</a>&lt; T &gt;::operator auto </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a11fc55a84cb1327a5797ea29352eb8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11fc55a84cb1327a5797ea29352eb8b9">&#9670;&nbsp;</a></span>operator=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="structpersistent_1_1pers.html">persistent::pers</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>v</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa69f50e85db0c10e684390388ef6f23b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa69f50e85db0c10e684390388ef6f23b">&#9670;&nbsp;</a></span>s</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">set&lt;<a class="el" href="structpersistent_1_1pers.html#aca1368b7234aeaa330d30014ab74aecb">event</a>, <a class="el" href="structpersistent_1_1first__cmp.html">first_cmp</a>&gt; <a class="el" href="structpersistent_1_1pers.html">persistent::pers</a>&lt; T &gt;::s</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7284254ccae070c4b705a05a8d118b92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7284254ccae070c4b705a05a8d118b92">&#9670;&nbsp;</a></span>tim</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto <a class="el" href="structpersistent_1_1pers.html">persistent::pers</a>&lt; T &gt;::tim = 0LL</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Time for the persistent variable. </p>
-<p>Persistent variable. The old values can be retrieved by changing the time tim </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/ram/OmniTemplate/<a class="el" href="persistent_8hpp_source.html">persistent.hpp</a></li>
-</ul>
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
 </body>
 </html>

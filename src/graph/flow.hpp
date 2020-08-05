@@ -53,7 +53,7 @@ matrix<ll> edmond_karp(const matrix<ll> &capacity) {
 	}
 	return flow;
 }
-matrix<ll> dinic(const matrix<ll> &capacity) {
+/*matrix<ll> dinic(const matrix<ll> &capacity) {
 	const ll n = capacity.rows_n;
 	vector<vector<pair<ll, FlowEdge>>> graph(n);
 	fo(i, n) {
@@ -77,7 +77,7 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 	bfs();
 
 	auto dfs = [&] bfs.distance[u] < bfs.distance[v]
-}
+}*/
 ll total_flow(const matrix<ll> &flow) { return accumulate(flow[0], flow[0] + flow.cols_n, 0LL); }
 } // namespace flow
 using namespace flow;

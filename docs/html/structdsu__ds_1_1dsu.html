@@ -1,376 +1,174 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OmniTemplate: dsu_ds::dsu Struct Reference</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>dsu_ds::dsu struct | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
+  <link rel="icon" href="favicon-light.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#cb4b16" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">OmniTemplate
-   </div>
-   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
-  </td>
- </tr>
- </tbody>
-</table>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespacedsu__ds.html">dsu_ds</a>::<wbr/></span>dsu <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="dsu_8hpp.html">&lt;/home/ram/OmniTemplate/src/ds/dsu.hpp&gt;</a></div>
+        </h1>
+        <p>Disjoint-set data structure.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a11446b57ae0bf69361258cb4ee2fd212">
+              <span class="m-doc-wrap-bumper">auto <a href="#a11446b57ae0bf69361258cb4ee2fd212" class="m-doc-self">join</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x,
+              <a href="structll.html" class="m-doc">ll</a> y) -&gt; bool</span>
+            </dt>
+            <dd>Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.</dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a4cb38e70b100ef23db7b89dc51016273">
+              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#a4cb38e70b100ef23db7b89dc51016273" class="m-doc-self">parent</a>
+            </dt>
+            <dd>The parent of each element.</dd>
+            <dt>
+              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#a0c383f06009a0b2b40b33030cc5ff5dc" class="m-doc">size_</a>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="ada73da3392d6444f9b29d60669f3c762"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc-self">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-info">explicit</span> </span></span>
+            </h3>
+<p>Construct a dsu with n elements. Initially each element is in its own set.</p>
+          </div></section>
+          <section class="m-doc-details" id="a5a58bd229ccd7eac0892b762d178981c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc-self">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const</span></span>
+            </h3>
+<p>Returns the representative element of x</p>
+          </div></section>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="a0c383f06009a0b2b40b33030cc5ff5dc"><div>
+            <h3>
+              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> dsu_ds::<wbr />dsu::<wbr /><a href="#a0c383f06009a0b2b40b33030cc5ff5dc" class="m-doc-self">size_</a>
+            </h3>
+<p>Size of set of representative element idx</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- end header part -->
-<!-- Generated by Doxygen 1.8.17 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Search');
-/* @license-end */
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacedsu__ds.html">dsu_ds</a></li><li class="navelem"><a class="el" href="structdsu__ds_1_1dsu.html">dsu</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div class="header">
-  <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structdsu__ds_1_1dsu-members.html">List of all members</a>  </div>
-  <div class="headertitle">
-<div class="title">dsu_ds::dsu Struct Reference</div>  </div>
-</div><!--header-->
-<div class="contents">
-
-<p>Disjoint-set data structure.  
- <a href="structdsu__ds_1_1dsu.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="dsu_8hpp_source.html">dsu.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for dsu_ds::dsu:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu__coll__graph.svg" width="204" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ada73da3392d6444f9b29d60669f3c762"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#ada73da3392d6444f9b29d60669f3c762">dsu</a> (const <a class="el" href="structll.html">ll</a> n)</td></tr>
-<tr class="separator:ada73da3392d6444f9b29d60669f3c762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a58bd229ccd7eac0892b762d178981c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a5a58bd229ccd7eac0892b762d178981c">find</a> (<a class="el" href="structll.html">ll</a> x) const</td></tr>
-<tr class="separator:a5a58bd229ccd7eac0892b762d178981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11446b57ae0bf69361258cb4ee2fd212"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a11446b57ae0bf69361258cb4ee2fd212">join</a> (<a class="el" href="structll.html">ll</a> x, <a class="el" href="structll.html">ll</a> y)</td></tr>
-<tr class="separator:a11446b57ae0bf69361258cb4ee2fd212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada73da3392d6444f9b29d60669f3c762"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#ada73da3392d6444f9b29d60669f3c762">dsu</a> (const <a class="el" href="structll.html">ll</a> n)</td></tr>
-<tr class="separator:ada73da3392d6444f9b29d60669f3c762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a58bd229ccd7eac0892b762d178981c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a5a58bd229ccd7eac0892b762d178981c">find</a> (<a class="el" href="structll.html">ll</a> x) const</td></tr>
-<tr class="separator:a5a58bd229ccd7eac0892b762d178981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11446b57ae0bf69361258cb4ee2fd212"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a11446b57ae0bf69361258cb4ee2fd212">join</a> (<a class="el" href="structll.html">ll</a> x, <a class="el" href="structll.html">ll</a> y)</td></tr>
-<tr class="memdesc:a11446b57ae0bf69361258cb4ee2fd212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.  <a href="structdsu__ds_1_1dsu.html#a11446b57ae0bf69361258cb4ee2fd212">More...</a><br /></td></tr>
-<tr class="separator:a11446b57ae0bf69361258cb4ee2fd212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a4cb38e70b100ef23db7b89dc51016273"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a4cb38e70b100ef23db7b89dc51016273">parent</a></td></tr>
-<tr class="memdesc:a4cb38e70b100ef23db7b89dc51016273"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parent of each element.  <a href="structdsu__ds_1_1dsu.html#a4cb38e70b100ef23db7b89dc51016273">More...</a><br /></td></tr>
-<tr class="separator:a4cb38e70b100ef23db7b89dc51016273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c383f06009a0b2b40b33030cc5ff5dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdsu__ds_1_1dsu.html#a0c383f06009a0b2b40b33030cc5ff5dc">size_</a></td></tr>
-<tr class="separator:a0c383f06009a0b2b40b33030cc5ff5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Disjoint-set data structure. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ada73da3392d6444f9b29d60669f3c762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada73da3392d6444f9b29d60669f3c762">&#9670;&nbsp;</a></span>dsu() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dsu_ds::dsu::dsu </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ada73da3392d6444f9b29d60669f3c762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada73da3392d6444f9b29d60669f3c762">&#9670;&nbsp;</a></span>dsu() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dsu_ds::dsu::dsu </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Construct a dsu with n elements. Initially each element is in its own set. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5a58bd229ccd7eac0892b762d178981c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a58bd229ccd7eac0892b762d178981c">&#9670;&nbsp;</a></span>find() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structll.html">ll</a> dsu_ds::dsu::find </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the representative element of x </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c_cgraph.svg" width="142" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a5a58bd229ccd7eac0892b762d178981c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a58bd229ccd7eac0892b762d178981c">&#9670;&nbsp;</a></span>find() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structll.html">ll</a> dsu_ds::dsu::find </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c_icgraph.svg" width="342" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a11446b57ae0bf69361258cb4ee2fd212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11446b57ae0bf69361258cb4ee2fd212">&#9670;&nbsp;</a></span>join() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool dsu_ds::dsu::join </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a11446b57ae0bf69361258cb4ee2fd212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11446b57ae0bf69361258cb4ee2fd212">&#9670;&nbsp;</a></span>join() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool dsu_ds::dsu::join </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4cb38e70b100ef23db7b89dc51016273"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cb38e70b100ef23db7b89dc51016273">&#9670;&nbsp;</a></span>parent</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> dsu_ds::dsu::parent</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">mutable</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The parent of each element. </p>
-
-</div>
-</div>
-<a id="a0c383f06009a0b2b40b33030cc5ff5dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c383f06009a0b2b40b33030cc5ff5dc">&#9670;&nbsp;</a></span>size_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> dsu_ds::dsu::size_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Size of set of representative element idx </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/ram/OmniTemplate/<a class="el" href="d__compiled_8cpp.html">d_compiled.cpp</a></li>
-<li>/home/ram/OmniTemplate/<a class="el" href="dsu_8hpp_source.html">dsu.hpp</a></li>
-</ul>
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
 </body>
 </html>

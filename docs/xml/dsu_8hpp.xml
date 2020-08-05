@@ -2,56 +2,29 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="dsu_8hpp" kind="file" language="C++">
     <compoundname>dsu.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="graph__theory_8hpp" local="yes">graph_theory.hpp</includedby>
-    <includedby refid="program__listing__file__graph__theory_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="test__dsu_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/test_dsu.hpp</includedby>
+    <includedby refid="graph_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/all.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="1">
-        <label>dsu.hpp</label>
-        <link refid="dsu_8hpp"/>
-        <childnode refid="2" relation="include">
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -69,47 +42,127 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
         <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/ds/dsu.hpp</label>
+        <link refid="dsu_8hpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>graph_theory.hpp</label>
-        <link refid="graph__theory_8hpp_source"/>
+      <node id="8">
+        <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
+        <link refid="test__all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+      </node>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/src/ds/test_dsu.hpp</label>
+        <link refid="test__dsu_8hpp"/>
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+      </node>
+      <node id="12">
+        <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
+        <link refid="test__graph__draw_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
+        <link refid="test__hld_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
+        <link refid="hld_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
+        <link refid="test__2sat_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
+        <link refid="graph_2all_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ram/OmniTemplate/src/graph/2sat.hpp</label>
+        <link refid="2sat_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>dsu.hpp</label>
+        <label>/home/ram/OmniTemplate/src/ds/dsu.hpp</label>
         <link refid="dsu_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>2sat.hpp</label>
-        <link refid="2sat_8hpp_source"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>hld.hpp</label>
-        <link refid="hld_8hpp_source"/>
-        <childnode refid="4" relation="include">
+      <node id="11">
+        <label>/home/ram/OmniTemplate/src/utility/graph_draw.hpp</label>
+        <link refid="graph__draw_8hpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structdsu__ds_1_1dsu" prot="public">dsu_ds::dsu</innerclass>
@@ -118,55 +171,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dsu_ds<sp/>{</highlight></codeline>
-<codeline lineno="5"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdsu__ds_1_1dsu" kindref="compound">dsu</ref><sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vl<sp/><ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>;<sp/></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/><ref refid="structdsu__ds_1_1dsu_1a0c383f06009a0b2b40b33030cc5ff5dc" kindref="member">size_</ref>;<sp/></highlight></codeline>
-<codeline lineno="9" refid="structdsu__ds_1_1dsu_1ada73da3392d6444f9b29d60669f3c762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1ada73da3392d6444f9b29d60669f3c762" kindref="member">dsu</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>:<sp/><ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>(n),<sp/><ref refid="structdsu__ds_1_1dsu_1a0c383f06009a0b2b40b33030cc5ff5dc" kindref="member">size_</ref>(n,<sp/>1)<sp/>{<sp/>iota(al(<ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>),<sp/>0);<sp/>}</highlight></codeline>
-<codeline lineno="11" refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/><ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>[x]<sp/>?<sp/>x<sp/>:<sp/><ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>[x]<sp/>=<sp/>this.find(<ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>[x]);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="18" refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" kindref="member">join</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y)<sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>this.find(x);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>this.find(y);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>y)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swap2(x,<sp/>y,<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1a0c383f06009a0b2b40b33030cc5ff5dc" kindref="member">size_</ref>[idx];<sp/>});</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu_1a0c383f06009a0b2b40b33030cc5ff5dc" kindref="member">size_</ref>[y]<sp/>+=<sp/><ref refid="structdsu__ds_1_1dsu_1a0c383f06009a0b2b40b33030cc5ff5dc" kindref="member">size_</ref>[x];</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>[x]<sp/>=<sp/>y;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="31"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;operator&lt;&lt;(Stream<sp/>&amp;os,<sp/><ref refid="structdsu__ds_1_1dsu" kindref="compound">dsu</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;d)<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;dsu{&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>d.<ref refid="structdsu__ds_1_1dsu_1a4cb38e70b100ef23db7b89dc51016273" kindref="member">parent</ref>.size())<sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>delim;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>d.find(i);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_dsu()<sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu" kindref="compound">dsu</ref><sp/>d{100};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>100)<sp/>{<sp/>assert(d.find(i)<sp/>==<sp/>i);<sp/>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(d.join(3,<sp/>4));</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(d.join(6,<sp/>10));</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!d.join(6,<sp/>6));</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(d.join(10,<sp/>3));</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!d.join(6,<sp/>3));</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>vl<sp/>idx{d.find(3),<sp/>d.find(4),<sp/>d.find(6),<sp/>d.find(10)};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(all_of(al(idx),<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/>idx[0];<sp/>}));</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>99)<sp/>{<sp/>d.join(i,<sp/>i<sp/>+<sp/>1);<sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>100)<sp/>{<sp/>assert(d.find(i)<sp/>==<sp/>d.find(0));<sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dsu_ds</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">dsu_ds;</highlight></codeline>
-    </programlisting>
-    <location file="dsu.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/ds/dsu.hpp"/>
   </compounddef>
 </doxygen>

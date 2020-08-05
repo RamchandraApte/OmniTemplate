@@ -5,6 +5,11 @@
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} namespace. Contains the \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} class and tools related to permutations.  
 
 
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepermutation_1_1test}{test}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,22 +20,12 @@ class \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}}
 \item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a4c6e81c9c25d20631e5b1a63edeedb74}{identity}} (multiplies$<$$>$, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm)
 \item 
-\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}{operator$\ast$}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&a, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&b)
+\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}{operator$\ast$}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&a, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&\mbox{\hyperlink{range_8hpp_a49089473f43d9aad3d15c043cb1184af}{b}})
 \begin{DoxyCompactList}\small\item\em Returns the composition of permutations a and b, so that ret\mbox{[}i\mbox{]} = a\mbox{[}b\mbox{[}i\mbox{]}\mbox{]}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68e876731be5159eaefd46b1fb8fe031}{invert}} (multiplies$<$$>$, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&p)
 \begin{DoxyCompactList}\small\item\em Inverts a permutation. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed}{power}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm, \mbox{\hyperlink{structll}{ll}} n)
-\begin{DoxyCompactList}\small\item\em Returns in linear-\/time, perm$^\wedge$n using cycle-\/decomposition. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespacepermutation_acf8168de557ed1092dec6dafdca3721a}{test\+\_\+ops}} ()
-\item 
-void \mbox{\hyperlink{namespacepermutation_a0373557adc489168fb0138098ca354dc}{test\+\_\+cycles\+\_\+impl}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm)
-\item 
-void \mbox{\hyperlink{namespacepermutation_a0d218a444863e87f4f8ffdb3eb48b289}{test\+\_\+cycles}} ()
-\item 
-void \mbox{\hyperlink{namespacepermutation_a90736a636d503ca5341c3acc87cdb45f}{test\+\_\+power}} ()
-\item 
-void \mbox{\hyperlink{namespacepermutation_a62d1bd6c9055805cce7003ed56bd2e89}{test\+\_\+permutation}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns in linear-\/time, perm$^\wedge$n using cycle-\/decomposition. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -70,6 +65,13 @@ Inverts a permutation.
 \begin{DoxyReturn}{Returns}
 Inverse of the permutation. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{namespacepermutation_a68e876731be5159eaefd46b1fb8fe031_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}\label{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}} 
 \index{permutation@{permutation}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!permutation@{permutation}}
@@ -83,6 +85,13 @@ Returns the composition of permutations a and b, so that ret\mbox{[}i\mbox{]} = 
 \begin{DoxyReturn}{Returns}
 $ab$ 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{namespacepermutation_a68665163bd10ce50e6606b1babe2e041_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed}\label{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed}} 
 \index{permutation@{permutation}!power@{power}}
 \index{power@{power}!permutation@{permutation}}
@@ -115,98 +124,5 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacepermutation_a0d218a444863e87f4f8ffdb3eb48b289}\label{namespacepermutation_a0d218a444863e87f4f8ffdb3eb48b289}} 
-\index{permutation@{permutation}!test\_cycles@{test\_cycles}}
-\index{test\_cycles@{test\_cycles}!permutation@{permutation}}
-\doxysubsubsection{\texorpdfstring{test\_cycles()}{test\_cycles()}}
-{\footnotesize\ttfamily void permutation\+::test\+\_\+cycles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a0d218a444863e87f4f8ffdb3eb48b289_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a0d218a444863e87f4f8ffdb3eb48b289_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacepermutation_a0373557adc489168fb0138098ca354dc}\label{namespacepermutation_a0373557adc489168fb0138098ca354dc}} 
-\index{permutation@{permutation}!test\_cycles\_impl@{test\_cycles\_impl}}
-\index{test\_cycles\_impl@{test\_cycles\_impl}!permutation@{permutation}}
-\doxysubsubsection{\texorpdfstring{test\_cycles\_impl()}{test\_cycles\_impl()}}
-{\footnotesize\ttfamily void permutation\+::test\+\_\+cycles\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&}]{perm }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a0373557adc489168fb0138098ca354dc_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a0373557adc489168fb0138098ca354dc_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacepermutation_acf8168de557ed1092dec6dafdca3721a}\label{namespacepermutation_acf8168de557ed1092dec6dafdca3721a}} 
-\index{permutation@{permutation}!test\_ops@{test\_ops}}
-\index{test\_ops@{test\_ops}!permutation@{permutation}}
-\doxysubsubsection{\texorpdfstring{test\_ops()}{test\_ops()}}
-{\footnotesize\ttfamily void permutation\+::test\+\_\+ops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_acf8168de557ed1092dec6dafdca3721a_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacepermutation_a62d1bd6c9055805cce7003ed56bd2e89}\label{namespacepermutation_a62d1bd6c9055805cce7003ed56bd2e89}} 
-\index{permutation@{permutation}!test\_permutation@{test\_permutation}}
-\index{test\_permutation@{test\_permutation}!permutation@{permutation}}
-\doxysubsubsection{\texorpdfstring{test\_permutation()}{test\_permutation()}}
-{\footnotesize\ttfamily void permutation\+::test\+\_\+permutation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a62d1bd6c9055805cce7003ed56bd2e89_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a62d1bd6c9055805cce7003ed56bd2e89_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacepermutation_a90736a636d503ca5341c3acc87cdb45f}\label{namespacepermutation_a90736a636d503ca5341c3acc87cdb45f}} 
-\index{permutation@{permutation}!test\_power@{test\_power}}
-\index{test\_power@{test\_power}!permutation@{permutation}}
-\doxysubsubsection{\texorpdfstring{test\_power()}{test\_power()}}
-{\footnotesize\ttfamily void permutation\+::test\+\_\+power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a90736a636d503ca5341c3acc87cdb45f_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacepermutation_a90736a636d503ca5341c3acc87cdb45f_icgraph}
 \end{center}
 \end{figure}

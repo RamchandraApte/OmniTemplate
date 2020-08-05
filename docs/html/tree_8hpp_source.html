@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OmniTemplate: /home/ram/OmniTemplate/tree.hpp Source File</title>
+<title>OmniTemplate: /home/ram/OmniTemplate/src/graph/tree/tree.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -53,7 +53,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,89 +67,64 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li><li class="navelem"><a class="el" href="dir_1cc959f3490ebc60f7bf96b14f24e883.html">tree</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/ram/OmniTemplate/tree.hpp</div>  </div>
+<div class="title">tree.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="tree_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8hpp.html">core.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacetree.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacetree.html">tree</a> {</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">    4</a></span>&#160;<a class="code" href="structll.html">ll</a> <span class="keyword">const</span> <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a> = 30;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="structtree_1_1no.html">    5</a></span>&#160;<a class="code" href="core_8hpp.html#a6779ef315f4a9c289636c8f466c823e3">tm</a>() struct <a class="code" href="structtree_1_1no.html">no</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="structtree_1_1no.html#a3dd518d66a2bf5c95d277ff8d9638c1a">    6</a></span>&#160;    vector&lt;no *&gt; <a class="code" href="structtree_1_1no.html#a3dd518d66a2bf5c95d277ff8d9638c1a">p</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structtree_1_1no.html#aaee193ab7c73293313b957b397f2b6b2">    7</a></span>&#160;    T <a class="code" href="structtree_1_1no.html#aaee193ab7c73293313b957b397f2b6b2">v</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structtree_1_1no.html#ace71f0011f855bca48eb7d708854bbfb">    8</a></span>&#160;    <a class="code" href="structtree_1_1no.html#ace71f0011f855bca48eb7d708854bbfb">no</a>(T <span class="keyword">const</span> &amp;v_, <a class="code" href="structtree_1_1no.html">no</a> *pa = <span class="keyword">nullptr</span>) : p(<a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>), <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>(v_) {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">if</span> (!pa) {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            pa = &amp;<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            p[i] = pa;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            pa = pa-&gt;p[i];</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structtree_1_1no.html#a6706d57cfed232149e1af1c15dfd2dfa">   17</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="structtree_1_1no.html#a6706d57cfed232149e1af1c15dfd2dfa">gt</a>(<a class="code" href="structll.html">ll</a> h) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="core_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1">bt</a> b(h);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">auto</span> x = &amp;<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, <a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (b[i]) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                x = x-&gt;p[i];</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="tree_8hpp.html#a1e3385a1611e3921d5344fed4db8c54c">    3</a></span>&#160;pair&lt;array&lt;ll, 2&gt;, <a class="code" href="structll.html">ll</a>&gt; <a class="code" href="tree_8hpp.html#a1e3385a1611e3921d5344fed4db8c54c">tree_diameter</a>(<span class="keyword">const</span> vector&lt;vector&lt;ll&gt;&gt; &amp;g) {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    BFS <a class="code" href="operations_8hpp.html#adae6a67fc0375c4abb754d64b9eed42f">b</a>{g};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="operations_8hpp.html#adae6a67fc0375c4abb754d64b9eed42f">b</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> u = <a class="code" href="operations_8hpp.html#adae6a67fc0375c4abb754d64b9eed42f">b</a>.q.back();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    BFS b2{g};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    b2(u);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> v = b2.q.back();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">auto</span> <a class="code" href="operations_8hpp.html#a66b97d6dee15f33d7b6731ccf48092cf">c</a> = v;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, b2.distance[v] / 2) { <a class="code" href="operations_8hpp.html#a66b97d6dee15f33d7b6731ccf48092cf">c</a> = b2.parent[<a class="code" href="operations_8hpp.html#a66b97d6dee15f33d7b6731ccf48092cf">c</a>]; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> {{u, v}, <a class="code" href="operations_8hpp.html#a66b97d6dee15f33d7b6731ccf48092cf">c</a>};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="tree_8hpp.html#a3723e2fdc7693c4777b321d0619f189d">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="tree_8hpp.html#a3723e2fdc7693c4777b321d0619f189d">test_tree_diameter</a>() {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        vector&lt;vector&lt;ll&gt;&gt; graph(5);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 1, 3);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 3, 2);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 2, 0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 0, 4);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">auto</span> <a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a> = <a class="code" href="tree_8hpp.html#a1e3385a1611e3921d5344fed4db8c54c">tree_diameter</a>(graph);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        sort(<a class="code" href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a>.first));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="namespacetree.html#a1db5e81cd89b854831db8147ff509caa">assert</a>((<a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a>.first == array&lt;ll, 2&gt;{1, 4}));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="namespacetree.html#a1db5e81cd89b854831db8147ff509caa">assert</a>(<a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a>.second == 2);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structtree_1_1no.html#af0b6086861d10ce510b9a5619bd3ef36">   27</a></span>&#160;    <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> p[0] != &amp;<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structtree_1_1no.html#af0fdce790d620d5787ac8efe7642ce70">   28</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="structtree_1_1no.html#af0fdce790d620d5787ac8efe7642ce70">dp</a>() {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="core_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1">bt</a> b;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">auto</span> x = <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i : <a class="code" href="d__compiled_8cpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a>(<a class="code" href="structrange.html">ra</a>{<a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>})) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (*x.p[i]) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                x = *x.p[i];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                b[i] = 1;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>(b.to_ullong()) + 1;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419">   40</a></span>&#160;<a class="code" href="core_8hpp.html#a6779ef315f4a9c289636c8f466c823e3">tm</a>() auto <a class="code" href="namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419">lca</a>(<a class="code" href="structtree_1_1no.html">no</a>&lt;T&gt; *a, <a class="code" href="structtree_1_1no.html">no</a>&lt;T&gt; *b) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="structll.html">ll</a> da = a-&gt;dp(), db = b-&gt;dp();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (da &gt; db) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        swap(a, b);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    b = b-&gt;gt(db - da);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (a == b) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> a;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i : <a class="code" href="d__compiled_8cpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a>(<a class="code" href="structrange.html">ra</a>{<a class="code" href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">sz</a>})) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (a-&gt;p[i] != b-&gt;p[i]) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            a = a-&gt;p[i];</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            b = b-&gt;p[i];</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    assert(a-&gt;p[0] == b-&gt;p[0]);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> a-&gt;p[0];</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace tree</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacetree.html">tree</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        vector&lt;vector&lt;ll&gt;&gt; graph(5);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 1, 3);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 3, 2);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 2, 0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">add_edge</a>(graph, 3, 4);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">auto</span> <a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a> = <a class="code" href="tree_8hpp.html#a1e3385a1611e3921d5344fed4db8c54c">tree_diameter</a>(graph).first;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        sort(<a class="code" href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(<a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a>));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespacetree.html#a1db5e81cd89b854831db8147ff509caa">assert</a>(<a class="code" href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a>[0] == 0);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> core.hpp:64</div></div>
-<div class="ttc" id="astructtree_1_1no_html_aaee193ab7c73293313b957b397f2b6b2"><div class="ttname"><a href="structtree_1_1no.html#aaee193ab7c73293313b957b397f2b6b2">tree::no::v</a></div><div class="ttdeci">T v</div><div class="ttdef"><b>Definition:</b> tree.hpp:7</div></div>
-<div class="ttc" id="anamespacetree_html"><div class="ttname"><a href="namespacetree.html">tree</a></div><div class="ttdef"><b>Definition:</b> tree.hpp:3</div></div>
-<div class="ttc" id="aseg__old_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> seg_old.hpp:149</div></div>
-<div class="ttc" id="acore_8hpp_html_a52c977d91e62bd8e617e5cb2926547e1"><div class="ttname"><a href="core_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1">bt</a></div><div class="ttdeci">bitset&lt; numeric_limits&lt; ll &gt;::digits &gt; bt</div><div class="ttdef"><b>Definition:</b> core.hpp:70</div></div>
-<div class="ttc" id="astructtree_1_1no_html_a3dd518d66a2bf5c95d277ff8d9638c1a"><div class="ttname"><a href="structtree_1_1no.html#a3dd518d66a2bf5c95d277ff8d9638c1a">tree::no::p</a></div><div class="ttdeci">vector&lt; no * &gt; p</div><div class="ttdef"><b>Definition:</b> tree.hpp:6</div></div>
-<div class="ttc" id="astructtree_1_1no_html"><div class="ttname"><a href="structtree_1_1no.html">tree::no</a></div><div class="ttdef"><b>Definition:</b> tree.hpp:5</div></div>
-<div class="ttc" id="anamespacetree_html_ad6fb77bc640502f7cfbc3b49c7891419"><div class="ttname"><a href="namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419">tree::lca</a></div><div class="ttdeci">auto lca(no&lt; T &gt; *a, no&lt; T &gt; *b)</div><div class="ttdef"><b>Definition:</b> tree.hpp:40</div></div>
-<div class="ttc" id="astructrange_html"><div class="ttname"><a href="structrange.html">range</a></div><div class="ttdef"><b>Definition:</b> d_compiled.cpp:116</div></div>
-<div class="ttc" id="astructtree_1_1no_html_af0fdce790d620d5787ac8efe7642ce70"><div class="ttname"><a href="structtree_1_1no.html#af0fdce790d620d5787ac8efe7642ce70">tree::no::dp</a></div><div class="ttdeci">auto dp()</div><div class="ttdef"><b>Definition:</b> tree.hpp:28</div></div>
-<div class="ttc" id="ad__compiled_8cpp_html_a438bd5fc0a79e42a6a2abb632203f925"><div class="ttname"><a href="d__compiled_8cpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a></div><div class="ttdeci">auto rev(const Range &amp;r)</div><div class="ttdef"><b>Definition:</b> d_compiled.cpp:131</div></div>
-<div class="ttc" id="anamespacetree_html_abbd5aff5c7f9d3fd17bb986aae13ca53"><div class="ttname"><a href="namespacetree.html#abbd5aff5c7f9d3fd17bb986aae13ca53">tree::sz</a></div><div class="ttdeci">const ll sz</div><div class="ttdef"><b>Definition:</b> tree.hpp:4</div></div>
-<div class="ttc" id="astructtree_1_1no_html_a6706d57cfed232149e1af1c15dfd2dfa"><div class="ttname"><a href="structtree_1_1no.html#a6706d57cfed232149e1af1c15dfd2dfa">tree::no::gt</a></div><div class="ttdeci">auto gt(ll h)</div><div class="ttdef"><b>Definition:</b> tree.hpp:17</div></div>
-<div class="ttc" id="astructtree_1_1no_html_ace71f0011f855bca48eb7d708854bbfb"><div class="ttname"><a href="structtree_1_1no.html#ace71f0011f855bca48eb7d708854bbfb">tree::no::no</a></div><div class="ttdeci">no(T const &amp;v_, no *pa=nullptr)</div><div class="ttdef"><b>Definition:</b> tree.hpp:8</div></div>
-<div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
-<div class="ttc" id="acore_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> core.hpp:16</div></div>
+<div class="ttc" id="atree_8hpp_html_a3723e2fdc7693c4777b321d0619f189d"><div class="ttname"><a href="tree_8hpp.html#a3723e2fdc7693c4777b321d0619f189d">test_tree_diameter</a></div><div class="ttdeci">void test_tree_diameter()</div><div class="ttdef"><b>Definition:</b> tree.hpp:15</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:20</div></div>
+<div class="ttc" id="anamespacegraph__theory_html_a7baea0d3e99864e50ed82e6e93a88eb5"><div class="ttname"><a href="namespacegraph__theory.html#a7baea0d3e99864e50ed82e6e93a88eb5">graph_theory::add_edge</a></div><div class="ttdeci">auto add_edge(vector&lt; vl &gt; &amp;graph, ll u, ll v)</div><div class="ttdef"><b>Definition:</b> all.hpp:24</div></div>
+<div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
+<div class="ttc" id="aoperations_8hpp_html_a915663194fec79c061edfaea61707bd0"><div class="ttname"><a href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a></div><div class="ttdeci">fo(i, a.size())</div><div class="ttdef"><b>Definition:</b> operations.hpp:84</div></div>
+<div class="ttc" id="anamespacetree_html_a1db5e81cd89b854831db8147ff509caa"><div class="ttname"><a href="namespacetree.html#a1db5e81cd89b854831db8147ff509caa">tree::assert</a></div><div class="ttdeci">assert(a-&gt;p[0]==b-&gt;p[0])</div></div>
+<div class="ttc" id="aoperations_8hpp_html_adae6a67fc0375c4abb754d64b9eed42f"><div class="ttname"><a href="operations_8hpp.html#adae6a67fc0375c4abb754d64b9eed42f">b</a></div><div class="ttdeci">const unordered_set&lt; T &gt; &amp; b</div><div class="ttdef"><b>Definition:</b> operations.hpp:63</div></div>
+<div class="ttc" id="aoperations_8hpp_html_a66b97d6dee15f33d7b6731ccf48092cf"><div class="ttname"><a href="operations_8hpp.html#a66b97d6dee15f33d7b6731ccf48092cf">c</a></div><div class="ttdeci">return c</div><div class="ttdef"><b>Definition:</b> operations.hpp:85</div></div>
+<div class="ttc" id="atree_8hpp_html_a1e3385a1611e3921d5344fed4db8c54c"><div class="ttname"><a href="tree_8hpp.html#a1e3385a1611e3921d5344fed4db8c54c">tree_diameter</a></div><div class="ttdeci">pair&lt; array&lt; ll, 2 &gt;, ll &gt; tree_diameter(const vector&lt; vector&lt; ll &gt;&gt; &amp;g)</div><div class="ttdef"><b>Definition:</b> tree.hpp:3</div></div>
+<div class="ttc" id="aoperations_8hpp_html_a339672ff94e6199019102f50d317c3d7"><div class="ttname"><a href="operations_8hpp.html#a339672ff94e6199019102f50d317c3d7">ret</a></div><div class="ttdeci">const unordered_set&lt; T &gt; unordered_set&lt; T &gt; &amp; ret</div><div class="ttdef"><b>Definition:</b> operations.hpp:64</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
-<div class="ttc" id="acore_8hpp_html_a6779ef315f4a9c289636c8f466c823e3"><div class="ttname"><a href="core_8hpp.html#a6779ef315f4a9c289636c8f466c823e3">tm</a></div><div class="ttdeci">#define tm(...)</div><div class="ttdef"><b>Definition:</b> core.hpp:18</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

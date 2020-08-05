@@ -1,6 +1,6 @@
-\hypertarget{coroutine_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/coroutine.hpp File Reference}
-\label{coroutine_8hpp}\index{/home/ram/OmniTemplate/coroutine.hpp@{/home/ram/OmniTemplate/coroutine.hpp}}
-{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+\hypertarget{coroutine_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/utility/coroutine.hpp File Reference}
+\label{coroutine_8hpp}\index{/home/ram/OmniTemplate/src/utility/coroutine.hpp@{/home/ram/OmniTemplate/src/utility/coroutine.hpp}}
+{\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
 Include dependency graph for coroutine.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -15,6 +15,11 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{coroutine_8hpp__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecoroutine}{coroutine}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,9 +34,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa}{coro}} (\mbox{\hyperlink{structll}{ll}} a)
-\item 
-void \mbox{\hyperlink{coroutine_8hpp_a8b33d6ed6b7b80530df506021b0428ed}{test\+\_\+coroutine}} ()
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacecoroutine_a4777caf41e11578bb927d2bc250530ea}{coroutine\+::coro}} (\mbox{\hyperlink{structll}{ll}} a)
 \end{DoxyCompactItemize}
 
 
@@ -42,7 +45,7 @@ void \mbox{\hyperlink{coroutine_8hpp_a8b33d6ed6b7b80530df506021b0428ed}{test\+\_
 \doxysubsubsection{\texorpdfstring{CO\_SWITCH}{CO\_SWITCH}}
 {\footnotesize\ttfamily \#define C\+O\+\_\+\+S\+W\+I\+T\+CH}
 
-Coroutine library C\+O\+\_\+\+S\+W\+I\+T\+CH for using switch-\/based coroutines C\+O\+\_\+\+J\+MP for using setjmp-\/based coroutines \mbox{\Hypertarget{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}\label{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}} 
+\mbox{\Hypertarget{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}\label{coroutine_8hpp_a1672ec864a13c8374fa9bfc6595e67d6}} 
 \index{coroutine.hpp@{coroutine.hpp}!cobegin@{cobegin}}
 \index{cobegin@{cobegin}!coroutine.hpp@{coroutine.hpp}}
 \doxysubsubsection{\texorpdfstring{cobegin}{cobegin}}
@@ -50,7 +53,7 @@ Coroutine library C\+O\+\_\+\+S\+W\+I\+T\+CH for using switch-\/based coroutines
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keyword}{static} \mbox{\hyperlink{core_8hpp_a583d558126ab02babe89a77ae06a4156}{lli}} pos = 0;                                                    \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keyword}{static} \mbox{\hyperlink{core_2all_8hpp_a583d558126ab02babe89a77ae06a4156}{lli}} pos = 0;                                                    \(\backslash\)}
 \DoxyCodeLine{    switch (pos) \{                                                         \(\backslash\)}
 \DoxyCodeLine{    case 0:}
 
@@ -81,39 +84,3 @@ Coroutine library C\+O\+\_\+\+S\+W\+I\+T\+CH for using switch-\/based coroutines
 \DoxyCodeLine{    case \_\_LINE\_\_:;}
 
 \end{DoxyCode}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa}\label{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa}} 
-\index{coroutine.hpp@{coroutine.hpp}!coro@{coro}}
-\index{coro@{coro}!coroutine.hpp@{coroutine.hpp}}
-\doxysubsubsection{\texorpdfstring{coro()}{coro()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} coro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{a }\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{coroutine_8hpp_a66452cd96cc7e445f9d343e47d1afefa_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{coroutine_8hpp_a8b33d6ed6b7b80530df506021b0428ed}\label{coroutine_8hpp_a8b33d6ed6b7b80530df506021b0428ed}} 
-\index{coroutine.hpp@{coroutine.hpp}!test\_coroutine@{test\_coroutine}}
-\index{test\_coroutine@{test\_coroutine}!coroutine.hpp@{coroutine.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_coroutine()}{test\_coroutine()}}
-{\footnotesize\ttfamily void test\+\_\+coroutine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=240pt]{coroutine_8hpp_a8b33d6ed6b7b80530df506021b0428ed_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{coroutine_8hpp_a8b33d6ed6b7b80530df506021b0428ed_icgraph}
-\end{center}
-\end{figure}

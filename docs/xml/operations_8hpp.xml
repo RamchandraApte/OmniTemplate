@@ -3,49 +3,27 @@
   <compounddef id="operations_8hpp" kind="file" language="C++">
     <compoundname>operations.hpp</compoundname>
     <includes refid="range_8hpp" local="yes">range.hpp</includes>
-    <includedby refid="debug_8hpp" local="yes">debug.hpp</includedby>
-    <includedby refid="core_8hpp" local="yes">core.hpp</includedby>
-    <includedby refid="program__listing__file__core_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_core.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__debug_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_debug.hpp.rst.txt</includedby>
+    <includedby refid="debug_8hpp" local="yes">/home/ram/OmniTemplate/src/core/debug.hpp</includedby>
+    <includedby refid="core_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/core/all.hpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="7">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>experimental/source_location</label>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/core/operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
       <node id="5">
         <label>experimental/iterator</label>
       </node>
-      <node id="9">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="1" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="3">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
@@ -63,318 +41,548 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
+      <node id="9">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="28">
-        <label>splay_tree.hpp</label>
-        <link refid="splay__tree_8hpp_source"/>
-        <childnode refid="27" relation="include">
+      <node id="54">
+        <label>/home/ram/OmniTemplate/src/number_theory/modulo.hpp</label>
+        <link refid="modulo_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
       </node>
-      <node id="13">
-        <label>linear_algebra.hpp</label>
-        <link refid="linear__algebra_8hpp_source"/>
-        <childnode refid="10" relation="include">
+      <node id="37">
+        <label>/home/ram/OmniTemplate/src/ds/test_cht.hpp</label>
+        <link refid="test__cht_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/ram/OmniTemplate/src/combinatorics/test_combinatorics.hpp</label>
+        <link refid="test__combinatorics_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
+        <link refid="test__all_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</label>
+        <link refid="test__splay__tree_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/ram/OmniTemplate/src/combinatorics/test_permutation.hpp</label>
+        <link refid="test__permutation_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/ram/OmniTemplate/src/algebra/test_polynomial.hpp</label>
+        <link refid="test__polynomial_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>/home/ram/OmniTemplate/src/ds/test_queue.hpp</label>
+        <link refid="test__queue_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>/home/ram/OmniTemplate/src/ds/test_dsu.hpp</label>
+        <link refid="test__dsu_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>/home/ram/OmniTemplate/src/ds/sparse_table.hpp</label>
+        <link refid="sparse__table_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>/home/ram/OmniTemplate/src/core/time.hpp</label>
+        <link refid="time_8hpp"/>
+        <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-      </node>
-      <node id="10">
-        <label>graph_theory.hpp</label>
-        <link refid="graph__theory_8hpp_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+      </node>
+      <node id="18">
+        <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
+        <link refid="test__graph__draw_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
+        <link refid="test__hld_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/ram/OmniTemplate/src/algebra/polynomial.hpp</label>
+        <link refid="polynomial_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="15">
-        <label>number_theory.hpp</label>
-        <link refid="number__theory_8hpp_source"/>
+        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
+        <link refid="hld_8hpp"/>
         <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="29">
-        <label>my_int.hpp</label>
-        <link refid="my__int_8hpp_source"/>
-      </node>
-      <node id="3">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="25">
-        <label>geometry.hpp</label>
-        <link refid="geometry_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="36">
-        <label>segment_tree_multi.hpp</label>
-        <link refid="segment__tree__multi_8hpp_source"/>
-      </node>
-      <node id="21">
-        <label>main.hpp</label>
-        <link refid="main_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="27">
-        <label>link_cut.hpp</label>
-        <link refid="link__cut_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>combinatorics.hpp</label>
-        <link refid="combinatorics_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="20">
-        <label>coroutine.hpp</label>
-        <link refid="coroutine_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>dsu.hpp</label>
-        <link refid="dsu_8hpp_source"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="24">
-        <label>fft.hpp</label>
-        <link refid="fft_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>segment_tree.hpp</label>
-        <link refid="segment__tree_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>2sat.hpp</label>
-        <link refid="2sat_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>hld.hpp</label>
-        <link refid="hld_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="33">
-        <label>treap.hpp</label>
-        <link refid="treap_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>modulo.hpp</label>
-        <link refid="modulo_8hpp_source"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
       </node>
-      <node id="22">
-        <label>time.hpp</label>
-        <link refid="time_8hpp_source"/>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="1" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="30">
-        <label>persistent.hpp</label>
-        <link refid="persistent_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>tree.hpp</label>
-        <link refid="tree_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>string.hpp</label>
-        <link refid="string_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="31">
-        <label>queue.hpp</label>
-        <link refid="queue_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="35">
-        <label>seg_old.hpp</label>
-        <link refid="seg__old_8hpp_source"/>
-      </node>
-      <node id="16">
-        <label>permutation.hpp</label>
-        <link refid="permutation_8hpp_source"/>
-        <childnode refid="6" relation="include">
+      <node id="61">
+        <label>/home/ram/OmniTemplate/src/utility/test_string.hpp</label>
+        <link refid="test__string_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="9">
-        <label>bit.hpp</label>
-        <link refid="bit_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
+        <label>/home/ram/OmniTemplate/src/algebra/linear_algebra.hpp</label>
+        <link refid="linear__algebra_8hpp"/>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/ram/OmniTemplate/src/combinatorics/combinatorics.hpp</label>
+        <link refid="combinatorics_8hpp"/>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>sparse_table.hpp</label>
-        <link refid="sparse__table_8hpp_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
       </node>
       <node id="1">
-        <label>operations.hpp</label>
+        <label>/home/ram/OmniTemplate/src/core/operations.hpp</label>
         <link refid="operations_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>polynomial.hpp</label>
-        <link refid="polynomial_8hpp_source"/>
-        <childnode refid="13" relation="include">
+      <node id="55">
+        <label>/home/ram/OmniTemplate/src/number_theory/number_theory.hpp</label>
+        <link refid="number__theory_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>/home/ram/OmniTemplate/src/utility/coroutine.hpp</label>
+        <link refid="coroutine_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>/home/ram/OmniTemplate/src/number_theory/test_modulo.hpp</label>
+        <link refid="test__modulo_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/ram/OmniTemplate/src/combinatorics/permutation.hpp</label>
+        <link refid="permutation_8hpp"/>
+        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="18">
-        <label>big_integer.hpp</label>
-        <link refid="big__integer_8hpp_source"/>
+      <node id="7">
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="48">
+        <label>/home/ram/OmniTemplate/src/ds/treap.hpp</label>
+        <link refid="treap_8hpp"/>
         <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>/home/ram/OmniTemplate/src/ds/cht.hpp</label>
+        <link refid="cht_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/src/core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>/home/ram/OmniTemplate/src/ds/splay_tree.hpp</label>
+        <link refid="splay__tree_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</label>
+        <link refid="link__cut_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>/home/ram/OmniTemplate/src/graph/test_biconnected.hpp</label>
+        <link refid="test__biconnected_8hpp"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/ram/OmniTemplate/src/algebra/test_linear_algebra.hpp</label>
+        <link refid="test__linear__algebra_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/ram/OmniTemplate/src/core/test_utility.hpp</label>
+        <link refid="test__utility_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>/home/ram/OmniTemplate/src/ds/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>/home/ram/OmniTemplate/src/ds/segment_tree.hpp</label>
+        <link refid="segment__tree_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
+        <link refid="bit_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
+        <link refid="test__2sat_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>/home/ram/OmniTemplate/src/number_theory/test_number_theory.hpp</label>
+        <link refid="test__number__theory_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>/home/ram/OmniTemplate/src/graph/biconnected.hpp</label>
+        <link refid="biconnected_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/ram/OmniTemplate/src/graph/test_flow.hpp</label>
+        <link refid="test__flow_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>/home/ram/OmniTemplate/src/core/utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/ram/OmniTemplate/src/core/range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>/home/ram/OmniTemplate/src/ds/persistent.hpp</label>
+        <link refid="persistent_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>/home/ram/OmniTemplate/src/utility/test_coroutine.hpp</label>
+        <link refid="test__coroutine_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>/home/ram/OmniTemplate/src/graph/test_bipartite.hpp</label>
+        <link refid="test__bipartite_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>/home/ram/OmniTemplate/src/ds/test_segment_tree.hpp</label>
+        <link refid="test__segment__tree_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>/home/ram/OmniTemplate/src/ds/test_bit.hpp</label>
+        <link refid="test__bit_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/algebra/big_integer.hpp</label>
+        <link refid="big__integer_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>/home/ram/OmniTemplate/src/graph/bipartite.hpp</label>
+        <link refid="bipartite_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
+        <link refid="graph_2all_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/core/io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/ram/OmniTemplate/src/graph/2sat.hpp</label>
+        <link refid="2sat_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>/home/ram/OmniTemplate/src/utility/string.hpp</label>
+        <link refid="string_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/ram/OmniTemplate/src/algebra/fft.hpp</label>
+        <link refid="fft_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
+        <link refid="main_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</label>
+        <link refid="test__sparse__table_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>/home/ram/OmniTemplate/src/graph/tree/tree.hpp</label>
+        <link refid="tree_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/ram/OmniTemplate/src/graph/flow.hpp</label>
+        <link refid="flow_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>/home/ram/OmniTemplate/src/ds/dsu.hpp</label>
+        <link refid="dsu_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/ram/OmniTemplate/src/utility/graph_draw.hpp</label>
+        <link refid="graph__draw_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -385,8 +593,8 @@
         <name>aug</name>
         <param><defname>op</defname></param>
         <initializer>	template &lt;typename T1, typename T2&gt;                                    \
-	auto operator op##=(T1 &amp;a, const T2 &amp;b) {                              \
-		return a = a op b;                                             \
+	auto operator op##=(T1 &amp;a, const T2 &amp;<ref refid="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" kindref="member">b</ref>) {                              \
+		return a = a op <ref refid="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" kindref="member">b</ref>;                                             \
 	}</initializer>
         <briefdescription>
         </briefdescription>
@@ -394,7 +602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="4" column="9" bodyfile="operations.hpp" bodystart="4" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="4" column="9" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="4" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="operations_8hpp_1afcd538daef660984ecb8abf34697904b" prot="public" static="no">
         <name>ret</name>
@@ -409,45 +617,141 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="92" column="9" bodyfile="operations.hpp" bodystart="92" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="91" column="9" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="91" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="operations_8hpp_1ab4c4b06b1f952a0071d8ae50f97f9788" prot="public" static="no">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>unordered_set&lt; T &gt;</type>
-        <definition>using uset =  unordered_set&lt;T&gt;</definition>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" prot="public" static="no" mutable="no">
+        <type>const unordered_set&lt; T &gt; &amp;</type>
+        <definition>const range&lt; T &gt; &amp; b</definition>
         <argsstring></argsstring>
-        <name>uset</name>
+        <name>b</name>
+        <initializer>{
+	unordered_set&lt;T&gt; <ref refid="operations_8hpp_1a339672ff94e6199019102f50d317c3d7" kindref="member">ret</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="32" column="16" bodyfile="operations.hpp" bodystart="32" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="62" column="33" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="62" bodyend="-1"/>
+        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="74">conv</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a297c703d12bd9b758de47e299044d8f2" compoundref="linear__algebra_8hpp" startline="47" endline="54">linear_algebra::operator+</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1aa06c74bf4632061996937366f1e57fb3" compoundref="polynomial_8hpp" startline="26" endline="33">polynomial_ns::operator+</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a1a0a44f111c2b3ebf29591ddbc778b1c" compoundref="polynomial_8hpp" startline="34" endline="40">polynomial_ns::operator*</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a1eca7e44f03795c0bef5d6a4ed2cacbd" compoundref="polynomial_8hpp" startline="41" endline="52">polynomial_ns::operator%</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a96e98a3ca4aea3fca6fbcee75e3c19a7" compoundref="polynomial_8hpp" startline="53" endline="59">polynomial_ns::operator==</referencedby>
+        <referencedby refid="namespacelinear__algebra_1_1test_1a58d68feee7c76f77519389051a942161" compoundref="test__linear__algebra_8hpp" startline="8" endline="14">linear_algebra::test::test_invert</referencedby>
+        <referencedby refid="namespacelinear__algebra_1_1test_1a9a0a8549e208f8a719d5450d21b339ed" compoundref="test__linear__algebra_8hpp" startline="15" endline="20">linear_algebra::test::test_matrix</referencedby>
+        <referencedby refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" compoundref="combinatorics_8hpp" startline="5" endline="9">combinatorics::perm</referencedby>
+        <referencedby refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" compoundref="combinatorics_8hpp" startline="14" endline="17">combinatorics::choose</referencedby>
+        <referencedby refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" compoundref="permutation_8hpp" startline="55" endline="60">permutation::operator*</referencedby>
+        <referencedby refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" compoundref="core_2all_8hpp" startline="48" endline="48">lets_add::lets_add</referencedby>
+        <referencedby refid="namespacegraph__theory_1a4dbe54e2a6c2e93add66dc32c647c876" compoundref="graph_2all_8hpp" startline="13" endline="16">graph_theory::operator&lt;</referencedby>
+        <referencedby refid="namespacegraph__theory_1a9112d064de59f0aa5737bc1d90e9bf32" compoundref="graph_2all_8hpp" startline="17" endline="19">graph_theory::operator==</referencedby>
+        <referencedby refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" compoundref="graph_2all_8hpp" startline="29" endline="54">graph_theory::shortest_dist</referencedby>
+        <referencedby refid="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" compoundref="debug_8hpp" startline="19" endline="27">debug_tools::replace</referencedby>
+        <referencedby refid="operations_8hpp_1ae9e59a2d15287021fd21d14d2eb206c4" compoundref="operations_8hpp" startline="14" endline="14">operator/</referencedby>
+        <referencedby refid="operations_8hpp_1ab6822e2f5527212c7db6dd31be7f3ba6" compoundref="operations_8hpp" startline="16" endline="18">operator-</referencedby>
+        <referencedby refid="operations_8hpp_1a98ed0803268ba29fcc8977206b177923" compoundref="operations_8hpp" startline="20" endline="22">operator!=</referencedby>
+        <referencedby refid="operations_8hpp_1a1297749985d820e08c6c88a285dc80eb" compoundref="operations_8hpp" startline="23" endline="25">operator&lt;=</referencedby>
+        <referencedby refid="operations_8hpp_1ae3edbf9ffcbf3c8b40d15f6666442cef" compoundref="operations_8hpp" startline="26" endline="28">operator&gt;=</referencedby>
+        <referencedby refid="operations_8hpp_1ad8f1353b1f5665443a78d860006e9920" compoundref="operations_8hpp" startline="29" endline="31">operator&gt;</referencedby>
+        <referencedby refid="operations_8hpp_1a87d3fb5fed45f1a54221f7a8705addb9" compoundref="operations_8hpp" startline="33" endline="38">operator+</referencedby>
+        <referencedby refid="operations_8hpp_1a8acbbd6e305005c27020dfb9bbe27d5a" compoundref="operations_8hpp" startline="46" endline="51">operator|</referencedby>
+        <referencedby refid="operations_8hpp_1a9e98ecb7739ca6a5c0069a9a26d2a731" compoundref="operations_8hpp" startline="52" endline="61">operator&amp;</referencedby>
+        <referencedby refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</referencedby>
+        <referencedby refid="structMax_1a4655e1340fe57b865ca75fb4b6bc6a05" compoundref="operations_8hpp" startline="107" endline="107">Max::operator()</referencedby>
+        <referencedby refid="structMin_1ad62e831f067eda6b8cb817f0c5893f8b" compoundref="operations_8hpp" startline="111" endline="111">Min::operator()</referencedby>
+        <referencedby refid="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" compoundref="utility_8hpp" startline="86" endline="91">utility::swap2</referencedby>
+        <referencedby refid="cht_8hpp_1a18b063c150d95a5ec77dab71218c4f48" compoundref="cht_8hpp" startline="4" endline="7">std::operator&lt;</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a884b15c6042069f32e237941b4047536" compoundref="cht_8hpp" startline="11" endline="15">convex_hull_trick::dot</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a4f9b285a0e38652eb9839ac60b39e34a" compoundref="cht_8hpp" startline="16" endline="21">convex_hull_trick::wedge</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1abeaee6745d46728e8edf0f80a1e92ddf" compoundref="cht_8hpp" startline="22" endline="24">convex_hull_trick::area</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" compoundref="cht_8hpp" startline="35" endline="41">convex_hull_trick::ccw</referencedby>
+        <referencedby refid="structpersistent_1_1first__cmp_1a7b8fbb5ea87d4bc3ab32ec623b06b6cb" compoundref="persistent_8hpp" startline="6" endline="8">persistent::first_cmp::operator()</referencedby>
+        <referencedby refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" compoundref="queue_8hpp" startline="37" endline="53">queue_tools::QueueAdaptor&lt; MinStack&lt; T &gt; &gt;::pop</referencedby>
+        <referencedby refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" compoundref="splay__tree_8hpp" startline="146" endline="157">splay_tree::SplayTree&lt; T &gt;::join</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1_1test_1a9b689c83ba8f830281d1aabf43efd1e4" compoundref="test__cht_8hpp" startline="20" endline="34">convex_hull_trick::test::test_ccw</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1ae7b82c3700495a58245666aabbf2353c" compoundref="bipartite_8hpp" startline="4" endline="22">graph_theory::bipartite::color2</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1a58be81901a34562c817737007ac90ee4" compoundref="bipartite_8hpp" startline="25" endline="82">graph_theory::bipartite::max_match</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" compoundref="test__all_8hpp" startline="4" endline="14">graph_theory::test::test_BFS</referencedby>
+        <referencedby refid="test__biconnected_8hpp_1acecf2de539ad624328fba6f40a848ef1" compoundref="test__biconnected_8hpp" startline="13" endline="22">graph_disunion</referencedby>
+        <referencedby refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" compoundref="tree_8hpp" startline="3" endline="14">tree_diameter</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" compoundref="modulo_8hpp" startline="11" endline="27">modulo_namespace::power</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" compoundref="modulo_8hpp" startline="29" endline="35">modulo_namespace::mod</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a0a666ddbbb5d4d02c4aee66be7577292" compoundref="modulo_8hpp" startline="37" endline="37">modulo_namespace::mod_eq</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1aa39044c62fae2707474b9960d257d9dd" compoundref="modulo_8hpp" startline="55" endline="58">modulo_namespace::operator+</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a7d1e0e6527c5e49efdc1ef0780a055c8" compoundref="modulo_8hpp" startline="64" endline="76">modulo_namespace::operator*</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1aac690d54b7665a90ca461724df8907c0" compoundref="modulo_8hpp" startline="77" endline="81">modulo_namespace::invert</referencedby>
+        <referencedby refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</referencedby>
+        <referencedby refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" compoundref="number__theory_8hpp" startline="76" endline="100">fac</referencedby>
+        <referencedby refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" compoundref="number__theory_8hpp" startline="102" endline="104">egcd</referencedby>
+        <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="118" endline="139">dlog</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1ae2f84cd254fbf1373fc273141ce470ed" compoundref="test__number__theory_8hpp" startline="28" endline="32">test_egcd</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" compoundref="test__number__theory_8hpp" startline="41" endline="56">test_dlog</referencedby>
+        <referencedby refid="structll_1afe1cbe7e5183933ed0a2e943d5850088" compoundref="my__int_8hpp" startline="28" endline="28">ll::operator+=</referencedby>
+        <referencedby refid="my__int_8hpp_1a1ad47cb4e54d783e97787f2d8180b26b" compoundref="my__int_8hpp" startline="56" endline="56">operator&lt;</referencedby>
+        <referencedby refid="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" compoundref="my__int_8hpp" startline="57" endline="57">operator==</referencedby>
+        <referencedby refid="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" compoundref="my__int_8hpp" startline="58" endline="64">operator%</referencedby>
+        <referencedby refid="my__int_8hpp_1a9c62d70a4d570035afd252221695db29" compoundref="my__int_8hpp" startline="83" endline="85">std::operator+</referencedby>
+        <referencedby refid="namespacestring__tools_1ae6f8c1cd029548c31fa4c1cfab06a52f" compoundref="string_8hpp" startline="111" endline="122">string_tools::operator==</referencedby>
+        <referencedby refid="namespacestring__tools_1a072e7010806806c68fa2f537b0677c74" compoundref="string_8hpp" startline="123" endline="134">string_tools::operator&lt;</referencedby>
       </memberdef>
-      <memberdef kind="typedef" id="operations_8hpp_1a391ecbfa26a20f6287fb4048f56b0978" prot="public" static="no">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>T(*)(T, T)</type>
-        <definition>using bin_op =  T(*)(T, T)</definition>
+      <memberdef kind="variable" id="operations_8hpp_1a339672ff94e6199019102f50d317c3d7" prot="public" static="no" mutable="no">
+        <type>const unordered_set&lt; T &gt; unordered_set&lt; T &gt; &amp;</type>
+        <definition>return ret</definition>
         <argsstring></argsstring>
-        <name>bin_op</name>
+        <name>ret</name>
+        <initializer>{
+	for (const auto &amp;x : a) {
+		if (!b.count(x)) {
+			<ref refid="treap_8hpp_1a14ea768f9d1a656b814be126c0a631c8" kindref="member">ret.insert</ref>(x);
+		}
+	}
+	return ret</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="91" column="16" bodyfile="operations.hpp" bodystart="91" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="63" column="17" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="63" bodyend="-1"/>
+        <referencedby refid="namespacegraph__theory_1a43f33335bd84b91252969b3b17f8b09d" compoundref="graph_2all_8hpp" startline="74" endline="85">graph_theory::mst</referencedby>
+        <referencedby refid="structint__it_1a85eb0ee7f734e93b64a6432da5c2ab56" compoundref="range_8hpp" startline="25" endline="29">int_it&lt; T &gt;::operator--</referencedby>
+        <referencedby refid="structint__it_1a2892123a79f6f13fa6a9f16e8f5f207b" compoundref="range_8hpp" startline="30" endline="34">int_it&lt; T &gt;::operator++</referencedby>
+        <referencedby refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" compoundref="utility_8hpp" startline="76" endline="85">utility::next_comb</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" compoundref="segment__tree_8hpp" startline="47" endline="58">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" compoundref="segment__tree_8hpp" startline="80" endline="94">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</referencedby>
+        <referencedby refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" compoundref="treap_8hpp" startline="55" endline="73">join</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" compoundref="test__all_8hpp" startline="36" endline="41">graph_theory::test::test_mst</referencedby>
+        <referencedby refid="test__biconnected_8hpp_1acecf2de539ad624328fba6f40a848ef1" compoundref="test__biconnected_8hpp" startline="13" endline="22">graph_disunion</referencedby>
+        <referencedby refid="classhld_1_1HLD_1a89ad91fa5429a48db553da8d44849415" compoundref="hld_8hpp" startline="70" endline="74">hld::HLD&lt; T, Monoid, QueryDS &gt;::query</referencedby>
+        <referencedby refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" compoundref="tree_8hpp" startline="15" endline="37">test_tree_diameter</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" compoundref="modulo_8hpp" startline="11" endline="27">modulo_namespace::power</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="operations_8hpp_1a66b97d6dee15f33d7b6731ccf48092cf" prot="public" static="no" mutable="no">
+        <type>return</type>
+        <definition>return c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="84" column="8" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="84" bodyend="-1"/>
+        <referencedby refid="namespacelinear__algebra_1a297c703d12bd9b758de47e299044d8f2" compoundref="linear__algebra_8hpp" startline="47" endline="54">linear_algebra::operator+</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a2585fee5a1476634e4acdd3a76e8d606" compoundref="linear__algebra_8hpp" startline="55" endline="61">linear_algebra::operator-</referencedby>
+        <referencedby refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" compoundref="permutation_8hpp" startline="55" endline="60">permutation::operator*</referencedby>
+        <referencedby refid="namespacegraph__theory_1abf42c204d44caae5b7ea48d8261dfd9e" compoundref="graph_2all_8hpp" startline="171" endline="191">graph_theory::scc</referencedby>
+        <referencedby refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1abeaee6745d46728e8edf0f80a1e92ddf" compoundref="cht_8hpp" startline="22" endline="24">convex_hull_trick::area</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" compoundref="cht_8hpp" startline="35" endline="41">convex_hull_trick::ccw</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1_1test_1a9b689c83ba8f830281d1aabf43efd1e4" compoundref="test__cht_8hpp" startline="20" endline="34">convex_hull_trick::test::test_ccw</referencedby>
+        <referencedby refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" compoundref="tree_8hpp" startline="3" endline="14">tree_diameter</referencedby>
+        <referencedby refid="number__theory_8hpp_1a8119b9949ade11ba2f554e41cc0830df" compoundref="number__theory_8hpp" startline="76" endline="100">fac</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -478,7 +782,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="9" column="22" bodyfile="operations.hpp" bodystart="9" bodyend="9"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="9" column="22" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="9" bodyend="9"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a566f5b78944cfa1ff2b470ecd0522ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -507,7 +811,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="10" column="22" bodyfile="operations.hpp" bodystart="10" bodyend="10"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="10" column="22" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="10" bodyend="10"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ac66e5f2d4fb3a7d5076a44e419736713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -536,7 +840,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="11" column="22" bodyfile="operations.hpp" bodystart="11" bodyend="11"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="11" column="22" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="11" bodyend="11"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a35c5f7ec97de94c93f2301e16d3f7efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -565,7 +869,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="12" column="22" bodyfile="operations.hpp" bodystart="12" bodyend="12"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="12" column="22" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="12" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a4cb6b7e98aadd3fa7ffc759c5e14596d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -590,7 +894,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="13" column="25" bodyfile="operations.hpp" bodystart="13" bodyend="13"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="13" column="25" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="13" bodyend="13"/>
+        <referencedby refid="operations_8hpp_1ae9e59a2d15287021fd21d14d2eb206c4" compoundref="operations_8hpp" startline="14" endline="14">operator/</referencedby>
+        <referencedby refid="namespacelinear__algebra_1_1test_1a8104ca6c18938c522aa7a1225170aab1" compoundref="test__linear__algebra_8hpp" startline="4" endline="7">linear_algebra::test::test_invert_impl</referencedby>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ae9e59a2d15287021fd21d14d2eb206c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -616,7 +922,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="14" column="19" bodyfile="operations.hpp" bodystart="14" bodyend="14"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="14" column="19" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="14" bodyend="14"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="operations_8hpp_1a4cb6b7e98aadd3fa7ffc759c5e14596d" compoundref="operations_8hpp" startline="13" endline="13">invert</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ab6822e2f5527212c7db6dd31be7f3ba6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -645,7 +953,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="16" column="16" bodyfile="operations.hpp" bodystart="16" bodyend="18"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="16" column="16" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="16" bodyend="18"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a98ed0803268ba29fcc8977206b177923" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -674,7 +983,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="20" column="16" bodyfile="operations.hpp" bodystart="20" bodyend="22"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="20" column="16" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="20" bodyend="22"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a1297749985d820e08c6c88a285dc80eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -703,7 +1013,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="23" column="15" bodyfile="operations.hpp" bodystart="23" bodyend="25"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="23" column="15" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="23" bodyend="25"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ae3edbf9ffcbf3c8b40d15f6666442cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -732,7 +1043,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="26" column="20" bodyfile="operations.hpp" bodystart="26" bodyend="28"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="26" column="20" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="26" bodyend="28"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ad8f1353b1f5665443a78d860006e9920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -761,19 +1073,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="29" column="20" bodyfile="operations.hpp" bodystart="29" bodyend="31"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="29" column="20" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="29" bodyend="31"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1af7daaa583bad5f3001ffa1144d9bca37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tm</definition>
+        <argsstring>() using uset</argsstring>
+        <name>tm</name>
+        <initializer>= T(*)(T, T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a range object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="80" column="1" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="41" bodyend="49" declfile="/home/ram/OmniTemplate/src/core/operations.hpp" declline="90" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a87d3fb5fed45f1a54221f7a8705addb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>um</type>
+        <type><ref refid="core_2all_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref></type>
         <definition>um operator+</definition>
         <argsstring>(um a, um const &amp;b)</argsstring>
         <name>operator+</name>
         <param>
-          <type>um</type>
+          <type><ref refid="core_2all_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref></type>
           <declname>a</declname>
         </param>
         <param>
-          <type>um const &amp;</type>
+          <type><ref refid="core_2all_8hpp_1a9925e7a8568cf11b8431a0e634ada482" kindref="member">um</ref> const &amp;</type>
           <declname>b</declname>
         </param>
         <briefdescription>
@@ -782,7 +1110,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="33" column="4" bodyfile="operations.hpp" bodystart="33" bodyend="38"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="33" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="33" bodyend="38"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a8acbbd6e305005c27020dfb9bbe27d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -808,14 +1138,6 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>T</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>p_T: </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
 <parametername>a</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -831,13 +1153,16 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>auto </para>
+<simplesect kind="return"><para>the union of sets a and b </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="47" column="18" bodyfile="operations.hpp" bodystart="47" bodyend="52"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="46" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="46" bodyend="51"/>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="20">al</references>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="91">ret</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a9e98ecb7739ca6a5c0069a9a26d2a731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -863,29 +1188,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="53" column="18" bodyfile="operations.hpp" bodystart="53" bodyend="62"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="52" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="52" bodyend="61"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="91">ret</references>
       </memberdef>
-      <memberdef kind="function" id="operations_8hpp_1a17c44ba56ddae051a9fdf806cab4bb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto sub_set</definition>
-        <argsstring>(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b, unordered_set&lt; T &gt; &amp;ret)</argsstring>
+      <memberdef kind="function" id="operations_8hpp_1a112457f0dec614c365300860421202c0" prot="public" static="no" const="yes" explicit="no" inline="no" refqual="lvalue" virt="non-virtual">
+        <type></type>
+        <definition>tm</definition>
+        <argsstring>() auto sub_set(unordered_set&lt; T &gt; const &amp;a</argsstring>
+        <name>tm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="operations_8hpp_1a989ec0363b5c2816082124a9b0cd2d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>return</type>
+        <definition>return sub_set</definition>
+        <argsstring>(a, b, ret)</argsstring>
         <name>sub_set</name>
         <param>
-          <type>unordered_set&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
+          <type>a</type>
         </param>
         <param>
-          <type>unordered_set&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
+          <type><ref refid="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" kindref="member">b</ref></type>
         </param>
         <param>
-          <type>unordered_set&lt; T &gt; &amp;</type>
-          <declname>ret</declname>
+          <type><ref refid="operations_8hpp_1a339672ff94e6199019102f50d317c3d7" kindref="member">ret</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -893,25 +1225,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="63" column="21" bodyfile="operations.hpp" bodystart="63" bodyend="71"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="73" column="8" declfile="/home/ram/OmniTemplate/src/core/operations.hpp" declline="73" declcolumn="8"/>
       </memberdef>
-      <memberdef kind="function" id="operations_8hpp_1af237204859d16b6fadb92d576c7b33b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator-</definition>
-        <argsstring>(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator-</name>
+      <memberdef kind="function" id="operations_8hpp_1a92a5a5b8a2fe98f951ba55f5412cbc87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sub_set</definition>
+        <argsstring>(b, a, ret)</argsstring>
+        <name>sub_set</name>
         <param>
-          <type>unordered_set&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
+          <type><ref refid="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" kindref="member">b</ref></type>
         </param>
         <param>
-          <type>unordered_set&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
+          <type>a</type>
+        </param>
+        <param>
+          <type><ref refid="operations_8hpp_1a339672ff94e6199019102f50d317c3d7" kindref="member">ret</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -919,25 +1247,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="72" column="21" bodyfile="operations.hpp" bodystart="72" bodyend="75"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="77" column="1" declfile="/home/ram/OmniTemplate/src/core/operations.hpp" declline="77" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="operations_8hpp_1a278d4d0450b96c1926a34fe49f29d602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator^</definition>
-        <argsstring>(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator^</name>
+      <memberdef kind="function" id="operations_8hpp_1ac748aa2982293b2480271d6f92be38e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; T &gt;</type>
+        <definition>vector&lt;T&gt; c</definition>
+        <argsstring>(a.size())</argsstring>
+        <name>c</name>
         <param>
-          <type>unordered_set&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>unordered_set&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
+          <type>a.</type>
+          <declname>size</declname>
+          <array>()</array>
         </param>
         <briefdescription>
         </briefdescription>
@@ -945,25 +1265,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="76" column="21" bodyfile="operations.hpp" bodystart="76" bodyend="80"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="82" column="8" declfile="/home/ram/OmniTemplate/src/core/operations.hpp" declline="82" declcolumn="8"/>
       </memberdef>
-      <memberdef kind="function" id="operations_8hpp_1a7fcf9006b0b6d5ce6b426ac6dea3b567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator*</definition>
-        <argsstring>(vector&lt; T &gt; a, vector&lt; T &gt; b)</argsstring>
-        <name>operator*</name>
+      <memberdef kind="function" id="operations_8hpp_1a915663194fec79c061edfaea61707bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>fo</definition>
+        <argsstring>(i, a.size())</argsstring>
+        <name>fo</name>
         <param>
-          <type>vector&lt; T &gt;</type>
-          <declname>a</declname>
+          <type>i</type>
         </param>
         <param>
-          <type>vector&lt; T &gt;</type>
-          <declname>b</declname>
+          <type>a.</type>
+          <declname>size</declname>
+          <array>()</array>
         </param>
         <briefdescription>
         </briefdescription>
@@ -971,7 +1286,66 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="81" column="21" bodyfile="operations.hpp" bodystart="81" bodyend="86"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="83" column="1" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="83" bodyend="83"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="operations_8hpp_1a66b97d6dee15f33d7b6731ccf48092cf" compoundref="operations_8hpp" startline="84">c</references>
+        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="3" endline="47">biconnected</referencedby>
+        <referencedby refid="biconnected_8hpp_1a789f23d7fc22d09960694892eeb41223" compoundref="biconnected_8hpp" startline="83" endline="122">biconnected_ear</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" compoundref="segment__tree_8hpp" startline="47" endline="58">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1ae7b82c3700495a58245666aabbf2353c" compoundref="bipartite_8hpp" startline="4" endline="22">graph_theory::bipartite::color2</referencedby>
+        <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="38" endline="48">debug_tools::debug</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1a4062ab69d3598b338ba182ca6ae17ffe" compoundref="segment__tree_8hpp" startline="140" endline="149">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::destroy</referencedby>
+        <referencedby refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" compoundref="sparse__table_8hpp" startline="37" endline="59">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::DisjointSparseTable</referencedby>
+        <referencedby refid="number__theory_8hpp_1af88afa289696363eee6d6caed35edfb5" compoundref="number__theory_8hpp" startline="34" endline="49">divisors</referencedby>
+        <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="118" endline="139">dlog</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1a52f59c0f0db30957d70083a26e7ac967" compoundref="segment__tree_8hpp" startline="60" endline="79">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::down</referencedby>
+        <referencedby refid="biconnected_8hpp_1a6b3f22cd584c5d8be1de2703c3b9e004" compoundref="biconnected_8hpp" startline="48" endline="82">ear_decomp</referencedby>
+        <referencedby refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" compoundref="flow_8hpp" startline="9" endline="55">flow::edmond_karp</referencedby>
+        <referencedby refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</referencedby>
+        <referencedby refid="test__biconnected_8hpp_1acecf2de539ad624328fba6f40a848ef1" compoundref="test__biconnected_8hpp" startline="13" endline="22">graph_disunion</referencedby>
+        <referencedby refid="namespacegraph__theory_1a305e818c99814cd465186b57c0a73f50" compoundref="graph_2all_8hpp" startline="192" endline="199">graph_theory::graph_in</referencedby>
+        <referencedby refid="namespacegraph__draw_1a44d5f564d8f26d47b49ecfb516589e62" compoundref="graph__draw_8hpp" startline="5" endline="18">graph_draw::graph_to_dot</referencedby>
+        <referencedby refid="structstring__tools_1_1hash__str_1aba56bc5901a45e72721a12256a831e69" compoundref="string_8hpp" startline="12" endline="27">string_tools::hash_str::hash_str</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a30be90e8c8b57bcd04237e9b1d5b2fe9" compoundref="linear__algebra_8hpp" startline="40" endline="45">linear_algebra::identity</referencedby>
+        <referencedby refid="namespacepermutation_1a68e876731be5159eaefd46b1fb8fe031" compoundref="permutation_8hpp" startline="68" endline="72">permutation::invert</referencedby>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
+        <referencedby refid="structlinear__algebra_1_1matrix_1a25e0594f850d04a7102d59392df2bdbc" compoundref="linear__algebra_8hpp" startline="14" endline="23">linear_algebra::matrix&lt; T &gt;::matrix</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1a58be81901a34562c817737007ac90ee4" compoundref="bipartite_8hpp" startline="25" endline="82">graph_theory::bipartite::max_match</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a1eca7e44f03795c0bef5d6a4ed2cacbd" compoundref="polynomial_8hpp" startline="41" endline="52">polynomial_ns::operator%</referencedby>
+        <referencedby refid="structgraph__theory_1_1GeneralSearch_1a529a4cdbb064502d4cfdb0cfb888e1df" compoundref="graph_2all_8hpp" startline="94" endline="102">graph_theory::GeneralSearch&lt; DFS &gt;::operator()</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a1a0a44f111c2b3ebf29591ddbc778b1c" compoundref="polynomial_8hpp" startline="34" endline="40">polynomial_ns::operator*</referencedby>
+        <referencedby refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" compoundref="permutation_8hpp" startline="55" endline="60">permutation::operator*</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1aa06c74bf4632061996937366f1e57fb3" compoundref="polynomial_8hpp" startline="26" endline="33">polynomial_ns::operator+</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a297c703d12bd9b758de47e299044d8f2" compoundref="linear__algebra_8hpp" startline="47" endline="54">linear_algebra::operator+</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a2585fee5a1476634e4acdd3a76e8d606" compoundref="linear__algebra_8hpp" startline="55" endline="61">linear_algebra::operator-</referencedby>
+        <referencedby refid="namespacedsu__ds_1a7c3dbc9f3763e1bd7e1faf0bdff90f78" compoundref="dsu_8hpp" startline="31" endline="40">dsu_ds::operator&lt;&lt;</referencedby>
+        <referencedby refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" compoundref="permutation_8hpp" startline="42" endline="49">permutation::Permutation::Permutation</referencedby>
+        <referencedby refid="test__biconnected_8hpp_1a48fe6b184e236d8a81058e4d85ff49c3" compoundref="test__biconnected_8hpp" startline="3" endline="12">permute</referencedby>
+        <referencedby refid="namespacestring__tools_1a908088ce2404d968ab69990c35885499" compoundref="string_8hpp" startline="45" endline="60">string_tools::prefix</referencedby>
+        <referencedby refid="namespaceutility_1a50e9430d1096ce6997ae910135a9533f" compoundref="utility_8hpp" startline="42" endline="56">utility::prev_less</referencedby>
+        <referencedby refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</referencedby>
+        <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="142" endline="165">primitive_root</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" compoundref="segment__tree_8hpp" startline="80" endline="94">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</referencedby>
+        <referencedby refid="namespacesat2_1a7c5b410fc1eefa671c8e9531c2e29cec" compoundref="2sat_8hpp" startline="5" endline="31">sat2::sat2</referencedby>
+        <referencedby refid="namespacestring__tools_1a314ab0a3b3f972a1af0b738851323829" compoundref="string_8hpp" startline="62" endline="71">string_tools::search_all</referencedby>
+        <referencedby refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" compoundref="graph_2all_8hpp" startline="29" endline="54">graph_theory::shortest_dist</referencedby>
+        <referencedby refid="number__theory_8hpp_1ae8dd217fd3a3de037c6a1031aef548aa" compoundref="number__theory_8hpp" startline="56" endline="71">sieve</referencedby>
+        <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="10" endline="18">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
+        <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="101">test_biconnected</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1aab2e93dd92c799618ead37ec7b1d93b9" compoundref="test__bipartite_8hpp" startline="4" endline="20">graph_theory::bipartite::test::test_bipartite</referencedby>
+        <referencedby refid="namespacestring_1_1test_1aa81e1649f52bbba5ef5ab646d0ae06e3" compoundref="test__string_8hpp" startline="17" endline="23">string::test::test_bytehash</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1_1test_1af431d14b14918c006bfb450ff5a69a81" compoundref="test__cht_8hpp" startline="48" endline="58">convex_hull_trick::test::test_cht</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" compoundref="test__number__theory_8hpp" startline="41" endline="56">test_dlog</referencedby>
+        <referencedby refid="namespacedsu__ds_1_1test_1adafe4323a317f827a39c3516cf6d792b" compoundref="test__dsu_8hpp" startline="4" endline="16">dsu_ds::test::test_dsu</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1af862fd7b59fb6a9e0a396a5bd8801c3e" compoundref="test__bipartite_8hpp" startline="21" endline="83">graph_theory::bipartite::test::test_max_match</referencedby>
+        <referencedby refid="namespacesegment__tree_1_1test_1a216822c7d0ea6df09e13ff90a519e0fd" compoundref="test__segment__tree_8hpp" startline="4" endline="65">segment_tree::test::test_segment_tree_impl</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" compoundref="test__all_8hpp" startline="19" endline="35">graph_theory::test::test_shortest_dist</referencedby>
+        <referencedby refid="namespacesparse__table_1_1test_1a274f88cabaff31f12dbb19ed28eb1bb7" compoundref="test__sparse__table_8hpp" startline="4" endline="10">sparse_table::test::test_sparse_table_impl</referencedby>
+        <referencedby refid="namespacetree_1a7a4f54157c8e0795e7beff222d4912ab" compoundref="lca_8hpp" startline="5" endline="39">tree::tm</referencedby>
+        <referencedby refid="classpermutation_1_1Permutation_1a1ac3027ff7bee17edbbb2f4f956f665b" compoundref="permutation_8hpp" startline="25" endline="41">permutation::Permutation::to_cycles</referencedby>
+        <referencedby refid="namespacegraph__theory_1af33d0502161df2d1b82be4b1e8dcaa13" compoundref="graph_2all_8hpp" startline="157" endline="166">graph_theory::trans</referencedby>
+        <referencedby refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" compoundref="tree_8hpp" startline="3" endline="14">tree_diameter</referencedby>
+        <referencedby refid="classsegment__tree_1_1SegmentTree_1a5207ffe18417463bef339fd6d3183b5c" compoundref="segment__tree_8hpp" startline="102" endline="133">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1af877591533298d5fba3df85680cabb60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -997,7 +1371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="87" column="18" bodyfile="operations.hpp" bodystart="87" bodyend="90"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="86" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ac969ae49524a67aba9be0f061955ef23" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -1014,7 +1388,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="96" column="14" bodyfile="operations.hpp" bodystart="96" bodyend="100"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="95" column="14" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="95" bodyend="99"/>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
+        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="91">ret</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a1927210d55cc1384803f4a609d7174ee" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -1031,7 +1407,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="101" column="14" bodyfile="operations.hpp" bodystart="101" bodyend="104"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="100" column="14" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="100" bodyend="103"/>
+        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="91">ret</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1050,7 +1427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="105" column="4" bodyfile="operations.hpp" bodystart="105" bodyend="105"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="104" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="104" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1acc5a0ae67ef6a3bd347c85cab4a15313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1069,7 +1446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="106" column="4" bodyfile="operations.hpp" bodystart="106" bodyend="106"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="105" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="105" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a19000e539a20acfdcd7e8fdce1d970f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1088,7 +1465,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="110" column="4" bodyfile="operations.hpp" bodystart="110" bodyend="110"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="109" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="109" bodyend="109"/>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1aa9ba94adf14b5b5566e3a750fa5255b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1107,123 +1485,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="operations.hpp" line="114" column="4" bodyfile="operations.hpp" bodystart="114" bodyend="114"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="113" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="113" bodyend="113"/>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;range.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace<sp/>operations<sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>aug(op)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="5"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>T1,<sp/>typename<sp/>T2&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="6"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>operator<sp/>op##=(T1<sp/>&amp;a,<sp/>const<sp/>T2<sp/>&amp;b)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="7"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>a<sp/>=<sp/>a<sp/>op<sp/>b;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="8"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">aug(+);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">aug(-);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">aug(*);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">aug(/);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/>enable_if_t&lt;is_floating_point_v&lt;T&gt;,<sp/>T&gt;<sp/>invert(multiplies&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1<sp/>/<sp/>x;<sp/>}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Group&gt;<sp/>Group<sp/>operator/(Group<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>Group<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>*<sp/>invert(multiplies{},<sp/>b);<sp/>}</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constexpr<sp/>operator-(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>+<sp/>-b;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constexpr<sp/>operator!=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(a<sp/>==<sp/>b);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator&lt;=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(b<sp/>&lt;<sp/>a);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator&gt;=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b<sp/>&lt;=<sp/>a;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator&gt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b<sp/>&lt;<sp/>a;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">tm()<sp/>using<sp/>uset<sp/>=<sp/>unordered_set&lt;T&gt;;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">um<sp/>operator+(um<sp/>a,<sp/>um<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[p.first]<sp/>+=<sp/>p.second;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="47"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator|(unordered_set&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>unordered_set&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[sm,<sp/>bg]<sp/>=<sp/>minmax(a,<sp/>b);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>bg;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>ret.insert(al(sm));</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator&amp;(unordered_set&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/>unordered_set&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[sm,<sp/>bg]<sp/>=<sp/>minmax(a,<sp/>b);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_set&lt;T&gt;<sp/>ret;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>sm)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bg.count(x))<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.insert(x);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">tm()<sp/>auto<sp/>sub_set(unordered_set&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/>unordered_set&lt;T&gt;<sp/>const<sp/>&amp;b,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unordered_set&lt;T&gt;<sp/>&amp;ret)<sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>a)<sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b.count(x))<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.insert(x);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">tm()<sp/>auto<sp/>operator-(unordered_set&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/>unordered_set&lt;T&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_set&lt;T&gt;<sp/>ret;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sub_set(a,<sp/>b,<sp/>ret);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">tm()<sp/>auto<sp/>operator^(unordered_set&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/>unordered_set&lt;T&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_set&lt;T&gt;<sp/>ret<sp/>=<sp/>a<sp/>-<sp/>b;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>sub_set(b,<sp/>a,<sp/>ret);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">tm()<sp/>auto<sp/>operator*(vector&lt;T&gt;<sp/>a,<sp/>vector&lt;T&gt;<sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.size()<sp/>==<sp/>b.size());</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;T&gt;<sp/>c(a.size());</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>a.size())<sp/>{<sp/>c[i]<sp/>=<sp/>a[i]<sp/>*<sp/>b[i];<sp/>}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator+(Iterator<sp/>it,<sp/>enable_if_t&lt;!is_same&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>iterator_traits&lt;decltype(it)&gt;::iterator_category,<sp/>random_access_iterator_tag&gt;::value,<sp/><ref refid="structll" kindref="compound">ll</ref>&gt;<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>advance(it,<sp/>n);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">tm()<sp/>using<sp/>bin_op<sp/>=<sp/>T(*)(T,<sp/>T);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ret(x,<sp/>id)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(f<sp/>==<sp/>static_cast&lt;decltype(f)&gt;(x))<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>id;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal">constexpr<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>identity(bin_op&lt;ll<sp/>const<sp/>&amp;&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;f)<sp/>{</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>ret(max&lt;ll&gt;,<sp/>-inf);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>ret(min&lt;ll&gt;,<sp/>inf);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>abort();</highlight></codeline>
-<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal">constexpr<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>identity(bin_op&lt;ll&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;f)<sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>ret(gcd&lt;ll&gt;,<sp/>0);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>abort();</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>identity(plus&lt;&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>identity(multiplies&lt;&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMax" kindref="compound">Max</ref><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator()(T<sp/>a,<sp/>T<sp/>b)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max(a,<sp/>b);<sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>identity(<ref refid="structMax" kindref="compound">Max</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-inf;<sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMin" kindref="compound">Min</ref><sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator()(T<sp/>a,<sp/>T<sp/>b)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>min(a,<sp/>b);<sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>identity(<ref refid="structMin" kindref="compound">Min</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inf;<sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//}<sp/>//<sp/>namespace<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>using<sp/>namespace<sp/>operations;</highlight><highlight class="normal"></highlight></codeline>
-    </programlisting>
-    <location file="operations.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/core/operations.hpp"/>
   </compounddef>
 </doxygen>

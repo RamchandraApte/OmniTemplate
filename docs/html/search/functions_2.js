@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['cache_671',['cache',['../namespaceutility.html#a6e069fcf8b422fbc525eba2543e36a6e',1,'utility']]],
-  ['ccw_672',['ccw',['../namespacegeometry.html#a5f1383116499536e16ded93d8a011900',1,'geometry']]],
-  ['ceil_5fdiv_673',['ceil_div',['../my__int_8hpp.html#ab40cf8d960a2bfa49f09a97ed15c056d',1,'my_int.hpp']]],
-  ['choose_674',['choose',['../namespacecombinatorics.html#a24ea271b6415a4679e019562f474d88f',1,'combinatorics']]],
-  ['cht_675',['cht',['../structgeometry_1_1cht.html#aba1f183ba70cc4a50970ed2f127c1b6a',1,'geometry::cht']]],
-  ['cmake_5fminimum_5frequired_676',['cmake_minimum_required',['../CMakeLists_8txt.html#a91d15f0ceb5db5efd01dc2a406451982',1,'CMakeLists.txt']]],
-  ['conv_677',['conv',['../fft_8hpp.html#ad433b30dd657e617f55a72340fcefd4a',1,'fft.hpp']]],
-  ['convex_5fmin_678',['convex_min',['../namespacegeometry.html#a8143f89812fca762e08ba1a5d984c46b',1,'geometry']]],
-  ['coro_679',['coro',['../coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa',1,'coroutine.hpp']]],
-  ['cut_680',['cut',['../link__cut_8hpp.html#aee90268d7b5985314517951d6e69543c',1,'link_cut.hpp']]]
+  ['c_692',['c',['../operations_8hpp.html#ac748aa2982293b2480271d6f92be38e8',1,'operations.hpp']]],
+  ['cache_693',['cache',['../namespaceutility.html#a6e069fcf8b422fbc525eba2543e36a6e',1,'utility']]],
+  ['ccw_694',['ccw',['../namespaceconvex__hull__trick.html#a09a415224250703a38ef6bd668e1cac5',1,'ccw():&#160;cht.hpp'],['../namespaceconvex__hull__trick.html#a09a415224250703a38ef6bd668e1cac5',1,'convex_hull_trick::ccw()']]],
+  ['ceil_5fdiv_695',['ceil_div',['../my__int_8hpp.html#ab40cf8d960a2bfa49f09a97ed15c056d',1,'my_int.hpp']]],
+  ['choose_696',['choose',['../namespacecombinatorics.html#a24ea271b6415a4679e019562f474d88f',1,'choose():&#160;combinatorics.hpp'],['../namespacecombinatorics.html#a24ea271b6415a4679e019562f474d88f',1,'combinatorics::choose()']]],
+  ['cht_697',['CHT',['../structconvex__hull__trick_1_1CHT.html#a2166ed9dd69f17fe9f4ed77fbf4d0907',1,'convex_hull_trick::CHT']]],
+  ['color2_698',['color2',['../namespacegraph__theory_1_1bipartite.html#ae7b82c3700495a58245666aabbf2353c',1,'graph_theory::bipartite']]],
+  ['conv_699',['conv',['../fft_8hpp.html#ad433b30dd657e617f55a72340fcefd4a',1,'fft.hpp']]],
+  ['convex_5fmin_700',['convex_min',['../namespaceconvex__hull__trick.html#a8a2d8bb18a7c97e9b898e56bbb644978',1,'convex_min():&#160;cht.hpp'],['../namespaceconvex__hull__trick.html#a8a2d8bb18a7c97e9b898e56bbb644978',1,'convex_hull_trick::convex_min()']]],
+  ['coro_701',['coro',['../namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea',1,'coro():&#160;coroutine.hpp'],['../namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea',1,'coroutine::coro()']]],
+  ['cut_702',['cut',['../namespacelink__cut.html#ab6b1e676cdcb014dd718dcef1bc009de',1,'link_cut']]]
 ];

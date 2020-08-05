@@ -2,57 +2,28 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="bit_8hpp" kind="file" language="C++">
     <compoundname>bit.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includes refid="utility_8hpp" local="yes">utility.hpp</includes>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="test__bit_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/test_bit.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>experimental/source_location</label>
+      </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>bit.hpp</label>
-        <link refid="bit_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -70,88 +41,70 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
+        <link refid="bit_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
       <node id="1">
-        <label>bit.hpp</label>
+        <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
         <link refid="bit_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/src/ds/test_bit.hpp</label>
+        <link refid="test__bit_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classBIT" prot="public">BIT</innerclass>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="bit_8hpp_1af86f570cf0a5201c700ffeec06aec7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void test_bit</definition>
-        <argsstring>()</argsstring>
-        <name>test_bit</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="bit.hpp" line="44" column="6" bodyfile="bit.hpp" bodystart="44" bodyend="57"/>
-      </memberdef>
-      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utility.hpp&quot;</highlight></codeline>
-<codeline lineno="9" refid="classBIT" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Mono</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">Op<sp/>=<sp/>plus&lt;&gt;&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBIT" kindref="compound">BIT</ref><sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Value&gt;<sp/>arr;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>MonoidOp<sp/>op{};<sp/></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="16" refid="classBIT_1a6408bcee08d49c8ab90ac83bdba0f2f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classBIT_1a6408bcee08d49c8ab90ac83bdba0f2f1" kindref="member">BIT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>size_arg)</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>arr(bit_ceil(size_arg)<sp/>+<sp/>1,<sp/>identity(MonoidOp{},<sp/>Value{}))<sp/>{}</highlight></codeline>
-<codeline lineno="18" refid="classBIT_1a495d58c744095867ad69123897c60700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Value<sp/><ref refid="classBIT_1a495d58c744095867ad69123897c60700" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>identity(MonoidOp{},<sp/>Value{});</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>r;<sp/>r<sp/>-=<sp/>get_len(r))<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>op(sum,<sp/>arr[r]);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31" refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" kindref="member">update</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>idx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Value<sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++idx;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>idx<sp/>&lt;<sp/>arr.size();<sp/>idx<sp/>+=<sp/>get_len(idx))<sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr[idx]<sp/>=<sp/>op(arr[idx],<sp/>value);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>get_len(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>idx)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx<sp/>&amp;<sp/>(-idx);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_bit()<sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBIT" kindref="compound">BIT&lt;ll&gt;</ref><sp/>bit(10);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>bit.update(3,<sp/>4);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(10)<sp/>==<sp/>4));</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>bit.update(2,<sp/>3);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(2)<sp/>==<sp/>0));</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(3)<sp/>==<sp/>3));</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(4)<sp/>==<sp/>7));</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>bit.update(0,<sp/>2);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>bit.update(9,<sp/>5);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(10)<sp/>==<sp/>4<sp/>+<sp/>3<sp/>+<sp/>2<sp/>+<sp/>5));</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(0)<sp/>==<sp/>0));</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((bit.query(1)<sp/>==<sp/>2));</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="bit.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/ds/bit.hpp"/>
   </compounddef>
 </doxygen>

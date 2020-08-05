@@ -1,7 +1,7 @@
-\hypertarget{segment__tree_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/segment\+\_\+tree.hpp File Reference}
-\label{segment__tree_8hpp}\index{/home/ram/OmniTemplate/segment\_tree.hpp@{/home/ram/OmniTemplate/segment\_tree.hpp}}
-{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}time.\+hpp\char`\"{}}\newline
+\hypertarget{segment__tree_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/ds/segment\+\_\+tree.hpp File Reference}
+\label{segment__tree_8hpp}\index{/home/ram/OmniTemplate/src/ds/segment\_tree.hpp@{/home/ram/OmniTemplate/src/ds/segment\_tree.hpp}}
+{\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core/time.\+hpp\char`\"{}}\newline
 Include dependency graph for segment\+\_\+tree.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -19,34 +19,16 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classSegmentTree}{Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$}}
-\begin{DoxyCompactList}\small\item\em Generic persistent explicit/implicit lazy based segment tree. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSegmentTree_1_1LazyPart}{Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\+Lazy\+Part}}
+class \mbox{\hyperlink{classsegment__tree_1_1SegmentTree}{segment\+\_\+tree\+::\+Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$}}
+\begin{DoxyCompactList}\small\item\em Generic persistent explicit/implicit lazy based segment tree, technically known as range query tree. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsegment__tree_1_1SegmentTree_1_1LazyPart}{segment\+\_\+tree\+::\+Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\+Lazy\+Part}}
 \item 
-struct \mbox{\hyperlink{structSegmentTree_1_1NodeCore}{Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\+Node\+Core}}
+struct \mbox{\hyperlink{structsegment__tree_1_1SegmentTree_1_1NodeCore}{segment\+\_\+tree\+::\+Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\+Node\+Core}}
 \item 
-struct \mbox{\hyperlink{structSegmentTree_1_1NodeExp}{Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\+Node\+Exp}}
+struct \mbox{\hyperlink{structsegment__tree_1_1SegmentTree_1_1NodeExp}{segment\+\_\+tree\+::\+Segment\+Tree$<$ T, Query, Update, has\+\_\+lazy, has\+\_\+ptr, has\+\_\+pers, base $>$\+::\+Node\+Exp}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$bool has\+\_\+lazy, bool has\+\_\+ptr, bool has\+\_\+pers, ll base$>$ }\\void \mbox{\hyperlink{segment__tree_8hpp_afad296d81f9e7bd12c8998d387185ec0}{test\+\_\+segment\+\_\+tree\+\_\+impl}} ()
-\item 
-void \mbox{\hyperlink{segment__tree_8hpp_a7ab52e3056b1097d9d3d2a938f240394}{test\+\_\+segment\+\_\+tree}} ()
+ \mbox{\hyperlink{namespacesegment__tree}{segment\+\_\+tree}}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{segment__tree_8hpp_a7ab52e3056b1097d9d3d2a938f240394}\label{segment__tree_8hpp_a7ab52e3056b1097d9d3d2a938f240394}} 
-\index{segment\_tree.hpp@{segment\_tree.hpp}!test\_segment\_tree@{test\_segment\_tree}}
-\index{test\_segment\_tree@{test\_segment\_tree}!segment\_tree.hpp@{segment\_tree.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_segment\_tree()}{test\_segment\_tree()}}
-{\footnotesize\ttfamily void test\+\_\+segment\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{segment__tree_8hpp_afad296d81f9e7bd12c8998d387185ec0}\label{segment__tree_8hpp_afad296d81f9e7bd12c8998d387185ec0}} 
-\index{segment\_tree.hpp@{segment\_tree.hpp}!test\_segment\_tree\_impl@{test\_segment\_tree\_impl}}
-\index{test\_segment\_tree\_impl@{test\_segment\_tree\_impl}!segment\_tree.hpp@{segment\_tree.hpp}}
-\doxysubsubsection{\texorpdfstring{test\_segment\_tree\_impl()}{test\_segment\_tree\_impl()}}
-{\footnotesize\ttfamily template$<$bool has\+\_\+lazy, bool has\+\_\+ptr, bool has\+\_\+pers, ll base$>$ \\
-void test\+\_\+segment\+\_\+tree\+\_\+impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-

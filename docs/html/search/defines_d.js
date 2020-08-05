@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['this_1088',['this',['../core_8hpp.html#a50383951d2a9d4f1a855b2cec5e03274',1,'core.hpp']]],
-  ['tm_1089',['tm',['../core_8hpp.html#a6779ef315f4a9c289636c8f466c823e3',1,'core.hpp']]],
-  ['todo_1090',['TODO',['../core_8hpp.html#ad47194c03eba4b38147c9d01c0166802',1,'core.hpp']]]
+  ['use_5frandom_5fdevice_5fpatch_1072',['USE_RANDOM_DEVICE_PATCH',['../utility_8hpp.html#a4072e106efe575805c4864dbbd387090',1,'utility.hpp']]]
 ];

@@ -2,50 +2,35 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="sparse__table_8hpp" kind="file" language="C++">
     <compoundname>sparse_table.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="program__listing__file__hld_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_hld.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="hld_8hpp" local="yes">hld.hpp</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="test__sparse__table_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</includedby>
+    <includedby refid="hld_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/tree/hld.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/ds/sparse_table.hpp</label>
+        <link refid="sparse__table_8hpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="5">
         <label>experimental/source_location</label>
       </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -63,167 +48,82 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>sparse_table.hpp</label>
-        <link refid="sparse__table_8hpp"/>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>hld.hpp</label>
-        <link refid="hld_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="1">
-        <label>sparse_table.hpp</label>
+        <label>/home/ram/OmniTemplate/src/ds/sparse_table.hpp</label>
         <link refid="sparse__table_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
+        <link refid="test__hld_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
+        <link refid="hld_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
       <node id="3">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</label>
+        <link refid="test__sparse__table_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="classSparseTable" prot="public">SparseTable</innerclass>
-    <innerclass refid="classDisjointSparseTable" prot="public">DisjointSparseTable</innerclass>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="sparse__table_8hpp_1a5cda9a81cfe846fae5e2df903be8dce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>template&lt; typename... &gt; typename</type>
-            <declname>Table</declname>
-            <defname>Table</defname>
-          </param>
-          <param>
-            <type>typename T</type>
-          </param>
-          <param>
-            <type>typename Monoid</type>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void test_sparse_table_impl</definition>
-        <argsstring>()</argsstring>
-        <name>test_sparse_table_impl</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="sparse_table.hpp" line="76" column="24" bodyfile="sparse_table.hpp" bodystart="76" bodyend="82"/>
-      </memberdef>
-      <memberdef kind="function" id="sparse__table_8hpp_1aaa7fb37aeaaecd158ac4f8c623858753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void test_sparse_table</definition>
-        <argsstring>()</argsstring>
-        <name>test_sparse_table</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="sparse_table.hpp" line="83" column="6" bodyfile="sparse_table.hpp" bodystart="83" bodyend="89"/>
-      </memberdef>
-      </sectiondef>
+    <innerclass refid="classsparse__table_1_1SparseTable" prot="public">sparse_table::SparseTable</innerclass>
+    <innerclass refid="classsparse__table_1_1DisjointSparseTable" prot="public">sparse_table::DisjointSparseTable</innerclass>
+    <innernamespace refid="namespacesparse__table">sparse_table</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>return<sp/>identity<sp/>when<sp/>l<sp/>=<sp/>r</highlight></codeline>
-<codeline lineno="7"><highlight class="comment"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Semilattice&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSparseTable" kindref="compound">SparseTable</ref><sp/>{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classSparseTable" kindref="compound">SparseTable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;T&gt;<sp/>&amp;arr)<sp/>:<sp/>meet(log_ceil(arr.size(),<sp/>2),<sp/>vector&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(arr.size()))<sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meet[0]<sp/>=<sp/>arr;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(pw,<sp/>1,<sp/>meet.size())<sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(i,<sp/>arr.size())<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>half<sp/>=<sp/>1LL<sp/>&lt;&lt;<sp/>(pw<sp/>-<sp/>1);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meet[pw][i]<sp/>=<sp/>Semilattice{}(meet[pw<sp/>-<sp/>1][i],<sp/>meet[pw<sp/>-<sp/>1][min(i<sp/>+<sp/>half,<sp/>ssize(arr)<sp/>-<sp/>1)]);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>query(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>r<sp/>-<sp/>l;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>put<sp/>this<sp/>in<sp/>a<sp/>function</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>floor_log2<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structll" kindref="compound">ll</ref>)<sp/>*<sp/>CHAR_BIT)<sp/>-<sp/>1<sp/>-<sp/>__builtin_clzll(len);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Semilattice{}(meet[floor_log2][l],<sp/>meet[floor_log2][r<sp/>-<sp/>(1LL<sp/>&lt;&lt;<sp/>floor_log2)]);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>vc&lt;vl&gt;<sp/>meet;<sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="34"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Mono</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDisjointSparseTable" kindref="compound">DisjointSparseTable</ref><sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classDisjointSparseTable" kindref="compound">DisjointSparseTable</ref>(vector&lt;T&gt;<sp/>arr)<sp/>:<sp/>sum(log_ceil(arr.size(),<sp/>2),<sp/>vector&lt;T&gt;(power_ceil(arr.size(),<sp/>2)))<sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr.resize(sum[0].size(),<sp/>identity(Monoid{},<sp/>T{}));</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(level,<sp/>sum.size())<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(block,<sp/>1LL<sp/>&lt;&lt;<sp/>level)<sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>half<sp/>of<sp/>the<sp/>block<sp/>contains<sp/>suffix<sp/>sums,<sp/>the<sp/>second<sp/>half<sp/>contains<sp/>prefix<sp/>sums</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>start<sp/>=<sp/>block<sp/>&lt;&lt;<sp/>(sum.size()<sp/>-<sp/>level);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>end<sp/>=<sp/>(block<sp/>+<sp/>1)<sp/>&lt;&lt;<sp/>(sum.size()<sp/>-<sp/>level);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>middle<sp/>=<sp/>(end<sp/>+<sp/>start)<sp/>/<sp/>2;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>arr[middle];</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum[level][middle]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(x,<sp/>middle<sp/>+<sp/>1,<sp/>end)<sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>Monoid{}(val,<sp/>arr[x]);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum[level][x]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>arr[middle<sp/>-<sp/>1];</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum[level][middle<sp/>-<sp/>1]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fr(x,<sp/>start,<sp/>middle<sp/>-<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>Monoid{}(val,<sp/>arr[x]);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum[level][x]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="60" refid="classDisjointSparseTable_1ad35bb60605d83b2468cf5a4f2d2cd8aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classDisjointSparseTable_1ad35bb60605d83b2468cf5a4f2d2cd8aa" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(l<sp/>&lt;<sp/>r);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>half<sp/>open<sp/>interval<sp/>to<sp/>closed<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--r;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(l<sp/>==<sp/>r){</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum.back()[l];</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>of<sp/>the<sp/>leftmost<sp/>different<sp/>bit<sp/>from<sp/>the<sp/>right</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pos_diff<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structll" kindref="compound">ll</ref>)<sp/>*<sp/>CHAR_BIT)<sp/>-<sp/>1<sp/>-<sp/>__builtin_clzll(l<sp/>^<sp/>r);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>level<sp/>=<sp/>sum.size()<sp/>-<sp/>1<sp/>-<sp/>pos_diff;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Monoid{}(sum[level][l],<sp/>sum[level][r]);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;T&gt;&gt;<sp/>sum;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Table,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Monoid&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_sparse_table_impl()<sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;T&gt;<sp/>data{6,<sp/>2,<sp/>4,<sp/>1,<sp/>7,<sp/>3,<sp/>4,<sp/>2,<sp/>7,<sp/>2,<sp/>4,<sp/>1,<sp/>6};</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>Table&lt;T,<sp/>Monoid&gt;<sp/>sp{data};</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(start,<sp/>data.size())<sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(end,<sp/>start<sp/>+<sp/>1,<sp/>data.size())<sp/>{<sp/>assert(sp.query(start,<sp/>end)<sp/>==<sp/>accumulate(begin(data)<sp/>+<sp/>start,<sp/>begin(data)<sp/>+<sp/>end,<sp/>identity(Monoid{},<sp/>T{}),<sp/>Monoid{}));<sp/>}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_sparse_table()<sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="structll" kindref="compound">ll</ref>(1e9<sp/>+<sp/>7),<sp/>modulo::modulus};</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;SparseTable,<sp/>ll,<sp/>Min&gt;();</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>ll,<sp/>Min&gt;();</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>ll,<sp/>plus&lt;&gt;&gt;();</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>modulo,<sp/>multiplies&lt;&gt;&gt;();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="sparse_table.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp"/>
   </compounddef>
 </doxygen>

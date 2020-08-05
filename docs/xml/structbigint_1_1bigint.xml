@@ -2,9 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="structbigint_1_1bigint" kind="struct" language="C++" prot="public">
     <compoundname>bigint::bigint</compoundname>
+    <includes refid="big__integer_8hpp" local="no">big_integer.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structbigint_1_1bigint_1a9c73973c3aeb34e64a5077b75eb8b0c2" prot="public" static="no" mutable="no">
-        <type>vector&lt; ull &gt;</type>
+        <type>vector&lt; <ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref> &gt;</type>
         <definition>vector&lt;ull&gt; bigint::bigint::v</definition>
         <argsstring></argsstring>
         <name>v</name>
@@ -14,7 +15,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="big_integer.hpp" line="5" column="8" bodyfile="big_integer.hpp" bodystart="5" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" line="5" column="8" bodyfile="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" bodystart="5" bodyend="-1"/>
+        <referencedby refid="namespacebigint_1af4352ea3f90e44bbfe72018e96a89bce" compoundref="big__integer_8hpp" startline="9" endline="11">bigint::operator&lt;&lt;</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -24,7 +26,7 @@
         <argsstring>(const vector&lt; ull &gt; &amp;v_)</argsstring>
         <name>bigint</name>
         <param>
-          <type>const vector&lt; ull &gt; &amp;</type>
+          <type>const vector&lt; <ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref> &gt; &amp;</type>
           <declname>v_</declname>
         </param>
         <briefdescription>
@@ -33,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="big_integer.hpp" line="6" column="10" bodyfile="big_integer.hpp" bodystart="6" bodyend="6"/>
+        <location file="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" line="6" column="10" bodyfile="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" bodystart="6" bodyend="6"/>
       </memberdef>
       <memberdef kind="function" id="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -50,14 +52,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="big_integer.hpp" line="7" column="6" bodyfile="big_integer.hpp" bodystart="7" bodyend="7"/>
+        <location file="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" line="7" column="6" bodyfile="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" bodystart="7" bodyend="7"/>
+        <references refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" compoundref="utility_8hpp" startline="92" endline="92">utility::ssize</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="big_integer.hpp" line="4" column="13" bodyfile="big_integer.hpp" bodystart="4" bodyend="8"/>
+    <collaborationgraph>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>bigint::bigint</label>
+        <link refid="structbigint_1_1bigint"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; ull &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; ull &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" line="4" column="13" bodyfile="/home/ram/OmniTemplate/src/algebra/big_integer.hpp" bodystart="4" bodyend="8"/>
     <listofallmembers>
       <member refid="structbigint_1_1bigint_1a2104d28d86c22e149f16f912b8d4e39e" prot="public" virt="non-virtual"><scope>bigint::bigint</scope><name>bigint</name></member>
       <member refid="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" prot="public" virt="non-virtual"><scope>bigint::bigint</scope><name>operator[]</name></member>

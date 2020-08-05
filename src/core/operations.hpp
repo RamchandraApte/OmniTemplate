@@ -39,10 +39,9 @@ um operator+(um a, um const &b) {
 /**
  * @brief Returns union of sets a and b.
  * 
- * @param T p_T:
  * @param a p_a:...
  * @param b p_b:...
- * @return auto
+ * @return the union of sets a and b
  */
 template <typename T> auto operator|(unordered_set<T> const &a, unordered_set<T> const &b) {
 	const auto &[sm, bg] = minmax(a, b);

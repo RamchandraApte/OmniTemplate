@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_965',['graph',['../structgraph__theory_1_1gsearch.html#aaf300a233d738e95ac876ada9ed0dad7',1,'graph_theory::gsearch']]]
+  ['graph_961',['graph',['../structgraph__theory_1_1GeneralSearch.html#a9c2d35c04448be8916294f324bd369af',1,'graph_theory::GeneralSearch']]]
 ];

@@ -1,6 +1,6 @@
-\hypertarget{treap_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/treap.hpp File Reference}
-\label{treap_8hpp}\index{/home/ram/OmniTemplate/treap.hpp@{/home/ram/OmniTemplate/treap.hpp}}
-{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+\hypertarget{treap_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/ds/treap.hpp File Reference}
+\label{treap_8hpp}\index{/home/ram/OmniTemplate/src/ds/treap.hpp@{/home/ram/OmniTemplate/src/ds/treap.hpp}}
+{\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
 Include dependency graph for treap.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -12,7 +12,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{treap_8hpp__dep__incl}
+\includegraphics[width=224pt]{treap_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -255,12 +255,15 @@ Joins treap l and treap r.
 All the keys in l must be less than the keys in r. 
 \end{DoxyPrecond}
 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Trp} & A treap type. \\
+\hline
+\end{DoxyTemplParams}
+
 \begin{DoxyParams}{Parameters}
-{\em Trp} & p\+\_\+\+Trp\+: A treap type. \\
+{\em l} & The left half \\
 \hline
-{\em l} & p\+\_\+l\+: The left half \\
-\hline
-{\em r} & p\+\_\+r\+: The right half \\
+{\em r} & The right half \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

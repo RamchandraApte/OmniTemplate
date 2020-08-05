@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mylazy_1031',['mylazy',['../seg__old_8hpp.html#aa4cefbed832d0d4d4cfb40f2341e9a2e',1,'seg_old.hpp']]],
-  ['mypers_1032',['mypers',['../seg__old_8hpp.html#a962063b214f65a5ee40a74f768d237a7',1,'seg_old.hpp']]]
+  ['ld_1015',['ld',['../core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838',1,'all.hpp']]],
+  ['ll_1016',['ll',['../core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883',1,'all.hpp']]],
+  ['lli_1017',['lli',['../core_2all_8hpp.html#a583d558126ab02babe89a77ae06a4156',1,'all.hpp']]]
 ];

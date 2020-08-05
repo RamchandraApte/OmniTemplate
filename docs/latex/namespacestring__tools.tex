@@ -12,21 +12,15 @@ struct \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespacestring__tools_a66df4130e08d7e88fb0becf94c0a9a54}{test\+\_\+hash\+\_\+str}} ()
-\item 
-void \mbox{\hyperlink{namespacestring__tools_a770c47a8a5684f89eb297ffba5337da8}{test\+\_\+bytehash}} ()
-\item 
-\mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{namespacestring__tools_a908088ce2404d968ab69990c35885499}{prefix}} (string const \&s)
+\mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{namespacestring__tools_a908088ce2404d968ab69990c35885499}{prefix}} (string const \&s)
 \item 
 auto \mbox{\hyperlink{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}{search\+\_\+all}} (string const \&t, string const \&s)
 \item 
-auto \mbox{\hyperlink{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}{operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
+auto \mbox{\hyperlink{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}{operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&\mbox{\hyperlink{range_8hpp_a49089473f43d9aad3d15c043cb1184af}{b}})
 \item 
-auto \mbox{\hyperlink{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}{operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
+auto \mbox{\hyperlink{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}{operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&\mbox{\hyperlink{range_8hpp_a49089473f43d9aad3d15c043cb1184af}{b}})
 \item 
 {\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a9ea78f4e72ed84a9dc9c77e705185739}{search\+\_\+ra}} (const Ts \&... args)
-\item 
-void \mbox{\hyperlink{namespacestring__tools_a01561d8bee1ea8e32284f174ecd5d91e}{test\+\_\+string}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -52,9 +46,16 @@ string \mbox{\hyperlink{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e
 \index{string\_tools@{string\_tools}!prefix@{prefix}}
 \index{prefix@{prefix}!string\_tools@{string\_tools}}
 \doxysubsubsection{\texorpdfstring{prefix()}{prefix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{core_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{s }\end{DoxyParamCaption})}
 
-Returns prefix function of string s Here is the caller graph for this function\+:\nopagebreak
+Returns prefix function of string s Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{namespacestring__tools_a908088ce2404d968ab69990c35885499_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -81,52 +82,6 @@ Find all substrings of t equal to s Here is the call graph for this function\+:\
 {\footnotesize\ttfamily template$<$typename... Ts$>$ \\
 auto string\+\_\+tools\+::search\+\_\+ra (\begin{DoxyParamCaption}\item[{const Ts \&...}]{args }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacestring__tools_a770c47a8a5684f89eb297ffba5337da8}\label{namespacestring__tools_a770c47a8a5684f89eb297ffba5337da8}} 
-\index{string\_tools@{string\_tools}!test\_bytehash@{test\_bytehash}}
-\index{test\_bytehash@{test\_bytehash}!string\_tools@{string\_tools}}
-\doxysubsubsection{\texorpdfstring{test\_bytehash()}{test\_bytehash()}}
-{\footnotesize\ttfamily void string\+\_\+tools\+::test\+\_\+bytehash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_a770c47a8a5684f89eb297ffba5337da8_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacestring__tools_a66df4130e08d7e88fb0becf94c0a9a54}\label{namespacestring__tools_a66df4130e08d7e88fb0becf94c0a9a54}} 
-\index{string\_tools@{string\_tools}!test\_hash\_str@{test\_hash\_str}}
-\index{test\_hash\_str@{test\_hash\_str}!string\_tools@{string\_tools}}
-\doxysubsubsection{\texorpdfstring{test\_hash\_str()}{test\_hash\_str()}}
-{\footnotesize\ttfamily void string\+\_\+tools\+::test\+\_\+hash\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_a66df4130e08d7e88fb0becf94c0a9a54_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacestring__tools_a01561d8bee1ea8e32284f174ecd5d91e}\label{namespacestring__tools_a01561d8bee1ea8e32284f174ecd5d91e}} 
-\index{string\_tools@{string\_tools}!test\_string@{test\_string}}
-\index{test\_string@{test\_string}!string\_tools@{string\_tools}}
-\doxysubsubsection{\texorpdfstring{test\_string()}{test\_string()}}
-{\footnotesize\ttfamily void string\+\_\+tools\+::test\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=312pt]{namespacestring__tools_a01561d8bee1ea8e32284f174ecd5d91e_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_a01561d8bee1ea8e32284f174ecd5d91e_icgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{Variable Documentation}

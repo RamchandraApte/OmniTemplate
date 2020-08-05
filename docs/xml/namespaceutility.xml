@@ -2,34 +2,16 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespaceutility" kind="namespace" language="C++">
     <compoundname>utility</compoundname>
-    <innerclass refid="structutility_1_1ar" prot="public">utility::ar</innerclass>
     <innerclass refid="structutility_1_1ar_3_01T_0fn_0e_4" prot="public">utility::ar&lt; T[n]&gt;</innerclass>
     <innerclass refid="structutility_1_1Empty" prot="public">utility::Empty</innerclass>
     <innerclass refid="structutility_1_1fix" prot="public">utility::fix</innerclass>
     <innerclass refid="structutility_1_1random__device__patch" prot="public">utility::random_device_patch</innerclass>
     <innerclass refid="structutility_1_1with" prot="public">utility::with</innerclass>
+    <innernamespace refid="namespaceutility_1_1test">utility::test</innernamespace>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="d__compiled_8cpp_1a5527c46ab55c32f4bdf48a47564e3cf0" prot="public" static="no">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>typename <ref refid="structutility_1_1ar" kindref="compound">ar</ref>&lt; T &gt;::type</type>
-        <definition>using utility::ar_t = typedef typename ar&lt;T&gt;::type</definition>
-        <argsstring></argsstring>
-        <name>ar_t</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="543" column="13" bodyfile="d_compiled.cpp" bodystart="543" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="d__compiled_8cpp_1afaacd9ae54757a29e4d3e5381d8cfcdf" prot="public" static="no">
+      <memberdef kind="typedef" id="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" prot="public" static="no">
         <type><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref></type>
-        <definition>typedef random_device_patch utility::random_device</definition>
+        <definition>using utility::random_device = typedef random_device_patch</definition>
         <argsstring></argsstring>
         <name>random_device</name>
         <briefdescription>
@@ -38,40 +20,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="559" column="1" bodyfile="d_compiled.cpp" bodystart="559" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="107" column="1" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="107" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="d__compiled_8cpp_1a7fea553f6f915aa6c2affe79637d9b9f" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceutility_1a7fea553f6f915aa6c2affe79637d9b9f" prot="public" static="no" mutable="no">
         <type>default_random_engine</type>
         <definition>default_random_engine utility::reng</definition>
         <argsstring></argsstring>
         <name>reng</name>
-        <initializer>{<ref refid="structutility_1_1random__device__patch" kindref="compound">random_device</ref>{}()}</initializer>
+        <initializer>{<ref refid="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" kindref="member">random_device</ref>{}()}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="561" column="23" bodyfile="d_compiled.cpp" bodystart="561" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="109" column="23" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="109" bodyend="-1"/>
+        <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="101">test_biconnected</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="d__compiled_8cpp_1a2f611269d39535446ae5f89e3de27d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_with</definition>
-        <argsstring>()</argsstring>
-        <name>test_with</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="416" column="6" bodyfile="d_compiled.cpp" bodystart="416" bodyend="425"/>
-      </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a1507417750abfb917c914c44e07ed713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a1507417750abfb917c914c44e07ed713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -95,9 +65,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="434" column="18" bodyfile="d_compiled.cpp" bodystart="434" bodyend="434"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="19" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="19" bodyend="19"/>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1ae423116f6315d5e998219f27f1f8c401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1ae423116f6315d5e998219f27f1f8c401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -121,9 +91,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="435" column="18" bodyfile="d_compiled.cpp" bodystart="435" bodyend="435"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="20" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="20" bodyend="20"/>
+        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="3" endline="47">biconnected</referencedby>
+        <referencedby refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" compoundref="flow_8hpp" startline="9" endline="55">flow::edmond_karp</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a6e069fcf8b422fbc525eba2543e36a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a6e069fcf8b422fbc525eba2543e36a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -143,11 +115,10 @@
         </detaileddescription>
         <inbodydescription>
 <para>Cache calls to f using a map of type T</para>
-<para>Cache calls to f using a map of type T</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="436" column="18" bodyfile="d_compiled.cpp" bodystart="436" bodyend="445"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="21" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="21" bodyend="30"/>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a531cc980b5de78f0c2f36ae3210cb9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a531cc980b5de78f0c2f36ae3210cb9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Eq</type>
@@ -186,22 +157,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="449" column="7" bodyfile="d_compiled.cpp" bodystart="449" bodyend="453"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="34" column="7" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="34" bodyend="38"/>
+        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">convex_hull_trick::CHT::CHT</referencedby>
+        <referencedby refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" compoundref="test__utility_8hpp" startline="14" endline="17">utility::test::test_uniq</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a393602f329243516ab6a008f905aa82d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_uniq</definition>
-        <argsstring>()</argsstring>
-        <name>test_uniq</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="454" column="6" bodyfile="d_compiled.cpp" bodystart="454" bodyend="457"/>
-      </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1aa705afaf267f70799bd4ec8cbf040455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -230,22 +190,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="458" column="22" bodyfile="d_compiled.cpp" bodystart="458" bodyend="460"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="39" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="39" bodyend="41"/>
+        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">convex_hull_trick::CHT::CHT</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a564910060ca4728c5efc347bb67c8aaa" compoundref="cht_8hpp" startline="42" endline="58">convex_hull_trick::hull</referencedby>
+        <referencedby refid="cht_8hpp_1a18b063c150d95a5ec77dab71218c4f48" compoundref="cht_8hpp" startline="4" endline="7">std::operator&lt;</referencedby>
+        <referencedby refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" compoundref="test__utility_8hpp" startline="18" endline="21">utility::test::test_key_compare</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1aff1da1538e8456d30c0528faba66b50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_key_compare</definition>
-        <argsstring>()</argsstring>
-        <name>test_key_compare</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="461" column="6" bodyfile="d_compiled.cpp" bodystart="461" bodyend="464"/>
-      </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a50e9430d1096ce6997ae910135a9533f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a50e9430d1096ce6997ae910135a9533f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -265,9 +216,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="465" column="18" bodyfile="d_compiled.cpp" bodystart="465" bodyend="479"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="42" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="42" bodyend="56"/>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a005fc5d8af9bba651f00c74372466b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
         <definition>ll utility::bit_ceil</definition>
         <argsstring>(ll x)</argsstring>
@@ -282,24 +234,12 @@
         </detaileddescription>
         <inbodydescription>
 <para>Return the smallest power of two that is at least x</para>
-<para>Return the smallest power of two that is at least x</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="480" column="4" bodyfile="d_compiled.cpp" bodystart="480" bodyend="486"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="57" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="57" bodyend="63"/>
+        <referencedby refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</referencedby>
+        <referencedby refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" compoundref="test__utility_8hpp" startline="22" endline="31">utility::test::test_bit_ceil</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a712d50fe014f71ad2d85897f9c243680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_bit_ceil</definition>
-        <argsstring>()</argsstring>
-        <name>test_bit_ceil</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="487" column="6" bodyfile="d_compiled.cpp" bodystart="487" bodyend="496"/>
-      </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a14dc21f495425ccdc1ec35fe45d45591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a14dc21f495425ccdc1ec35fe45d45591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
         <definition>ll utility::power_ceil</definition>
         <argsstring>(const ll x, const ll base)</argsstring>
@@ -318,9 +258,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="497" column="4" bodyfile="d_compiled.cpp" bodystart="497" bodyend="502"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="64" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="64" bodyend="69"/>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a750478c01441fac1c27f14bea2cb74ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
         <definition>ll utility::log_ceil</definition>
         <argsstring>(const ll x, const ll base)</argsstring>
@@ -339,9 +279,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="503" column="4" bodyfile="d_compiled.cpp" bodystart="503" bodyend="508"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="70" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="70" bodyend="75"/>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a7cd324d23686536d1d4eeb92afb61ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
         <definition>ll utility::next_comb</definition>
         <argsstring>(ll x)</argsstring>
@@ -356,24 +296,13 @@
         </detaileddescription>
         <inbodydescription>
 <para>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</para>
-<para>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="509" column="5" bodyfile="d_compiled.cpp" bodystart="509" bodyend="518"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="76" column="5" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="76" bodyend="85"/>
+        <references refid="namespacetree_1a1db5e81cd89b854831db8147ff509caa">tree::assert</references>
+        <references refid="operations_8hpp_1a339672ff94e6199019102f50d317c3d7" compoundref="operations_8hpp" startline="63">ret</references>
+        <referencedby refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" compoundref="test__utility_8hpp" startline="32" endline="45">utility::test::test_next_comb</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1ad358004e1f554321202b4e29f8470c5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_next_comb</definition>
-        <argsstring>()</argsstring>
-        <name>test_next_comb</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="519" column="6" bodyfile="d_compiled.cpp" bodystart="519" bodyend="532"/>
-      </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1aa72cfb348ae79fd2bdb5ded63cd36ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -404,11 +333,13 @@
         </detaileddescription>
         <inbodydescription>
 <para>Stable sorts a and b by func.</para>
-<para>Stable sorts a and b by func.</para>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="533" column="20" bodyfile="d_compiled.cpp" bodystart="533" bodyend="538"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="86" column="20" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="86" bodyend="91"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="47" endline="62">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
+        <referencedby refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" compoundref="dsu_8hpp" startline="18" endline="28">dsu_ds::dsu::join</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1adafa966f1819210cf795fff85b2a40c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Cont</type>
@@ -428,39 +359,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="539" column="16" bodyfile="d_compiled.cpp" bodystart="539" bodyend="539"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="92" column="16" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="92" bodyend="92"/>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" compoundref="range_8hpp" startline="65">cont</references>
+        <referencedby refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" compoundref="permutation_8hpp" startline="51" endline="51">permutation::identity</referencedby>
+        <referencedby refid="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" compoundref="big__integer_8hpp" startline="7" endline="7">bigint::bigint::operator[]</referencedby>
+        <referencedby refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" compoundref="permutation_8hpp" startline="42" endline="49">permutation::Permutation::Permutation</referencedby>
+        <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="10" endline="18">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
       </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a46672014ead1e91eeafec896f61036db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_ar</definition>
-        <argsstring>()</argsstring>
-        <name>test_ar</name>
+      <memberdef kind="function" id="namespaceutility_1a2b3da7273046d43bc7efe79670296e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>utility::tm</definition>
+        <argsstring>() struct ar</argsstring>
+        <name>tm</name>
+        <initializer>= typename ar&lt;T&gt;::type</initializer>
         <briefdescription>
+<para>Array convenience template. Converts C style array type to std::array type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="d_compiled.cpp" line="545" column="6" bodyfile="d_compiled.cpp" bodystart="545" bodyend="549"/>
-      </memberdef>
-      <memberdef kind="function" id="d__compiled_8cpp_1a5037ce073dfbaeaf7083a725780cdaf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void utility::test_utility</definition>
-        <argsstring>()</argsstring>
-        <name>test_utility</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="d_compiled.cpp" line="562" column="6" bodyfile="d_compiled.cpp" bodystart="562" bodyend="569"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="95" column="1" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="95" bodyend="95" declfile="/home/ram/OmniTemplate/src/core/utility.hpp" declline="96" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="d_compiled.cpp" line="408" column="17"/>
+    <location file="/home/ram/OmniTemplate/src/core/test_utility.hpp" line="3" column="23"/>
   </compounddef>
 </doxygen>

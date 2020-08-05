@@ -2,69 +2,34 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="main_8hpp" kind="file" language="C++">
     <compoundname>main.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
     <includes refid="time_8hpp" local="yes">time.hpp</includes>
-    <includedby refid="d_8cpp" local="yes">d.cpp</includedby>
-    <includedby refid="program__listing__file__d_8cpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_d.cpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__e_8cpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_e.cpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__misc__test__rand_8cpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_misc_test_rand.cpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="e_8cpp" local="yes">e.cpp</includedby>
-    <includedby refid="test__rand_8cpp" local="yes">misc/test_rand.cpp</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>main.hpp</label>
-        <link refid="main_8hpp"/>
+      <node id="11">
+        <label>time.hpp</label>
+        <link refid="time_8hpp"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="5">
         <label>experimental/source_location</label>
       </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>time.hpp</label>
-        <link refid="time_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -82,23 +47,57 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
+        <link refid="main_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>main.hpp</label>
+        <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
         <link refid="main_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="var">
@@ -114,7 +113,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.hpp" line="10" column="6" bodyfile="main.hpp" bodystart="10" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="10" column="6" bodyfile="/home/ram/OmniTemplate/src/core/main.hpp" bodystart="10" bodyend="-1"/>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -129,7 +129,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.hpp" line="4" column="6" bodyfile="d.cpp" bodystart="4" bodyend="25" declfile="main.hpp" declline="4" declcolumn="6"/>
+        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="4" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test.cpp" bodystart="52" bodyend="52" declfile="/home/ram/OmniTemplate/src/core/main.hpp" declline="4" declcolumn="6"/>
+        <references refid="test_8cpp_1aa1c715cac916839a95e25b65b4071c4a" compoundref="test_8cpp" startline="26" endline="51">test_all</references>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -151,55 +153,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.hpp" line="12" column="5" bodyfile="main.hpp" bodystart="12" bodyend="40"/>
+        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="12" column="5" bodyfile="/home/ram/OmniTemplate/src/core/main.hpp" bodystart="12" bodyend="40"/>
+        <references refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" compoundref="core_2all_8hpp" startline="26">debug_mode</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" compoundref="main_8hpp" startline="10">in</references>
+        <references refid="main_8hpp_1af095a232149097b5605064623a9345ac" compoundref="test_8cpp" startline="52" endline="52">main2</references>
+        <references refid="core_2all_8hpp_1a5da77c5a58b4193f997d91f2130efd53" compoundref="test_8cpp" startline="25">multitest</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;time.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>main2();</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>__FILE__;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">ifstream<sp/>input{s.substr(0,s.size()-</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;cpp&quot;</highlight><highlight class="normal">}.size())+</highlight><highlight class="stringliteral">&quot;in&quot;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>in<sp/>=<sp/>input?input:cin;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;in<sp/>=<sp/>cin;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>LOCAL</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>debug_mode<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>argc)<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argv[i]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;-q&quot;</highlight><highlight class="normal">s)<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debug_mode<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ios::sync_with_stdio(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!debug_mode)<sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr.rdbuf(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(ios<sp/>&amp;os<sp/>:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{in,<sp/>cout,<sp/>cerr,<sp/>clog})<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixed(os);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(os.rdbuf())<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.exceptions(ios::failbit<sp/>|<sp/>ios::badbit<sp/>|<sp/>ios::eofbit);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.precision(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>?<sp/>numeric_limits&lt;ld&gt;::max_digits10<sp/>:<sp/>5);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>cout.precision(numeric_limits&lt;ld&gt;::max_digits10);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>t<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(multitest)<sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cin<sp/>&gt;&gt;<sp/>t;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>t)<sp/>{<sp/>main2();<sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="main.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/core/main.hpp"/>
   </compounddef>
 </doxygen>

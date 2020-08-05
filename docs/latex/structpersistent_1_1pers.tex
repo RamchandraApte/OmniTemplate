@@ -21,7 +21,7 @@ using \mbox{\hyperlink{structpersistent_1_1pers_aca1368b7234aeaa330d30014ab74aec
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-auto \mbox{\hyperlink{structpersistent_1_1pers_a11fc55a84cb1327a5797ea29352eb8b9}{operator=}} (const T \&\mbox{\hyperlink{seg__old_8hpp_a38bf1e5e0427bdeba2b469eea9befc23}{v}})
+auto \mbox{\hyperlink{structpersistent_1_1pers_a11fc55a84cb1327a5797ea29352eb8b9}{operator=}} (const T \&v)
 \item 
 \mbox{\hyperlink{structpersistent_1_1pers_ad16e2906f0acb5b44696b3e732756ea7}{operator auto}} () const
 \end{DoxyCompactItemize}
@@ -36,6 +36,16 @@ set$<$ \mbox{\hyperlink{structpersistent_1_1pers_aca1368b7234aeaa330d30014ab74ae
 static auto \mbox{\hyperlink{structpersistent_1_1pers_a7284254ccae070c4b705a05a8d118b92}{tim}} = 0\+LL
 \begin{DoxyCompactList}\small\item\em Time for the persistent variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct persistent\+::pers$<$ T $>$}
+
+Persistent variable. The old values can be retrieved by changing the time tim
+
+Time complexity\+: $O(log n)$ for setting and getting the value.
+
+Space complexity\+: $O(1)$ per assignment. 
 
 \doxysubsection{Member Typedef Documentation}
 \mbox{\Hypertarget{structpersistent_1_1pers_aca1368b7234aeaa330d30014ab74aecb}\label{structpersistent_1_1pers_aca1368b7234aeaa330d30014ab74aecb}} 
@@ -83,8 +93,8 @@ auto \mbox{\hyperlink{structpersistent_1_1pers}{persistent\+::pers}}$<$ T $>$\+:
 
 Time for the persistent variable. 
 
-Persistent variable. The old values can be retrieved by changing the time tim 
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/\mbox{\hyperlink{persistent_8hpp}{persistent.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{persistent_8hpp}{persistent.\+hpp}}\end{DoxyCompactItemize}

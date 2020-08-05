@@ -1,396 +1,195 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OmniTemplate: string_tools::search_it Struct Reference</title>
-<link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX","output/HTML-CSS"],
-});
-</script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>string_tools::search_it struct | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
+  <link rel="icon" href="favicon-light.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#cb4b16" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellspacing="0" cellpadding="0">
- <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">OmniTemplate
-   </div>
-   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
-  </td>
- </tr>
- </tbody>
-</table>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespacestring__tools.html">string_tools</a>::<wbr/></span>search_it <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;/home/ram/OmniTemplate/src/utility/string.hpp&gt;</a></div>
+        </h1>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Search iterator for looping through all matches of a string s in t</p>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              struct <a href="structit__base.html" class="m-doc">it_base&lt;ll&gt;</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="acb50112dd85865f007cd61cce21075ca">
+              using <a href="#acb50112dd85865f007cd61cce21075ca" class="m-doc-self">iterator_category</a> = input_iterator_tag
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="aca022e021ec03287386571ef78a8e954">
+              <span class="m-doc-wrap-bumper"><a href="#aca022e021ec03287386571ef78a8e954" class="m-doc-self">search_it</a>(</span><span class="m-doc-wrap">string const&amp; t_,
+              string const&amp; s_)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1605669d491f38f76e0f32902a4b0ce7">
+              <span class="m-doc-wrap-bumper"><a href="#a1605669d491f38f76e0f32902a4b0ce7" class="m-doc-self">search_it</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="af1edaa6e375d857575d012a55cdd4980">
+              <span class="m-doc-wrap-bumper">auto <a href="#af1edaa6e375d857575d012a55cdd4980" class="m-doc-self">operator*</a>(</span><span class="m-doc-wrap">) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae3b12022612273c38ee27b30942ded0b">
+              <span class="m-doc-wrap-bumper">void <a href="#ae3b12022612273c38ee27b30942ded0b" class="m-doc-self">operator++</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="af4f997651360785c26b02a9dc4825318">
+              const string&amp; <a href="#af4f997651360785c26b02a9dc4825318" class="m-doc-self">t</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="adf1d8385f726abce3cd93b1217f51bbe">
+              const string <a href="#adf1d8385f726abce3cd93b1217f51bbe" class="m-doc-self">s</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aab70ce1b2fdb25d6476e2a68e3e42fef">
+              const <a href="structll.html" class="m-doc">ll</a> <a href="#aab70ce1b2fdb25d6476e2a68e3e42fef" class="m-doc-self">n</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a87ec86b38282706ad524ea778ba728b0">
+              const <a href="structll.html" class="m-doc">ll</a> <a href="#a87ec86b38282706ad524ea778ba728b0" class="m-doc-self">ed</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aae138c0caa8c516aef9979abd73fa15a">
+              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#aae138c0caa8c516aef9979abd73fa15a" class="m-doc-self">p</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abbec6589aea3d745e199d755d85d554a">
+              <a href="structll.html" class="m-doc">ll</a> <a href="#abbec6589aea3d745e199d755d85d554a" class="m-doc-self">i</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a0cf94550269ceab1506f23e769d3e16e">
+              <a href="structll.html" class="m-doc">ll</a> <a href="#a0cf94550269ceab1506f23e769d3e16e" class="m-doc-self">o</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- end header part -->
-<!-- Generated by Doxygen 1.8.17 -->
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Search');
-/* @license-end */
-</script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
-</div>
-
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacestring__tools.html">string_tools</a></li><li class="navelem"><a class="el" href="structstring__tools_1_1search__it.html">search_it</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div class="header">
-  <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structstring__tools_1_1search__it-members.html">List of all members</a>  </div>
-  <div class="headertitle">
-<div class="title">string_tools::search_it Struct Reference</div>  </div>
-</div><!--header-->
-<div class="contents">
-
-<p><code>#include &lt;<a class="el" href="string_8hpp_source.html">string.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for string_tools::search_it:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structstring__tools_1_1search__it__inherit__graph.svg" width="176" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for string_tools::search_it:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structstring__tools_1_1search__it__coll__graph.svg" width="526" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:acb50112dd85865f007cd61cce21075ca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#acb50112dd85865f007cd61cce21075ca">iterator_category</a> = input_iterator_tag</td></tr>
-<tr class="separator:acb50112dd85865f007cd61cce21075ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_structit__base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structit__base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td></tr>
-<tr class="memitem:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
-<tr class="separator:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
-<tr class="separator:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
-<tr class="separator:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> = <a class="el" href="structll.html">ll</a> *</td></tr>
-<tr class="separator:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> = <a class="el" href="structll.html">ll</a> *</td></tr>
-<tr class="separator:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> = <a class="el" href="structll.html">ll</a> *</td></tr>
-<tr class="separator:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> = <a class="el" href="structll.html">ll</a> &amp;</td></tr>
-<tr class="separator:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> = <a class="el" href="structll.html">ll</a> &amp;</td></tr>
-<tr class="separator:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> = <a class="el" href="structll.html">ll</a> &amp;</td></tr>
-<tr class="separator:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
-<tr class="separator:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
-<tr class="separator:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
-<tr class="separator:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:aca022e021ec03287386571ef78a8e954"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#aca022e021ec03287386571ef78a8e954">search_it</a> (string const &amp;t_, string const &amp;s_)</td></tr>
-<tr class="separator:aca022e021ec03287386571ef78a8e954"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1605669d491f38f76e0f32902a4b0ce7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#a1605669d491f38f76e0f32902a4b0ce7">search_it</a> ()</td></tr>
-<tr class="separator:a1605669d491f38f76e0f32902a4b0ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1edaa6e375d857575d012a55cdd4980"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#af1edaa6e375d857575d012a55cdd4980">operator*</a> ()</td></tr>
-<tr class="separator:af1edaa6e375d857575d012a55cdd4980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3b12022612273c38ee27b30942ded0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#ae3b12022612273c38ee27b30942ded0b">operator++</a> ()</td></tr>
-<tr class="separator:ae3b12022612273c38ee27b30942ded0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:af4f997651360785c26b02a9dc4825318"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#af4f997651360785c26b02a9dc4825318">t</a></td></tr>
-<tr class="separator:af4f997651360785c26b02a9dc4825318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1d8385f726abce3cd93b1217f51bbe"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe">s</a></td></tr>
-<tr class="separator:adf1d8385f726abce3cd93b1217f51bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab70ce1b2fdb25d6476e2a68e3e42fef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#aab70ce1b2fdb25d6476e2a68e3e42fef">n</a></td></tr>
-<tr class="separator:aab70ce1b2fdb25d6476e2a68e3e42fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87ec86b38282706ad524ea778ba728b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#a87ec86b38282706ad524ea778ba728b0">ed</a></td></tr>
-<tr class="separator:a87ec86b38282706ad524ea778ba728b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae138c0caa8c516aef9979abd73fa15a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#aae138c0caa8c516aef9979abd73fa15a">p</a></td></tr>
-<tr class="separator:aae138c0caa8c516aef9979abd73fa15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbec6589aea3d745e199d755d85d554a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#abbec6589aea3d745e199d755d85d554a">i</a> = 0</td></tr>
-<tr class="separator:abbec6589aea3d745e199d755d85d554a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cf94550269ceab1506f23e769d3e16e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#a0cf94550269ceab1506f23e769d3e16e">o</a> = 0</td></tr>
-<tr class="separator:a0cf94550269ceab1506f23e769d3e16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Search iterator for looping through all matches of a string s in t </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="acb50112dd85865f007cd61cce21075ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb50112dd85865f007cd61cce21075ca">&#9670;&nbsp;</a></span>iterator_category</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="structstring__tools_1_1search__it.html#acb50112dd85865f007cd61cce21075ca">string_tools::search_it::iterator_category</a> =  input_iterator_tag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aca022e021ec03287386571ef78a8e954"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca022e021ec03287386571ef78a8e954">&#9670;&nbsp;</a></span>search_it() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string_tools::search_it::search_it </td>
-          <td>(</td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>t_</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>s_</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1605669d491f38f76e0f32902a4b0ce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1605669d491f38f76e0f32902a4b0ce7">&#9670;&nbsp;</a></span>search_it() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string_tools::search_it::search_it </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="af1edaa6e375d857575d012a55cdd4980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1edaa6e375d857575d012a55cdd4980">&#9670;&nbsp;</a></span>operator*()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto string_tools::search_it::operator* </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae3b12022612273c38ee27b30942ded0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3b12022612273c38ee27b30942ded0b">&#9670;&nbsp;</a></span>operator++()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void string_tools::search_it::operator++ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a87ec86b38282706ad524ea778ba728b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87ec86b38282706ad524ea778ba728b0">&#9670;&nbsp;</a></span>ed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structll.html">ll</a> string_tools::search_it::ed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abbec6589aea3d745e199d755d85d554a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbec6589aea3d745e199d755d85d554a">&#9670;&nbsp;</a></span>i</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structll.html">ll</a> string_tools::search_it::i = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aab70ce1b2fdb25d6476e2a68e3e42fef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab70ce1b2fdb25d6476e2a68e3e42fef">&#9670;&nbsp;</a></span>n</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structll.html">ll</a> string_tools::search_it::n</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0cf94550269ceab1506f23e769d3e16e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cf94550269ceab1506f23e769d3e16e">&#9670;&nbsp;</a></span>o</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structll.html">ll</a> string_tools::search_it::o = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aae138c0caa8c516aef9979abd73fa15a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae138c0caa8c516aef9979abd73fa15a">&#9670;&nbsp;</a></span>p</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> string_tools::search_it::p</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adf1d8385f726abce3cd93b1217f51bbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1d8385f726abce3cd93b1217f51bbe">&#9670;&nbsp;</a></span>s</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string string_tools::search_it::s</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af4f997651360785c26b02a9dc4825318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f997651360785c26b02a9dc4825318">&#9670;&nbsp;</a></span>t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const string&amp; string_tools::search_it::t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/ram/OmniTemplate/<a class="el" href="string_8hpp_source.html">string.hpp</a></li>
-</ul>
-</div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
 </body>
 </html>

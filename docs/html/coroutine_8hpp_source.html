@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OmniTemplate: /home/ram/OmniTemplate/coroutine.hpp Source File</title>
+<title>OmniTemplate: /home/ram/OmniTemplate/src/utility/coroutine.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -53,7 +53,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,70 +67,112 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0619a8f54b4fad7043a6de45be8fde0b.html">utility</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/ram/OmniTemplate/coroutine.hpp</div>  </div>
+<div class="title">coroutine.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="coroutine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8hpp.html">core.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a07a24840ac2854166f541e047362d0bf">    6</a></span>&#160;<span class="preprocessor">#define CO_SWITCH</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifdef CO_SWITCH</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">    8</a></span>&#160;<span class="preprocessor">#define cobegin                                                                \</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">    static lli pos = 0;                                                    \</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    switch (pos) {                                                         \</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    case 0:</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">   12</a></span>&#160;<span class="preprocessor">#define coend                                                                  \</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    default:                                                               \</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        throw out_of_range(&quot;Coroutine reached end.&quot;);                  \</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">        }</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">   16</a></span>&#160;<span class="preprocessor">#define coreturn(x)                                                            \</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    pos = __LINE__;                                                        \</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    return x;                                                              \</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    case __LINE__:;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifdef CO_JMP</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define cobegin                                                                \</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    static bool first = true;                                              \</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    static jmp_buf env;                                                    \</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    if (!first) {                                                          \</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">        longjmp(env, true);                                            \</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    }                                                                      \</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    first = false;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define coreturn                                                               \</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    if (!setjmp(env))                                                      \</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    return</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define coend throw out_of_range(&quot;Coroutine reached end.&quot;);</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa">   34</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa">coro</a>(<a class="code" href="structll.html">ll</a> a) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a> <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(404);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">static</span> <a class="code" href="structll.html">ll</a> i = 0; i &lt; a; i++) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(i * i);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(505);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a8b33d6ed6b7b80530df506021b0428ed">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="coroutine_8hpp.html#a8b33d6ed6b7b80530df506021b0428ed">test_coroutine</a>() {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> a = 4;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.push_back(<a class="code" href="coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa">coro</a>(a));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    } <span class="keywordflow">catch</span> (out_of_range &amp;) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    assert((<a class="code" href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a> == <a class="code" href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacecoroutine.html">    6</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">namespace </span><a class="code" href="namespacecoroutine.html">coroutine</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a07a24840ac2854166f541e047362d0bf">    7</a></span>&#160;<span class="preprocessor">#define CO_SWITCH</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef CO_SWITCH</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">    9</a></span>&#160;<span class="preprocessor">#define cobegin                                                                \</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    static lli pos = 0;                                                    \</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    switch (pos) {                                                         \</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">    case 0:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">   13</a></span>&#160;<span class="preprocessor">#define coend                                                                  \</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">    default:                                                               \</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">        throw out_of_range(&quot;Coroutine reached end.&quot;);                  \</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">        }</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">   17</a></span>&#160;<span class="preprocessor">#define coreturn(x)                                                            \</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">    pos = __LINE__;                                                        \</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">    return x;                                                              \</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">    case __LINE__:;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef CO_JMP</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define cobegin                                                                \</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    static bool first = true;                                              \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    static jmp_buf env;                                                    \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">    if (!first) {                                                          \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">        longjmp(env, true);                                            \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    }                                                                      \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    first = false;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define coreturn                                                               \</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    if (!setjmp(env))                                                      \</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">    return</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define coend throw out_of_range(&quot;Coroutine reached end.&quot;);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">   35</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coro</a>(<a class="code" href="structll.html">ll</a> a) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a> <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(404);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">static</span> <a class="code" href="structll.html">ll</a> i = 0; i &lt; a; i++) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(i * i);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(505);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// namespace coroutine</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> core.hpp:65</div></div>
-<div class="ttc" id="acoroutine_8hpp_html_a66452cd96cc7e445f9d343e47d1afefa"><div class="ttname"><a href="coroutine_8hpp.html#a66452cd96cc7e445f9d343e47d1afefa">coro</a></div><div class="ttdeci">ll coro(ll a)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:34</div></div>
-<div class="ttc" id="aseg__old_8hpp_html_a38bf1e5e0427bdeba2b469eea9befc23"><div class="ttname"><a href="seg__old_8hpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a></div><div class="ttdeci">#define v</div><div class="ttdef"><b>Definition:</b> seg_old.hpp:149</div></div>
-<div class="ttc" id="acoroutine_8hpp_html_a904227d8e8b2e67adef1e140e9990a5c"><div class="ttname"><a href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div><div class="ttdeci">#define coend</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:12</div></div>
-<div class="ttc" id="acoroutine_8hpp_html_a8b33d6ed6b7b80530df506021b0428ed"><div class="ttname"><a href="coroutine_8hpp.html#a8b33d6ed6b7b80530df506021b0428ed">test_coroutine</a></div><div class="ttdeci">void test_coroutine()</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:42</div></div>
-<div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
-<div class="ttc" id="acoroutine_8hpp_html_a1672ec864a13c8374fa9bfc6595e67d6"><div class="ttname"><a href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a></div><div class="ttdeci">#define cobegin</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:8</div></div>
+<div class="ttc" id="atest__2sat_8hpp_html"><div class="ttname"><a href="test__2sat_8hpp.html">test_2sat.hpp</a></div></div>
+<div class="ttc" id="atest__linear__algebra_8hpp_html"><div class="ttname"><a href="test__linear__algebra_8hpp.html">test_linear_algebra.hpp</a></div></div>
+<div class="ttc" id="atest_8cpp_html_aa1c715cac916839a95e25b65b4071c4a"><div class="ttname"><a href="test_8cpp.html#aa1c715cac916839a95e25b65b4071c4a">test_all</a></div><div class="ttdeci">void test_all()</div><div class="ttdef"><b>Definition:</b> test.cpp:26</div></div>
+<div class="ttc" id="atest__hld_8hpp_html"><div class="ttname"><a href="test__hld_8hpp.html">test_hld.hpp</a></div></div>
+<div class="ttc" id="atest__queue_8hpp_html"><div class="ttname"><a href="test__queue_8hpp.html">test_queue.hpp</a></div></div>
+<div class="ttc" id="atest__polynomial_8hpp_html"><div class="ttname"><a href="test__polynomial_8hpp.html">test_polynomial.hpp</a></div></div>
+<div class="ttc" id="atest__utility_8hpp_html"><div class="ttname"><a href="test__utility_8hpp.html">test_utility.hpp</a></div></div>
+<div class="ttc" id="anamespaceconvex__hull__trick_1_1test_html_a05eb98d10b7444bbdc9fe64f4d99676a"><div class="ttname"><a href="namespaceconvex__hull__trick_1_1test.html#a05eb98d10b7444bbdc9fe64f4d99676a">convex_hull_trick::test::test_geometry</a></div><div class="ttdeci">void test_geometry()</div><div class="ttdef"><b>Definition:</b> test_cht.hpp:59</div></div>
+<div class="ttc" id="anamespacestring_1_1test_html_a7ae50c2f2677effb9a4416ed73d18b84"><div class="ttname"><a href="namespacestring_1_1test.html#a7ae50c2f2677effb9a4416ed73d18b84">string::test::test_string</a></div><div class="ttdeci">void test_string()</div><div class="ttdef"><b>Definition:</b> test_string.hpp:24</div></div>
+<div class="ttc" id="atest_8cpp_html_af095a232149097b5605064623a9345ac"><div class="ttname"><a href="test_8cpp.html#af095a232149097b5605064623a9345ac">main2</a></div><div class="ttdeci">void main2()</div><div class="ttdef"><b>Definition:</b> test.cpp:52</div></div>
+<div class="ttc" id="anamespacecoroutine_html_a4777caf41e11578bb927d2bc250530ea"><div class="ttname"><a href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coroutine::coro</a></div><div class="ttdeci">ll coro(ll a)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:35</div></div>
+<div class="ttc" id="anamespacesplay__tree_1_1test_html_a5aa5fd954b1cb0fb099a2310d2801e9e"><div class="ttname"><a href="namespacesplay__tree_1_1test.html#a5aa5fd954b1cb0fb099a2310d2801e9e">splay_tree::test::test_splay_tree</a></div><div class="ttdeci">void test_splay_tree()</div><div class="ttdef"><b>Definition:</b> test_splay_tree.hpp:4</div></div>
+<div class="ttc" id="anamespacecoroutine_1_1test_html_a22ebde81203b27ead34dd1fcc2afdbfc"><div class="ttname"><a href="namespacecoroutine_1_1test.html#a22ebde81203b27ead34dd1fcc2afdbfc">coroutine::test::test_coroutine</a></div><div class="ttdeci">void test_coroutine()</div><div class="ttdef"><b>Definition:</b> test_coroutine.hpp:4</div></div>
+<div class="ttc" id="atest__graph__draw_8hpp_html"><div class="ttname"><a href="test__graph__draw_8hpp.html">test_graph_draw.hpp</a></div></div>
+<div class="ttc" id="anamespacelinear__algebra_1_1test_html_aec6af708eda9aa2982dcba2a651f4bf9"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#aec6af708eda9aa2982dcba2a651f4bf9">linear_algebra::test::test_linear_algebra</a></div><div class="ttdeci">void test_linear_algebra()</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:27</div></div>
+<div class="ttc" id="atest_8cpp_html_a5da77c5a58b4193f997d91f2130efd53"><div class="ttname"><a href="test_8cpp.html#a5da77c5a58b4193f997d91f2130efd53">multitest</a></div><div class="ttdeci">bool multitest</div><div class="ttdef"><b>Definition:</b> test.cpp:25</div></div>
+<div class="ttc" id="atest__cht_8hpp_html"><div class="ttname"><a href="test__cht_8hpp.html">test_cht.hpp</a></div></div>
+<div class="ttc" id="anamespacecombinatorics_1_1test_html_a28cd50807d464588cc9b5add7bed4f97"><div class="ttname"><a href="namespacecombinatorics_1_1test.html#a28cd50807d464588cc9b5add7bed4f97">combinatorics::test::test_combinatorics</a></div><div class="ttdeci">void test_combinatorics()</div><div class="ttdef"><b>Definition:</b> test_combinatorics.hpp:28</div></div>
+<div class="ttc" id="anamespacesat2_1_1test_html_a39c93d63732b7216ede171b3589de7f2"><div class="ttname"><a href="namespacesat2_1_1test.html#a39c93d63732b7216ede171b3589de7f2">sat2::test::test_sat2</a></div><div class="ttdeci">void test_sat2()</div><div class="ttdef"><b>Definition:</b> test_2sat.hpp:4</div></div>
+<div class="ttc" id="anamespacelink__cut_1_1test_html_ad63bee2821de932f5d295238e48d106f"><div class="ttname"><a href="namespacelink__cut_1_1test.html#ad63bee2821de932f5d295238e48d106f">link_cut::test::test_link_cut_tree</a></div><div class="ttdeci">void test_link_cut_tree()</div><div class="ttdef"><b>Definition:</b> test_link_cut.hpp:2</div></div>
+<div class="ttc" id="atest__coroutine_8hpp_html"><div class="ttname"><a href="test__coroutine_8hpp.html">test_coroutine.hpp</a></div></div>
+<div class="ttc" id="anamespacepolynomial__ns_1_1test_html_a5ed51dd96ea5d0597e0c721fb647bfcc"><div class="ttname"><a href="namespacepolynomial__ns_1_1test.html#a5ed51dd96ea5d0597e0c721fb647bfcc">polynomial_ns::test::test_polynomial</a></div><div class="ttdeci">void test_polynomial()</div><div class="ttdef"><b>Definition:</b> test_polynomial.hpp:3</div></div>
+<div class="ttc" id="atest__permutation_8hpp_html"><div class="ttname"><a href="test__permutation_8hpp.html">test_permutation.hpp</a></div></div>
+<div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
+<div class="ttc" id="atemplate_8hpp_html"><div class="ttname"><a href="template_8hpp.html">template.hpp</a></div></div>
+<div class="ttc" id="anamespaceutility_1_1test_html_a8aec6a2b496df7ad483a46db1649ea2c"><div class="ttname"><a href="namespaceutility_1_1test.html#a8aec6a2b496df7ad483a46db1649ea2c">utility::test::test_utility</a></div><div class="ttdeci">void test_utility()</div><div class="ttdef"><b>Definition:</b> test_utility.hpp:50</div></div>
+<div class="ttc" id="atest__combinatorics_8hpp_html"><div class="ttname"><a href="test__combinatorics_8hpp.html">test_combinatorics.hpp</a></div></div>
+<div class="ttc" id="anamespacesegment__tree_1_1test_html_a9d9bbf8a59763caf631ceb0808e1b105"><div class="ttname"><a href="namespacesegment__tree_1_1test.html#a9d9bbf8a59763caf631ceb0808e1b105">segment_tree::test::test_segment_tree</a></div><div class="ttdeci">void test_segment_tree()</div><div class="ttdef"><b>Definition:</b> test_segment_tree.hpp:66</div></div>
+<div class="ttc" id="atest__number__theory_8hpp_html_aed36f6b8b9706133e9b5302b1618e9ef"><div class="ttname"><a href="test__number__theory_8hpp.html#aed36f6b8b9706133e9b5302b1618e9ef">test_number_theory</a></div><div class="ttdeci">void test_number_theory()</div><div class="ttdef"><b>Definition:</b> test_number_theory.hpp:67</div></div>
+<div class="ttc" id="anamespacemodulo__namespace_1_1test_html_a1574d4c610506ea86664c88fc549aedf"><div class="ttname"><a href="namespacemodulo__namespace_1_1test.html#a1574d4c610506ea86664c88fc549aedf">modulo_namespace::test::test_modulo</a></div><div class="ttdeci">void test_modulo()</div><div class="ttdef"><b>Definition:</b> test_modulo.hpp:16</div></div>
+<div class="ttc" id="acoroutine_8hpp_html_a904227d8e8b2e67adef1e140e9990a5c"><div class="ttname"><a href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div><div class="ttdeci">#define coend</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:13</div></div>
+<div class="ttc" id="atest__all_8hpp_html"><div class="ttname"><a href="test__all_8hpp.html">test_all.hpp</a></div></div>
+<div class="ttc" id="atest__splay__tree_8hpp_html"><div class="ttname"><a href="test__splay__tree_8hpp.html">test_splay_tree.hpp</a></div></div>
+<div class="ttc" id="atest__link__cut_8hpp_html"><div class="ttname"><a href="test__link__cut_8hpp.html">test_link_cut.hpp</a></div></div>
+<div class="ttc" id="atest__string_8hpp_html"><div class="ttname"><a href="test__string_8hpp.html">test_string.hpp</a></div></div>
+<div class="ttc" id="atest__bit_8hpp_html"><div class="ttname"><a href="test__bit_8hpp.html">test_bit.hpp</a></div></div>
+<div class="ttc" id="atest__sparse__table_8hpp_html"><div class="ttname"><a href="test__sparse__table_8hpp.html">test_sparse_table.hpp</a></div></div>
+<div class="ttc" id="anamespacequeue__tools_1_1test_html_ae0e3be2c757c8f50b8baee654071b01e"><div class="ttname"><a href="namespacequeue__tools_1_1test.html#ae0e3be2c757c8f50b8baee654071b01e">queue_tools::test::test_queue</a></div><div class="ttdeci">void test_queue()</div><div class="ttdef"><b>Definition:</b> test_queue.hpp:55</div></div>
+<div class="ttc" id="atest__dsu_8hpp_html"><div class="ttname"><a href="test__dsu_8hpp.html">test_dsu.hpp</a></div></div>
+<div class="ttc" id="anamespacecoroutine_html"><div class="ttname"><a href="namespacecoroutine.html">coroutine</a></div><div class="ttdef"><b>Definition:</b> coroutine.hpp:6</div></div>
+<div class="ttc" id="anamespacehld_1_1test_html_a2c2ea10aedda3e4e51f08d38ea3fa3f0"><div class="ttname"><a href="namespacehld_1_1test.html#a2c2ea10aedda3e4e51f08d38ea3fa3f0">hld::test::test_hld</a></div><div class="ttdeci">void test_hld()</div><div class="ttdef"><b>Definition:</b> test_hld.hpp:4</div></div>
+<div class="ttc" id="anamespacepermutation_1_1test_html_a35c04b3a3683be26d7eb0723d772fad4"><div class="ttname"><a href="namespacepermutation_1_1test.html#a35c04b3a3683be26d7eb0723d772fad4">permutation::test::test_permutation</a></div><div class="ttdeci">void test_permutation()</div><div class="ttdef"><b>Definition:</b> test_permutation.hpp:23</div></div>
+<div class="ttc" id="atest__bit_8hpp_html_af86f570cf0a5201c700ffeec06aec7f6"><div class="ttname"><a href="test__bit_8hpp.html#af86f570cf0a5201c700ffeec06aec7f6">test_bit</a></div><div class="ttdeci">void test_bit()</div><div class="ttdef"><b>Definition:</b> test_bit.hpp:3</div></div>
+<div class="ttc" id="anamespacesparse__table_1_1test_html_ad6ec7466ef06bcb50a79ee26c4a05db0"><div class="ttname"><a href="namespacesparse__table_1_1test.html#ad6ec7466ef06bcb50a79ee26c4a05db0">sparse_table::test::test_sparse_table</a></div><div class="ttdeci">void test_sparse_table()</div><div class="ttdef"><b>Definition:</b> test_sparse_table.hpp:11</div></div>
+<div class="ttc" id="atest__segment__tree_8hpp_html"><div class="ttname"><a href="test__segment__tree_8hpp.html">test_segment_tree.hpp</a></div></div>
+<div class="ttc" id="anamespacedsu__ds_1_1test_html_adafe4323a317f827a39c3516cf6d792b"><div class="ttname"><a href="namespacedsu__ds_1_1test.html#adafe4323a317f827a39c3516cf6d792b">dsu_ds::test::test_dsu</a></div><div class="ttdeci">void test_dsu()</div><div class="ttdef"><b>Definition:</b> test_dsu.hpp:4</div></div>
+<div class="ttc" id="anamespacegraph__draw_1_1test_html_a037737d6386f4405a42dc842eb4d7436"><div class="ttname"><a href="namespacegraph__draw_1_1test.html#a037737d6386f4405a42dc842eb4d7436">graph_draw::test::test_graph_draw</a></div><div class="ttdeci">void test_graph_draw()</div><div class="ttdef"><b>Definition:</b> test_graph_draw.hpp:4</div></div>
+<div class="ttc" id="acoroutine_8hpp_html_a1672ec864a13c8374fa9bfc6595e67d6"><div class="ttname"><a href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a></div><div class="ttdeci">#define cobegin</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:9</div></div>
+<div class="ttc" id="atest__modulo_8hpp_html"><div class="ttname"><a href="test__modulo_8hpp.html">test_modulo.hpp</a></div></div>
+<div class="ttc" id="atest__bipartite_8hpp_html"><div class="ttname"><a href="test__bipartite_8hpp.html">test_bipartite.hpp</a></div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
-<div class="ttc" id="acoroutine_8hpp_html_a40b2517161c64f0179823b67d4af0242"><div class="ttname"><a href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a></div><div class="ttdeci">#define coreturn(x)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:16</div></div>
+<div class="ttc" id="acoroutine_8hpp_html_a40b2517161c64f0179823b67d4af0242"><div class="ttname"><a href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a></div><div class="ttdeci">#define coreturn(x)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:17</div></div>
+<div class="ttc" id="atest__number__theory_8hpp_html"><div class="ttname"><a href="test__number__theory_8hpp.html">test_number_theory.hpp</a></div></div>
+<div class="ttc" id="anamespacegraph__theory_1_1test_html_a147e0cf4f86928e4e422c6b9198a2371"><div class="ttname"><a href="namespacegraph__theory_1_1test.html#a147e0cf4f86928e4e422c6b9198a2371">graph_theory::test::test_graph_theory</a></div><div class="ttdeci">void test_graph_theory()</div><div class="ttdef"><b>Definition:</b> test_all.hpp:67</div></div>
+<div class="ttc" id="atest__biconnected_8hpp_html"><div class="ttname"><a href="test__biconnected_8hpp.html">test_biconnected.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

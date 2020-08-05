@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['search_5fit_579',['search_it',['../structstring__tools_1_1search__it.html',1,'string_tools']]],
-  ['seg_580',['seg',['../structseg.html',1,'']]],
-  ['seg2_581',['seg2',['../structseg2.html',1,'']]],
-  ['seg_5fbase_582',['seg_base',['../structseg__base.html',1,'']]],
-  ['seg_5fbase_3c_20no_5fimpl_3c_20t_20_3e_20_3e_583',['seg_base&lt; no_impl&lt; T &gt; &gt;',['../structseg__base_3_01no__impl_3_01T_01_4_01_4.html',1,'']]],
-  ['segmenttree_584',['SegmentTree',['../classSegmentTree.html',1,'']]],
-  ['size_5fdata_585',['size_data',['../structsize__data.html',1,'']]],
-  ['sparsetable_586',['SparseTable',['../classSparseTable.html',1,'']]],
-  ['splaynode_587',['SplayNode',['../structsplay__tree_1_1SplayNode.html',1,'splay_tree']]],
-  ['splaytree_588',['SplayTree',['../structsplay__tree_1_1SplayTree.html',1,'splay_tree']]]
+  ['search_5fit_567',['search_it',['../structstring__tools_1_1search__it.html',1,'string_tools']]],
+  ['segmenttree_568',['SegmentTree',['../classsegment__tree_1_1SegmentTree.html',1,'segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;'],['../classsegment__tree_1_1SegmentTree.html',1,'segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;']]],
+  ['size_5fdata_569',['size_data',['../structsize__data.html',1,'']]],
+  ['sparsetable_570',['SparseTable',['../classsparse__table_1_1SparseTable.html',1,'sparse_table']]],
+  ['splaynode_571',['SplayNode',['../structsplay__tree_1_1SplayNode.html',1,'splay_tree']]],
+  ['splaytree_572',['SplayTree',['../structsplay__tree_1_1SplayTree.html',1,'splay_tree']]]
 ];

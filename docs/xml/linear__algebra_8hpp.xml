@@ -2,16 +2,31 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="linear__algebra_8hpp" kind="file" language="C++">
     <compoundname>linear_algebra.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includes refid="modulo_8hpp" local="yes">modulo.hpp</includes>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includes refid="modulo_8hpp" local="yes">number_theory/modulo.hpp</includes>
     <includes refid="polynomial_8hpp" local="yes">polynomial.hpp</includes>
-    <includedby refid="graph__theory_8hpp" local="yes">graph_theory.hpp</includedby>
-    <includedby refid="program__listing__file__graph__theory_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_graph_theory.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includedby refid="test__linear__algebra_8hpp" local="yes">/home/ram/OmniTemplate/src/algebra/test_linear_algebra.hpp</includedby>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="graph_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/all.hpp</includedby>
+    <includedby refid="flow_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/flow.hpp</includedby>
     <incdepgraph>
+      <node id="11">
+        <label>number_theory/modulo.hpp</label>
+        <link refid="modulo_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bits/stdc++.h</label>
+      </node>
+      <node id="12">
+        <label>polynomial.hpp</label>
+        <link refid="polynomial_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>linear_algebra.hpp</label>
+        <label>/home/ram/OmniTemplate/src/algebra/linear_algebra.hpp</label>
         <link refid="linear__algebra_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -20,50 +35,21 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>bits/stdc++.h</label>
-      </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>experimental/source_location</label>
+      </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>modulo.hpp</label>
-        <link refid="modulo_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -81,53 +67,137 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>polynomial.hpp</label>
-        <link refid="polynomial_8hpp_source"/>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="8">
+        <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
+        <link refid="test__all_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
+        <link refid="test__graph__draw_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
+        <link refid="test__hld_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
+        <link refid="hld_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>linear_algebra.hpp</label>
+        <label>/home/ram/OmniTemplate/src/algebra/linear_algebra.hpp</label>
         <link refid="linear__algebra_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>graph_theory.hpp</label>
-        <link refid="graph__theory_8hpp_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>2sat.hpp</label>
-        <link refid="2sat_8hpp_source"/>
-        <childnode refid="4" relation="include">
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/algebra/test_linear_algebra.hpp</label>
+        <link refid="test__linear__algebra_8hpp"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>hld.hpp</label>
-        <link refid="hld_8hpp_source"/>
-        <childnode refid="4" relation="include">
+      <node id="7">
+        <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
+        <link refid="test__2sat_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/ram/OmniTemplate/src/graph/test_flow.hpp</label>
+        <link refid="test__flow_8hpp"/>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
+        <link refid="graph_2all_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ram/OmniTemplate/src/graph/2sat.hpp</label>
+        <link refid="2sat_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/ram/OmniTemplate/src/graph/flow.hpp</label>
+        <link refid="flow_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/ram/OmniTemplate/src/utility/graph_draw.hpp</label>
+        <link refid="graph__draw_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structlinear__algebra_1_1matrix" prot="public">linear_algebra::matrix</innerclass>
@@ -136,161 +206,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;modulo.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;polynomial.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>Tensors?<sp/>Also,<sp/>matrix_row<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>fix<sp/>default<sp/>constructor<sp/>causing<sp/>segfault</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">linear_algebra<sp/>{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">tm()<sp/>struct<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref><sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>rows_n,<sp/>cols_n;<sp/></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;T&gt;<sp/>a;<sp/></highlight></codeline>
-<codeline lineno="12" refid="structlinear__algebra_1_1matrix_1a58ba608331165bf9a70a199be0f19bd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix_1a58ba608331165bf9a70a199be0f19bd4" kindref="member">matrix</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>r_,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>c_,<sp/>df(v,<sp/>0LL))</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>rows_n(r_),<sp/>cols_n(c_),<sp/>a(rows_n<sp/>*<sp/>cols_n,<sp/>v)<sp/>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(rows_n<sp/>&gt;=<sp/>1<sp/>&amp;&amp;<sp/>cols_n<sp/>&gt;=<sp/>1);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>(T<sp/>d)<sp/>:<sp/>rows_n(1),<sp/>cols_n(1),<sp/>a{d}<sp/>{}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>(vector&lt;vector&lt;pr&gt;&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;g)</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>(g.size(),<sp/>g.size(),<sp/>inf)<sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(i,<sp/>rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/>g[i])<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[x,<sp/>w]<sp/>=<sp/>p;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[i][x]<sp/>=<sp/>w;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(i,<sp/>rows_n)<sp/>{<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[i][i]<sp/>=<sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>initializer_list&lt;initializer_list&lt;ll&gt;&gt;<sp/>&amp;vals)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>(size(vals),<sp/>size(begin(vals)[0]))<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(i,<sp/>rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(size(begin(vals)[i])<sp/>==<sp/>cols_n);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(j,<sp/>cols_n)<sp/>{<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[i][j]<sp/>=<sp/>begin(begin(vals)[i])[j];<sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>i)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T<sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal"><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref><sp/></highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">)[i]);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;a[i<sp/>*<sp/>cols_n];<sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>identity(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>plus&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>&amp;mat)<sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>(mat.<ref refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" kindref="member">rows_n</ref>,<sp/>mat.<ref refid="structlinear__algebra_1_1matrix_1a4b8d6b65104e322826ecf447078cb953" kindref="member">cols_n</ref>);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>identity(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>multiplies&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>&amp;mat)<sp/>{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mat.<ref refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" kindref="member">rows_n</ref><sp/>==<sp/>mat.<ref refid="structlinear__algebra_1_1matrix_1a4b8d6b65104e322826ecf447078cb953" kindref="member">cols_n</ref>);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>id(mat.<ref refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" kindref="member">rows_n</ref>,<sp/>mat.<ref refid="structlinear__algebra_1_1matrix_1a4b8d6b65104e322826ecf447078cb953" kindref="member">cols_n</ref>);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>mat.<ref refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" kindref="member">rows_n</ref>)<sp/>{<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[i][i]<sp/>=<sp/>1;<sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator+(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;Ts...&gt;</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;Ts...&gt;</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.rows_n<sp/>==<sp/>b.rows_n<sp/>&amp;&amp;<sp/>a.rows_n<sp/>==<sp/>b.rows_n);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref><sp/>c(a.rows_n,<sp/>a.cols_n);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>a.rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(j,<sp/>a.col_n)<sp/>{<sp/>c[i][j]<sp/>=<sp/>a[i][j]<sp/>+<sp/>b[i][j];<sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator-(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;Ts...&gt;</ref><sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref><sp/>c(a.rows_n,<sp/>a.cols_n);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>a.rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(j,<sp/>a.col_n)<sp/>{<sp/>c[i][j]<sp/>=<sp/>-a[i][j];<sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">tm(...)<sp/>bool<sp/>operator==(<ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.rows_n<sp/>==<sp/>b.rows_n<sp/>&amp;&amp;<sp/>a.cols_n<sp/>==<sp/>b.cols_n<sp/>&amp;&amp;<sp/>a.a<sp/>==<sp/>b.a;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">tm(...)<sp/>auto<sp/>operator*(<ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.cols_n<sp/>==<sp/>b.rows_n);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>c{a.rows_n,<sp/>b.cols_n};</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>c.rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(j,<sp/>a.cols_n)<sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(k,<sp/>c.cols_n)<sp/>{<sp/>c[i][k]<sp/>+=<sp/>a[i][j]<sp/>*<sp/>b[j][k];<sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/>pair&lt;matrix&lt;T&gt;<sp/>&amp;&amp;,<sp/>T&gt;<sp/>gauss(<ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>b,<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>a)<sp/>{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.rows_n<sp/>==<sp/>a.cols_n);</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.rows_n<sp/>==<sp/>b.rows_n);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>det{1};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>a.rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>div<sp/>=<sp/>a[i][i];</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>det<sp/>*=<sp/>div;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structutility_1_1ar" kindref="compound">ar</ref><sp/>:<sp/>{ref(a),<sp/>ref(b)})<sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(k,<sp/><ref refid="structutility_1_1ar" kindref="compound">ar</ref>.get().cols_n)<sp/>{<sp/><ref refid="structutility_1_1ar" kindref="compound">ar</ref>.get()[i][k]<sp/>/=<sp/>div;<sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(j,<sp/>a.rows_n)<sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j<sp/>==<sp/>i)<sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mul<sp/>=<sp/>a[j][i];</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structutility_1_1ar" kindref="compound">ar</ref><sp/>:<sp/>{ref(a),<sp/>ref(b)})<sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fo(k,<sp/><ref refid="structutility_1_1ar" kindref="compound">ar</ref>.get().cols_n)<sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1ar" kindref="compound">ar</ref>.get()[j][k]<sp/>-=<sp/><ref refid="structutility_1_1ar" kindref="compound">ar</ref>.get()[i][k]<sp/>*<sp/>mul;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{move(b),<sp/>det};</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;Ts...&gt;<sp/>invert(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;Ts...&gt;</ref><sp/>&amp;a)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>identity(multiplies&lt;&gt;{},<sp/>a)<sp/>/<sp/>a;<sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_invert_impl(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;Ts...&gt;</ref><sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(invert(a)<sp/>*<sp/>a<sp/>==<sp/>identity(multiplies&lt;&gt;{},<sp/>a));</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a<sp/>*<sp/>invert(a)<sp/>==<sp/>identity(multiplies&lt;&gt;{},<sp/>a));</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_invert()<sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="structll" kindref="compound">ll</ref>(1e9<sp/>+<sp/>7),<sp/>modulo::modulus};</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;modulo&gt;</ref><sp/>a{{2,<sp/>3,<sp/>5},<sp/>{3,<sp/>6,<sp/>10},<sp/>{5,<sp/>9,<sp/>16}};</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;modulo&gt;</ref><sp/>b{{1,<sp/>2,<sp/>3},<sp/>{4,<sp/>5,<sp/>6},<sp/>{9,<sp/>7,<sp/>8}};</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>test_invert_impl(a);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>test_invert_impl(b);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal">tm(...)<sp/>auto<sp/>operator/(const<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>&amp;b,<sp/>const<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt;T...&gt;<sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gauss(b,<sp/>a).first;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/>T<sp/>det(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gauss(<ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref>(a.rows_n,<sp/>1),<sp/>a).second;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>T&gt;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;operator&lt;&lt;(Stream<sp/>&amp;os,<sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T...&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;m)<sp/>{</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" kindref="member">simple_tp</ref>(m)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>m.<ref refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" kindref="member">rows_n</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy(m[i],<sp/>m[i]<sp/>+<sp/>m.<ref refid="structlinear__algebra_1_1matrix_1a4b8d6b65104e322826ecf447078cb953" kindref="member">cols_n</ref>,<sp/>make_ostream_joiner(os,<sp/>delim));</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_matrix()<sp/>{</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="structll" kindref="compound">ll</ref>(1e9<sp/>+<sp/>7),<sp/>modulo::modulus};</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;modulo&gt;</ref><sp/>a{{2,<sp/>3,<sp/>5},<sp/>{3,<sp/>6,<sp/>10},<sp/>{5,<sp/>9,<sp/>16}};</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;modulo&gt;</ref><sp/>b{{1,<sp/>2,<sp/>3},<sp/>{4,<sp/>5,<sp/>6},<sp/>{9,<sp/>7,<sp/>8}};</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a<sp/>*<sp/>(b<sp/>/<sp/>a)<sp/>==<sp/>b);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lin_recur(vector&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>support<sp/>constant<sp/>term</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;T&gt;</ref><sp/>m(size(c),<sp/>size(c));</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>copy(al(c),<sp/>m[0]);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>1,<sp/>size(c))<sp/>{<sp/>m[i][i<sp/>-<sp/>1]<sp/>=<sp/>1;<sp/>}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>power(m,<sp/>n)[0][0];</highlight></codeline>
-<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_lin_recur()<sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(lin_recur(vl{1,<sp/>2},<sp/>5)<sp/>==<sp/>21);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(lin_recur(vl{2,<sp/>3,<sp/>1},<sp/>4)<sp/>==<sp/>65);</highlight></codeline>
-<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/><ref refid="classPolynomial" kindref="compound">Polynomial&lt;T&gt;</ref><sp/>lin_recur_coef(vector&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;c)<sp/>{}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_linear_algebra()<sp/>{</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>test_matrix();</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>test_lin_recur();</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>test_invert();</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>test_lin_recur_coef();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>linear_algebra</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">linear_algebra;</highlight></codeline>
-    </programlisting>
-    <location file="linear_algebra.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/algebra/linear_algebra.hpp"/>
   </compounddef>
 </doxygen>

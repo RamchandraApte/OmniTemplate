@@ -1,12 +1,12 @@
 #pragma once
 #include "core/all.hpp"
-tm() struct it_base {
+template<typename T> struct it_base {
 	using value_type = T;
 	using pointer = T *;
 	using reference = T &;
 	using difference_type = ll;
 };
-tm() struct int_it : it_base<T> {
+template<typename T> struct int_it : it_base<T> {
 	using iterator_category = random_access_iterator_tag;
 	T x, m;
 	template <typename Integer>

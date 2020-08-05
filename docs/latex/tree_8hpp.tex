@@ -1,6 +1,6 @@
-\hypertarget{tree_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/tree.hpp File Reference}
-\label{tree_8hpp}\index{/home/ram/OmniTemplate/tree.hpp@{/home/ram/OmniTemplate/tree.hpp}}
-{\ttfamily \#include \char`\"{}core.\+hpp\char`\"{}}\newline
+\hypertarget{tree_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/graph/tree/tree.hpp File Reference}
+\label{tree_8hpp}\index{/home/ram/OmniTemplate/src/graph/tree/tree.hpp@{/home/ram/OmniTemplate/src/graph/tree/tree.hpp}}
+{\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
 Include dependency graph for tree.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -15,23 +15,53 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=350pt]{tree_8hpp__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structtree_1_1no}{tree\+::no$<$ T $>$}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
- \mbox{\hyperlink{namespacetree}{tree}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacetree_ad6fb77bc640502f7cfbc3b49c7891419}{tree\+::lca}} (\mbox{\hyperlink{structtree_1_1no}{no}}$<$ T $>$ $\ast$a, \mbox{\hyperlink{structtree_1_1no}{no}}$<$ T $>$ $\ast$b)
-\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
+pair$<$ array$<$ \mbox{\hyperlink{structll}{ll}}, 2 $>$, \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{tree_8hpp_a1e3385a1611e3921d5344fed4db8c54c}{tree\+\_\+diameter}} (const vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&g)
 \item 
-const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacetree_abbd5aff5c7f9d3fd17bb986aae13ca53}{tree\+::sz}} = 30
+void \mbox{\hyperlink{tree_8hpp_a3723e2fdc7693c4777b321d0619f189d}{test\+\_\+tree\+\_\+diameter}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tree_8hpp_a3723e2fdc7693c4777b321d0619f189d}\label{tree_8hpp_a3723e2fdc7693c4777b321d0619f189d}} 
+\index{tree.hpp@{tree.hpp}!test\_tree\_diameter@{test\_tree\_diameter}}
+\index{test\_tree\_diameter@{test\_tree\_diameter}!tree.hpp@{tree.hpp}}
+\doxysubsubsection{\texorpdfstring{test\_tree\_diameter()}{test\_tree\_diameter()}}
+{\footnotesize\ttfamily void test\+\_\+tree\+\_\+diameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8hpp_a3723e2fdc7693c4777b321d0619f189d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8hpp_a3723e2fdc7693c4777b321d0619f189d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tree_8hpp_a1e3385a1611e3921d5344fed4db8c54c}\label{tree_8hpp_a1e3385a1611e3921d5344fed4db8c54c}} 
+\index{tree.hpp@{tree.hpp}!tree\_diameter@{tree\_diameter}}
+\index{tree\_diameter@{tree\_diameter}!tree.hpp@{tree.hpp}}
+\doxysubsubsection{\texorpdfstring{tree\_diameter()}{tree\_diameter()}}
+{\footnotesize\ttfamily pair$<$array$<$\mbox{\hyperlink{structll}{ll}}, 2$>$, \mbox{\hyperlink{structll}{ll}}$>$ tree\+\_\+diameter (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$$>$ \&}]{g }\end{DoxyParamCaption})}
+
+Returns diameter and center of a tree \+:param\+: gHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{tree_8hpp_a1e3385a1611e3921d5344fed4db8c54c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tree_8hpp_a1e3385a1611e3921d5344fed4db8c54c_icgraph}
+\end{center}
+\end{figure}

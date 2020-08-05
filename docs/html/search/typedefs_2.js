@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['clock_5f_1021',['clock_',['../core_8hpp.html#a71fb2247d044e41f5345bcdb26020926',1,'clock_():&#160;core.hpp'],['../d__compiled_8cpp.html#a71fb2247d044e41f5345bcdb26020926',1,'clock_():&#160;d_compiled.cpp'],['../e__compiled_8cpp.html#a71fb2247d044e41f5345bcdb26020926',1,'clock_():&#160;e_compiled.cpp']]],
-  ['com_1022',['com',['../core_8hpp.html#ac6774acaa7fff278845893bd84e35525',1,'com():&#160;core.hpp'],['../d__compiled_8cpp.html#ac6774acaa7fff278845893bd84e35525',1,'com():&#160;d_compiled.cpp'],['../e__compiled_8cpp.html#ac6774acaa7fff278845893bd84e35525',1,'com():&#160;e_compiled.cpp']]],
-  ['const_5freference_1023',['const_reference',['../classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236',1,'queue_tools::QueueAdaptor::const_reference()'],['../classqueue__tools_1_1MinStack.html#a6fbd0283e2f3522ba2a795b8e3bfabd3',1,'queue_tools::MinStack::const_reference()']]],
-  ['container_5ftype_1024',['container_type',['../classqueue__tools_1_1QueueAdaptor.html#a0a12e0ff52602d46cea6f7bb072933f6',1,'queue_tools::QueueAdaptor::container_type()'],['../classqueue__tools_1_1MinStack.html#ac9ae47477c69e5faadb9c478a153c596',1,'queue_tools::MinStack::container_type()']]]
+  ['difference_5ftype_1010',['difference_type',['../structit__base.html#a2f441c3115c3b785aedc6816276d7511',1,'it_base']]]
 ];

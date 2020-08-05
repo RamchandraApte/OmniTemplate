@@ -2,54 +2,30 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="range_8hpp" kind="file" language="C++">
     <compoundname>range.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="operations_8hpp" local="yes">operations.hpp</includedby>
-    <includedby refid="debug_8hpp" local="yes">debug.hpp</includedby>
-    <includedby refid="core_8hpp" local="yes">core.hpp</includedby>
-    <includedby refid="utility_8hpp" local="yes">utility.hpp</includedby>
-    <includedby refid="program__listing__file__core_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_core.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__debug_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_debug.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__operations_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_operations.hpp.rst.txt</includedby>
-    <includedby refid="program__listing__file__utility_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_utility.hpp.rst.txt</includedby>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="operations_8hpp" local="yes">/home/ram/OmniTemplate/src/core/operations.hpp</includedby>
+    <includedby refid="debug_8hpp" local="yes">/home/ram/OmniTemplate/src/core/debug.hpp</includedby>
+    <includedby refid="core_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/core/all.hpp</includedby>
+    <includedby refid="utility_8hpp" local="yes">/home/ram/OmniTemplate/src/core/utility.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>experimental/source_location</label>
+      </node>
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="9">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="1" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="1" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>range.hpp</label>
-        <link refid="range_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -67,170 +43,394 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="9">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/core/range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="27">
-        <label>splay_tree.hpp</label>
-        <link refid="splay__tree_8hpp_source"/>
+      <node id="52">
+        <label>/home/ram/OmniTemplate/src/number_theory/modulo.hpp</label>
+        <link refid="modulo_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
       </node>
-      <node id="11">
-        <label>linear_algebra.hpp</label>
-        <link refid="linear__algebra_8hpp_source"/>
+      <node id="35">
+        <label>/home/ram/OmniTemplate/src/ds/test_cht.hpp</label>
+        <link refid="test__cht_8hpp"/>
         <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/ram/OmniTemplate/src/combinatorics/test_combinatorics.hpp</label>
+        <link refid="test__combinatorics_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
+        <link refid="test__all_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</label>
+        <link refid="test__splay__tree_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/ram/OmniTemplate/src/combinatorics/test_permutation.hpp</label>
+        <link refid="test__permutation_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/ram/OmniTemplate/src/algebra/test_polynomial.hpp</label>
+        <link refid="test__polynomial_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>/home/ram/OmniTemplate/src/ds/test_queue.hpp</label>
+        <link refid="test__queue_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>/home/ram/OmniTemplate/src/ds/test_dsu.hpp</label>
+        <link refid="test__dsu_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>/home/ram/OmniTemplate/src/ds/sparse_table.hpp</label>
+        <link refid="sparse__table_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/ram/OmniTemplate/src/core/time.hpp</label>
+        <link refid="time_8hpp"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
+        <link refid="test__graph__draw_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
+        <link refid="test__hld_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/ram/OmniTemplate/src/algebra/polynomial.hpp</label>
+        <link refid="polynomial_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
+        <link refid="hld_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>/home/ram/OmniTemplate/src/utility/test_string.hpp</label>
+        <link refid="test__string_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/ram/OmniTemplate/src/algebra/linear_algebra.hpp</label>
+        <link refid="linear__algebra_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/ram/OmniTemplate/src/combinatorics/combinatorics.hpp</label>
+        <link refid="combinatorics_8hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>/home/ram/OmniTemplate/src/number_theory/number_theory.hpp</label>
+        <link refid="number__theory_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>/home/ram/OmniTemplate/src/utility/coroutine.hpp</label>
+        <link refid="coroutine_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>/home/ram/OmniTemplate/src/number_theory/test_modulo.hpp</label>
+        <link refid="test__modulo_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/ram/OmniTemplate/src/combinatorics/permutation.hpp</label>
+        <link refid="permutation_8hpp"/>
+        <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>graph_theory.hpp</label>
-        <link refid="graph__theory_8hpp_source"/>
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="46">
+        <label>/home/ram/OmniTemplate/src/ds/treap.hpp</label>
+        <link refid="treap_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>/home/ram/OmniTemplate/src/ds/cht.hpp</label>
+        <link refid="cht_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>number_theory.hpp</label>
-        <link refid="number__theory_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="28">
-        <label>my_int.hpp</label>
-        <link refid="my__int_8hpp_source"/>
-      </node>
-      <node id="4">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="24">
-        <label>geometry.hpp</label>
-        <link refid="geometry_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="35">
-        <label>segment_tree_multi.hpp</label>
-        <link refid="segment__tree__multi_8hpp_source"/>
-      </node>
-      <node id="20">
-        <label>main.hpp</label>
-        <link refid="main_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>link_cut.hpp</label>
-        <link refid="link__cut_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>combinatorics.hpp</label>
-        <link refid="combinatorics_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>coroutine.hpp</label>
-        <link refid="coroutine_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>dsu.hpp</label>
-        <link refid="dsu_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>fft.hpp</label>
-        <link refid="fft_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="22">
-        <label>segment_tree.hpp</label>
-        <link refid="segment__tree_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>2sat.hpp</label>
-        <link refid="2sat_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>hld.hpp</label>
-        <link refid="hld_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="36">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>treap.hpp</label>
-        <link refid="treap_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>modulo.hpp</label>
-        <link refid="modulo_8hpp_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="21">
-        <label>time.hpp</label>
-        <link refid="time_8hpp_source"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>/home/ram/OmniTemplate/src/ds/splay_tree.hpp</label>
+        <link refid="splay__tree_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</label>
+        <link refid="link__cut_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
+      <node id="48">
+        <label>/home/ram/OmniTemplate/src/graph/test_biconnected.hpp</label>
+        <link refid="test__biconnected_8hpp"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/ram/OmniTemplate/src/algebra/test_linear_algebra.hpp</label>
+        <link refid="test__linear__algebra_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>/home/ram/OmniTemplate/src/core/test_utility.hpp</label>
+        <link refid="test__utility_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>/home/ram/OmniTemplate/src/ds/queue.hpp</label>
+        <link refid="queue_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>/home/ram/OmniTemplate/src/ds/segment_tree.hpp</label>
+        <link refid="segment__tree_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
+        <link refid="bit_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
+        <link refid="test__2sat_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>/home/ram/OmniTemplate/src/number_theory/test_number_theory.hpp</label>
+        <link refid="test__number__theory_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>/home/ram/OmniTemplate/src/graph/biconnected.hpp</label>
+        <link refid="biconnected_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/ram/OmniTemplate/src/graph/test_flow.hpp</label>
+        <link refid="test__flow_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>/home/ram/OmniTemplate/src/core/utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>range.hpp</label>
+        <label>/home/ram/OmniTemplate/src/core/range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -238,166 +438,171 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="60" relation="include">
         </childnode>
       </node>
-      <node id="29">
-        <label>persistent.hpp</label>
-        <link refid="persistent_8hpp_source"/>
+      <node id="7">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>/home/ram/OmniTemplate/src/ds/persistent.hpp</label>
+        <link refid="persistent_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="33">
-        <label>tree.hpp</label>
-        <link refid="tree_8hpp_source"/>
-        <childnode refid="7" relation="include">
+      <node id="57">
+        <label>/home/ram/OmniTemplate/src/utility/test_coroutine.hpp</label>
+        <link refid="test__coroutine_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>/home/ram/OmniTemplate/src/graph/test_bipartite.hpp</label>
+        <link refid="test__bipartite_8hpp"/>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="31">
-        <label>string.hpp</label>
-        <link refid="string_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="30">
-        <label>queue.hpp</label>
-        <link refid="queue_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>seg_old.hpp</label>
-        <link refid="seg__old_8hpp_source"/>
-      </node>
-      <node id="14">
-        <label>permutation.hpp</label>
-        <link refid="permutation_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>bit.hpp</label>
-        <link refid="bit_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="1" relation="include">
-        </childnode>
+        <label>/home/ram/OmniTemplate/src/ds/test_segment_tree.hpp</label>
+        <link refid="test__segment__tree_8hpp"/>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+      </node>
+      <node id="33">
+        <label>/home/ram/OmniTemplate/src/ds/test_bit.hpp</label>
+        <link refid="test__bit_8hpp"/>
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+      </node>
+      <node id="6">
+        <label>/home/ram/OmniTemplate/src/algebra/big_integer.hpp</label>
+        <link refid="big__integer_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="50">
+        <label>/home/ram/OmniTemplate/src/graph/bipartite.hpp</label>
+        <link refid="bipartite_8hpp"/>
         <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
+        <link refid="graph_2all_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+      </node>
+      <node id="4">
+        <label>/home/ram/OmniTemplate/src/core/io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+      </node>
+      <node id="13">
+        <label>/home/ram/OmniTemplate/src/graph/2sat.hpp</label>
+        <link refid="2sat_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
+      </node>
+      <node id="58">
+        <label>/home/ram/OmniTemplate/src/utility/string.hpp</label>
+        <link refid="string_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
       </node>
-      <node id="25">
-        <label>sparse_table.hpp</label>
-        <link refid="sparse__table_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
+      <node id="9">
+        <label>/home/ram/OmniTemplate/src/algebra/fft.hpp</label>
+        <link refid="fft_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
+      <node id="28">
+        <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
+        <link refid="main_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
-      <node id="2">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
-        <childnode refid="3" relation="include">
+      <node id="42">
+        <label>/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</label>
+        <link refid="test__sparse__table_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>/home/ram/OmniTemplate/src/graph/tree/tree.hpp</label>
+        <link refid="tree_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/core/debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="15">
-        <label>polynomial.hpp</label>
-        <link refid="polynomial_8hpp_source"/>
-        <childnode refid="11" relation="include">
+      <node id="20">
+        <label>/home/ram/OmniTemplate/src/graph/flow.hpp</label>
+        <link refid="flow_8hpp"/>
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="16">
-        <label>big_integer.hpp</label>
-        <link refid="big__integer_8hpp_source"/>
+      <node id="36">
+        <label>/home/ram/OmniTemplate/src/ds/dsu.hpp</label>
+        <link refid="dsu_8hpp"/>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/ram/OmniTemplate/src/utility/graph_draw.hpp</label>
+        <link refid="graph__draw_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structit__base" prot="public">it_base</innerclass>
     <innerclass refid="structint__it" prot="public">int_it</innerclass>
-    <innerclass refid="structrange" prot="public">range</innerclass>
       <sectiondef kind="define">
       <memberdef kind="define" id="range_8hpp_1a198fc8d7aeb577c1c390bbf3cf9ade86" prot="public" static="no">
         <name>bin</name>
         <param><defname>op</defname></param>
         <param><defname>Tp</defname></param>
-        <initializer>auto operator op(Tp const &amp;a, Tp const &amp;b) { return a.x op b.x; }</initializer>
+        <initializer>auto operator op(Tp const &amp;a, Tp const &amp;<ref refid="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" kindref="member">b</ref>) { return a.x op b.x; }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="36" column="9" bodyfile="range.hpp" bodystart="36" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="36" column="9" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -439,193 +644,18 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" prot="public">
-          <name>null</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" prot="public">
-          <name>dis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" prot="public">
-          <name>over</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" prot="public">
-          <name>cont</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" prot="public">
-          <name>eq</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" prot="public">
-          <name>null</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" prot="public">
-          <name>dis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" prot="public">
-          <name>over</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" prot="public">
-          <name>cont</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" prot="public">
-          <name>eq</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" prot="public">
-          <name>null</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" prot="public">
-          <name>dis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" prot="public">
-          <name>over</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" prot="public">
-          <name>cont</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" prot="public">
-          <name>eq</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" prot="public">
-          <name>null</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" prot="public">
-          <name>dis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" prot="public">
-          <name>over</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" prot="public">
-          <name>cont</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" prot="public">
-          <name>eq</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" prot="public">
-          <name>null</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" prot="public">
-          <name>dis</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" prot="public">
-          <name>over</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" prot="public">
-          <name>cont</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" prot="public">
-          <name>eq</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="65" column="11" bodyfile="range.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="65" column="11" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="65" bodyend="65"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="range_8hpp_1a6288a170c5a67a2c0b45c858a043722a" prot="public" static="no">
-        <type><ref refid="structrange" kindref="compound">range</ref>&lt; <ref refid="structint__it" kindref="compound">int_it</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &gt;</type>
+        <type>range&lt; <ref refid="structint__it" kindref="compound">int_it</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &gt;</type>
         <definition>using ra =  range&lt;int_it&lt;ll&gt; &gt;</definition>
         <argsstring></argsstring>
         <name>ra</name>
@@ -635,113 +665,54 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="60" column="1" bodyfile="range.hpp" bodystart="60" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="60" column="1" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; &amp;</type>
+        <definition>const range&lt;T&gt;&amp; b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <initializer>{ return a.x  &lt;  b.x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="39" column="33" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="range_8hpp_1a5eeb4818d038580518b4e590a066ec12" compoundref="range_8hpp" startline="66" endline="80">intersect</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="range_8hpp_1a2a9660e705c73071a9c68c86e5e92e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator==</definition>
-        <argsstring>(int_it&lt; T &gt; const &amp;a, int_it&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
-        </param>
+      <memberdef kind="function" id="range_8hpp_1a057a1b97c6f5b3020445722627de2337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tm</definition>
+        <argsstring>() auto operator</argsstring>
+        <name>tm</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a range object. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="38" column="21" bodyfile="range.hpp" bodystart="38" bodyend="38"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="41" column="1" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="41" bodyend="49" declfile="/home/ram/OmniTemplate/src/core/range.hpp" declline="38" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="range_8hpp_1adf37877debb40c87ce158743d128a8df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator&lt;</definition>
-        <argsstring>(int_it&lt; T &gt; const &amp;a, int_it&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator&lt;</name>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
-        </param>
+      <memberdef kind="function" id="range_8hpp_1aa5a5f8bff4514331008666799f66185d" prot="public" static="no" const="yes" explicit="no" inline="no" refqual="lvalue" virt="non-virtual">
+        <type></type>
+        <definition>tm</definition>
+        <argsstring>() auto operator&lt;(int_it&lt; T &gt; const &amp;a</argsstring>
+        <name>tm</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="39" column="16" bodyfile="range.hpp" bodystart="39" bodyend="39"/>
-      </memberdef>
-      <memberdef kind="function" id="range_8hpp_1a5b1fcbc62cc963f6ab2598b13f114dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator&lt;</definition>
-        <argsstring>(range&lt; T &gt; const &amp;a, range&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator&lt;</name>
-        <param>
-          <type><ref refid="structrange" kindref="compound">range</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structrange" kindref="compound">range</ref>&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="range.hpp" line="50" column="16" bodyfile="range.hpp" bodystart="50" bodyend="52"/>
-      </memberdef>
-      <memberdef kind="function" id="range_8hpp_1a295cbb09d532a8eeeaab519fd1db0928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator&amp;</definition>
-        <argsstring>(range&lt; T &gt; const &amp;a, range&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type><ref refid="structrange" kindref="compound">range</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structrange" kindref="compound">range</ref>&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="range.hpp" line="53" column="21" bodyfile="range.hpp" bodystart="53" bodyend="55"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="39" column="1" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="64" bodyend="64"/>
+        <references refid="structint__it_1a1e1f66e40cd8620afe9129f4f0266fa7" compoundref="range_8hpp" startline="11">int_it&lt; T &gt;::x</references>
       </memberdef>
       <memberdef kind="function" id="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -763,55 +734,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="56" column="18" bodyfile="range.hpp" bodystart="56" bodyend="59"/>
-      </memberdef>
-      <memberdef kind="function" id="range_8hpp_1acb6120c8a8224e1d4465bf980bc01d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt;</type>
-        <definition>int_it&lt;T&gt; operator+</definition>
-        <argsstring>(int_it&lt; T &gt; const &amp;a, int_it&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator+</name>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="range.hpp" line="61" column="23" bodyfile="range.hpp" bodystart="61" bodyend="63"/>
-      </memberdef>
-      <memberdef kind="function" id="range_8hpp_1a8b072587149274d1639908e4edb23d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt;</type>
-        <definition>int_it&lt;T&gt; operator-</definition>
-        <argsstring>(int_it&lt; T &gt; const &amp;a)</argsstring>
-        <name>operator-</name>
-        <param>
-          <type><ref refid="structint__it" kindref="compound">int_it</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="range.hpp" line="64" column="23" bodyfile="range.hpp" bodystart="64" bodyend="64"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="56" column="18" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="56" bodyend="59"/>
+        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="3" endline="47">biconnected</referencedby>
+        <referencedby refid="namespacegraph__theory_1a1fa8a9b42e79b9ce10e89e4659164f8d" compoundref="graph_2all_8hpp" startline="111" endline="119">graph_theory::get_size</referencedby>
+        <referencedby refid="namespacetree_1a7a4f54157c8e0795e7beff222d4912ab" compoundref="lca_8hpp" startline="5" endline="39">tree::tm</referencedby>
       </memberdef>
       <memberdef kind="function" id="range_8hpp_1a5eeb4818d038580518b4e590a066ec12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -840,33 +766,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="66" column="20" bodyfile="range.hpp" bodystart="66" bodyend="80"/>
-      </memberdef>
-      <memberdef kind="function" id="range_8hpp_1a2e6b26fca3ba13b074816e7b97f8245d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto operator^</definition>
-        <argsstring>(range&lt; T &gt; const &amp;a, range&lt; T &gt; const &amp;b)</argsstring>
-        <name>operator^</name>
-        <param>
-          <type><ref refid="structrange" kindref="compound">range</ref>&lt; T &gt; const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structrange" kindref="compound">range</ref>&lt; T &gt; const &amp;</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="range.hpp" line="81" column="21" bodyfile="range.hpp" bodystart="81" bodyend="83"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="66" column="20" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="66" bodyend="80"/>
+        <references refid="range_8hpp_1a49089473f43d9aad3d15c043cb1184af" compoundref="range_8hpp" startline="39">b</references>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" compoundref="range_8hpp" startline="65">cont</references>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" compoundref="range_8hpp" startline="65">dis</references>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" compoundref="range_8hpp" startline="65">eq</references>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" compoundref="range_8hpp" startline="65">null</references>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" compoundref="range_8hpp" startline="65">over</references>
       </memberdef>
       <memberdef kind="function" id="range_8hpp_1a3eb62dcf88ab5afad4d62c6fea4bb570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -874,7 +780,7 @@
         <argsstring>(vector&lt; ra &gt; &amp;v)</argsstring>
         <name>filter</name>
         <param>
-          <type>vector&lt; <ref refid="structrange" kindref="compound">ra</ref> &gt; &amp;</type>
+          <type>vector&lt; <ref refid="range_8hpp_1a6288a170c5a67a2c0b45c858a043722a" kindref="member">ra</ref> &gt; &amp;</type>
           <declname>v</declname>
         </param>
         <briefdescription>
@@ -883,106 +789,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="range.hpp" line="84" column="6" bodyfile="range.hpp" bodystart="84" bodyend="92"/>
+        <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="84" column="6" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="84" bodyend="92"/>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="20">al</references>
+        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">tm()<sp/>struct<sp/><ref refid="structit__base" kindref="compound">it_base</ref><sp/>{</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>value_type<sp/>=<sp/>T;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>pointer<sp/>=<sp/>T<sp/>*;</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>reference<sp/>=<sp/>T<sp/>&amp;;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">difference_type</ref><sp/>=<sp/><ref refid="structll" kindref="compound">ll</ref>;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">tm()<sp/>struct<sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>:<sp/><ref refid="structit__base" kindref="compound">it_base</ref>&lt;T&gt;<sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>iterator_category<sp/>=<sp/>random_access_iterator_tag;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>x,<sp/>m;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Integer&gt;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref>(Integer<sp/>x_,<sp/>T<sp/>m_<sp/>=<sp/>1)<sp/>:<sp/>x(x_),<sp/>m(m_)<sp/>{}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;operator*()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/>x_stat;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x_stat<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>operator+(<ref refid="structll" kindref="compound">ll</ref><sp/>y)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>+<sp/>m<sp/>*<sp/>y;<sp/>}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>operator-(<ref refid="structll" kindref="compound">ll</ref><sp/>y)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>-<sp/>m<sp/>*<sp/>y;<sp/>}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>operator-(<ref refid="structint__it" kindref="compound">int_it&lt;T&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;y)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>-<sp/>y.x)<sp/>/<sp/>m;<sp/>}</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>operator++()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>+=<sp/>m;<sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>operator--()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>-=<sp/>m;<sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>operator--(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--x;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structint__it" kindref="compound">int_it</ref><sp/>operator++(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++x;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bin(op,<sp/>Tp)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>operator<sp/>op(Tp<sp/>const<sp/>&amp;a,<sp/>Tp<sp/>const<sp/>&amp;b)<sp/>{<sp/>return<sp/>a.x<sp/>op<sp/>b.x;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">tm()<sp/>bin(==,<sp/><ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">tm()<sp/>bin(&lt;,<sp/><ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">tm()<sp/>struct<sp/><ref refid="structrange" kindref="compound">range</ref><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>bg,<sp/>ed;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structrange" kindref="compound">range</ref>(T<sp/>ed_)<sp/>:<sp/><ref refid="structrange" kindref="compound">range</ref>(0LL,<sp/>ed_)<sp/>{}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrange" kindref="compound">range</ref>(T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;bg_,<sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;ed_)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>bg(bg_),<sp/>ed(max(bg,<sp/>static_cast&lt;T&gt;(ed_)))<sp/>{}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>begin()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bg;<sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>end()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ed;<sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ed<sp/>-<sp/>bg;<sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">tm()<sp/>auto<sp/>operator&lt;(<ref refid="structrange" kindref="compound">range</ref>&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structrange" kindref="compound">range</ref>&lt;T&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.bg<sp/>==<sp/>b.bg<sp/>?<sp/>a.ed<sp/>&gt;<sp/>b.ed<sp/>:<sp/>a.bg<sp/>&lt;<sp/>b.bg;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">tm()<sp/>auto<sp/>operator&amp;(<ref refid="structrange" kindref="compound">range</ref>&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structrange" kindref="compound">range</ref>&lt;T&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structrange" kindref="compound">range&lt;T&gt;</ref>{max(a.bg,<sp/>b.bg),<sp/>min(a.ed,<sp/>b.ed)};</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Range&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rev(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Range<sp/>&amp;r)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>rev_it<sp/>=<sp/>reverse_iterator&lt;decltype(begin(r))&gt;;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structrange" kindref="compound">range</ref>{rev_it{end(r)},<sp/>rev_it{begin(r)}};</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structrange" kindref="compound">ra</ref><sp/>=<sp/><ref refid="structrange" kindref="compound">range&lt;int_it&lt;ll&gt;</ref>&gt;;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">tm()<sp/><ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;<sp/>operator+(<ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.x<sp/>+<sp/>b.x;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">tm()<sp/><ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;<sp/>operator-(<ref refid="structint__it" kindref="compound">int_it</ref>&lt;T&gt;<sp/>const<sp/>&amp;a)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-a.x;<sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>isect<sp/>{<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">,<sp/>dis,<sp/>over,<sp/>cont,<sp/>eq<sp/>};</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>intersect(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isect::eq;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a[1]<sp/>&lt;=<sp/>b[0])<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isect::dis;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a[0]<sp/>&lt;=<sp/>b[0]<sp/>&amp;&amp;<sp/>b[1]<sp/>&lt;=<sp/>a[1])<sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isect::cont;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a[0]<sp/>&lt;=<sp/>b[0]<sp/>&amp;&amp;<sp/>a[1]<sp/>&lt;=<sp/>b[1])<sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isect::over;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isect::null;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">tm()<sp/>auto<sp/>operator^(<ref refid="structrange" kindref="compound">range</ref>&lt;T&gt;<sp/>const<sp/>&amp;a,<sp/><ref refid="structrange" kindref="compound">range</ref>&lt;T&gt;<sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>max(intersect(a,<sp/>b),<sp/>intersect(b,<sp/>a));</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>filter(vector&lt;ra&gt;<sp/>&amp;v)<sp/>{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(al(v));</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ra&gt;<sp/>sg;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/>v)<sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sg.empty()<sp/>||<sp/>sg.back().ed<sp/>&lt;<sp/>p.ed)<sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sg.push_back(p);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="range.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/core/range.hpp"/>
   </compounddef>
 </doxygen>

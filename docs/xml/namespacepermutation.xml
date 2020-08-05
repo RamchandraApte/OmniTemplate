@@ -3,6 +3,7 @@
   <compounddef id="namespacepermutation" kind="namespace" language="C++">
     <compoundname>permutation</compoundname>
     <innerclass refid="classpermutation_1_1Permutation" prot="public">permutation::Permutation</innerclass>
+    <innernamespace refid="namespacepermutation_1_1test">permutation::test</innernamespace>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref></type>
@@ -22,7 +23,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="permutation.hpp" line="51" column="13" bodyfile="permutation.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" line="51" column="13" bodyfile="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" bodystart="51" bodyend="51"/>
+        <references refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" compoundref="combinatorics_8hpp" startline="5" endline="9">combinatorics::perm</references>
+        <references refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" compoundref="utility_8hpp" startline="92" endline="92">utility::ssize</references>
       </memberdef>
       <memberdef kind="function" id="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref></type>
@@ -41,13 +44,17 @@
 <para>Returns the composition of permutations a and b, so that ret[i] = a[b[i]]. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para><formula id="21">$ab$</formula> </para>
+<para><simplesect kind="return"><para><formula id="7">$ab$</formula> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="permutation.hpp" line="55" column="13" bodyfile="permutation.hpp" bodystart="55" bodyend="60"/>
+        <location file="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" line="55" column="13" bodyfile="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" bodystart="55" bodyend="60"/>
+        <references refid="namespacetree_1a1db5e81cd89b854831db8147ff509caa">tree::assert</references>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="operations_8hpp_1a66b97d6dee15f33d7b6731ccf48092cf" compoundref="operations_8hpp" startline="84">c</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
       </memberdef>
       <memberdef kind="function" id="namespacepermutation_1a68e876731be5159eaefd46b1fb8fe031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref></type>
@@ -80,7 +87,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="permutation.hpp" line="68" column="13" bodyfile="permutation.hpp" bodystart="68" bodyend="72"/>
+        <location file="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" line="68" column="13" bodyfile="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" bodystart="68" bodyend="72"/>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
       </memberdef>
       <memberdef kind="function" id="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref></type>
@@ -116,82 +125,19 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para><formula id="22">$\left(perm\right)^n$</formula> </para>
+<simplesect kind="return"><para><formula id="8">$\left(perm\right)^n$</formula> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="permutation.hpp" line="80" column="13" bodyfile="permutation.hpp" bodystart="80" bodyend="82"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacepermutation_1acf8168de557ed1092dec6dafdca3721a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void permutation::test_ops</definition>
-        <argsstring>()</argsstring>
-        <name>test_ops</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="permutation.hpp" line="83" column="6" bodyfile="permutation.hpp" bodystart="83" bodyend="90"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacepermutation_1a0373557adc489168fb0138098ca354dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void permutation::test_cycles_impl</definition>
-        <argsstring>(const Permutation &amp;perm)</argsstring>
-        <name>test_cycles_impl</name>
-        <param>
-          <type>const <ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref> &amp;</type>
-          <declname>perm</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="permutation.hpp" line="91" column="6" bodyfile="permutation.hpp" bodystart="91" bodyend="91"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacepermutation_1a0d218a444863e87f4f8ffdb3eb48b289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void permutation::test_cycles</definition>
-        <argsstring>()</argsstring>
-        <name>test_cycles</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="permutation.hpp" line="92" column="6" bodyfile="permutation.hpp" bodystart="92" bodyend="96"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacepermutation_1a90736a636d503ca5341c3acc87cdb45f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void permutation::test_power</definition>
-        <argsstring>()</argsstring>
-        <name>test_power</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="permutation.hpp" line="97" column="6" bodyfile="permutation.hpp" bodystart="97" bodyend="101"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacepermutation_1a62d1bd6c9055805cce7003ed56bd2e89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void permutation::test_permutation</definition>
-        <argsstring>()</argsstring>
-        <name>test_permutation</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="permutation.hpp" line="102" column="6" bodyfile="permutation.hpp" bodystart="102" bodyend="106"/>
+        <location file="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" line="80" column="13" bodyfile="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" bodystart="80" bodyend="82"/>
+        <references refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" compoundref="combinatorics_8hpp" startline="5" endline="9">combinatorics::perm</references>
+        <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="118" endline="139">dlog</referencedby>
+        <referencedby refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</referencedby>
+        <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="142" endline="165">primitive_root</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" compoundref="test__number__theory_8hpp" startline="41" endline="56">test_dlog</referencedby>
+        <referencedby refid="namespacepermutation_1_1test_1a79866de5f43125b4ac233cdc1bae579e" compoundref="test__permutation_8hpp" startline="18" endline="22">permutation::test::test_power</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -199,6 +145,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="permutation.hpp" line="8" column="21"/>
+    <location file="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp" line="8" column="21"/>
   </compounddef>
 </doxygen>

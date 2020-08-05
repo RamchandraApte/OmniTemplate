@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['q_330',['q',['../structgraph__theory_1_1gsearch.html#af7d0b4506881de11619e011857e709d6',1,'graph_theory::gsearch']]],
-  ['qsum_331',['qsum',['../structSegmentTree_1_1NodeCore.html#a19cd78bab2c0647a88e3810a8fc29ed8',1,'SegmentTree::NodeCore']]],
-  ['query_332',['query',['../classBIT.html#a495d58c744095867ad69123897c60700',1,'BIT::query()'],['../classSegmentTree.html#abc6c56bef599124548c2ed1c90d6e87e',1,'SegmentTree::query(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)'],['../classSegmentTree.html#a9f9282f29c2d91d1ef3989ea7384892b',1,'SegmentTree::query(const ll l, const ll r, const Node custom_root)'],['../classSegmentTree.html#a15af5893144423311e3c41a53de3d59e',1,'SegmentTree::query(const ll l, const ll r)'],['../classHLD.html#a21892094d3c19ccc6fa6fe71b0ec2dcf',1,'HLD::query()'],['../classSegmentTree.html#abc6c56bef599124548c2ed1c90d6e87e',1,'SegmentTree::query(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)'],['../classSegmentTree.html#a9f9282f29c2d91d1ef3989ea7384892b',1,'SegmentTree::query(const ll l, const ll r, const Node custom_root)'],['../classSegmentTree.html#a15af5893144423311e3c41a53de3d59e',1,'SegmentTree::query(const ll l, const ll r)'],['../classSegmentTree.html#a54816e3b51b87889fc2038329fed254b',1,'SegmentTree::query(const Bounds... bounds)'],['../classSparseTable.html#a52186d743b9f6a0495a279d72c014ca3',1,'SparseTable::query()'],['../classDisjointSparseTable.html#ad35bb60605d83b2468cf5a4f2d2cd8aa',1,'DisjointSparseTable::query()']]],
-  ['query_5fimpl_333',['query_impl',['../classSegmentTree.html#a691d643b2872c8d23c062cc050341983',1,'SegmentTree']]],
-  ['query_5fpers_334',['query_pers',['../classSegmentTree.html#a801baf5cdb91eda5d2c01c39e3953a31',1,'SegmentTree']]],
-  ['queue_2ehpp_335',['queue.hpp',['../queue_8hpp.html',1,'']]],
-  ['queue_5ftools_336',['queue_tools',['../namespacequeue__tools.html',1,'']]],
-  ['queueadaptor_337',['QueueAdaptor',['../classqueue__tools_1_1QueueAdaptor.html',1,'queue_tools']]],
-  ['queueadaptor_3c_20minstack_3c_20t_20_3e_20_3e_338',['QueueAdaptor&lt; MinStack&lt; T &gt; &gt;',['../classqueue__tools_1_1QueueAdaptor.html',1,'queue_tools']]]
+  ['q_307',['q',['../structgraph__theory_1_1GeneralSearch.html#abf6c4546d2a398e115d525a6b2992d13',1,'graph_theory::GeneralSearch']]],
+  ['qsum_308',['qsum',['../structsegment__tree_1_1SegmentTree_1_1NodeCore.html#a4852cef24d043d15388e91826ca726e6',1,'segment_tree::SegmentTree::NodeCore']]],
+  ['query_309',['query',['../classBIT.html#a495d58c744095867ad69123897c60700',1,'BIT::query()'],['../classsegment__tree_1_1SegmentTree.html#aee0899b7aed45c73f0142ce425937fde',1,'segment_tree::SegmentTree::query(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)'],['../classsegment__tree_1_1SegmentTree.html#ad39bd604bb4dc65a3204865f578f6fd9',1,'segment_tree::SegmentTree::query(const ll l, const ll r, const Node custom_root)'],['../classsegment__tree_1_1SegmentTree.html#ad2c2369ddf9d9fb8ca78e367ff129839',1,'segment_tree::SegmentTree::query(const ll l, const ll r)'],['../classsparse__table_1_1SparseTable.html#a0ad8b0233da443f1f842b27183f05265',1,'sparse_table::SparseTable::query()'],['../classsparse__table_1_1DisjointSparseTable.html#a771c763802ff4f1679749951ae94393e',1,'sparse_table::DisjointSparseTable::query()'],['../classhld_1_1HLD.html#a89ad91fa5429a48db553da8d44849415',1,'hld::HLD::query()']]],
+  ['queue_2ehpp_310',['queue.hpp',['../queue_8hpp.html',1,'']]],
+  ['queue_5ftools_311',['queue_tools',['../namespacequeue__tools.html',1,'']]],
+  ['queueadaptor_312',['QueueAdaptor',['../classqueue__tools_1_1QueueAdaptor.html',1,'queue_tools::QueueAdaptor&lt; Stack &gt;'],['../classqueue__tools_1_1QueueAdaptor.html',1,'queue_tools::QueueAdaptor&lt; Stack &gt;']]],
+  ['queueadaptor_3c_20minstack_3c_20t_20_3e_20_3e_313',['QueueAdaptor&lt; MinStack&lt; T &gt; &gt;',['../classqueue__tools_1_1QueueAdaptor.html',1,'queue_tools']]],
+  ['test_314',['test',['../namespacequeue__tools_1_1test.html',1,'queue_tools']]]
 ];

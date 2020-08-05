@@ -2,54 +2,27 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="fft_8hpp" kind="file" language="C++">
     <compoundname>fft.hpp</compoundname>
-    <includes refid="core_8hpp" local="yes">core.hpp</includes>
-    <includedby refid="program__listing__file__template_8hpp_8rst_8txt" local="yes">docs/_build/html/_sources/api/program_listing_file_template.hpp.rst.txt</includedby>
-    <includedby refid="template_8hpp" local="yes">template.hpp</includedby>
+    <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="6">
-        <label>io.hpp</label>
-        <link refid="io_8hpp_source"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="1">
-        <label>fft.hpp</label>
-        <link refid="fft_8hpp"/>
-        <childnode refid="2" relation="include">
+      <node id="8">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>experimental/iterator</label>
       </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp_source"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>debug.hpp</label>
-        <link refid="debug_8hpp_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>range.hpp</label>
-        <link refid="range_8hpp_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
-        <label>core.hpp</label>
-        <link refid="core_8hpp_source"/>
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -67,23 +40,55 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp_source"/>
+      <node id="10">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/ram/OmniTemplate/src/algebra/fft.hpp</label>
+        <link refid="fft_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
+        <link refid="test_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
+        <link refid="template_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>fft.hpp</label>
+        <label>/home/ram/OmniTemplate/src/algebra/fft.hpp</label>
         <link refid="fft_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>template.hpp</label>
-        <link refid="template_8hpp_source"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -93,7 +98,7 @@
             <type>typename Cont</type>
           </param>
         </templateparamlist>
-        <type>vector&lt; com &gt;</type>
+        <type>vector&lt; <ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref> &gt;</type>
         <definition>vector&lt;com&gt; fft</definition>
         <argsstring>(Cont v)</argsstring>
         <name>fft</name>
@@ -105,11 +110,16 @@
 <para>FFT using Cooley–Tukey FFT algorithm. </para>
         </briefdescription>
         <detaileddescription>
-<para>Time complexity: <formula id="3">$ O(n log n)$</formula> </para>
+<para>Time complexity: <formula id="0">$ O(n log n)$</formula> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="fft.hpp" line="43" column="20" bodyfile="fft.hpp" bodystart="43" bodyend="60"/>
+        <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="43" column="20" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="43" bodyend="60"/>
+        <references refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" compoundref="utility_8hpp" startline="57" endline="63">utility::bit_ceil</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" compoundref="core_2all_8hpp" startline="85">tau</references>
+        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="74">conv</referencedby>
+        <referencedby refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" compoundref="fft_8hpp" startline="62" endline="69">ifft</referencedby>
       </memberdef>
       <memberdef kind="function" id="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -117,7 +127,7 @@
             <type>typename Cont</type>
           </param>
         </templateparamlist>
-        <type>vector&lt; com &gt;</type>
+        <type>vector&lt; <ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref> &gt;</type>
         <definition>vector&lt;com&gt; ifft</definition>
         <argsstring>(Cont v)</argsstring>
         <name>ifft</name>
@@ -132,7 +142,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="fft.hpp" line="62" column="20" bodyfile="fft.hpp" bodystart="62" bodyend="69"/>
+        <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="62" column="20" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="62" bodyend="69"/>
+        <references refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</references>
+        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="74">conv</referencedby>
       </memberdef>
       <memberdef kind="function" id="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -159,85 +171,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="fft.hpp" line="72" column="18" bodyfile="fft.hpp" bodystart="72" bodyend="74"/>
+        <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="72" column="18" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="72" bodyend="74"/>
+        <references refid="operations_8hpp_1adae6a67fc0375c4abb754d64b9eed42f" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</references>
+        <references refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" compoundref="fft_8hpp" startline="62" endline="69">ifft</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>FFTN2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>fft(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;v,<sp/>df(d,<sp/>1LL),<sp/>df(s,<sp/>0LL))<sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v.size()<sp/>==<sp/>d)<sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>nx2(v.size());</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>v.resize(n);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>fft(v,<sp/>2*d,<sp/>s);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>fft(v,<sp/>2*d,<sp/>s+d);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>=<sp/>exp(com{-</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">{tau}<sp/>*<sp/>1.0i<sp/>/<sp/>(n<sp/>/<sp/>d)});</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>com{1};</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>s;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>vc&lt;com&gt;<sp/>out(n<sp/>/<sp/>d);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(j,n/(2*d)){</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>od<sp/>=<sp/>p*v[i+d];</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j]<sp/>=<sp/>v[i]+od;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j+n/(2*d)]<sp/>=<sp/>v[i]-od;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p*=e;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i+=2*d;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>s;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>x:out){</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v[i]<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i+=d;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ifft(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>v){</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>reverse(begin(v)+1,<sp/>end(v));</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>fft(v);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>x:<sp/>v){</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>/=<sp/>com(v.size());</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Cont&gt;<sp/>vector&lt;com&gt;<sp/>fft(Cont<sp/>v)<sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>bit_ceil(v.size());</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>v.resize(n);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;com&gt;&gt;<sp/>vs(2,<sp/>vector&lt;com&gt;(n<sp/>/<sp/>2));</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i,<sp/>n)<sp/>{<sp/>vs[i<sp/>%<sp/>2][i<sp/>/<sp/>2]<sp/>=<sp/>v[i];<sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>vs)<sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>fft(x);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;com&gt;<sp/>f(n);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>fo(i2,<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>i2<sp/>%<sp/>(n<sp/>/<sp/>2);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f[i2]<sp/>=<sp/>vs[0][i]<sp/>+<sp/>exp(-com{0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">{tau}<sp/>*<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">{i2<sp/>/<sp/>n}})<sp/>*<sp/>vs[1][i];</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>f;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="62"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Cont&gt;<sp/>vector&lt;com&gt;<sp/>ifft(Cont<sp/>v)<sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>reverse(begin(v)<sp/>+<sp/>1,<sp/>end(v));</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>fft(v);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>r)<sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>/=<sp/>com{v.size()};</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Cont&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>conv(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ifft(fft(a)<sp/>*<sp/>fft(b));</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="fft.hpp"/>
+    <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp"/>
   </compounddef>
 </doxygen>
