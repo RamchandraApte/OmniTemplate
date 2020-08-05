@@ -8,16 +8,6 @@ template <typename T> struct [[nodiscard]] with {
 	template <typename Tp> with(const Tp new_, T &v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
-void test_with() {
-	ll var = 12;
-	auto inner_func = [&] {
-		with _w(23, var);
-		assert(var == 23);
-		var = 45;
-	};
-	inner_func();
-	assert(var == 12);
-}
 /*! Helper for lambda recursive functions. The recursive function is
 * passed to Func as the first argument.*/
 template <typename Func> struct fix {
@@ -46,16 +36,8 @@ template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 	v.resize(unique(al(v), up) - begin(v));
 	return v;
 }
-void test_uniq() {
-	assert((uniq(vl{2, -1, 3, -1, 2, 3}) == vl{-1, 2, 3}));
-	assert((uniq<equal_to<>, greater<>>(vl{1, -3, 5}) == vl{5, 1, -3}));
-}
 template <typename T = less<>, typename Func> auto key_compare(const Func &f, T g = T{}) {
 	return [=](auto &&... args) -> decltype(auto) { return g(f(forward<decltype(args)>(args))...); };
-}
-void test_key_compare() {
-	vl a{24, 25};
-	assert(key_compare<greater<>>([&](ll i) { return a[i]; })(1, 0));
 }
 template <typename T> auto prev_less(const T &v) {
 	ll n = v.size();
@@ -79,16 +61,6 @@ ll bit_ceil(ll x) {
 	}
 	return 1LL << (sizeof(ll) * CHAR_BIT - __builtin_clzll(x - 1));
 }
-void test_bit_ceil() {
-	assert(bit_ceil(0) == 1);
-	assert(bit_ceil(1) == 1);
-	assert(bit_ceil(2) == 2);
-	assert(bit_ceil(3) == 4);
-	assert(bit_ceil(4) == 4);
-	assert(bit_ceil(5) == 8);
-	assert(bit_ceil((1LL << 45) - 100) == 1LL << 45);
-	assert(bit_ceil((1LL << 45)) == 1LL << 45);
-}
 ll power_ceil(const ll x, const ll base) {
 	ll pw = 1;
 	for (; pw < x; pw *= base)
@@ -111,20 +83,6 @@ ll log_ceil(const ll x, const ll base) {
 	assert(__builtin_popcountll(ret) == __builtin_popcountll(x));
 	return ret;
 }
-void test_next_comb() {
-	ll x = 0b111;
-	x = next_comb(x);
-	assert(x == 0b1011);
-	x = next_comb(x);
-	assert(x == 0b1101);
-	x = next_comb(x);
-	assert(x == 0b1110);
-	x = 0b1;
-	x = next_comb(x);
-	assert(x == 0b10);
-	x = next_comb(x);
-	assert(x == 0b100);
-}
 template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
 	/*! Stable sorts a and b by func.*/
 	if (func(a) > func(b)) {
@@ -137,11 +95,6 @@ template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 tm() struct ar { using type = T; };
 tm() using ar_t = typename ar<T>::type;
 template <typename T, ll n> struct ar<T[n]> { using type = array<ar_t<T>, n>; };
-void test_ar() {
-	static_assert(is_same_v<ar_t<ll[2][3]>, array<array<ll, 3>, 2>>);
-	static_assert(is_same_v<ar_t<array<ll, 200>[2][3]>,
-				array<array<array<ll, 200>, 3>, 2>>);
-}
 struct random_device_patch {
 	/*! Random device patch to fix libstdc++'s broken implementation on
 	 * Windows*/
@@ -154,13 +107,5 @@ struct Empty {};
 using random_device = random_device_patch;
 #endif
 default_random_engine reng{random_device{}()};
-void test_utility() {
-	test_with();
-	test_uniq();
-	test_next_comb();
-	test_ar();
-	test_bit_ceil();
-	test_key_compare();
-}
 } // namespace utility
 using namespace utility;

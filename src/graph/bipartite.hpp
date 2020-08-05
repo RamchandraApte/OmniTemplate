@@ -1,6 +1,7 @@
 #pragma once
 #include "core/all.hpp"
-auto bipartite(const vector<vl> &graph) {
+namespace graph_theory::bipartite {
+auto color2(const vector<vl> &graph) {
 	/*! Returns a bipartite coloring if possible */
 	BFS b{graph};
 	b();
@@ -19,27 +20,10 @@ auto bipartite(const vector<vl> &graph) {
 	}
 	return bi ? optional{s} : nullopt;
 }
-void test_bipartite() {
-	vector<vl> g(6);
-	// (2,1,4) is one side, and (5,3,0) is another side
-	// connected component 1
-	add_edge(g, 2, 5);
-	add_edge(g, 4, 5);
-	add_edge(g, 4, 3);
-	// connected component 2
-	add_edge(g, 1, 0);
-	add_edge(g, 4, 0);
-	const auto col = bipartite(g).value();
-	fo(i, 0, g.size()) {
-		for (auto j : g[i]) {
-			assert(col[i] ^ col[j]);
-		}
-	}
-}
 /*! Returns a maximum matching of bipartite graph using the
  * Hopcroft-Karp algorithm.*/
 auto max_match(const vector<vl> &graph) {
-	auto side = bipartite(graph).value();
+	auto side = color2(graph).value();
 	ll n = graph.size();
 	vl match(n, -1);
 	while (true) {
@@ -102,66 +86,5 @@ auto max_match(const vector<vl> &graph) {
 ll matching_size(const vl &matching) {
 	return count_if(al(matching), [&](const auto x) { return x != -1; });
 }
-void test_max_match() {
-	{
-		vector<vl> g(3);
-		// 0, 2 on one side, 1 on the other side
-		add_edge(g, 0, 1);
-		add_edge(g, 2, 1);
-		assert((matching_size(max_match(g)) == 2 * 1));
-	}
-	{
-		vector<vl> g(4);
-		// 0, 2 on one side, 1, 3 on the other side
-		add_edge(g, 0, 1);
-		add_edge(g, 2, 1);
-		add_edge(g, 2, 3);
-		assert((matching_size(max_match(g)) == 2 * 2));
-	}
-	{
-		vector<vl> g(6);
-		// 0, 2, 4 on one side, 1, 3, 5 on the other side
-		add_edge(g, 0, 1);
-		add_edge(g, 0, 3);
-		add_edge(g, 2, 3);
-		add_edge(g, 2, 5);
-		add_edge(g, 4, 1);
-		add_edge(g, 4, 5);
-		const auto matching = max_match(g);
-		assert((matching_size(max_match(g)) == 2 * 3));
-	}
-	{
-		vector<vl> g(6);
-		// 0, 2, 4 on one side, 1, 3, 5 on the other side
-		add_edge(g, 0, 1);
-		add_edge(g, 0, 3);
-		add_edge(g, 2, 1);
-		add_edge(g, 2, 5);
-		add_edge(g, 4, 1);
-		add_edge(g, 4, 5);
-		assert((matching_size(max_match(g)) == 2 * 3));
-	}
-	{
-		vector<vl> g(6);
-		// 0, 2, 4 on one side, 1, 3, 5 on the other side
-		add_edge(g, 0, 1);
-		add_edge(g, 2, 1);
-		add_edge(g, 2, 5);
-		add_edge(g, 4, 1);
-		add_edge(g, 4, 5);
-		assert((matching_size(max_match(g)) == 2 * 2));
-	}
-	{
-		vector<vl> g(10);
-		// 0, 2, 4 on one side, 1, 3, 5 on the other side
-		fo(i, 0, g.size() / 2) {
-			if (2 * i - 1 >= 0) {
-				add_edge(g, 2 * i, 2 * i - 1);
-			}
-			if (2 * i + 1 < g.size()) {
-				add_edge(g, 2 * i, 2 * i + 1);
-			}
-		}
-		assert((matching_size(max_match(g)) == 2 * g.size() / 2));
-	}
-}
+} // namespace graph_theory::bipartite
+using namespace graph_theory::bipartite;

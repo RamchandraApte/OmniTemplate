@@ -3,6 +3,7 @@
 /*! Coroutine library
  * CO_SWITCH for using switch-based coroutines
  * CO_JMP for using setjmp-based coroutines */
+inline namespace coroutine {
 #define CO_SWITCH
 #ifdef CO_SWITCH
 #define cobegin                                                                \
@@ -39,14 +40,4 @@ ll coro(ll a) {
 	coreturn(505);
 	coend
 }
-void test_coroutine() {
-	const ll a = 4;
-	vl v;
-	try {
-		while (true) {
-			v.push_back(coro(a));
-		}
-	} catch (out_of_range &) {
-	}
-	assert((v == vl{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));
-}
+} // namespace coroutine
