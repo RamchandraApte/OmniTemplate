@@ -14,44 +14,69 @@ matrix<ll> edmond_karp(const matrix<ll> &capacity) {
 	 */
 	const ll n = capacity.rows_n;
 	matrix<FlowEdge> network(n, n);
-	fo(i, n){fo(j, n){network[i][j].capacity = capacity[i][j];
+	fo(i, n) {
+		fo(j, n) { network[i][j].capacity = capacity[i][j]; }
+	}
+	while (true) {
+		// Construct residual graph
+		vector<vector<ll>> graph(n);
+		fo(i, n) {
+			fo(j, n) {
+				if (network[i][j].residual() > 0) {
+					graph[i].push_back(j);
+				}
+			}
+		}
+		// Find augmenting path
+		BFS bfs{graph};
+		bfs(0);
+
+		ll mincap = inf;
+		auto root_edges = [&](const auto &func) {
+			for (ll x = n - 1; bfs.parent[x] != -1; x = bfs.parent[x]) {
+				func(bfs.parent[x], x);
+			}
+		};
+		root_edges([&](const ll u, const ll v) { min_eq(mincap, network[u][v].residual()); });
+		if (!(0 < mincap && mincap < inf)) {
+			break;
+		}
+		root_edges([&](const ll u, const ll v) {
+			network[u][v].flow += mincap;
+			network[v][u].flow -= mincap;
+		});
+	}
+
+	matrix<ll> flow(n, n);
+	fo(i, n) {
+		fo(j, n) { flow[i][j] = network[i][j].flow; }
+	}
+	return flow;
 }
-}; // namespace flow
-while (true) {
-	// Construct residual graph
-	vector<vector<ll>> graph(n);
+matrix<ll> dinic(const matrix<ll> &capacity) {
+	const ll n = capacity.rows_n;
+	vector<vector<pair<ll, FlowEdge>>> graph(n);
 	fo(i, n) {
 		fo(j, n) {
-			if (network[i][j].residual() > 0) {
-				graph[i].push_back(j);
+			if (capacity[i][j]) {
+				graph[i].push_back({j, FlowEdge{capacity[i][j]}});
 			}
 		}
 	}
-	// Find augmenting path
-	BFS bfs{graph};
-	bfs(0);
-
-	ll mincap = inf;
-	auto root_edges = [&](const auto &func) {
-		for (ll x = n - 1; bfs.parent[x] != -1; x = bfs.parent[x]) {
-			func(bfs.parent[x], x);
+	while (true) {
+		// Construct residual graph
+		vector<vector<ll>> res_graph(n);
+		fo(i, n) {
+			for (auto [j, edge] : graph[i]) {
+				res_graph[i].push_back(j);
+			}
 		}
-	};
-	root_edges([&](const ll u, const ll v) { min_eq(mincap, network[u][v].residual()); });
-	if (!(0 < mincap && mincap < inf)) {
-		break;
 	}
-	root_edges([&](const ll u, const ll v) {
-		network[u][v].flow += mincap;
-		network[v][u].flow -= mincap;
-	});
-}
 
-matrix<ll> flow(n, n);
-fo(i, n) {
-	fo(j, n) { flow[i][j] = network[i][j].flow; }
-}
-return flow;
+	BFS bfs{res_graph};
+	bfs();
+
+	auto dfs = [&] bfs.distance[u] < bfs.distance[v]
 }
 ll total_flow(const matrix<ll> &flow) { return accumulate(flow[0], flow[0] + flow.cols_n, 0LL); }
 } // namespace flow
