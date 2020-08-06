@@ -15,4 +15,7 @@ template <typename Func> void test_flow_algo(const Func &algo) {
 		assert(total_flow(algo(flow)) == 5);
 	}
 }
-void test_flow() { test_flow_algo(edmond_karp); }
+void test_flow() {
+	test_flow_algo(edmond_karp);
+	test_flow_algo(dinic);
+}
