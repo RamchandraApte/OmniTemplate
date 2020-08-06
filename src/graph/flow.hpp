@@ -81,7 +81,6 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 		BFS bfs{res_graph};
 		bfs(0);
 
-		dbg(bfs.distance[n - 1]);
 
 		if (bfs.distance[n - 1] == inf) {
 			break;
@@ -98,7 +97,6 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 			}
 		}
 
-		dbg(level_graph);
 
 		vector<ll> next_idx(n);
 
@@ -120,12 +118,15 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 
 		while (dfs(dfs, 0)) {
 			ll mn = inf;
+			vl v;
 			for (ll x = 0; x != n - 1; x = edges[level_graph[x][next_idx[x]]].first) {
+				v.push_back(x);
+			}
+			for (auto x : v) {
 				const auto &flow_edge = edges[level_graph[x][next_idx[x]]].second;
 				mn = min(mn, flow_edge.residual());
 			}
-			dbg(mn);
-			for (ll x = 0; x != n - 1; x = edges[level_graph[x][next_idx[x]]].first) {
+			for (auto x : v) {
 				const auto edge_id = level_graph[x][next_idx[x]];
 				auto &flow_edge = edges[edge_id].second;
 				auto &flow_edge_rev = edges[edge_id ^ 1].second;
@@ -144,7 +145,6 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 			}
 		}
 	}
-	dbg(flow);
 	return flow;
 }
 ll total_flow(const matrix<ll> &flow) { return accumulate(flow[0], flow[0] + flow.cols_n, 0LL); }
