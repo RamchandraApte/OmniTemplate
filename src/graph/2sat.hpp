@@ -17,7 +17,7 @@ optional<vector<char>> sat2(const vector<array<ll, 2>> &cnf, const ll n) {
 	DFS topo{graph};
 	topo();
 	vl idx(size(graph));
-	fo(i, size(topo.q)) { idx[topo.q[i]] = i; }
+	fo(i, size(topo.queue)) { idx[topo.queue[i]] = i; }
 	vector<char> vals(n + 1, -1);
 	auto comp = scc(graph);
 	fo(i, 1, n + 1) {

@@ -16,10 +16,10 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
 		d.distance[root] = 0;
 		d(root);
 		// FIXME
-		for (const auto v : rev(d.q)) {
+		for (const auto v : rev(d.queue)) {
 			min_eq(low[v], d.distance[v]);
 		}
-		for (const auto v : rev(d.q)) {
+		for (const auto v : rev(d.queue)) {
 			croot += (d.parent[v] == root);
 			for (const auto u : graph[v]) {
 				if (u == d.parent[v]) {
@@ -41,7 +41,7 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
 		if (croot >= 2) {
 			articulations[root] = true;
 		}
-		d.q.clear();
+		d.queue.clear();
 	}
 	return {articulations, bridges};
 }
@@ -55,7 +55,7 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 		}
 		d(root);
 		vector<vector<ll>> ears;
-		for (const auto u : d.q) {
+		for (const auto u : d.queue) {
 			for (const auto v : graph[u]) {
 				if (d.parent[u] == v || d.parent[v] == u || !(d.distance[u] < d.distance[v])) {
 					continue;
@@ -76,7 +76,7 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 			}
 		}
 		ears_list.push_back(ears);
-		d.q.clear();
+		d.queue.clear();
 	}
 	return ears_list;
 }

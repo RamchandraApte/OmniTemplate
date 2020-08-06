@@ -20,14 +20,14 @@ class HLD {
 		d(0);
 		const auto sz = get_size(d);
 		// Construct the heavy array
-		for (auto idx : rev(d.q)) {
+		for (auto idx : rev(d.queue)) {
 			if (d.parent[idx] != -1 && 2 * sz[d.parent[idx]] >= sz[d.parent[idx]]) {
 				heavy[d.parent[idx]] = idx;
 			}
 		}
 		// Walk down each heavy path and set head and pos
 		ll glob_pos = 0;
-		for (const auto idx : d.q) {
+		for (const auto idx : d.queue) {
 			if (head[idx] != -1) {
 				continue;
 			}

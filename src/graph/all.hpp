@@ -87,7 +87,7 @@ auto mst(vector<edge> edges, const ll n) {
 template <typename Searcher, typename Graph> struct GeneralSearch {
 	Graph const &graph;
 	vc<char> visited; //!< Whether vertex idx is visited
-	deque<ll> q;	  //!< Queue
+	deque<ll> queue;  //!< Queue
 	vl parent;	  //!< Parent of vertex idx
 	vl distance;	  //!< Distance from source to vertex idx
 	GeneralSearch(const Graph &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
@@ -96,7 +96,7 @@ template <typename Searcher, typename Graph> struct GeneralSearch {
 		 * entire graph, and not just one connected component. */
 		fo(i, graph.size()) {
 			if (!visited[i]) {
-				(*static_cast<Searcher *>(&this))(i);
+				(static_cast<Searcher &>(this))(i);
 			}
 		}
 	}
@@ -110,7 +110,7 @@ template <typename Searcher, typename Graph> struct GeneralSearch {
 /*! Given a searcher object, returns an array containing the size of each subtree */
 template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	vector<ll> sz(search.parent.size(), 1);
-	for (auto idx : rev(search.q)) {
+	for (auto idx : rev(search.queue)) {
 		if (search.parent[idx] != -1) {
 			sz[search.parent[idx]] += sz[idx];
 		}
@@ -122,15 +122,15 @@ template <typename Graph = GraphAdj> struct DFS : public GeneralSearch<DFS<Graph
 	using GeneralSearch_t = GeneralSearch<DFS, Graph>;
 	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
-		this.template visited[source] = true;
-		for (const auto &j : this.template graph[source]) {
-			if (this.template visited[j]) {
+		this.visited[source] = true;
+		for (const auto &j : this.graph[source]) {
+			if (this.visited[j]) {
 				continue;
 			}
-			this.template add(j, source);
+			this.add(j, source);
 			this(j);
 		}
-		this.template q.push_front(source);
+		this.queue.push_front(source);
 	}
 };
 template <typename Graph> DFS(Graph) -> DFS<Graph>;
@@ -139,19 +139,19 @@ template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Grap
 	using GeneralSearch_t = GeneralSearch<BFS, Graph>;
 	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
-		ll old_size = this.template q.size();
-		this.template q.push_back(source);
-		this.template visited[source] = true;
-		this.template distance[source] = 0;
-		for (ll idx = old_size; idx < this.template q.size(); ++idx) {
-			auto i = this.template q[idx];
-			for (const auto &j : this.template graph[i]) {
-				if (this.template visited[j]) {
+		ll old_size = this.queue.size();
+		this.queue.push_back(source);
+		this.visited[source] = true;
+		this.distance[source] = 0;
+		for (ll idx = old_size; idx < this.queue.size(); ++idx) {
+			auto i = this.queue[idx];
+			for (const auto &j : this.graph[i]) {
+				if (this.visited[j]) {
 					continue;
 				}
-				this.template q.push_back(j);
-				this.template visited[j] = true;
-				this.template add(j, i);
+				this.queue.push_back(j);
+				this.visited[j] = true;
+				this.add(j, i);
 			}
 		}
 	}
@@ -189,7 +189,7 @@ auto scc(const vector<vl> &graph) {
 	}};
 	DFS s{graph};
 	s();
-	for (ll i : s.q) {
+	for (ll i : s.queue) {
 		assign(i, i);
 	}
 	return cm;

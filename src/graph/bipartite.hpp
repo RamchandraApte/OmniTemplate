@@ -7,7 +7,7 @@ auto color2(const vector<vl> &graph) {
 	b();
 	auto n = size(graph);
 	vl s(n);
-	for (auto i : b.q) {
+	for (auto i : b.queue) {
 		if (const auto par = b.parent[i]; par != -1) {
 			s[i] = !s[par];
 		}

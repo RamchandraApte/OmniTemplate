@@ -4,10 +4,10 @@ pair<array<ll, 2>, ll> tree_diameter(const vector<vector<ll>> &g) {
 	/*! Returns diameter and center of a tree :param: g*/
 	BFS b{g};
 	b();
-	const auto u = b.q.back();
+	const auto u = b.queue.back();
 	BFS b2{g};
 	b2(u);
-	const auto v = b2.q.back();
+	const auto v = b2.queue.back();
 	auto c = v;
 	fo(i, b2.distance[v] / 2) { c = b2.parent[c]; }
 	return {{u, v}, c};
