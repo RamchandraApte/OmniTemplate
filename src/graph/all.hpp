@@ -84,13 +84,13 @@ auto mst(vector<edge> edges, const ll n) {
 	return ret;
 }
 /*! Generalized graph searcher/visitor*/
-template <typename Searcher> struct GeneralSearch {
-	vector<vl> const &graph;
+template <typename Searcher, typename Graph> struct GeneralSearch {
+	Graph const &graph;
 	vc<char> visited; //!< Whether vertex idx is visited
 	deque<ll> q;	  //!< Queue
 	vl parent;	  //!< Parent of vertex idx
 	vl distance;	  //!< Distance from source to vertex idx
-	GeneralSearch(const vector<vector<ll>> &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
+	GeneralSearch(const Graph &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
 		 * entire graph, and not just one connected component. */
@@ -118,7 +118,7 @@ template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	return sz;
 }
 /*! Depth-first search */
-struct DFS : public GeneralSearch<DFS> {
+struct DFS : public GeneralSearch<DFS, GraphAdj> {
 	using GeneralSearch::operator(), GeneralSearch::GeneralSearch;
 	void operator()(const ll source) {
 		visited[source] = true;
@@ -133,26 +133,28 @@ struct DFS : public GeneralSearch<DFS> {
 	}
 };
 /*! Breadth-first search*/
-struct BFS : public GeneralSearch<BFS> {
-	using GeneralSearch::operator(), GeneralSearch::GeneralSearch;
-	void operator()(ll source) {
-		ll old_size = q.size();
-		q.push_back(source);
-		visited[source] = true;
-		distance[source] = 0;
-		for (ll idx = old_size; idx < q.size(); ++idx) {
-			auto i = q[idx];
-			for (const auto &j : graph[i]) {
-				if (visited[j]) {
+template <typename Graph = GraphAdj> struct BFS_T : GeneralSearch<BFS_T<Graph>, Graph> {
+	using GeneralSearch_t = GeneralSearch<BFS_T, Graph>;
+	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
+	void operator()(const ll source) {
+		ll old_size = this.template q.size();
+		this.template q.push_back(source);
+		this.template visited[source] = true;
+		this.template distance[source] = 0;
+		for (ll idx = old_size; idx < this.template q.size(); ++idx) {
+			auto i = this.template q[idx];
+			for (const auto &j : this.template graph[i]) {
+				if (this.template visited[j]) {
 					continue;
 				}
-				q.push_back(j);
-				visited[j] = true;
-				add(j, i);
+				this.template q.push_back(j);
+				this.template visited[j] = true;
+				this.template add(j, i);
 			}
 		}
 	}
 };
+using BFS = BFS_T<GraphAdj>;
 /** Returns the transpose graph of directed graph */
 auto trans(const vector<vl> &graph) {
 	ll n = size(graph);
@@ -166,6 +168,7 @@ auto trans(const vector<vl> &graph) {
 }
 #include "biconnected.hpp"
 #include "flow.hpp"
+#include "graph_view.hpp"
 #include "test_flow.hpp"
 #include "tree/tree.hpp"
 auto scc(const vector<vl> &graph) {

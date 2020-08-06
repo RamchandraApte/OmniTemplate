@@ -74,6 +74,7 @@ void test_graph_theory() {
 	test_tree_diameter();
 	test_biconnected();
 	test_flow();
+	test_graph_view();
 }
 } // namespace graph_theory::test
 using namespace graph_theory::test;

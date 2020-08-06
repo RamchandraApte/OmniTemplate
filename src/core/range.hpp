@@ -35,33 +35,28 @@ template<typename T> struct int_it : it_base<T> {
 };
 #define bin(op, Tp)                                                            \
 	auto operator op(Tp const &a, Tp const &b) { return a.x op b.x; }
-tm() bin(==, int_it<T>);
-tm() bin(<, int_it<T>);
+template <typename T> bin(==, int_it<T>);
+template <typename T> bin(<, int_it<T>);
 /*! Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a range object. */
-tm() struct range {
+template <typename T> struct range {
 	T bg, ed;
 	explicit range(T ed_) : range(0LL, ed_) {}
 	range(T const &bg_, T const &ed_)
-	    : bg(bg_), ed(max(bg, static_cast<T>(ed_))) {}
+	    //: bg(bg_), ed(max(bg, static_cast<T>(ed_))) {}
+	    : bg(bg_), ed(ed_) {}
 	auto begin() const { return bg; }
 	auto end() const { return ed; }
 	explicit operator ll() { return ed - bg; }
 };
-tm() auto operator<(range<T> const &a, range<T> const &b) {
-	return a.bg == b.bg ? a.ed > b.ed : a.bg < b.bg;
-}
-tm() auto operator&(range<T> const &a, range<T> const &b) {
-	return range<T>{max(a.bg, b.bg), min(a.ed, b.ed)};
-}
+template <typename T> auto operator<(range<T> const &a, range<T> const &b) { return a.bg == b.bg ? a.ed > b.ed : a.bg < b.bg; }
+template <typename T> auto operator&(range<T> const &a, range<T> const &b) { return range<T>{max(a.bg, b.bg), min(a.ed, b.ed)}; }
 template <typename Range> auto rev(const Range &r) {
 	using rev_it = reverse_iterator<decltype(begin(r))>;
 	return range{rev_it{end(r)}, rev_it{begin(r)}};
 }
 using ra = range<int_it<ll>>;
-tm() int_it<T> operator+(int_it<T> const &a, int_it<T> const &b) {
-	return a.x + b.x;
-}
-tm() int_it<T> operator-(int_it<T> const &a) { return -a.x; }
+template <typename T> int_it<T> operator+(int_it<T> const &a, int_it<T> const &b) { return a.x + b.x; }
+template <typename T> int_it<T> operator-(int_it<T> const &a) { return -a.x; }
 enum isect { null, dis, over, cont, eq };
 template <typename T1, typename T2> auto intersect(const T1 &a, const T2 &b) {
 	if (a == b) {
@@ -78,9 +73,7 @@ template <typename T1, typename T2> auto intersect(const T1 &a, const T2 &b) {
 	}
 	return isect::null;
 }
-tm() auto operator^(range<T> const &a, range<T> const &b) {
-	return max(intersect(a, b), intersect(b, a));
-}
+template <typename T> auto operator^(range<T> const &a, range<T> const &b) { return max(intersect(a, b), intersect(b, a)); }
 auto filter(vector<ra> &v) {
 	sort(al(v));
 	vector<ra> sg;

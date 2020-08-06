@@ -44,16 +44,7 @@ template <typename Func1, typename Func2> void test_compare_flow(const Func1 &al
 	fo(i, n_it) {
 		const auto flow = random_flow();
 		// FIXME generated flow diff?
-		ll flow1, flow2;
-		{
-			timer t1;
-			flow1 = dbg(total_flow(algo1(flow)));
-		}
-		{
-			timer t2;
-			flow2 = dbg(total_flow(algo2(flow)));
-		}
-		assert(flow1 == flow2);
+		assert(total_flow(algo1(flow)) == total_flow(algo2(flow)));
 	}
 }
 void test_flow() {
