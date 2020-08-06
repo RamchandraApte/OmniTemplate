@@ -1,7 +1,7 @@
 #pragma once
 #include "bipartite.hpp"
 namespace graph_theory::bipartite::test {
-void test_bipartite() {
+void test_color2() {
 	vector<vl> g(6);
 	// (2,1,4) is one side, and (5,3,0) is another side
 	// connected component 1
@@ -80,6 +80,10 @@ void test_max_match() {
 		}
 		assert((matching_size(max_match(g)) == 2 * g.size() / 2));
 	}
+}
+void test_bipartite() {
+	test_color2();
+	test_max_match();
 }
 } // namespace graph_theory::bipartite::test
 using namespace graph_theory::bipartite::test;

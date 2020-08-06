@@ -118,23 +118,25 @@ template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	return sz;
 }
 /*! Depth-first search */
-struct DFS : public GeneralSearch<DFS, GraphAdj> {
-	using GeneralSearch::operator(), GeneralSearch::GeneralSearch;
+template <typename Graph = GraphAdj> struct DFS : public GeneralSearch<DFS<Graph>, Graph> {
+	using GeneralSearch_t = GeneralSearch<DFS, Graph>;
+	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
-		visited[source] = true;
-		for (const auto &j : graph[source]) {
-			if (visited[j]) {
+		this.template visited[source] = true;
+		for (const auto &j : this.template graph[source]) {
+			if (this.template visited[j]) {
 				continue;
 			}
-			add(j, source);
+			this.template add(j, source);
 			this(j);
 		}
-		q.push_front(source);
+		this.template q.push_front(source);
 	}
 };
+template <typename Graph> DFS(Graph) -> DFS<Graph>;
 /*! Breadth-first search*/
-template <typename Graph = GraphAdj> struct BFS_T : GeneralSearch<BFS_T<Graph>, Graph> {
-	using GeneralSearch_t = GeneralSearch<BFS_T, Graph>;
+template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Graph> {
+	using GeneralSearch_t = GeneralSearch<BFS, Graph>;
 	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
 		ll old_size = this.template q.size();
@@ -154,7 +156,7 @@ template <typename Graph = GraphAdj> struct BFS_T : GeneralSearch<BFS_T<Graph>, 
 		}
 	}
 };
-using BFS = BFS_T<GraphAdj>;
+template <typename Graph> BFS(Graph) -> BFS<Graph>;
 /** Returns the transpose graph of directed graph */
 auto trans(const vector<vl> &graph) {
 	ll n = size(graph);

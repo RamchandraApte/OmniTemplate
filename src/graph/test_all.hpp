@@ -1,5 +1,6 @@
 #pragma once
 #include "all.hpp"
+#include "test_bipartite.hpp"
 namespace graph_theory::test {
 void test_BFS() {
 	vector<vl> g(4);
@@ -74,6 +75,8 @@ void test_graph_theory() {
 	test_tree_diameter();
 	test_biconnected();
 	test_flow();
+	test_bipartite();
+	test_sat2();
 	test_graph_view();
 }
 } // namespace graph_theory::test
