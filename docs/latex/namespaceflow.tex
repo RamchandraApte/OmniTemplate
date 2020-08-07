@@ -1,5 +1,10 @@
 \hypertarget{namespaceflow}{}\doxysection{flow Namespace Reference}
 \label{namespaceflow}\index{flow@{flow}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceflow_1_1test}{test}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -10,18 +15,20 @@ struct \mbox{\hyperlink{structflow_1_1FlowEdge}{Flow\+Edge}}
 \item 
 \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespaceflow_a724fa814b55772a3c6ba9254b8403e70}{edmond\+\_\+karp}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \&capacity)
 \item 
+\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespaceflow_ab1878f3966f553be99c58d55aa46709e}{dinic}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \&capacity)
+\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceflow_a6fb3adf4fcf060a6ce41b19c6c5ac5b1}{total\+\_\+flow}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \&flow)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceflow_a724fa814b55772a3c6ba9254b8403e70}\label{namespaceflow_a724fa814b55772a3c6ba9254b8403e70}} 
-\index{flow@{flow}!edmond\_karp@{edmond\_karp}}
-\index{edmond\_karp@{edmond\_karp}!flow@{flow}}
-\doxysubsubsection{\texorpdfstring{edmond\_karp()}{edmond\_karp()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$\mbox{\hyperlink{structll}{ll}}$>$ flow\+::edmond\+\_\+karp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \&}]{capacity }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespaceflow_ab1878f3966f553be99c58d55aa46709e}\label{namespaceflow_ab1878f3966f553be99c58d55aa46709e}} 
+\index{flow@{flow}!dinic@{dinic}}
+\index{dinic@{dinic}!flow@{flow}}
+\doxysubsubsection{\texorpdfstring{dinic()}{dinic()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$\mbox{\hyperlink{structll}{ll}}$>$ flow\+::dinic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \&}]{capacity }\end{DoxyParamCaption})}
 
-Edmond-\/\+Karp maximum flow algorithm. 
+Dinics maximum-\/flow algorithm. Complexity\+: $O(V^2E)$ 
 \begin{DoxyParams}{Parameters}
 {\em capacity} & is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-\/1. \\
 \hline
@@ -33,7 +40,35 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=312pt]{namespaceflow_a724fa814b55772a3c6ba9254b8403e70_cgraph}
+\includegraphics[width=288pt]{namespaceflow_ab1878f3966f553be99c58d55aa46709e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceflow_ab1878f3966f553be99c58d55aa46709e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceflow_a724fa814b55772a3c6ba9254b8403e70}\label{namespaceflow_a724fa814b55772a3c6ba9254b8403e70}} 
+\index{flow@{flow}!edmond\_karp@{edmond\_karp}}
+\index{edmond\_karp@{edmond\_karp}!flow@{flow}}
+\doxysubsubsection{\texorpdfstring{edmond\_karp()}{edmond\_karp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$\mbox{\hyperlink{structll}{ll}}$>$ flow\+::edmond\+\_\+karp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ \&}]{capacity }\end{DoxyParamCaption})}
+
+Edmond-\/\+Karp maximum flow algorithm. Complexity\+: $O(VE^2)$ 
+\begin{DoxyParams}{Parameters}
+{\em capacity} & is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-\/1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The flow for each edge in a maximum flow.
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{namespaceflow_a724fa814b55772a3c6ba9254b8403e70_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak

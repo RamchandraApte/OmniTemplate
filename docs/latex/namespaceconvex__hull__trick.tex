@@ -1,0 +1,151 @@
+\hypertarget{namespaceconvex__hull__trick}{}\doxysection{convex\+\_\+hull\+\_\+trick Namespace Reference}
+\label{namespaceconvex__hull__trick}\index{convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceconvex__hull__trick_1_1test}{test}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structconvex__hull__trick_1_1CHT}{C\+HT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_a884b15c6042069f32e237941b4047536}{dot}} (\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\item 
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_a4f9b285a0e38652eb9839ac60b39e34a}{wedge}} (\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\item 
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf}{area}} (const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&\mbox{\hyperlink{operations_8hpp_ac748aa2982293b2480271d6f92be38e8}{c}})
+\item 
+bool \mbox{\hyperlink{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5}{ccw}} (const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&\mbox{\hyperlink{operations_8hpp_ac748aa2982293b2480271d6f92be38e8}{c}})
+\begin{DoxyCompactList}\small\item\em Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_a564910060ca4728c5efc347bb67c8aaa}{hull}} (vector$<$ \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ v, \mbox{\hyperlink{core_2all_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(do\+\_\+sort, true))
+\item 
+{\footnotesize template$<$typename Range , typename Func $>$ }\\auto \mbox{\hyperlink{namespaceconvex__hull__trick_a8a2d8bb18a7c97e9b898e56bbb644978}{convex\+\_\+min}} (const Range \&r, const Func \&f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf}\label{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf}} 
+\index{convex\_hull\_trick@{convex\_hull\_trick}!area@{area}}
+\index{area@{area}!convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::area (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{a,  }\item[{const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{b,  }\item[{const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5}\label{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5}} 
+\index{convex\_hull\_trick@{convex\_hull\_trick}!ccw@{ccw}}
+\index{ccw@{ccw}!convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsubsection{\texorpdfstring{ccw()}{ccw()}}
+{\footnotesize\ttfamily bool convex\+\_\+hull\+\_\+trick\+::ccw (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{a,  }\item[{const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{b,  }\item[{const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if a, b, c are collinear and distinct.\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if counterclockwise, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceconvex__hull__trick_a8a2d8bb18a7c97e9b898e56bbb644978}\label{namespaceconvex__hull__trick_a8a2d8bb18a7c97e9b898e56bbb644978}} 
+\index{convex\_hull\_trick@{convex\_hull\_trick}!convex\_min@{convex\_min}}
+\index{convex\_min@{convex\_min}!convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsubsection{\texorpdfstring{convex\_min()}{convex\_min()}}
+{\footnotesize\ttfamily template$<$typename Range , typename Func $>$ \\
+auto convex\+\_\+hull\+\_\+trick\+::convex\+\_\+min (\begin{DoxyParamCaption}\item[{const Range \&}]{r,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
+
+Returns x in Range r that minimizes the value of a convex function f(x).Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a8a2d8bb18a7c97e9b898e56bbb644978_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceconvex__hull__trick_a884b15c6042069f32e237941b4047536}\label{namespaceconvex__hull__trick_a884b15c6042069f32e237941b4047536}} 
+\index{convex\_hull\_trick@{convex\_hull\_trick}!dot@{dot}}
+\index{dot@{dot}!convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
+
+returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a884b15c6042069f32e237941b4047536_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceconvex__hull__trick_a564910060ca4728c5efc347bb67c8aaa}\label{namespaceconvex__hull__trick_a564910060ca4728c5efc347bb67c8aaa}} 
+\index{convex\_hull\_trick@{convex\_hull\_trick}!hull@{hull}}
+\index{hull@{hull}!convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsubsection{\texorpdfstring{hull()}{hull()}}
+{\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::hull (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$}]{v,  }\item[{\mbox{\hyperlink{core_2all_8hpp_a1a5cedaa2166b87bc174d54c6a9aae47}{df}}(do\+\_\+sort, true)}]{ }\end{DoxyParamCaption})}
+
+Returns the convex hull of the points in vHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a564910060ca4728c5efc347bb67c8aaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a564910060ca4728c5efc347bb67c8aaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceconvex__hull__trick_a4f9b285a0e38652eb9839ac60b39e34a}\label{namespaceconvex__hull__trick_a4f9b285a0e38652eb9839ac60b39e34a}} 
+\index{convex\_hull\_trick@{convex\_hull\_trick}!wedge@{wedge}}
+\index{wedge@{wedge}!convex\_hull\_trick@{convex\_hull\_trick}}
+\doxysubsubsection{\texorpdfstring{wedge()}{wedge()}}
+{\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::wedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
+
+Returns the wedge product of 2D vectors a and b, $a \wedge b$. This is the signed area of the parallelogram spanned by vectors $\vec{f}$ and $\vec{b}$.Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceconvex__hull__trick_a4f9b285a0e38652eb9839ac60b39e34a_icgraph}
+\end{center}
+\end{figure}

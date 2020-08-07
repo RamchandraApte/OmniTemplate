@@ -1,0 +1,94 @@
+\hypertarget{structSubgraph}{}\doxysection{Subgraph$<$ Pred $>$ Struct Template Reference}
+\label{structSubgraph}\index{Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}}
+
+
+Filters graph by a predicate.  
+
+
+
+
+{\ttfamily \#include $<$graph\+\_\+view.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSubgraph_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSubgraph_ae7e40a1b65946ca79caa9daf18266027}{Subgraph}} (const Graph\+Adj \&graph\+\_\+arg, const Pred \&pred\+\_\+arg)
+\item 
+\mbox{\hyperlink{structrange}{range}}$<$ \mbox{\hyperlink{structSubgraph_1_1iterator}{iterator}} $>$ \mbox{\hyperlink{structSubgraph_a233f31cd01de3e194b7700f782718336}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{structll}{ll}} i) const
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structSubgraph_ad125a6de7af34742b45d04aac31ed2d6}{size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const Graph\+Adj \& \mbox{\hyperlink{structSubgraph_a8ef8bd07c52421ca8ac3f062411faaf8}{graph}}
+\item 
+const Pred \& \mbox{\hyperlink{structSubgraph_aa34c43219f5bdcbbaf84ef789d7129ff}{pred}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Pred$>$\newline
+struct Subgraph$<$ Pred $>$}
+
+Filters graph by a predicate. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Pred} & Predicate functor type \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structSubgraph_ae7e40a1b65946ca79caa9daf18266027}\label{structSubgraph_ae7e40a1b65946ca79caa9daf18266027}} 
+\index{Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}!Subgraph@{Subgraph}}
+\index{Subgraph@{Subgraph}!Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}}
+\doxysubsubsection{\texorpdfstring{Subgraph()}{Subgraph()}}
+{\footnotesize\ttfamily template$<$typename Pred $>$ \\
+\mbox{\hyperlink{structSubgraph}{Subgraph}}$<$ Pred $>$\+::\mbox{\hyperlink{structSubgraph}{Subgraph}} (\begin{DoxyParamCaption}\item[{const Graph\+Adj \&}]{graph\+\_\+arg,  }\item[{const Pred \&}]{pred\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structSubgraph_a233f31cd01de3e194b7700f782718336}\label{structSubgraph_a233f31cd01de3e194b7700f782718336}} 
+\index{Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Pred $>$ \\
+\mbox{\hyperlink{structrange}{range}}$<$\mbox{\hyperlink{structSubgraph_1_1iterator}{iterator}}$>$ \mbox{\hyperlink{structSubgraph}{Subgraph}}$<$ Pred $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structSubgraph_ad125a6de7af34742b45d04aac31ed2d6}\label{structSubgraph_ad125a6de7af34742b45d04aac31ed2d6}} 
+\index{Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}!size@{size}}
+\index{size@{size}!Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Pred $>$ \\
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structSubgraph}{Subgraph}}$<$ Pred $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structSubgraph_a8ef8bd07c52421ca8ac3f062411faaf8}\label{structSubgraph_a8ef8bd07c52421ca8ac3f062411faaf8}} 
+\index{Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}!graph@{graph}}
+\index{graph@{graph}!Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily template$<$typename Pred $>$ \\
+const Graph\+Adj\& \mbox{\hyperlink{structSubgraph}{Subgraph}}$<$ Pred $>$\+::graph}
+
+\mbox{\Hypertarget{structSubgraph_aa34c43219f5bdcbbaf84ef789d7129ff}\label{structSubgraph_aa34c43219f5bdcbbaf84ef789d7129ff}} 
+\index{Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}!pred@{pred}}
+\index{pred@{pred}!Subgraph$<$ Pred $>$@{Subgraph$<$ Pred $>$}}
+\doxysubsubsection{\texorpdfstring{pred}{pred}}
+{\footnotesize\ttfamily template$<$typename Pred $>$ \\
+const Pred\& \mbox{\hyperlink{structSubgraph}{Subgraph}}$<$ Pred $>$\+::pred}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/src/graph/\mbox{\hyperlink{graph__view_8hpp}{graph\+\_\+view.\+hpp}}\end{DoxyCompactItemize}

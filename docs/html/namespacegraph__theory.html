@@ -74,10 +74,12 @@
           <h2><a href="#nested-classes">Classes</a></h2>
           <dl class="m-doc">
             <dt>
+              <div class="m-doc-template">template&lt;typename Graph = <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&gt;</div>
               struct <a href="structgraph__theory_1_1BFS.html" class="m-doc">BFS</a>
             </dt>
             <dd></dd>
             <dt>
+              <div class="m-doc-template">template&lt;typename Graph = <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&gt;</div>
               struct <a href="structgraph__theory_1_1DFS.html" class="m-doc">DFS</a>
             </dt>
             <dd></dd>
@@ -86,7 +88,7 @@
             </dt>
             <dd><span></span></dd>
             <dt>
-              <div class="m-doc-template">template&lt;typename Searcher&gt;</div>
+              <div class="m-doc-template">template&lt;typename Searcher, typename Graph&gt;</div>
               struct <a href="structgraph__theory_1_1GeneralSearch.html" class="m-doc">GeneralSearch</a>
             </dt>
             <dd></dd>
@@ -145,6 +147,16 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a1fa8a9b42e79b9ce10e89e4659164f8d" class="m-doc">get_size</a>(</span><span class="m-doc-wrap">const Searcher&amp; search) -&gt; vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;</span>
             </dt>
             <dd></dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename Graph&gt;</div>
+              <span class="m-doc-wrap-bumper"><a href="#a7ffa7c1e75caecd92d5c385d41eb313d" class="m-doc">DFS</a>(</span><span class="m-doc-wrap">Graph) -&gt; DFS&lt; Graph &gt;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename Graph&gt;</div>
+              <span class="m-doc-wrap-bumper"><a href="#a4ebc5c354c7f3d8a187b1af524050c0a" class="m-doc">BFS</a>(</span><span class="m-doc-wrap">Graph) -&gt; BFS&lt; Graph &gt;</span>
+            </dt>
+            <dd><span></span></dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#af33d0502161df2d1b82be4b1e8dcaa13" class="m-doc">trans</a>(</span><span class="m-doc-wrap">const vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph) -&gt; auto</span>
             </dt>
@@ -258,6 +270,26 @@ $u \leftrightarrow v$
               <span class="m-doc-wrap-bumper">vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1fa8a9b42e79b9ce10e89e4659164f8d" class="m-doc-self">get_size</a>(</span><span class="m-doc-wrap">const Searcher&amp; search)</span></span>
             </h3>
 <p>Given a searcher object, returns an array containing the size of each subtree</p>
+          </div></section>
+          <section class="m-doc-details" id="a7ffa7c1e75caecd92d5c385d41eb313d"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Graph&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7ffa7c1e75caecd92d5c385d41eb313d" class="m-doc-self">DFS</a>(</span><span class="m-doc-wrap">Graph) -&gt; DFS&lt; Graph &gt;</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a4ebc5c354c7f3d8a187b1af524050c0a"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Graph&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4ebc5c354c7f3d8a187b1af524050c0a" class="m-doc-self">BFS</a>(</span><span class="m-doc-wrap">Graph) -&gt; BFS&lt; Graph &gt;</span></span>
+            </h3>
+            <p><span></span></p>
           </div></section>
           <section class="m-doc-details" id="af33d0502161df2d1b82be4b1e8dcaa13"><div>
             <h3>

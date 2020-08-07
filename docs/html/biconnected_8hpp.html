@@ -64,15 +64,15 @@
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a72476443ae31ddf840e52f4a47f79055" class="m-doc">biconnected</a>(</span><span class="m-doc-wrap">const GraphAdj&amp; graph) -&gt; pair&lt;vector&lt;char&gt;, vector&lt;array&lt;<a href="structll.html" class="m-doc">ll</a>, 2&gt;&gt;&gt;</span>
             </dt>
-            <dd><span></span></dd>
-            <dt id="a6b3f22cd584c5d8be1de2703c3b9e004">
-              <span class="m-doc-wrap-bumper">auto <a href="#a6b3f22cd584c5d8be1de2703c3b9e004" class="m-doc-self">ear_decomp</a>(</span><span class="m-doc-wrap">const GraphAdj&amp; graph) -&gt; vector&lt;vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;&gt;</span>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6b3f22cd584c5d8be1de2703c3b9e004" class="m-doc">ear_decomp</a>(</span><span class="m-doc-wrap">const GraphAdj&amp; graph) -&gt; vector&lt;vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;&gt;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Returns ear decomposition of graph.</dd>
             <dt id="a789f23d7fc22d09960694892eeb41223">
               <span class="m-doc-wrap-bumper">auto <a href="#a789f23d7fc22d09960694892eeb41223" class="m-doc-self">biconnected_ear</a>(</span><span class="m-doc-wrap">GraphAdj graph) -&gt; pair&lt;vector&lt;char&gt;, vector&lt;array&lt;<a href="structll.html" class="m-doc">ll</a>, 2&gt;&gt;&gt;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Finds biconnected components of graph using ear decompositions.</dd>
           </dl>
         </section>
         <section>
@@ -81,8 +81,32 @@
             <h3>
               <span class="m-doc-wrap-bumper">pair&lt;vector&lt;char&gt;, vector&lt;array&lt;<a href="structll.html" class="m-doc">ll</a>, 2&gt;&gt;&gt; </span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a72476443ae31ddf840e52f4a47f79055" class="m-doc-self">biconnected</a>(</span><span class="m-doc-wrap">const GraphAdj&amp; graph)</span></span>
             </h3>
-            <p><span></span></p>
-<p>Returns articulation points and bridges of</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>pair of a vector with 1s for all the articulation points and a vector of bridge edges</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Returns articulation points and bridges of</p><aside class="m-note m-success"><h4>Precondition</h4><p>graph must be connected</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a6b3f22cd584c5d8be1de2703c3b9e004"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">vector&lt;vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;&gt; </span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6b3f22cd584c5d8be1de2703c3b9e004" class="m-doc-self">ear_decomp</a>(</span><span class="m-doc-wrap">const GraphAdj&amp; graph)</span></span>
+            </h3>
+            <p>Returns ear decomposition of graph.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">graph</td>
+                  <td>the graph as an adjacency list</td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
         </section>
       </div>

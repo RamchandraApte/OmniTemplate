@@ -3,11 +3,15 @@
 #include "core/all.hpp"
 namespace flow {
 struct FlowEdge {
-	ll capacity{}, flow{};
+	//! Capacity of the edge.
+	ll capacity{};
+	//! Amount of flow through the edge. Negative if flow is in reverse direction.
+	ll flow{};
+	//! @returns residual capacity of edge
 	ll residual() const { return capacity - flow; };
 };
 matrix<ll> edmond_karp(const matrix<ll> &capacity) {
-	/*! Edmond-Karp maximum flow algorithm.
+	/*! Edmond-Karp maximum flow algorithm. Complexity: \f$O(VE^2)\f$
 	 * \param capacity is a matrix with the capacity for each edge.
 	 * The source node is 0, and the sink node is n-1.
 	 * \returns The flow for each edge in a maximum flow.
@@ -54,6 +58,11 @@ matrix<ll> edmond_karp(const matrix<ll> &capacity) {
 	return flow;
 }
 matrix<ll> dinic(const matrix<ll> &capacity) {
+	/*! Dinics maximum-flow algorithm. Complexity: \f$O(V^2E)\f$
+	 * \param capacity is a matrix with the capacity for each edge.
+	 * The source node is 0, and the sink node is n-1.
+	 * \returns The flow for each edge in a maximum flow.
+	 */
 	const ll n = capacity.rows_n;
 	vector<vector<ll>> graph(n); // stores edge ids
 	vector<pair<ll, FlowEdge>> edges;

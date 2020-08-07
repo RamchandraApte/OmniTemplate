@@ -13,14 +13,16 @@ template <typename Key, template <typename> typename Data_Temp>
 using treap_t = treap<Key, Data_Temp<Key>>;
 template <typename Key> struct size_data { ll size{}; };
 template <typename Key>
+/*! Returns the data for a node given the data for the children.*/
 size_data<Key> operator+(size_data<Key> const &l, size_data<Key> const &r) {
-	/*! Returns the data for a node given the data for the children.*/
 	return size_data<Key>{l.size + r.size + 1};
 }
+/*! Print size data*/
 template <typename Stream, typename Key>
 ostream &operator<<(Stream &os, size_data<Key> const &data) {
 	return os << "size = " << data.size << endl;
 }
+/*! Get data associated with the treap node*/
 template <typename Key, typename Data> Data get_data(treap<Key, Data> *trp) {
 	return trp ? trp->data : Data{};
 }
@@ -30,9 +32,9 @@ template <typename Trp> void update_data(Trp *trp) {
 	}
 	trp->data = get_data(trp->l) + get_data(trp->r);
 }
+/*! Splits the treap by key*/
 template <typename Key, typename Data, typename Trp = treap<Key, Data>>
 void split(treap<Key, Data> *trp, const Key &key, Trp *&l, Trp *&r) {
-	/*! Splits the treap by key*/
 	if (!trp) {
 		l = r = nullptr;
 	} else if (key < trp->key) {
@@ -71,6 +73,10 @@ template <typename Trp>[[nodiscard]] Trp *join(Trp *l, Trp *r) {
 	update_data(ret);
 	return ret;
 }
+/*! @brief inserts Node x into treap
+ * \param x the new node to be inserted
+ * \param trp the treap the node is inserted into
+ */
 template <typename Trp> void insert(Trp *&trp, Trp *x) {
 	/*! Insert node x into treap trp */
 	if (!trp) {
@@ -82,11 +88,13 @@ template <typename Trp> void insert(Trp *&trp, Trp *x) {
 	}
 	update_data(trp);
 }
+/*! @brief insert a node with key \param key into \param trp*/
 template <typename Key, typename Data, typename Trp = treap<Key, Data>>
 auto insert(treap<Key, Data> *&trp, const Key &key) {
 	/*! Insert key into treap trp*/
 	return insert(trp, new Trp{key});
 }
+/*! @brief erase the node with key \param key from the treap \param trp*/
 template <typename Key, typename Data, typename Trp = treap<Key, Data>>
 void erase(treap<Key, Data> *&trp, const Key &key) {
 	/*! Erase key from treap */
@@ -130,18 +138,21 @@ void split_imp(Trp *trp, ll pos, Trp *&l, Trp *&r, ll sum = 0) {
 	}
 	update_data(trp);
 }
+/*! Insert a node x at position \param pos*/
 template <typename Trp> void insert_imp(Trp *&trp, Trp *x, ll pos) {
 	Trp *l, *r;
 	split_imp(trp, pos, l, r);
 	l = join(l, x);
 	trp = join(l, r);
 }
+/*! Erase the node at position \param pos*/
 template <typename Trp> void erase_imp(Trp *&trp, ll pos) {
 	Trp *l, *r, *x, *nr;
 	split_imp(trp, pos, l, r);
 	split_imp(r, 1, x, nr);
 	trp = join(l, nr);
 }
+/*! Get the node at positions \param pos*/
 template <typename Trp> auto get_imp(Trp *&trp, ll pos) {
 	Trp *l, *r, *x, *nr;
 	split_imp(trp, pos, l, r);
@@ -149,13 +160,14 @@ template <typename Trp> auto get_imp(Trp *&trp, ll pos) {
 	trp = join(join(l, x), nr);
 	return x->key;
 }
+/*! Insert the node with \param key at position \param pos into \param trp*/
 template <typename Key, typename Data, typename Trp = treap<Key, Data>>
 auto insert_imp(treap<Key, Data> *&trp, Key const &key, ll pos) {
 	return insert_imp(trp, new Trp{key}, pos);
 }
+/*! Debug print the treap*/
 template <typename Stream, typename... Ts>
 auto &operator<<(Stream &os, treap<Ts...> *trp) {
-	/*! Debug print the treap*/
 	static ll lvl = -1;
 	with _w{lvl + 1, lvl};
 	string tab(lvl, ' ');
@@ -170,6 +182,7 @@ auto &operator<<(Stream &os, treap<Ts...> *trp) {
 	}
 	return os;
 }
+/*! Insert the elements of trp in-order into \param out*/
 template <typename Key, typename Data>
 void to_array(treap<Key, Data> *trp, vector<Key> &out) {
 	if (!trp) {

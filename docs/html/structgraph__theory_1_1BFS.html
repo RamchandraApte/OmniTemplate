@@ -44,8 +44,9 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
+          <div class="m-doc-template">template&lt;typename Graph = <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&gt;</div>
           <span class="m-breadcrumb"><a href="namespacegraph__theory.html">graph_theory</a>::<wbr/></span>BFS <span class="m-thin">struct</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
         </h1>
         <div class="m-block m-default">
           <h3>Contents</h3>
@@ -54,6 +55,7 @@
               Reference
               <ul>
                 <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#pub-types">Public types</a></li>
                 <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
               </ul>
@@ -65,17 +67,26 @@
           <h2><a href="#base-classes">Base classes</a></h2>
           <dl class="m-doc">
             <dt>
-              <div class="m-doc-template">template&lt;typename Searcher&gt;</div>
-              struct <a href="structgraph__theory_1_1GeneralSearch.html" class="m-doc">GeneralSearch&lt;BFS&gt;</a>
+              <div class="m-doc-template">template&lt;typename Searcher, typename Graph&gt;</div>
+              struct <a href="structgraph__theory_1_1GeneralSearch.html" class="m-doc">GeneralSearch&lt;BFS&lt;GraphAdj&gt;, GraphAdj&gt;</a>
             </dt>
             <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="ad85eddd9caeb226e88c6712cf3b86dbd">
+              using <a href="#ad85eddd9caeb226e88c6712cf3b86dbd" class="m-doc-self">GeneralSearch_t</a> = <a href="structgraph__theory_1_1GeneralSearch.html" class="m-doc">GeneralSearch</a>&lt;<a href="structgraph__theory_1_1BFS.html" class="m-doc">BFS</a>, Graph&gt;
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt id="a917e492db448f6d712d0dd2fc2070bf6">
-              <span class="m-doc-wrap-bumper"><a href="#a917e492db448f6d712d0dd2fc2070bf6" class="m-doc-self">GeneralSearch</a>(</span><span class="m-doc-wrap">const vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;&amp; g_)</span>
+            <dt id="a5d1bf0cacd1f3e805ac724fc3ffc91ca">
+              <span class="m-doc-wrap-bumper"><a href="#a5d1bf0cacd1f3e805ac724fc3ffc91ca" class="m-doc-self">GeneralSearch</a>(</span><span class="m-doc-wrap">const Graph&amp; g_)</span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -83,8 +94,8 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="add3c39a674dab5a77666b89fe714e605">
-              <span class="m-doc-wrap-bumper">void <a href="#add3c39a674dab5a77666b89fe714e605" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> source)</span>
+            <dt id="ad5324017ef8da193e0e6387715d5a597">
+              <span class="m-doc-wrap-bumper">void <a href="#ad5324017ef8da193e0e6387715d5a597" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> source)</span>
             </dt>
             <dd><span></span></dd>
           </dl>

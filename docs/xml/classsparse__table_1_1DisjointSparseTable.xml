@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsparse__table_1_1DisjointSparseTable" kind="class" language="C++" prot="public">
+    <compoundname>sparse_table::DisjointSparseTable</compoundname>
+    <includes refid="sparse__table_8hpp" local="no">sparse_table.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename Monoid</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; T &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;T&gt; &gt; sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::sum</definition>
+        <argsstring></argsstring>
+        <name>sum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="75" column="8" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" compoundref="sparse__table_8hpp" startline="37" endline="59">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::DisjointSparseTable</referencedby>
+        <referencedby refid="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" compoundref="sparse__table_8hpp" startline="61" endline="72">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::query</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::DisjointSparseTable</definition>
+        <argsstring>(vector&lt; T &gt; arr)</argsstring>
+        <name>DisjointSparseTable</name>
+        <param>
+          <type>vector&lt; T &gt;</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="37" column="10" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="37" bodyend="59"/>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" compoundref="core_2all_8hpp" startline="17">fr</references>
+        <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="38" endline="40">linear_algebra::identity</references>
+        <references refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" compoundref="sparse__table_8hpp" startline="75">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::sum</references>
+      </memberdef>
+      <memberdef kind="function" id="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::query</definition>
+        <argsstring>(ll l, ll r) const</argsstring>
+        <name>query</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns Monoid sum over range [l, r) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="61" column="3" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="61" bodyend="72"/>
+        <references refid="namespacetree_1a1db5e81cd89b854831db8147ff509caa">tree::assert</references>
+        <references refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" compoundref="sparse__table_8hpp" startline="75">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;::sum</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Disjoint sparse table. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Space complexity: <formula id="21">$O(n \log n)$</formula>.</para>
+<para>Time complexity: <formula id="21">$O(n \log n)$</formula> to construct, <formula id="20">$O(1)$</formula> per query. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; vector&lt; T &gt; &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; vector&lt; T &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sparse_table::DisjointSparseTable&lt; T, Monoid &gt;</label>
+        <link refid="classsparse__table_1_1DisjointSparseTable"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>sum</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="35" column="40" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="35" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" prot="public" virt="non-virtual"><scope>sparse_table::DisjointSparseTable</scope><name>DisjointSparseTable</name></member>
+      <member refid="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" prot="public" virt="non-virtual"><scope>sparse_table::DisjointSparseTable</scope><name>query</name></member>
+      <member refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" prot="private" virt="non-virtual"><scope>sparse_table::DisjointSparseTable</scope><name>sum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

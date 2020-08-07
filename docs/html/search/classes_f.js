@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['search_5fit_567',['search_it',['../structstring__tools_1_1search__it.html',1,'string_tools']]],
-  ['segmenttree_568',['SegmentTree',['../classsegment__tree_1_1SegmentTree.html',1,'segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;'],['../classsegment__tree_1_1SegmentTree.html',1,'segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;']]],
-  ['size_5fdata_569',['size_data',['../structsize__data.html',1,'']]],
-  ['sparsetable_570',['SparseTable',['../classsparse__table_1_1SparseTable.html',1,'sparse_table']]],
-  ['splaynode_571',['SplayNode',['../structsplay__tree_1_1SplayNode.html',1,'splay_tree']]],
-  ['splaytree_572',['SplayTree',['../structsplay__tree_1_1SplayTree.html',1,'splay_tree']]]
+  ['search_5fit_603',['search_it',['../structstring__tools_1_1search__it.html',1,'string_tools']]],
+  ['segmenttree_604',['SegmentTree',['../classsegment__tree_1_1SegmentTree.html',1,'segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;'],['../classsegment__tree_1_1SegmentTree.html',1,'segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;']]],
+  ['size_5fdata_605',['size_data',['../structsize__data.html',1,'']]],
+  ['sparsetable_606',['SparseTable',['../classsparse__table_1_1SparseTable.html',1,'sparse_table']]],
+  ['splaynode_607',['SplayNode',['../structsplay__tree_1_1SplayNode.html',1,'splay_tree']]],
+  ['splaytree_608',['SplayTree',['../structsplay__tree_1_1SplayTree.html',1,'splay_tree']]],
+  ['subgraph_609',['Subgraph',['../structSubgraph.html',1,'']]]
 ];

@@ -1,8 +1,8 @@
 #pragma once
 #include "core/all.hpp"
 namespace graph_theory::bipartite {
+/*! Returns a bipartite coloring if possible */
 auto color2(const vector<vl> &graph) {
-	/*! Returns a bipartite coloring if possible */
 	BFS b{graph};
 	b();
 	auto n = size(graph);

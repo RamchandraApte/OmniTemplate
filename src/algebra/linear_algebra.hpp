@@ -2,6 +2,7 @@
 #include "core/all.hpp"
 #include "number_theory/modulo.hpp"
 #include "polynomial.hpp"
+/*! @file */
 // TODO Tensors? Also, matrix_row class.
 // TODO fix default constructor causing segfault
 inline namespace linear_algebra {
@@ -59,13 +60,11 @@ template <typename... Ts> auto operator-(const matrix<Ts...> &a) {
 	}
 	return c;
 }
-tm(...) bool operator==(matrix<T...> const &a, matrix<T...> const &b) {
-	return a.rows_n == b.rows_n && a.cols_n == b.cols_n && a.a == b.a;
-}
-tm(...) auto operator*(matrix<T...> const &a, matrix<T...> const &b) {
+template <typename... Ts> bool operator==(matrix<Ts...> const &a, matrix<Ts...> const &b) { return a.rows_n == b.rows_n && a.cols_n == b.cols_n && a.a == b.a; }
+template <typename... Ts> auto operator*(matrix<Ts...> const &a, matrix<Ts...> const &b) {
 	/*! Returns the matrix product of a and b*/
 	assert(a.cols_n == b.rows_n);
-	matrix<T...> c{a.rows_n, b.cols_n};
+	matrix<Ts...> c{a.rows_n, b.cols_n};
 	fo(i, c.rows_n) {
 		fo(j, a.cols_n) {
 			fo(k, c.cols_n) { c[i][k] += a[i][j] * b[j][k]; }
@@ -73,11 +72,12 @@ tm(...) auto operator*(matrix<T...> const &a, matrix<T...> const &b) {
 	}
 	return c;
 }
-template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
-	/*!
-	Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
-	via Gaussian elimination.
-	*/
+/*! Test func*/
+ll foo(ll a, ll b) { return a + b; }
+/*! @brief Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
+via Gaussian elimination.
+*/
+template <typename T> pair<matrix<T>, T> gauss(matrix<T> b, matrix<T> a) {
 	assert(a.is_square());
 	assert(a.rows_n == b.rows_n);
 	T det{1};
@@ -102,7 +102,7 @@ template <typename T> pair<matrix<T> &&, T> gauss(matrix<T> b, matrix<T> a) {
 	return {move(b), det};
 }
 template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) { return identity(multiplies<>{}, a) / a; }
-tm(...) auto operator/(const matrix<T...> &b, const matrix<T...> &a) {
+template <typename... Ts> auto operator/(const matrix<Ts...> &b, const matrix<Ts...> &a) {
 	/*! Returns \f$a^{-1}b\f$*/
 	return gauss(b, a).first;
 }
@@ -110,8 +110,7 @@ template <typename T> T det(const matrix<T> &a) {
 	/*! Returns the determinant of matrix a*/
 	return gauss(matrix<T>(a.rows_n, 1), a).second;
 }
-template <typename Stream, typename... T>
-auto &operator<<(Stream &os, matrix<T...> const &m) {
+template <typename Stream, typename... Ts> auto &operator<<(Stream &os, matrix<Ts...> const &m) {
 	/*! Print the matrix rows, line by line*/
 	os << simple_tp(m) << endl;
 	fo(i, m.rows_n) {

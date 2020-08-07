@@ -1,7 +1,8 @@
 #pragma once
 #include "core/all.hpp"
+/*! @brief Find tree diameter.
+ * @returns Returns diameter and center of a tree :param: g*/
 pair<array<ll, 2>, ll> tree_diameter(const vector<vector<ll>> &g) {
-	/*! Returns diameter and center of a tree :param: g*/
 	BFS b{g};
 	b();
 	const auto u = b.queue.back();

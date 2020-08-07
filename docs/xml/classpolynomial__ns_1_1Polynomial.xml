@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classpolynomial__ns_1_1Polynomial" kind="class" language="C++" prot="public">
+    <compoundname>polynomial_ns::Polynomial</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; T &gt;</basecompoundref>
+    <includes refid="polynomial_8hpp" local="no">polynomial.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolynomial__ns_1_1Polynomial_1a043ecfd55fc74aa4d507d45c10d236fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void polynomial_ns::Polynomial&lt; T &gt;::shrink</definition>
+        <argsstring>()</argsstring>
+        <name>shrink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/algebra/polynomial.hpp" line="11" column="6" bodyfile="/home/ram/OmniTemplate/src/algebra/polynomial.hpp" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolynomial__ns_1_1Polynomial_1a07d232f6e14fade387c39fe8ea8e6b96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll polynomial_ns::Polynomial&lt; T &gt;::degree</definition>
+        <argsstring>() const</argsstring>
+        <name>degree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns the degree of polynomial. Returns <formula id="7">$-\infty$</formula> for the <formula id="8">$0$</formula> polynomial.</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/algebra/polynomial.hpp" line="16" column="4" bodyfile="/home/ram/OmniTemplate/src/algebra/polynomial.hpp" bodystart="16" bodyend="24"/>
+        <references refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" compoundref="core_2all_8hpp" startline="17">fr</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+      <node id="1">
+        <label>polynomial_ns::Polynomial&lt; T &gt;</label>
+        <link refid="classpolynomial__ns_1_1Polynomial"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>T</label>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>polynomial_ns::Polynomial&lt; T &gt;</label>
+        <link refid="classpolynomial__ns_1_1Polynomial"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/algebra/polynomial.hpp" line="8" column="44" bodyfile="/home/ram/OmniTemplate/src/algebra/polynomial.hpp" bodystart="8" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classpolynomial__ns_1_1Polynomial_1a07d232f6e14fade387c39fe8ea8e6b96" prot="public" virt="non-virtual"><scope>polynomial_ns::Polynomial</scope><name>degree</name></member>
+      <member refid="classstd_1_1vector_1a2396209900e8f592db1f0b2467f7d899" prot="public" virt="non-virtual"><scope>polynomial_ns::Polynomial</scope><name>elements</name></member>
+      <member refid="classpolynomial__ns_1_1Polynomial_1a043ecfd55fc74aa4d507d45c10d236fc" prot="public" virt="non-virtual"><scope>polynomial_ns::Polynomial</scope><name>shrink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

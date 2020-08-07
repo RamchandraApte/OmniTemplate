@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structconvex__hull__trick_1_1CHT" kind="struct" language="C++" prot="public">
+    <compoundname>convex_hull_trick::CHT</compoundname>
+    <includes refid="cht_8hpp" local="no">cht.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structconvex__hull__trick_1_1CHT_1a51367d06707736271c8a23d9ce294fbe" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref> &gt;</type>
+        <definition>vector&lt;point&gt; convex_hull_trick::CHT::lines</definition>
+        <argsstring></argsstring>
+        <name>lines</name>
+        <briefdescription>
+<para>The lines, specified as (a,b) for ax+b. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="69" column="8" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="69" bodyend="-1"/>
+        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">CHT</referencedby>
+        <referencedby refid="structconvex__hull__trick_1_1CHT_1a033ef6e8e798b2803762f8c199da345a" compoundref="cht_8hpp" startline="74" endline="80">min</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>convex_hull_trick::CHT::CHT</definition>
+        <argsstring>(vector&lt; point &gt; v)</argsstring>
+        <name>CHT</name>
+        <param>
+          <type>vector&lt; <ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref> &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="70" column="10" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="70" bodyend="73"/>
+        <references refid="namespaceconvex__hull__trick_1a564910060ca4728c5efc347bb67c8aaa" compoundref="cht_8hpp" startline="42" endline="58">convex_hull_trick::hull</references>
+        <references refid="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" compoundref="utility_8hpp" startline="39" endline="41">utility::key_compare</references>
+        <references refid="utility_8hpp_1a76cdb96860b77886867832efcffeeb32" compoundref="utility_8hpp" startline="18">lambda</references>
+        <references refid="structconvex__hull__trick_1_1CHT_1a51367d06707736271c8a23d9ce294fbe" compoundref="cht_8hpp" startline="69">lines</references>
+        <references refid="namespaceutility_1a531cc980b5de78f0c2f36ae3210cb9cf" compoundref="utility_8hpp" startline="34" endline="38">utility::uniq</references>
+      </memberdef>
+      <memberdef kind="function" id="structconvex__hull__trick_1_1CHT_1a033ef6e8e798b2803762f8c199da345a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto convex_hull_trick::CHT::min</definition>
+        <argsstring>(ll x)</argsstring>
+        <name>min</name>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Minimum value of the lines at x</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="74" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="74" bodyend="80"/>
+        <references refid="namespaceconvex__hull__trick_1a8a2d8bb18a7c97e9b898e56bbb644978" compoundref="cht_8hpp" startline="60" endline="65">convex_hull_trick::convex_min</references>
+        <references refid="structconvex__hull__trick_1_1CHT_1a51367d06707736271c8a23d9ce294fbe" compoundref="cht_8hpp" startline="69">lines</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Convex-hull trick. This can be used to find the minimum of a set of lines at various points. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>convex_hull_trick::CHT</label>
+        <link refid="structconvex__hull__trick_1_1CHT"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lines</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::complex</label>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; point &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; point &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="68" column="10" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="68" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" prot="public" virt="non-virtual"><scope>convex_hull_trick::CHT</scope><name>CHT</name></member>
+      <member refid="structconvex__hull__trick_1_1CHT_1a51367d06707736271c8a23d9ce294fbe" prot="public" virt="non-virtual"><scope>convex_hull_trick::CHT</scope><name>lines</name></member>
+      <member refid="structconvex__hull__trick_1_1CHT_1a033ef6e8e798b2803762f8c199da345a" prot="public" virt="non-virtual"><scope>convex_hull_trick::CHT</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

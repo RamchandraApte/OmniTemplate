@@ -34,7 +34,25 @@ struct \mbox{\hyperlink{structlinear__algebra_1_1matrix}{linear\+\_\+algebra\+::
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a30be90e8c8b57bcd04237e9b1d5b2fe9}{linear\+\_\+algebra\+::identity}} (const multiplies$<$$>$, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&mat)
 \item 
-{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a297c703d12bd9b758de47e299044d8f2}{linear\+\_\+algebra\+::operator+}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&\mbox{\hyperlink{range_8hpp_a49089473f43d9aad3d15c043cb1184af}{b}})
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a297c703d12bd9b758de47e299044d8f2}{linear\+\_\+algebra\+::operator+}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
 \item 
 {\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a2585fee5a1476634e4acdd3a76e8d606}{linear\+\_\+algebra\+::operator-\/}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\bool \mbox{\hyperlink{namespacelinear__algebra_a4d4a740fc0f97e6c2d867fdee2ebf6ab}{linear\+\_\+algebra\+::operator==}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ const \&a, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ const \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a0d0136db9933ef3b6a0d91efe567df28}{linear\+\_\+algebra\+::operator$\ast$}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ const \&a, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ const \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacelinear__algebra_aae153cb33e635039a84c8f6ebeed9b04}{linear\+\_\+algebra\+::foo}} (\mbox{\hyperlink{structll}{ll}} a, \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\pair$<$ \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$, T $>$ \mbox{\hyperlink{namespacelinear__algebra_aa35d330ed1d66664b874fc261902c7b5}{linear\+\_\+algebra\+::gauss}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ a)
+\begin{DoxyCompactList}\small\item\em Returns matrix x such that $ax = b$ and the determinant of $a$ via Gaussian elimination. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Ts$>$ }\\\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \mbox{\hyperlink{namespacelinear__algebra_ac5881f67135c45bc7c2b2a3de9cec5da}{linear\+\_\+algebra\+::invert}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_a5b3d96b2e622f3682c9e5b91ba0a319b}{linear\+\_\+algebra\+::operator/}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ \&a)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacelinear__algebra_ab7a7f1a8ba225710625d5af10f317b6a}{linear\+\_\+algebra\+::det}} (const \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ T $>$ \&a)
+\item 
+{\footnotesize template$<$typename Stream , typename... Ts$>$ }\\auto \& \mbox{\hyperlink{namespacelinear__algebra_a453fd75a1c2a470143f42979d102abe1}{linear\+\_\+algebra\+::operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ Ts... $>$ const \&m)
+\item 
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacelinear__algebra_ad80debbf481bb22b5347633cd83e2c77}{linear\+\_\+algebra\+::lin\+\_\+recur}} (vector$<$ T $>$ const \&\mbox{\hyperlink{operations_8hpp_ac748aa2982293b2480271d6f92be38e8}{c}}, const \mbox{\hyperlink{structll}{ll}} n)
 \end{DoxyCompactItemize}

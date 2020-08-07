@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacelink__cut" kind="namespace" language="C++">
+    <compoundname>link_cut</compoundname>
+    <innernamespace refid="namespacelink__cut_1_1test">link_cut::test</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" prot="public" static="no">
+        <type><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref>&lt; <ref refid="structll" kindref="compound">ll</ref>, true &gt;</type>
+        <definition>using link_cut::Node = typedef SplayNode&lt;ll, true&gt;</definition>
+        <argsstring></argsstring>
+        <name>Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="5" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacelink__cut_1a3dce57f6ba794543c43ff4ddbe83be1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+        <definition>Node* link_cut::make_tree</definition>
+        <argsstring>()</argsstring>
+        <name>make_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Make a new tree</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="6" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="6" bodyend="9"/>
+        <referencedby refid="namespacelink__cut_1_1test_1ad63bee2821de932f5d295238e48d106f" compoundref="test__link__cut_8hpp" startline="2" endline="47">link_cut::test::test_link_cut_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacelink__cut_1aa421dd91c5a7dc689972109e651b8c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void link_cut::detach_child</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>detach_child</name>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Converts node&apos;s preferred child edge to a path parent edge</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="10" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="10" bodyend="16"/>
+        <references refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" compoundref="splay__tree_8hpp" startline="15">splay_tree::SplayNode&lt; T, has_link_cut &gt;::child</references>
+        <referencedby refid="namespacelink__cut_1ac946b39708c027e0827fa6e4f1440e71" compoundref="link__cut_8hpp" startline="17" endline="32">access</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacelink__cut_1ac946b39708c027e0827fa6e4f1440e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+        <definition>Node* link_cut::access</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>access</name>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Moves node to the root of the auxillary tree containing the root node of the tree. Returns last path-parent of node as it moves up the tree</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="17" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="17" bodyend="32"/>
+        <references refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" compoundref="splay__tree_8hpp" startline="53" endline="59">splay_tree::SplayNode&lt; T, has_link_cut &gt;::attach</references>
+        <references refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" compoundref="splay__tree_8hpp" startline="15">splay_tree::SplayNode&lt; T, has_link_cut &gt;::child</references>
+        <references refid="namespacelink__cut_1aa421dd91c5a7dc689972109e651b8c9a" compoundref="link__cut_8hpp" startline="10" endline="16">detach_child</references>
+        <references refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" compoundref="splay__tree_8hpp" startline="35" endline="42">splay_tree::SplayNode&lt; T, has_link_cut &gt;::splay</references>
+        <referencedby refid="namespacelink__cut_1ab6b1e676cdcb014dd718dcef1bc009de" compoundref="link__cut_8hpp" startline="41" endline="46">cut</referencedby>
+        <referencedby refid="namespacelink__cut_1a3cb07576c29a6d57e510b41c59832ef4" compoundref="link__cut_8hpp" startline="33" endline="40">find_root</referencedby>
+        <referencedby refid="namespacelink__cut_1a87ccf88a6b91bcd10ae30fcfcd4b2b9d" compoundref="link__cut_8hpp" startline="53" endline="60">lca</referencedby>
+        <referencedby refid="namespacelink__cut_1a4547d61253b63b606fb1d477541d454e" compoundref="link__cut_8hpp" startline="47" endline="52">link</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacelink__cut_1a3cb07576c29a6d57e510b41c59832ef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+        <definition>Node* link_cut::find_root</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>find_root</name>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Finds the root of the tree containing node</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="33" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="33" bodyend="40"/>
+        <references refid="namespacelink__cut_1ac946b39708c027e0827fa6e4f1440e71" compoundref="link__cut_8hpp" startline="17" endline="32">access</references>
+        <references refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" compoundref="splay__tree_8hpp" startline="15">splay_tree::SplayNode&lt; T, has_link_cut &gt;::child</references>
+        <referencedby refid="namespacelink__cut_1a87ccf88a6b91bcd10ae30fcfcd4b2b9d" compoundref="link__cut_8hpp" startline="53" endline="60">lca</referencedby>
+        <referencedby refid="namespacelink__cut_1_1test_1ad63bee2821de932f5d295238e48d106f" compoundref="test__link__cut_8hpp" startline="2" endline="47">link_cut::test::test_link_cut_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacelink__cut_1ab6b1e676cdcb014dd718dcef1bc009de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void link_cut::cut</definition>
+        <argsstring>(Node *node)</argsstring>
+        <name>cut</name>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Detaches the subtree of node from the tree of node&apos;s parent</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="41" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="41" bodyend="46"/>
+        <references refid="namespacelink__cut_1ac946b39708c027e0827fa6e4f1440e71" compoundref="link__cut_8hpp" startline="17" endline="32">access</references>
+        <references refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" compoundref="splay__tree_8hpp" startline="15">splay_tree::SplayNode&lt; T, has_link_cut &gt;::child</references>
+        <referencedby refid="namespacelink__cut_1_1test_1ad63bee2821de932f5d295238e48d106f" compoundref="test__link__cut_8hpp" startline="2" endline="47">link_cut::test::test_link_cut_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacelink__cut_1a4547d61253b63b606fb1d477541d454e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void link_cut::link</definition>
+        <argsstring>(Node *par, Node *child)</argsstring>
+        <name>link</name>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>par</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Makes child the child of par</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="47" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="47" bodyend="52"/>
+        <references refid="namespacelink__cut_1ac946b39708c027e0827fa6e4f1440e71" compoundref="link__cut_8hpp" startline="17" endline="32">access</references>
+        <references refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" compoundref="splay__tree_8hpp" startline="53" endline="59">splay_tree::SplayNode&lt; T, has_link_cut &gt;::attach</references>
+        <referencedby refid="namespacelink__cut_1_1test_1ad63bee2821de932f5d295238e48d106f" compoundref="test__link__cut_8hpp" startline="2" endline="47">link_cut::test::test_link_cut_tree</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacelink__cut_1a87ccf88a6b91bcd10ae30fcfcd4b2b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+        <definition>Node* link_cut::lca</definition>
+        <argsstring>(Node *u, Node *v)</argsstring>
+        <name>lca</name>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Returns lowest common ancestor of nodes u and v or nullptr if u and v are in different trees</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="53" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" bodystart="53" bodyend="60"/>
+        <references refid="namespacelink__cut_1ac946b39708c027e0827fa6e4f1440e71" compoundref="link__cut_8hpp" startline="17" endline="32">access</references>
+        <references refid="namespacelink__cut_1a3cb07576c29a6d57e510b41c59832ef4" compoundref="link__cut_8hpp" startline="33" endline="40">find_root</references>
+        <referencedby refid="namespacelink__cut_1_1test_1ad63bee2821de932f5d295238e48d106f" compoundref="test__link__cut_8hpp" startline="2" endline="47">link_cut::test::test_link_cut_tree</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp" line="4" column="18"/>
+  </compounddef>
+</doxygen>

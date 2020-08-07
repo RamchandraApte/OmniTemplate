@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['q_983',['q',['../structgraph__theory_1_1GeneralSearch.html#abf6c4546d2a398e115d525a6b2992d13',1,'graph_theory::GeneralSearch']]],
-  ['qsum_984',['qsum',['../structsegment__tree_1_1SegmentTree_1_1NodeCore.html#a4852cef24d043d15388e91826ca726e6',1,'segment_tree::SegmentTree::NodeCore']]]
+  ['qsum_1054',['qsum',['../structsegment__tree_1_1SegmentTree_1_1NodeCore.html#a4852cef24d043d15388e91826ca726e6',1,'segment_tree::SegmentTree::NodeCore']]],
+  ['queue_1055',['queue',['../structgraph__theory_1_1GeneralSearch.html#ab65b2c9f98ace39d40abfaf399c135a7',1,'graph_theory::GeneralSearch']]]
 ];

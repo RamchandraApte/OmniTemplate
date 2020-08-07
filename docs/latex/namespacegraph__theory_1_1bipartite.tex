@@ -1,0 +1,81 @@
+\hypertarget{namespacegraph__theory_1_1bipartite}{}\doxysection{graph\+\_\+theory\+::bipartite Namespace Reference}
+\label{namespacegraph__theory_1_1bipartite}\index{graph\_theory::bipartite@{graph\_theory::bipartite}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegraph__theory_1_1bipartite_1_1test}{test}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacegraph__theory_1_1bipartite_ae7b82c3700495a58245666aabbf2353c}{color2}} (const vector$<$ \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
+\item 
+auto \mbox{\hyperlink{namespacegraph__theory_1_1bipartite_a58be81901a34562c817737007ac90ee4}{max\+\_\+match}} (const vector$<$ \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&graph)
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacegraph__theory_1_1bipartite_a5e5b932e5660a1fb292e8eea6dc67183}{matching\+\_\+size}} (const \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&matching)
+\begin{DoxyCompactList}\small\item\em Returns the size of the matching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacegraph__theory_1_1bipartite_ae7b82c3700495a58245666aabbf2353c}\label{namespacegraph__theory_1_1bipartite_ae7b82c3700495a58245666aabbf2353c}} 
+\index{graph\_theory::bipartite@{graph\_theory::bipartite}!color2@{color2}}
+\index{color2@{color2}!graph\_theory::bipartite@{graph\_theory::bipartite}}
+\doxysubsubsection{\texorpdfstring{color2()}{color2()}}
+{\footnotesize\ttfamily auto graph\+\_\+theory\+::bipartite\+::color2 (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{graph }\end{DoxyParamCaption})}
+
+Returns a bipartite coloring if possible Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{namespacegraph__theory_1_1bipartite_ae7b82c3700495a58245666aabbf2353c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacegraph__theory_1_1bipartite_ae7b82c3700495a58245666aabbf2353c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacegraph__theory_1_1bipartite_a5e5b932e5660a1fb292e8eea6dc67183}\label{namespacegraph__theory_1_1bipartite_a5e5b932e5660a1fb292e8eea6dc67183}} 
+\index{graph\_theory::bipartite@{graph\_theory::bipartite}!matching\_size@{matching\_size}}
+\index{matching\_size@{matching\_size}!graph\_theory::bipartite@{graph\_theory::bipartite}}
+\doxysubsubsection{\texorpdfstring{matching\_size()}{matching\_size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} graph\+\_\+theory\+::bipartite\+::matching\+\_\+size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \&}]{matching }\end{DoxyParamCaption})}
+
+
+
+Returns the size of the matching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matching} & must be a a vector where idx is matched with matching\mbox{[}idx\mbox{]}, or not matched if matching\mbox{[}idx\mbox{]} = -\/1 \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacegraph__theory_1_1bipartite_a5e5b932e5660a1fb292e8eea6dc67183_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacegraph__theory_1_1bipartite_a58be81901a34562c817737007ac90ee4}\label{namespacegraph__theory_1_1bipartite_a58be81901a34562c817737007ac90ee4}} 
+\index{graph\_theory::bipartite@{graph\_theory::bipartite}!max\_match@{max\_match}}
+\index{max\_match@{max\_match}!graph\_theory::bipartite@{graph\_theory::bipartite}}
+\doxysubsubsection{\texorpdfstring{max\_match()}{max\_match()}}
+{\footnotesize\ttfamily auto graph\+\_\+theory\+::bipartite\+::max\+\_\+match (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \&}]{graph }\end{DoxyParamCaption})}
+
+Returns a maximum matching of bipartite graph using the Hopcroft-\/\+Karp algorithm. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacegraph__theory_1_1bipartite_a58be81901a34562c817737007ac90ee4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacegraph__theory_1_1bipartite_a58be81901a34562c817737007ac90ee4_icgraph}
+\end{center}
+\end{figure}

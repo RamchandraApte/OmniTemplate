@@ -57,7 +57,6 @@
                 <li><a href="#enum-members">Enums</a></li>
                 <li><a href="#typedef-members">Typedefs</a></li>
                 <li><a href="#func-members">Functions</a></li>
-                <li><a href="#var-members">Variables</a></li>
                 <li><a href="#define-members">Defines</a></li>
               </ul>
             </li>
@@ -76,6 +75,11 @@
               struct <a href="structint__it.html" class="m-doc">int_it</a>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              struct <a href="structrange.html" class="m-doc">range</a>
+            </dt>
+            <dd></dd>
           </dl>
         </section>
         <section id="enum-members">
@@ -95,7 +99,7 @@
           <h2><a href="#typedef-members">Typedefs</a></h2>
           <dl class="m-doc">
             <dt id="a6288a170c5a67a2c0b45c858a043722a">
-              using <a href="#a6288a170c5a67a2c0b45c858a043722a" class="m-doc-self">ra</a> = range&lt;<a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;
+              using <a href="#a6288a170c5a67a2c0b45c858a043722a" class="m-doc-self">ra</a> = <a href="structrange.html" class="m-doc">range</a>&lt;<a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -103,17 +107,44 @@
         <section id="func-members">
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
-            <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a057a1b97c6f5b3020445722627de2337" class="m-doc">tm</a>(</span><span class="m-doc-wrap">) auto operator</span>
+            <dt id="a2a9660e705c73071a9c68c86e5e92e29">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2a9660e705c73071a9c68c86e5e92e29" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a,
+              <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
             </dt>
-            <dd></dd>
-            <dt id="aa5a5f8bff4514331008666799f66185d">
-              <span class="m-doc-wrap-bumper"><a href="#aa5a5f8bff4514331008666799f66185d" class="m-doc-self">tm</a>(</span><span class="m-doc-wrap">) auto operator&lt;(int_it&lt; T &gt; const &amp;a</span>
+            <dd><span></span></dd>
+            <dt id="adf37877debb40c87ce158743d128a8df">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#adf37877debb40c87ce158743d128a8df" class="m-doc-self">operator&lt;</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a,
+              <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5b1fcbc62cc963f6ab2598b13f114dd8">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5b1fcbc62cc963f6ab2598b13f114dd8" class="m-doc-self">operator&lt;</a>(</span><span class="m-doc-wrap"><a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; a,
+              <a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a295cbb09d532a8eeeaab519fd1db0928">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a295cbb09d532a8eeeaab519fd1db0928" class="m-doc-self">operator&amp;</a>(</span><span class="m-doc-wrap"><a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; a,
+              <a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
             </dt>
             <dd><span></span></dd>
             <dt id="a438bd5fc0a79e42a6a2abb632203f925">
               <div class="m-doc-template">template&lt;typename Range&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a438bd5fc0a79e42a6a2abb632203f925" class="m-doc-self">rev</a>(</span><span class="m-doc-wrap">const Range&amp; r) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="acb6120c8a8224e1d4465bf980bc01d07">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#acb6120c8a8224e1d4465bf980bc01d07" class="m-doc-self">operator+</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a,
+              <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; b) -&gt; <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a8b072587149274d1639908e4edb23d3d">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8b072587149274d1639908e4edb23d3d" class="m-doc-self">operator-</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a) -&gt; <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt;</span>
             </dt>
             <dd><span></span></dd>
             <dt id="a5eeb4818d038580518b4e590a066ec12">
@@ -122,17 +153,14 @@
               const T2&amp; b) -&gt; auto</span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a3eb62dcf88ab5afad4d62c6fea4bb570">
-              <span class="m-doc-wrap-bumper">auto <a href="#a3eb62dcf88ab5afad4d62c6fea4bb570" class="m-doc-self">filter</a>(</span><span class="m-doc-wrap">vector&lt;<a href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a" class="m-doc">ra</a>&gt;&amp; v) -&gt; auto</span>
+            <dt id="a2e6b26fca3ba13b074816e7b97f8245d">
+              <div class="m-doc-template">template&lt;typename T&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2e6b26fca3ba13b074816e7b97f8245d" class="m-doc-self">operator^</a>(</span><span class="m-doc-wrap"><a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; a,
+              <a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
             </dt>
             <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="var-members">
-          <h2><a href="#var-members">Variables</a></h2>
-          <dl class="m-doc">
-            <dt id="a49089473f43d9aad3d15c043cb1184af">
-              const <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt;&amp; <a href="#a49089473f43d9aad3d15c043cb1184af" class="m-doc-self">b</a>
+            <dt id="a3eb62dcf88ab5afad4d62c6fea4bb570">
+              <span class="m-doc-wrap-bumper">auto <a href="#a3eb62dcf88ab5afad4d62c6fea4bb570" class="m-doc-self">filter</a>(</span><span class="m-doc-wrap">vector&lt;<a href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a" class="m-doc">ra</a>&gt;&amp; v) -&gt; auto</span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -146,15 +174,6 @@
             </dt>
             <dd><span></span></dd>
           </dl>
-        </section>
-        <section>
-          <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a057a1b97c6f5b3020445722627de2337"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"> </span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a057a1b97c6f5b3020445722627de2337" class="m-doc-self">tm</a>(</span><span class="m-doc-wrap">) auto operator</span></span>
-            </h3>
-<p>Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a range object.</p>
-          </div></section>
         </section>
       </div>
     </div>

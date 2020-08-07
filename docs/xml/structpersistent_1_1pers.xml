@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpersistent_1_1pers" kind="struct" language="C++" prot="public">
+    <compoundname>persistent::pers</compoundname>
+    <includes refid="persistent_8hpp" local="no">persistent.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpersistent_1_1pers_1aca1368b7234aeaa330d30014ab74aecb" prot="public" static="no">
+        <type>pair&lt; <ref refid="structll" kindref="compound">ll</ref>, T &gt;</type>
+        <definition>using persistent::pers&lt; T &gt;::event =  pair&lt;ll, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="19" column="1" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" prot="public" static="yes" mutable="no">
+        <type>auto</type>
+        <definition>auto persistent::pers&lt; T &gt;::tim</definition>
+        <argsstring></argsstring>
+        <name>tim</name>
+        <initializer>= 0LL</initializer>
+        <briefdescription>
+<para>Time for the persistent variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="18" column="20" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="18" bodyend="-1"/>
+        <referencedby refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" compoundref="persistent_8hpp" startline="21" endline="25">persistent::pers&lt; T &gt;::operator=</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" prot="public" static="no" mutable="no">
+        <type>set&lt; <ref refid="structpersistent_1_1pers_1aca1368b7234aeaa330d30014ab74aecb" kindref="member">event</ref>, <ref refid="structpersistent_1_1first__cmp" kindref="compound">first_cmp</ref> &gt;</type>
+        <definition>set&lt;event, first_cmp&gt; persistent::pers&lt; T &gt;::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="20" column="5" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="20" bodyend="-1"/>
+        <referencedby refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" compoundref="persistent_8hpp" startline="21" endline="25">persistent::pers&lt; T &gt;::operator=</referencedby>
+        <referencedby refid="structpersistent_1_1pers_1ad16e2906f0acb5b44696b3e732756ea7" compoundref="persistent_8hpp" startline="26" endline="26">persistent::pers&lt; T &gt;::operator auto</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto persistent::pers&lt; T &gt;::operator=</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="21" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="21" bodyend="25"/>
+        <references refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" compoundref="persistent_8hpp" startline="20">persistent::pers&lt; T &gt;::s</references>
+        <references refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" compoundref="persistent_8hpp" startline="18">persistent::pers&lt; T &gt;::tim</references>
+      </memberdef>
+      <memberdef kind="function" id="structpersistent_1_1pers_1ad16e2906f0acb5b44696b3e732756ea7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>persistent::pers&lt; T &gt;::operator auto</definition>
+        <argsstring>() const</argsstring>
+        <name>operator auto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="26" column="1" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="26" bodyend="26"/>
+        <references refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" compoundref="persistent_8hpp" startline="20">persistent::pers&lt; T &gt;::s</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Persistent variable. The old values can be retrieved by changing the time tim</para>
+<para>Time complexity: <formula id="19">$O(log n)$</formula> for setting and getting the value.</para>
+<para>Space complexity: <formula id="20">$O(1)$</formula> per assignment. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>K</label>
+      </node>
+      <node id="3">
+        <label>std::set&lt; K &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::set&lt; event, persistent::first_cmp &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; event, persistent::first_cmp &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>persistent::pers&lt; T &gt;</label>
+        <link refid="structpersistent_1_1pers"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>s</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp" line="17" column="22" bodyfile="/home/ram/OmniTemplate/src/ds/persistent.hpp" bodystart="17" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structpersistent_1_1pers_1aca1368b7234aeaa330d30014ab74aecb" prot="public" virt="non-virtual"><scope>persistent::pers</scope><name>event</name></member>
+      <member refid="structpersistent_1_1pers_1ad16e2906f0acb5b44696b3e732756ea7" prot="public" virt="non-virtual"><scope>persistent::pers</scope><name>operator auto</name></member>
+      <member refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" prot="public" virt="non-virtual"><scope>persistent::pers</scope><name>operator=</name></member>
+      <member refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" prot="public" virt="non-virtual"><scope>persistent::pers</scope><name>s</name></member>
+      <member refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" prot="public" virt="non-virtual"><scope>persistent::pers</scope><name>tim</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

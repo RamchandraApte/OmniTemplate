@@ -34,6 +34,7 @@
         <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="73" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="73" bodyend="-1"/>
         <referencedby refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" compoundref="splay__tree_8hpp" startline="72" endline="72">splay_tree::SplayTree&lt; T &gt;::iterator::operator*</referencedby>
         <referencedby refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" compoundref="splay__tree_8hpp" startline="75" endline="77">splay_tree::SplayTree&lt; T &gt;::iterator::operator==</referencedby>
+        <referencedby refid="structsplay__tree_1_1SplayTree_1_1iterator_1a5de551652a02ec33810bc159032be3de" compoundref="splay__tree_8hpp" startline="80" endline="88">splay_tree::SplayTree&lt; T &gt;::iterator::advance</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -134,6 +135,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="80" column="18" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="80" bodyend="88"/>
+        <references refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" compoundref="splay__tree_8hpp" startline="15">splay_tree::SplayNode&lt; T, has_link_cut &gt;::child</references>
+        <references refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" compoundref="splay__tree_8hpp" startline="73">splay_tree::SplayTree&lt; T &gt;::iterator::node</references>
+        <references refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" compoundref="splay__tree_8hpp" startline="16">splay_tree::SplayNode&lt; T, has_link_cut &gt;::parent</references>
+        <references refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" compoundref="splay__tree_8hpp" startline="17" endline="20">splay_tree::SplayNode&lt; T, has_link_cut &gt;::side</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -155,9 +160,6 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4">
-        <label>conditional_t&lt; false, PathParent&lt; SplayNode&lt; T, false &gt; &gt;, Empty &gt;</label>
-      </node>
       <node id="7">
         <label>T</label>
       </node>
@@ -203,6 +205,9 @@
         <childnode refid="3" relation="usage">
           <edgelabel>node</edgelabel>
         </childnode>
+      </node>
+      <node id="4">
+        <label>conditional_t&lt; false , PathParent&lt; SplayNode&lt; T, false  &gt; &gt;, Empty &gt;</label>
       </node>
     </collaborationgraph>
     <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="66" column="31" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="66" bodyend="89"/>

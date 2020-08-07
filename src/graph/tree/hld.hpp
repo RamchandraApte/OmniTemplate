@@ -44,8 +44,8 @@ class HLD {
 		fo(idx, graph.size()) { perm_data[pos[idx]] = data[idx]; }
 		ds = QueryDS{perm_data};
 	}
+	/*! \brief Calls func (could be an update or query function, for example) on each heavy chain in the path*/
 	template <typename Func> void func_path(ll u, ll v, const Func &func) {
-		/*! Calls func (could be an update or query function, for example) on each heavy chain in the path*/
 		// We're assuming the operation is commutative
 		// FIXME find the LCA and use that to do it for non-commutative operators
 		while (true) {
@@ -72,7 +72,7 @@ class HLD {
 		func_path(u, v, [&](ll u, ll v) { ret = Monoid{}(ret, ds.query(u, v)); });
 		return ret;
 	}
-	/** Update the values of vertices on the path from u to v by val*/
+	/*! @brief Update the values of vertices on the path from u to v by val*/
 	void update(ll u, ll v, const T &val) {
 		func_path(u, v, [&](ll u, ll v) { ds.update(u, v, val); });
 	}

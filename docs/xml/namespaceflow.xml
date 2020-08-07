@@ -3,6 +3,7 @@
   <compounddef id="namespaceflow" kind="namespace" language="C++">
     <compoundname>flow</compoundname>
     <innerclass refid="structflow_1_1FlowEdge" prot="public">flow::FlowEdge</innerclass>
+    <innernamespace refid="namespaceflow_1_1test">flow::test</innernamespace>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
@@ -18,7 +19,7 @@
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Edmond-Karp maximum flow algorithm. <parameterlist kind="param"><parameteritem>
+<para>Edmond-Karp maximum flow algorithm. Complexity: <formula id="23">$O(VE^2)$</formula> <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>capacity</parametername>
 </parameternamelist>
@@ -31,12 +32,47 @@
 </simplesect>
 </para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="9" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="9" bodyend="55"/>
+        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="13" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="13" bodyend="59"/>
+        <references refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a">graph_theory::BFS</references>
         <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
         <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
         <references refid="namespaceutility_1ae423116f6315d5e998219f27f1f8c401" compoundref="utility_8hpp" startline="20" endline="20">utility::min_eq</references>
-        <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="10">linear_algebra::matrix&lt; T &gt;::rows_n</references>
-        <referencedby refid="test__flow_8hpp_1a73a08ae22ea0f40b5fa189008b61daa4" compoundref="test__flow_8hpp" startline="18" endline="18">test_flow</referencedby>
+        <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="11">linear_algebra::matrix&lt; T &gt;::rows_n</references>
+        <referencedby refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" compoundref="test__flow_8hpp" startline="50" endline="54">flow::test::test_flow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceflow_1ab1878f3966f553be99c58d55aa46709e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
+        <definition>matrix&lt;ll&gt; flow::dinic</definition>
+        <argsstring>(const matrix&lt; ll &gt; &amp;capacity)</argsstring>
+        <name>dinic</name>
+        <param>
+          <type>const <ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &amp;</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Dinics maximum-flow algorithm. Complexity: <formula id="24">$O(V^2E)$</formula> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="60" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="60" bodyend="158"/>
+        <references refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a">graph_theory::BFS</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
+        <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="11">linear_algebra::matrix&lt; T &gt;::rows_n</references>
+        <referencedby refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" compoundref="test__flow_8hpp" startline="50" endline="54">flow::test::test_flow</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -53,8 +89,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="81" column="4" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="81" bodyend="81"/>
-        <referencedby refid="test__flow_8hpp_1a82d3aa2c1393b4a3e42f8bc27138c867" compoundref="test__flow_8hpp" startline="2" endline="17">test_flow_algo</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="159" column="4" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="159" bodyend="159"/>
+        <referencedby refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" compoundref="test__flow_8hpp" startline="43" endline="49">flow::test::test_compare_flow</referencedby>
+        <referencedby refid="namespaceflow_1_1test_1a736d0df4682738fa9d4502d37fda8352" compoundref="test__flow_8hpp" startline="3" endline="28">flow::test::test_flow_algo</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -114,7 +114,8 @@ ll totient(ll n) {
 	return n;
 }
 /** @brief Finds x such that a^x = b (mod M) using baby-step giant-step
- * algorithm. a and M must be coprime.*/
+ * algorithm.
+ * @pre a and M must be coprime.*/
 ll dlog(const modulo a, const modulo b) {
 	assert(gcd(static_cast<ll>(a), modulo::modulus) == 1);
 	auto check = [&](ll x) {

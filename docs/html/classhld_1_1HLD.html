@@ -131,24 +131,24 @@ $O(n)$
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt>
+            <dt id="ace75fa88e8df29573405e9241c56baf0">
               <div class="m-doc-template">template&lt;typename Func&gt;</div>
-              <span class="m-doc-wrap-bumper">void <a href="#ace75fa88e8df29573405e9241c56baf0" class="m-doc">func_path</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <span class="m-doc-wrap-bumper">void <a href="#ace75fa88e8df29573405e9241c56baf0" class="m-doc-self">func_path</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
               <a href="structll.html" class="m-doc">ll</a> v,
               const Func&amp; func)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Calls func (could be an update or query function, for example) on each heavy chain in the path.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a89ad91fa5429a48db553da8d44849415" class="m-doc">query</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
               <a href="structll.html" class="m-doc">ll</a> v) -&gt; T</span>
             </dt>
             <dd>Returns the Monoid sum over values of vertices on the path from u to v.</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a5010452fe04b89ecba385cec7a0c183f" class="m-doc">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+            <dt id="a5010452fe04b89ecba385cec7a0c183f">
+              <span class="m-doc-wrap-bumper">void <a href="#a5010452fe04b89ecba385cec7a0c183f" class="m-doc-self">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
               <a href="structll.html" class="m-doc">ll</a> v,
               const T&amp; val)</span>
             </dt>
-            <dd></dd>
+            <dd>Update the values of vertices on the path from u to v by val.</dd>
           </dl>
         </section>
         <section>
@@ -163,19 +163,6 @@ $O(n)$
             </h3>
             <p><span></span></p>
 <p>&lt; Data permuted by pos</p>
-          </div></section>
-          <section class="m-doc-details" id="ace75fa88e8df29573405e9241c56baf0"><div>
-            <h3>
-              <div class="m-doc-template">
-                template&lt;typename T, typename Monoid, typename QueryDS&gt;
-                template&lt;typename Func&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ace75fa88e8df29573405e9241c56baf0" class="m-doc-self">func_path</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
-              <a href="structll.html" class="m-doc">ll</a> v,
-              const Func&amp; func)</span></span>
-            </h3>
-            <p><span></span></p>
-<p>Calls func (could be an update or query function, for example) on each heavy chain in the path</p>
           </div></section>
           <section class="m-doc-details" id="a89ad91fa5429a48db553da8d44849415"><div>
             <h3>
@@ -207,17 +194,6 @@ $O(n)$
                 </tr>
               </tfoot>
             </table>
-          </div></section>
-          <section class="m-doc-details" id="a5010452fe04b89ecba385cec7a0c183f"><div>
-            <h3>
-              <div class="m-doc-template">
-                template&lt;typename T, typename Monoid, typename QueryDS&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5010452fe04b89ecba385cec7a0c183f" class="m-doc-self">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
-              <a href="structll.html" class="m-doc">ll</a> v,
-              const T&amp; val)</span></span>
-            </h3>
-<p>Update the values of vertices on the path from u to v by val</p>
           </div></section>
         </section>
       </div>

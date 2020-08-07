@@ -45,7 +45,7 @@
       <div class="m-col-l-10 m-push-l-1">
         <h1>
           <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
-          <div class="m-doc-template">template&lt;typename Searcher&gt;</div>
+          <div class="m-doc-template">template&lt;typename Searcher, typename Graph&gt;</div>
           <span class="m-breadcrumb"><a href="namespacegraph__theory.html">graph_theory</a>::<wbr/></span>GeneralSearch <span class="m-thin">struct</span>
         </h1>
         <div class="m-block m-default">
@@ -65,8 +65,8 @@
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt id="a917e492db448f6d712d0dd2fc2070bf6">
-              <span class="m-doc-wrap-bumper"><a href="#a917e492db448f6d712d0dd2fc2070bf6" class="m-doc-self">GeneralSearch</a>(</span><span class="m-doc-wrap">const vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;&amp; g_)</span>
+            <dt id="a5d1bf0cacd1f3e805ac724fc3ffc91ca">
+              <span class="m-doc-wrap-bumper"><a href="#a5d1bf0cacd1f3e805ac724fc3ffc91ca" class="m-doc-self">GeneralSearch</a>(</span><span class="m-doc-wrap">const Graph&amp; g_)</span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -74,12 +74,12 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="a529a4cdbb064502d4cfdb0cfb888e1df">
-              <span class="m-doc-wrap-bumper">void <a href="#a529a4cdbb064502d4cfdb0cfb888e1df" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap">)</span>
+            <dt id="aba4f495d3fd8c83c5e28e27315e8d920">
+              <span class="m-doc-wrap-bumper">void <a href="#aba4f495d3fd8c83c5e28e27315e8d920" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd><span></span></dd>
             <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#aa3d5f07dfbb00aa0c017ccce8c984f79" class="m-doc">add</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> child,
+              <span class="m-doc-wrap-bumper">void <a href="#a2f3f6311a56c13381b5439266caaeb7e" class="m-doc">add</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> child,
               const <a href="structll.html" class="m-doc">ll</a> par)</span>
             </dt>
             <dd><span></span></dd>
@@ -88,36 +88,36 @@
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="a9c2d35c04448be8916294f324bd369af">
-              const vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; <a href="#a9c2d35c04448be8916294f324bd369af" class="m-doc-self">graph</a>
+            <dt id="a8ce5f9c8c5cba4adbbb66eb804363456">
+              const Graph&amp; <a href="#a8ce5f9c8c5cba4adbbb66eb804363456" class="m-doc-self">graph</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ad7da282c4b19a341a0783f25358ab03a">
-              <a href="core_2all_8hpp.html#aff943633016deb6c62a519ffe92c6819" class="m-doc">vc</a>&lt;char&gt; <a href="#ad7da282c4b19a341a0783f25358ab03a" class="m-doc-self">visited</a>
+            <dt id="a52c397b90b5478a556991d319770745b">
+              <a href="core_2all_8hpp.html#aff943633016deb6c62a519ffe92c6819" class="m-doc">vc</a>&lt;char&gt; <a href="#a52c397b90b5478a556991d319770745b" class="m-doc-self">visited</a>
             </dt>
             <dd>Whether vertex idx is visited.</dd>
-            <dt id="abf6c4546d2a398e115d525a6b2992d13">
-              deque&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#abf6c4546d2a398e115d525a6b2992d13" class="m-doc-self">q</a>
+            <dt id="ab65b2c9f98ace39d40abfaf399c135a7">
+              deque&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#ab65b2c9f98ace39d40abfaf399c135a7" class="m-doc-self">queue</a>
             </dt>
             <dd>Queue.</dd>
-            <dt id="a4d66de5beda723fcf2e1ac6f3fe54e42">
-              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#a4d66de5beda723fcf2e1ac6f3fe54e42" class="m-doc-self">parent</a>
+            <dt id="a9addde44677dc541e480648394a5dac0">
+              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#a9addde44677dc541e480648394a5dac0" class="m-doc-self">parent</a>
             </dt>
             <dd>Parent of vertex idx.</dd>
-            <dt id="a32e7e78d36e18037b4280be0253e914b">
-              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#a32e7e78d36e18037b4280be0253e914b" class="m-doc-self">distance</a>
+            <dt id="aeddabb5fb5a9b01a73a196e233b80b6d">
+              <a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a> <a href="#aeddabb5fb5a9b01a73a196e233b80b6d" class="m-doc-self">distance</a>
             </dt>
             <dd>Distance from source to vertex idx.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="aa3d5f07dfbb00aa0c017ccce8c984f79"><div>
+          <section class="m-doc-details" id="a2f3f6311a56c13381b5439266caaeb7e"><div>
             <h3>
               <div class="m-doc-template">
-                template&lt;typename Searcher&gt;
+                template&lt;typename Searcher, typename Graph&gt;
               </div>
-              <span class="m-doc-wrap-bumper">void graph_theory::<wbr />GeneralSearch&lt;Searcher&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa3d5f07dfbb00aa0c017ccce8c984f79" class="m-doc-self">add</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> child,
+              <span class="m-doc-wrap-bumper">void graph_theory::<wbr />GeneralSearch&lt;Searcher, Graph&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2f3f6311a56c13381b5439266caaeb7e" class="m-doc-self">add</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> child,
               const <a href="structll.html" class="m-doc">ll</a> par)</span></span>
             </h3>
             <p><span></span></p>

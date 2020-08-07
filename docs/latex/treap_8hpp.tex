@@ -48,11 +48,11 @@ struct \mbox{\hyperlink{structsize__data}{size\+\_\+data$<$ Key $>$}}
 {\footnotesize template$<$typename Trp $>$ }\\Trp $\ast$ \mbox{\hyperlink{treap_8hpp_a4338e31f2a01e882efc6adf47768c076}{join}} (Trp $\ast$l, Trp $\ast$r)
 \begin{DoxyCompactList}\small\item\em Joins treap l and treap r. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Trp $>$ }\\void \mbox{\hyperlink{treap_8hpp_ad45b31cb3a5a560af114abfcbce83936}{insert}} (Trp $\ast$\&trp, Trp $\ast$x)
-\item 
+\begin{DoxyCompactList}\small\item\em inserts Node x into treap \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ }\\auto \mbox{\hyperlink{treap_8hpp_a14ea768f9d1a656b814be126c0a631c8}{insert}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$\&trp, const Key \&key)
-\item 
+\begin{DoxyCompactList}\small\item\em insert a node with key \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ }\\void \mbox{\hyperlink{treap_8hpp_add90798283a022be36a018723badda5b}{erase}} (\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$\&trp, const Key \&key)
-\item 
+\begin{DoxyCompactList}\small\item\em erase the node with key \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Trp $>$ }\\void \mbox{\hyperlink{treap_8hpp_a4a94ad7cd8f33ebf044afd6d79a174f8}{down}} (Trp $\ast$trp)
 \item 
 {\footnotesize template$<$typename Trp $>$ }\\void \mbox{\hyperlink{treap_8hpp_aff38806a204c6e78d7945e04b556f588}{split\+\_\+imp}} (Trp $\ast$trp, \mbox{\hyperlink{structll}{ll}} pos, Trp $\ast$\&l, Trp $\ast$\&r, \mbox{\hyperlink{structll}{ll}} sum=0)
@@ -121,6 +121,17 @@ Push updates down one level of the treapHere is the caller graph for this functi
 {\footnotesize\ttfamily template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ \\
 void erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$\&}]{trp,  }\item[{const Key \&}]{key }\end{DoxyParamCaption})}
 
+
+
+erase the node with key 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & from the treap\\
+\hline
+{\em trp} & \\
+\hline
+\end{DoxyParams}
 Erase key from treapHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -135,6 +146,11 @@ Erase key from treapHere is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Trp $>$ \\
 void erase\+\_\+imp (\begin{DoxyParamCaption}\item[{Trp $\ast$\&}]{trp,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{pos }\end{DoxyParamCaption})}
 
+Erase the node at position
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -149,7 +165,7 @@ Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Key , typename Data $>$ \\
 Data get\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Get data associated with the treap node Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,6 +179,11 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Trp $>$ \\
 auto get\+\_\+imp (\begin{DoxyParamCaption}\item[{Trp $\ast$\&}]{trp,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{pos }\end{DoxyParamCaption})}
 
+Get the node at positions
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -177,6 +198,17 @@ Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ \\
 auto insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$\&}]{trp,  }\item[{const Key \&}]{key }\end{DoxyParamCaption})}
 
+
+
+insert a node with key 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & into\\
+\hline
+{\em trp} & \\
+\hline
+\end{DoxyParams}
 Insert key into treap trpHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -191,6 +223,17 @@ Insert key into treap trpHere is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Trp $>$ \\
 void insert (\begin{DoxyParamCaption}\item[{Trp $\ast$\&}]{trp,  }\item[{Trp $\ast$}]{x }\end{DoxyParamCaption})}
 
+
+
+inserts Node x into treap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the new node to be inserted \\
+\hline
+{\em trp} & the treap the node is inserted into \\
+\hline
+\end{DoxyParams}
 Insert node x into treap trpHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -212,6 +255,15 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ \\
 auto insert\+\_\+imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$\&}]{trp,  }\item[{Key const \&}]{key,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{pos }\end{DoxyParamCaption})}
 
+Insert the node with
+\begin{DoxyParams}{Parameters}
+{\em key} & at position\\
+\hline
+{\em pos} & into\\
+\hline
+{\em trp} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -226,6 +278,11 @@ Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Trp $>$ \\
 void insert\+\_\+imp (\begin{DoxyParamCaption}\item[{Trp $\ast$\&}]{trp,  }\item[{Trp $\ast$}]{x,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{pos }\end{DoxyParamCaption})}
 
+Insert a node x at position
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -290,28 +347,28 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Key $>$ \\
 \mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$Key$>$ operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{l,  }\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{r }\end{DoxyParamCaption})}
 
-Returns the data for a node given the data for the children.\mbox{\Hypertarget{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}\label{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}} 
+Returns the data for a node given the data for the children. \mbox{\Hypertarget{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}\label{treap_8hpp_a1bb22f09c6a50d177b40b56d60bb62f0}} 
 \index{treap.hpp@{treap.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!treap.hpp@{treap.hpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename Key $>$ \\
 ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structsize__data}{size\+\_\+data}}$<$ Key $>$ const \&}]{data }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}\label{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}} 
+Print size data \mbox{\Hypertarget{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}\label{treap_8hpp_adc9b978577ebe26d5cef50ae4dde2362}} 
 \index{treap.hpp@{treap.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!treap.hpp@{treap.hpp}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename... Ts$>$ \\
 auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Ts... $>$ $\ast$}]{trp }\end{DoxyParamCaption})}
 
-Debug print the treap\mbox{\Hypertarget{treap_8hpp_ab4b19e3c8f0a975627a7261ed3e2c29b}\label{treap_8hpp_ab4b19e3c8f0a975627a7261ed3e2c29b}} 
+Debug print the treap \mbox{\Hypertarget{treap_8hpp_ab4b19e3c8f0a975627a7261ed3e2c29b}\label{treap_8hpp_ab4b19e3c8f0a975627a7261ed3e2c29b}} 
 \index{treap.hpp@{treap.hpp}!split@{split}}
 \index{split@{split}!treap.hpp@{treap.hpp}}
 \doxysubsubsection{\texorpdfstring{split()}{split()}}
 {\footnotesize\ttfamily template$<$typename Key , typename Data , typename Trp  = treap$<$\+Key, Data$>$$>$ \\
 void split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp,  }\item[{const Key \&}]{key,  }\item[{Trp $\ast$\&}]{l,  }\item[{Trp $\ast$\&}]{r }\end{DoxyParamCaption})}
 
-Splits the treap by keyHere is the call graph for this function\+:\nopagebreak
+Splits the treap by key Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -367,6 +424,11 @@ Returns the array of keys for an implicit treap.Here is the call graph for this 
 {\footnotesize\ttfamily template$<$typename Key , typename Data $>$ \\
 void to\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtreap}{treap}}$<$ Key, Data $>$ $\ast$}]{trp,  }\item[{vector$<$ Key $>$ \&}]{out }\end{DoxyParamCaption})}
 
+Insert the elements of trp in-\/order into
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

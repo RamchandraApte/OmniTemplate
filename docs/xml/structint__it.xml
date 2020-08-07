@@ -43,7 +43,8 @@
         <referencedby refid="structint__it_1a11d8b2c8dacbe2341c89f62cf9e8610d" compoundref="range_8hpp" startline="21" endline="21">int_it&lt; T &gt;::operator-</referencedby>
         <referencedby refid="structint__it_1a5cd1e32162f9ad122fb85002d6321013" compoundref="range_8hpp" startline="23" endline="23">int_it&lt; T &gt;::operator++</referencedby>
         <referencedby refid="structint__it_1afda2c78b3b1431cd325a63e47d5b4f9b" compoundref="range_8hpp" startline="24" endline="24">int_it&lt; T &gt;::operator--</referencedby>
-        <referencedby refid="range_8hpp_1aa5a5f8bff4514331008666799f66185d" compoundref="range_8hpp" startline="64" endline="64">tm</referencedby>
+        <referencedby refid="range_8hpp_1acb6120c8a8224e1d4465bf980bc01d07" compoundref="range_8hpp" startline="58" endline="58">operator+</referencedby>
+        <referencedby refid="range_8hpp_1a8b072587149274d1639908e4edb23d3d" compoundref="range_8hpp" startline="59" endline="59">operator-</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structint__it_1abf47510f41383d441e656a7a60e0ed19" prot="public" static="no" mutable="no">
         <type>T</type>
@@ -273,6 +274,9 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="3">
+        <label>T</label>
+      </node>
       <node id="2">
         <label>it_base&lt; T &gt;</label>
         <link refid="structit__base"/>
@@ -281,6 +285,10 @@
         <label>int_it&lt; T &gt;</label>
         <link refid="structint__it"/>
         <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>m</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

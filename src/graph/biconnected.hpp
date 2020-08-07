@@ -1,8 +1,10 @@
 #pragma once
 #include "core/all.hpp"
+/*! Returns articulation points and bridges of \param graph.
+ * \pre graph must be connected
+ * @returns pair of a vector with 1s for all the articulation points and a vector of bridge edges
+ */
 pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
-	/*! Returns articulation points and bridges of \param graph. graph must be connected*/
-	// TODO non-connected graph
 	DFS d{graph};
 	// TODO this should be fixed in DFS
 	vector<char> articulations(graph.size());
@@ -15,7 +17,6 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
 		ll croot = 0;
 		d.distance[root] = 0;
 		d(root);
-		// FIXME
 		for (const auto v : rev(d.queue)) {
 			min_eq(low[v], d.distance[v]);
 		}
@@ -45,6 +46,8 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
 	}
 	return {articulations, bridges};
 }
+/*! \brief Returns ear decomposition of graph.
+ * \param graph the graph as an adjacency list*/
 vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 	DFS d{graph};
 	vector<ll> visited(graph.size());
@@ -80,6 +83,7 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 	}
 	return ears_list;
 }
+/*! @brief Finds biconnected components of graph using ear decompositions.*/
 pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
 	vector<char> art_points(graph.size());
 	vector<array<ll, 2>> bridges;

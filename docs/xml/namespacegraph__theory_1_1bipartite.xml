@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacegraph__theory_1_1bipartite" kind="namespace" language="C++">
+    <compoundname>graph_theory::bipartite</compoundname>
+    <innernamespace refid="namespacegraph__theory_1_1bipartite_1_1test">graph_theory::bipartite::test</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegraph__theory_1_1bipartite_1ae7b82c3700495a58245666aabbf2353c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto graph_theory::bipartite::color2</definition>
+        <argsstring>(const vector&lt; vl &gt; &amp;graph)</argsstring>
+        <name>color2</name>
+        <param>
+          <type>const vector&lt; <ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref> &gt; &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a bipartite coloring if possible </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/bipartite.hpp" line="5" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/bipartite.hpp" bodystart="5" bodyend="22"/>
+        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1a58be81901a34562c817737007ac90ee4" compoundref="bipartite_8hpp" startline="25" endline="82">max_match</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1a7e5ad591c1ee6db41745438d98b39825" compoundref="test__bipartite_8hpp" startline="4" endline="20">graph_theory::bipartite::test::test_color2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraph__theory_1_1bipartite_1a58be81901a34562c817737007ac90ee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto graph_theory::bipartite::max_match</definition>
+        <argsstring>(const vector&lt; vl &gt; &amp;graph)</argsstring>
+        <name>max_match</name>
+        <param>
+          <type>const vector&lt; <ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref> &gt; &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a maximum matching of bipartite graph using the Hopcroft-Karp algorithm. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/bipartite.hpp" line="25" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/bipartite.hpp" bodystart="25" bodyend="82"/>
+        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
+        <references refid="namespacegraph__theory_1_1bipartite_1ae7b82c3700495a58245666aabbf2353c" compoundref="bipartite_8hpp" startline="5" endline="22">color2</references>
+        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="83">inf</references>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1af862fd7b59fb6a9e0a396a5bd8801c3e" compoundref="test__bipartite_8hpp" startline="21" endline="83">graph_theory::bipartite::test::test_max_match</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraph__theory_1_1bipartite_1a5e5b932e5660a1fb292e8eea6dc67183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <definition>ll graph_theory::bipartite::matching_size</definition>
+        <argsstring>(const vl &amp;matching)</argsstring>
+        <name>matching_size</name>
+        <param>
+          <type>const <ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref> &amp;</type>
+          <declname>matching</declname>
+        </param>
+        <briefdescription>
+<para>Returns the size of the matching. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matching</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>must be a a vector where idx is matched with matching[idx], or not matched if matching[idx] = -1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/bipartite.hpp" line="86" column="4" bodyfile="/home/ram/OmniTemplate/src/graph/bipartite.hpp" bodystart="86" bodyend="88"/>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="20">al</references>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1af862fd7b59fb6a9e0a396a5bd8801c3e" compoundref="test__bipartite_8hpp" startline="21" endline="83">graph_theory::bipartite::test::test_max_match</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ram/OmniTemplate/src/graph/bipartite.hpp" line="3" column="33"/>
+  </compounddef>
+</doxygen>

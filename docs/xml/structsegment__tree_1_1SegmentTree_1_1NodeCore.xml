@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsegment__tree_1_1SegmentTree_1_1NodeCore" kind="struct" language="C++" prot="public">
+    <compoundname>segment_tree::SegmentTree::NodeCore</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">conditional_t&lt; has_lazy, LazyPart, Empty &gt;</basecompoundref>
+    <derivedcompoundref refid="structsegment__tree_1_1SegmentTree_1_1NodeExp" prot="public" virt="non-virtual">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeExp</derivedcompoundref>
+    <includes refid="segment__tree_8hpp" local="no">segment_tree.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsegment__tree_1_1SegmentTree_1_1NodeCore_1a4852cef24d043d15388e91826ca726e6" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeCore::qsum</definition>
+        <argsstring></argsstring>
+        <name>qsum</name>
+        <initializer>{<ref refid="operations_8hpp_1aa9ba94adf14b5b5566e3a750fa5255b3" kindref="member">identity</ref>(Query{}, T{})}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="31" column="3" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>conditional_t&lt; has_lazy, LazyPart, Empty &gt;</label>
+      </node>
+      <node id="3">
+        <label>segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeExp</label>
+        <link refid="structsegment__tree_1_1SegmentTree_1_1NodeExp"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeCore</label>
+        <link refid="structsegment__tree_1_1SegmentTree_1_1NodeCore"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>T</label>
+      </node>
+      <node id="2">
+        <label>conditional_t&lt; has_lazy, LazyPart, Empty &gt;</label>
+      </node>
+      <node id="1">
+        <label>segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeCore</label>
+        <link refid="structsegment__tree_1_1SegmentTree_1_1NodeCore"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>qsum</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="30" column="39" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="30" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structsegment__tree_1_1SegmentTree_1_1NodeCore_1a4852cef24d043d15388e91826ca726e6" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree::NodeCore</scope><name>qsum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

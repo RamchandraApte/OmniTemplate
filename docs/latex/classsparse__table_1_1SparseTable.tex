@@ -1,0 +1,77 @@
+\hypertarget{classsparse__table_1_1SparseTable}{}\doxysection{sparse\+\_\+table\+::Sparse\+Table$<$ T, Semilattice $>$ Class Template Reference}
+\label{classsparse__table_1_1SparseTable}\index{sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}}
+
+
+{\ttfamily \#include $<$sparse\+\_\+table.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsparse__table_1_1SparseTable_a625a4d7a54800fdde78057a1fcc670db}{Sparse\+Table}} (const vector$<$ T $>$ \&arr)
+\item 
+T \mbox{\hyperlink{classsparse__table_1_1SparseTable_a0ad8b0233da443f1f842b27183f05265}{query}} (\mbox{\hyperlink{structll}{ll}} l, \mbox{\hyperlink{structll}{ll}} r) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core_2all_8hpp_aff943633016deb6c62a519ffe92c6819}{vc}}$<$ \mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} $>$ \mbox{\hyperlink{classsparse__table_1_1SparseTable_a2bcae7135a2e6983a0c28afb267165c0}{meet}}
+\begin{DoxyCompactList}\small\item\em meet\mbox{[}pw\mbox{]}\mbox{[}i\mbox{]} stores the meet of elements in range \mbox{[}i, i+2$^\wedge$pw) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Semilattice$>$\newline
+class sparse\+\_\+table\+::\+Sparse\+Table$<$ T, Semilattice $>$}
+
+Sparse table. 
+\begin{DoxyParams}{Parameters}
+{\em T} & is the type of the data, \\
+\hline
+{\em Semilattice} & is a bounded semilattice. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsparse__table_1_1SparseTable_a625a4d7a54800fdde78057a1fcc670db}\label{classsparse__table_1_1SparseTable_a625a4d7a54800fdde78057a1fcc670db}} 
+\index{sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}!SparseTable@{SparseTable}}
+\index{SparseTable@{SparseTable}!sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}}
+\doxysubsubsection{\texorpdfstring{SparseTable()}{SparseTable()}}
+{\footnotesize\ttfamily template$<$typename T , typename Semilattice $>$ \\
+\mbox{\hyperlink{classsparse__table_1_1SparseTable}{sparse\+\_\+table\+::\+Sparse\+Table}}$<$ T, Semilattice $>$\+::\mbox{\hyperlink{classsparse__table_1_1SparseTable}{Sparse\+Table}} (\begin{DoxyParamCaption}\item[{const vector$<$ T $>$ \&}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classsparse__table_1_1SparseTable_a625a4d7a54800fdde78057a1fcc670db_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsparse__table_1_1SparseTable_a0ad8b0233da443f1f842b27183f05265}\label{classsparse__table_1_1SparseTable_a0ad8b0233da443f1f842b27183f05265}} 
+\index{sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}!query@{query}}
+\index{query@{query}!sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily template$<$typename T , typename Semilattice $>$ \\
+T \mbox{\hyperlink{classsparse__table_1_1SparseTable}{sparse\+\_\+table\+::\+Sparse\+Table}}$<$ T, Semilattice $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{l,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsparse__table_1_1SparseTable_a2bcae7135a2e6983a0c28afb267165c0}\label{classsparse__table_1_1SparseTable_a2bcae7135a2e6983a0c28afb267165c0}} 
+\index{sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}!meet@{meet}}
+\index{meet@{meet}!sparse\_table::SparseTable$<$ T, Semilattice $>$@{sparse\_table::SparseTable$<$ T, Semilattice $>$}}
+\doxysubsubsection{\texorpdfstring{meet}{meet}}
+{\footnotesize\ttfamily template$<$typename T , typename Semilattice $>$ \\
+\mbox{\hyperlink{core_2all_8hpp_aff943633016deb6c62a519ffe92c6819}{vc}}$<$\mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}}$>$ \mbox{\hyperlink{classsparse__table_1_1SparseTable}{sparse\+\_\+table\+::\+Sparse\+Table}}$<$ T, Semilattice $>$\+::meet\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+meet\mbox{[}pw\mbox{]}\mbox{[}i\mbox{]} stores the meet of elements in range \mbox{[}i, i+2$^\wedge$pw) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{sparse__table_8hpp}{sparse\+\_\+table.\+hpp}}\end{DoxyCompactItemize}

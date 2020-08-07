@@ -3,8 +3,7 @@
 #include "graph/all.hpp"
 namespace sat2 {
 optional<vector<char>> sat2(const vector<array<ll, 2>> &cnf, const ll n) {
-	/*!
-	Takes a 2 SAT instance and returns a solution.
+	/*! @brief Takes a 2 SAT instance and returns a solution.
 	Numerical negation represents logical negation.
 	0 means empty
 	*/
