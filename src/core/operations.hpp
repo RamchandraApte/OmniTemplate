@@ -29,7 +29,7 @@ template <typename T1, typename T2> auto operator>=(const T1 &a, const T2 &b) {
 template <typename T1, typename T2> auto operator>(const T1 &a, const T2 &b) {
 	return b < a;
 }
-tm() using uset = unordered_set<T>;
+template <typename T> using uset = unordered_set<T>;
 um operator+(um a, um const &b) {
 	for (const auto &p : b) {
 		a[p.first] += p.second;
@@ -59,8 +59,7 @@ template <typename T> auto operator&(unordered_set<T> const &a, unordered_set<T>
 	}
 	return ret;
 }
-tm() auto sub_set(unordered_set<T> const &a, unordered_set<T> const &b,
-		  unordered_set<T> &ret) {
+template <typename T> auto sub_set(unordered_set<T> const &a, unordered_set<T> const &b, unordered_set<T> &ret) {
 	for (const auto &x : a) {
 		if (!b.count(x)) {
 			ret.insert(x);
@@ -68,16 +67,16 @@ tm() auto sub_set(unordered_set<T> const &a, unordered_set<T> const &b,
 	}
 	return ret;
 }
-tm() auto operator-(unordered_set<T> const &a, unordered_set<T> const &b) {
+template <typename T> auto operator-(unordered_set<T> const &a, unordered_set<T> const &b) {
 	unordered_set<T> ret;
 	return sub_set(a, b, ret);
 }
-tm() auto operator^(unordered_set<T> const &a, unordered_set<T> const &b) {
+template <typename T> auto operator^(unordered_set<T> const &a, unordered_set<T> const &b) {
 	unordered_set<T> ret = a - b;
 	sub_set(b, a, ret);
 	return ret;
 }
-tm() auto operator*(vector<T> a, vector<T> b) {
+template <typename T> auto operator*(vector<T> a, vector<T> b) {
 	assert(a.size() == b.size());
 	vector<T> c(a.size());
 	fo(i, a.size()) { c[i] = a[i] * b[i]; }
@@ -87,7 +86,7 @@ template <typename Iterator> auto operator+(Iterator it, enable_if_t<!is_same<ty
 	advance(it, n);
 	return it;
 }
-tm() using bin_op = T(*)(T, T);
+template <typename T> using bin_op = T (*)(T, T);
 #define ret(x, id)                                                             \
 	if (f == static_cast<decltype(f)>(x)) {                                \
 		return id;                                                     \

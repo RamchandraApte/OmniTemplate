@@ -92,8 +92,8 @@ template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
 template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 // TODO split up utility.hpp maybe?
 /*! @brief Array convenience template. Converts C style array type to std::array type. */
-tm() struct ar { using type = T; };
-tm() using ar_t = typename ar<T>::type;
+template <typename T> struct ar { using type = T; };
+template <typename T> using ar_t = typename ar<T>::type;
 template <typename T, ll n> struct ar<T[n]> { using type = array<ar_t<T>, n>; };
 struct random_device_patch {
 	/*! Random device patch to fix libstdc++'s broken implementation on

@@ -39,7 +39,7 @@ bool ccw(const point &a, const point &b, const point &c) {
 	}
 	return area_pts > 0;
 }
-auto hull(vector<point> v, df(do_sort, true)) {
+auto hull(vector<point> v, bool do_sort = true) {
 	// TODO why do_sort?
 	/*! Returns the convex hull of the points in v*/
 	vector<point> h;

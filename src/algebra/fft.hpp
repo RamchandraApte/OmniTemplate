@@ -2,7 +2,7 @@
 #include "core/all.hpp"
 #if FFTN2
 /*! O(N^2) FFT */
-auto fft(auto &v, df(d, 1LL), df(s, 0LL)) {
+auto fft(auto &v, ll d = 1, ll s = 0) {
 	if (v.size() == d) {
 		return;
 	}

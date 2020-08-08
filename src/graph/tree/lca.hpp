@@ -2,7 +2,7 @@
 #include "core.hpp"
 namespace tree {
 ll const sz = 30;
-tm() struct no {
+template <typename T> struct no {
 	vector<no *> p;
 	T v;
 	no(T const &v_, no *pa = nullptr) : p(sz), v(v_) {
@@ -37,7 +37,7 @@ tm() struct no {
 		return ll(b.to_ullong()) + 1;
 	}
 };
-tm() auto lca(no<T> *a, no<T> *b) {
+template <typename T> auto lca(no<T> *a, no<T> *b) {
 	ll da = a->dp(), db = b->dp();
 	if (da > db) {
 		swap(a, b);

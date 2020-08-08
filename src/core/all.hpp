@@ -15,7 +15,6 @@
 #endif
 #define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))
-#define tm(...) template <typename __VA_ARGS__ T>
 #define this (*this)
 #define al(v) begin(v), end(v)
 #define I(x)                                                                   \

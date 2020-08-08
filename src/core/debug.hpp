@@ -10,7 +10,7 @@
 #endif
 /*! Debugging tools */
 namespace debug_tools {
-tm() auto type_name([[maybe_unused]] T const &v) {
+template <typename T> auto type_name([[maybe_unused]] T const &v) {
 	/*! Return the type name of the type of value*/
 	string s = __PRETTY_FUNCTION__, tar = "T = ";
 	auto st = s.find(tar) + tar.size();
