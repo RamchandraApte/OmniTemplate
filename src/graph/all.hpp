@@ -86,7 +86,7 @@ auto mst(vector<edge> edges, const ll n) {
 /*! Generalized graph searcher/visitor*/
 template <typename Searcher, typename Graph> struct GeneralSearch {
 	Graph const &graph;
-	vc<char> visited; //!< Whether vertex idx is visited
+	vector<char> visited; //!< Whether vertex idx is visited
 	deque<ll> queue;  //!< Queue
 	vl parent;	  //!< Parent of vertex idx
 	vl distance;	  //!< Distance from source to vertex idx
@@ -134,7 +134,7 @@ template <typename Graph = GraphAdj> struct DFS : public GeneralSearch<DFS<Graph
 	}
 };
 template <typename Graph> DFS(Graph) -> DFS<Graph>;
-/*! Breadth-first search*/
+/** @brief Breadth-first search*/
 template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Graph> {
 	using GeneralSearch_t = GeneralSearch<BFS, Graph>;
 	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
@@ -157,7 +157,7 @@ template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Grap
 	}
 };
 template <typename Graph> BFS(Graph) -> BFS<Graph>;
-/** Returns the transpose graph of directed graph */
+/** @brief Returns the transpose graph of directed graph */
 auto trans(const vector<vl> &graph) {
 	ll n = size(graph);
 	vector<vl> h(n);
@@ -173,9 +173,9 @@ auto trans(const vector<vl> &graph) {
 #include "graph_view.hpp"
 #include "test_flow.hpp"
 #include "tree/tree.hpp"
+/** @brief Returns the strongly connected component for each vertex of the
+ * graph g.*/
 auto scc(const vector<vl> &graph) {
-	/*! Returns the strongly connected component for each vertex of the
-	 * graph g.*/
 	auto h = trans(graph);
 	vl cm(size(graph), -1);
 	auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
@@ -197,15 +197,11 @@ auto scc(const vector<vl> &graph) {
 auto graph_in(vector<vl> &g, ll m) {
 	/*! Reads 1-indexed list of edges into graph g*/
 	fo(i, 0, m) {
-		I(u);
-		I(v);
+		ll u, v;
+		cin >> u >> v;
 		add_edge(g, --u, --v);
 	}
 }
-/*vector<vector<ll>> chain_decomposition(const vector<vector<ll>>& graph){
-	DFS d{graph};
-	d();
-}*/
 } // namespace graph_theory
 using namespace graph_theory;
 #include "bipartite.hpp"

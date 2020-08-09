@@ -24,7 +24,7 @@ template <typename T, typename Semilattice> class SparseTable {
 	}
 
       private:
-	vc<vl> meet; //!< meet[pw][i] stores the meet of elements in range [i, i+2^pw)
+	vector<vl> meet; //!< meet[pw][i] stores the meet of elements in range [i, i+2^pw)
 };
 /*! @brief Disjoint sparse table.
  * 

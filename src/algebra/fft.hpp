@@ -13,7 +13,7 @@ auto fft(auto &v, ll d = 1, ll s = 0) {
 	auto e = exp(com{-double{tau} * 1.0i / (n / d)});
 	auto p = com{1};
 	auto i = s;
-	vc<com> out(n / d);
+	vector<com> out(n / d);
 	fo(j,n/(2*d)){
 		auto od = p*v[i+d];
 		out[j] = v[i]+od;

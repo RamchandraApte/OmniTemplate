@@ -17,11 +17,12 @@
 #define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))
 #define this (*this)
 #define al(v) begin(v), end(v)
-#define I(x)                                                                   \
+/*#define I(x)                                                                   \
 	ll x;                                                                  \
 	cin >> x;
 #define pb push_back
 #define vc vector
+*/
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...) s
