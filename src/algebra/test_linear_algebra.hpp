@@ -19,8 +19,8 @@ void test_matrix() {
 	assert(a * (b / a) == b);
 }
 void test_lin_recur() {
-	assert(lin_recur(vl{1, 2}, 5) == 21);
-	assert(lin_recur(vl{2, 3, 1}, 4) == 65);
+	assert(lin_recur(vector<ll>{1, 2}, 5) == 21);
+	assert(lin_recur(vector<ll>{2, 3, 1}, 4) == 65);
 }
 
 template <typename T> Polynomial<T> lin_recur_coef(vector<T> const &c) {}

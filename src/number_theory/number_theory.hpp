@@ -1,7 +1,7 @@
 #pragma once
 #include "core/all.hpp"
 #include "modulo.hpp"
-vl divs;
+vector<ll> divs;
 /** @brief Return whether integer n >= 2 is prime*/
 auto prime(ll n) {
 	assert(n >= 2);
@@ -27,13 +27,13 @@ auto prime(ll n) {
 		}
 		return false;
 	};
-	vl v{2, 325, 9375, 28178, 450775, 9780504, 1795265022};
+	vector<ll> v{2, 325, 9375, 28178, 450775, 9780504, 1795265022};
 	return all_of(al(v), prime_a);
 }
 /*! @brief Return all divisors of x in sorted order*/
-vl divisors(ll x) {
+vector<ll> divisors(ll x) {
 	assert(x >= 1);
-	vl v;
+	vector<ll> v;
 	fo(d, 1, x + 1) if (!(x % d)) {
 		ll y = x / d;
 		if (y < d) {
@@ -54,7 +54,7 @@ vl divisors(ll x) {
  * @return a vector where ret[idx] is the smallest prime divisor of idx
  */
 vector<ll> sieve(ll n) {
-	vl d(n), ps;
+	vector<ll> d(n), ps;
 	fo(i, 2, n) {
 		if (d[i] == 0) {
 			ps.push_back(d[i] = i);

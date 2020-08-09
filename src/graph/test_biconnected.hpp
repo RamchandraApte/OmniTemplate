@@ -50,7 +50,7 @@ void test_biconnected() {
 	};
 	auto test_all_perms = [](const GraphAdj &graph, const auto &test) {
 		const ll n = graph.size();
-		vl perm(n);
+		vector<ll> perm(n);
 		iota(al(perm), 0LL);
 		do {
 			test(graph, perm);
@@ -58,7 +58,7 @@ void test_biconnected() {
 	};
 	auto test_random_perms = [](const GraphAdj &graph, const auto &test, ll num = 1e4) {
 		const ll n = graph.size();
-		vl perm(n);
+		vector<ll> perm(n);
 		iota(al(perm), 0LL);
 		fo(i, num) {
 			shuffle(al(perm), reng);

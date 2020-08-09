@@ -8,14 +8,14 @@ void test_prime() {
 	assert(prime(static_cast<ll>(1e9 + 7)));
 }
 void test_divisors() {
-	assert((divisors(1) == vl{1}));
-	assert((divisors(2) == vl{1, 2}));
-	assert((divisors(3) == vl{1, 3}));
-	assert((divisors(4) == vl{1, 2, 4}));
-	assert((divisors(36) == vl{1, 2, 3, 4, 6, 9, 12, 18, 36}));
-	assert((divisors(49) == vl{1, 7, 49}));
+	assert((divisors(1) == vector<ll>{1}));
+	assert((divisors(2) == vector<ll>{1, 2}));
+	assert((divisors(3) == vector<ll>{1, 3}));
+	assert((divisors(4) == vector<ll>{1, 2, 4}));
+	assert((divisors(36) == vector<ll>{1, 2, 3, 4, 6, 9, 12, 18, 36}));
+	assert((divisors(49) == vector<ll>{1, 7, 49}));
 }
-void test_sieve() { assert((sieve(11) == vl{0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2})); }
+void test_sieve() { assert((sieve(11) == vector<ll>{0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2})); }
 void test_fac() {
 	assert((fac(1) == um{}));
 	assert((fac(1) == um{}));

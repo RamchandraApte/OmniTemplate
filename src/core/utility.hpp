@@ -41,7 +41,7 @@ template <typename T = less<>, typename Func> auto key_compare(const Func &f, T 
 }
 template <typename T> auto prev_less(const T &v) {
 	ll n = v.size();
-	vl l(n, -1);
+	vector<ll> l(n, -1);
 	stack<ll> s;
 	fo(i, n) {
 		while (s.size() && !(s.top() < v[i])) {

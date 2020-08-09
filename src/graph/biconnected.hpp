@@ -64,7 +64,7 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 					continue;
 				}
 				// Backedge
-				vl ear{u};
+				vector<ll> ear{u};
 				visited[u] = true;
 				ll x = v;
 				while (true) {
@@ -108,7 +108,7 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
 	// TODO  get rid of set_intersection
 	fo(u, graph.size()) {
 		sort(al(ear_graph[u]));
-		vl out;
+		vector<ll> out;
 		set_difference(al(graph[u]), al(ear_graph[u]), back_inserter(out));
 		for (const auto x : out) {
 			if (u < x) {

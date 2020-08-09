@@ -22,12 +22,12 @@ void test_splay_tree() {
 	sp.insert(20);
 	sp.insert(-2);
 	sp.insert(6);
-	vl expected{-2, 4, 5, 6, 20};
+	vector<ll> expected{-2, 4, 5, 6, 20};
 	assert(sp.size() == expected.size());
 	for (auto x : expected) {
 		assert(sp.find(x)->value == x);
 	}
-	vl vec;
+	vector<ll> vec;
 	copy(sp.begin(), sp.end(), back_inserter(vec));
 	assert(vec == expected);
 }

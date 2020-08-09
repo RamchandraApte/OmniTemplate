@@ -10,26 +10,27 @@ struct edge {
 	ll weight, a, b;
 	auto to_tuple() const { return tuple{weight, a, b}; }
 };
+/**@ brief Compare the edges by weight, with ties compared by a and b*/
 bool operator<(edge const &a, edge const &b) {
-	/*! Compare the edges by weight, with ties compared by a and b*/
 	return a.to_tuple() < b.to_tuple();
 }
 bool operator==(edge const &a, edge const &b) {
 	return a.to_tuple() == b.to_tuple();
 }
+/** @brief Print the edge*/
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
-	/*! Print the edge*/
 	return os << "edge{" << e.a << "-(" << e.weight << ")>" << e.b << "}";
 }
-auto add_edge(vector<vl> &graph, ll u, ll v) {
+auto add_edge(vector<vector<ll>> &graph, ll u, ll v) {
 	/*! Adds edge \f$u \leftrightarrow v\f$ to graph graph*/
 	graph[u].push_back(v);
 	graph[v].push_back(u);
 }
 auto shortest_dist(vector<vector<pr>> graph, ll source) {
-	/*! Given an adjacency-list of a graph, returns the shortest distance to
-	 * each vertex from the source. Algorithm: Dijkstra*/
-	vl d(graph.size(), inf), pv(graph.size(), -1);
+	/** @brief Given an adjacency-list of a graph, returns the shortest distance to
+	 * each vertex from the source.
+	 * Algorithm: Dijkstra*/
+	vector<ll> d(graph.size(), inf), pv(graph.size(), -1);
 	prio_queue_t<pr, greater<>> q;
 	d[source] = 0;
 	fo(i, d.size()) { q.push({d[i], i}); }
@@ -50,14 +51,15 @@ auto shortest_dist(vector<vector<pr>> graph, ll source) {
 			}
 		}
 	}
-	return array<vl, 2>{d, pv};
+	return array<vector<ll>, 2>{d, pv};
 }
-/*! Given a 2D matrix of distances for each edge in g, returns a 2D
-    * matrix of the shortest distances. We do not consider paths of length
-    * zero. Algorithm: Floyd-Warshall*/
-// TODO do we want to consider zero-length paths?
+/** @brief Given a 2D matrix of distances for each edge in g, returns a 2D
+ * matrix of the shortest distances. We do not consider paths of length
+ * zero.
+ * Algorithm: Floyd-Warshall*/
 auto shortest_dist(matrix<ll> const &graph) {
-	assert(graph.rows_n == graph.cols_n);
+	// TODO do we want to consider zero-length paths?
+	assert(graph.is_square());
 	auto n = graph.rows_n;
 	auto d = graph;
 	fo(k, n) {
@@ -83,13 +85,13 @@ auto mst(vector<edge> edges, const ll n) {
 	}
 	return ret;
 }
-/*! Generalized graph searcher/visitor*/
+/** @brief Generalized graph searcher/visitor*/
 template <typename Searcher, typename Graph> struct GeneralSearch {
 	Graph const &graph;
 	vector<char> visited; //!< Whether vertex idx is visited
 	deque<ll> queue;  //!< Queue
-	vl parent;	  //!< Parent of vertex idx
-	vl distance;	  //!< Distance from source to vertex idx
+	vector<ll> parent;   //!< Parent of vertex idx
+	vector<ll> distance; //!< Distance from source to vertex idx
 	GeneralSearch(const Graph &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
@@ -107,7 +109,7 @@ template <typename Searcher, typename Graph> struct GeneralSearch {
 		parent[child] = par;
 	}
 };
-/*! Given a searcher object, returns an array containing the size of each subtree */
+/** @brief Given a searcher object, returns an array containing the size of each subtree */
 template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	vector<ll> sz(search.parent.size(), 1);
 	for (auto idx : rev(search.queue)) {
@@ -117,7 +119,7 @@ template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 	}
 	return sz;
 }
-/*! Depth-first search */
+/** @brief Depth-first search */
 template <typename Graph = GraphAdj> struct DFS : public GeneralSearch<DFS<Graph>, Graph> {
 	using GeneralSearch_t = GeneralSearch<DFS, Graph>;
 	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
@@ -158,9 +160,9 @@ template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Grap
 };
 template <typename Graph> BFS(Graph) -> BFS<Graph>;
 /** @brief Returns the transpose graph of directed graph */
-auto trans(const vector<vl> &graph) {
+auto trans(const vector<vector<ll>> &graph) {
 	ll n = size(graph);
-	vector<vl> h(n);
+	vector<vector<ll>> h(n);
 	fo(i, n) {
 		for (ll j : graph[i]) {
 			h[j].push_back(i);
@@ -175,9 +177,9 @@ auto trans(const vector<vl> &graph) {
 #include "tree/tree.hpp"
 /** @brief Returns the strongly connected component for each vertex of the
  * graph g.*/
-auto scc(const vector<vl> &graph) {
+auto scc(const vector<vector<ll>> &graph) {
 	auto h = trans(graph);
-	vl cm(size(graph), -1);
+	vector<ll> cm(size(graph), -1);
 	auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
 		if (cm[u] != -1) {
 			return;
@@ -194,7 +196,7 @@ auto scc(const vector<vl> &graph) {
 	}
 	return cm;
 }
-auto graph_in(vector<vl> &g, ll m) {
+auto graph_in(vector<vector<ll>> &g, ll m) {
 	/*! Reads 1-indexed list of edges into graph g*/
 	fo(i, 0, m) {
 		ll u, v;

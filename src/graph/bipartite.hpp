@@ -2,11 +2,11 @@
 #include "core/all.hpp"
 namespace graph_theory::bipartite {
 /*! Returns a bipartite coloring if possible */
-auto color2(const vector<vl> &graph) {
+auto color2(const vector<vector<ll>> &graph) {
 	BFS b{graph};
 	b();
 	auto n = size(graph);
-	vl s(n);
+	vector<ll> s(n);
 	for (auto i : b.queue) {
 		if (const auto par = b.parent[i]; par != -1) {
 			s[i] = !s[par];
@@ -22,14 +22,14 @@ auto color2(const vector<vl> &graph) {
 }
 /*! Returns a maximum matching of bipartite graph using the
  * Hopcroft-Karp algorithm.*/
-auto max_match(const vector<vl> &graph) {
+auto max_match(const vector<vector<ll>> &graph) {
 	auto side = color2(graph).value();
 	ll n = graph.size();
-	vl match(n, -1);
+	vector<ll> match(n, -1);
 	while (true) {
 		/* Construct a directed graph to find aug_pathmenting paths*/
 		// TODO refactor this to use lazy graphs
-		vector<vl> aug_path(n + 2);
+		vector<vector<ll>> aug_path(n + 2);
 		const auto dummy_a = n;
 		const auto dummy_b = n + 1;
 		fo(i, n) {
@@ -54,7 +54,7 @@ auto max_match(const vector<vl> &graph) {
 		if (b.distance[dummy_b] == inf) {
 			break;
 		}
-		vl vis(aug_path.size());
+		vector<ll> vis(aug_path.size());
 		auto path = fix{[&](const auto &path, ll i) -> bool {
 			if (vis[i]) {
 				return false;
@@ -83,7 +83,7 @@ auto max_match(const vector<vl> &graph) {
 /*! @brief Returns the size of the matching.
  * @param matching must be a a vector where idx is matched with matching[idx], or not matched if matching[idx] = -1
  */
-ll matching_size(const vl &matching) {
+ll matching_size(const vector<ll> &matching) {
 	return count_if(al(matching), [&](const auto x) { return x != -1; });
 }
 } // namespace graph_theory::bipartite

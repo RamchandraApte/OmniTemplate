@@ -12,11 +12,11 @@ void test_with() {
 	assert(var == 12);
 }
 void test_uniq() {
-	assert((uniq(vl{2, -1, 3, -1, 2, 3}) == vl{-1, 2, 3}));
-	assert((uniq<equal_to<>, greater<>>(vl{1, -3, 5}) == vl{5, 1, -3}));
+	assert((uniq(vector<ll>{2, -1, 3, -1, 2, 3}) == vector<ll>{-1, 2, 3}));
+	assert((uniq<equal_to<>, greater<>>(vector<ll>{1, -3, 5}) == vector<ll>{5, 1, -3}));
 }
 void test_key_compare() {
-	vl a{24, 25};
+	vector<ll> a{24, 25};
 	assert(key_compare<greater<>>([&](ll i) { return a[i]; })(1, 0));
 }
 void test_bit_ceil() {

@@ -42,9 +42,9 @@ struct bytehash {
 	}
 };
 /*! Returns prefix function of string s*/
-vl prefix(string const &s) {
+vector<ll> prefix(string const &s) {
 	ll n = s.size();
-	vl p(n);
+	vector<ll> p(n);
 	fo(i, 1, n) {
 		for (ll j = p[i - 1];; j = p[j - 1]) {
 			if (s[j] == s[i]) {
@@ -61,7 +61,7 @@ vl prefix(string const &s) {
 /*! Find all substrings of t equal to s*/
 auto search_all(string const &t, string const &s) {
 	auto p = prefix(s + '\0' + t);
-	vl v;
+	vector<ll> v;
 	fo(i, t.size()) {
 		if (p[s.size() + 1 + i] == s.size()) {
 			v.push_back(i);
@@ -75,7 +75,7 @@ struct search_it : it_base<ll> {
 	using iterator_category = input_iterator_tag;
 	string const &t, s;
 	const ll n, ed;
-	vl p;
+	vector<ll> p;
 	ll i = 0, o = 0;
 	search_it(string const &t_, string const &s_)
 	    : t(t_), s(s_), n(s.size()), ed(n + 1 + t.size()), p(n) {

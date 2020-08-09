@@ -9,7 +9,7 @@ void test_dsu() {
 	assert(!d.join(6, 6));
 	assert(d.join(10, 3));
 	assert(!d.join(6, 3));
-	vl idx{d.find(3), d.find(4), d.find(6), d.find(10)};
+	vector<ll> idx{d.find(3), d.find(4), d.find(6), d.find(10)};
 	assert(all_of(al(idx), [&](auto x) { return x == idx[0]; }));
 	fo(i, 99) { d.join(i, i + 1); }
 	fo(i, 100) { assert(d.find(i) == d.find(0)); }

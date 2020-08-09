@@ -3,8 +3,8 @@
 inline namespace dsu_ds {
 /** @brief Disjoint-set data structure */
 struct dsu {
-	mutable vl parent; //!< The parent of each element
-	vl size_; /*!< Size of set of representative element idx*/
+	mutable vector<ll> parent; //!< The parent of each element
+	vector<ll> size_;	   /*!< Size of set of representative element idx*/
 	/** @brief Construct a dsu with n elements. Initially each element is in its own set.*/
 	explicit dsu(const ll n) : parent(n), size_(n, 1) { iota(al(parent), 0); }
 	/** @brief Returns the representative element of x */

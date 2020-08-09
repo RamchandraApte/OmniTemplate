@@ -17,12 +17,6 @@
 #define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))
 #define this (*this)
 #define al(v) begin(v), end(v)
-/*#define I(x)                                                                   \
-	ll x;                                                                  \
-	cin >> x;
-#define pb push_back
-#define vc vector
-*/
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...) s
@@ -59,11 +53,10 @@ using experimental::ostream_joiner;
 using experimental::source_location;
 import(chrono);
 import(literals);
-import(placeholders) let(lli, long long);
-let(ull, unsigned long long);
+import(placeholders) let(ull, unsigned long long);
 let(ll, long long);
-let(vl, vector<ll>);
-let(ld, long double) let(pr, pair<ll, ll>);
+let(ld, long double);
+let(pr, pair<ll, ll>);
 let(com, complex<double>);
 let(point, complex<ll>);
 let(ull, unsigned long long);

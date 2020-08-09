@@ -127,7 +127,7 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 
 		while (dfs(dfs, 0)) {
 			ll mn = inf;
-			vl v;
+			vector<ll> v;
 			for (ll x = 0; x != n - 1; x = edges[level_graph[x][next_idx[x]]].first) {
 				v.push_back(x);
 			}

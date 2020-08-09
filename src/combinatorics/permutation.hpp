@@ -27,7 +27,7 @@ class Permutation : public vector<ll> {
 			if (vis[i] != 0) {
 				continue;
 			}
-			vl cycle;
+			vector<ll> cycle;
 			ll x = i;
 			do {
 				cycle.push_back(x);
