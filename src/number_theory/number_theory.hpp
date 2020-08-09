@@ -73,7 +73,7 @@ vector<ll> sieve(ll n) {
 /** @brief Returns the factorization of n.
  * @return a map from the prime to the exponent
  */
-um fac(ll n) {
+unordered_map<ll, ll> fac(ll n) {
 	assert(n >= 1);
 	if (n == 1) {
 		return {};

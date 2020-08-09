@@ -17,13 +17,13 @@ void test_divisors() {
 }
 void test_sieve() { assert((sieve(11) == vector<ll>{0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2})); }
 void test_fac() {
-	assert((fac(1) == um{}));
-	assert((fac(1) == um{}));
-	assert((fac(2) == um{{2, 1}}));
-	assert((fac(3) == um{{3, 1}}));
-	assert((fac(4) == um{{2, 2}}));
-	assert((fac(36) == um{{2, 2}, {3, 2}}));
-	assert((fac(49) == um{{7, 2}}));
+	assert((fac(1) == unordered_map<ll, ll>{}));
+	assert((fac(1) == unordered_map<ll, ll>{}));
+	assert((fac(2) == unordered_map<ll, ll>{{2, 1}}));
+	assert((fac(3) == unordered_map<ll, ll>{{3, 1}}));
+	assert((fac(4) == unordered_map<ll, ll>{{2, 2}}));
+	assert((fac(36) == unordered_map<ll, ll>{{2, 2}, {3, 2}}));
+	assert((fac(49) == unordered_map<ll, ll>{{7, 2}}));
 }
 void test_egcd(ll a, ll b) {
 	ll x, y;

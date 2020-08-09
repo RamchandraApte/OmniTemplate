@@ -6,3 +6,5 @@
 #define pb push_back
 #define vc vector
 let(vl, vector<ll>);
+using bt = bitset<numeric_limits<ll>::digits>;
+let(um, unordered_map<ll, ll>);

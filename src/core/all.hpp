@@ -60,12 +60,10 @@ let(pr, pair<ll, ll>);
 let(com, complex<double>);
 let(point, complex<ll>);
 let(ull, unsigned long long);
-using bt = bitset<numeric_limits<ll>::digits>;
 template <typename T, typename Comp>
 using prio_queue_t = std::priority_queue<T, vector<T>, Comp>;
 let(clock_, high_resolution_clock);
 import(this_thread);
-let(um, unordered_map<ll, ll>);
 
 #ifdef REALGCC
 template <typename T, typename V = null_type>

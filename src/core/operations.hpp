@@ -29,8 +29,7 @@ template <typename T1, typename T2> auto operator>=(const T1 &a, const T2 &b) {
 template <typename T1, typename T2> auto operator>(const T1 &a, const T2 &b) {
 	return b < a;
 }
-template <typename T> using uset = unordered_set<T>;
-um operator+(um a, um const &b) {
+unordered_map<ll, ll> operator+(unordered_map<ll, ll> a, unordered_map<ll, ll> const &b) {
 	for (const auto &p : b) {
 		a[p.first] += p.second;
 	}
