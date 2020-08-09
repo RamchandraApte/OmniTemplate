@@ -2,7 +2,7 @@
 \label{namespacepermutation}\index{permutation@{permutation}}
 
 
-\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} namespace. Contains the \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} class and tools related to permutations.  
+\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} namespace.  
 
 
 \doxysubsection*{Namespaces}
@@ -20,7 +20,7 @@ class \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}}
 \item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a4c6e81c9c25d20631e5b1a63edeedb74}{identity}} (multiplies$<$$>$, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&perm)
 \item 
-\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}{operator$\ast$}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&a, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}{operator$\ast$}} (const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&a, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&b)
 \begin{DoxyCompactList}\small\item\em Returns the composition of permutations a and b, so that ret\mbox{[}i\mbox{]} = a\mbox{[}b\mbox{[}i\mbox{]}\mbox{]}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacepermutation_a68e876731be5159eaefd46b1fb8fe031}{invert}} (multiplies$<$$>$, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&p)
 \begin{DoxyCompactList}\small\item\em Inverts a permutation. \end{DoxyCompactList}\item 
@@ -29,9 +29,9 @@ class \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}}
 
 
 \doxysubsection{Detailed Description}
-\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} namespace. Contains the \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} class and tools related to permutations. 
+\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} namespace. 
 
-
+Contains the \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} class and tools related to permutations. 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespacepermutation_a4c6e81c9c25d20631e5b1a63edeedb74}\label{namespacepermutation_a4c6e81c9c25d20631e5b1a63edeedb74}} 
@@ -65,13 +65,6 @@ Inverts a permutation.
 \begin{DoxyReturn}{Returns}
 Inverse of the permutation. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=256pt]{namespacepermutation_a68e876731be5159eaefd46b1fb8fe031_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}\label{namespacepermutation_a68665163bd10ce50e6606b1babe2e041}} 
 \index{permutation@{permutation}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!permutation@{permutation}}
@@ -83,15 +76,8 @@ Here is the call graph for this function\+:\nopagebreak
 Returns the composition of permutations a and b, so that ret\mbox{[}i\mbox{]} = a\mbox{[}b\mbox{[}i\mbox{]}\mbox{]}. 
 
 \begin{DoxyReturn}{Returns}
-$ab$ 
+$a\cdot b$ 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=317pt]{namespacepermutation_a68665163bd10ce50e6606b1babe2e041_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed}\label{namespacepermutation_ade64590f0931d6f5d80521cdf52e4bed}} 
 \index{permutation@{permutation}!power@{power}}
 \index{power@{power}!permutation@{permutation}}

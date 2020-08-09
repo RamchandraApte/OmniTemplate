@@ -13,9 +13,7 @@ namespace permutation {
 class Permutation : public vector<ll> {
       public:
 	using vector<ll>::operator[];
-	explicit Permutation(ll n) : vector<ll>(n) {
-		iota(this.begin(), this.end(), 0LL);
-	}
+	explicit Permutation(ll n) : vector<ll>(n) { iota(begin(), end(), 0LL); }
 	explicit Permutation(const initializer_list<ll> &arr) : vector<ll>{arr} {}
     /**
     * @brief Returns the cycle decomposition of the permutation.
@@ -23,9 +21,9 @@ class Permutation : public vector<ll> {
     * @return A vector containing a vector of the indices in the cycle.
     */
 	[[nodiscard]] vector<vector<ll>> to_cycles() const {
-		vector<ll> vis(this.size());
+		vector<ll> vis(size());
 		vector<vector<ll>> cycles;
-		fo(i, this.size()) {
+		fo(i, size()) {
 			if (vis[i] != 0) {
 				continue;
 			}
@@ -50,7 +48,7 @@ class Permutation : public vector<ll> {
 };
 Permutation identity(multiplies<>, const Permutation &perm) { return Permutation(ssize(perm)); }
 /** @brief Returns the composition of permutations a and b, so that ret[i] = a[b[i]].
- * @return \f$ab\f$
+ * @return \f$a\cdot b\f$
  */
 Permutation operator*(const Permutation &a, const Permutation &b) {
 	assert(a.size() == b.size());

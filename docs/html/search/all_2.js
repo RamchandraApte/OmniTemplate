@@ -8,10 +8,11 @@ var searchData=
   ['advance_7',['advance',['../structsplay__tree_1_1SplayTree_1_1iterator.html#a5de551652a02ec33810bc159032be3de',1,'splay_tree::SplayTree::iterator::advance()'],['../structSubgraph_1_1iterator.html#aa4009857163f12e31ecdce2aba538664',1,'Subgraph::iterator::advance()']]],
   ['al_8',['al',['../core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb',1,'all.hpp']]],
   ['all_2ehpp_9',['all.hpp',['../core_2all_8hpp.html',1,'(Global Namespace)'],['../graph_2all_8hpp.html',1,'(Global Namespace)']]],
-  ['ar_3c_20t_5bn_5d_3e_10',['ar&lt; T[n]&gt;',['../structutility_1_1ar_3_01T_0fn_0e_4.html',1,'utility']]],
-  ['area_11',['area',['../namespaceconvex__hull__trick.html#abeaee6745d46728e8edf0f80a1e92ddf',1,'area():&#160;cht.hpp'],['../namespaceconvex__hull__trick.html#abeaee6745d46728e8edf0f80a1e92ddf',1,'convex_hull_trick::area()']]],
-  ['arr_12',['arr',['../classBIT.html#a9d071c0f10d6aa215511828b7099806b',1,'BIT']]],
-  ['assert_13',['assert',['../namespacetree.html#a1db5e81cd89b854831db8147ff509caa',1,'tree']]],
-  ['attach_14',['attach',['../structsplay__tree_1_1SplayNode.html#a510653918c7b8181c888bbb608a9e6ee',1,'splay_tree::SplayNode']]],
-  ['aug_15',['aug',['../operations_8hpp.html#a2e3fb564092d70d9bee87555035d8711',1,'operations.hpp']]]
+  ['ar_10',['ar',['../structutility_1_1ar.html',1,'utility']]],
+  ['ar_3c_20t_5bn_5d_3e_11',['ar&lt; T[n]&gt;',['../structutility_1_1ar_3_01T_0fn_0e_4.html',1,'utility']]],
+  ['ar_5ft_12',['ar_t',['../namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0',1,'utility']]],
+  ['area_13',['area',['../namespaceconvex__hull__trick.html#abeaee6745d46728e8edf0f80a1e92ddf',1,'area():&#160;cht.hpp'],['../namespaceconvex__hull__trick.html#abeaee6745d46728e8edf0f80a1e92ddf',1,'convex_hull_trick::area()']]],
+  ['arr_14',['arr',['../classBIT.html#a9d071c0f10d6aa215511828b7099806b',1,'BIT']]],
+  ['attach_15',['attach',['../structsplay__tree_1_1SplayNode.html#a510653918c7b8181c888bbb608a9e6ee',1,'splay_tree::SplayNode']]],
+  ['aug_16',['aug',['../operations_8hpp.html#a2e3fb564092d70d9bee87555035d8711',1,'operations.hpp']]]
 ];

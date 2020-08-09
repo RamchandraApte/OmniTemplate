@@ -19,14 +19,15 @@
         <argsstring></argsstring>
         <name>arr</name>
         <briefdescription>
+<para>The array storing the <ref refid="classBIT" kindref="compound">BIT</ref>&apos;s internal values. </para>
         </briefdescription>
         <detaileddescription>
-<para>The array storing the <ref refid="classBIT" kindref="compound">BIT</ref>&apos;s internal values. Each element of this represents a range of elements. </para>
+<para>Each element of this represents a range of elements. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="11" column="8" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="11" bodyend="-1"/>
-        <referencedby refid="classBIT_1a495d58c744095867ad69123897c60700" compoundref="bit_8hpp" startline="17" endline="24">BIT&lt; Value, MonoidOp &gt;::query</referencedby>
+        <referencedby refid="classBIT_1a495d58c744095867ad69123897c60700" compoundref="bit_8hpp" startline="18" endline="24">BIT&lt; Value, MonoidOp &gt;::query</referencedby>
         <referencedby refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" compoundref="bit_8hpp" startline="30" endline="35">BIT&lt; Value, MonoidOp &gt;::update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" prot="private" static="no" mutable="no">
@@ -43,7 +44,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="12" column="10" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="12" bodyend="-1"/>
-        <referencedby refid="classBIT_1a495d58c744095867ad69123897c60700" compoundref="bit_8hpp" startline="17" endline="24">BIT&lt; Value, MonoidOp &gt;::query</referencedby>
+        <referencedby refid="classBIT_1a495d58c744095867ad69123897c60700" compoundref="bit_8hpp" startline="18" endline="24">BIT&lt; Value, MonoidOp &gt;::query</referencedby>
         <referencedby refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" compoundref="bit_8hpp" startline="30" endline="35">BIT&lt; Value, MonoidOp &gt;::update</referencedby>
       </memberdef>
       </sectiondef>
@@ -76,15 +77,15 @@
           <declname>r</declname>
         </param>
         <briefdescription>
+<para>Returns sum of Monoid over elements in [0, r) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Returns sum of Monoid over elements in [0, r)</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="17" column="7" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="17" bodyend="24"/>
+        <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="18" column="7" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="18" bodyend="24"/>
         <references refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" compoundref="bit_8hpp" startline="11">BIT&lt; Value, MonoidOp &gt;::arr</references>
-        <references refid="classBIT_1afaa408fe21402732f980204b6211425d" compoundref="bit_8hpp" startline="37" endline="41">BIT&lt; Value, MonoidOp &gt;::get_len</references>
+        <references refid="classBIT_1afaa408fe21402732f980204b6211425d" compoundref="bit_8hpp" startline="39" endline="41">BIT&lt; Value, MonoidOp &gt;::get_len</references>
         <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="38" endline="40">linear_algebra::identity</references>
         <references refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" compoundref="bit_8hpp" startline="12">BIT&lt; Value, MonoidOp &gt;::op</references>
         <referencedby refid="test__bit_8hpp_1af86f570cf0a5201c700ffeec06aec7f6" compoundref="test__bit_8hpp" startline="3" endline="16">test_bit</referencedby>
@@ -103,10 +104,10 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Update the value at idx by value. Note that this does <emphasis>not</emphasis> set the value to value. </para>
+<para>Update the value at idx by value. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para>Note that this does <emphasis>not</emphasis> set the value to value. <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>idx</parametername>
 </parameternamelist>
@@ -129,7 +130,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="30" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="30" bodyend="35"/>
         <references refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" compoundref="bit_8hpp" startline="11">BIT&lt; Value, MonoidOp &gt;::arr</references>
-        <references refid="classBIT_1afaa408fe21402732f980204b6211425d" compoundref="bit_8hpp" startline="37" endline="41">BIT&lt; Value, MonoidOp &gt;::get_len</references>
+        <references refid="classBIT_1afaa408fe21402732f980204b6211425d" compoundref="bit_8hpp" startline="39" endline="41">BIT&lt; Value, MonoidOp &gt;::get_len</references>
         <references refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" compoundref="bit_8hpp" startline="12">BIT&lt; Value, MonoidOp &gt;::op</references>
         <referencedby refid="test__bit_8hpp_1af86f570cf0a5201c700ffeec06aec7f6" compoundref="test__bit_8hpp" startline="3" endline="16">test_bit</referencedby>
       </memberdef>
@@ -145,14 +146,14 @@
           <declname>idx</declname>
         </param>
         <briefdescription>
+<para>Returns the length of the range of elements idx is responsible for. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Returns the length of the range of elements idx is responsible for</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="37" column="11" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="37" bodyend="41"/>
-        <referencedby refid="classBIT_1a495d58c744095867ad69123897c60700" compoundref="bit_8hpp" startline="17" endline="24">BIT&lt; Value, MonoidOp &gt;::query</referencedby>
+        <location file="/home/ram/OmniTemplate/src/ds/bit.hpp" line="39" column="11" bodyfile="/home/ram/OmniTemplate/src/ds/bit.hpp" bodystart="39" bodyend="41"/>
+        <referencedby refid="classBIT_1a495d58c744095867ad69123897c60700" compoundref="bit_8hpp" startline="18" endline="24">BIT&lt; Value, MonoidOp &gt;::query</referencedby>
         <referencedby refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" compoundref="bit_8hpp" startline="30" endline="35">BIT&lt; Value, MonoidOp &gt;::update</referencedby>
       </memberdef>
       </sectiondef>
@@ -160,12 +161,12 @@
 <para>Binary indexed tree (also called Fenwick tree) </para>
     </briefdescription>
     <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
 <parametername>Value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>is the type of the value </para>
+<para>value type </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -173,7 +174,7 @@
 <parametername>MonoidOp</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>is a Monoid operating on the Value type </para>
+<para>monoid operating on the Value type </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>

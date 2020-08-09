@@ -8,6 +8,8 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structutility_1_1ar}{ar}}
+\begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{ar$<$ T\mbox{[}n\mbox{]}$>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1Empty}{Empty}}
@@ -20,6 +22,8 @@ struct \mbox{\hyperlink{structutility_1_1with}{with}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{ar\+\_\+t}} = typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$ T $>$\+::type
 \item 
 using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \end{DoxyCompactItemize}
@@ -46,12 +50,10 @@ using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{rando
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
-{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{swap2}} (T \&a, T \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, const Func \&func)
+{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{swap2}} (T \&a, T \&b, const Func \&func)
 \item 
 {\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
-\item 
-\mbox{\hyperlink{namespaceutility_a2b3da7273046d43bc7efe79670296e06}{tm}} () struct ar = typename ar$<$T$>$\+::type
-\begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,6 +62,13 @@ default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915
 
 
 \doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}\label{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}} 
+\index{utility@{utility}!ar\_t@{ar\_t}}
+\index{ar\_t@{ar\_t}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{ar\_t}{ar\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utility\+::ar\+\_\+t}} = typedef typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$T$>$\+::type}
+
 \mbox{\Hypertarget{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}\label{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}} 
 \index{utility@{utility}!random\_device@{random\_device}}
 \index{random\_device@{random\_device}!utility@{utility}}
@@ -136,14 +145,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{next\_comb()}{next\_comb()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::next\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
-Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=292pt]{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,13 +165,6 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto utility\+::prev\+\_\+less (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=242pt]{namespaceutility_a50e9430d1096ce6997ae910135a9533f_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{namespaceutility_adafa966f1819210cf795fff85b2a40c5}\label{namespaceutility_adafa966f1819210cf795fff85b2a40c5}} 
 \index{utility@{utility}!ssize@{ssize}}
 \index{ssize@{ssize}!utility@{utility}}
@@ -198,16 +193,6 @@ Stable sorts a and b by func.Here is the caller graph for this function\+:\nopag
 \includegraphics[width=350pt]{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceutility_a2b3da7273046d43bc7efe79670296e06}\label{namespaceutility_a2b3da7273046d43bc7efe79670296e06}} 
-\index{utility@{utility}!tm@{tm}}
-\index{tm@{tm}!utility@{utility}}
-\doxysubsubsection{\texorpdfstring{tm()}{tm()}}
-{\footnotesize\ttfamily utility\+::tm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) = typename ar$<$T$>$\+::type}
-
-
-
-Array convenience template. Converts C style array type to std\+::array type. 
-
 \mbox{\Hypertarget{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}\label{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}} 
 \index{utility@{utility}!uniq@{uniq}}
 \index{uniq@{uniq}!utility@{utility}}

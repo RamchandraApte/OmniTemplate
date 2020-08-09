@@ -27,11 +27,11 @@ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{number__theory_8h
 \begin{DoxyCompactList}\small\item\em Linear time prime sieve. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{core_2all_8hpp_a9925e7a8568cf11b8431a0e634ada482}{um}} \mbox{\hyperlink{number__theory_8hpp_a8119b9949ade11ba2f554e41cc0830df}{fac}} (\mbox{\hyperlink{structll}{ll}} n)
 \begin{DoxyCompactList}\small\item\em Returns the factorization of n. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egcd}} (const \mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, \mbox{\hyperlink{structll}{ll}} \&x, \mbox{\hyperlink{structll}{ll}} \&y)
+void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egcd}} (const \mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} b, \mbox{\hyperlink{structll}{ll}} \&x, \mbox{\hyperlink{structll}{ll}} \&y)
 \begin{DoxyCompactList}\small\item\em Sets x and y so that $x\cdot a + y\cdot b = \gcd(a,b)$. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f}{totient}} (\mbox{\hyperlink{structll}{ll}} n)
 \begin{DoxyCompactList}\small\item\em Returns the totient of the integer n. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}{dlog}} (const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} a, const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}{dlog}} (const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} a, const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} b)
 \begin{DoxyCompactList}\small\item\em Finds x such that a$^\wedge$x = b (mod M) using baby-\/step giant-\/step algorithm. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{number__theory_8hpp_a6542b189f3759f43899a8b1978d58e2c}{primitive\+\_\+root}} ()
 \begin{DoxyCompactList}\small\item\em Returns a primitive root modulo M. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -53,13 +53,6 @@ void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egc
 
 Return all divisors of x in sorted order. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=243pt]{number__theory_8hpp_af88afa289696363eee6d6caed35edfb5_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -211,13 +204,6 @@ Linear time prime sieve.
 \begin{DoxyReturn}{Returns}
 a vector where ret\mbox{[}idx\mbox{]} is the smallest prime divisor of idx 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=231pt]{number__theory_8hpp_ae8dd217fd3a3de037c6a1031aef548aa_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

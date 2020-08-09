@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ra_1098',['ra',['../range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a',1,'range.hpp']]],
-  ['random_5fdevice_1099',['random_device',['../namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c',1,'utility']]],
-  ['reference_1100',['reference',['../structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a',1,'it_base::reference()'],['../classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f',1,'queue_tools::QueueAdaptor::reference()'],['../classqueue__tools_1_1MinStack.html#aa0f4720a343e959a1c4539604b48e91f',1,'queue_tools::MinStack::reference()']]]
+  ['point_1099',['point',['../core_2all_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50',1,'all.hpp']]],
+  ['pointer_1100',['pointer',['../structit__base.html#aff4e3754839c1106ced2e57a47d44425',1,'it_base']]],
+  ['pr_1101',['pr',['../core_2all_8hpp.html#a58e2677d80a09b5be0f0e56ef70d4507',1,'all.hpp']]],
+  ['prio_5fqueue_5ft_1102',['prio_queue_t',['../core_2all_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a',1,'all.hpp']]]
 ];

@@ -89,14 +89,14 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespaceflow.html#a724fa814b55772a3c6ba9254b8403e70">   13</a></span>&#160;<a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <a class="code" href="namespaceflow.html#a724fa814b55772a3c6ba9254b8403e70">edmond_karp</a>(<span class="keyword">const</span> <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> &amp;capacity) {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> n = capacity.<a class="code" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;FlowEdge&gt;</a> network(n, n);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(j, n) { network[i][j].capacity = capacity[i][j]; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, n) { network[i][j].capacity = capacity[i][j]; }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">// Construct residual graph</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        vector&lt;vector&lt;ll&gt;&gt; graph(n);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(j, n) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, n) {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">if</span> (network[i][j].residual() &gt; 0) {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    graph[i].push_back(j);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                }</div>
@@ -123,8 +123,8 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <a class="code" href="namespaceflow.html">flow</a>(n, n);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(j, n) { <a class="code" href="namespaceflow.html">flow</a>[i][j] = network[i][j].flow; }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, n) { <a class="code" href="namespaceflow.html">flow</a>[i][j] = network[i][j].flow; }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespaceflow.html">flow</a>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
@@ -132,8 +132,8 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> n = capacity.<a class="code" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    vector&lt;vector&lt;ll&gt;&gt; graph(n); <span class="comment">// stores edge ids</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    vector&lt;pair&lt;ll, FlowEdge&gt;&gt; edges;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(j, n) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(j, n) {</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span> (capacity[i][j]) {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                graph[i].push_back(edges.size());</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                edges.push_back({j, <a class="code" href="structflow_1_1FlowEdge.html">FlowEdge</a>{capacity[i][j]}});</div>
@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">// Construct residual graph</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        vector&lt;vector&lt;ll&gt;&gt; res_graph(n);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> edge_id : graph[i]) {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> [j, edge] = edges[edge_id];</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span> (edge.residual() &gt; 0) {</div>
@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        vector&lt;vector&lt;ll&gt;&gt; level_graph(n);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> edge_id : graph[i]) {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> [j, edge] = edges[edge_id];</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">if</span> (edge.residual() &gt; 0 &amp;&amp; bfs.distance[i] + 1 == bfs.distance[j]) {</div>
@@ -212,7 +212,7 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <a class="code" href="namespaceflow.html">flow</a>(n, n);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> edge_id : graph[i]) {</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> [j, edge] = edges[edge_id];</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keywordflow">if</span> (edge.capacity &gt; 0) {</div>
@@ -226,7 +226,7 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;} <span class="comment">// namespace flow</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceflow.html">flow</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_2all_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> all.hpp:65</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> all.hpp:64</div></div>
 <div class="ttc" id="astructflow_1_1FlowEdge_html_ab09de24d18702bbde2676cc56b92fbb2"><div class="ttname"><a href="structflow_1_1FlowEdge.html#ab09de24d18702bbde2676cc56b92fbb2">flow::FlowEdge::capacity</a></div><div class="ttdeci">ll capacity</div><div class="ttdoc">Capacity of the edge.</div><div class="ttdef"><b>Definition:</b> flow.hpp:7</div></div>
 <div class="ttc" id="astructflow_1_1FlowEdge_html"><div class="ttname"><a href="structflow_1_1FlowEdge.html">flow::FlowEdge</a></div><div class="ttdef"><b>Definition:</b> flow.hpp:5</div></div>
 <div class="ttc" id="anamespaceflow_html_a6fb3adf4fcf060a6ce41b19c6c5ac5b1"><div class="ttname"><a href="namespaceflow.html#a6fb3adf4fcf060a6ce41b19c6c5ac5b1">flow::total_flow</a></div><div class="ttdeci">ll total_flow(const matrix&lt; ll &gt; &amp;flow)</div><div class="ttdef"><b>Definition:</b> flow.hpp:159</div></div>
@@ -234,13 +234,13 @@ $(function() {
 <div class="ttc" id="astructflow_1_1FlowEdge_html_af416a746a040a9e3967fbe12c75ab16e"><div class="ttname"><a href="structflow_1_1FlowEdge.html#af416a746a040a9e3967fbe12c75ab16e">flow::FlowEdge::flow</a></div><div class="ttdeci">ll flow</div><div class="ttdoc">Amount of flow through the edge. Negative if flow is in reverse direction.</div><div class="ttdef"><b>Definition:</b> flow.hpp:9</div></div>
 <div class="ttc" id="anamespacegraph__theory_html_a4ebc5c354c7f3d8a187b1af524050c0a"><div class="ttname"><a href="namespacegraph__theory.html#a4ebc5c354c7f3d8a187b1af524050c0a">graph_theory::BFS</a></div><div class="ttdeci">BFS(Graph) -&gt; BFS&lt; Graph &gt;</div></div>
 <div class="ttc" id="anamespaceflow_html"><div class="ttname"><a href="namespaceflow.html">flow</a></div><div class="ttdef"><b>Definition:</b> flow.hpp:4</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:83</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:82</div></div>
 <div class="ttc" id="astructflow_1_1FlowEdge_html_a9c729a2a6fab2fcb4c6f827cedbe95fd"><div class="ttname"><a href="structflow_1_1FlowEdge.html#a9c729a2a6fab2fcb4c6f827cedbe95fd">flow::FlowEdge::residual</a></div><div class="ttdeci">ll residual() const</div><div class="ttdef"><b>Definition:</b> flow.hpp:11</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="anamespaceutility_html_ae423116f6315d5e998219f27f1f8c401"><div class="ttname"><a href="namespaceutility.html#ae423116f6315d5e998219f27f1f8c401">utility::min_eq</a></div><div class="ttdeci">auto min_eq(T &amp;x, const T &amp;y)</div><div class="ttdef"><b>Definition:</b> utility.hpp:20</div></div>
 <div class="ttc" id="alinear__algebra_8hpp_html"><div class="ttname"><a href="linear__algebra_8hpp.html">linear_algebra.hpp</a></div></div>
-<div class="ttc" id="aoperations_8hpp_html_a915663194fec79c061edfaea61707bd0"><div class="ttname"><a href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a></div><div class="ttdeci">fo(i, a.size())</div><div class="ttdef"><b>Definition:</b> operations.hpp:83</div></div>
 <div class="ttc" id="anamespaceflow_html_ab1878f3966f553be99c58d55aa46709e"><div class="ttname"><a href="namespaceflow.html#ab1878f3966f553be99c58d55aa46709e">flow::dinic</a></div><div class="ttdeci">matrix&lt; ll &gt; dinic(const matrix&lt; ll &gt; &amp;capacity)</div><div class="ttdef"><b>Definition:</b> flow.hpp:60</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:16</div></div>
 <div class="ttc" id="anamespaceflow_html_a724fa814b55772a3c6ba9254b8403e70"><div class="ttname"><a href="namespaceflow.html#a724fa814b55772a3c6ba9254b8403e70">flow::edmond_karp</a></div><div class="ttdeci">matrix&lt; ll &gt; edmond_karp(const matrix&lt; ll &gt; &amp;capacity)</div><div class="ttdef"><b>Definition:</b> flow.hpp:13</div></div>
 <div class="ttc" id="astructlinear__algebra_1_1matrix_html"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix</a></div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:9</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>

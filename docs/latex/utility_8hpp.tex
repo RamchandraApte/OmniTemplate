@@ -22,6 +22,8 @@ struct \mbox{\hyperlink{structutility_1_1with}{utility\+::with$<$ T $>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix$<$ Func $>$}}
 \item 
+struct \mbox{\hyperlink{structutility_1_1ar}{utility\+::ar$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{utility\+::ar$<$ T\mbox{[}n\mbox{]}$>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1random__device__patch}{utility\+::random\+\_\+device\+\_\+patch}}
@@ -42,6 +44,8 @@ struct \mbox{\hyperlink{structutility_1_1Empty}{utility\+::\+Empty}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utility\+::ar\+\_\+t}} = typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$ T $>$\+::type
 \item 
 using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utility\+::random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \end{DoxyCompactItemize}
@@ -68,12 +72,10 @@ using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utili
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{utility\+::next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \item 
-{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{utility\+::swap2}} (T \&a, T \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}}, const Func \&func)
+{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{utility\+::swap2}} (T \&a, T \&b, const Func \&func)
 \item 
 {\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{utility\+::ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
-\item 
-\mbox{\hyperlink{namespaceutility_a2b3da7273046d43bc7efe79670296e06}{utility\+::tm}} () struct ar = typename ar$<$T$>$\+::type
-\begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 

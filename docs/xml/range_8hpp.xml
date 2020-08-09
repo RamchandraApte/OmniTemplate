@@ -606,7 +606,7 @@
         <name>bin</name>
         <param><defname>op</defname></param>
         <param><defname>Tp</defname></param>
-        <initializer>auto operator op(Tp const &amp;a, Tp const &amp;<ref refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" kindref="member">b</ref>) { return a.x op b.x; }</initializer>
+        <initializer>auto operator op(Tp const &amp;a, Tp const &amp;b) { return a.x op b.x; }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -758,7 +758,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="51" column="13" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="51" bodyend="51"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <references refid="structrange_1a626638a2956ba810e53246d756b2e653" compoundref="range_8hpp" startline="42">range&lt; T &gt;::bg</references>
         <references refid="structrange_1ae3f4c53575e4bd9a8ddfa92c3646c7b5" compoundref="range_8hpp" startline="42">range&lt; T &gt;::ed</references>
       </memberdef>
@@ -787,7 +786,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="52" column="18" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="52" bodyend="52"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <references refid="structrange_1a626638a2956ba810e53246d756b2e653" compoundref="range_8hpp" startline="42">range&lt; T &gt;::bg</references>
         <references refid="structrange_1ae3f4c53575e4bd9a8ddfa92c3646c7b5" compoundref="range_8hpp" startline="42">range&lt; T &gt;::ed</references>
       </memberdef>
@@ -813,8 +811,9 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="53" column="18" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="53" bodyend="56"/>
         <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="48">biconnected</referencedby>
+        <referencedby refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" compoundref="lca_8hpp" startline="28" endline="38">tree::no&lt; T &gt;::dp</referencedby>
         <referencedby refid="namespacegraph__theory_1a1fa8a9b42e79b9ce10e89e4659164f8d" compoundref="graph_2all_8hpp" startline="111" endline="119">graph_theory::get_size</referencedby>
-        <referencedby refid="namespacetree_1a7a4f54157c8e0795e7beff222d4912ab" compoundref="lca_8hpp" startline="5" endline="39">tree::tm</referencedby>
+        <referencedby refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" compoundref="lca_8hpp" startline="40" endline="57">tree::lca</referencedby>
       </memberdef>
       <memberdef kind="function" id="range_8hpp_1acb6120c8a8224e1d4465bf980bc01d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -841,7 +840,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="58" column="20" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="58" bodyend="58"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <references refid="structint__it_1a1e1f66e40cd8620afe9129f4f0266fa7" compoundref="range_8hpp" startline="11">int_it&lt; T &gt;::x</references>
       </memberdef>
       <memberdef kind="function" id="range_8hpp_1a8b072587149274d1639908e4edb23d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -895,7 +893,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="61" column="20" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="61" bodyend="75"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" compoundref="range_8hpp" startline="60">cont</references>
         <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" compoundref="range_8hpp" startline="60">dis</references>
         <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" compoundref="range_8hpp" startline="60">eq</references>
@@ -928,7 +925,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="76" column="18" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="76" bodyend="76"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <references refid="range_8hpp_1a5eeb4818d038580518b4e590a066ec12" compoundref="range_8hpp" startline="61" endline="75">intersect</references>
       </memberdef>
       <memberdef kind="function" id="range_8hpp_1a3eb62dcf88ab5afad4d62c6fea4bb570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -947,8 +943,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/range.hpp" line="77" column="6" bodyfile="/home/ram/OmniTemplate/src/core/range.hpp" bodystart="77" bodyend="85"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="20">al</references>
-        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -26,7 +26,6 @@
 <para>returns the dot product of 2D vectors a and b, i.e. <formula id="14">$a \cdot b$</formula></para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="11" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="11" bodyend="15"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1af431d14b14918c006bfb450ff5a69a81" compoundref="test__cht_8hpp" startline="48" endline="58">convex_hull_trick::test::test_cht</referencedby>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1a923d7187d947f574ed2f5b54d9406f69" compoundref="test__cht_8hpp" startline="11" endline="14">convex_hull_trick::test::test_dot</referencedby>
       </memberdef>
@@ -51,7 +50,6 @@
 <para>Returns the wedge product of 2D vectors a and b, <formula id="15">$a \wedge b$</formula>. This is the signed area of the parallelogram spanned by vectors <formula id="16">$\vec{f}$</formula> and <formula id="17">$\vec{b}$</formula>.</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="16" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="16" bodyend="21"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <referencedby refid="namespaceconvex__hull__trick_1abeaee6745d46728e8edf0f80a1e92ddf" compoundref="cht_8hpp" startline="22" endline="24">area</referencedby>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1a84a3352ebc4eb5a1f911bb8e8d1af61d" compoundref="test__cht_8hpp" startline="15" endline="19">convex_hull_trick::test::test_wedge</referencedby>
       </memberdef>
@@ -79,8 +77,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="22" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="22" bodyend="24"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
-        <references refid="operations_8hpp_1a66b97d6dee15f33d7b6731ccf48092cf" compoundref="operations_8hpp" startline="84">c</references>
         <references refid="namespaceconvex__hull__trick_1a4f9b285a0e38652eb9839ac60b39e34a" compoundref="cht_8hpp" startline="16" endline="21">wedge</references>
         <referencedby refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" compoundref="cht_8hpp" startline="35" endline="41">ccw</referencedby>
       </memberdef>
@@ -147,22 +143,22 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="35" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="35" bodyend="41"/>
         <references refid="namespaceconvex__hull__trick_1abeaee6745d46728e8edf0f80a1e92ddf" compoundref="cht_8hpp" startline="22" endline="24">area</references>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
-        <references refid="operations_8hpp_1a66b97d6dee15f33d7b6731ccf48092cf" compoundref="operations_8hpp" startline="84">c</references>
-        <referencedby refid="namespaceconvex__hull__trick_1a564910060ca4728c5efc347bb67c8aaa" compoundref="cht_8hpp" startline="42" endline="58">hull</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1aa194f52c547fd3298f72caf6371a23ed" compoundref="cht_8hpp" startline="42" endline="58">hull</referencedby>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1a9b689c83ba8f830281d1aabf43efd1e4" compoundref="test__cht_8hpp" startline="20" endline="34">convex_hull_trick::test::test_ccw</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespaceconvex__hull__trick_1a564910060ca4728c5efc347bb67c8aaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceconvex__hull__trick_1aa194f52c547fd3298f72caf6371a23ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
         <definition>auto convex_hull_trick::hull</definition>
-        <argsstring>(vector&lt; point &gt; v, df(do_sort, true))</argsstring>
+        <argsstring>(vector&lt; point &gt; v, bool do_sort=true)</argsstring>
         <name>hull</name>
         <param>
           <type>vector&lt; <ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref> &gt;</type>
           <declname>v</declname>
         </param>
         <param>
-          <type><ref refid="core_2all_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" kindref="member">df</ref>(do_sort, true)</type>
+          <type>bool</type>
+          <declname>do_sort</declname>
+          <defval>true</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -172,10 +168,9 @@
 <para>Returns the convex hull of the points in v</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="42" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="42" bodyend="58"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="20">al</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
         <references refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" compoundref="cht_8hpp" startline="35" endline="41">ccw</references>
         <references refid="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" compoundref="utility_8hpp" startline="39" endline="41">utility::key_compare</references>
-        <references refid="namespacetree_1a63ad126676f337ae6df9a89e7e9a7670" compoundref="lca_8hpp" startline="56">tree::p</references>
         <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">convex_hull_trick::CHT::CHT</referencedby>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1a585d91f97ee3a90cbcdb2ba5bbfe94ac" compoundref="test__cht_8hpp" startline="40" endline="47">convex_hull_trick::test::test_hull</referencedby>
       </memberdef>
@@ -208,7 +203,7 @@
 <para>Returns x in Range r that minimizes the value of a convex function f(x).</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="60" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="60" bodyend="65"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="20">al</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
         <referencedby refid="structconvex__hull__trick_1_1CHT_1a033ef6e8e798b2803762f8c199da345a" compoundref="cht_8hpp" startline="74" endline="80">convex_hull_trick::CHT::min</referencedby>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1aa454df2800722deea3ac74b53e40a21b" compoundref="test__cht_8hpp" startline="35" endline="39">convex_hull_trick::test::test_convex_min</referencedby>
       </memberdef>

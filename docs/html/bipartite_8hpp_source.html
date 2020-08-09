@@ -81,17 +81,17 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacegraph__theory_1_1bipartite.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegraph__theory_1_1bipartite.html">graph_theory::bipartite</a> {</div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="namespacegraph__theory_1_1bipartite.html#ae7b82c3700495a58245666aabbf2353c">    5</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacegraph__theory_1_1bipartite.html#ae7b82c3700495a58245666aabbf2353c">color2</a>(<span class="keyword">const</span> vector&lt;vl&gt; &amp;graph) {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="structgraph__theory_1_1BFS.html">BFS</a> <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>{graph};</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="structgraph__theory_1_1BFS.html">BFS</a> b{graph};</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    b();</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">auto</span> n = size(graph);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> s(n);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>.queue) {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> par = <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>.parent[i]; par != -1) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : b.queue) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> par = b.parent[i]; par != -1) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            s[i] = !s[par];</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        }</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> bi = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> j : graph[i]) {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            bi &amp;= s[i] != s[j];</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
@@ -108,14 +108,14 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        vector&lt;vl&gt; aug_path(n + 2);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dummy_a = n;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> dummy_b = n + 1;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : graph[i]) {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">if</span> ((j == match[i]) == side[i]) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    aug_path[i].push_back(j);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a>(i, n) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n) {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (match[i] != -1) {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
@@ -125,9 +125,9 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                aug_path[dummy_a].push_back(i);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="structgraph__theory_1_1BFS.html">BFS</a> <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>{aug_path};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>(dummy_a);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>.distance[dummy_b] == <a class="code" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="structgraph__theory_1_1BFS.html">BFS</a> b{aug_path};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        b(dummy_a);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (b.distance[dummy_b] == <a class="code" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> vis(aug_path.size());</div>
@@ -140,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="structll.html">ll</a> j : aug_path[i]) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>.distance[j] == <a class="code" href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a>.distance[i] + 1) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keywordflow">if</span> (b.distance[j] == b.distance[i] + 1) {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">if</span> (path(j)) {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        <span class="keywordflow">if</span> (i &lt; n &amp;&amp; j &lt; n) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                            match[i] = j;</div>
@@ -162,17 +162,16 @@ $(function() {
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;} <span class="comment">// namespace graph_theory::bipartite</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacegraph__theory_1_1bipartite.html">graph_theory::bipartite</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_2all_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> all.hpp:65</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> all.hpp:64</div></div>
 <div class="ttc" id="astructgraph__theory_1_1BFS_html"><div class="ttname"><a href="structgraph__theory_1_1BFS.html">graph_theory::BFS</a></div><div class="ttdef"><b>Definition:</b> all.hpp:138</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html_a5e5b932e5660a1fb292e8eea6dc67183"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html#a5e5b932e5660a1fb292e8eea6dc67183">graph_theory::bipartite::matching_size</a></div><div class="ttdeci">ll matching_size(const vl &amp;matching)</div><div class="ttdoc">Returns the size of the matching.</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:86</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:20</div></div>
-<div class="ttc" id="aoperations_8hpp_html_ae86f895524ffa6600dff36bf09bcb63d"><div class="ttname"><a href="operations_8hpp.html#ae86f895524ffa6600dff36bf09bcb63d">b</a></div><div class="ttdeci">const unordered_set&lt; T &gt; &amp; b</div><div class="ttdef"><b>Definition:</b> operations.hpp:62</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:19</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html">graph_theory::bipartite</a></div><div class="ttdef"><b>Definition:</b> bipartite.hpp:3</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:83</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:82</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html_a58be81901a34562c817737007ac90ee4"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html#a58be81901a34562c817737007ac90ee4">graph_theory::bipartite::max_match</a></div><div class="ttdeci">auto max_match(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:25</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="astructutility_1_1fix_html"><div class="ttname"><a href="structutility_1_1fix.html">utility::fix</a></div><div class="ttdef"><b>Definition:</b> utility.hpp:13</div></div>
-<div class="ttc" id="aoperations_8hpp_html_a915663194fec79c061edfaea61707bd0"><div class="ttname"><a href="operations_8hpp.html#a915663194fec79c061edfaea61707bd0">fo</a></div><div class="ttdeci">fo(i, a.size())</div><div class="ttdef"><b>Definition:</b> operations.hpp:83</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:16</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html_ae7b82c3700495a58245666aabbf2353c"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html#ae7b82c3700495a58245666aabbf2353c">graph_theory::bipartite::color2</a></div><div class="ttdeci">auto color2(const vector&lt; vl &gt; &amp;graph)</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:5</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->

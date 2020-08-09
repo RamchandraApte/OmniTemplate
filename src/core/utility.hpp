@@ -28,8 +28,8 @@ template <typename T> auto cache(const T &f) {
 		return ch[arg];
 	};
 }
-/*! Remove all duplicates element from v so that all elements in v are
-	 * distinct and sorted */
+/** @brief Remove all duplicates element from \param v so that all elements in \param v are
+ * distinct and sorted */
 template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 [[nodiscard]] auto uniq(Cont v, Eq const &up = Eq{}, T const &sp = T{}) {
 	sort(al(v), sp);

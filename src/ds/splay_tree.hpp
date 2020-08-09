@@ -72,9 +72,7 @@ template <typename T> struct SplayTree {
 		const T &operator*() { return node->value; }
 		Node *node;
 		iterator(Node *node_arg) : node(node_arg) {}
-		bool operator==(const iterator oth) const {
-			return this.node == oth.node;
-		}
+		bool operator==(const iterator oth) const { return node == oth.node; }
 
 	      private:
 		template <bool dir> void advance() {

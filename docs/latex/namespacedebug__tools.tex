@@ -3,9 +3,9 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacedebug__tools_a0a05a970de8929f9b8116e42c0bd48d8}{tm}} () auto type\+\_\+name(T const \&v)
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacedebug__tools_a991f9f01ab3a0e664fabf0bd17fab95c}{type\+\_\+name}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} T const \&v)
 \item 
-auto \mbox{\hyperlink{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}{replace}} (string s, const string \&a, const string \&\mbox{\hyperlink{operations_8hpp_ae86f895524ffa6600dff36bf09bcb63d}{b}})
+auto \mbox{\hyperlink{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}{replace}} (string s, const string \&a, const string \&b)
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacedebug__tools_a3aa6fe2ec65b64f87ad431efde3822c7}{simple\+\_\+tp}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const T \&v)
 \item 
@@ -29,14 +29,7 @@ Debugging tools
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto debug\+\_\+tools\+::debug (\begin{DoxyParamCaption}\item[{const T \&}]{x,  }\item[{const string \&}]{name,  }\item[{source\+\_\+location const \&}]{loc = {\ttfamily source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
-Debug print xHere is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=257pt]{namespacedebug__tools_a4190b5d045c8cfeb1e9a7332d55d9374_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}\label{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}} 
+Debug print x\mbox{\Hypertarget{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}\label{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}} 
 \index{debug\_tools@{debug\_tools}!replace@{replace}}
 \index{replace@{replace}!debug\_tools@{debug\_tools}}
 \doxysubsubsection{\texorpdfstring{replace()}{replace()}}
@@ -70,13 +63,21 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespacedebug__tools_a3aa6fe2ec65b64f87ad431efde3822c7_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacedebug__tools_a0a05a970de8929f9b8116e42c0bd48d8}\label{namespacedebug__tools_a0a05a970de8929f9b8116e42c0bd48d8}} 
-\index{debug\_tools@{debug\_tools}!tm@{tm}}
-\index{tm@{tm}!debug\_tools@{debug\_tools}}
-\doxysubsubsection{\texorpdfstring{tm()}{tm()}}
-{\footnotesize\ttfamily debug\+\_\+tools\+::tm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+\mbox{\Hypertarget{namespacedebug__tools_a991f9f01ab3a0e664fabf0bd17fab95c}\label{namespacedebug__tools_a991f9f01ab3a0e664fabf0bd17fab95c}} 
+\index{debug\_tools@{debug\_tools}!type\_name@{type\_name}}
+\index{type\_name@{type\_name}!debug\_tools@{debug\_tools}}
+\doxysubsubsection{\texorpdfstring{type\_name()}{type\_name()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto debug\+\_\+tools\+::type\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} T const \&}]{v }\end{DoxyParamCaption})}
 
-Return the type name of the type of value
+Return the type name of the type of valueHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedebug__tools_a991f9f01ab3a0e664fabf0bd17fab95c_icgraph}
+\end{center}
+\end{figure}
+
 
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{namespacedebug__tools_ab312673925f42718bafe74a18eae6685}\label{namespacedebug__tools_ab312673925f42718bafe74a18eae6685}} 

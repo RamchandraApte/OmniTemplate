@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="namespaceutility" kind="namespace" language="C++">
     <compoundname>utility</compoundname>
+    <innerclass refid="structutility_1_1ar" prot="public">utility::ar</innerclass>
     <innerclass refid="structutility_1_1ar_3_01T_0fn_0e_4" prot="public">utility::ar&lt; T[n]&gt;</innerclass>
     <innerclass refid="structutility_1_1Empty" prot="public">utility::Empty</innerclass>
     <innerclass refid="structutility_1_1fix" prot="public">utility::fix</innerclass>
@@ -9,6 +10,24 @@
     <innerclass refid="structutility_1_1with" prot="public">utility::with</innerclass>
     <innernamespace refid="namespaceutility_1_1test">utility::test</innernamespace>
       <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceutility_1a5527c46ab55c32f4bdf48a47564e3cf0" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structutility_1_1ar" kindref="compound">ar</ref>&lt; T &gt;::type</type>
+        <definition>using utility::ar_t = typedef typename ar&lt;T&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>ar_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="96" column="13" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" prot="public" static="no">
         <type><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref></type>
         <definition>using utility::random_device = typedef random_device_patch</definition>
@@ -193,7 +212,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="39" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="39" bodyend="41"/>
         <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">convex_hull_trick::CHT::CHT</referencedby>
-        <referencedby refid="namespaceconvex__hull__trick_1a564910060ca4728c5efc347bb67c8aaa" compoundref="cht_8hpp" startline="42" endline="58">convex_hull_trick::hull</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1aa194f52c547fd3298f72caf6371a23ed" compoundref="cht_8hpp" startline="42" endline="58">convex_hull_trick::hull</referencedby>
         <referencedby refid="cht_8hpp_1a18b063c150d95a5ec77dab71218c4f48" compoundref="cht_8hpp" startline="4" endline="7">std::operator&lt;</referencedby>
         <referencedby refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" compoundref="test__utility_8hpp" startline="18" endline="21">utility::test::test_key_compare</referencedby>
       </memberdef>
@@ -218,7 +237,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="42" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="42" bodyend="56"/>
-        <references refid="operations_8hpp_1a915663194fec79c061edfaea61707bd0" compoundref="operations_8hpp" startline="83" endline="83">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -299,8 +318,7 @@
 <para>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="76" column="5" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="76" bodyend="85"/>
-        <references refid="namespacetree_1a1db5e81cd89b854831db8147ff509caa">tree::assert</references>
-        <references refid="operations_8hpp_1a339672ff94e6199019102f50d317c3d7" compoundref="operations_8hpp" startline="63">ret</references>
+        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="90">ret</references>
         <referencedby refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" compoundref="test__utility_8hpp" startline="32" endline="45">utility::test::test_next_comb</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -336,9 +354,8 @@
 <para>Stable sorts a and b by func.</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="86" column="20" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="86" bodyend="91"/>
-        <references refid="operations_8hpp_1ae86f895524ffa6600dff36bf09bcb63d" compoundref="operations_8hpp" startline="62">b</references>
         <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="48" endline="62">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
-        <referencedby refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" compoundref="dsu_8hpp" startline="18" endline="28">dsu_ds::dsu::join</referencedby>
+        <referencedby refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" compoundref="dsu_8hpp" startline="17" endline="27">dsu_ds::dsu::join</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -366,21 +383,6 @@
         <referencedby refid="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" compoundref="big__integer_8hpp" startline="7" endline="7">bigint::bigint::operator[]</referencedby>
         <referencedby refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" compoundref="permutation_8hpp" startline="42" endline="49">permutation::Permutation::Permutation</referencedby>
         <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="10" endline="18">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="namespaceutility_1a2b3da7273046d43bc7efe79670296e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>utility::tm</definition>
-        <argsstring>() struct ar</argsstring>
-        <name>tm</name>
-        <initializer>= typename ar&lt;T&gt;::type</initializer>
-        <briefdescription>
-<para>Array convenience template. Converts C style array type to std::array type. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="95" column="1" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="95" bodyend="95" declfile="/home/ram/OmniTemplate/src/core/utility.hpp" declline="96" declcolumn="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -24,19 +24,19 @@ Collaboration diagram for B\+IT$<$ Value, Monoid\+Op $>$\+:\nopagebreak
 \mbox{\hyperlink{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}{B\+IT}} (const \mbox{\hyperlink{structll}{ll}} size\+\_\+arg)
 \begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg. \end{DoxyCompactList}\item 
 Value \mbox{\hyperlink{classBIT_a495d58c744095867ad69123897c60700}{query}} (\mbox{\hyperlink{structll}{ll}} r) const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns sum of Monoid over elements in \mbox{[}0, r) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBIT_a20ea8eb0ea2065179c756ec96417227f}{update}} (\mbox{\hyperlink{structll}{ll}} idx, const Value value)
-\begin{DoxyCompactList}\small\item\em Update the value at idx by value. Note that this does {\itshape not} set the value to value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update the value at idx by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classBIT_afaa408fe21402732f980204b6211425d}{get\+\_\+len}} (const \mbox{\hyperlink{structll}{ll}} idx)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the length of the range of elements idx is responsible for. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ Value $>$ \mbox{\hyperlink{classBIT_a9d071c0f10d6aa215511828b7099806b}{arr}}
-\item 
+\begin{DoxyCompactList}\small\item\em The array storing the \mbox{\hyperlink{classBIT}{B\+IT}}\textquotesingle{}s internal values. \end{DoxyCompactList}\item 
 Monoid\+Op \mbox{\hyperlink{classBIT_a805ad548af6a5b423fc13749e6dacf6d}{op}} \{\}
 \begin{DoxyCompactList}\small\item\em The monoid operation functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -48,12 +48,12 @@ class B\+I\+T$<$ Value, Monoid\+Op $>$}
 Binary indexed tree (also called Fenwick tree) 
 
 
-\begin{DoxyParams}{Parameters}
-{\em Value} & is the type of the value \\
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Value} & value type \\
 \hline
-{\em Monoid\+Op} & is a Monoid operating on the Value type \\
+{\em Monoid\+Op} & monoid operating on the Value type \\
 \hline
-\end{DoxyParams}
+\end{DoxyTemplParams}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -78,7 +78,11 @@ Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg.
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::get\+\_\+len (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
-Returns the length of the range of elements idx is responsible forHere is the caller graph for this function\+:\nopagebreak
+
+
+Returns the length of the range of elements idx is responsible for. 
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -92,7 +96,11 @@ Returns the length of the range of elements idx is responsible forHere is the ca
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 Value \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns sum of Monoid over elements in \mbox{[}0, r)Here is the call graph for this function\+:\nopagebreak
+
+
+Returns sum of Monoid over elements in \mbox{[}0, r) 
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,9 +123,9 @@ void \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::update (\beg
 
 
 
-Update the value at idx by value. Note that this does {\itshape not} set the value to value. 
+Update the value at idx by value. 
 
-
+Note that this does {\itshape not} set the value to value. 
 \begin{DoxyParams}{Parameters}
 {\em idx} & the index of the element \\
 \hline
@@ -148,7 +156,11 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 vector$<$Value$>$ \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::arr\hspace{0.3cm}{\ttfamily [private]}}
 
-The array storing the \mbox{\hyperlink{classBIT}{B\+IT}}\textquotesingle{}s internal values. Each element of this represents a range of elements. \mbox{\Hypertarget{classBIT_a805ad548af6a5b423fc13749e6dacf6d}\label{classBIT_a805ad548af6a5b423fc13749e6dacf6d}} 
+
+
+The array storing the \mbox{\hyperlink{classBIT}{B\+IT}}\textquotesingle{}s internal values. 
+
+Each element of this represents a range of elements. \mbox{\Hypertarget{classBIT_a805ad548af6a5b423fc13749e6dacf6d}\label{classBIT_a805ad548af6a5b423fc13749e6dacf6d}} 
 \index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!op@{op}}
 \index{op@{op}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
 \doxysubsubsection{\texorpdfstring{op}{op}}

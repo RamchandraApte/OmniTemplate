@@ -22,11 +22,11 @@ Collaboration diagram for dsu\+\_\+ds\+::dsu\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structdsu__ds_1_1dsu_ada73da3392d6444f9b29d60669f3c762}{dsu}} (const \mbox{\hyperlink{structll}{ll}} n)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a dsu with n elements. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}{find}} (\mbox{\hyperlink{structll}{ll}} x) const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the representative element of x. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structdsu__ds_1_1dsu_a11446b57ae0bf69361258cb4ee2fd212}{join}} (\mbox{\hyperlink{structll}{ll}} x, \mbox{\hyperlink{structll}{ll}} y)
-\begin{DoxyCompactList}\small\item\em Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Joins the set containing x with the set containing y. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +46,11 @@ Disjoint-\/set data structure.
 \doxysubsubsection{\texorpdfstring{dsu()}{dsu()}}
 {\footnotesize\ttfamily dsu\+\_\+ds\+::dsu\+::dsu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
-Construct a dsu with n elements. Initially each element is in its own set. 
+
+
+Construct a dsu with n elements. 
+
+Initially each element is in its own set. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}\label{structdsu__ds_1_1dsu_a5a58bd229ccd7eac0892b762d178981c}} 
@@ -55,7 +59,11 @@ Construct a dsu with n elements. Initially each element is in its own set.
 \doxysubsubsection{\texorpdfstring{find()}{find()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} dsu\+\_\+ds\+::dsu\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the representative element of x Here is the caller graph for this function\+:\nopagebreak
+
+
+Returns the representative element of x. 
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,8 +78,11 @@ Returns the representative element of x Here is the caller graph for this functi
 
 
 
-Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. 
+Joins the set containing x with the set containing y. 
 
+\begin{DoxyReturn}{Returns}
+true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

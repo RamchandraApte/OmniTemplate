@@ -67,21 +67,21 @@
             <dt>
               <span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-flat m-info">explicit</span> </span>
             </dt>
-            <dd></dd>
+            <dd>Construct a dsu with n elements.</dd>
           </dl>
         </section>
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
+            <dt id="a5a58bd229ccd7eac0892b762d178981c">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc-self">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
-            <dd></dd>
-            <dt id="a11446b57ae0bf69361258cb4ee2fd212">
-              <span class="m-doc-wrap-bumper">auto <a href="#a11446b57ae0bf69361258cb4ee2fd212" class="m-doc-self">join</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x,
+            <dd>Returns the representative element of x.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a11446b57ae0bf69361258cb4ee2fd212" class="m-doc">join</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x,
               <a href="structll.html" class="m-doc">ll</a> y) -&gt; bool</span>
             </dt>
-            <dd>Joins the set containing x with the set containing y Returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.</dd>
+            <dd>Joins the set containing x with the set containing y.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
@@ -103,13 +103,23 @@
             <h3>
               <span class="m-doc-wrap-bumper"> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc-self">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-info">explicit</span> </span></span>
             </h3>
-<p>Construct a dsu with n elements. Initially each element is in its own set.</p>
+            <p>Construct a dsu with n elements.</p>
+<p>Initially each element is in its own set.</p>
           </div></section>
-          <section class="m-doc-details" id="a5a58bd229ccd7eac0892b762d178981c"><div>
+          <section class="m-doc-details" id="a11446b57ae0bf69361258cb4ee2fd212"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc-self">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const</span></span>
+              <span class="m-doc-wrap-bumper">bool dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a11446b57ae0bf69361258cb4ee2fd212" class="m-doc-self">join</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x,
+              <a href="structll.html" class="m-doc">ll</a> y)</span></span>
             </h3>
-<p>Returns the representative element of x</p>
+            <p>Joins the set containing x with the set containing y.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.</td>
+                </tr>
+              </tfoot>
+            </table>
           </div></section>
         </section>
         <section>
