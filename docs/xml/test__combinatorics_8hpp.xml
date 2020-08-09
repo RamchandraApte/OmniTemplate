@@ -97,6 +97,42 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="combinatorics_8hpp" kindref="compound">combinatorics.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacecombinatorics_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecombinatorics_1_1test" kindref="compound">combinatorics::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="namespacecombinatorics_1_1test_1afa19fd10b0370b61660f897eb66f8875" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1_1test_1afa19fd10b0370b61660f897eb66f8875" kindref="member">test_perm</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>(4,<sp/>2)<sp/>==<sp/>4<sp/>*<sp/>3);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>(4,<sp/>4)<sp/>==<sp/>4<sp/>*<sp/>3<sp/>*<sp/>2<sp/>*<sp/>1);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>(4,<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>(0,<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>(1,<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>(1,<sp/>1)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12" refid="namespacecombinatorics_1_1test_1a8936aa7ea767d4ccba752f2a5c54785f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1_1test_1a8936aa7ea767d4ccba752f2a5c54785f" kindref="member">test_fact</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref>(4)<sp/>==<sp/>4<sp/>*<sp/>3<sp/>*<sp/>2<sp/>*<sp/>1);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref>(0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref>(1)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref>(8)<sp/>==<sp/>8<sp/>*<sp/>7<sp/>*<sp/>6<sp/>*<sp/>5<sp/>*<sp/>4<sp/>*<sp/>3<sp/>*<sp/>2<sp/>*<sp/>1);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18" refid="namespacecombinatorics_1_1test_1a02b85c66d33799029d94ecfbb7c8b062" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1_1test_1a02b85c66d33799029d94ecfbb7c8b062" kindref="member">test_choose</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(5,<sp/>2)<sp/>==<sp/>10);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(5,<sp/>3)<sp/>==<sp/>10);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(5,<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(5,<sp/>5)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(0,<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(1,<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(1,<sp/>1)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" kindref="member">choose</ref>(6,<sp/>3)<sp/>==<sp/>20);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28" refid="namespacecombinatorics_1_1test_1a28cd50807d464588cc9b5add7bed4f97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1_1test_1a28cd50807d464588cc9b5add7bed4f97" kindref="member">test_combinatorics</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacecombinatorics_1_1test_1afa19fd10b0370b61660f897eb66f8875" kindref="member">test_perm</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacecombinatorics_1_1test_1a8936aa7ea767d4ccba752f2a5c54785f" kindref="member">test_fact</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacecombinatorics_1_1test_1a02b85c66d33799029d94ecfbb7c8b062" kindref="member">test_choose</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>combinatorics::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecombinatorics_1_1test" kindref="compound">combinatorics::test</ref>;</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/combinatorics/test_combinatorics.hpp"/>
   </compounddef>
 </doxygen>

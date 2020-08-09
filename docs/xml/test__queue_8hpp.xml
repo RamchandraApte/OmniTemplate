@@ -97,6 +97,69 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="queue_8hpp" kindref="compound">queue.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacequeue__tools_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacequeue__tools_1_1test" kindref="compound">queue_tools::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="namespacequeue__tools_1_1test_1a6fd4ee97af3a8636da778c03cef44c14" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacequeue__tools_1_1test_1a6fd4ee97af3a8636da778c03cef44c14" kindref="member">test_queueadaptor</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classqueue__tools_1_1QueueAdaptor" kindref="compound">QueueAdaptor&lt;stack&lt;ll&gt;</ref>&gt;<sp/>q;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(4);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(5);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(6);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(7);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(8);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1adfb78c6b9828b06e9c8f29ae56b43078" kindref="member">size</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a65573a420692f22b4274313469f3688b" kindref="member">empty</ref>());</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a603c22db9148d592426c73e53ad88178" kindref="member">front</ref>()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a70c630a800a12e880917ffc2ccbd1153" kindref="member">back</ref>()<sp/>==<sp/>8);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a603c22db9148d592426c73e53ad88178" kindref="member">front</ref>()<sp/>==<sp/>7);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a70c630a800a12e880917ffc2ccbd1153" kindref="member">back</ref>()<sp/>==<sp/>8);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a603c22db9148d592426c73e53ad88178" kindref="member">front</ref>()<sp/>==<sp/>8);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a70c630a800a12e880917ffc2ccbd1153" kindref="member">back</ref>()<sp/>==<sp/>8);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1adfb78c6b9828b06e9c8f29ae56b43078" kindref="member">size</ref>()<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a65573a420692f22b4274313469f3688b" kindref="member">empty</ref>());</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(4);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a603c22db9148d592426c73e53ad88178" kindref="member">front</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(q.<ref refid="classqueue__tools_1_1QueueAdaptor_1a70c630a800a12e880917ffc2ccbd1153" kindref="member">back</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29" refid="namespacequeue__tools_1_1test_1a82af7ed59099217b26702a8b7c1f1d40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacequeue__tools_1_1test_1a82af7ed59099217b26702a8b7c1f1d40" kindref="member">test_minstack</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classqueue__tools_1_1MinStack" kindref="compound">MinStack&lt;ll&gt;</ref><sp/>ms;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>ms.<ref refid="classqueue__tools_1_1MinStack_1a9d9144961b94102610066192b64b6efa" kindref="member">push</ref>(2);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>ms.<ref refid="classqueue__tools_1_1MinStack_1a9d9144961b94102610066192b64b6efa" kindref="member">push</ref>(5);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(ms.<ref refid="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" kindref="member">min</ref>()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ms.pop();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ms.<ref refid="classqueue__tools_1_1MinStack_1a9d9144961b94102610066192b64b6efa" kindref="member">push</ref>(1);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(ms.<ref refid="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" kindref="member">min</ref>()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>ms.pop();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(ms.<ref refid="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" kindref="member">min</ref>()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40" refid="namespacequeue__tools_1_1test_1abbd87df8add26a608947323b21bb1921" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacequeue__tools_1_1test_1abbd87df8add26a608947323b21bb1921" kindref="member">test_minqueue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classqueue__tools_1_1MinQueue" kindref="compound">MinQueue&lt;ll&gt;</ref><sp/>mq;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mq.<ref refid="classqueue__tools_1_1MinQueue_1a73bf3796b5aadd9098a2d1cee3485739" kindref="member">min</ref>()<sp/>==<sp/><ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>mq.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(3);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>mq.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(5);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mq.<ref refid="classqueue__tools_1_1MinQueue_1a73bf3796b5aadd9098a2d1cee3485739" kindref="member">min</ref>()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>mq.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mq.<ref refid="classqueue__tools_1_1MinQueue_1a73bf3796b5aadd9098a2d1cee3485739" kindref="member">min</ref>()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>mq.<ref refid="classqueue__tools_1_1QueueAdaptor_1a5857db040da0411af2957d3d44783808" kindref="member">push</ref>(4);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mq.<ref refid="classqueue__tools_1_1MinQueue_1a73bf3796b5aadd9098a2d1cee3485739" kindref="member">min</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>mq.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mq.<ref refid="classqueue__tools_1_1MinQueue_1a73bf3796b5aadd9098a2d1cee3485739" kindref="member">min</ref>()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>mq.<ref refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(mq.<ref refid="classqueue__tools_1_1MinQueue_1a73bf3796b5aadd9098a2d1cee3485739" kindref="member">min</ref>()<sp/>==<sp/><ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55" refid="namespacequeue__tools_1_1test_1ae0e3be2c757c8f50b8baee654071b01e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacequeue__tools_1_1test_1ae0e3be2c757c8f50b8baee654071b01e" kindref="member">test_queue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacequeue__tools_1_1test_1a82af7ed59099217b26702a8b7c1f1d40" kindref="member">test_minstack</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacequeue__tools_1_1test_1a6fd4ee97af3a8636da778c03cef44c14" kindref="member">test_queueadaptor</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacequeue__tools_1_1test_1abbd87df8add26a608947323b21bb1921" kindref="member">test_minqueue</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>queue_tools::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacequeue__tools_1_1test" kindref="compound">queue_tools::test</ref>;</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/ds/test_queue.hpp"/>
   </compounddef>
 </doxygen>

@@ -37,7 +37,7 @@ using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{rando
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a6e069fcf8b422fbc525eba2543e36a6e}{cache}} (const T \&f)
 \item 
 {\footnotesize template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ }\\auto \mbox{\hyperlink{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}{uniq}} (Cont v, Eq const \&up=Eq\{\}, T const \&sp=T\{\})
-\item 
+\begin{DoxyCompactList}\small\item\em Remove all duplicates element from. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}{key\+\_\+compare}} (const Func \&f, T g=T\{\})
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a50e9430d1096ce6997ae910135a9533f}{prev\+\_\+less}} (const T \&v)
@@ -200,7 +200,18 @@ Stable sorts a and b by func.Here is the caller graph for this function\+:\nopag
 {\footnotesize\ttfamily template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ \\
 auto utility\+::uniq (\begin{DoxyParamCaption}\item[{Cont}]{v,  }\item[{Eq const \&}]{up = {\ttfamily Eq\{\}},  }\item[{T const \&}]{sp = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
 
-Remove all duplicates element from v so that all elements in v are distinct and sorted Here is the caller graph for this function\+:\nopagebreak
+
+
+Remove all duplicates element from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & so that all elements in\\
+\hline
+{\em v} & are distinct and sorted \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

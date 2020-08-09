@@ -204,6 +204,44 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight></codeline>
+<codeline lineno="5" refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" refkind="member"><highlight class="normal">pair&lt;array&lt;ll,<sp/>2&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>&gt;<sp/><ref refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" kindref="member">tree_diameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>&amp;g)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a" kindref="member">BFS</ref><sp/>b{g};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>b();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>b.queue.back();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a" kindref="member">BFS</ref><sp/>b2{g};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>b2(u);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>b2.queue.back();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>v;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>b2.distance[v]<sp/>/<sp/>2)<sp/>{<sp/>c<sp/>=<sp/>b2.parent[c];<sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{{u,<sp/>v},<sp/>c};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16" refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" kindref="member">test_tree_diameter</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>graph(5);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>2);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>0,<sp/>4);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" kindref="member">tree_diameter</ref>(graph);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>.first));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>.first<sp/>==<sp/>array&lt;ll,<sp/>2&gt;{1,<sp/>4}));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>.second<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>graph(5);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>2);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>4);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" kindref="member">tree_diameter</ref>(graph).first;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>[0]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/graph/tree/tree.hpp"/>
   </compounddef>
 </doxygen>

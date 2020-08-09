@@ -91,6 +91,67 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utility_8hpp" kindref="compound">utility.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespaceutility_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility_1_1test" kindref="compound">utility::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="namespaceutility_1_1test_1a5b509a14966e453c36c0b3263b8c73f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a5b509a14966e453c36c0b3263b8c73f3" kindref="member">test_with</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>var<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inner_func<sp/>=<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_w(23,<sp/>var);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(var<sp/>==<sp/>23);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>=<sp/>45;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>inner_func();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(var<sp/>==<sp/>12);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14" refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" kindref="member">test_uniq</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespaceutility_1a531cc980b5de78f0c2f36ae3210cb9cf" kindref="member">uniq</ref>(<ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{2,<sp/>-1,<sp/>3,<sp/>-1,<sp/>2,<sp/>3})<sp/>==<sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{-1,<sp/>2,<sp/>3}));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespaceutility_1a531cc980b5de78f0c2f36ae3210cb9cf" kindref="member">uniq</ref>&lt;equal_to&lt;&gt;,<sp/>greater&lt;&gt;&gt;(<ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{1,<sp/>-3,<sp/>5})<sp/>==<sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{5,<sp/>1,<sp/>-3}));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18" refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" kindref="member">test_key_compare</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/>a{24,<sp/>25};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" kindref="member">key_compare</ref>&lt;greater&lt;&gt;&gt;([&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>i)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a[i];<sp/>})(1,<sp/>0));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22" refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" kindref="member">test_bit_ceil</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(0)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(1)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(2)<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(3)<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(4)<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(5)<sp/>==<sp/>8);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>((1LL<sp/>&lt;&lt;<sp/>45)<sp/>-<sp/>100)<sp/>==<sp/>1LL<sp/>&lt;&lt;<sp/>45);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>((1LL<sp/>&lt;&lt;<sp/>45))<sp/>==<sp/>1LL<sp/>&lt;&lt;<sp/>45);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32" refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" kindref="member">test_next_comb</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x<sp/>=<sp/>0b111;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" kindref="member">next_comb</ref>(x);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>==<sp/>0b1011);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" kindref="member">next_comb</ref>(x);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>==<sp/>0b1101);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" kindref="member">next_comb</ref>(x);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>==<sp/>0b1110);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>0b1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" kindref="member">next_comb</ref>(x);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>==<sp/>0b10);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" kindref="member">next_comb</ref>(x);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(x<sp/>==<sp/>0b100);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46" refid="namespaceutility_1_1test_1a2a5b83eea34a4e85d3d8ec37b9f1f774" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a2a5b83eea34a4e85d3d8ec37b9f1f774" kindref="member">test_ar</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(is_same_v&lt;<ref refid="namespaceutility_1a5527c46ab55c32f4bdf48a47564e3cf0" kindref="member">ar_t</ref>&lt;<ref refid="structll" kindref="compound">ll</ref>[2][3]&gt;,<sp/>array&lt;array&lt;ll,<sp/>3&gt;,<sp/>2&gt;&gt;);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(is_same_v&lt;<ref refid="namespaceutility_1a5527c46ab55c32f4bdf48a47564e3cf0" kindref="member">ar_t</ref>&lt;array&lt;ll,<sp/>200&gt;[2][3]&gt;,<sp/>array&lt;array&lt;array&lt;ll,<sp/>200&gt;,<sp/>3&gt;,<sp/>2&gt;&gt;);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50" refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" kindref="member">test_utility</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a5b509a14966e453c36c0b3263b8c73f3" kindref="member">test_with</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" kindref="member">test_uniq</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" kindref="member">test_next_comb</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a2a5b83eea34a4e85d3d8ec37b9f1f774" kindref="member">test_ar</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" kindref="member">test_bit_ceil</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" kindref="member">test_key_compare</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>utility::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility_1_1test" kindref="compound">utility::test</ref>;</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/test_utility.hpp"/>
   </compounddef>
 </doxygen>

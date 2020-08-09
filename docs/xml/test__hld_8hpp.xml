@@ -203,6 +203,37 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hld_8hpp" kindref="compound">hld.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacehld_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehld_1_1test" kindref="compound">hld::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="namespacehld_1_1test_1a2c2ea10aedda3e4e51f08d38ea3fa3f0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacehld_1_1test_1a2c2ea10aedda3e4e51f08d38ea3fa3f0" kindref="member">test_hld</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/><ref refid="namespacetree" kindref="compound">tree</ref>(6);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(<ref refid="namespacetree" kindref="compound">tree</ref>,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(<ref refid="namespacetree" kindref="compound">tree</ref>,<sp/>1,<sp/>5);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(<ref refid="namespacetree" kindref="compound">tree</ref>,<sp/>0,<sp/>2);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(<ref refid="namespacetree" kindref="compound">tree</ref>,<sp/>2,<sp/>3);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(<ref refid="namespacetree" kindref="compound">tree</ref>,<sp/>2,<sp/>4);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/>data{5,<sp/>3,<sp/>6,<sp/>1,<sp/>2,<sp/>7};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classhld_1_1HLD" kindref="compound">HLD&lt;ll, plus&lt;&gt;</ref>,<sp/><ref refid="classsparse__table_1_1DisjointSparseTable" kindref="compound">DisjointSparseTable&lt;ll, plus&lt;&gt;</ref>&gt;&gt;<sp/><ref refid="namespacehld" kindref="compound">hld</ref>{<ref refid="namespacetree" kindref="compound">tree</ref>,<sp/>data};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5<sp/>-&gt;<sp/>1<sp/>-&gt;<sp/>0<sp/>-&gt;<sp/>2<sp/>-&gt;<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sum_of_idxs<sp/>=<sp/>[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;ll&gt;<sp/>&amp;idxs)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>u<sp/>:<sp/>idxs)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>data[u];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacehld" kindref="compound">hld</ref>.query(5,<sp/>4)<sp/>==<sp/>sum_of_idxs({5,<sp/>1,<sp/>0,<sp/>2,<sp/>4})));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacehld" kindref="compound">hld</ref>.query(1,<sp/>0)<sp/>==<sp/>sum_of_idxs({1,<sp/>0})));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacehld" kindref="compound">hld</ref>.query(0,<sp/>1)<sp/>==<sp/>sum_of_idxs({0,<sp/>1})));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacehld" kindref="compound">hld</ref>.query(2,<sp/>1)<sp/>==<sp/>sum_of_idxs({2,<sp/>0,<sp/>1})));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacehld" kindref="compound">hld</ref>.query(4,<sp/>3)<sp/>==<sp/>sum_of_idxs({4,<sp/>2,<sp/>3})));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacehld" kindref="compound">hld</ref>.query(4,<sp/>4)<sp/>==<sp/>sum_of_idxs({4})));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>hld::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacehld_1_1test" kindref="compound">hld::test</ref>;</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp"/>
   </compounddef>
 </doxygen>

@@ -16,7 +16,7 @@ auto dot(point const &a, point const &b) {
 auto wedge(point const &a, point const &b) {
 	/*! Returns the wedge product of 2D vectors a and b, \f$a \wedge b\f$.
 	 * This is the signed area of the parallelogram spanned by vectors
-	 * \f$\vec{f}\f$ and \f$\vec{b}\f$.*/
+	 * \f$\vec{a}\f$ and \f$\vec{b}\f$.*/
 	return imag(conj(a) * b);
 }
 auto area(const point &a, const point &b, const point &c) {

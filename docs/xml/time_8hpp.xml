@@ -123,6 +123,33 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacetime__tools" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetime__tools" kindref="compound">time_tools</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="structtime__tools_1_1timer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(clock_::now())<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>;</highlight></codeline>
+<codeline lineno="8" refid="structtime__tools_1_1timer_1a7fe96a11cb200ff618cdc06c239cd1c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref>()<sp/>:<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>(<ref refid="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" kindref="member">clock_</ref>::now())<sp/>{}</highlight></codeline>
+<codeline lineno="9" refid="structtime__tools_1_1timer_1a9dec58724371809e1822c943cb94bfba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer_1a9dec58724371809e1822c943cb94bfba" kindref="member">~timer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>duration:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>duration&lt;ld&gt;(clock_::now()<sp/>-<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>).count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>s&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15" refid="namespacetime__tools_1a4d00a3da24d192703891d9dba336e6b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacetime__tools_1a4d00a3da24d192703891d9dba336e6b5" kindref="member">bench</ref>(Func<sp/>a)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(a)<sp/>ans<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>a;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans<sp/>+=<sp/>((-i)<sp/>%<sp/>(j));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>avoid<sp/>the<sp/>benchmark<sp/>from<sp/>being<sp/>optimized<sp/>out.<sp/>I<sp/>don&apos;t<sp/>know<sp/>if<sp/>this<sp/>actually<sp/>works.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>_unused<sp/>=<sp/>ans;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>time_tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetime__tools" kindref="compound">time_tools</ref>;</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/time.hpp"/>
   </compounddef>
 </doxygen>

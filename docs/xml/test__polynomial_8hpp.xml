@@ -97,6 +97,29 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="polynomial_8hpp" kindref="compound">polynomial.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="namespacepolynomial__ns_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepolynomial__ns_1_1test" kindref="compound">polynomial_ns::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="3" refid="namespacepolynomial__ns_1_1test_1a5ed51dd96ea5d0597e0c721fb647bfcc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepolynomial__ns_1_1test_1a5ed51dd96ea5d0597e0c721fb647bfcc" kindref="member">test_polynomial</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_w{1e9<sp/>+<sp/>7,<sp/>modulo::modulus};</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>poly<sp/>=<sp/><ref refid="classpolynomial__ns_1_1Polynomial" kindref="compound">Polynomial&lt;modulo&gt;</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>poly<sp/>p1{1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>poly<sp/>p2{2,<sp/>-3};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*3x^2+2x+1</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/>-3x+2</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>4x+1*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((p2<sp/>*<sp/>p1<sp/>==<sp/>p1<sp/>*<sp/>p2<sp/>&amp;&amp;<sp/>p1<sp/>*<sp/>p2<sp/>==<sp/>poly{2,<sp/>1,<sp/>0,<sp/>-9,<sp/>0,<sp/>0}));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((p2<sp/>+<sp/>p1<sp/>==<sp/>p1<sp/>+<sp/>p2<sp/>&amp;&amp;<sp/>p1<sp/>+<sp/>p2<sp/>==<sp/>poly{3,<sp/>-1,<sp/>3,<sp/>0}));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((p1<sp/>+<sp/>p2<sp/>!=<sp/>poly{3,<sp/>-1,<sp/>3,<sp/>1}));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((poly{3}<sp/>*<sp/>p2<sp/>==<sp/>poly{6,<sp/>-9}));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((p1<sp/>%<sp/>p2<sp/>==<sp/>poly{11_M<sp/>/<sp/>3_M}));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((p1<sp/>%<sp/>poly{2}<sp/>==<sp/>poly{}));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((p2<sp/>%<sp/>p1<sp/>==<sp/>p2));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>polynomial_ns::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepolynomial__ns_1_1test" kindref="compound">polynomial_ns::test</ref>;</highlight></codeline>
+    </programlisting>
     <location file="/home/ram/OmniTemplate/src/algebra/test_polynomial.hpp"/>
   </compounddef>
 </doxygen>

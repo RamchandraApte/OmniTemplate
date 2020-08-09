@@ -3,6 +3,8 @@ project(OmniTemplate)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(mcss_exe $ENV{HOME}/m.css/documentation/doxygen.py)
+add_custom_target(docs COMMAND ${mcss_exe} ${CMAKE_SOURCE_DIR}/docs/conf.py COMMAND python3 ${CMAKE_SOURCE_DIR}/docs/fix_qhp.py COMMAND qhelpgenerator ${CMAKE_SOURCE_DIR}/docs/html/index.qhp COMMENT "Generating documentation using m-css and doxygen")
 
 add_executable(test src/test/test.cpp)
 include_directories(src/ src/graph)
