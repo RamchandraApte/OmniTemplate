@@ -1,3 +1,4 @@
+#pragma once
 #include "flow.hpp"
 namespace flow::test {
 template <typename Func> void test_flow_algo(const Func &algo) {

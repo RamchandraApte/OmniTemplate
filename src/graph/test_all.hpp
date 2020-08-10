@@ -1,6 +1,9 @@
 #pragma once
 #include "all.hpp"
+#include "test_biconnected.hpp"
 #include "test_bipartite.hpp"
+#include "test_flow.hpp"
+#include "tree/test_centroid.hpp"
 namespace graph_theory::test {
 void test_BFS() {
 	GraphAdj g(4);
@@ -78,6 +81,7 @@ void test_graph_theory() {
 	test_bipartite();
 	test_sat2();
 	test_graph_view();
+	test_centroid_decomp();
 }
 } // namespace graph_theory::test
 using namespace graph_theory::test;

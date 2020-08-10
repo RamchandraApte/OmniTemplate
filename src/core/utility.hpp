@@ -61,6 +61,7 @@ ll bit_ceil(ll x) {
 	}
 	return 1LL << (sizeof(ll) * CHAR_BIT - __builtin_clzll(x - 1));
 }
+// TODO: power_ceil for base 2
 ll power_ceil(const ll x, const ll base) {
 	ll pw = 1;
 	for (; pw < x; pw *= base)
