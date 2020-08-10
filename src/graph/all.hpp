@@ -3,14 +3,14 @@
 #include "core/all.hpp"
 #include "ds/dsu.hpp"
 namespace graph_theory {
-//!< Adjacency-list representation of graph
+//! Adjacency-list representation of graph
 using GraphAdj = vector<vector<ll>>;
-//!< Edge with weight weight from a to b
+//! Edge with weight weight from a to b
 struct edge {
 	ll weight, a, b;
 	auto to_tuple() const { return tuple{weight, a, b}; }
 };
-/**@ brief Compare the edges by weight, with ties compared by a and b*/
+/** @brief Compare the edges by weight, with ties compared by a and b*/
 bool operator<(edge const &a, edge const &b) {
 	return a.to_tuple() < b.to_tuple();
 }
@@ -21,8 +21,8 @@ bool operator==(edge const &a, edge const &b) {
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	return os << "edge{" << e.a << "-(" << e.weight << ")>" << e.b << "}";
 }
+/** @brief Adds edge \f$u \leftrightarrow v\f$ to graph graph*/
 auto add_edge(GraphAdj &graph, ll u, ll v) {
-	/*! Adds edge \f$u \leftrightarrow v\f$ to graph graph*/
 	graph[u].push_back(v);
 	graph[v].push_back(u);
 }
@@ -122,7 +122,7 @@ template <typename Searcher> vector<ll> get_size(const Searcher &search) {
 /** @brief Depth-first search */
 template <typename Graph = GraphAdj> struct DFS : public GeneralSearch<DFS<Graph>, Graph> {
 	using GeneralSearch_t = GeneralSearch<DFS, Graph>;
-	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
+	using GeneralSearch_t::operator(), typename GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
 		this.visited[source] = true;
 		for (const auto &j : this.graph[source]) {
@@ -139,7 +139,7 @@ template <typename Graph> DFS(Graph) -> DFS<Graph>;
 /** @brief Breadth-first search*/
 template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Graph> {
 	using GeneralSearch_t = GeneralSearch<BFS, Graph>;
-	using GeneralSearch_t::operator(), GeneralSearch_t::GeneralSearch;
+	using GeneralSearch_t::operator(), typename GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
 		ll old_size = this.queue.size();
 		this.queue.push_back(source);
@@ -161,40 +161,34 @@ template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Grap
 template <typename Graph> BFS(Graph) -> BFS<Graph>;
 /** @brief Returns the transpose graph of directed graph */
 auto trans(const GraphAdj &graph) {
-	ll n = size(graph);
-	GraphAdj h(n);
-	fo(i, n) {
+	GraphAdj h(graph.size());
+	fo(i, graph.size()) {
 		for (ll j : graph[i]) {
 			h[j].push_back(i);
 		}
 	}
 	return h;
 }
-#include "biconnected.hpp"
-#include "flow.hpp"
-#include "graph_view.hpp"
-#include "test_flow.hpp"
-#include "tree/tree.hpp"
 /** @brief Returns the strongly connected component for each vertex of the
  * graph g.*/
 auto scc(const GraphAdj &graph) {
-	auto h = trans(graph);
-	vector<ll> cm(size(graph), -1);
+	const auto h = trans(graph);
+	vector<ll> comp(size(graph), -1);
 	auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
-		if (cm[u] != -1) {
+		if (comp[u] != -1) {
 			return;
 		}
-		cm[u] = c;
+		comp[u] = c;
 		for (ll v : h[u]) {
 			assign(v, c);
 		}
 	}};
-	DFS s{graph};
-	s();
-	for (ll i : s.queue) {
+	DFS dfs{graph};
+	dfs();
+	for (ll i : dfs.queue) {
 		assign(i, i);
 	}
-	return cm;
+	return comp;
 }
 auto graph_in(GraphAdj &g, ll m) {
 	/*! Reads 1-indexed list of edges into graph g*/
@@ -206,4 +200,9 @@ auto graph_in(GraphAdj &g, ll m) {
 }
 } // namespace graph_theory
 using namespace graph_theory;
+#include "biconnected.hpp"
 #include "bipartite.hpp"
+#include "flow.hpp"
+#include "graph_view.hpp"
+#include "test_flow.hpp"
+#include "tree/tree.hpp"
