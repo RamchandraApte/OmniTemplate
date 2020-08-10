@@ -157,13 +157,13 @@
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree_8hpp_1a202200d4d06aea05b7638be837590286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pair&lt; array&lt; <ref refid="structll" kindref="compound">ll</ref>, 2 &gt;, <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
         <definition>pair&lt;array&lt;ll, 2&gt;, ll&gt; tree_diameter</definition>
-        <argsstring>(const vector&lt; vector&lt; ll &gt;&gt; &amp;g)</argsstring>
+        <argsstring>(const GraphAdj &amp;g)</argsstring>
         <name>tree_diameter</name>
         <param>
-          <type>const vector&lt; vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;&gt; &amp;</type>
+          <type>const GraphAdj &amp;</type>
           <declname>g</declname>
         </param>
         <briefdescription>
@@ -177,6 +177,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/tree/tree.hpp" line="5" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/tree.hpp" bodystart="5" bodyend="15"/>
+        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
         <references refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a">graph_theory::BFS</references>
         <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
         <referencedby refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" compoundref="tree_8hpp" startline="16" endline="38">test_tree_diameter</referencedby>
@@ -193,11 +194,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/tree/tree.hpp" line="16" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/tree.hpp" bodystart="16" bodyend="38"/>
-        <references refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" compoundref="graph_2all_8hpp" startline="24" endline="28">graph_theory::add_edge</references>
+        <references refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" compoundref="graph_2all_8hpp" startline="25" endline="28">graph_theory::add_edge</references>
         <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
-        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="90">ret</references>
-        <references refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" compoundref="tree_8hpp" startline="5" endline="15">tree_diameter</references>
-        <referencedby refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" compoundref="test__all_8hpp" startline="68" endline="81">graph_theory::test::test_graph_theory</referencedby>
+        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="89">ret</references>
+        <references refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" compoundref="tree_8hpp" startline="5" endline="15">tree_diameter</references>
+        <referencedby refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" compoundref="test__all_8hpp" startline="71" endline="85">graph_theory::test::test_graph_theory</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -207,10 +208,10 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight></codeline>
-<codeline lineno="5" refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" refkind="member"><highlight class="normal">pair&lt;array&lt;ll,<sp/>2&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>&gt;<sp/><ref refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" kindref="member">tree_diameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>&amp;g)<sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a" kindref="member">BFS</ref><sp/>b{g};</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>b();</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>b.queue.back();</highlight></codeline>
+<codeline lineno="5" refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" refkind="member"><highlight class="normal">pair&lt;array&lt;ll,<sp/>2&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>&gt;<sp/><ref refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" kindref="member">tree_diameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>&amp;g)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a" kindref="member">BFS</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>{g};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>u<sp/>=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.queue.back();</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a" kindref="member">BFS</ref><sp/>b2{g};</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>b2(u);</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>b2.queue.back();</highlight></codeline>
@@ -220,23 +221,23 @@
 <codeline lineno="15"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="16" refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" kindref="member">test_tree_diameter</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>graph(5);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>1,<sp/>3);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>2);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>2,<sp/>0);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>0,<sp/>4);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" kindref="member">tree_diameter</ref>(graph);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>graph(5);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>2);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>0,<sp/>4);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" kindref="member">tree_diameter</ref>(graph);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>.first));</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>.first<sp/>==<sp/>array&lt;ll,<sp/>2&gt;{1,<sp/>4}));</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>.second<sp/>==<sp/>2);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>graph(5);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>1,<sp/>3);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>2);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>2,<sp/>0);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>4);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="tree_8hpp_1a1e3385a1611e3921d5344fed4db8c54c" kindref="member">tree_diameter</ref>(graph).first;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>graph(5);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>2);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>2,<sp/>0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(graph,<sp/>3,<sp/>4);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" kindref="member">tree_diameter</ref>(graph).first;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>));</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>[0]<sp/>==<sp/>0);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

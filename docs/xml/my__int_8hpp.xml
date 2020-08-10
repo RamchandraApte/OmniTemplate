@@ -15,12 +15,6 @@
       </node>
     </incdepgraph>
     <innerclass refid="structll" prot="public">ll</innerclass>
-    <innerclass refid="structstd_1_1hash_3_01ll_01_4" prot="public">std::hash&lt; ll &gt;</innerclass>
-    <innerclass refid="structstd_1_1is__integral_3_01ll_01_4" prot="public">std::is_integral&lt; ll &gt;</innerclass>
-    <innerclass refid="structstd_1_1is__unsigned_3_01ll_01_4" prot="public">std::is_unsigned&lt; ll &gt;</innerclass>
-    <innerclass refid="structstd_1_1is__signed_3_01ll_01_4" prot="public">std::is_signed&lt; ll &gt;</innerclass>
-    <innerclass refid="structstd_1_1numeric__limits_3_01ll_01_4" prot="public">std::numeric_limits&lt; ll &gt;</innerclass>
-    <innernamespace refid="namespacestd">std</innernamespace>
       <sectiondef kind="define">
       <memberdef kind="define" id="my__int_8hpp_1a896acbe39c98c053f809a8001774ab6f" prot="public" static="no">
         <name>opi</name>
@@ -50,8 +44,8 @@
         <param><defname>op</defname></param>
         <param><defname>T1</defname></param>
         <param><defname>T2</defname></param>
-        <initializer>	constexpr auto operator op(T1 a, T2 b) {                               \
-		return static_cast&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(a) op static_cast&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(b);               \
+        <initializer>	constexpr auto operator op(T1 a, T2 <ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>) {                               \
+		return static_cast&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(a) op static_cast&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);               \
 	}</initializer>
         <briefdescription>
         </briefdescription>
@@ -66,7 +60,7 @@
         <param><defname>op</defname></param>
         <param><defname>T1</defname></param>
         <param><defname>T2</defname></param>
-        <initializer><ref refid="my__int_8hpp_1a36d34dc408fc2b97bca91bf466563f18" kindref="member">mix1</ref>(op, T1, T2) <ref refid="my__int_8hpp_1a36d34dc408fc2b97bca91bf466563f18" kindref="member">mix1</ref>(op, T2, T1)</initializer>
+        <initializer><ref refid="my__int_8hpp_1ae29df473a08e7a414e5f9a3082548e00" kindref="member">mix1</ref>(op, T1, T2) <ref refid="my__int_8hpp_1ae29df473a08e7a414e5f9a3082548e00" kindref="member">mix1</ref>(op, T2, T1)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -78,8 +72,7 @@
       <memberdef kind="define" id="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" prot="public" static="no">
         <name>mixll</name>
         <param><defname>op</defname></param>
-        <initializer>	<ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, int) <ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, <ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>) <ref refid="my__int_8hpp_1a6f517c16e8b3947a66f2bf27bc3173e9" kindref="member">MIX128</ref>(op, <ref refid="structll" kindref="compound">ll</ref>) <ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, size_t)   \
-	    <ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, double)</initializer>
+        <initializer><ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, int) <ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, <ref refid="structll" kindref="compound">ll</ref>) <ref refid="my__int_8hpp_1a6f517c16e8b3947a66f2bf27bc3173e9" kindref="member">MIX128</ref>(op, <ref refid="structll" kindref="compound">ll</ref>) <ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, size_t) <ref refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" kindref="member">mix</ref>(op, <ref refid="structll" kindref="compound">ll</ref>, double)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -91,28 +84,114 @@
       <memberdef kind="define" id="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" prot="public" static="no">
         <name>bill</name>
         <param><defname>op</defname></param>
-        <initializer>	constexpr <ref refid="structll" kindref="compound">ll</ref> operator op(<ref refid="structll" kindref="compound">ll</ref> const &amp;a, <ref refid="structll" kindref="compound">ll</ref> const &amp;b) {                   \
-		return <ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(a) op <ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);                                       \
-	}</initializer>
+        <initializer>constexpr <ref refid="structll" kindref="compound">ll</ref> operator op(<ref refid="structll" kindref="compound">ll</ref> const &amp;a, <ref refid="structll" kindref="compound">ll</ref> const &amp;<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>) { return <ref refid="structll" kindref="compound">ll</ref>(a) op <ref refid="structll" kindref="compound">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>); }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="9" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="45" column="9" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" prot="public" static="no">
         <name>inh</name>
         <param><defname>cls</defname></param>
-        <initializer>template &lt;&gt; struct cls&lt;<ref refid="structll" kindref="compound">ll</ref>&gt; : cls&lt;<ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>&gt;</initializer>
+        <initializer>template &lt;&gt; struct cls&lt;<ref refid="structll" kindref="compound">ll</ref>&gt; : cls&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="75" column="9" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="75" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="71" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <initializer>{   return static_cast&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(a)  +  static_cast&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="305" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="-1"/>
+        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="74">conv</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a297c703d12bd9b758de47e299044d8f2" compoundref="linear__algebra_8hpp" startline="48" endline="55">linear_algebra::operator+</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a4d4a740fc0f97e6c2d867fdee2ebf6ab" compoundref="linear__algebra_8hpp" startline="63" endline="63">linear_algebra::operator==</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a0d0136db9933ef3b6a0d91efe567df28" compoundref="linear__algebra_8hpp" startline="64" endline="74">linear_algebra::operator*</referencedby>
+        <referencedby refid="namespacelinear__algebra_1aae153cb33e635039a84c8f6ebeed9b04" compoundref="linear__algebra_8hpp" startline="76" endline="76">linear_algebra::foo</referencedby>
+        <referencedby refid="namespacelinear__algebra_1aa35d330ed1d66664b874fc261902c7b5" compoundref="linear__algebra_8hpp" startline="80" endline="103">linear_algebra::gauss</referencedby>
+        <referencedby refid="namespacelinear__algebra_1a5b3d96b2e622f3682c9e5b91ba0a319b" compoundref="linear__algebra_8hpp" startline="105" endline="108">linear_algebra::operator/</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1aa06c74bf4632061996937366f1e57fb3" compoundref="polynomial_8hpp" startline="26" endline="33">polynomial_ns::operator+</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a1a0a44f111c2b3ebf29591ddbc778b1c" compoundref="polynomial_8hpp" startline="34" endline="40">polynomial_ns::operator*</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a1eca7e44f03795c0bef5d6a4ed2cacbd" compoundref="polynomial_8hpp" startline="41" endline="52">polynomial_ns::operator%</referencedby>
+        <referencedby refid="namespacepolynomial__ns_1a96e98a3ca4aea3fca6fbcee75e3c19a7" compoundref="polynomial_8hpp" startline="53" endline="59">polynomial_ns::operator==</referencedby>
+        <referencedby refid="namespacelinear__algebra_1_1test_1a58d68feee7c76f77519389051a942161" compoundref="test__linear__algebra_8hpp" startline="8" endline="14">linear_algebra::test::test_invert</referencedby>
+        <referencedby refid="namespacelinear__algebra_1_1test_1a9a0a8549e208f8a719d5450d21b339ed" compoundref="test__linear__algebra_8hpp" startline="15" endline="20">linear_algebra::test::test_matrix</referencedby>
+        <referencedby refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" compoundref="combinatorics_8hpp" startline="5" endline="9">combinatorics::perm</referencedby>
+        <referencedby refid="namespacecombinatorics_1a24ea271b6415a4679e019562f474d88f" compoundref="combinatorics_8hpp" startline="14" endline="17">combinatorics::choose</referencedby>
+        <referencedby refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" compoundref="permutation_8hpp" startline="53" endline="58">permutation::operator*</referencedby>
+        <referencedby refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" compoundref="core_2all_8hpp" startline="42" endline="42">lets_add::lets_add</referencedby>
+        <referencedby refid="namespacegraph__theory_1a4dbe54e2a6c2e93add66dc32c647c876" compoundref="graph_2all_8hpp" startline="14" endline="16">graph_theory::operator&lt;</referencedby>
+        <referencedby refid="namespacegraph__theory_1a9112d064de59f0aa5737bc1d90e9bf32" compoundref="graph_2all_8hpp" startline="17" endline="19">graph_theory::operator==</referencedby>
+        <referencedby refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" compoundref="graph_2all_8hpp" startline="29" endline="55">graph_theory::shortest_dist</referencedby>
+        <referencedby refid="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" compoundref="debug_8hpp" startline="19" endline="27">debug_tools::replace</referencedby>
+        <referencedby refid="operations_8hpp_1ae9e59a2d15287021fd21d14d2eb206c4" compoundref="operations_8hpp" startline="14" endline="14">operator/</referencedby>
+        <referencedby refid="operations_8hpp_1ab6822e2f5527212c7db6dd31be7f3ba6" compoundref="operations_8hpp" startline="16" endline="18">operator-</referencedby>
+        <referencedby refid="operations_8hpp_1a98ed0803268ba29fcc8977206b177923" compoundref="operations_8hpp" startline="20" endline="22">operator!=</referencedby>
+        <referencedby refid="operations_8hpp_1a1297749985d820e08c6c88a285dc80eb" compoundref="operations_8hpp" startline="23" endline="25">operator&lt;=</referencedby>
+        <referencedby refid="operations_8hpp_1ae3edbf9ffcbf3c8b40d15f6666442cef" compoundref="operations_8hpp" startline="26" endline="28">operator&gt;=</referencedby>
+        <referencedby refid="operations_8hpp_1ad8f1353b1f5665443a78d860006e9920" compoundref="operations_8hpp" startline="29" endline="31">operator&gt;</referencedby>
+        <referencedby refid="operations_8hpp_1a239c272472acf3f9ce7f2e44f0895160" compoundref="operations_8hpp" startline="32" endline="37">operator+</referencedby>
+        <referencedby refid="operations_8hpp_1a8acbbd6e305005c27020dfb9bbe27d5a" compoundref="operations_8hpp" startline="45" endline="50">operator|</referencedby>
+        <referencedby refid="operations_8hpp_1a9e98ecb7739ca6a5c0069a9a26d2a731" compoundref="operations_8hpp" startline="51" endline="60">operator&amp;</referencedby>
+        <referencedby refid="operations_8hpp_1a17c44ba56ddae051a9fdf806cab4bb7b" compoundref="operations_8hpp" startline="61" endline="68">sub_set</referencedby>
+        <referencedby refid="operations_8hpp_1a278d4d0450b96c1926a34fe49f29d602" compoundref="operations_8hpp" startline="73" endline="77">operator^</referencedby>
+        <referencedby refid="operations_8hpp_1a7fcf9006b0b6d5ce6b426ac6dea3b567" compoundref="operations_8hpp" startline="78" endline="83">operator*</referencedby>
+        <referencedby refid="structMax_1a4655e1340fe57b865ca75fb4b6bc6a05" compoundref="operations_8hpp" startline="105" endline="105">Max::operator()</referencedby>
+        <referencedby refid="structMin_1ad62e831f067eda6b8cb817f0c5893f8b" compoundref="operations_8hpp" startline="109" endline="109">Min::operator()</referencedby>
+        <referencedby refid="range_8hpp_1a5b1fcbc62cc963f6ab2598b13f114dd8" compoundref="range_8hpp" startline="51" endline="51">operator&lt;</referencedby>
+        <referencedby refid="range_8hpp_1a5eeb4818d038580518b4e590a066ec12" compoundref="range_8hpp" startline="61" endline="75">intersect</referencedby>
+        <referencedby refid="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" compoundref="utility_8hpp" startline="87" endline="92">utility::swap2</referencedby>
+        <referencedby refid="cht_8hpp_1a18b063c150d95a5ec77dab71218c4f48" compoundref="cht_8hpp" startline="4" endline="7">std::operator&lt;</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a884b15c6042069f32e237941b4047536" compoundref="cht_8hpp" startline="11" endline="15">convex_hull_trick::dot</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a4f9b285a0e38652eb9839ac60b39e34a" compoundref="cht_8hpp" startline="16" endline="21">convex_hull_trick::wedge</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1abeaee6745d46728e8edf0f80a1e92ddf" compoundref="cht_8hpp" startline="22" endline="24">convex_hull_trick::area</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" compoundref="cht_8hpp" startline="35" endline="41">convex_hull_trick::ccw</referencedby>
+        <referencedby refid="structpersistent_1_1first__cmp_1a7b8fbb5ea87d4bc3ab32ec623b06b6cb" compoundref="persistent_8hpp" startline="6" endline="8">persistent::first_cmp::operator()</referencedby>
+        <referencedby refid="classqueue__tools_1_1QueueAdaptor_1aab204b0f776af2b94156b69435b81df8" compoundref="queue_8hpp" startline="37" endline="53">queue_tools::QueueAdaptor&lt; MinStack&lt; T &gt; &gt;::pop</referencedby>
+        <referencedby refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" compoundref="splay__tree_8hpp" startline="144" endline="155">splay_tree::SplayTree&lt; T &gt;::join</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1_1test_1a9b689c83ba8f830281d1aabf43efd1e4" compoundref="test__cht_8hpp" startline="20" endline="34">convex_hull_trick::test::test_ccw</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1a49f9badd40714410a5ee8e010e73010a" compoundref="bipartite_8hpp" startline="5" endline="22">graph_theory::bipartite::color2</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1a4fb82505ab0cb90e7ddf16db6a87e366" compoundref="bipartite_8hpp" startline="25" endline="82">graph_theory::bipartite::max_match</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" compoundref="test__all_8hpp" startline="8" endline="18">graph_theory::test::test_BFS</referencedby>
+        <referencedby refid="test__biconnected_8hpp_1acecf2de539ad624328fba6f40a848ef1" compoundref="test__biconnected_8hpp" startline="13" endline="22">graph_disunion</referencedby>
+        <referencedby refid="structtree_1_1no_1a6706d57cfed232149e1af1c15dfd2dfa" compoundref="lca_8hpp" startline="17" endline="26">tree::no&lt; T &gt;::gt</referencedby>
+        <referencedby refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" compoundref="lca_8hpp" startline="28" endline="38">tree::no&lt; T &gt;::dp</referencedby>
+        <referencedby refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" compoundref="lca_8hpp" startline="40" endline="57">tree::lca</referencedby>
+        <referencedby refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" compoundref="tree_8hpp" startline="5" endline="15">tree_diameter</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" compoundref="modulo_8hpp" startline="11" endline="27">modulo_namespace::power</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" compoundref="modulo_8hpp" startline="29" endline="35">modulo_namespace::mod</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a0a666ddbbb5d4d02c4aee66be7577292" compoundref="modulo_8hpp" startline="37" endline="37">modulo_namespace::mod_eq</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1aa39044c62fae2707474b9960d257d9dd" compoundref="modulo_8hpp" startline="55" endline="58">modulo_namespace::operator+</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1a7d1e0e6527c5e49efdc1ef0780a055c8" compoundref="modulo_8hpp" startline="64" endline="76">modulo_namespace::operator*</referencedby>
+        <referencedby refid="namespacemodulo__namespace_1aac690d54b7665a90ca461724df8907c0" compoundref="modulo_8hpp" startline="77" endline="81">modulo_namespace::invert</referencedby>
+        <referencedby refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</referencedby>
+        <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="100">fac</referencedby>
+        <referencedby refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" compoundref="number__theory_8hpp" startline="102" endline="104">egcd</referencedby>
+        <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="119" endline="140">dlog</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1ae2f84cd254fbf1373fc273141ce470ed" compoundref="test__number__theory_8hpp" startline="28" endline="32">test_egcd</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" compoundref="test__number__theory_8hpp" startline="41" endline="56">test_dlog</referencedby>
+        <referencedby refid="structll_1afe1cbe7e5183933ed0a2e943d5850088" compoundref="my__int_8hpp" startline="28" endline="28">ll::operator+=</referencedby>
+        <referencedby refid="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" compoundref="my__int_8hpp" startline="53" endline="53">operator==</referencedby>
+        <referencedby refid="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" compoundref="my__int_8hpp" startline="54" endline="60">operator%</referencedby>
+        <referencedby refid="namespacestring__tools_1ae6f8c1cd029548c31fa4c1cfab06a52f" compoundref="string_8hpp" startline="111" endline="122">string_tools::operator==</referencedby>
+        <referencedby refid="namespacestring__tools_1a072e7010806806c68fa2f537b0677c74" compoundref="string_8hpp" startline="123" endline="134">string_tools::operator&lt;</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -135,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="14" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="14" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1af2b3846e8acafcb6f3213db0c0036252" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -156,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="77" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="71" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1aaa2f10d451711a02282b53f8d67322a9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -177,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="140" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="128" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a9b2eee581ee9ecf1605147ab0c35c575" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -198,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="203" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="185" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1ac6d529776051928bfb80844daec345a9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -219,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="266" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="242" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a0516ee37ba1334020c90320aedd2392b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -240,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="326" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="296" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a969b32b65ba433b56130ae656df66052" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -261,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="51" column="392" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="51" bodyend="51"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="47" column="356" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="47" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a16edb2064180aa002b50c0df6971ac76" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -282,7 +361,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="52" column="1" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="52" bodyend="55"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="48" column="1" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="48" bodyend="51"/>
+        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a1ad47cb4e54d783e97787f2d8180b26b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -303,7 +383,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="56" column="11" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="56" bodyend="56"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="52" column="11" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="52" bodyend="52"/>
+        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -324,7 +405,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="57" column="16" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="57" bodyend="57"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="53" column="16" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="53" bodyend="53"/>
+        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr <ref refid="structll" kindref="compound">ll</ref></type>
@@ -345,7 +427,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="58" column="14" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="58" bodyend="64"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="54" column="14" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="54" bodyend="60"/>
+        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1acd91be1fddd6cfafd08f6ec8bb5efcd1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -366,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="16" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="16" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a2f9f062714f104ffaac089296845069a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -387,36 +470,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="105" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="105" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ac756b87403c4ba471750867eadf8994b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="my__int_8hpp_1a36a7823eab9727a0c57fe8db0c320b5f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
         <definition>constexpr auto operator+</definition>
-        <argsstring>(ll a, lli b)</argsstring>
+        <argsstring>(ll a, ll b)</argsstring>
         <name>operator+</name>
         <param>
           <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="194" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ac6a8fe9e3fde003ba107e264ebad7dca" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator+</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator+</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
           <declname>a</declname>
         </param>
         <param>
@@ -429,20 +491,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="283" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="194" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a89863f5d564a94c728d284514f71a09a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator+</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator+</name>
+      <memberdef kind="function" id="my__int_8hpp_1a4bb4545d19e5ffa0cabd4f7671ecc287" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mix1</definition>
+        <argsstring>(+, ll, ll) const expr auto operator+(ll a</argsstring>
+        <name>mix1</name>
         <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
+          <type>+</type>
         </param>
         <param>
-          <type>size_t</type>
-          <declname>b</declname>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -450,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="373" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="268"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1ac1023414d318d3a6439d3a2567399a30" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -471,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="462" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="326" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a3b63b23737ed9e91a2b7339f284d96e6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -492,7 +555,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="553" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="415" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a0da77df2e89895ba1b7d7c562479461c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -513,7 +576,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="642" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="504" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1abb749cbfaa17d7b386e253b603485998" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -534,7 +597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="731" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="593" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a5596c417bb97bd74960e4cca33d13880" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -555,36 +618,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="819" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="681" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a833e2f67fb010c39008962137d8237ec" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="my__int_8hpp_1a1aecb92f3cbe13bb10d3122ab5d07d93" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
         <definition>constexpr auto operator/</definition>
-        <argsstring>(ll a, lli b)</argsstring>
+        <argsstring>(ll a, ll b)</argsstring>
         <name>operator/</name>
         <param>
           <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="907" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1aed40130cba94c26f07c02d9eacded7b2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator/</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator/</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
           <declname>a</declname>
         </param>
         <param>
@@ -597,20 +639,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="995" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="769" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a5f6edf8dca5afc643d6e72e57699730f" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator/</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator/</name>
+      <memberdef kind="function" id="my__int_8hpp_1a8ad39449eb701760a81f950a48c21db1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mix1</definition>
+        <argsstring>(/, ll, ll) const expr auto operator/(ll a</argsstring>
+        <name>mix1</name>
         <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
+          <type>/</type>
         </param>
         <param>
-          <type>size_t</type>
-          <declname>b</declname>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -618,7 +661,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1084" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="842"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a87683aa0c8ee0cdccaead85b3e2b8d90" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -639,7 +682,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1172" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="900" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a9f41bc653534f4f6203630517f2156f6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -660,7 +703,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1262" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="988" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a142f763bbb1736a76b95130b8d2d8b1a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -681,7 +724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1350" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1076" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a5158155b3a836df54586f2350d91cbab" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -702,7 +745,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1438" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1164" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a750ea4d1fdd157fbcb04741a1545f6e6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -723,36 +766,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1527" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1253" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a169f6ba357752382f1b30e76ecdcb036" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="my__int_8hpp_1a6ec2155e1fca79fe02d0c5eb6d4503b6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
         <definition>constexpr auto operator*</definition>
-        <argsstring>(ll a, lli b)</argsstring>
+        <argsstring>(ll a, ll b)</argsstring>
         <name>operator*</name>
         <param>
           <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1616" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a3be6241d1f94d6141fa062918a691ca7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator*</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
           <declname>a</declname>
         </param>
         <param>
@@ -765,11 +787,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1705" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1342" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1aabc85797b453ca213dbd7abbf945056c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator*</definition>
+      <memberdef kind="function" id="my__int_8hpp_1ae4b73d62b02992c1bb53769be772f62b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="my__int_8hpp_1ae29df473a08e7a414e5f9a3082548e00" kindref="member">mix1</ref> constexpr <ref refid="structll" kindref="compound">ll</ref> auto</type>
+        <definition>mix1 constexpr ll auto operator*</definition>
         <argsstring>(ll a, size_t b)</argsstring>
         <name>operator*</name>
         <param>
@@ -786,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1795" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1441" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a5612b2793a4532fe9970c5d2a114d6ec" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -807,7 +829,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1884" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1530" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a2a8768cedd8e538507499220371852be" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -828,7 +850,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="1975" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1619" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a43ffab71ec13580985a070ea33d08df0" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -849,7 +871,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2064" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1708" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a7c36efcf569faf3715e418d3da1db17a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -870,7 +892,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2148" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1792" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a87859c8d35163e9e4758aa01fd520407" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -891,70 +913,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2236" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="1880" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a4605084592ea2d75848714e17b8ef7dd" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;</definition>
-        <argsstring>(ll a, lli b)</argsstring>
-        <name>operator&lt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
+      <memberdef kind="function" id="my__int_8hpp_1ae29df473a08e7a414e5f9a3082548e00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mix1</definition>
+        <argsstring>(&lt;, ll, ll) const expr auto operator&lt;(ll a</argsstring>
+        <name>mix1</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2324" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ae97b254f1f4f72a9e5b76a44aa054524" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator&lt;</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2412" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a7ea748b99bb21ae495717f64bbdcf4e6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator&lt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2501" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="2046"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1abe88c83cf5dc9b46884a1b2bc8183e68" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -975,7 +947,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2589" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="2099" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a7781b25df43bf46926920191911d737b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -996,7 +968,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2679" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="2187" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1adb176a0734aa2cfd1449982c44fce144" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -1017,7 +989,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2767" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="2275" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1ad3d70e11768093396bb23339c8ac82eb" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -1038,7 +1010,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2860" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="2368" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="my__int_8hpp_1a142f9bffdd11b6d2ff259b27ded735b3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>constexpr auto</type>
@@ -1059,869 +1031,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="2951" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1afbabea4a994a0389f619733ee918219a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator==</definition>
-        <argsstring>(ll a, lli b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3042" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a64e01e17d499b77946c8e688b818466e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator==</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3133" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ad6c4a2aed28be9e342d2ad975e4136c6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator==</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3225" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a06a48e329f407c401d7828ad830737f0" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator==</definition>
-        <argsstring>(size_t a, ll b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type>size_t</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3316" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a39bfb6bbc475fabc3fedcdbff48a1bcd" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator==</definition>
-        <argsstring>(ll a, double b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3409" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a9e5a071bceddccdc70270c68e1c62000" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator==</definition>
-        <argsstring>(double a, ll b)</argsstring>
-        <name>operator==</name>
-        <param>
-          <type>double</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3500" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a2f032ec489803d91bbecaf05aeae3d02" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(ll a, int b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3591" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a2bbbee53a572ca55acf8c6a9bd23ac31" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(int a, ll b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type>int</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3680" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a147313b2417a691feb391c2baf28c347" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(ll a, lli b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3769" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1abafcc58e81b283ceaaf7af7353ade545" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3858" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ab7ba6fcd25875e50ba1b4d58c5636df8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="3948" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ac07363b9ed6f9e81f69ada65d70fb2fe" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(size_t a, ll b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type>size_t</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4037" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a5683757111c643b4f25e4bd44c9b43d6" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(ll a, double b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4128" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a25b896413f748b4cfea0899dbfe293df" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator%</definition>
-        <argsstring>(double a, ll b)</argsstring>
-        <name>operator%</name>
-        <param>
-          <type>double</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4217" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1afe67594319f62fc54a00ac97fdcfa7cd" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(ll a, int b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4306" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a25cb8d29162de6a8341a162a555178b2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(int a, ll b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type>int</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4395" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a89d69125633d95c663d59a823193a41d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(ll a, lli b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4484" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1accbea10bc03027a2abf0b86707e72d60" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4573" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1aa3e03dfc13fb08fd0890e9891f1d270e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4663" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a750f758fefe8bcd1883904009607c323" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(size_t a, ll b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type>size_t</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4752" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a4d018945906db6aaaec78c6bb25a8d0c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(ll a, double b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4843" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a1dabb22258a4f164313783a15aa92326" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&amp;</definition>
-        <argsstring>(double a, ll b)</argsstring>
-        <name>operator&amp;</name>
-        <param>
-          <type>double</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="4932" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1adad0fdb7fea444f4b4dc79942382c841" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(ll a, int b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5021" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1aab5bf9e75ec2e05f32bfe248f26b2fb2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(int a, ll b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type>int</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5112" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1acc49ae319222c17e7cf7e595b53eb01b" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(ll a, lli b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5203" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1aca97a6fb59e04b5702ea11c36f2478d9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5294" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a075c178690dc773422a3aeaf1ffa8173" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5386" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a3a78b7a4b3e181f7842b4a3775895d7a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(size_t a, ll b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type>size_t</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5477" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1acca7da4ef13b9d21d66d02bf959f78d0" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(ll a, double b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5570" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a5a9bbf4c8dbe708d702ed219b1caa290" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&gt;&gt;</definition>
-        <argsstring>(double a, ll b)</argsstring>
-        <name>operator&gt;&gt;</name>
-        <param>
-          <type>double</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="65" column="5661" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="65" bodyend="65"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a5038197ce9c31f52268a7d69042fbeff" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(ll a, int b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="15" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a3bf6f579bb3c901a70403ff474880bea" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(int a, ll b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>int</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="104" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a8eb2fa309b61ab53227386a3cf75a491" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(ll a, lli b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="193" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a3b06d3d1807c2588bded865be3cdb3b1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(lli a, ll b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="282" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a514556e3fea9889325683b6d0d0b39b9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(ll a, size_t b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>size_t</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="372" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1aa6336f6e0326e004c4e921f41742977c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(size_t a, ll b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>size_t</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="461" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ad4ffdd1b37e291ac1fa1c42f6c6e02f3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(ll a, double b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="552" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ac45054cf258d397a92db203450fc4e25" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr auto</type>
-        <definition>constexpr auto operator&lt;&lt;</definition>
-        <argsstring>(double a, ll b)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>double</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>b</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="66" column="641" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="66" bodyend="66"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1a65931ffae276ba2eac94c8ba0294829b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename Stream</type>
-          </param>
-        </templateparamlist>
-        <type>auto &amp;</type>
-        <definition>auto&amp; operator&lt;&lt;</definition>
-        <argsstring>(Stream &amp;os, ll const &amp;a)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>Stream &amp;</type>
-          <declname>os</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref> const &amp;</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="69" column="1" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="69" bodyend="71"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ae6bb4b1c502150862dc1bd720dddd1bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structll" kindref="compound">ll</ref></type>
-        <definition>ll operator&quot;&quot;_ll</definition>
-        <argsstring>(unsigned long long int x)</argsstring>
-        <name>operator&quot;&quot;_ll</name>
-        <param>
-          <type>unsigned long long int</type>
-          <declname>x</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="72" column="4" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="72" bodyend="72"/>
-      </memberdef>
-      <memberdef kind="function" id="my__int_8hpp_1ab40cf8d960a2bfa49f09a97ed15c056d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>auto</type>
-        <definition>auto ceil_div</definition>
-        <argsstring>(ll x, ll y)</argsstring>
-        <name>ceil_div</name>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>x</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>y</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="73" column="6" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="73" bodyend="73"/>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="61" column="2459" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1932,10 +1042,10 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight></codeline>
 <codeline lineno="5" refid="structll" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/>{</highlight></codeline>
-<codeline lineno="6" refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref><sp/><ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;</highlight></codeline>
-<codeline lineno="7" refid="structll_1a4f550126ee54fd066f53186f27093b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structll_1a4f550126ee54fd066f53186f27093b76" kindref="member">ll</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x_<sp/>=<sp/>0)<sp/>:<sp/><ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>(x_)<sp/>{}</highlight></codeline>
-<codeline lineno="8" refid="structll_1a8b0607da16d0d7e00bb430f04f3a6f3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="9" refid="structll_1acd3200c39683e9801ba0562ed14924fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="6" refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="7" refid="structll_1a4f550126ee54fd066f53186f27093b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structll_1a4f550126ee54fd066f53186f27093b76" kindref="member">ll</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x_<sp/>=<sp/>0)<sp/>:<sp/><ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>(x_)<sp/>{}</highlight></codeline>
+<codeline lineno="8" refid="structll_1a8b0607da16d0d7e00bb430f04f3a6f3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="9" refid="structll_1a6e7bf3f765fff61bab09378b9279b4d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="structll_1a4f550126ee54fd066f53186f27093b76" kindref="member">ll</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>template&lt;typename<sp/>T,<sp/>typename<sp/>=<sp/>enable_if_t&lt;is_integral&lt;T&gt;::value,<sp/>void&gt;&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>template&lt;typename<sp/>T,<sp/>typename<sp/>=<sp/>enable_if_t&lt;is_integral&lt;T&gt;::value,<sp/>void&gt;&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12" refid="my__int_8hpp_1a896acbe39c98c053f809a8001774ab6f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>opi(type)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
@@ -1945,16 +1055,16 @@
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*operator<sp/>bool()<sp/>const{return<sp/>x;}</highlight></codeline>
 <codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/>operator<sp/>size_t()<sp/>const<sp/>{return<sp/>x;}</highlight></codeline>
 <codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>operator<sp/>int128()<sp/>const<sp/>{return<sp/>x;}*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="structll_1a6bf19079acad25173814f398d03c6785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1a6bf19079acad25173814f398d03c6785" kindref="member">operator-</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="19" refid="structll_1a6bf19079acad25173814f398d03c6785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1a6bf19079acad25173814f398d03c6785" kindref="member">operator-</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="20" refid="structll_1a3253b9882ccb1168c5aecfb54188f769" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1a3253b9882ccb1168c5aecfb54188f769" kindref="member">operator--</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="24" refid="structll_1ab3dcffcb63a9afc64a1ed739c72f7367" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1ab3dcffcb63a9afc64a1ed739c72f7367" kindref="member">operator++</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref>;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="28" refid="structll_1afe1cbe7e5183933ed0a2e943d5850088" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1afe1cbe7e5183933ed0a2e943d5850088" kindref="member">operator+=</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref><sp/>+=<sp/>b.<ref refid="structll_1ad2ebb308973148a8c1f2a60b07a63914" kindref="member">x</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="28" refid="structll_1afe1cbe7e5183933ed0a2e943d5850088" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structll_1afe1cbe7e5183933ed0a2e943d5850088" kindref="member">operator+=</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structll_1a4bdfa09dbbf7923cd92223015f12861f" kindref="member">x</ref><sp/>+=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.x;<sp/>}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__SIZEOF_INT128__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>int128<sp/>=<sp/>__int128;</highlight></codeline>
@@ -1970,49 +1080,41 @@
 <codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>static_cast&lt;ll&gt;(a)<sp/>op<sp/>static_cast&lt;ll&gt;(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43" refid="my__int_8hpp_1a7ab6bf7557d5b999f7339d4cfc7cb4b6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mix(op,<sp/>T1,<sp/>T2)<sp/>mix1(op,<sp/>T1,<sp/>T2)<sp/>mix1(op,<sp/>T2,<sp/>T1)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mixll(op)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>mix(op,<sp/>ll,<sp/>int)<sp/>mix(op,<sp/>ll,<sp/>lli)<sp/>MIX128(op,<sp/>ll)<sp/>mix(op,<sp/>ll,<sp/>size_t)<sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mix(op,<sp/>ll,<sp/>double)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bill(op)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>ll<sp/>operator<sp/>op(ll<sp/>const<sp/>&amp;a,<sp/>ll<sp/>const<sp/>&amp;b)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>lli(a)<sp/>op<sp/>lli(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="my__int_8hpp_1aaa2f10d451711a02282b53f8d67322a9" refkind="member"><highlight class="normal"><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(+)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(*)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(|)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(&amp;)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(^)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(&lt;&lt;)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(&gt;&gt;)<sp/>constexpr<sp/><ref refid="structll" kindref="compound">ll</ref></highlight></codeline>
-<codeline lineno="52" refid="my__int_8hpp_1a16edb2064180aa002b50c0df6971ac76" refkind="member"><highlight class="normal">operator/(<ref refid="structll" kindref="compound">ll</ref><sp/>const<sp/>&amp;a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>const<sp/>&amp;b)<sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref><sp/>x<sp/>=<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(a)<sp/>/<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b),<sp/>r<sp/>=<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(a)<sp/>%<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>-<sp/>((x<sp/>&lt;<sp/>0)<sp/>&amp;&amp;<sp/>r);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="56" refid="my__int_8hpp_1a1ad47cb4e54d783e97787f2d8180b26b" refkind="member"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1a1ad47cb4e54d783e97787f2d8180b26b" kindref="member">operator&lt;</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(a)<sp/>&lt;<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);<sp/>}</highlight></codeline>
-<codeline lineno="57" refid="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" refkind="member"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" kindref="member">operator==</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(a)<sp/>==<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);<sp/>}</highlight></codeline>
-<codeline lineno="58" refid="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" refkind="member"><highlight class="normal">constexpr<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" kindref="member">operator%</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref><sp/>x<sp/>=<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(a)<sp/>%<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(x)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="65" refid="my__int_8hpp_1a5a9bbf4c8dbe708d702ed219b1caa290" refkind="member"><highlight class="normal"><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(+)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(/)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(*)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&lt;)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(==)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(%)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&amp;)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&gt;&gt;)</highlight></codeline>
-<codeline lineno="66" refid="my__int_8hpp_1ac45054cf258d397a92db203450fc4e25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&lt;&lt;)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>Stream&gt;</highlight></codeline>
-<codeline lineno="69" refid="my__int_8hpp_1a65931ffae276ba2eac94c8ba0294829b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>&amp;operator&lt;&lt;(Stream<sp/>&amp;os,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>const<sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>a.x;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="72" refid="my__int_8hpp_1ae6bb4b1c502150862dc1bd720dddd1bd" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_ll(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
-<codeline lineno="73" refid="my__int_8hpp_1ab40cf8d960a2bfa49f09a97ed15c056d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1ab40cf8d960a2bfa49f09a97ed15c056d" kindref="member">ceil_div</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>+<sp/>y<sp/>-<sp/>1)<sp/>/<sp/>y;<sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std<sp/>{</highlight></codeline>
-<codeline lineno="75" refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>inh(cls)<sp/>template<sp/>&lt;&gt;<sp/>struct<sp/>cls&lt;ll&gt;<sp/>:<sp/>cls&lt;lli&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="structstd_1_1hash_3_01ll_01_4" refkind="compound"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(hash)<sp/>{<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>hash&lt;lli&gt;::hash;<sp/>};</highlight></codeline>
-<codeline lineno="77" refid="structstd_1_1is__integral_3_01ll_01_4" refkind="compound"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(is_integral){};</highlight></codeline>
-<codeline lineno="78" refid="structstd_1_1is__unsigned_3_01ll_01_4" refkind="compound"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(is_unsigned){};</highlight></codeline>
-<codeline lineno="79" refid="structstd_1_1is__signed_3_01ll_01_4" refkind="compound"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(is_signed){};</highlight></codeline>
-<codeline lineno="80" refid="structstd_1_1numeric__limits_3_01ll_01_4" refkind="compound"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(numeric_limits){};</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ll_t,</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>=<sp/>enable_if_t&lt;is_same_v&lt;ll_t,<sp/>ll&gt;,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;&gt;</highlight></codeline>
-<codeline lineno="83" refid="my__int_8hpp_1a9c62d70a4d570035afd252221695db29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1adc9ca497c254909c83f973aa03b0e1c4" kindref="member">operator+</ref>(T<sp/>a,<sp/>ll_t<sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>+<sp/><ref refid="core_2all_8hpp_1a583d558126ab02babe89a77ae06a4156" kindref="member">lli</ref>(b);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>std</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mixll(op)<sp/>mix(op,<sp/>ll,<sp/>int)<sp/>mix(op,<sp/>ll,<sp/>ll)<sp/>MIX128(op,<sp/>ll)<sp/>mix(op,<sp/>ll,<sp/>size_t)<sp/>mix(op,<sp/>ll,<sp/>double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bill(op)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>constexpr<sp/>ll<sp/>operator<sp/>op(ll<sp/>const<sp/>&amp;a,<sp/>ll<sp/>const<sp/>&amp;b)<sp/>{<sp/>return<sp/>ll(a)<sp/>op<sp/>ll(b);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="my__int_8hpp_1aaa2f10d451711a02282b53f8d67322a9" refkind="member"><highlight class="normal"><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(+)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(*)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(|)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(&amp;)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(^)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(&lt;&lt;)<sp/><ref refid="my__int_8hpp_1a2c978e12b0aa097e3f8dc633e68451d7" kindref="member">bill</ref>(&gt;&gt;)<sp/>constexpr<sp/><ref refid="structll" kindref="compound">ll</ref></highlight></codeline>
+<codeline lineno="48" refid="my__int_8hpp_1a16edb2064180aa002b50c0df6971ac76" refkind="member"><highlight class="normal">operator/(<ref refid="structll" kindref="compound">ll</ref><sp/>const<sp/>&amp;a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>const<sp/>&amp;<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x<sp/>=<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a)<sp/>/<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>),<sp/>r<sp/>=<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a)<sp/>%<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>-<sp/>((x<sp/>&lt;<sp/>0)<sp/>&amp;&amp;<sp/>r);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52" refid="my__int_8hpp_1a1ad47cb4e54d783e97787f2d8180b26b" refkind="member"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1a1ad47cb4e54d783e97787f2d8180b26b" kindref="member">operator&lt;</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a)<sp/>&lt;<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="53" refid="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" refkind="member"><highlight class="normal">constexpr<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1addc2b513488b556dc2d53112f6c54dcf" kindref="member">operator==</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a)<sp/>==<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="54" refid="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" refkind="member"><highlight class="normal">constexpr<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a89411724456b37f74a3b6bab8e7a7603" kindref="member">operator%</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x<sp/>=<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a)<sp/>%<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(x)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61" refid="my__int_8hpp_1a142f9bffdd11b6d2ff259b27ded735b3" refkind="member"><highlight class="normal"><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(+)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(/)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(*)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&lt;)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(==)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(%)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&amp;)<sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&gt;&gt;)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1abb7191c40253fd9cd6cd664fd6db5271" kindref="member">mixll</ref>(&lt;&lt;)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>template<sp/>&lt;typename<sp/>Stream&gt;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>auto<sp/>&amp;operator&lt;&lt;(Stream<sp/>&amp;os,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>const<sp/>&amp;a)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>a.x;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>_ll(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ceil_div(<ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>+<sp/>y<sp/>-<sp/>1)<sp/>/<sp/>y;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>inh(cls)<sp/>template<sp/>&lt;&gt;<sp/>struct<sp/>cls&lt;ll&gt;<sp/>:<sp/>cls&lt;ll&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(hash)<sp/>{<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>hash&lt;ll&gt;::hash;<sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(is_integral){};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(is_unsigned){};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(is_signed){};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="my__int_8hpp_1a33e977ac03b44c7fb6b3f74dae8b2eb6" kindref="member">inh</ref>(numeric_limits){};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ll_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>=<sp/>enable_if_t&lt;is_same_v&lt;ll_t,<sp/>ll&gt;,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1adc9ca497c254909c83f973aa03b0e1c4" kindref="member">operator+</ref>(T<sp/>a,<sp/>ll_t<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>+<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>std</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp"/>
   </compounddef>

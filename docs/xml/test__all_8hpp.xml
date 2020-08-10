@@ -3,7 +3,10 @@
   <compounddef id="test__all_8hpp" kind="file" language="C++">
     <compoundname>test_all.hpp</compoundname>
     <includes refid="graph_2all_8hpp" local="yes">all.hpp</includes>
+    <includes refid="test__biconnected_8hpp" local="yes">test_biconnected.hpp</includes>
     <includes refid="test__bipartite_8hpp" local="yes">test_bipartite.hpp</includes>
+    <includes refid="test__flow_8hpp" local="yes">test_flow.hpp</includes>
+    <includes refid="test__centroid_8hpp" local="yes">tree/test_centroid.hpp</includes>
     <includedby refid="test_8cpp" local="yes">/home/ram/OmniTemplate/src/test/test.cpp</includedby>
     <incdepgraph>
       <node id="13">
@@ -17,7 +20,13 @@
         <link refid="test__all_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
         <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -71,6 +80,12 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
+      <node id="24">
+        <label>tree/test_centroid.hpp</label>
+        <link refid="test__centroid_8hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
       <node id="17">
         <label>test_biconnected.hpp</label>
         <link refid="test__biconnected_8hpp"/>
@@ -85,10 +100,10 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>test_flow.hpp</label>
         <link refid="test__flow_8hpp"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="12">
@@ -106,10 +121,10 @@
       <node id="23">
         <label>test_bipartite.hpp</label>
         <link refid="test__bipartite_8hpp"/>
-        <childnode refid="22" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="18">
         <label>bipartite.hpp</label>
         <link refid="bipartite_8hpp"/>
         <childnode refid="4" relation="include">
@@ -143,13 +158,21 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>graph_view.hpp</label>
         <link refid="graph__view_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="25">
+        <label>centroid.hpp</label>
+        <link refid="centroid_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
         <label>tree/tree.hpp</label>
         <link refid="tree_8hpp"/>
         <childnode refid="4" relation="include">
@@ -163,7 +186,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>flow.hpp</label>
         <link refid="flow_8hpp"/>
         <childnode refid="3" relation="include">
@@ -199,87 +222,91 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graph_2all_8hpp" kindref="compound">all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test__bipartite_8hpp" kindref="compound">test_bipartite.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="namespacegraph__theory_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegraph__theory_1_1test" kindref="compound">graph_theory::test</ref><sp/>{</highlight></codeline>
-<codeline lineno="5" refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" kindref="member">test_BFS</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vl&gt;<sp/>g(4);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>0,<sp/>1);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>1,<sp/>2);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>1,<sp/>3);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>2,<sp/>3);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structgraph__theory_1_1BFS" kindref="compound">BFS</ref><sp/>b{g};</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>b(0);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((b.parent<sp/>==<sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{-1,<sp/>0,<sp/>1,<sp/>1}));</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((b.distance<sp/>==<sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>{0,<sp/>1,<sp/>2,<sp/>2}));</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="16" refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" kindref="member">test_trans</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacegraph__theory_1af33d0502161df2d1b82be4b1e8dcaa13" kindref="member">trans</ref>(vector&lt;vl&gt;{{2,<sp/>3},<sp/>{2,<sp/>1},<sp/>{2},<sp/>{2,<sp/>3,<sp/>1}})<sp/>==<sp/>vector&lt;vl&gt;{{},<sp/>{1,<sp/>3},<sp/>{0,<sp/>1,<sp/>2,<sp/>3},<sp/>{0,<sp/>3}}));</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacegraph__theory_1af33d0502161df2d1b82be4b1e8dcaa13" kindref="member">trans</ref>(vector&lt;vl&gt;{})<sp/>==<sp/>vector&lt;vl&gt;{}));</highlight></codeline>
-<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="20" refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" kindref="member">test_shortest_dist</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/>g{{7,<sp/>2,<sp/>5},<sp/>{2,<sp/>4,<sp/>1},<sp/>{3,<sp/>2,<sp/>5}};</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/>short_dist{{4,<sp/>2,<sp/>3},<sp/>{2,<sp/>3,<sp/>1},<sp/>{3,<sp/>2,<sp/>3}};</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" kindref="member">shortest_dist</ref>(g)<sp/>==<sp/>short_dist);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>g.rows_n;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;pr&gt;&gt;<sp/>adj(n);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>0,<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>0,<sp/>n)<sp/>{<sp/>adj[i].push_back({j,<sp/>g[i][j]});<sp/>}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(s,<sp/>0,<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>test<sp/>pv</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dijkstra<sp/>=<sp/><ref refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" kindref="member">shortest_dist</ref>(adj,<sp/>s)[0];</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>floyd<sp/>=<sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref>(short_dist[s],<sp/>short_dist[s]<sp/>+<sp/>n);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>floyd[s]<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((dijkstra<sp/>==<sp/>floyd));</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="37" refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" kindref="member">test_mst</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;edge&gt;<sp/>edges{{5,<sp/>0,<sp/>3},<sp/>{2,<sp/>1,<sp/>2},<sp/>{3,<sp/>1,<sp/>3},<sp/>{1,<sp/>3,<sp/>2}};</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="namespacegraph__theory_1a43f33335bd84b91252969b3b17f8b09d" kindref="member">mst</ref>(edges,<sp/>6);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>));</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>==<sp/>vector&lt;edge&gt;{edges[3],<sp/>edges[1],<sp/>edges[0]}));</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43" refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" kindref="member">test_scc</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vl&gt;<sp/>g(5);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>g[0].push_back(3);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>g[3].push_back(1);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>g[1].push_back(2);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>g[2].push_back(0);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>g[0].push_back(4);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>g[2].push_back(4);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cm<sp/>=<sp/><ref refid="namespacegraph__theory_1abf42c204d44caae5b7ea48d8261dfd9e" kindref="member">scc</ref>(g);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/>v{cm[0],<sp/>cm[1],<sp/>cm[2],<sp/>cm[3]};</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>refactor<sp/>this<sp/>into<sp/>a<sp/>function</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((all_of(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(v),<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/>v[0];<sp/>})));</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(cm[4]<sp/>!=<sp/>cm[0]);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="57" refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" kindref="member">test_add_edge</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vl&gt;<sp/>g(10);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>3,<sp/>4);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>6,<sp/>4);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(g,<sp/>9,<sp/>2);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Order<sp/>doesn&apos;t<sp/>matter</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>g)<sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(x));</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((g<sp/>==<sp/>vector&lt;vl&gt;{{},<sp/>{},<sp/>{9},<sp/>{4},<sp/>{3,<sp/>6},<sp/>{},<sp/>{4},<sp/>{},<sp/>{},<sp/>{2}}));</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="68" refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" kindref="member">test_graph_theory</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" kindref="member">test_add_edge</ref>();</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" kindref="member">test_trans</ref>();</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" kindref="member">test_shortest_dist</ref>();</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" kindref="member">test_mst</ref>();</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" kindref="member">test_BFS</ref>();</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" kindref="member">test_scc</ref>();</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" kindref="member">test_tree_diameter</ref>();</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" kindref="member">test_biconnected</ref>();</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" kindref="member">test_flow</ref>();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1bipartite_1_1test_1aab2e93dd92c799618ead37ec7b1d93b9" kindref="member">test_bipartite</ref>();</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesat2_1_1test_1a39c93d63732b7216ede171b3589de7f2" kindref="member">test_sat2</ref>();</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="graph__view_8hpp_1ac5d2f097a07285733e610a52b16e790b" kindref="member">test_graph_view</ref>();</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>graph_theory::test</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegraph__theory_1_1test" kindref="compound">graph_theory::test</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test__biconnected_8hpp" kindref="compound">test_biconnected.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test__bipartite_8hpp" kindref="compound">test_bipartite.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test__flow_8hpp" kindref="compound">test_flow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="test__centroid_8hpp" kindref="compound">tree/test_centroid.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespacegraph__theory_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegraph__theory_1_1test" kindref="compound">graph_theory::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" kindref="member">test_BFS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>g(4);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>1,<sp/>2);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>2,<sp/>3);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structgraph__theory_1_1BFS" kindref="compound">BFS</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>{g};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>(0);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.parent<sp/>==<sp/>vector&lt;ll&gt;{-1,<sp/>0,<sp/>1,<sp/>1}));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.distance<sp/>==<sp/>vector&lt;ll&gt;{0,<sp/>1,<sp/>2,<sp/>2}));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19" refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" kindref="member">test_trans</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacegraph__theory_1a5250f51004add91c3b7f66fe5a030a2f" kindref="member">trans</ref>(<ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref>{{2,<sp/>3},<sp/>{2,<sp/>1},<sp/>{2},<sp/>{2,<sp/>3,<sp/>1}})<sp/>==<sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref>{{},<sp/>{1,<sp/>3},<sp/>{0,<sp/>1,<sp/>2,<sp/>3},<sp/>{0,<sp/>3}}));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespacegraph__theory_1a5250f51004add91c3b7f66fe5a030a2f" kindref="member">trans</ref>(<ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref>{})<sp/>==<sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref>{}));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23" refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" kindref="member">test_shortest_dist</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/>g{{7,<sp/>2,<sp/>5},<sp/>{2,<sp/>4,<sp/>1},<sp/>{3,<sp/>2,<sp/>5}};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/>short_dist{{4,<sp/>2,<sp/>3},<sp/>{2,<sp/>3,<sp/>1},<sp/>{3,<sp/>2,<sp/>3}};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" kindref="member">shortest_dist</ref>(g)<sp/>==<sp/>short_dist);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>g.rows_n;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;pr&gt;&gt;<sp/>adj(n);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>0,<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>0,<sp/>n)<sp/>{<sp/>adj[i].push_back({j,<sp/>g[i][j]});<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(s,<sp/>0,<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>test<sp/>pv</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dijkstra<sp/>=<sp/><ref refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" kindref="member">shortest_dist</ref>(adj,<sp/>s)[0];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>floyd<sp/>=<sp/>vector&lt;ll&gt;(short_dist[s],<sp/>short_dist[s]<sp/>+<sp/>n);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>floyd[s]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((dijkstra<sp/>==<sp/>floyd));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40" refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" kindref="member">test_mst</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;edge&gt;<sp/>edges{{5,<sp/>0,<sp/>3},<sp/>{2,<sp/>1,<sp/>2},<sp/>{3,<sp/>1,<sp/>3},<sp/>{1,<sp/>3,<sp/>2}};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>=<sp/><ref refid="namespacegraph__theory_1a43f33335bd84b91252969b3b17f8b09d" kindref="member">mst</ref>(edges,<sp/>6);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref>));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" kindref="member">ret</ref><sp/>==<sp/>vector&lt;edge&gt;{edges[3],<sp/>edges[1],<sp/>edges[0]}));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46" refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" kindref="member">test_scc</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>g(5);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>g[0].push_back(3);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>g[3].push_back(1);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>g[1].push_back(2);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>g[2].push_back(0);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>g[0].push_back(4);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>g[2].push_back(4);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cm<sp/>=<sp/><ref refid="namespacegraph__theory_1afcb5da494d1b16139a1be66e66543043" kindref="member">scc</ref>(g);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/>v{cm[0],<sp/>cm[1],<sp/>cm[2],<sp/>cm[3]};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>refactor<sp/>this<sp/>into<sp/>a<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((all_of(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(v),<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/>v[0];<sp/>})));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(cm[4]<sp/>!=<sp/>cm[0]);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60" refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" kindref="member">test_add_edge</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>g(10);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>3,<sp/>4);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>6,<sp/>4);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(g,<sp/>9,<sp/>2);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Order<sp/>doesn&apos;t<sp/>matter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>g)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(x));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((g<sp/>==<sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref>{{},<sp/>{},<sp/>{9},<sp/>{4},<sp/>{3,<sp/>6},<sp/>{},<sp/>{4},<sp/>{},<sp/>{},<sp/>{2}}));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71" refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" kindref="member">test_graph_theory</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" kindref="member">test_add_edge</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" kindref="member">test_trans</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" kindref="member">test_shortest_dist</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" kindref="member">test_mst</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" kindref="member">test_BFS</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" kindref="member">test_scc</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" kindref="member">test_tree_diameter</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" kindref="member">test_biconnected</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" kindref="member">test_flow</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1_1bipartite_1_1test_1aab2e93dd92c799618ead37ec7b1d93b9" kindref="member">test_bipartite</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesat2_1_1test_1a39c93d63732b7216ede171b3589de7f2" kindref="member">test_sat2</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="graph__view_8hpp_1ac5d2f097a07285733e610a52b16e790b" kindref="member">test_graph_view</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__centroid_8hpp_1a1f3c802afdfa77c5389c557f5284a486" kindref="member">test_centroid_decomp</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>graph_theory::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegraph__theory_1_1test" kindref="compound">graph_theory::test</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/graph/test_all.hpp"/>
   </compounddef>

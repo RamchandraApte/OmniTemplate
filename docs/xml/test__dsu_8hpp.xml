@@ -109,7 +109,7 @@
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!d.join(6,<sp/>6));</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(d.join(10,<sp/>3));</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!d.join(6,<sp/>3));</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/>idx{d.find(3),<sp/>d.find(4),<sp/>d.find(6),<sp/>d.find(10)};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/>idx{d.find(3),<sp/>d.find(4),<sp/>d.find(6),<sp/>d.find(10)};</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(all_of(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(idx),<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/>idx[0];<sp/>}));</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>99)<sp/>{<sp/>d.join(i,<sp/>i<sp/>+<sp/>1);<sp/>}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>100)<sp/>{<sp/>assert(d.find(i)<sp/>==<sp/>d.find(0));<sp/>}</highlight></codeline>

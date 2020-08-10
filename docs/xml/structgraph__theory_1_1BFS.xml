@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="139" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="139" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="141" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="141" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -41,12 +41,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="141" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="141" bodyend="157"/>
-        <references refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" compoundref="graph_2all_8hpp" startline="103" endline="108">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::add</references>
-        <references refid="structgraph__theory_1_1GeneralSearch_1aeddabb5fb5a9b01a73a196e233b80b6d" compoundref="graph_2all_8hpp" startline="92">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::distance</references>
-        <references refid="structgraph__theory_1_1GeneralSearch_1a8ce5f9c8c5cba4adbbb66eb804363456" compoundref="graph_2all_8hpp" startline="88">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::graph</references>
-        <references refid="structgraph__theory_1_1GeneralSearch_1ab65b2c9f98ace39d40abfaf399c135a7" compoundref="graph_2all_8hpp" startline="90">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::queue</references>
-        <references refid="structgraph__theory_1_1GeneralSearch_1a52c397b90b5478a556991d319770745b" compoundref="graph_2all_8hpp" startline="89">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::visited</references>
+        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="143" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="143" bodyend="159"/>
+        <references refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" compoundref="graph_2all_8hpp" startline="105" endline="110">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::add</references>
+        <references refid="structgraph__theory_1_1GeneralSearch_1aadc7aa595d1aa3509f0ba6ee8489cf36" compoundref="graph_2all_8hpp" startline="94">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::distance</references>
+        <references refid="structgraph__theory_1_1GeneralSearch_1a8ce5f9c8c5cba4adbbb66eb804363456" compoundref="graph_2all_8hpp" startline="90">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::graph</references>
+        <references refid="structgraph__theory_1_1GeneralSearch_1ab65b2c9f98ace39d40abfaf399c135a7" compoundref="graph_2all_8hpp" startline="92">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::queue</references>
+        <references refid="structgraph__theory_1_1GeneralSearch_1a8f85e90fb507ef03e5280a38c01a72cb" compoundref="graph_2all_8hpp" startline="91">graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::visited</references>
       </memberdef>
       <memberdef kind="function" id="structgraph__theory_1_1BFS_1a5d1bf0cacd1f3e805ac724fc3ffc91ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -63,13 +63,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="140" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="93" bodyend="93"/>
+        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="142" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="95" bodyend="95"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Breadth-first search. </para>
     </briefdescription>
     <detaileddescription>
-<para>Breadth-first search </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -91,12 +91,18 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4">
+      <node id="6">
         <label>T</label>
       </node>
-      <node id="3">
+      <node id="8">
+        <label>std::vector&lt; char &gt;</label>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; char &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
         <label>std::vector&lt; T &gt;</label>
-        <childnode refid="4" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>elements</edgelabel>
         </childnode>
       </node>
@@ -106,36 +112,39 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="3">
         <label>std::vector&lt; ll &gt;</label>
-        <childnode refid="7" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>elements</edgelabel>
         </childnode>
-        <childnode refid="3" relation="template-instance">
+        <childnode refid="5" relation="template-instance">
           <edgelabel>&lt; ll &gt;</edgelabel>
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>std::deque&lt; ll &gt;</label>
-        <childnode refid="7" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>elements</edgelabel>
         </childnode>
-        <childnode refid="9" relation="template-instance">
+        <childnode refid="10" relation="template-instance">
           <edgelabel>&lt; ll &gt;</edgelabel>
         </childnode>
       </node>
-      <node id="5">
+      <node id="7">
         <label>graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</label>
         <link refid="structgraph__theory_1_1GeneralSearch"/>
-        <childnode refid="6" relation="usage">
+        <childnode refid="3" relation="usage">
           <edgelabel>parent</edgelabel>
           <edgelabel>distance</edgelabel>
         </childnode>
         <childnode refid="8" relation="usage">
+          <edgelabel>visited</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
           <edgelabel>queue</edgelabel>
         </childnode>
       </node>
-      <node id="7">
+      <node id="4">
         <label>ll</label>
         <link refid="structll"/>
       </node>
@@ -143,32 +152,36 @@
         <label>graph_theory::GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;</label>
         <link refid="structgraph__theory_1_1GeneralSearch"/>
         <childnode refid="3" relation="usage">
+          <edgelabel>parent</edgelabel>
+          <edgelabel>distance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
           <edgelabel>graph</edgelabel>
         </childnode>
-        <childnode refid="5" relation="template-instance">
+        <childnode refid="7" relation="template-instance">
           <edgelabel>&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;</edgelabel>
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>std::deque&lt; T &gt;</label>
-        <childnode refid="4" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>elements</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="138" column="40" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="138" bodyend="158"/>
+    <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="140" column="40" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="140" bodyend="160"/>
     <listofallmembers>
       <member refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>add</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1aeddabb5fb5a9b01a73a196e233b80b6d" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>distance</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1aadc7aa595d1aa3509f0ba6ee8489cf36" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>distance</name></member>
       <member refid="structgraph__theory_1_1BFS_1a5d1bf0cacd1f3e805ac724fc3ffc91ca" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>GeneralSearch</name></member>
       <member refid="structgraph__theory_1_1GeneralSearch_1a5d1bf0cacd1f3e805ac724fc3ffc91ca" prot="public" virt="non-virtual" ambiguityscope="GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::"><scope>graph_theory::BFS</scope><name>GeneralSearch</name></member>
       <member refid="structgraph__theory_1_1BFS_1ad85eddd9caeb226e88c6712cf3b86dbd" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>GeneralSearch_t</name></member>
       <member refid="structgraph__theory_1_1GeneralSearch_1a8ce5f9c8c5cba4adbbb66eb804363456" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>graph</name></member>
       <member refid="structgraph__theory_1_1BFS_1ad5324017ef8da193e0e6387715d5a597" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>operator()</name></member>
       <member refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" prot="public" virt="non-virtual" ambiguityscope="GeneralSearch&lt; BFS&lt; GraphAdj &gt;, GraphAdj &gt;::"><scope>graph_theory::BFS</scope><name>operator()</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1a9addde44677dc541e480648394a5dac0" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>parent</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1a3ed9b9d45c85402850e22f6e98055045" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>parent</name></member>
       <member refid="structgraph__theory_1_1GeneralSearch_1ab65b2c9f98ace39d40abfaf399c135a7" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>queue</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1a52c397b90b5478a556991d319770745b" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>visited</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1a8f85e90fb507ef03e5280a38c01a72cb" prot="public" virt="non-virtual"><scope>graph_theory::BFS</scope><name>visited</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

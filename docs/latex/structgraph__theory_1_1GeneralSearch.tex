@@ -2,11 +2,17 @@
 \label{structgraph__theory_1_1GeneralSearch}\index{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}}
 
 
+Generalized graph searcher/visitor.  
+
+
+
+
 {\ttfamily \#include $<$all.\+hpp$>$}
 
 
 
-Inheritance diagram for graph\+\_\+theory\+::General\+Search$<$ Searcher, Graph $>$\+:\nopagebreak
+Inheritance diagram for graph\+\_\+theory\+::General\+Search$<$ Searcher, Graph $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +21,8 @@ Inheritance diagram for graph\+\_\+theory\+::General\+Search$<$ Searcher, Graph 
 \end{figure}
 
 
-Collaboration diagram for graph\+\_\+theory\+::General\+Search$<$ Searcher, Graph $>$\+:\nopagebreak
+Collaboration diagram for graph\+\_\+theory\+::General\+Search$<$ Searcher, Graph $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,13 +43,13 @@ void \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_a2f3f6311a56c13381b54
 \item 
 const Graph \& \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_a8ce5f9c8c5cba4adbbb66eb804363456}{graph}}
 \item 
-\mbox{\hyperlink{core_2all_8hpp_aff943633016deb6c62a519ffe92c6819}{vc}}$<$ char $>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_a52c397b90b5478a556991d319770745b}{visited}}
+vector$<$ char $>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_a8f85e90fb507ef03e5280a38c01a72cb}{visited}}
 \begin{DoxyCompactList}\small\item\em Whether vertex idx is visited. \end{DoxyCompactList}\item 
 deque$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_ab65b2c9f98ace39d40abfaf399c135a7}{queue}}
 \begin{DoxyCompactList}\small\item\em Queue. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_a9addde44677dc541e480648394a5dac0}{parent}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_a3ed9b9d45c85402850e22f6e98055045}{parent}}
 \begin{DoxyCompactList}\small\item\em Parent of vertex idx. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_aeddabb5fb5a9b01a73a196e233b80b6d}{distance}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch_aadc7aa595d1aa3509f0ba6ee8489cf36}{distance}}
 \begin{DoxyCompactList}\small\item\em Distance from source to vertex idx. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -50,7 +57,7 @@ deque$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structgraph__theor
 \subsubsection*{template$<$typename Searcher, typename Graph$>$\newline
 struct graph\+\_\+theory\+::\+General\+Search$<$ Searcher, Graph $>$}
 
-Generalized graph searcher/visitor 
+Generalized graph searcher/visitor. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_a5d1bf0cacd1f3e805ac724fc3ffc91ca}\label{structgraph__theory_1_1GeneralSearch_a5d1bf0cacd1f3e805ac724fc3ffc91ca}} 
@@ -80,12 +87,12 @@ void \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+:
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_aeddabb5fb5a9b01a73a196e233b80b6d}\label{structgraph__theory_1_1GeneralSearch_aeddabb5fb5a9b01a73a196e233b80b6d}} 
+\mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_aadc7aa595d1aa3509f0ba6ee8489cf36}\label{structgraph__theory_1_1GeneralSearch_aadc7aa595d1aa3509f0ba6ee8489cf36}} 
 \index{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}!distance@{distance}}
 \index{distance@{distance}!graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}}
 \doxysubsubsection{\texorpdfstring{distance}{distance}}
 {\footnotesize\ttfamily template$<$typename Searcher , typename Graph $>$ \\
-\mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::distance}
+vector$<$\mbox{\hyperlink{structll}{ll}}$>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::distance}
 
 
 
@@ -98,12 +105,12 @@ Distance from source to vertex idx.
 {\footnotesize\ttfamily template$<$typename Searcher , typename Graph $>$ \\
 const Graph\& \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::graph}
 
-\mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_a9addde44677dc541e480648394a5dac0}\label{structgraph__theory_1_1GeneralSearch_a9addde44677dc541e480648394a5dac0}} 
+\mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_a3ed9b9d45c85402850e22f6e98055045}\label{structgraph__theory_1_1GeneralSearch_a3ed9b9d45c85402850e22f6e98055045}} 
 \index{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}!parent@{parent}}
 \index{parent@{parent}!graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}}
 \doxysubsubsection{\texorpdfstring{parent}{parent}}
 {\footnotesize\ttfamily template$<$typename Searcher , typename Graph $>$ \\
-\mbox{\hyperlink{core_2all_8hpp_a8634e9b99169b29bc9a86927e715da54}{vl}} \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::parent}
+vector$<$\mbox{\hyperlink{structll}{ll}}$>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::parent}
 
 
 
@@ -120,12 +127,12 @@ deque$<$\mbox{\hyperlink{structll}{ll}}$>$ \mbox{\hyperlink{structgraph__theory_
 
 Queue. 
 
-\mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_a52c397b90b5478a556991d319770745b}\label{structgraph__theory_1_1GeneralSearch_a52c397b90b5478a556991d319770745b}} 
+\mbox{\Hypertarget{structgraph__theory_1_1GeneralSearch_a8f85e90fb507ef03e5280a38c01a72cb}\label{structgraph__theory_1_1GeneralSearch_a8f85e90fb507ef03e5280a38c01a72cb}} 
 \index{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}!visited@{visited}}
 \index{visited@{visited}!graph\_theory::GeneralSearch$<$ Searcher, Graph $>$@{graph\_theory::GeneralSearch$<$ Searcher, Graph $>$}}
 \doxysubsubsection{\texorpdfstring{visited}{visited}}
 {\footnotesize\ttfamily template$<$typename Searcher , typename Graph $>$ \\
-\mbox{\hyperlink{core_2all_8hpp_aff943633016deb6c62a519ffe92c6819}{vc}}$<$char$>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::visited}
+vector$<$char$>$ \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::visited}
 
 
 

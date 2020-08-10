@@ -1,0 +1,60 @@
+\hypertarget{centroid_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/graph/tree/centroid.hpp File Reference}
+\label{centroid_8hpp}\index{/home/ram/OmniTemplate/src/graph/tree/centroid.hpp@{/home/ram/OmniTemplate/src/graph/tree/centroid.hpp}}
+{\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graph/graph\+\_\+view.\+hpp\char`\"{}}\newline
+Include dependency graph for centroid.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{centroid_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{centroid_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$ \mbox{\hyperlink{centroid_8hpp_a3831178b7f165ffd952602f1ec4ba6a4}{centroid\+\_\+decomp}} (const Graph \&tree)
+\begin{DoxyCompactList}\small\item\em Centroid decomposition of a tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{centroid_8hpp_a3831178b7f165ffd952602f1ec4ba6a4}\label{centroid_8hpp_a3831178b7f165ffd952602f1ec4ba6a4}} 
+\index{centroid.hpp@{centroid.hpp}!centroid\_decomp@{centroid\_decomp}}
+\index{centroid\_decomp@{centroid\_decomp}!centroid.hpp@{centroid.hpp}}
+\doxysubsubsection{\texorpdfstring{centroid\_decomp()}{centroid\_decomp()}}
+{\footnotesize\ttfamily template$<$typename Graph $>$ \\
+vector$<$vector$<$\mbox{\hyperlink{structll}{ll}}$>$ $>$ centroid\+\_\+decomp (\begin{DoxyParamCaption}\item[{const Graph \&}]{tree }\end{DoxyParamCaption})}
+
+
+
+Centroid decomposition of a tree. 
+
+\begin{DoxyReturn}{Returns}
+cent\+\_\+lvl where cent\+\_\+lvl\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} is the jth centroid on the path from the root to i 
+\end{DoxyReturn}
+Whether we have visited this node as a centroid
+
+Set up max\+\_\+childHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{centroid_8hpp_a3831178b7f165ffd952602f1ec4ba6a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{centroid_8hpp_a3831178b7f165ffd952602f1ec4ba6a4_icgraph}
+\end{center}
+\end{figure}

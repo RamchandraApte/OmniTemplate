@@ -119,6 +119,8 @@
         <link refid="test__biconnected_8hpp"/>
         <childnode refid="1" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
@@ -207,7 +209,7 @@
         <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
         <references refid="namespacegraph__theory_1a7ffa7c1e75caecd92d5c385d41eb313d">graph_theory::DFS</references>
         <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="82">inf</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="74">inf</references>
         <references refid="namespaceutility_1ae423116f6315d5e998219f27f1f8c401" compoundref="utility_8hpp" startline="20" endline="20">utility::min_eq</references>
         <references refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" compoundref="range_8hpp" startline="53" endline="56">rev</references>
         <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="105">test_biconnected</referencedby>
@@ -260,7 +262,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/biconnected.hpp" line="87" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/biconnected.hpp" bodystart="87" bodyend="126"/>
-        <references refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" compoundref="graph_2all_8hpp" startline="24" endline="28">graph_theory::add_edge</references>
+        <references refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" compoundref="graph_2all_8hpp" startline="25" endline="28">graph_theory::add_edge</references>
         <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
         <references refid="biconnected_8hpp_1a6b3f22cd584c5d8be1de2703c3b9e004" compoundref="biconnected_8hpp" startline="51" endline="85">ear_decomp</references>
         <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
@@ -332,7 +334,7 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Backedge</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/>ear{u};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/>ear{u};</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visited[u]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x<sp/>=<sp/>v;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
@@ -365,17 +367,17 @@
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;vec<sp/>:<sp/>graph)<sp/>{</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(vec));</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>ear_graph(graph.size());</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref><sp/>ear_graph(graph.size());</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;ears<sp/>:<sp/>ear_list)<sp/>{</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;ear<sp/>:<sp/>ears)<sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>ear.size()<sp/>-<sp/>1)<sp/>{<sp/><ref refid="namespacegraph__theory_1a7baea0d3e99864e50ed82e6e93a88eb5" kindref="member">add_edge</ref>(ear_graph,<sp/>ear[i],<sp/>ear[i<sp/>+<sp/>1]);<sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>ear.size()<sp/>-<sp/>1)<sp/>{<sp/><ref refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" kindref="member">add_edge</ref>(ear_graph,<sp/>ear[i],<sp/>ear[i<sp/>+<sp/>1]);<sp/>}</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>add<sp/>print<sp/>overload<sp/>for<sp/>vector&lt;char&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/><sp/>get<sp/>rid<sp/>of<sp/>set_intersection</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(u,<sp/>graph.size())<sp/>{</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(ear_graph[u]));</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref><sp/>out;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/>out;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_difference(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(graph[u]),<sp/><ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(ear_graph[u]),<sp/>back_inserter(out));</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>:<sp/>out)<sp/>{</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(u<sp/>&lt;<sp/>x)<sp/>{</highlight></codeline>

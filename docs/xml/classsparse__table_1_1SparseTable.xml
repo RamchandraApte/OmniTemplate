@@ -12,9 +12,9 @@
       </param>
     </templateparamlist>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classsparse__table_1_1SparseTable_1a2bcae7135a2e6983a0c28afb267165c0" prot="private" static="no" mutable="no">
-        <type><ref refid="core_2all_8hpp_1aff943633016deb6c62a519ffe92c6819" kindref="member">vc</ref>&lt; <ref refid="core_2all_8hpp_1a8634e9b99169b29bc9a86927e715da54" kindref="member">vl</ref> &gt;</type>
-        <definition>vc&lt;vl&gt; sparse_table::SparseTable&lt; T, Semilattice &gt;::meet</definition>
+      <memberdef kind="variable" id="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;ll&gt; &gt; sparse_table::SparseTable&lt; T, Semilattice &gt;::meet</definition>
         <argsstring></argsstring>
         <name>meet</name>
         <briefdescription>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="27" column="4" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="27" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="27" column="8" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="27" bodyend="-1"/>
         <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="10" endline="18">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
         <referencedby refid="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" compoundref="sparse__table_8hpp" startline="19" endline="24">sparse_table::SparseTable&lt; T, Semilattice &gt;::query</referencedby>
       </memberdef>
@@ -47,8 +47,8 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="10" column="10" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="10" bodyend="18"/>
         <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="classsparse__table_1_1SparseTable_1a2bcae7135a2e6983a0c28afb267165c0" compoundref="sparse__table_8hpp" startline="27">sparse_table::SparseTable&lt; T, Semilattice &gt;::meet</references>
-        <references refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" compoundref="utility_8hpp" startline="92" endline="92">utility::ssize</references>
+        <references refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" compoundref="sparse__table_8hpp" startline="27">sparse_table::SparseTable&lt; T, Semilattice &gt;::meet</references>
+        <references refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" compoundref="utility_8hpp" startline="93" endline="93">utility::ssize</references>
       </memberdef>
       <memberdef kind="function" id="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -70,7 +70,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="19" column="3" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="19" bodyend="24"/>
-        <references refid="classsparse__table_1_1SparseTable_1a2bcae7135a2e6983a0c28afb267165c0" compoundref="sparse__table_8hpp" startline="27">sparse_table::SparseTable&lt; T, Semilattice &gt;::meet</references>
+        <references refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" compoundref="sparse__table_8hpp" startline="27">sparse_table::SparseTable&lt; T, Semilattice &gt;::meet</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -95,9 +95,49 @@
 </parameterlist>
 </para>
     </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::vector&lt; vector&lt; ll &gt; &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; vector&lt; ll &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="5">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; ll &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; ll &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sparse_table::SparseTable&lt; T, Semilattice &gt;</label>
+        <link refid="classsparse__table_1_1SparseTable"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>meet</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ll</label>
+        <link refid="structll"/>
+      </node>
+    </collaborationgraph>
     <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" line="8" column="32" bodyfile="/home/ram/OmniTemplate/src/ds/sparse_table.hpp" bodystart="8" bodyend="28"/>
     <listofallmembers>
-      <member refid="classsparse__table_1_1SparseTable_1a2bcae7135a2e6983a0c28afb267165c0" prot="private" virt="non-virtual"><scope>sparse_table::SparseTable</scope><name>meet</name></member>
+      <member refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" prot="private" virt="non-virtual"><scope>sparse_table::SparseTable</scope><name>meet</name></member>
       <member refid="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" prot="public" virt="non-virtual"><scope>sparse_table::SparseTable</scope><name>query</name></member>
       <member refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" prot="public" virt="non-virtual"><scope>sparse_table::SparseTable</scope><name>SparseTable</name></member>
     </listofallmembers>

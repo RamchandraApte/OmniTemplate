@@ -82,19 +82,18 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacecoroutine_1_1test.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecoroutine_1_1test.html">coroutine::test</a> {</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespacecoroutine_1_1test.html#a22ebde81203b27ead34dd1fcc2afdbfc">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecoroutine_1_1test.html#a22ebde81203b27ead34dd1fcc2afdbfc">test_coroutine</a>() {</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> a = 4;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a> v;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    vector&lt;ll&gt; v;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            v.push_back(<a class="code" href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coro</a>(a));</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        }</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    } <span class="keywordflow">catch</span> (out_of_range &amp;) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    assert((v == <a class="code" href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a>{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    assert((v == vector&lt;ll&gt;{404, 0 * 0, 1 * 1, 2 * 2, 3 * 3, 505}));</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;} <span class="comment">// namespace coroutine::test</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecoroutine_1_1test.html">coroutine::test</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_2all_8hpp_html_a8634e9b99169b29bc9a86927e715da54"><div class="ttname"><a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54">vl</a></div><div class="ttdeci">vector&lt; ll &gt; vl</div><div class="ttdef"><b>Definition:</b> all.hpp:64</div></div>
 <div class="ttc" id="anamespacecoroutine_html_a4777caf41e11578bb927d2bc250530ea"><div class="ttname"><a href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coroutine::coro</a></div><div class="ttdeci">ll coro(ll a)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:35</div></div>
 <div class="ttc" id="anamespacecoroutine_1_1test_html_a22ebde81203b27ead34dd1fcc2afdbfc"><div class="ttname"><a href="namespacecoroutine_1_1test.html#a22ebde81203b27ead34dd1fcc2afdbfc">coroutine::test::test_coroutine</a></div><div class="ttdeci">void test_coroutine()</div><div class="ttdef"><b>Definition:</b> test_coroutine.hpp:4</div></div>
 <div class="ttc" id="acoroutine_8hpp_html"><div class="ttname"><a href="coroutine_8hpp.html">coroutine.hpp</a></div></div>

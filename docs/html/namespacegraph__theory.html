@@ -77,21 +77,21 @@
               <div class="m-doc-template">template&lt;typename Graph = <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&gt;</div>
               struct <a href="structgraph__theory_1_1BFS.html" class="m-doc">BFS</a>
             </dt>
-            <dd></dd>
+            <dd>Breadth-first search.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename Graph = <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&gt;</div>
               struct <a href="structgraph__theory_1_1DFS.html" class="m-doc">DFS</a>
             </dt>
-            <dd></dd>
+            <dd>Depth-first search.</dd>
             <dt>
               struct <a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>Edge with weight weight from a to b.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename Searcher, typename Graph&gt;</div>
               struct <a href="structgraph__theory_1_1GeneralSearch.html" class="m-doc">GeneralSearch</a>
             </dt>
-            <dd></dd>
+            <dd>Generalized graph searcher/visitor.</dd>
           </dl>
         </section>
         <section id="typedef-members">
@@ -100,7 +100,7 @@
             <dt>
               using <a href="#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a> = vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;
             </dt>
-            <dd>Edge with weight weight from a to b.</dd>
+            <dd>Adjacency-list representation of graph.</dd>
           </dl>
         </section>
         <section id="func-members">
@@ -110,7 +110,7 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a4dbe54e2a6c2e93add66dc32c647c876" class="m-doc">operator&lt;</a>(</span><span class="m-doc-wrap"><a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; a,
               <a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; b) -&gt; bool</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Compare the edges by weight, with ties compared by a and b.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a9112d064de59f0aa5737bc1d90e9bf32" class="m-doc">operator==</a>(</span><span class="m-doc-wrap"><a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; a,
               <a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; b) -&gt; bool</span>
@@ -121,13 +121,27 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a283db7058efe0355744471a1532e4960" class="m-doc">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">Stream&amp; os,
               <a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; e) -&gt; auto&amp;</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Print the edge.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a7baea0d3e99864e50ed82e6e93a88eb5" class="m-doc">add_edge</a>(</span><span class="m-doc-wrap">vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph,
+              <span class="m-doc-wrap-bumper">auto <a href="#a2abf7b81ca97d786b3c5157c655066f1" class="m-doc">add_edge</a>(</span><span class="m-doc-wrap"><a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph,
               <a href="structll.html" class="m-doc">ll</a> u,
               <a href="structll.html" class="m-doc">ll</a> v) -&gt; auto</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Adds edge <svg class="m-math" style="width: 3.265em; height: 0.536em; vertical-align: -0.000em;" viewBox="0 -5.147373 31.347523 5.147373">
+<title>
+$u \leftrightarrow v$
+</title>
+<defs>
+<path id='eq1-g0-36' d='M1.972603-3.227895C2.630137-3.730012 2.952927-4.220174 3.048568-4.375592C3.58655-5.200498 3.682192-5.953674 3.682192-5.965629C3.682192-6.109091 3.53873-6.109091 3.443088-6.109091C3.239851-6.109091 3.227895-6.085181 3.180075-5.869988C2.905106-4.698381 2.199751-3.706102 .848817-3.144209C.71731-3.096389 .669489-3.072478 .669489-2.988792S.729265-2.881196 .848817-2.833375C2.092154-2.319303 2.893151-1.3868 3.19203-.047821C3.227895 .095641 3.239851 .131507 3.443088 .131507C3.53873 .131507 3.682192 .131507 3.682192-.011955C3.682192-.035866 3.574595-.789041 3.072478-1.590037C2.833375-1.948692 2.486675-2.367123 1.972603-2.749689H9.97061C9.313076-2.247572 8.990286-1.75741 8.894645-1.601993C8.356663-.777086 8.261021-.02391 8.261021-.011955C8.261021 .131507 8.404483 .131507 8.500125 .131507C8.703362 .131507 8.715318 .107597 8.763138-.107597C9.038107-1.279203 9.743462-2.283437 11.094396-2.833375C11.237858-2.881196 11.273724-2.905106 11.273724-2.988792S11.201993-3.108344 11.178082-3.120299C10.652055-3.323537 9.205479-3.921295 8.751183-5.929763C8.715318-6.073225 8.703362-6.109091 8.500125-6.109091C8.404483-6.109091 8.261021-6.109091 8.261021-5.965629C8.261021-5.941719 8.368618-5.188543 8.870735-4.387547C9.109838-4.028892 9.456538-3.610461 9.97061-3.227895H1.972603Z'/>
+<path id='eq1-g1-117' d='M4.076712-.6934C4.23213-.02391 4.805978 .119552 5.092902 .119552C5.475467 .119552 5.762391-.131507 5.953674-.537983C6.156912-.968369 6.312329-1.673724 6.312329-1.709589C6.312329-1.769365 6.264508-1.817186 6.192777-1.817186C6.085181-1.817186 6.073225-1.75741 6.025405-1.578082C5.810212-.753176 5.595019-.119552 5.116812-.119552C4.758157-.119552 4.758157-.514072 4.758157-.669489C4.758157-.944458 4.794022-1.06401 4.913574-1.566127C4.99726-1.888917 5.080946-2.211706 5.152677-2.546451L5.642839-4.495143C5.726526-4.794022 5.726526-4.817933 5.726526-4.853798C5.726526-5.033126 5.583064-5.152677 5.403736-5.152677C5.057036-5.152677 4.97335-4.853798 4.901619-4.554919C4.782067-4.088667 4.136488-1.518306 4.052802-1.099875C4.040847-1.099875 3.574595-.119552 2.701868-.119552C2.080199-.119552 1.960648-.657534 1.960648-1.099875C1.960648-1.78132 2.295392-2.737733 2.606227-3.53873C2.749689-3.921295 2.809465-4.076712 2.809465-4.315816C2.809465-4.829888 2.438854-5.272229 1.865006-5.272229C.765131-5.272229 .32279-3.53873 .32279-3.443088C.32279-3.395268 .37061-3.335492 .454296-3.335492C.561893-3.335492 .573848-3.383313 .621669-3.550685C.908593-4.578829 1.374844-5.033126 1.829141-5.033126C1.948692-5.033126 2.139975-5.021171 2.139975-4.638605C2.139975-4.327771 2.008468-3.981071 1.829141-3.526775C1.303113-2.10411 1.243337-1.649813 1.243337-1.291158C1.243337-.071731 2.163885 .119552 2.654047 .119552C3.419178 .119552 3.837609-.406476 4.076712-.6934Z'/>
+<path id='eq1-g1-118' d='M5.463512-4.471233C5.463512-5.224408 5.080946-5.272229 4.985305-5.272229C4.698381-5.272229 4.435367-4.985305 4.435367-4.746202C4.435367-4.60274 4.519054-4.519054 4.566874-4.471233C4.686426-4.363636 4.99726-4.040847 4.99726-3.419178C4.99726-2.917061 4.27995-.119552 2.84533-.119552C2.116065-.119552 1.972603-.729265 1.972603-1.171606C1.972603-1.769365 2.247572-2.606227 2.570361-3.466999C2.761644-3.957161 2.809465-4.076712 2.809465-4.315816C2.809465-4.817933 2.450809-5.272229 1.865006-5.272229C.765131-5.272229 .32279-3.53873 .32279-3.443088C.32279-3.395268 .37061-3.335492 .454296-3.335492C.561893-3.335492 .573848-3.383313 .621669-3.550685C.908593-4.578829 1.374844-5.033126 1.829141-5.033126C1.936737-5.033126 2.139975-5.033126 2.139975-4.638605C2.139975-4.327771 2.008468-3.981071 1.829141-3.526775C1.255293-1.996513 1.255293-1.625903 1.255293-1.338979C1.255293-1.075965 1.291158-.585803 1.661768-.251059C2.092154 .119552 2.689913 .119552 2.797509 .119552C4.782067 .119552 5.463512-3.789788 5.463512-4.471233Z'/>
+</defs>
+<g id='eq1-page1'>
+<use x='0' y='0' xlink:href='#eq1-g1-117'/>
+<use x='9.983269' y='0' xlink:href='#eq1-g0-36'/>
+<use x='25.259301' y='0' xlink:href='#eq1-g1-118'/>
+</g>
+</svg> to graph graph.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a934a24e545f14f58f25359de518e8d1d" class="m-doc">shortest_dist</a>(</span><span class="m-doc-wrap">vector&lt;vector&lt;<a href="core_2all_8hpp.html#a58e2677d80a09b5be0f0e56ef70d4507" class="m-doc">pr</a>&gt;&gt; graph,
               <a href="structll.html" class="m-doc">ll</a> source) -&gt; auto</span>
@@ -136,7 +150,7 @@
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#ae6ad3f54671798a8d8f3c4253ea83db4" class="m-doc">shortest_dist</a>(</span><span class="m-doc-wrap"><a href="structlinear__algebra_1_1matrix.html" class="m-doc">matrix</a>&lt;<a href="structll.html" class="m-doc">ll</a>&gt; const&amp; graph) -&gt; auto</span>
             </dt>
-            <dd></dd>
+            <dd>Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a43f33335bd84b91252969b3b17f8b09d" class="m-doc">mst</a>(</span><span class="m-doc-wrap">vector&lt;<a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a>&gt; edges,
               const <a href="structll.html" class="m-doc">ll</a> n) -&gt; auto</span>
@@ -146,7 +160,7 @@
               <div class="m-doc-template">template&lt;typename Searcher&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a1fa8a9b42e79b9ce10e89e4659164f8d" class="m-doc">get_size</a>(</span><span class="m-doc-wrap">const Searcher&amp; search) -&gt; vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;</span>
             </dt>
-            <dd></dd>
+            <dd>Given a searcher object, returns an array containing the size of each subtree.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename Graph&gt;</div>
               <span class="m-doc-wrap-bumper"><a href="#a7ffa7c1e75caecd92d5c385d41eb313d" class="m-doc">DFS</a>(</span><span class="m-doc-wrap">Graph) -&gt; DFS&lt; Graph &gt;</span>
@@ -158,15 +172,15 @@
             </dt>
             <dd><span></span></dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#af33d0502161df2d1b82be4b1e8dcaa13" class="m-doc">trans</a>(</span><span class="m-doc-wrap">const vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph) -&gt; auto</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5250f51004add91c3b7f66fe5a030a2f" class="m-doc">trans</a>(</span><span class="m-doc-wrap">const <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph) -&gt; auto</span>
             </dt>
             <dd>Returns the transpose graph of directed graph.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#abf42c204d44caae5b7ea48d8261dfd9e" class="m-doc">scc</a>(</span><span class="m-doc-wrap">const vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph) -&gt; auto</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#afcb5da494d1b16139a1be66e66543043" class="m-doc">scc</a>(</span><span class="m-doc-wrap">const <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph) -&gt; auto</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Returns the strongly connected component for each vertex of the graph g.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a305e818c99814cd465186b57c0a73f50" class="m-doc">graph_in</a>(</span><span class="m-doc-wrap">vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; g,
+              <span class="m-doc-wrap-bumper">auto <a href="#aa68bcc78bd4d2bbd33ce272bbb2d5f33" class="m-doc">graph_in</a>(</span><span class="m-doc-wrap"><a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; g,
               <a href="structll.html" class="m-doc">ll</a> m) -&gt; auto</span>
             </dt>
             <dd><span></span></dd>
@@ -179,7 +193,7 @@
               using graph_<wbr />theory::<wbr /><a href="#a5ab361e566cb00eee5329a02c4553780" class="m-doc-self">GraphAdj</a> = vector&lt;vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
-            <p>Edge with weight weight from a to b.</p>
+            <p>Adjacency-list representation of graph.</p>
           </div></section>
         </section>
         <section>
@@ -190,8 +204,7 @@
               <a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; b)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
-<p>Compare the edges by weight, with ties compared by a and b</p>
+            <p>Compare the edges by weight, with ties compared by a and b.</p>
           </div></section>
           <section class="m-doc-details" id="a9112d064de59f0aa5737bc1d90e9bf32"><div>
             <h3>
@@ -210,18 +223,16 @@
               <span class="m-doc-wrap-bumper">auto&amp; graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a283db7058efe0355744471a1532e4960" class="m-doc-self">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">Stream&amp; os,
               <a href="structgraph__theory_1_1edge.html" class="m-doc">edge</a> const&amp; e)</span></span>
             </h3>
-            <p><span></span></p>
-<p>Print the edge</p>
+            <p>Print the edge.</p>
           </div></section>
-          <section class="m-doc-details" id="a7baea0d3e99864e50ed82e6e93a88eb5"><div>
+          <section class="m-doc-details" id="a2abf7b81ca97d786b3c5157c655066f1"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7baea0d3e99864e50ed82e6e93a88eb5" class="m-doc-self">add_edge</a>(</span><span class="m-doc-wrap">vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph,
+              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2abf7b81ca97d786b3c5157c655066f1" class="m-doc-self">add_edge</a>(</span><span class="m-doc-wrap"><a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph,
               <a href="structll.html" class="m-doc">ll</a> u,
               <a href="structll.html" class="m-doc">ll</a> v)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
-<p>Adds edge <svg class="m-math" style="width: 3.265em; height: 0.536em; vertical-align: -0.000em;" viewBox="0 -5.147373 31.347523 5.147373">
+            <p>Adds edge <svg class="m-math" style="width: 3.265em; height: 0.536em; vertical-align: -0.000em;" viewBox="0 -5.147373 31.347523 5.147373">
 <title>
 $u \leftrightarrow v$
 </title>
@@ -235,7 +246,7 @@ $u \leftrightarrow v$
 <use x='9.983269' y='0' xlink:href='#eq1-g0-36'/>
 <use x='25.259301' y='0' xlink:href='#eq1-g1-118'/>
 </g>
-</svg> to graph graph</p>
+</svg> to graph graph.</p>
           </div></section>
           <section class="m-doc-details" id="a934a24e545f14f58f25359de518e8d1d"><div>
             <h3>
@@ -251,7 +262,8 @@ $u \leftrightarrow v$
               <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae6ad3f54671798a8d8f3c4253ea83db4" class="m-doc-self">shortest_dist</a>(</span><span class="m-doc-wrap"><a href="structlinear__algebra_1_1matrix.html" class="m-doc">matrix</a>&lt;<a href="structll.html" class="m-doc">ll</a>&gt; const&amp; graph)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
-<p>Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances. We do not consider paths of length zero. Algorithm: Floyd-Warshall</p>
+            <p>Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances.</p>
+<p>We do not consider paths of length zero. Algorithm: Floyd-Warshall</p>
           </div></section>
           <section class="m-doc-details" id="a43f33335bd84b91252969b3b17f8b09d"><div>
             <h3>
@@ -269,7 +281,7 @@ $u \leftrightarrow v$
               </div>
               <span class="m-doc-wrap-bumper">vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1fa8a9b42e79b9ce10e89e4659164f8d" class="m-doc-self">get_size</a>(</span><span class="m-doc-wrap">const Searcher&amp; search)</span></span>
             </h3>
-<p>Given a searcher object, returns an array containing the size of each subtree</p>
+            <p>Given a searcher object, returns an array containing the size of each subtree.</p>
           </div></section>
           <section class="m-doc-details" id="a7ffa7c1e75caecd92d5c385d41eb313d"><div>
             <h3>
@@ -291,24 +303,23 @@ $u \leftrightarrow v$
             </h3>
             <p><span></span></p>
           </div></section>
-          <section class="m-doc-details" id="af33d0502161df2d1b82be4b1e8dcaa13"><div>
+          <section class="m-doc-details" id="a5250f51004add91c3b7f66fe5a030a2f"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af33d0502161df2d1b82be4b1e8dcaa13" class="m-doc-self">trans</a>(</span><span class="m-doc-wrap">const vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph)</span></span>
+              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5250f51004add91c3b7f66fe5a030a2f" class="m-doc-self">trans</a>(</span><span class="m-doc-wrap">const <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
             <p>Returns the transpose graph of directed graph.</p>
           </div></section>
-          <section class="m-doc-details" id="abf42c204d44caae5b7ea48d8261dfd9e"><div>
+          <section class="m-doc-details" id="afcb5da494d1b16139a1be66e66543043"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abf42c204d44caae5b7ea48d8261dfd9e" class="m-doc-self">scc</a>(</span><span class="m-doc-wrap">const vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; graph)</span></span>
+              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afcb5da494d1b16139a1be66e66543043" class="m-doc-self">scc</a>(</span><span class="m-doc-wrap">const <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
-<p>Returns the strongly connected component for each vertex of the graph g.</p>
+            <p>Returns the strongly connected component for each vertex of the graph g.</p>
           </div></section>
-          <section class="m-doc-details" id="a305e818c99814cd465186b57c0a73f50"><div>
+          <section class="m-doc-details" id="aa68bcc78bd4d2bbd33ce272bbb2d5f33"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a305e818c99814cd465186b57c0a73f50" class="m-doc-self">graph_in</a>(</span><span class="m-doc-wrap">vector&lt;<a href="core_2all_8hpp.html#a8634e9b99169b29bc9a86927e715da54" class="m-doc">vl</a>&gt;&amp; g,
+              <span class="m-doc-wrap-bumper">auto graph_<wbr />theory::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa68bcc78bd4d2bbd33ce272bbb2d5f33" class="m-doc-self">graph_in</a>(</span><span class="m-doc-wrap"><a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; g,
               <a href="structll.html" class="m-doc">ll</a> m)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
             </h3>
