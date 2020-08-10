@@ -2,7 +2,7 @@
 #include "core/all.hpp"
 namespace graph_theory::bipartite {
 /*! Returns a bipartite coloring if possible */
-auto color2(const vector<vector<ll>> &graph) {
+auto color2(const GraphAdj &graph) {
 	BFS b{graph};
 	b();
 	auto n = size(graph);
@@ -22,14 +22,14 @@ auto color2(const vector<vector<ll>> &graph) {
 }
 /*! Returns a maximum matching of bipartite graph using the
  * Hopcroft-Karp algorithm.*/
-auto max_match(const vector<vector<ll>> &graph) {
+auto max_match(const GraphAdj &graph) {
 	auto side = color2(graph).value();
 	ll n = graph.size();
 	vector<ll> match(n, -1);
 	while (true) {
 		/* Construct a directed graph to find aug_pathmenting paths*/
 		// TODO refactor this to use lazy graphs
-		vector<vector<ll>> aug_path(n + 2);
+		GraphAdj aug_path(n + 2);
 		const auto dummy_a = n;
 		const auto dummy_b = n + 1;
 		fo(i, n) {

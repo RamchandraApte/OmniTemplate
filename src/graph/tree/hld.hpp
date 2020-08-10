@@ -15,7 +15,7 @@ template <typename T, typename Monoid, typename QueryDS>
  */
 class HLD {
       public:
-	explicit HLD(const vector<vector<ll>> &graph, const vector<T> &data) : heavy(graph.size(), -1), head(graph.size(), -1), pos(graph.size(), -1), d{graph} {
+	explicit HLD(const GraphAdj &graph, const vector<T> &data) : heavy(graph.size(), -1), head(graph.size(), -1), pos(graph.size(), -1), d{graph} {
 		d.distance[0] = 0;
 		d(0);
 		const auto sz = get_size(d);

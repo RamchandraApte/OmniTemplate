@@ -23,7 +23,7 @@ matrix<ll> edmond_karp(const matrix<ll> &capacity) {
 	}
 	while (true) {
 		// Construct residual graph
-		vector<vector<ll>> graph(n);
+		GraphAdj graph(n);
 		fo(i, n) {
 			fo(j, n) {
 				if (network[i][j].residual() > 0) {
@@ -64,7 +64,7 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 	 * \returns The flow for each edge in a maximum flow.
 	 */
 	const ll n = capacity.rows_n;
-	vector<vector<ll>> graph(n); // stores edge ids
+	GraphAdj graph(n); // stores edge ids
 	vector<pair<ll, FlowEdge>> edges;
 	fo(i, n) {
 		fo(j, n) {
@@ -78,7 +78,7 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 	}
 	while (true) {
 		// Construct residual graph
-		vector<vector<ll>> res_graph(n);
+		GraphAdj res_graph(n);
 		fo(i, n) {
 			for (auto edge_id : graph[i]) {
 				const auto [j, edge] = edges[edge_id];
@@ -95,7 +95,7 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 			break;
 		}
 
-		vector<vector<ll>> level_graph(n);
+		GraphAdj level_graph(n);
 
 		fo(i, n) {
 			for (const auto edge_id : graph[i]) {

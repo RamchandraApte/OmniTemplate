@@ -2,7 +2,7 @@
 #include "core/all.hpp"
 /*! @brief Find tree diameter.
  * @returns Returns diameter and center of a tree :param: g*/
-pair<array<ll, 2>, ll> tree_diameter(const vector<vector<ll>> &g) {
+pair<array<ll, 2>, ll> tree_diameter(const GraphAdj &g) {
 	BFS b{g};
 	b();
 	const auto u = b.queue.back();
@@ -15,7 +15,7 @@ pair<array<ll, 2>, ll> tree_diameter(const vector<vector<ll>> &g) {
 }
 void test_tree_diameter() {
 	{
-		vector<vector<ll>> graph(5);
+		GraphAdj graph(5);
 		add_edge(graph, 1, 3);
 		add_edge(graph, 3, 2);
 		add_edge(graph, 2, 0);
@@ -26,7 +26,7 @@ void test_tree_diameter() {
 		assert(ret.second == 2);
 	}
 	{
-		vector<vector<ll>> graph(5);
+		GraphAdj graph(5);
 		add_edge(graph, 1, 3);
 		add_edge(graph, 3, 2);
 		add_edge(graph, 2, 0);

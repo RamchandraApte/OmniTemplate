@@ -21,7 +21,7 @@ bool operator==(edge const &a, edge const &b) {
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	return os << "edge{" << e.a << "-(" << e.weight << ")>" << e.b << "}";
 }
-auto add_edge(vector<vector<ll>> &graph, ll u, ll v) {
+auto add_edge(GraphAdj &graph, ll u, ll v) {
 	/*! Adds edge \f$u \leftrightarrow v\f$ to graph graph*/
 	graph[u].push_back(v);
 	graph[v].push_back(u);
@@ -160,9 +160,9 @@ template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Grap
 };
 template <typename Graph> BFS(Graph) -> BFS<Graph>;
 /** @brief Returns the transpose graph of directed graph */
-auto trans(const vector<vector<ll>> &graph) {
+auto trans(const GraphAdj &graph) {
 	ll n = size(graph);
-	vector<vector<ll>> h(n);
+	GraphAdj h(n);
 	fo(i, n) {
 		for (ll j : graph[i]) {
 			h[j].push_back(i);
@@ -177,7 +177,7 @@ auto trans(const vector<vector<ll>> &graph) {
 #include "tree/tree.hpp"
 /** @brief Returns the strongly connected component for each vertex of the
  * graph g.*/
-auto scc(const vector<vector<ll>> &graph) {
+auto scc(const GraphAdj &graph) {
 	auto h = trans(graph);
 	vector<ll> cm(size(graph), -1);
 	auto assign = fix{[&](const auto &assign, ll u, ll c) -> void {
@@ -196,7 +196,7 @@ auto scc(const vector<vector<ll>> &graph) {
 	}
 	return cm;
 }
-auto graph_in(vector<vector<ll>> &g, ll m) {
+auto graph_in(GraphAdj &g, ll m) {
 	/*! Reads 1-indexed list of edges into graph g*/
 	fo(i, 0, m) {
 		ll u, v;

@@ -2,7 +2,7 @@
 #include "hld.hpp"
 namespace hld::test {
 void test_hld() {
-	vector<vector<ll>> tree(6);
+	GraphAdj tree(6);
 	add_edge(tree, 0, 1);
 	add_edge(tree, 1, 5);
 	add_edge(tree, 0, 2);

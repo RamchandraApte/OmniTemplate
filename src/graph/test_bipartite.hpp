@@ -2,7 +2,7 @@
 #include "bipartite.hpp"
 namespace graph_theory::bipartite::test {
 void test_color2() {
-	vector<vector<ll>> g(6);
+	GraphAdj g(6);
 	// (2,1,4) is one side, and (5,3,0) is another side
 	// connected component 1
 	add_edge(g, 2, 5);
@@ -20,14 +20,14 @@ void test_color2() {
 }
 void test_max_match() {
 	{
-		vector<vector<ll>> g(3);
+		GraphAdj g(3);
 		// 0, 2 on one side, 1 on the other side
 		add_edge(g, 0, 1);
 		add_edge(g, 2, 1);
 		assert((matching_size(max_match(g)) == 2 * 1));
 	}
 	{
-		vector<vector<ll>> g(4);
+		GraphAdj g(4);
 		// 0, 2 on one side, 1, 3 on the other side
 		add_edge(g, 0, 1);
 		add_edge(g, 2, 1);
@@ -35,7 +35,7 @@ void test_max_match() {
 		assert((matching_size(max_match(g)) == 2 * 2));
 	}
 	{
-		vector<vector<ll>> g(6);
+		GraphAdj g(6);
 		// 0, 2, 4 on one side, 1, 3, 5 on the other side
 		add_edge(g, 0, 1);
 		add_edge(g, 0, 3);
@@ -47,7 +47,7 @@ void test_max_match() {
 		assert((matching_size(max_match(g)) == 2 * 3));
 	}
 	{
-		vector<vector<ll>> g(6);
+		GraphAdj g(6);
 		// 0, 2, 4 on one side, 1, 3, 5 on the other side
 		add_edge(g, 0, 1);
 		add_edge(g, 0, 3);
@@ -58,7 +58,7 @@ void test_max_match() {
 		assert((matching_size(max_match(g)) == 2 * 3));
 	}
 	{
-		vector<vector<ll>> g(6);
+		GraphAdj g(6);
 		// 0, 2, 4 on one side, 1, 3, 5 on the other side
 		add_edge(g, 0, 1);
 		add_edge(g, 2, 1);
@@ -68,7 +68,7 @@ void test_max_match() {
 		assert((matching_size(max_match(g)) == 2 * 2));
 	}
 	{
-		vector<vector<ll>> g(10);
+		GraphAdj g(10);
 		// 0, 2, 4 on one side, 1, 3, 5 on the other side
 		fo(i, 0, g.size() / 2) {
 			if (2 * i - 1 >= 0) {

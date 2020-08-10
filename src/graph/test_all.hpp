@@ -3,7 +3,7 @@
 #include "test_bipartite.hpp"
 namespace graph_theory::test {
 void test_BFS() {
-	vector<vector<ll>> g(4);
+	GraphAdj g(4);
 	add_edge(g, 0, 1);
 	add_edge(g, 1, 2);
 	add_edge(g, 1, 3);
@@ -14,8 +14,8 @@ void test_BFS() {
 	assert((b.distance == vector<ll>{0, 1, 2, 2}));
 }
 void test_trans() {
-	assert((trans(vector<vector<ll>>{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) == vector<vector<ll>>{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
-	assert((trans(vector<vector<ll>>{}) == vector<vector<ll>>{}));
+	assert((trans(GraphAdj{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) == GraphAdj{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
+	assert((trans(GraphAdj{}) == GraphAdj{}));
 }
 void test_shortest_dist() {
 	matrix<ll> g{{7, 2, 5}, {2, 4, 1}, {3, 2, 5}};
@@ -41,7 +41,7 @@ void test_mst() {
 	assert((ret == vector<edge>{edges[3], edges[1], edges[0]}));
 }
 void test_scc() {
-	vector<vector<ll>> g(5);
+	GraphAdj g(5);
 	g[0].push_back(3);
 	g[3].push_back(1);
 	g[1].push_back(2);
@@ -55,7 +55,7 @@ void test_scc() {
 	assert(cm[4] != cm[0]);
 }
 void test_add_edge() {
-	vector<vector<ll>> g(10);
+	GraphAdj g(10);
 	add_edge(g, 3, 4);
 	add_edge(g, 6, 4);
 	add_edge(g, 9, 2);
@@ -63,7 +63,7 @@ void test_add_edge() {
 	for (auto &x : g) {
 		sort(al(x));
 	}
-	assert((g == vector<vector<ll>>{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));
+	assert((g == GraphAdj{{}, {}, {9}, {4}, {3, 6}, {}, {4}, {}, {}, {2}}));
 }
 void test_graph_theory() {
 	test_add_edge();
