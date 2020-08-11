@@ -36,8 +36,13 @@ template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 	v.resize(unique(al(v), up) - begin(v));
 	return v;
 }
-template <typename T = less<>, typename Func> auto key_compare(const Func &f, T g = T{}) {
-	return [=](auto &&... args) -> decltype(auto) { return g(f(forward<decltype(args)>(args))...); };
+/** @brief Compare using key.
+ * @param func The key function
+ * @param compare the comparison function.
+ * @returns A comparison functor that compares two arugments by the key.
+ */
+template <typename Compare = less<>, typename Func> auto key_compare(const Func &func, Compare compare = {}) {
+	return [=](auto &&... args) -> decltype(auto) { return compare(func(forward<decltype(args)>(args))...); };
 }
 template <typename T> auto prev_less(const T &v) {
 	ll n = v.size();
@@ -54,29 +59,32 @@ template <typename T> auto prev_less(const T &v) {
 	}
 	return l;
 }
+/** @brief Return the smallest power of two that is at least x*/
 ll bit_ceil(ll x) {
-	/*! Return the smallest power of two that is at least x*/
 	if (x <= 1) {
 		return 1;
 	}
 	return 1LL << (sizeof(ll) * CHAR_BIT - __builtin_clzll(x - 1));
 }
 // TODO: power_ceil for base 2
+/*! @brief Returns the smallest power of base that is at least x*/
 ll power_ceil(const ll x, const ll base) {
 	ll pw = 1;
 	for (; pw < x; pw *= base)
 		;
 	return pw;
 }
+/*! @brief Returns the smallest exponent such that base raised to exponent is at least x*/
 ll log_ceil(const ll x, const ll base) {
 	ll pw = 1, cnt = 0;
 	for (; pw < x; pw *= base, ++cnt) {
 	}
 	return cnt;
 }
+/** @brief next combination of bits
+ * Formally, returns the smallest integer y > x such that popcount(y) = popcount(x).
+ * @pre THe desired y must exist. */
 [[nodiscard]] ll next_comb(ll x) {
-	/*! Formally, returns the smallest integer y > x such that popcount(y) =
-	 * popcount(x). Note, such y must exist. */
 	ll tz = __builtin_ctzll(x);
 	ll y = x + (ll{1} << tz);
 	const auto ret = y | (y ^ x) >> (2 + tz);
@@ -84,8 +92,8 @@ ll log_ceil(const ll x, const ll base) {
 	assert(__builtin_popcountll(ret) == __builtin_popcountll(x));
 	return ret;
 }
+/** @brief Stable sorts a and b by func.*/
 template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
-	/*! Stable sorts a and b by func.*/
 	if (func(a) > func(b)) {
 		swap(a, b);
 	}
@@ -96,9 +104,8 @@ template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 template <typename T> struct ar { using type = T; };
 template <typename T> using ar_t = typename ar<T>::type;
 template <typename T, ll n> struct ar<T[n]> { using type = array<ar_t<T>, n>; };
+/** @brief  Random device patch to fix libstdc++'s broken implementation on Windows*/
 struct random_device_patch {
-	/*! Random device patch to fix libstdc++'s broken implementation on
-	 * Windows*/
 	unsigned int operator()() { return clock_::now().time_since_epoch().count(); }
 	double entropy() { return 0.0; }
 };

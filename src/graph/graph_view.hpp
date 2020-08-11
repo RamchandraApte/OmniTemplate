@@ -1,11 +1,12 @@
 #pragma once
 #include "core/all.hpp"
 /*! \brief Filters graph by a predicate.
+ * \tparam Graph graph type
  * \tparam Pred Predicate functor type */
-template <typename Pred> struct Subgraph {
-	const GraphAdj &graph;
+template <typename Graph, typename Pred> struct Subgraph {
+	const Graph &graph;
 	const Pred &pred;
-	explicit Subgraph(const GraphAdj &graph_arg, const Pred &pred_arg) : graph{graph_arg}, pred{pred_arg} {}
+	explicit Subgraph(const Graph &graph_arg, const Pred &pred_arg) : graph{graph_arg}, pred{pred_arg} {}
 	struct iterator : it_base<ll> {
 		const Subgraph &subgraph;
 		const ll i;
