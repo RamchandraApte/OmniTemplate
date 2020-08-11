@@ -60,7 +60,7 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 		vector<vector<ll>> ears;
 		for (const auto u : d.queue) {
 			for (const auto v : graph[u]) {
-				if (d.parent[u] == v || d.parent[v] == u || !(d.distance[u] < d.distance[v])) {
+				if (d.parent[u] == v || d.parent[v] == u) {
 					continue;
 				}
 				// Backedge
