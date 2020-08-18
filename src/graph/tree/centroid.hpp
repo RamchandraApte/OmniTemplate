@@ -9,7 +9,9 @@ template <typename Graph> vector<vector<ll>> centroid_decomp(const Graph &tree) 
 	vector<ll> vis_cent(tree.size());
 	auto rec_decomp = fix{[&](const auto &rec_decomp, const ll u, const ll lvl) -> void {
 		// Decompose the subtree beginning on u
-		const auto pred = [&](const ll u, const ll v) { return !vis_cent[u] && !vis_cent[v]; };
+		const auto pred = [&](const ll u, const ll v) {
+			return !vis_cent[u] && !vis_cent[v];
+		};
 		Subgraph sub{tree, pred};
 		DFS dfs{sub};
 		dfs(u);

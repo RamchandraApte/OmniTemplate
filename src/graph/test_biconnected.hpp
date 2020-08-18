@@ -63,7 +63,10 @@ void test_biconnected() {
 	using Exp = pair<vector<ll>, vector<array<ll, 2>>>;
 	auto make_test = [&](const auto &exp_func) {
 		return [&](const auto &graph, const auto &perm) {
-			const auto check_func = [&, permuted = permute(perm, graph)](const auto &func) { assert(check(func(permuted), exp_func(perm))); };
+			const auto check_func = [&, permuted =
+							permute(perm, graph)](const auto &func) {
+				assert(check(func(permuted), exp_func(perm)));
+			};
 			check_func(biconnected);
 			check_func(biconnected_ear);
 			check_func(biconnected_ear2);
@@ -75,7 +78,9 @@ void test_biconnected() {
 	make_triangle(graph_t1, 0);
 	add_edge(graph_t1, 2, 3);
 	make_triangle(graph_t1, 3);
-	test_all_perms(graph_t1, make_test([](const auto perm) { return Exp{{perm[2], perm[3]}, {{perm[2], perm[3]}}}; }));
+	test_all_perms(graph_t1, make_test([](const auto perm) {
+			       return Exp{{perm[2], perm[3]}, {{perm[2], perm[3]}}};
+		       }));
 
 	GraphAdj graph_t2(8);
 	make_triangle(graph_t2, 0);
@@ -86,16 +91,24 @@ void test_biconnected() {
 	add_edge(graph_t2, 3, 5);
 	add_edge(graph_t2, 2, 5);
 	make_triangle(graph_t2, 5);
-	test_all_perms(graph_t2, make_test([&](const auto perm) { return Exp{{perm[2], perm[5]}, {}}; }));
+	test_all_perms(graph_t2, make_test([&](const auto perm) {
+			       return Exp{{perm[2], perm[5]}, {}};
+		       }));
 
 	GraphAdj graph2(2);
 	add_edge(graph2, 0, 1);
-	test_all_perms(graph2, make_test([](const auto perm) { return Exp{{}, {{perm[0], perm[1]}}}; }));
+	test_all_perms(graph2, make_test([](const auto perm) {
+			       return Exp{{}, {{perm[0], perm[1]}}};
+		       }));
 
 	GraphAdj graph1(1);
 	test_all_perms(graph1, make_test([](const auto perm) { return Exp{{}, {}}; }));
 
 	// Disconnect graph, union of 1 and 2
 	const auto graph_dis = graph_disunion(graph_t1, graph_t2);
-	test_random_perms(graph_dis, make_test([&](const auto perm) { return Exp{{perm[2], perm[3], perm[graph_t1.size() + 2], perm[graph_t1.size() + 5]}, {{perm[2], perm[3]}}}; }));
+	test_random_perms(graph_dis, make_test([&](const auto perm) {
+				  return Exp{{perm[2], perm[3], perm[graph_t1.size() + 2],
+					      perm[graph_t1.size() + 5]},
+					     {{perm[2], perm[3]}}};
+			  }));
 }

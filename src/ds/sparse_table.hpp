@@ -7,12 +7,14 @@ namespace sparse_table {
  * @param Semilattice is a bounded semilattice.*/
 template <typename T, typename Semilattice> class SparseTable {
       public:
-	explicit SparseTable(const vector<T> &arr) : meet(log_ceil(arr.size(), 2), vector<ll>(arr.size())) {
+	explicit SparseTable(const vector<T> &arr)
+	    : meet(log_ceil(arr.size(), 2), vector<ll>(arr.size())) {
 		meet[0] = arr;
 		fo(pw, 1, meet.size()) {
 			fo(i, arr.size()) {
 				const auto half = 1LL << (pw - 1);
-				meet[pw][i] = Semilattice{}(meet[pw - 1][i], meet[pw - 1][min(i + half, ssize(arr) - 1)]);
+				meet[pw][i] = Semilattice{}(
+				    meet[pw - 1][i], meet[pw - 1][min(i + half, ssize(arr) - 1)]);
 			}
 		}
 	}
@@ -20,25 +22,28 @@ template <typename T, typename Semilattice> class SparseTable {
 		const auto len = r - l;
 		// TODO put this in a function
 		const auto floor_log2 = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(len);
-		return Semilattice{}(meet[floor_log2][l], meet[floor_log2][r - (1LL << floor_log2)]);
+		return Semilattice{}(meet[floor_log2][l],
+				     meet[floor_log2][r - (1LL << floor_log2)]);
 	}
 
       private:
 	vector<vector<ll>> meet; //!< meet[pw][i] stores the meet of elements in range [i, i+2^pw)
 };
 /*! @brief Disjoint sparse table.
- * 
+ *
  * Space complexity: \f$O(n \log n)\f$.
- * 
+ *
  * Time complexity: \f$O(n \log n)\f$ to construct, \f$O(1)\f$ per query.
  */
 template <typename T, typename Monoid> class DisjointSparseTable {
       public:
-	explicit DisjointSparseTable(vector<T> arr) : sum(log_ceil(arr.size(), 2), vector<T>(power_ceil(arr.size(), 2))) {
+	explicit DisjointSparseTable(vector<T> arr)
+	    : sum(log_ceil(arr.size(), 2), vector<T>(power_ceil(arr.size(), 2))) {
 		arr.resize(sum[0].size(), identity(Monoid{}, T{}));
 		fo(level, sum.size()) {
 			fo(block, 1LL << level) {
-				// The first half of the block contains suffix sums, the second half contains prefix sums
+				// The first half of the block contains suffix sums, the second half
+				// contains prefix sums
 				const auto start = block << (sum.size() - level);
 				const auto end = (block + 1) << (sum.size() - level);
 				const auto middle = (end + start) / 2;
@@ -57,12 +62,12 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 			}
 		}
 	}
-    /*! Returns Monoid sum over range [l, r)*/
+	/*! Returns Monoid sum over range [l, r)*/
 	T query(ll l, ll r) const {
 		assert(l < r);
 		// Convert half open interval to closed interval
 		--r;
-		if(l == r){
+		if (l == r) {
 			return sum.back()[l];
 		}
 		// Position of the leftmost different bit from the right

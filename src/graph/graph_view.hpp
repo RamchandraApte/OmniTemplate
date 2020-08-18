@@ -6,13 +6,18 @@
 template <typename Graph, typename Pred> struct Subgraph {
 	const Graph &graph;
 	const Pred &pred;
-	explicit Subgraph(const Graph &graph_arg, const Pred &pred_arg) : graph{graph_arg}, pred{pred_arg} {}
+	explicit Subgraph(const Graph &graph_arg, const Pred &pred_arg)
+	    : graph{graph_arg}, pred{pred_arg} {}
 	struct iterator : it_base<ll> {
 		const Subgraph &subgraph;
 		const ll i;
 		const vector<ll> &adj_list;
 		vector<ll>::const_iterator it;
-		explicit iterator(const Subgraph &subgraph_arg, const ll i_arg) : subgraph{subgraph_arg}, i{i_arg}, adj_list{subgraph.graph[i]}, it{adj_list.begin()} { advance(); }
+		explicit iterator(const Subgraph &subgraph_arg, const ll i_arg)
+		    : subgraph{subgraph_arg}, i{i_arg}, adj_list{subgraph.graph[i]},
+		      it{adj_list.begin()} {
+			advance();
+		}
 		void advance() {
 			for (; it != adj_list.end() && !subgraph.pred(i, *it); ++it) {
 			}

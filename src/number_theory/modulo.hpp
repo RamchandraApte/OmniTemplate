@@ -5,9 +5,9 @@ template <typename... Args> using invert_t = decltype(invert(std::declval<Args>(
 /*! @brief Returns \f$a^b\f$
  * @param a the base
  * @param b the exponent
- * 
+ *
  * Time complexity: \f$O(\log_2 |b|)\f$ multiplications
-*/
+ */
 template <typename T> T power(T a, ll b) {
 	if (b < 0) {
 		if constexpr (experimental::is_detected_v<invert_t, multiplies<>, decltype(a)>) {
@@ -35,12 +35,12 @@ ll mod(ll a, const ll b) {
 }
 /*! Set a to the remainder when divided by b. */
 ll mod_eq(ll &a, const ll b) { return a = mod(a, b); }
-/*! no_mod tag class allows a modulo object to be quickly constructed from an integer in the range [0, b) without performing a modulo operation.*/
+/*! no_mod tag class allows a modulo object to be quickly constructed from an integer in the range
+ * [0, b) without performing a modulo operation.*/
 struct no_mod {};
 struct modulo {
 	inline static ll modulus =
-	    1e9 +
-	    7; //!< Modulus used for operations like modular multiplication
+	    1e9 + 7; //!< Modulus used for operations like modular multiplication
 	/*! Modular arithmetic class */
 	ll x; //!< The representative element, which is in [0, M)
 	modulo() : x{0LL} {}
@@ -80,9 +80,7 @@ modulo invert(multiplies<>, modulo const &b) {
 	return power(b, modulo::modulus - 2);
 }
 using ::operator/;
-template <typename Stream> auto &operator<<(Stream &os, modulo const &m) {
-	return os << m.x;
-}
+template <typename Stream> auto &operator<<(Stream &os, modulo const &m) { return os << m.x; }
 } // namespace modulo_namespace
 using namespace modulo_namespace;
 namespace std {

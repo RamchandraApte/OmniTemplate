@@ -7,8 +7,7 @@ struct timer {
 	decltype(clock_::now()) t1;
 	timer() : t1(clock_::now()) {}
 	~timer() {
-		cerr << "Time duration: "
-		     << duration<ld>(clock_::now() - t1).count() << " s"
+		cerr << "Time duration: " << duration<ld>(clock_::now() - t1).count() << " s"
 		     << endl;
 	}
 };

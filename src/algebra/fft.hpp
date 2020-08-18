@@ -8,36 +8,36 @@ auto fft(auto &v, ll d = 1, ll s = 0) {
 	}
 	auto n = nx2(v.size());
 	v.resize(n);
-	fft(v, 2*d, s);
-	fft(v, 2*d, s+d);
+	fft(v, 2 * d, s);
+	fft(v, 2 * d, s + d);
 	auto e = exp(com{-double{tau} * 1.0i / (n / d)});
 	auto p = com{1};
 	auto i = s;
 	vector<com> out(n / d);
-	fo(j,n/(2*d)){
-		auto od = p*v[i+d];
-		out[j] = v[i]+od;
-		out[j+n/(2*d)] = v[i]-od;
-		p*=e;
-		i+=2*d;
+	fo(j, n / (2 * d)) {
+		auto od = p * v[i + d];
+		out[j] = v[i] + od;
+		out[j + n / (2 * d)] = v[i] - od;
+		p *= e;
+		i += 2 * d;
 	}
 	i = s;
-	for(const auto& x:out){
+	for (const auto &x : out) {
 		v[i] = x;
-		i+=d;
+		i += d;
 	}
 }
-auto ifft(auto& v){
-	reverse(begin(v)+1, end(v));
+auto ifft(auto &v) {
+	reverse(begin(v) + 1, end(v));
 	fft(v);
-	for(auto& x: v){
+	for (auto &x : v) {
 		x /= com(v.size());
 	}
 }
 #endif
 #if 1
 /** @brief FFT using Cooley–Tukey FFT algorithm
- * 
+ *
  * Time complexity: \f$ O(n log n)\f$
  */
 template <typename Cont> vector<com> fft(Cont v) {
@@ -69,6 +69,4 @@ template <typename Cont> vector<com> ifft(Cont v) {
 }
 #endif
 /*! Returns the convolutions of sequences a and b*/
-template <typename Cont> auto conv(const Cont &a, const Cont &b) {
-	return ifft(fft(a) * fft(b));
-}
+template <typename Cont> auto conv(const Cont &a, const Cont &b) { return ifft(fft(a) * fft(b)); }

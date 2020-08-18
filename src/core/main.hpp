@@ -22,8 +22,7 @@ int main(int argc, char *argv[]) {
 	if (!debug_mode) {
 		cerr.rdbuf(nullptr);
 	}
-	for (ios &os :
-	     initializer_list<reference_wrapper<ios>>{in, cout, cerr, clog}) {
+	for (ios &os : initializer_list<reference_wrapper<ios>>{in, cout, cerr, clog}) {
 		fixed(os);
 		if (os.rdbuf()) {
 			os.exceptions(ios::failbit | ios::badbit | ios::eofbit);

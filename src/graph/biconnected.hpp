@@ -32,7 +32,12 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
 				}
 			}
 			if (d.parent[v] != -1) {
-				bool is_bridge = all_of(al(graph[v]), [&](ll u) { return u == d.parent[v] || low[u] == d.distance[v]; }) && low[v] == d.distance[d.parent[v]];
+				bool is_bridge = all_of(al(graph[v]),
+							[&](ll u) {
+								return u == d.parent[v] ||
+								       low[u] == d.distance[v];
+							}) &&
+						 low[v] == d.distance[d.parent[v]];
 				if (is_bridge) {
 					bridges.push_back({d.parent[v], v});
 				}

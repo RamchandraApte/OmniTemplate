@@ -1,16 +1,15 @@
 #pragma once
 #include "core/all.hpp"
-template<typename T> struct it_base {
+template <typename T> struct it_base {
 	using value_type = T;
 	using pointer = T *;
 	using reference = T &;
 	using difference_type = ll;
 };
-template<typename T> struct int_it : it_base<T> {
+template <typename T> struct int_it : it_base<T> {
 	using iterator_category = random_access_iterator_tag;
 	T x, m;
-	template <typename Integer>
-	int_it(Integer x_, T m_ = 1) : x(x_), m(m_) {}
+	template <typename Integer> int_it(Integer x_, T m_ = 1) : x(x_), m(m_) {}
 	int_it() {}
 	auto &operator*() const {
 		static T x_stat;
@@ -33,11 +32,12 @@ template<typename T> struct int_it : it_base<T> {
 		return ret;
 	}
 };
-#define bin(op, Tp)                                                            \
+#define bin(op, Tp)                                                                                \
 	auto operator op(Tp const &a, Tp const &b) { return a.x op b.x; }
 template <typename T> bin(==, int_it<T>);
 template <typename T> bin(<, int_it<T>);
-/*! Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a range object. */
+/*! Range class. This represents a begin and end iterator pair. A for-range loop can iterate over a
+ * range object. */
 template <typename T> struct range {
 	T bg, ed;
 	explicit range(T ed_) : range(0LL, ed_) {}
@@ -48,14 +48,20 @@ template <typename T> struct range {
 	auto end() const { return ed; }
 	explicit operator ll() { return ed - bg; }
 };
-template <typename T> auto operator<(range<T> const &a, range<T> const &b) { return a.bg == b.bg ? a.ed > b.ed : a.bg < b.bg; }
-template <typename T> auto operator&(range<T> const &a, range<T> const &b) { return range<T>{max(a.bg, b.bg), min(a.ed, b.ed)}; }
+template <typename T> auto operator<(range<T> const &a, range<T> const &b) {
+	return a.bg == b.bg ? a.ed > b.ed : a.bg < b.bg;
+}
+template <typename T> auto operator&(range<T> const &a, range<T> const &b) {
+	return range<T>{max(a.bg, b.bg), min(a.ed, b.ed)};
+}
 template <typename Range> auto rev(const Range &r) {
 	using rev_it = reverse_iterator<decltype(begin(r))>;
 	return range{rev_it{end(r)}, rev_it{begin(r)}};
 }
 using ra = range<int_it<ll>>;
-template <typename T> int_it<T> operator+(int_it<T> const &a, int_it<T> const &b) { return a.x + b.x; }
+template <typename T> int_it<T> operator+(int_it<T> const &a, int_it<T> const &b) {
+	return a.x + b.x;
+}
 template <typename T> int_it<T> operator-(int_it<T> const &a) { return -a.x; }
 enum isect { null, dis, over, cont, eq };
 template <typename T1, typename T2> auto intersect(const T1 &a, const T2 &b) {
@@ -73,7 +79,9 @@ template <typename T1, typename T2> auto intersect(const T1 &a, const T2 &b) {
 	}
 	return isect::null;
 }
-template <typename T> auto operator^(range<T> const &a, range<T> const &b) { return max(intersect(a, b), intersect(b, a)); }
+template <typename T> auto operator^(range<T> const &a, range<T> const &b) {
+	return max(intersect(a, b), intersect(b, a));
+}
 auto filter(vector<ra> &v) {
 	sort(al(v));
 	vector<ra> sg;

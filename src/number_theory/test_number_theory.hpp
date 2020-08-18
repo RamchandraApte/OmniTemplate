@@ -37,7 +37,10 @@ void test_egcd() {
 	test_egcd(2, 1);
 	test_egcd(63, 12);
 }
-void test_totient() { assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 && totient(84) == 24 && totient(127) == 126); }
+void test_totient() {
+	assert(totient(1) == 1 && totient(2) == 1 && totient(6) == 2 && totient(84) == 24 &&
+	       totient(127) == 126);
+}
 void test_dlog() {
 	auto check = [](modulo a, ll x, ll m) {
 		with _m{m, modulo::modulus};

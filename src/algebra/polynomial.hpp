@@ -7,6 +7,7 @@
 namespace polynomial_ns {
 template <typename T> class Polynomial : public vector<T> {
 	using vector<T>::vector;
+
       public:
 	void shrink() {
 		while (!this.empty() && this.back() == 0) {
@@ -14,7 +15,8 @@ template <typename T> class Polynomial : public vector<T> {
 		}
 	}
 	ll degree() const {
-		/*! Returns the degree of polynomial. Returns \f$-\infty\f$ for the \f$0\f$ polynomial.*/
+		/*! Returns the degree of polynomial. Returns \f$-\infty\f$ for the \f$0\f$
+		 * polynomial.*/
 		fr(j, 0, this.size()) {
 			if (this[j] != 0) {
 				return j;
@@ -51,11 +53,13 @@ template <typename T> Polynomial<T> operator%(Polynomial<T> a, const Polynomial<
 	return a;
 }
 template <typename T> bool operator==(const Polynomial<T> &a, const Polynomial<T> &b) {
-	/*! Checks if two polynomials are equal. Note that polynomials can have different sizes but be equal*/
+	/*! Checks if two polynomials are equal. Note that polynomials can have different sizes but
+	 * be equal*/
 	if (!(a.size() <= b.size())) {
 		return b == a;
 	}
-	return equal(al(a), b.begin(), b.begin() + a.size()) && all_of(b.begin() + a.size(), b.end(), [](T x) { return x == 0; });
+	return equal(al(a), b.begin(), b.begin() + a.size()) &&
+	       all_of(b.begin() + a.size(), b.end(), [](T x) { return x == 0; });
 }
 } // namespace polynomial_ns
 using namespace polynomial_ns;

@@ -47,10 +47,10 @@ void split(treap<Key, Data> *trp, const Key &key, Trp *&l, Trp *&r) {
 	update_data(trp);
 }
 /**
- * @brief Joins treap l and treap r. 
+ * @brief Joins treap l and treap r.
  * @pre All the keys in l must be less than the keys in r.
  * @tparam Trp A treap type.
- * @param l The left half 
+ * @param l The left half
  * @param r The right half
  * @return Trp*: The union of l and r.
  */
@@ -112,16 +112,15 @@ template <typename Trp> void down(Trp *trp) {
 		return;
 	}
 	swap(trp->l, trp->r);
-#define flip(x)                                                                \
-	if (trp->x) {                                                          \
-		trp->x->rev ^= 1;                                              \
+#define flip(x)                                                                                    \
+	if (trp->x) {                                                                              \
+		trp->x->rev ^= 1;                                                                  \
 	}
 	flip(l) flip(r)
 #undef flip
 	    trp->rev = 0;
 }
-template <typename Trp>
-void split_imp(Trp *trp, ll pos, Trp *&l, Trp *&r, ll sum = 0) {
+template <typename Trp> void split_imp(Trp *trp, ll pos, Trp *&l, Trp *&r, ll sum = 0) {
 	/*! Splits the treap by pos*/
 	if (!trp) {
 		l = r = nullptr;
@@ -166,25 +165,21 @@ auto insert_imp(treap<Key, Data> *&trp, Key const &key, ll pos) {
 	return insert_imp(trp, new Trp{key}, pos);
 }
 /*! Debug print the treap*/
-template <typename Stream, typename... Ts>
-auto &operator<<(Stream &os, treap<Ts...> *trp) {
+template <typename Stream, typename... Ts> auto &operator<<(Stream &os, treap<Ts...> *trp) {
 	static ll lvl = -1;
 	with _w{lvl + 1, lvl};
 	string tab(lvl, ' ');
 	if (trp) {
 		os << tab << "key = " << trp->key << " "
 		   << "priority = " << trp->pri << " " << trp->data << endl;
-		os << tab << "Left" << endl
-		   << trp->l << tab << "Right" << endl
-		   << trp->r;
+		os << tab << "Left" << endl << trp->l << tab << "Right" << endl << trp->r;
 	} else {
 		os << tab << "null" << endl;
 	}
 	return os;
 }
 /*! Insert the elements of trp in-order into \param out*/
-template <typename Key, typename Data>
-void to_array(treap<Key, Data> *trp, vector<Key> &out) {
+template <typename Key, typename Data> void to_array(treap<Key, Data> *trp, vector<Key> &out) {
 	if (!trp) {
 		return;
 	}
@@ -192,8 +187,7 @@ void to_array(treap<Key, Data> *trp, vector<Key> &out) {
 	out.push_back(trp->key);
 	to_array(trp->r, out);
 }
-template <typename Key, typename Data>
-vector<Key> to_array(treap<Key, Data> *trp) {
+template <typename Key, typename Data> vector<Key> to_array(treap<Key, Data> *trp) {
 	/*! Returns the array of keys for an implicit treap.*/
 	vector<Key> out;
 	to_array(trp, out);

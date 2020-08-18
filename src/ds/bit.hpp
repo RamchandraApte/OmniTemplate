@@ -23,20 +23,20 @@ template <typename Value, typename MonoidOp = plus<>> class BIT {
 		return sum;
 	}
 	/**
-     * @brief  Update the value at idx by value. Note that this does _not_ set the value to value.
-     * @param idx the index of the element
-     * @param value the value the element will be updated by
-     */
+	 * @brief  Update the value at idx by value. Note that this does _not_ set the value to
+	 * value.
+	 * @param idx the index of the element
+	 * @param value the value the element will be updated by
+	 */
 	void update(ll idx, const Value value) {
 		++idx;
 		for (; idx < arr.size(); idx += get_len(idx)) {
 			arr[idx] = op(arr[idx], value);
 		}
 	}
+
       private:
 	/*! @brief Returns the length of the range of elements idx is
 	 * responsible for*/
-	static ll get_len(const ll idx) {
-		return idx & (-idx);
-	}
+	static ll get_len(const ll idx) { return idx & (-idx); }
 };

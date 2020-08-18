@@ -5,28 +5,22 @@ inline namespace queue_tools {
  * @brief Queue adaptor, creates a queue using two Stacks left, right
  * If there are at least two elements, left and right are not empty.
  * If there is one element, it is in left.
- * 
+ *
  */
 template <typename Stack> class QueueAdaptor {
       public:
 	using container_type = Stack;
 	using value_type = typename Stack::value_type;
 	using size_type = typename Stack::size_type;
-    using reference = typename Stack::reference;
+	using reference = typename Stack::reference;
 	using const_reference = typename Stack::const_reference;
-	const_reference front() const {
-		return (left.empty() ? right : left).top();
-	}
+	const_reference front() const { return (left.empty() ? right : left).top(); }
 	reference front() {
-		return const_cast<reference>(
-		    const_cast<const QueueAdaptor &>(this).front());
+		return const_cast<reference>(const_cast<const QueueAdaptor &>(this).front());
 	}
-	const_reference back() const {
-		return (right.empty() ? left : right).top();
-	}
+	const_reference back() const { return (right.empty() ? left : right).top(); }
 	reference back() {
-		return const_cast<reference>(
-		    const_cast<const QueueAdaptor &>(this).back());
+		return const_cast<reference>(const_cast<const QueueAdaptor &>(this).back());
 	}
 	bool empty() const { return left.empty() && right.empty(); }
 	size_type size() const { return left.size() + right.size(); }
@@ -69,8 +63,7 @@ template <typename Stack> class QueueAdaptor {
 		}
 	}
 };
-template <typename T, typename Base = stack<pair<T, T>>>
-class MinStack : public Base {
+template <typename T, typename Base = stack<pair<T, T>>> class MinStack : public Base {
       public:
 	using container_type = T;
 	using value_type = T;

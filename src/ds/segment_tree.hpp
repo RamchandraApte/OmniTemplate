@@ -4,7 +4,8 @@
 inline namespace segment_tree {
 // TODO non commutative monoids, specify the ordering
 // TODO multidimensional
-/*! @brief Generic persistent explicit/implicit lazy based segment tree, technically known as range query tree.
+/*! @brief Generic persistent explicit/implicit lazy based segment tree, technically known as range
+ * query tree.
  * @param T is the value type of the segment tree
  * @param Query is the monoid for queries
  * @param Update is the monoid for queries
@@ -12,9 +13,13 @@ inline namespace segment_tree {
  * @param Update must be a multiplicative monoid of a semiring
  * @param base is the segment tree base. Default is 2.
  */
-template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true, bool has_pers = true, ll base = 2> class SegmentTree {
+template <typename T, typename Query, typename Update, bool has_lazy = true, bool has_ptr = true,
+	  bool has_pers = true, ll base = 2>
+class SegmentTree {
       public:
-	SegmentTree(const ll size_arg) : size_{size_arg}, ceil_size{power_ceil(size_arg, base)}, nodes(!has_ptr ? base * ceil_size : 0) {
+	SegmentTree(const ll size_arg)
+	    : size_{size_arg}, ceil_size{power_ceil(size_arg, base)},
+	      nodes(!has_ptr ? base * ceil_size : 0) {
 		if constexpr (has_ptr) {
 			root = new NodeExp{};
 		} else {
@@ -46,17 +51,19 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 	void build(const vector<T> &arr) { build(arr, root, 0, ceil_size); }
 	void build(const vector<T> &arr, const Node idx, const ll node_l, const ll node_r) {
 		if (node_r - node_l == 1) {
-			get_core(idx).qsum = node_l < arr.size() ? arr[node_l] : identity(Query{}, T{});
+			get_core(idx).qsum =
+			    node_l < arr.size() ? arr[node_l] : identity(Query{}, T{});
 			return;
 		}
 		auto ret = identity(Query{}, T{});
 		fo(inc, base) {
-			build(arr, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1));
+			build(arr, get_child(idx, inc), mid(node_l, node_r, inc),
+			      mid(node_l, node_r, inc + 1));
 			ret = Query{}(ret, get_core(get_child(idx, inc)).qsum);
 		}
 		get_core(idx).qsum = ret;
 	}
-    /*! Push lazy updates down*/
+	/*! Push lazy updates down*/
 	void down(const Node idx, const ll node_l, const ll node_r) {
 		const bool leaf = node_r - node_l == 1;
 		if constexpr (has_ptr) {
@@ -72,7 +79,9 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 			/*! Push lazy update down*/
 			get_core(idx).qsum = Update{}(get_core(idx).qsum, get_core(idx).lazy);
 			if (!leaf) {
-				fo(i, base) { get_core(get_child(idx, i)).lazy += get_core(idx).lazy; }
+				fo(i, base) {
+					get_core(get_child(idx, i)).lazy += get_core(idx).lazy;
+				}
 			}
 			get_core(idx).lazy = identity(Update{}, get_core(idx).lazy);
 		}
@@ -89,7 +98,11 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		}
 
 		auto ret = identity(Query{}, T{});
-		fo(inc, base) { ret = Query{}(ret, query(l, r, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1))); }
+		fo(inc, base) {
+			ret =
+			    Query{}(ret, query(l, r, get_child(idx, inc), mid(node_l, node_r, inc),
+					       mid(node_l, node_r, inc + 1)));
+		}
 		return ret;
 	}
 	T query(const ll l, const ll r, const Node custom_root) {
@@ -99,7 +112,8 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 		return query(l, r, custom_root, 0, ceil_size);
 	}
 	T query(const ll l, const ll r) { return query(l, r, root); }
-	Node update(const ll l, const ll r, const T val, Node idx, const ll node_l, const ll node_r) {
+	Node update(const ll l, const ll r, const T val, Node idx, const ll node_l,
+		    const ll node_r) {
 		/*! Update the range l to r with the update val
 		 * returns the new node
 		 */
@@ -120,7 +134,11 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 			return idx;
 		}
 		fo(inc, base) {
-			auto get_update = [&] { return update(l, r, val, get_child(idx, inc), mid(node_l, node_r, inc), mid(node_l, node_r, inc + 1)); };
+			auto get_update = [&] {
+				return update(l, r, val, get_child(idx, inc),
+					      mid(node_l, node_r, inc),
+					      mid(node_l, node_r, inc + 1));
+			};
 			if constexpr (has_pers) {
 				get_child(idx, inc) = get_update();
 			} else {
@@ -128,7 +146,10 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
 			}
 		}
 		get_core(idx).qsum = identity(Query{}, T{});
-		fo(inc, base) { get_core(idx).qsum = Query{}(get_core(idx).qsum, get_core(get_child(idx, inc)).qsum); }
+		fo(inc, base) {
+			get_core(idx).qsum =
+			    Query{}(get_core(idx).qsum, get_core(get_child(idx, inc)).qsum);
+		}
 		return idx;
 	}
 	Node update(const ll l, const ll r, const T val) {
@@ -157,7 +178,7 @@ template <typename T, typename Query, typename Update, bool has_lazy = true, boo
       private:
 	ll size_;
 	ll ceil_size;
-	Node root; /*< Root node */
+	Node root;		/*< Root node */
 	vector<NodeCore> nodes; /*< 1-indexed implicit array of nodes */
 };
 } // namespace segment_tree

@@ -1,34 +1,29 @@
 #pragma once
 #include "range.hpp"
 // namespace operations {
-#define aug(op)                                                                \
-	template <typename T1, typename T2>                                    \
-	auto operator op##=(T1 &a, const T2 &b) {                              \
-		return a = a op b;                                             \
+#define aug(op)                                                                                    \
+	template <typename T1, typename T2> auto operator op##=(T1 &a, const T2 &b) {              \
+		return a = a op b;                                                                 \
 	}
 aug(+);
 aug(-);
 aug(*);
 aug(/);
-template <typename T> enable_if_t<is_floating_point_v<T>, T> invert(multiplies<>, const T &x) { return 1 / x; }
-template <typename Group> Group operator/(Group const &a, Group const &b) { return a * invert(multiplies{}, b); }
-template <typename T1, typename T2>
-auto constexpr operator-(const T1 &a, const T2 &b) {
+template <typename T> enable_if_t<is_floating_point_v<T>, T> invert(multiplies<>, const T &x) {
+	return 1 / x;
+}
+template <typename Group> Group operator/(Group const &a, Group const &b) {
+	return a * invert(multiplies{}, b);
+}
+template <typename T1, typename T2> auto constexpr operator-(const T1 &a, const T2 &b) {
 	return a + -b;
 }
-template <typename T1, typename T2>
-auto constexpr operator!=(const T1 &a, const T2 &b) {
+template <typename T1, typename T2> auto constexpr operator!=(const T1 &a, const T2 &b) {
 	return !(a == b);
 }
-template <typename T1, typename T2> auto operator<=(const T1 &a, const T2 &b) {
-	return !(b < a);
-}
-template <typename T1, typename T2> auto operator>=(const T1 &a, const T2 &b) {
-	return b <= a;
-}
-template <typename T1, typename T2> auto operator>(const T1 &a, const T2 &b) {
-	return b < a;
-}
+template <typename T1, typename T2> auto operator<=(const T1 &a, const T2 &b) { return !(b < a); }
+template <typename T1, typename T2> auto operator>=(const T1 &a, const T2 &b) { return b <= a; }
+template <typename T1, typename T2> auto operator>(const T1 &a, const T2 &b) { return b < a; }
 unordered_map<ll, ll> operator+(unordered_map<ll, ll> a, unordered_map<ll, ll> const &b) {
 	for (const auto &p : b) {
 		a[p.first] += p.second;
@@ -37,7 +32,7 @@ unordered_map<ll, ll> operator+(unordered_map<ll, ll> a, unordered_map<ll, ll> c
 }
 /**
  * @brief Returns union of sets a and b.
- * 
+ *
  * @param a p_a:...
  * @param b p_b:...
  * @return the union of sets a and b
@@ -58,7 +53,8 @@ template <typename T> auto operator&(unordered_set<T> const &a, unordered_set<T>
 	}
 	return ret;
 }
-template <typename T> auto sub_set(unordered_set<T> const &a, unordered_set<T> const &b, unordered_set<T> &ret) {
+template <typename T>
+auto sub_set(unordered_set<T> const &a, unordered_set<T> const &b, unordered_set<T> &ret) {
 	for (const auto &x : a) {
 		if (!b.count(x)) {
 			ret.insert(x);
@@ -81,14 +77,19 @@ template <typename T> auto operator*(vector<T> a, vector<T> b) {
 	fo(i, a.size()) { c[i] = a[i] * b[i]; }
 	return c;
 }
-template <typename Iterator> auto operator+(Iterator it, enable_if_t<!is_same<typename iterator_traits<decltype(it)>::iterator_category, random_access_iterator_tag>::value, ll> n) {
+template <typename Iterator>
+auto operator+(Iterator it,
+	       enable_if_t<!is_same<typename iterator_traits<decltype(it)>::iterator_category,
+				    random_access_iterator_tag>::value,
+			   ll>
+		   n) {
 	advance(it, n);
 	return it;
 }
 template <typename T> using bin_op = T (*)(T, T);
-#define ret(x, id)                                                             \
-	if (f == static_cast<decltype(f)>(x)) {                                \
-		return id;                                                     \
+#define ret(x, id)                                                                                 \
+	if (f == static_cast<decltype(f)>(x)) {                                                    \
+		return id;                                                                         \
 	}
 constexpr ll identity(bin_op<ll const &> const &f) {
 	ret(max<ll>, -inf);

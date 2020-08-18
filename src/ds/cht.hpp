@@ -19,17 +19,15 @@ auto wedge(point const &a, point const &b) {
 	 * \f$\vec{a}\f$ and \f$\vec{b}\f$.*/
 	return imag(conj(a) * b);
 }
-auto area(const point &a, const point &b, const point &c) {
-	return wedge(b - a, c - a);
-}
+auto area(const point &a, const point &b, const point &c) { return wedge(b - a, c - a); }
 /**
  * @brief Returns whether moving through \f$a \rightarrow b \rightarrow c\f$
-	 * is counterclockwise. @throw std::invalid_argument if a, b, c are
-	 * collinear and distinct.
- * 
- * @param a 
- * @param b 
- * @param c 
+ * is counterclockwise. @throw std::invalid_argument if a, b, c are
+ * collinear and distinct.
+ *
+ * @param a
+ * @param b
+ * @param c
  * @return bool true if counterclockwise, false otherwise.
  */
 bool ccw(const point &a, const point &b, const point &c) {
@@ -44,7 +42,9 @@ auto hull(vector<point> v, bool do_sort = true) {
 	/*! Returns the convex hull of the points in v*/
 	vector<point> h;
 	if (do_sort) {
-		const auto p = *min_element(al(v), key_compare([](point a) { return tuple{imag(a), real(a)}; }));
+		const auto p = *min_element(al(v), key_compare([](point a) {
+						    return tuple{imag(a), real(a)};
+					    }));
 		sort(al(v), bind(ccw, p, _1, _2));
 		h.push_back(p);
 	}
@@ -56,12 +56,10 @@ auto hull(vector<point> v, bool do_sort = true) {
 	}
 	return h;
 }
-template <typename Range, typename Func>
-auto convex_min(const Range &r, const Func &f) {
+template <typename Range, typename Func> auto convex_min(const Range &r, const Func &f) {
 	/*! Returns x in Range r that minimizes the value of a convex function
 	 * f(x).*/
-	return *partition_point(al(r),
-				[&](auto i) { return !(f(i) < f(i + 1)); });
+	return *partition_point(al(r), [&](auto i) { return !(f(i) < f(i + 1)); });
 }
 /*! Convex-hull trick. This can be used to find the minimum of a set of
  * lines at various points. */

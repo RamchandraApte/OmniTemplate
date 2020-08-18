@@ -41,7 +41,8 @@ matrix<ll> random_flow() {
 	}
 	return flow;
 }
-template <typename Func1, typename Func2> void test_compare_flow(const Func1 &algo1, const Func2 &algo2, ll n_it = 100) {
+template <typename Func1, typename Func2>
+void test_compare_flow(const Func1 &algo1, const Func2 &algo2, ll n_it = 100) {
 	fo(i, n_it) {
 		const auto flow = random_flow();
 		// FIXME generated flow diff?

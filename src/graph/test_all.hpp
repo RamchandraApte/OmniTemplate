@@ -17,7 +17,8 @@ void test_BFS() {
 	assert((b.distance == vector<ll>{0, 1, 2, 2}));
 }
 void test_trans() {
-	assert((trans(GraphAdj{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) == GraphAdj{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
+	assert((trans(GraphAdj{{2, 3}, {2, 1}, {2}, {2, 3, 1}}) ==
+		GraphAdj{{}, {1, 3}, {0, 1, 2, 3}, {0, 3}}));
 	assert((trans(GraphAdj{}) == GraphAdj{}));
 }
 void test_shortest_dist() {

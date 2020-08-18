@@ -41,7 +41,8 @@ matrix<ll> edmond_karp(const matrix<ll> &capacity) {
 				func(bfs.parent[x], x);
 			}
 		};
-		root_edges([&](const ll u, const ll v) { min_eq(mincap, network[u][v].residual()); });
+		root_edges(
+		    [&](const ll u, const ll v) { min_eq(mincap, network[u][v].residual()); });
 		if (!(0 < mincap && mincap < inf)) {
 			break;
 		}
@@ -90,7 +91,6 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 		BFS bfs{res_graph};
 		bfs(0);
 
-
 		if (bfs.distance[n - 1] == inf) {
 			break;
 		}
@@ -105,7 +105,6 @@ matrix<ll> dinic(const matrix<ll> &capacity) {
 				}
 			}
 		}
-
 
 		vector<ll> next_idx(n);
 

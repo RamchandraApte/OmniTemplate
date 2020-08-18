@@ -20,24 +20,23 @@
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}
 #define rel_assert(...) s
-#define WARN(msg)                                                              \
-	[[deprecated(msg)]] auto warn = []() { rel_assert(msg); };             \
+#define WARN(msg)                                                                                  \
+	[[deprecated(msg)]] auto warn = []() { rel_assert(msg); };                                 \
 	warn();
 #define TODO(msg) WARN("TODO: " msg)
 #define paste2(x, y) x##y
 #define paste(x, y) paste2(x, y)
 #define lets_count lets_add paste(_l, __COUNTER__)
-#define let(a, ...)                                                            \
-	using a = __VA_ARGS__;                                                 \
+#define let(a, ...)                                                                                \
+	using a = __VA_ARGS__;                                                                     \
 	lets_count{#__VA_ARGS__, #a};
-#define import(a)                                                              \
-	using namespace a;                                                     \
+#define import(a)                                                                                  \
+	using namespace a;                                                                         \
 	lets_count{#a "::", ""};
 #define df(x, v) remove_const_t<decltype(v)> x = v
 using namespace std;
-vector<pair<string, string>> lets{{"__debug::", ""},
-				  {"const ", ""},
-				  {"__cxx11::basic_string<char>", "string"}};
+vector<pair<string, string>> lets{
+    {"__debug::", ""}, {"const ", ""}, {"__cxx11::basic_string<char>", "string"}};
 struct lets_add {
 	lets_add(const string &a, const string &b) { lets.push_back({a, b}); }
 };
@@ -60,24 +59,22 @@ let(pr, pair<ll, ll>);
 let(com, complex<double>);
 let(point, complex<ll>);
 let(ull, unsigned long long);
-template <typename T, typename Comp>
-using prio_queue_t = std::priority_queue<T, vector<T>, Comp>;
+template <typename T, typename Comp> using prio_queue_t = std::priority_queue<T, vector<T>, Comp>;
 let(clock_, high_resolution_clock);
 import(this_thread);
 
 #ifdef REALGCC
 template <typename T, typename V = null_type>
-using order_stat_map =
-    tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
+using order_stat_map = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_node_update>;
 #endif
 
 auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
-auto const delim = ", "s; /*!< Delimiter for debug output */
-auto constexpr tau = 2 * 3.1415926535897932384626433L; /*!< Pi */
+auto const delim = ", "s;				/*!< Delimiter for debug output */
+auto constexpr tau = 2 * 3.1415926535897932384626433L;	/*!< Pi */
 extern bool multitest;
 
-#include "io.hpp"
 #include "debug.hpp"
+#include "io.hpp"
 #include "operations.hpp"
 #include "range.hpp"
 #include "utility.hpp"

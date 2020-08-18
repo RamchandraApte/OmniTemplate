@@ -5,6 +5,13 @@ program.cpp is an example program utilizing the template. You need to include th
 
 Requires GNU G++ compiler and C++17.
 
+## How to use
+
+Use the compile.sh script.
+
+```
+compile/sh
+
 ## Compilation
 
 ```

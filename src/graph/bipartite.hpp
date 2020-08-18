@@ -81,7 +81,8 @@ auto max_match(const GraphAdj &graph) {
 	return match;
 }
 /*! @brief Returns the size of the matching.
- * @param matching must be a a vector where idx is matched with matching[idx], or not matched if matching[idx] = -1
+ * @param matching must be a a vector where idx is matched with matching[idx], or not matched if
+ * matching[idx] = -1
  */
 ll matching_size(const vector<ll> &matching) {
 	return count_if(al(matching), [&](const auto x) { return x != -1; });

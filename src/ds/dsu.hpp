@@ -10,7 +10,8 @@ struct dsu {
 	/** @brief Returns the representative element of x */
 	ll find(ll x) const { return x == parent[x] ? x : parent[x] = find(parent[x]); }
 	/** @brief Joins the set containing x with the set containing y.
-	 *  @returns true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.
+	 *  @returns true if the set containing x is different from the set containing y. Returns
+	 * false otherwise, since nothing is done.
 	 */
 	bool join(ll x, ll y) {
 		x = find(x);

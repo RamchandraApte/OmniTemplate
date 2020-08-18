@@ -40,8 +40,8 @@ auto debug(const T &x, const string &name,
 	/*! Debug print x */
 	if (debug_mode) {
 		fo(i, depth) { cerr << "\t"; }
-		cerr << loc.function_name() << ":" << loc.line() << " " << name
-		     << " = " << x << endl;
+		cerr << loc.function_name() << ":" << loc.line() << " " << name << " = " << x
+		     << endl;
 	}
 	--depth;
 	return x;

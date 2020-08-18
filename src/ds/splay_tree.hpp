@@ -2,18 +2,16 @@
 #include "core/all.hpp"
 namespace splay_tree {
 /** @brief Implements a splay tree*/
-template<typename Node>
-struct PathParent {
-	Node* path_parent{};
-};
-template<typename T, bool has_link_cut = false>
-struct SplayNode : public conditional_t<has_link_cut, PathParent<SplayNode<T, has_link_cut>>, Empty> {
-		public:
-	SplayNode(){}
-	SplayNode(T value_arg): value{value_arg} {}
-	T value{}; //!< Value associated with node
+template <typename Node> struct PathParent { Node *path_parent{}; };
+template <typename T, bool has_link_cut = false>
+struct SplayNode
+    : public conditional_t<has_link_cut, PathParent<SplayNode<T, has_link_cut>>, Empty> {
+      public:
+	SplayNode() {}
+	SplayNode(T value_arg) : value{value_arg} {}
+	T value{};		       //!< Value associated with node
 	array<SplayNode *, 2> child{}; //!< Left and right children
-	SplayNode *parent{}; //!< Pointer to parent
+	SplayNode *parent{};	       //!< Pointer to parent
 	bool side() const {
 		/*! Returns true if child is on the right, and false otherwise*/
 		return parent->child[1] == &this;
@@ -30,13 +28,15 @@ struct SplayNode : public conditional_t<has_link_cut, PathParent<SplayNode<T, ha
 		}
 		p->attach(i, child[!i]);
 		attach(!i, p);
-		if constexpr(has_link_cut){this.path_parent = p->path_parent;}
+		if constexpr (has_link_cut) {
+			this.path_parent = p->path_parent;
+		}
 	}
 	void splay() {
 		/*! Splay node x. x will become the root of the tree*/
-		for(;parent;rotate()) {
+		for (; parent; rotate()) {
 			if (parent->parent) {
-			  (side() == parent->side() ? parent: &this)->rotate();
+				(side() == parent->side() ? parent : &this)->rotate();
 			}
 		}
 	}
@@ -134,11 +134,12 @@ template <typename T> struct SplayTree {
 	}
 	/** @brief Erases the node with key key from the splay tree */
 	void erase(const T &key) { erase(find(key)); }
-	template <bool i> static Node *extremum(Node * x) {
+	template <bool i> static Node *extremum(Node *x) {
 		/*! Return the extremum of the subtree x. Minimum if i is false,
 		 * maximum if i is true.*/
 		assert(x);
-		for(; x->child[i]; x = x->child[i]);
+		for (; x->child[i]; x = x->child[i])
+			;
 		return x;
 	}
 	static Node *join(Node *const a, Node *const b) {
@@ -153,7 +154,7 @@ template <typename T> struct SplayTree {
 		mx->parent = nullptr;
 		return mx;
 	}
-    /*! Returns node with key key*/
+	/*! Returns node with key key*/
 	Node *find(const T &key) {
 		auto x = root;
 		while (x && key != x->value) {
@@ -166,9 +167,9 @@ template <typename T> struct SplayTree {
 		return x;
 	}
 	/**
-     * @brief Returns the number of nodes in the splay tree.
-     */
-    ll size() const { return size_; }
+	 * @brief Returns the number of nodes in the splay tree.
+	 */
+	ll size() const { return size_; }
 	bool empty() const { return size() == 0; }
 	iterator begin() { return iterator{extremum<false>(root)}; }
 	iterator end() { return iterator{nullptr}; }

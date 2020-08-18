@@ -2,7 +2,7 @@
 #include "core/all.hpp"
 namespace string_tools {
 /*! Fast rolling hash on a specific string's substrings.
- * 
+ *
  * Time complexity: \f$O(n)\f$ to build, \f$O(1)\f$ to query.
  */
 struct hash_str {
@@ -32,7 +32,7 @@ struct hash_str {
 	}
 };
 /*! Hashes the bytes in an object.
- * 
+ *
  * NOTE: not sure if this is really standards-compliant
  */
 struct bytehash {

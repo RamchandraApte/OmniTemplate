@@ -11,12 +11,8 @@ struct edge {
 	auto to_tuple() const { return tuple{weight, a, b}; }
 };
 /** @brief Compare the edges by weight, with ties compared by a and b*/
-bool operator<(edge const &a, edge const &b) {
-	return a.to_tuple() < b.to_tuple();
-}
-bool operator==(edge const &a, edge const &b) {
-	return a.to_tuple() == b.to_tuple();
-}
+bool operator<(edge const &a, edge const &b) { return a.to_tuple() < b.to_tuple(); }
+bool operator==(edge const &a, edge const &b) { return a.to_tuple() == b.to_tuple(); }
 /** @brief Print the edge*/
 template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	return os << "edge{" << e.a << "-(" << e.weight << ")>" << e.b << "}";
@@ -89,10 +85,12 @@ auto mst(vector<edge> edges, const ll n) {
 template <typename Searcher, typename Graph> struct GeneralSearch {
 	Graph const &graph;
 	vector<char> visited; //!< Whether vertex idx is visited
-	deque<ll> queue;  //!< Queue
-	vector<ll> parent;   //!< Parent of vertex idx
-	vector<ll> distance; //!< Distance from source to vertex idx
-	GeneralSearch(const Graph &g_) : graph(g_), visited(graph.size()), parent(graph.size(), -1), distance(graph.size(), inf) {}
+	deque<ll> queue;      //!< Queue
+	vector<ll> parent;    //!< Parent of vertex idx
+	vector<ll> distance;  //!< Distance from source to vertex idx
+	GeneralSearch(const Graph &g_)
+	    : graph(g_), visited(graph.size()), parent(graph.size(), -1),
+	      distance(graph.size(), inf) {}
 	void operator()() {
 		/* Run the searcher on all vertices. Useful for visiting the
 		 * entire graph, and not just one connected component. */

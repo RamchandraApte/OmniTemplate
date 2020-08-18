@@ -9,11 +9,12 @@ inline namespace linear_algebra {
 template <typename T> struct matrix {
 	/*! Matrix class*/
 	ll rows_n, cols_n; //!< Row, column
-	vector<T> a; //! Array storing the data, in row-major order
-	explicit matrix(ll r_, ll c_, T v = {}) : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) { assert(rows_n >= 1 && cols_n >= 1); }
+	vector<T> a;	   //! Array storing the data, in row-major order
+	explicit matrix(ll r_, ll c_, T v = {}) : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) {
+		assert(rows_n >= 1 && cols_n >= 1);
+	}
 	explicit matrix(T d) : rows_n(1), cols_n(1), a{d} {}
-	explicit matrix(vector<vector<pr>> const &g)
-	    : matrix(g.size(), g.size(), inf) {
+	explicit matrix(vector<vector<pr>> const &g) : matrix(g.size(), g.size(), inf) {
 		fo(i, rows_n) {
 			for (const auto &p : g[i]) {
 				auto [x, w] = p;
@@ -29,9 +30,7 @@ template <typename T> struct matrix {
 			fo(j, cols_n) { this[i][j] = begin(begin(vals)[i])[j]; }
 		}
 	}
-	auto operator[](const ll i) {
-		return const_cast<T *>(const_cast<matrix const &>(this)[i]);
-	}
+	auto operator[](const ll i) { return const_cast<T *>(const_cast<matrix const &>(this)[i]); }
 	auto operator[](const ll i) const { return &a[i * cols_n]; }
 	bool is_square() const { return rows_n == cols_n; }
 };
@@ -44,8 +43,7 @@ template <typename T> auto identity(const multiplies<>, const matrix<T> &mat) {
 	fo(i, mat.rows_n) { id[i][i] = 1; }
 	return id;
 }
-template <typename... Ts>
-auto operator+(const matrix<Ts...> &a, const matrix<Ts...> &b) {
+template <typename... Ts> auto operator+(const matrix<Ts...> &a, const matrix<Ts...> &b) {
 	assert(a.rows_n == b.rows_n && a.rows_n == b.rows_n);
 	matrix c(a.rows_n, a.cols_n);
 	fo(i, a.rows_n) {
@@ -60,7 +58,9 @@ template <typename... Ts> auto operator-(const matrix<Ts...> &a) {
 	}
 	return c;
 }
-template <typename... Ts> bool operator==(matrix<Ts...> const &a, matrix<Ts...> const &b) { return a.rows_n == b.rows_n && a.cols_n == b.cols_n && a.a == b.a; }
+template <typename... Ts> bool operator==(matrix<Ts...> const &a, matrix<Ts...> const &b) {
+	return a.rows_n == b.rows_n && a.cols_n == b.cols_n && a.a == b.a;
+}
 template <typename... Ts> auto operator*(matrix<Ts...> const &a, matrix<Ts...> const &b) {
 	/*! Returns the matrix product of a and b*/
 	assert(a.cols_n == b.rows_n);
@@ -93,15 +93,15 @@ template <typename T> pair<matrix<T>, T> gauss(matrix<T> b, matrix<T> a) {
 			}
 			const auto mul = a[j][i];
 			for (auto &ar : {ref(a), ref(b)}) {
-				fo(k, ar.get().cols_n) {
-					ar.get()[j][k] -= ar.get()[i][k] * mul;
-				}
+				fo(k, ar.get().cols_n) { ar.get()[j][k] -= ar.get()[i][k] * mul; }
 			}
 		}
 	}
 	return {move(b), det};
 }
-template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) { return identity(multiplies<>{}, a) / a; }
+template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) {
+	return identity(multiplies<>{}, a) / a;
+}
 template <typename... Ts> auto operator/(const matrix<Ts...> &b, const matrix<Ts...> &a) {
 	/*! Returns \f$a^{-1}b\f$*/
 	return gauss(b, a).first;

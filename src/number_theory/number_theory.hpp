@@ -49,7 +49,7 @@ vector<ll> divisors(ll x) {
 }
 /**
  * @brief Linear time prime sieve.
- * 
+ *
  * @param n Sieve numbers in [0,n)
  * @return a vector where ret[idx] is the smallest prime divisor of idx
  */
@@ -84,11 +84,9 @@ unordered_map<ll, ll> fac(ll n) {
 	} else if (!prime(n)) {
 		with _m{n, modulo::modulus};
 		for (modulo c = 0; g == n; ++c) {
-			auto const f = [&](const auto &x) {
-				return x * x + x + c;
-			};
-			for (modulo a = 0, b = a; a = f(a), b = f(f(b)),
-				    (g = gcd(ll(a - b), n)) == 1;) {
+			auto const f = [&](const auto &x) { return x * x + x + c; };
+			for (modulo a = 0, b = a;
+			     a = f(a), b = f(f(b)), (g = gcd(ll(a - b), n)) == 1;) {
 			}
 		}
 	}
@@ -106,7 +104,7 @@ void egcd(const ll a, const ll b, ll &x, ll &y) {
  * @pre n >= 1
  */
 ll totient(ll n) {
-    assert(n>=1);
+	assert(n >= 1);
 	auto fact = fac(n);
 	for (const auto &p : fact) {
 		n -= n / p.first;

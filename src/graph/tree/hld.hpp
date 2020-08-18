@@ -15,7 +15,8 @@ template <typename T, typename Monoid, typename QueryDS>
  */
 class HLD {
       public:
-	explicit HLD(const GraphAdj &graph, const vector<T> &data) : heavy(graph.size(), -1), head(graph.size(), -1), pos(graph.size(), -1), d{graph} {
+	explicit HLD(const GraphAdj &graph, const vector<T> &data)
+	    : heavy(graph.size(), -1), head(graph.size(), -1), pos(graph.size(), -1), d{graph} {
 		d.distance[0] = 0;
 		d(0);
 		const auto sz = get_size(d);
@@ -44,7 +45,8 @@ class HLD {
 		fo(idx, graph.size()) { perm_data[pos[idx]] = data[idx]; }
 		ds = QueryDS{perm_data};
 	}
-	/*! \brief Calls func (could be an update or query function, for example) on each heavy chain in the path*/
+	/*! \brief Calls func (could be an update or query function, for example) on each heavy
+	 * chain in the path*/
 	template <typename Func> void func_path(ll u, ll v, const Func &func) {
 		// We're assuming the operation is commutative
 		// FIXME find the LCA and use that to do it for non-commutative operators

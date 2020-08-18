@@ -9,11 +9,13 @@ template <typename T> struct [[nodiscard]] with {
 	~with() { v = old; }
 };
 /*! Helper for lambda recursive functions. The recursive function is
-* passed to Func as the first argument.*/
+ * passed to Func as the first argument.*/
 template <typename Func> struct fix {
 	Func func;
 	fix(const Func &func_) : func(func_) {}
-	template <typename... Args> decltype(auto) operator()(Args &&... args) const { return func(this, forward<Args>(args)...); }
+	template <typename... Args> decltype(auto) operator()(Args &&... args) const {
+		return func(this, forward<Args>(args)...);
+	}
 };
 #define lambda(f) [](auto &&... args) { return f(forward<decltype(args)>(args)...); }
 template <typename T> auto max_eq(T &x, const T &y) { x = max(x, y); }
@@ -41,8 +43,11 @@ template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
  * @param compare the comparison function.
  * @returns A comparison functor that compares two arugments by the key.
  */
-template <typename Compare = less<>, typename Func> auto key_compare(const Func &func, Compare compare = {}) {
-	return [=](auto &&... args) -> decltype(auto) { return compare(func(forward<decltype(args)>(args))...); };
+template <typename Compare = less<>, typename Func>
+auto key_compare(const Func &func, Compare compare = {}) {
+	return [=](auto &&... args) -> decltype(auto) {
+		return compare(func(forward<decltype(args)>(args))...);
+	};
 }
 template <typename T> auto prev_less(const T &v) {
 	ll n = v.size();

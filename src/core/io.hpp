@@ -21,8 +21,7 @@ struct rin {
 };
 template <typename R, typename T>
 auto operator<<(R &r, const T &x)
-    -> decltype(r.in >> const_cast<T &>(x),
-		declval<enable_if_t<is_same<R, rin>::value, rin &>>()) {
+    -> decltype(r.in >> const_cast<T &>(x), declval<enable_if_t<is_same<R, rin>::value, rin &>>()) {
 	r.in >> const_cast<T &>(x);
 	return r;
 }
@@ -31,8 +30,7 @@ enable_if_t<is_same<T, istream>::value, rin> operator>>(Stream &is, T &x) {
 	rin r{is};
 	return r >> x;
 }
-template <typename Stream, typename... T>
-auto &operator<<(Stream &os, tuple<T...> t) {
+template <typename Stream, typename... T> auto &operator<<(Stream &os, tuple<T...> t) {
 	apply(
 	    [&](auto &f, auto &... x) {
 		    os << f;
@@ -41,21 +39,21 @@ auto &operator<<(Stream &os, tuple<T...> t) {
 	    t);
 	return os;
 }
-template <typename T1, typename... Ts>
-auto print(const T1 &arg1, const Ts &... args) {
+template <typename T1, typename... Ts> auto print(const T1 &arg1, const Ts &... args) {
 	/*! Print arguments separated by spaces to stdout*/
 	cout << arg1;
 	((cout << " " << args), ...);
 	cout << endl;
 }
 namespace std {
-template <typename Stream, typename... T>
-auto &operator<<(Stream &os, pair<T...> const &p) {
+template <typename Stream, typename... T> auto &operator<<(Stream &os, pair<T...> const &p) {
 	return os << simple_tp(p) << "{" << p.first << delim << p.second << "}";
 }
 // enable_if is there to avoid problems with ostringstream
 // TODO fix this whole IO mess one day.
-template <typename Stream, typename Container> auto operator<<(Stream &os, const Container &v) -> enable_if_t<is_same_v<Stream, ostream>, decltype(begin(v), declval<decltype(os)>())> {
+template <typename Stream, typename Container>
+auto operator<<(Stream &os, const Container &v)
+    -> enable_if_t<is_same_v<Stream, ostream>, decltype(begin(v), declval<decltype(os)>())> {
 	auto ed = begin(v);
 	auto big = v.size() > 20;
 	if (big) {
@@ -71,16 +69,14 @@ template <typename Stream, typename Container> auto operator<<(Stream &os, const
 	return os << "}";
 }
 template <typename T>
-auto operator<<(rin &os, const T &v)
-    -> decltype(begin(v), declval<decltype(os)>()) {
+auto operator<<(rin &os, const T &v) -> decltype(begin(v), declval<decltype(os)>()) {
 	for (const auto &elem : v) {
 		os << elem;
 	}
 	return os;
 }
 #if __cplusplus >= 201703L
-template <typename Stream, typename T>
-auto &operator<<(Stream &os, optional<T> const &opt) {
+template <typename Stream, typename T> auto &operator<<(Stream &os, optional<T> const &opt) {
 	return opt ? (os << *opt) : (os << "nullopt");
 }
 #endif

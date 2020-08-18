@@ -7,15 +7,16 @@ Node *make_tree() {
 	/*! Make a new tree */
 	return new Node{};
 }
-void detach_child(Node* node){
+void detach_child(Node *node) {
 	/*! Converts node's preferred child edge to a path parent edge*/
-	if(node->child[1]){
+	if (node->child[1]) {
 		node->child[1]->path_parent = node;
 		node->child[1]->parent = nullptr;
 	}
 }
 Node *access(Node *node) {
-	/*! Moves node to the root of the auxillary tree containing the root node of the tree. Returns last path-parent of node as it moves up the tree*/
+	/*! Moves node to the root of the auxillary tree containing the root node of the tree.
+	 * Returns last path-parent of node as it moves up the tree*/
 	node->splay();
 	detach_child(node);
 	node->child[1] = nullptr;
@@ -51,7 +52,8 @@ void link(Node *par, Node *child) {
 	child->attach(0, par);
 }
 Node *lca(Node *u, Node *v) {
-	/*! Returns lowest common ancestor of nodes u and v or nullptr if u and v are in different trees*/
+	/*! Returns lowest common ancestor of nodes u and v or nullptr if u and v are in different
+	 * trees*/
 	if (find_root(u) != find_root(v)) {
 		return nullptr;
 	}

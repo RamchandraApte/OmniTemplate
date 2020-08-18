@@ -9,7 +9,9 @@ void test_ops() {
 	assert(((p1 / p2) * p2 == p1));
 	assert(((p2 / p1) * p1 == p2));
 }
-void test_cycles_impl(const Permutation &perm) { assert(Permutation(perm.to_cycles(), perm.size()) == perm); }
+void test_cycles_impl(const Permutation &perm) {
+	assert(Permutation(perm.to_cycles(), perm.size()) == perm);
+}
 void test_cycles() {
 	test_cycles_impl(Permutation{2, 1, 6, 4, 5, 3, 0});
 	test_cycles_impl(Permutation{0, 1, 2, 3});

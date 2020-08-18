@@ -9,7 +9,7 @@ struct ll {
 	constexpr operator ll() const { return x; }
 // template<typename T, typename = enable_if_t<is_integral<T>::value, void>>
 // template<typename T, typename = enable_if_t<is_integral<T>::value, void>>
-#define opi(type)                                                              \
+#define opi(type)                                                                                  \
 	operator type() { return x; }
 	// opi(double);opi(int);opi(size_t);opi(long double);opi(unsigned
 	// int);opi(bool); constexpr operator T() const{return x;}
@@ -36,16 +36,15 @@ using uint128 = __uint128_t;
 #else
 #define MIX128(...)
 #endif
-#define mix1(op, T1, T2)                                                       \
-	constexpr auto operator op(T1 a, T2 b) {                               \
-		return static_cast<ll>(a) op static_cast<ll>(b);               \
-	}
+#define mix1(op, T1, T2)                                                                           \
+	constexpr auto operator op(T1 a, T2 b) { return static_cast<ll>(a) op static_cast<ll>(b); }
 #define mix(op, T1, T2) mix1(op, T1, T2) mix1(op, T2, T1)
-#define mixll(op) mix(op, ll, int) mix(op, ll, ll) MIX128(op, ll) mix(op, ll, size_t) mix(op, ll, double)
-#define bill(op)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       \
+#define mixll(op)                                                                                  \
+	mix(op, ll, int) mix(op, ll, ll) MIX128(op, ll) mix(op, ll, size_t) mix(op, ll, double)
+#define bill(op)                                                                                   \
 	constexpr ll operator op(ll const &a, ll const &b) { return ll(a) op ll(b); }
-bill(+) bill(*) bill(|) bill(&) bill(^) bill(<<) bill(>>) constexpr ll
-operator/(ll const &a, ll const &b) {
+bill(+) bill(*) bill(|) bill(&) bill(^) bill(<<) bill(>>) constexpr ll operator/(ll const &a,
+										 ll const &b) {
 	ll x = ll(a) / ll(b), r = ll(a) % ll(b);
 	return x - ((x < 0) && r);
 }
@@ -58,11 +57,10 @@ constexpr ll operator%(ll a, ll b) {
 	}
 	return x;
 }
-mixll(+) mixll(/) mixll(*) mixll(<) mixll(==) mixll(%) mixll(&) mixll(>>)
-    mixll(<<)
+mixll(+) mixll(/) mixll(*) mixll(<) mixll(==) mixll(%) mixll(&) mixll(>>) mixll(<<)
 
-	template <typename Stream>
-	auto &operator<<(Stream &os, ll const &a) {
+    template <typename Stream>
+    auto &operator<<(Stream &os, ll const &a) {
 	return os << a.x;
 }
 ll operator"" _ll(unsigned long long int x) { return x; }
@@ -74,5 +72,8 @@ inh(is_integral){};
 inh(is_unsigned){};
 inh(is_signed){};
 inh(numeric_limits){};
-template <typename T, typename ll_t, typename = enable_if_t<is_same_v<ll_t, ll>, void>> auto operator+(T a, ll_t b) { return a + ll(b); }
+template <typename T, typename ll_t, typename = enable_if_t<is_same_v<ll_t, ll>, void>>
+auto operator+(T a, ll_t b) {
+	return a + ll(b);
+}
 } // namespace std
