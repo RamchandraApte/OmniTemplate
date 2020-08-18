@@ -1,7 +1,6 @@
 #pragma once
 #include "core/all.hpp"
 /*! Returns articulation points and bridges of \param graph.
- * \pre graph must be connected
  * @returns pair of a vector with 1s for all the articulation points and a vector of bridge edges
  */
 pair<vector<char>, vector<array<ll, 2>>> biconnected(const GraphAdj &graph) {
@@ -66,14 +65,12 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 				// Backedge
 				vector<ll> ear{u};
 				visited[u] = true;
-				ll x = v;
-				while (true) {
+				for (ll x = v;; x = d.parent[x]) {
 					ear.push_back(x);
 					if (visited[x]) {
 						break;
 					}
 					visited[x] = true;
-					x = d.parent[x];
 				}
 				ears.push_back(ear);
 			}
@@ -85,8 +82,11 @@ vector<vector<vector<ll>>> ear_decomp(const GraphAdj &graph) {
 }
 /*! @brief Finds biconnected components of graph using ear decompositions.*/
 pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
+	// art_points[i] = whether vertex i is an articulation point
 	vector<char> art_points(graph.size());
+	// Bridge edges
 	vector<array<ll, 2>> bridges;
+	// Find ears apart from the first one which are cycles.
 	const auto ear_list = ear_decomp(graph);
 	for (const auto &ears : ear_list) {
 		fo(i, ears.size()) {
@@ -95,9 +95,7 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
 			}
 		}
 	}
-	for (auto &vec : graph) {
-		sort(al(vec));
-	}
+	// Graph containing all ear edges
 	GraphAdj ear_graph(graph.size());
 	for (const auto &ears : ear_list) {
 		for (const auto &ear : ears) {
@@ -105,19 +103,31 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
 		}
 	}
 	// TODO add print overload for vector<char>
-	// TODO  get rid of set_intersection
+	// Find edges which are not in ear decomposition
+	vector<ll> ear_adj(graph.size());
 	fo(u, graph.size()) {
-		sort(al(ear_graph[u]));
-		vector<ll> out;
-		set_difference(al(graph[u]), al(ear_graph[u]), back_inserter(out));
-		for (const auto x : out) {
+		vector<ll> non_ear_adj;
+		const auto set = [&](const bool val) {
+			for (const auto v : ear_graph[u]) {
+				ear_adj[v] = val;
+			}
+		};
+		set(true);
+		for (const auto v : graph[u]) {
+			if (!ear_adj[v]) {
+				non_ear_adj.push_back(v);
+			}
+		}
+		// Clear ear_adj efficiently
+		set(false);
+		for (const auto x : non_ear_adj) {
 			if (u < x) {
-				bridges.push_back({u, x});
-				if (graph[u].size() > 1) {
-					art_points[u] = true;
-				}
-				if (graph[x].size() > 1) {
-					art_points[x] = true;
+				array<ll, 2> edge{u, x};
+				bridges.push_back(edge);
+				for (const auto v : edge) {
+					if (graph[v].size() > 1) {
+						art_points[v] = true;
+					}
 				}
 			}
 		}

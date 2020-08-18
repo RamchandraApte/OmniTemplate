@@ -156,8 +156,13 @@ template <typename T> struct SplayTree {
     /*! Returns node with key key*/
 	Node *find(const T &key) {
 		auto x = root;
-		for (; x && key != x->value; x = x->child[key > x->value])
-			;
+		while (x && key != x->value) {
+			const auto next = x->child[key > x->value];
+			if (!next) {
+				x->splay();
+			}
+			x = next;
+		}
 		return x;
 	}
 	/**
