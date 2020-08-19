@@ -1,6 +1,6 @@
 #pragma once
 #include "string.hpp"
-namespace string::test {
+namespace string_tools::test {
 void test_hash_str() {
 	auto main_str = "OmniTemplate, OmniTemplate"sv;
 	hash_str func{main_str};
@@ -25,5 +25,5 @@ void test_string() {
 	test_hash_str();
 	test_bytehash();
 }
-} // namespace string::test
-using namespace string::test;
+} // namespace string_tools::test
+using namespace string_tools::test;

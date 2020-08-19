@@ -20,10 +20,12 @@
 #include "number_theory/test_modulo.hpp"
 #include "number_theory/test_number_theory.hpp"
 #include "utility/test_coroutine.hpp"
+#include "utility/test_dict_search.hpp"
 #include "utility/test_graph_draw.hpp"
 #include "utility/test_string.hpp"
 bool multitest{};
 void test_all() {
+	test_dict_search();
 	test_utility();
 	test_graph_theory();
 	test_dsu();

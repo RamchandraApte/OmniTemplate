@@ -135,18 +135,5 @@ auto operator<(search_it const &a, search_it const &b) {
 template <typename... Ts> auto search_ra(const Ts &... args) {
 	return range{search_it(args...), search_it()};
 }
-#if 0
-class trie_node {
-	vector<trie_node *> adj;
-	ll start, end;
-	trie_node() : adj(26), start() {}
-	trie_node *operator[](char c) { return adj[c - 'a']; }
-	static trie_node *build_trie(const string &str) {
-		auto *root = new trie_node;
-		fo(i, str.size()) {}
-	}
-};
-void test_trie_node() {}
-#endif
 } // namespace string_tools
 using namespace string_tools;
