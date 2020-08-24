@@ -22,12 +22,12 @@ template <typename Trie_Type> void test_dict_search_impl() {
 	assert(trie->find_node("lo")->exit_link() == nullptr);
 	assert(trie->find_node("water")->exit_link() == trie->find_node("er"));
 	const string str = "zhelloperzzasdfnpokncopdeforcesofoajcodeforcessyyyyyyyyyzzz";
-	vector<pair<ll, Trie_Type *>> expected;
+	decltype(trie->search({})) expected;
 	fo(j, str.size()) {
 		fo(i, j) {
 			for (const auto &word : good_words) {
 				if (str.substr(i, j - i) == word) {
-					expected.push_back({j - 1, trie->find_leaf(word)});
+					expected.push_back({{i, j}, trie->find_leaf(word)});
 				}
 			}
 		}

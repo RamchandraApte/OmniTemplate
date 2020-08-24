@@ -95,17 +95,19 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		return exit_link_cache;
 	}
 	/*! @brief Searches for the patterns in text.
-	 * @returns a vector of (index, node) pairs where index is the index of the rightmost
-	 * character of the match
+	 * @returns a vector of ((left, right), node) pairs for each match where [left, right) is
+	 * the range of the match, and node is the node corresponding to the match. character of the
+	 * match
 	 */
-	vector<pair<ll, Trie *>> search(const string &text) {
-		vector<pair<ll, Trie *>> matches;
+	auto search(const string &text) {
+		vector<pair<array<ll, 2>, Trie *>> matches;
 		auto cur = &this;
 		fo(idx, text.size()) {
 			cur = cur->go(text[idx]);
 			for (auto exit = cur; exit; exit = exit->exit_link()) {
 				if (exit->leaf) {
-					matches.push_back({idx, exit});
+					const ll j = idx + 1;
+					matches.push_back({{j - exit->str.size(), j}, exit});
 				}
 			}
 		}
