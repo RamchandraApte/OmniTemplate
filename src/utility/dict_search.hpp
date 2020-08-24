@@ -3,6 +3,7 @@
 namespace string_tools {
 template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 	bool leaf{};
+	string str;
 	Trie *parent{};
 	char edge_char{};
 	/*! @brief Returns the child corresponding to the character c*/
@@ -29,6 +30,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 			cur = cur->next_default(c);
 		}
 		cur->leaf = true;
+		cur->str = str;
 	}
 	Trie *find_leaf(const string &str) {
 		const auto node = find_node(str);
@@ -46,7 +48,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		return cur;
 	}
 	Trie *link() {
-		if (!link_storage) {
+		if (!suffix_link_cache) {
 			auto get = [&] {
 				if (!parent) {
 					return &this;
@@ -56,28 +58,53 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 				}
 				return parent->link()->go(edge_char);
 			};
-			link_storage = get();
+			suffix_link_cache = get();
 		}
-		return link_storage;
+		return suffix_link_cache;
 	}
 
 	Trie *go(const char c) {
-		auto &go_cache = go_storage[c - start];
-		if (!go_cache) {
+		auto &go_val = go_cache[c - start];
+		if (!go_val) {
 			auto get = [&] {
 				if (const auto next_c = next(c)) {
 					return next_c;
 				}
 				return parent ? link()->go(c) : &this;
 			};
-			go_cache = get();
+			go_val = get();
 		}
-		return go_cache;
+		return go_val;
+	}
+	Trie *exit_link() {
+		if (!exit_link_cache) {
+			if (!parent) {
+				exit_link_cache = nullptr;
+			} else {
+				auto suffix = link();
+				exit_link_cache = suffix->leaf ? suffix : suffix->exit_link();
+			}
+		}
+		return exit_link_cache;
+	}
+	vector<pair<ll, Trie *>> search(const string &text) {
+		vector<pair<ll, Trie *>> matches;
+		auto cur = &this;
+		fo(idx, text.size()) {
+			cur = cur->go(text[idx]);
+			for (auto exit = cur; exit; exit = exit->exit_link()) {
+				if (exit->leaf) {
+					matches.push_back({idx, exit});
+				}
+			}
+		}
+		return matches;
 	}
 
       private:
 	array<Trie *, alphabet_size> next_storage{};
-	array<Trie *, alphabet_size> go_storage{};
-	Trie *link_storage{};
+	array<Trie *, alphabet_size> go_cache{};
+	Trie *suffix_link_cache{};
+	Trie *exit_link_cache{};
 };
 } // namespace string_tools
