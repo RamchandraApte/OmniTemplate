@@ -2,7 +2,8 @@
 namespace string_tools::test {
 template <typename Trie_Type> void test_dict_search_impl() {
 	auto trie = new Trie_Type{};
-	const vector<string> good_words{"hello", "world", "hell", "water", "wo", "lop", "l", "er"};
+	const vector<string> good_words{"hello", "world", "hell", "water", "wo",  "lop",
+					"l",	 "er",	  "y",	  "yyy",   "yyyy"};
 	const vector<string> bad_words{"help", "think", "codeforces", "mike",	   "wor",
 				       "worl", "w",	"hel",	      "helloworld"};
 	for (const auto &word : good_words) {
@@ -20,7 +21,7 @@ template <typename Trie_Type> void test_dict_search_impl() {
 	assert(trie->find_node("lop")->exit_link() == nullptr);
 	assert(trie->find_node("lo")->exit_link() == nullptr);
 	assert(trie->find_node("water")->exit_link() == trie->find_node("er"));
-	const string str = "zhelloperzz";
+	const string str = "zhelloperzzasdfnpokncopdeforcesofoajcodeforcessyyyyyyyyyzzz";
 	vector<pair<ll, Trie_Type *>> expected;
 	fo(j, str.size()) {
 		fo(i, j) {

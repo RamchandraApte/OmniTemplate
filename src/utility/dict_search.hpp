@@ -2,9 +2,13 @@
 #include "core/all.hpp"
 namespace string_tools {
 template <ll start = 'a', ll alphabet_size = 26> struct Trie {
+	/*! Whether this node is a leaf node*/
 	bool leaf{};
+	/*! The string for this leaf node*/
 	string str;
+	/*! Parent of this node*/
 	Trie *parent{};
+	/*! Character for the edge to the parent*/
 	char edge_char{};
 	/*! @brief Returns the child corresponding to the character c*/
 	Trie *&next(const char c) { return next_storage[c - start]; }
@@ -32,6 +36,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		cur->leaf = true;
 		cur->str = str;
 	}
+	/*! @brief Return the leaf node for str, or nullptr if none exists.*/
 	Trie *find_leaf(const string &str) {
 		const auto node = find_node(str);
 		return node && node->leaf ? node : nullptr;
@@ -47,6 +52,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		}
 		return cur;
 	}
+	/*! @brief returns the suffix link*/
 	Trie *link() {
 		if (!suffix_link_cache) {
 			auto get = [&] {
@@ -62,7 +68,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		}
 		return suffix_link_cache;
 	}
-
+	/*! @brief Goes to the node for the largest suffix of the current string plus c*/
 	Trie *go(const char c) {
 		auto &go_val = go_cache[c - start];
 		if (!go_val) {
@@ -76,6 +82,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		}
 		return go_val;
 	}
+	/*! @brief Returns the exit link, the next leaf suffix*/
 	Trie *exit_link() {
 		if (!exit_link_cache) {
 			if (!parent) {
@@ -87,6 +94,10 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		}
 		return exit_link_cache;
 	}
+	/*! @brief Searches for the patterns in text.
+	 * @returns a vector of (index, node) pairs where index is the index of the rightmost
+	 * character of the match
+	 */
 	vector<pair<ll, Trie *>> search(const string &text) {
 		vector<pair<ll, Trie *>> matches;
 		auto cur = &this;
