@@ -107,7 +107,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 			for (auto exit = cur; exit; exit = exit->exit_link()) {
 				if (exit->leaf) {
 					const ll j = idx + 1;
-					matches.push_back({{j - exit->str.size(), j}, exit});
+					matches.push_back({{j - ssize(exit->str), j}, exit});
 				}
 			}
 		}

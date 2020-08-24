@@ -119,6 +119,7 @@ auto operator==(search_it const &a, search_it const &b) {
 	if (sb) {
 		return b.ed == b.i;
 	}
+	assert(false);
 }
 auto operator<(search_it const &a, search_it const &b) {
 	bool sa = a.n, sb = b.n;
@@ -131,6 +132,7 @@ auto operator<(search_it const &a, search_it const &b) {
 	if (sb) {
 		return b.ed < b.i;
 	}
+	assert(false);
 }
 template <typename... Ts> auto search_ra(const Ts &... args) {
 	return range{search_it(args...), search_it()};
