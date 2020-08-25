@@ -1,6 +1,6 @@
 #pragma once
 #include "core/all.hpp"
-namespace string_tools {
+inline namespace string_tools {
 /*! Fast rolling hash on a specific string's substrings.
  *
  * Time complexity: \f$O(n)\f$ to build, \f$O(1)\f$ to query.

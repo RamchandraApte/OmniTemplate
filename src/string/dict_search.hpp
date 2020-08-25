@@ -1,6 +1,6 @@
 #pragma once
 #include "core/all.hpp"
-namespace string_tools {
+inline namespace string_tools {
 template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 	/*! Whether this node is a leaf node*/
 	bool leaf{};

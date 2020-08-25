@@ -1,5 +1,4 @@
 #pragma once
-#include "/home/ram/ear_tutorial.cpp"
 #include "biconnected.hpp"
 GraphAdj permute(const vector<ll> &perm, const GraphAdj &graph) {
 	/*! Return \param graph permuted by \param perm.*/
@@ -69,7 +68,6 @@ void test_biconnected() {
 			};
 			check_func(biconnected);
 			check_func(biconnected_ear);
-			check_func(biconnected_ear2);
 		};
 	};
 

@@ -44,7 +44,7 @@ template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
  * @returns A comparison functor that compares two arugments by the key.
  */
 template <typename Compare = less<>, typename Func>
-auto key_compare(const Func &func, Compare compare = {}) {
+auto key_compare(const Func &func, const Compare &compare = {}) {
 	return [=](auto &&... args) -> decltype(auto) {
 		return compare(func(forward<decltype(args)>(args))...);
 	};
