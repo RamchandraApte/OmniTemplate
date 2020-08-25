@@ -21,10 +21,12 @@
 #include "number_theory/test_number_theory.hpp"
 #include "string/test_dict_search.hpp"
 #include "string/test_string.hpp"
+#include "string/test_suffix_array.hpp"
 #include "utility/test_coroutine.hpp"
 #include "utility/test_graph_draw.hpp"
 bool multitest{};
 void test_all() {
+	test_suffix_array();
 	test_dict_search();
 	test_utility();
 	test_graph_theory();

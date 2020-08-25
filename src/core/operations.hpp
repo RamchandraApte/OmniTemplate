@@ -86,18 +86,19 @@ auto operator+(Iterator it,
 	advance(it, n);
 	return it;
 }
+// DEPRECATED TODO remove obsolete identity function
 template <typename T> using bin_op = T (*)(T, T);
-#define ret(x, id)                                                                                 \
+#define RET_MACRO(x, id)                                                                           \
 	if (f == static_cast<decltype(f)>(x)) {                                                    \
 		return id;                                                                         \
 	}
 constexpr ll identity(bin_op<ll const &> const &f) {
-	ret(max<ll>, -inf);
-	ret(min<ll>, inf);
+	RET_MACRO(max<ll>, -inf);
+	RET_MACRO(min<ll>, inf);
 	abort();
 }
 constexpr ll identity(bin_op<ll> const &f) {
-	ret(gcd<ll>, 0);
+	RET_MACRO(gcd<ll>, 0);
 	abort();
 }
 ll identity(plus<>, ll) { return 0; }
