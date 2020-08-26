@@ -14,7 +14,23 @@ vector<ll> suffix_array(string str) {
 			    order[idx],
 			    order[static_cast<ll>(modulo{idx, no_mod{}} + modulo{len, no_mod{}})]};
 		};
-		sort(al(perm), key_compare(cref(pair_key)));
+		if (len == 0) {
+			dbg(str);
+			counting_sort(
+			    al(perm), [&](const ll idx) { return str[idx]; }, 256);
+			dbg(perm);
+		} else {
+			counting_sort(
+			    al(perm),
+			    [&](const ll idx) {
+				    return order[static_cast<ll>(modulo{idx, no_mod{}} -
+								 modulo{len, no_mod{}})];
+			    },
+			    str.size());
+		}
+		for (auto &x : perm) {
+			x = static_cast<ll>(modulo{x, no_mod{}} - modulo{len, no_mod{}});
+		}
 		ll idx = 0;
 		fo(i, perm.size()) {
 			idx += (i >= 1 && pair_key(perm[i - 1]) != pair_key(perm[i]));
@@ -23,8 +39,13 @@ vector<ll> suffix_array(string str) {
 	};
 	sort_step(0);
 	for (ll len = 1; len < str.size(); len *= 2) {
+		dbg(order);
+		dbg(perm);
 		sort_step(len);
 	}
+	dbg(str);
+	dbg(order);
+	dbg(perm);
 	perm.erase(begin(perm));
 	return perm;
 }

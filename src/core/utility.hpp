@@ -103,6 +103,26 @@ template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
 		swap(a, b);
 	}
 }
+template <typename Iter, typename Proj>
+void counting_sort(Iter a, Iter b, const Proj &proj, const ll proj_size) {
+	range rang{a, b};
+	vector<ll> count(proj_size);
+	for (const auto &x : rang) {
+		++count[proj(x)];
+	}
+	ll sum = 0;
+	for (auto &cnt : count) {
+		const auto old_cnt = cnt;
+		cnt = sum;
+		sum += old_cnt;
+	}
+	vector<typename Iter::value_type> output(b - a);
+	for (const auto &x : rang) {
+		output[count[proj(x)]] = x;
+		++count[proj(x)];
+	}
+	move(al(output), a);
+}
 template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 // TODO split up utility.hpp maybe?
 /*! @brief Array convenience template. Converts C style array type to std::array type. */

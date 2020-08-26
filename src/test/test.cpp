@@ -26,6 +26,7 @@
 #include "utility/test_graph_draw.hpp"
 bool multitest{};
 void test_all() {
+	test_counting_sort();
 	test_suffix_array();
 	test_dict_search();
 	test_utility();
