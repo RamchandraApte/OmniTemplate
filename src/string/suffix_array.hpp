@@ -1,10 +1,11 @@
 #pragma once
+#include "combinatorics/permutation.hpp"
 #include "core/all.hpp"
 #include "number_theory/modulo.hpp"
 inline namespace string_tools {
-vector<ll> suffix_array(string str) {
+Permutation suffix_array(string str) {
 	str += '\0';
-	vector<ll> perm(str.size()), order(str.size());
+	Permutation perm(str.size()), order(str.size());
 	iota(al(perm), 0LL);
 	copy(al(str), begin(order));
 	auto sort_step = [&](const ll len) {
@@ -15,10 +16,8 @@ vector<ll> suffix_array(string str) {
 			    order[static_cast<ll>(modulo{idx, no_mod{}} + modulo{len, no_mod{}})]};
 		};
 		if (len == 0) {
-			dbg(str);
 			counting_sort(
 			    al(perm), [&](const ll idx) { return str[idx]; }, 256);
-			dbg(perm);
 		} else {
 			counting_sort(
 			    al(perm),
@@ -39,14 +38,29 @@ vector<ll> suffix_array(string str) {
 	};
 	sort_step(0);
 	for (ll len = 1; len < str.size(); len *= 2) {
-		dbg(order);
-		dbg(perm);
 		sort_step(len);
 	}
-	dbg(str);
-	dbg(order);
-	dbg(perm);
-	perm.erase(begin(perm));
 	return perm;
+}
+vector<ll> lcp_array(const string &str, const Permutation &suffix_arr) {
+	const auto n = str.size();
+	const auto pos = invert(multiplies{}, suffix_arr);
+	ll match = 0;
+	vector<ll> lcp(n);
+	for (const auto start : pos) {
+		if (start == n) {
+			continue;
+		}
+		while (true) {
+			auto i = suffix_arr[start] + match, j = suffix_arr[start + 1] + match;
+			if (!(max(i, j) < n && str[i] == str[j])) {
+				break;
+			}
+			++match;
+		}
+		lcp[start] = match;
+		match = max(match - 1, 0LL);
+	}
+	return lcp;
 }
 } // namespace string_tools
