@@ -86,30 +86,18 @@ auto operator+(Iterator it,
 	advance(it, n);
 	return it;
 }
-// DEPRECATED TODO remove obsolete identity function
-template <typename T> using bin_op = T (*)(T, T);
-#define RET_MACRO(x, id)                                                                           \
-	if (f == static_cast<decltype(f)>(x)) {                                                    \
-		return id;                                                                         \
+#define FUNCTOR(func)                                                                              \
+	struct {                                                                                   \
+		template <typename... Ts> decltype(auto) operator()(Ts &&... args) const {         \
+			return func(forward<decltype(args)>(args)...);                             \
+		}                                                                                  \
 	}
-constexpr ll identity(bin_op<ll const &> const &f) {
-	RET_MACRO(max<ll>, -inf);
-	RET_MACRO(min<ll>, inf);
-	abort();
-}
-constexpr ll identity(bin_op<ll> const &f) {
-	RET_MACRO(gcd<ll>, 0);
-	abort();
-}
+using Max = FUNCTOR(max);
+using Min = FUNCTOR(min);
 ll identity(plus<>, ll) { return 0; }
 ll identity(multiplies<>, ll) { return 1; }
-struct Max {
-	template <typename T> auto operator()(T a, T b) const { return max(a, b); }
-};
 ll identity(Max, ll) { return -inf; }
-struct Min {
-	template <typename T> auto operator()(T a, T b) const { return min(a, b); }
-};
 ll identity(Min, ll) { return inf; }
+// TODO convert all macros to UPPER_CASE
 //} // namespace operations
 // using namespace operations;

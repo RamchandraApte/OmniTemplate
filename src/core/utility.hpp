@@ -17,7 +17,8 @@ template <typename Func> struct fix {
 		return func(this, forward<Args>(args)...);
 	}
 };
-#define lambda(f) [](auto &&... args) { return f(forward<decltype(args)>(args)...); }
+#define lambda(f)                                                                                  \
+	[](auto &&... args) -> decltype(auto) { return f(forward<decltype(args)>(args)...); }
 template <typename T> auto max_eq(T &x, const T &y) { x = max(x, y); }
 template <typename T> auto min_eq(T &x, const T &y) { x = min(x, y); }
 template <typename T> auto cache(const T &f) {
