@@ -1,7 +1,6 @@
 #pragma once
 #include "core/all.hpp"
 namespace sparse_table {
-// TODO return identity when l = r
 /*! Sparse table.
  * @param T is the type of the data,
  * @param Semilattice is a bounded semilattice.*/
@@ -20,6 +19,9 @@ template <typename T, typename Semilattice> class SparseTable {
 	}
 	T query(ll l, ll r) const {
 		const auto len = r - l;
+		if (len == 0) {
+			return identity(Semilattice{}, T{});
+		}
 		// TODO put this in a function
 		const auto floor_log2 = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(len);
 		return Semilattice{}(meet[floor_log2][l],
@@ -64,12 +66,15 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 	}
 	/*! Returns Monoid sum over range [l, r)*/
 	T query(ll l, ll r) const {
-		assert(l < r);
-		// Convert half open interval to closed interval
-		--r;
+		assert(l <= r);
 		if (l == r) {
+			return identity(Monoid{}, T{});
+		}
+		if (l + 1 == r) {
 			return sum.back()[l];
 		}
+		// Convert half open interval to closed interval
+		--r;
 		// Position of the leftmost different bit from the right
 		const auto pos_diff = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(l ^ r);
 		const auto level = sum.size() - 1 - pos_diff;

@@ -6,7 +6,7 @@ void test_sparse_table_impl() {
 	vector<T> data{6, 2, 4, 1, 7, 3, 4, 2, 7, 2, 4, 1, 6};
 	Table<T, Monoid> sp{data};
 	fo(start, data.size()) {
-		fo(end, start + 1, data.size()) {
+		fo(end, start, data.size()) {
 			assert(sp.query(start, end) ==
 			       accumulate(begin(data) + start, begin(data) + end,
 					  identity(Monoid{}, T{}), Monoid{}));

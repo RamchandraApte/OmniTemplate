@@ -29,8 +29,7 @@ template <typename Value, typename MonoidOp = plus<>> class BIT {
 	 * @param value the value the element will be updated by
 	 */
 	void update(ll idx, const Value value) {
-		++idx;
-		for (; idx < arr.size(); idx += get_len(idx)) {
+		for (++idx; idx < arr.size(); idx += get_len(idx)) {
 			arr[idx] = op(arr[idx], value);
 		}
 	}
