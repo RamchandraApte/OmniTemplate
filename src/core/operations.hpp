@@ -86,10 +86,11 @@ auto operator+(Iterator it,
 	advance(it, n);
 	return it;
 }
+/** @brief Expands to a functor type that calls func */
 #define FUNCTOR(func)                                                                              \
 	struct {                                                                                   \
 		template <typename... Ts> decltype(auto) operator()(Ts &&... args) const {         \
-			return func(forward<decltype(args)>(args)...);                             \
+			return (func)(forward<decltype(args)>(args)...);                           \
 		}                                                                                  \
 	}
 using Max = FUNCTOR(max);

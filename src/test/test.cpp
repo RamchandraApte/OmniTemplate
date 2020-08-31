@@ -1,3 +1,4 @@
+#include "algebra/test_big_integer.hpp"
 #include "algebra/test_linear_algebra.hpp"
 #include "algebra/test_polynomial.hpp"
 #include "combinatorics/test_combinatorics.hpp"
@@ -26,6 +27,7 @@
 #include "utility/test_graph_draw.hpp"
 bool multitest{};
 void test_all() {
+	test_bigint();
 	test_counting_sort();
 	test_suffix_array();
 	test_dict_search();
