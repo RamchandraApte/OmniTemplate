@@ -15,7 +15,6 @@
 #endif
 #define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))
-#define this (*this)
 #define al(v) begin(v), end(v)
 bool debug_mode = false;
 //#define rel_assert(msg) if constexpr(debug_mode){static_assert(false, msg);}

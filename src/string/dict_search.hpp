@@ -13,7 +13,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 	/*! @brief Returns the child corresponding to the character c*/
 	Trie *&next(const char c) { return next_storage[c - start]; }
 	auto &next(const char c) const {
-		return const_cast<Trie *const &>(const_cast<Trie *>(&this)->next(c));
+		return const_cast<Trie *const &>(const_cast<Trie *>(this)->next(c));
 	}
 	/*! @brief Returns the child corresponding to the character c. A new child is created if no
 	 * such child exists.*/
@@ -21,14 +21,14 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		auto &vert = next(c);
 		if (!vert) {
 			vert = new Trie{};
-			vert->parent = &this;
+			vert->parent = this;
 			vert->edge_char = c;
 		}
 		return vert;
 	};
 	/*! @brief inserts str into the trie*/
 	void insert(const string &str) {
-		auto cur = &this;
+		auto cur = this;
 		for (const auto c : str) {
 			auto old = cur;
 			cur = cur->next_default(c);
@@ -43,7 +43,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 	}
 	/*! @brief Returns node corresponding to str (including non-leaf nodes), otherwise nullptr*/
 	Trie *find_node(const string &str) {
-		auto cur = &this;
+		auto cur = this;
 		for (const auto c : str) {
 			cur = cur->next(c);
 			if (!cur) {
@@ -57,7 +57,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 		if (!suffix_link_cache) {
 			auto get = [&] {
 				if (!parent) {
-					return &this;
+					return this;
 				}
 				if (!parent->parent) {
 					return parent;
@@ -76,7 +76,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 				if (const auto next_c = next(c)) {
 					return next_c;
 				}
-				return parent ? link()->go(c) : &this;
+				return parent ? link()->go(c) : this;
 			};
 			go_val = get();
 		}
@@ -101,7 +101,7 @@ template <ll start = 'a', ll alphabet_size = 26> struct Trie {
 	 */
 	auto search(const string &text) {
 		vector<pair<array<ll, 2>, Trie *>> matches;
-		auto cur = &this;
+		auto cur = this;
 		fo(idx, text.size()) {
 			cur = cur->go(text[idx]);
 			for (auto exit = cur; exit; exit = exit->exit_link()) {

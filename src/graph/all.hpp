@@ -96,7 +96,7 @@ template <typename Searcher, typename Graph> struct GeneralSearch {
 		 * entire graph, and not just one connected component. */
 		fo(i, graph.size()) {
 			if (!visited[i]) {
-				(static_cast<Searcher &>(this))(i);
+				(static_cast<Searcher &>(*this))(i);
 			}
 		}
 	}
@@ -122,15 +122,15 @@ template <typename Graph = GraphAdj> struct DFS : public GeneralSearch<DFS<Graph
 	using GeneralSearch_t = GeneralSearch<DFS, Graph>;
 	using GeneralSearch_t::operator(), typename GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
-		this.visited[source] = true;
-		for (const auto &j : this.graph[source]) {
-			if (this.visited[j]) {
+		this->visited[source] = true;
+		for (const auto &j : this->graph[source]) {
+			if (this->visited[j]) {
 				continue;
 			}
-			this.add(j, source);
-			this(j);
+			this->add(j, source);
+			(*this)(j);
 		}
-		this.queue.push_front(source);
+		this->queue.push_front(source);
 	}
 };
 template <typename Graph> DFS(Graph) -> DFS<Graph>;
@@ -139,19 +139,19 @@ template <typename Graph = GraphAdj> struct BFS : GeneralSearch<BFS<Graph>, Grap
 	using GeneralSearch_t = GeneralSearch<BFS, Graph>;
 	using GeneralSearch_t::operator(), typename GeneralSearch_t::GeneralSearch;
 	void operator()(const ll source) {
-		ll old_size = this.queue.size();
-		this.queue.push_back(source);
-		this.visited[source] = true;
-		this.distance[source] = 0;
-		for (ll idx = old_size; idx < this.queue.size(); ++idx) {
-			auto i = this.queue[idx];
-			for (const auto &j : this.graph[i]) {
-				if (this.visited[j]) {
+		ll old_size = this->queue.size();
+		this->queue.push_back(source);
+		this->visited[source] = true;
+		this->distance[source] = 0;
+		for (ll idx = old_size; idx < this->queue.size(); ++idx) {
+			auto i = this->queue[idx];
+			for (const auto &j : this->graph[i]) {
+				if (this->visited[j]) {
 					continue;
 				}
-				this.queue.push_back(j);
-				this.visited[j] = true;
-				this.add(j, i);
+				this->queue.push_back(j);
+				this->visited[j] = true;
+				this->add(j, i);
 			}
 		}
 	}

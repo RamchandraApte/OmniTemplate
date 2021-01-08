@@ -16,11 +16,11 @@ template <typename Stack> class QueueAdaptor {
 	using const_reference = typename Stack::const_reference;
 	const_reference front() const { return (left.empty() ? right : left).top(); }
 	reference front() {
-		return const_cast<reference>(const_cast<const QueueAdaptor &>(this).front());
+		return const_cast<reference>(const_cast<const QueueAdaptor &>(*this).front());
 	}
 	const_reference back() const { return (right.empty() ? left : right).top(); }
 	reference back() {
-		return const_cast<reference>(const_cast<const QueueAdaptor &>(this).back());
+		return const_cast<reference>(const_cast<const QueueAdaptor &>(*this).back());
 	}
 	bool empty() const { return left.empty() && right.empty(); }
 	size_type size() const { return left.size() + right.size(); }
@@ -78,6 +78,6 @@ template <typename T, typename Base = stack<pair<T, T>>> class MinStack : public
 };
 template <typename T> class MinQueue : public QueueAdaptor<MinStack<T>> {
       public:
-	T min() { return ::min(this.get_left().min(), this.get_right().min()); }
+	T min() { return ::min(this->get_left().min(), this->get_right().min()); }
 };
 } // namespace queue_tools

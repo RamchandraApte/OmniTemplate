@@ -1,3 +1,4 @@
+#include "link_cut.hpp"
 namespace link_cut::test {
 void test_link_cut_tree() {
 	vector<Node *> nodes(10);

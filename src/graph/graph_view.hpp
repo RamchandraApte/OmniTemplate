@@ -28,11 +28,12 @@ template <typename Graph, typename Pred> struct Subgraph {
 			advance();
 		}
 		bool operator==(const iterator &oth) const { return it == oth.it; }
-		bool operator!=(const iterator &oth) const { return !(this == oth); }
+		// FIXME should be genericized for all classes
+		bool operator!=(const iterator &oth) const { return !(*this == oth); }
 	};
 	range<iterator> operator[](const ll i) const {
-		iterator st_it{this, i};
-		iterator ed_it{this, i};
+		iterator st_it{*this, i};
+		iterator ed_it{*this, i};
 		ed_it.it = ed_it.adj_list.end();
 		return range<iterator>{st_it, ed_it};
 	}

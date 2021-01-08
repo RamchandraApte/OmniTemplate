@@ -31,7 +31,7 @@ class Permutation : public vector<ll> {
 			ll x = i;
 			do {
 				cycle.push_back(x);
-				x = this[x];
+				x = (*this)[x];
 			} while (x != i);
 			cycles.push_back(cycle);
 		}
@@ -42,7 +42,7 @@ class Permutation : public vector<ll> {
 		for (const auto &cycle : cycles) {
 			fo(i, cycle.size()) {
 				with _m{ssize(cycle), modulo::modulus};
-				this[cycle[i]] = cycle[static_cast<ll>(modulo{i} + shift)];
+				(*this)[cycle[i]] = cycle[static_cast<ll>(modulo{i} + shift)];
 			}
 		}
 	}

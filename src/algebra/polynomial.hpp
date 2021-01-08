@@ -10,15 +10,15 @@ template <typename T> class Polynomial : public vector<T> {
 
       public:
 	void shrink() {
-		while (!this.empty() && this.back() == 0) {
-			this.pop_back();
+		while (!this->empty() && this->back() == 0) {
+			this->pop_back();
 		}
 	}
 	ll degree() const {
 		/*! Returns the degree of polynomial. Returns \f$-\infty\f$ for the \f$0\f$
 		 * polynomial.*/
-		fr(j, 0, this.size()) {
-			if (this[j] != 0) {
+		fr(j, 0, this->size()) {
+			if ((*this)[j] != 0) {
 				return j;
 			}
 		}

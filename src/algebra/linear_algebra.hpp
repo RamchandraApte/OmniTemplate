@@ -27,10 +27,12 @@ template <typename T> struct matrix {
 	    : matrix(size(vals), size(begin(vals)[0])) {
 		fo(i, rows_n) {
 			assert(size(begin(vals)[i]) == cols_n);
-			fo(j, cols_n) { this[i][j] = begin(begin(vals)[i])[j]; }
+			fo(j, cols_n) { (*this)[i][j] = begin(begin(vals)[i])[j]; }
 		}
 	}
-	auto operator[](const ll i) { return const_cast<T *>(const_cast<matrix const &>(this)[i]); }
+	auto operator[](const ll i) {
+		return const_cast<T *>(const_cast<matrix const &>(*this)[i]);
+	}
 	auto operator[](const ll i) const { return &a[i * cols_n]; }
 	bool is_square() const { return rows_n == cols_n; }
 };

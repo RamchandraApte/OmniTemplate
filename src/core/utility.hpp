@@ -14,7 +14,7 @@ template <typename Func> struct fix {
 	Func func;
 	fix(const Func &func_) : func(func_) {}
 	template <typename... Args> decltype(auto) operator()(Args &&... args) const {
-		return func(this, forward<Args>(args)...);
+		return func(*this, forward<Args>(args)...);
 	}
 };
 #define lambda(f)                                                                                  \

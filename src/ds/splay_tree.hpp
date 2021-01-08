@@ -14,7 +14,7 @@ struct SplayNode
 	SplayNode *parent{};	       //!< Pointer to parent
 	bool side() const {
 		/*! Returns true if child is on the right, and false otherwise*/
-		return parent->child[1] == &this;
+		return parent->child[1] == this;
 	}
 	void rotate() {
 		/*! Rotate node x around its parent */
@@ -22,21 +22,21 @@ struct SplayNode
 		const bool i = side();
 
 		if (p->parent) {
-			p->parent->attach(p->side(), &this);
+			p->parent->attach(p->side(), this);
 		} else {
 			parent = nullptr;
 		}
 		p->attach(i, child[!i]);
 		attach(!i, p);
 		if constexpr (has_link_cut) {
-			this.path_parent = p->path_parent;
+			this->path_parent = p->path_parent;
 		}
 	}
 	void splay() {
 		/*! Splay node x. x will become the root of the tree*/
 		for (; parent; rotate()) {
 			if (parent->parent) {
-				(side() == parent->side() ? parent : &this)->rotate();
+				(side() == parent->side() ? parent : this)->rotate();
 			}
 		}
 	}
@@ -48,12 +48,12 @@ struct SplayNode
 			right->parent = nullptr;
 		}
 		this->right = nullptr;
-		return {&this, right};
+		return {this, right};
 	}
 	void attach(bool side, SplayNode *const new_) {
 		/*! Attach node new_ as the node's side children*/
 		if (new_) {
-			new_->parent = &this;
+			new_->parent = this;
 		}
 		child[side] = new_;
 	}

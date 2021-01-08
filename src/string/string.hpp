@@ -79,7 +79,7 @@ struct search_it : it_base<ll> {
 	ll i = 0, o = 0;
 	search_it(string const &t_, string const &s_)
 	    : t(t_), s(s_), n(s.size()), ed(n + 1 + t.size()), p(n) {
-		++this;
+		++*this;
 	}
 	explicit search_it() : search_it(empstr, empstr) {}
 	auto operator*() {
@@ -88,7 +88,7 @@ struct search_it : it_base<ll> {
 	}
 	void operator++() {
 		for (++i; i < ed; ++i) {
-			auto cur = i <= n ? s.c_str()[i] : t[*this];
+			auto cur = i <= n ? s.c_str()[i] : t[**this];
 			for (ll j = o;; j = p[j - 1]) {
 				if (s[j] == cur) {
 					o = j + 1;

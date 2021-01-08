@@ -3,7 +3,8 @@
 #include "algebra/test_polynomial.hpp"
 #include "combinatorics/test_combinatorics.hpp"
 #include "combinatorics/test_permutation.hpp"
-#include "core/template.hpp"
+#include "core/all.hpp"
+#include "core/main.hpp"
 #include "core/test_utility.hpp"
 #include "ds/test_bit.hpp"
 #include "ds/test_cht.hpp"
@@ -27,7 +28,7 @@
 #include "utility/test_graph_draw.hpp"
 bool multitest{};
 // FIXME why can't we compile this on G++-10? Compiler bug?
-void test_all() {
+void main2() {
 	// test_bigint();
 	test_counting_sort();
 	test_suffix_array();
@@ -57,4 +58,3 @@ void test_all() {
 	}
 	clog << "\e[0;32mAccepted\e[0m" << endl;
 }
-void main2() { test_all(); }

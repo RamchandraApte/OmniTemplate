@@ -7,17 +7,14 @@
 struct rin {
 	istream &in;
 	rin(istream &in_) : in(in_) {}
-	auto &operator<<(const char *) { return this; }
+	auto &operator<<(const char *) { return *this; }
 	auto &operator<<(string const &s) {
 		if (s.empty()) {
 			in >> const_cast<string &>(s);
 		}
-		return this;
+		return *this;
 	}
-	template <typename T> rin &operator>>(T &x) {
-		this << x;
-		return this;
-	}
+	template <typename T> rin &operator>>(T &x) { return *this << x; }
 };
 template <typename R, typename T>
 auto operator<<(R &r, const T &x)
