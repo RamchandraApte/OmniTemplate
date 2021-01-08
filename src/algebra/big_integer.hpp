@@ -4,7 +4,7 @@ namespace bigint {
 struct BigInt {
 	using DigitType = unsigned int;
 	vector<DigitType> digits;
-	explicit BigInt(const ll size_) : digits(size_) {}
+	// explicit BigInt(const ll size_) : digits(size_) {}
 	explicit BigInt(const vector<DigitType> &digits_) : digits(digits_) {}
 	BigInt(const DigitType n) : digits{n} {}
 	auto operator[](ll i) const { return i < ssize(digits) ? digits[i] : 0; }
