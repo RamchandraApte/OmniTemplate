@@ -4,7 +4,14 @@
 #include "ds/dsu.hpp"
 namespace graph_theory {
 //! Adjacency-list representation of graph
-using GraphAdj = vector<vector<ll>>;
+using GraphAdj_Base = vector<vector<ll>>;
+struct GraphAdj : public GraphAdj_Base {
+	using GraphAdj_Base::vector;
+	void add_edge(const ll u, const ll v) {
+		(*this)[u].push_back(v);
+		(*this)[v].push_back(u);
+	}
+};
 //! Edge with weight weight from a to b
 struct edge {
 	ll weight, a, b;
@@ -18,10 +25,8 @@ template <typename Stream> auto &operator<<(Stream &os, edge const &e) {
 	return os << "edge{" << e.a << "-(" << e.weight << ")>" << e.b << "}";
 }
 /** @brief Adds edge \f$u \leftrightarrow v\f$ to graph graph*/
-auto add_edge(GraphAdj &graph, ll u, ll v) {
-	graph[u].push_back(v);
-	graph[v].push_back(u);
-}
+// FIXME remove this
+auto add_edge(GraphAdj &graph, ll u, ll v) { graph.add_edge(u, v); }
 auto shortest_dist(vector<vector<pr>> graph, ll source) {
 	/** @brief Given an adjacency-list of a graph, returns the shortest distance to
 	 * each vertex from the source.
