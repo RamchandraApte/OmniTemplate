@@ -32,7 +32,6 @@ bool debug_mode = false;
 #define import(a)                                                                                  \
 	using namespace a;                                                                         \
 	lets_count{#a "::", ""};
-#define df(x, v) remove_const_t<decltype(v)> x = v
 using namespace std;
 vector<pair<string, string>> lets{
     {"__debug::", ""}, {"const ", ""}, {"__cxx11::basic_string<char>", "string"}};

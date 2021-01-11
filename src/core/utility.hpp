@@ -1,14 +1,14 @@
 #pragma once
 #include "range.hpp"
 namespace utility {
-/*! Sets v to new_ temporary while with object is alive */
+/*! @brief Sets v to new_ temporary while with object is alive */
 template <typename T> struct [[nodiscard]] with {
 	T old; //!< Original value of the variable
 	T &v;  //!< Reference to variable
 	template <typename Tp> with(const Tp new_, T &v_) : old(v_), v(v_) { v = new_; }
 	~with() { v = old; }
 };
-/*! Helper for lambda recursive functions. The recursive function is
+/*! @brief Helper for lambda recursive functions. The recursive function is
  * passed to Func as the first argument.*/
 template <typename Func> struct fix {
 	Func func;
@@ -19,10 +19,14 @@ template <typename Func> struct fix {
 };
 #define lambda(f)                                                                                  \
 	[](auto &&... args) -> decltype(auto) { return f(forward<decltype(args)>(args)...); }
-template <typename T> auto max_eq(T &x, const T &y) { x = max(x, y); }
-template <typename T> auto min_eq(T &x, const T &y) { x = min(x, y); }
+#define DEFINE_FUNC_EQ(func)                                                                       \
+	template <typename T> void func##_eq(T &x, const T &y) { x = func(x, y); }                 \
+/*! @brief Set x to the minimum of x and y*/
+DEFINE_FUNC_EQ(min);
+/*! @brief Set x to the maximum of x and y */
+DEFINE_FUNC_EQ(max);
+/*! @brief Cache calls to f using a map of type T*/
 template <typename T> auto cache(const T &f) {
-	/*! Cache calls to f using a map of type T*/
 	T ch;
 	return [=](const auto &arg) mutable {
 		if (ch.find(arg) == end(ch)) {
