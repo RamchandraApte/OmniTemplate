@@ -7,10 +7,10 @@
 namespace graph_theory::test {
 void test_BFS() {
 	GraphAdj g(4);
-	add_edge(g, 0, 1);
-	add_edge(g, 1, 2);
-	add_edge(g, 1, 3);
-	add_edge(g, 2, 3);
+	g.add_edge(0, 1);
+	g.add_edge(1, 2);
+	g.add_edge(1, 3);
+	g.add_edge(2, 3);
 	BFS b{g};
 	b(0);
 	assert((b.parent == vector<ll>{-1, 0, 1, 1}));
@@ -60,9 +60,9 @@ void test_scc() {
 }
 void test_add_edge() {
 	GraphAdj g(10);
-	add_edge(g, 3, 4);
-	add_edge(g, 6, 4);
-	add_edge(g, 9, 2);
+	g.add_edge(3, 4);
+	g.add_edge(6, 4);
+	g.add_edge(9, 2);
 	// Order doesn't matter
 	for (auto &x : g) {
 		sort(al(x));

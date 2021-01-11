@@ -104,7 +104,7 @@ pair<vector<char>, vector<array<ll, 2>>> biconnected_ear(GraphAdj graph) {
 	GraphAdj ear_graph(graph.size());
 	for (const auto &ears : ear_list) {
 		for (const auto &ear : ears) {
-			fo(i, ear.size() - 1) { add_edge(ear_graph, ear[i], ear[i + 1]); }
+			fo(i, ear.size() - 1) { ear_graph.add_edge(ear[i], ear[i + 1]); }
 		}
 	}
 	// TODO add print overload for vector<char>

@@ -3,11 +3,11 @@
 namespace hld::test {
 void test_hld() {
 	GraphAdj tree(6);
-	add_edge(tree, 0, 1);
-	add_edge(tree, 1, 5);
-	add_edge(tree, 0, 2);
-	add_edge(tree, 2, 3);
-	add_edge(tree, 2, 4);
+	tree.add_edge(0, 1);
+	tree.add_edge(1, 5);
+	tree.add_edge(0, 2);
+	tree.add_edge(2, 3);
+	tree.add_edge(2, 4);
 	vector<ll> data{5, 3, 6, 1, 2, 7};
 	HLD<ll, plus<>, DisjointSparseTable<ll, plus<>>> hld{tree, data};
 	// 5 -> 1 -> 0 -> 2 -> 4

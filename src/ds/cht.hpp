@@ -66,7 +66,7 @@ template <typename Range, typename Func> auto convex_min(const Range &r, const F
 struct CHT {
 	vector<point> lines; //!< The lines, specified as (a,b) for ax+b.
 	explicit CHT(vector<point> v) {
-		v = uniq(v, key_compare(lambda(imag), equal_to{}), key_compare(lambda(conj)));
+		v = uniq(v, key_compare(LAMBDA(imag), equal_to{}), key_compare(LAMBDA(conj)));
 		lines = hull(v, false);
 	}
 	auto min(ll x) {

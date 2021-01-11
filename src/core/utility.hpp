@@ -17,8 +17,8 @@ template <typename Func> struct fix {
 		return func(*this, forward<Args>(args)...);
 	}
 };
-#define lambda(f)                                                                                  \
-	[](auto &&... args) -> decltype(auto) { return f(forward<decltype(args)>(args)...); }
+#define LAMBDA(f)                                                                                  \
+	[&, this](auto &&...args) -> decltype(auto) { return f(forward<decltype(args)>(args)...); }
 #define DEFINE_FUNC_EQ(func)                                                                       \
 	template <typename T> void func##_eq(T &x, const T &y) { x = func(x, y); }                 \
 /*! @brief Set x to the minimum of x and y*/

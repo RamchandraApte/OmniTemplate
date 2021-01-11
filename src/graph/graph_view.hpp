@@ -42,7 +42,7 @@ template <typename Graph, typename Pred> struct Subgraph {
 void test_graph_view() {
 	GraphAdj g(5);
 	fo(i, g.size()) {
-		fo(j, i + 1, g.size()) { add_edge(g, i, j); }
+		fo(j, i + 1, g.size()) { g.add_edge(i, j); }
 	}
 	const auto pred = [](const ll i, const ll j) { return i % 2 == j % 2; };
 	Subgraph subgraph{g, pred};

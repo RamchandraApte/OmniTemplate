@@ -22,9 +22,9 @@ GraphAdj graph_disunion(const GraphAdj &a, const GraphAdj &b) {
 }
 void test_biconnected() {
 	constexpr auto make_triangle = [](auto &graph, const ll offset) -> void {
-		add_edge(graph, offset + 0, offset + 1);
-		add_edge(graph, offset + 0, offset + 2);
-		add_edge(graph, offset + 1, offset + 2);
+		graph.add_edge(offset + 0, offset + 1);
+		graph.add_edge(offset + 0, offset + 2);
+		graph.add_edge(offset + 1, offset + 2);
 	};
 	constexpr auto check = [](auto bicon, auto exp) -> bool {
 		const auto [exp_art_vec, exp_bridge] = exp;
@@ -36,7 +36,7 @@ void test_biconnected() {
 		auto edge_graph = [&](auto edges) {
 			GraphAdj graph(n);
 			for (auto [u, v] : edges) {
-				add_edge(graph, u, v);
+				graph.add_edge(u, v);
 			}
 			return graph;
 		};
@@ -74,7 +74,7 @@ void test_biconnected() {
 	GraphAdj graph_t1(6);
 	// Create two triangles
 	make_triangle(graph_t1, 0);
-	add_edge(graph_t1, 2, 3);
+	graph_t1.add_edge(2, 3);
 	make_triangle(graph_t1, 3);
 	test_all_perms(graph_t1, make_test([](const auto perm) {
 			       return Exp{{perm[2], perm[3]}, {{perm[2], perm[3]}}};
@@ -83,18 +83,18 @@ void test_biconnected() {
 	GraphAdj graph_t2(8);
 	make_triangle(graph_t2, 0);
 	// Complete graph minus 3 to 4
-	add_edge(graph_t2, 2, 3);
-	add_edge(graph_t2, 2, 4);
-	add_edge(graph_t2, 4, 5);
-	add_edge(graph_t2, 3, 5);
-	add_edge(graph_t2, 2, 5);
+	graph_t2.add_edge(2, 3);
+	graph_t2.add_edge(2, 4);
+	graph_t2.add_edge(4, 5);
+	graph_t2.add_edge(3, 5);
+	graph_t2.add_edge(2, 5);
 	make_triangle(graph_t2, 5);
 	test_all_perms(graph_t2, make_test([&](const auto perm) {
 			       return Exp{{perm[2], perm[5]}, {}};
 		       }));
 
 	GraphAdj graph2(2);
-	add_edge(graph2, 0, 1);
+	graph2.add_edge(0, 1);
 	test_all_perms(graph2, make_test([](const auto perm) {
 			       return Exp{{}, {{perm[0], perm[1]}}};
 		       }));
