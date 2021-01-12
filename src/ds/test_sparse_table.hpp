@@ -1,4 +1,5 @@
 #pragma once
+#include "number_theory/modulo.hpp"
 #include "sparse_table.hpp"
 namespace sparse_table::test {
 template <template <typename...> typename Table, typename T, typename Monoid>

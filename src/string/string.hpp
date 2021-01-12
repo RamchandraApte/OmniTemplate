@@ -1,5 +1,6 @@
 #pragma once
 #include "core/all.hpp"
+#include "number_theory/modulo.hpp"
 inline namespace string_tools {
 /*! Fast rolling hash on a specific string's substrings.
  *

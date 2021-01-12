@@ -1,5 +1,6 @@
 #pragma once
 #include "all.hpp"
+#include "test_2sat.hpp"
 #include "test_biconnected.hpp"
 #include "test_bipartite.hpp"
 #include "test_flow.hpp"

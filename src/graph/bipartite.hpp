@@ -1,5 +1,6 @@
 #pragma once
 #include "core/all.hpp"
+#include "graph/core.hpp"
 namespace graph_theory::bipartite {
 /*! Returns a bipartite coloring if possible */
 auto color2(const GraphAdj &graph) {

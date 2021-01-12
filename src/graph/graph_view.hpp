@@ -1,5 +1,6 @@
 #pragma once
 #include "core/all.hpp"
+#include "graph/core.hpp"
 /*! \brief Filters graph by a predicate.
  * \tparam Graph graph type
  * \tparam Pred Predicate functor type */

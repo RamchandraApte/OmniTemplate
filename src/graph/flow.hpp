@@ -1,6 +1,7 @@
 #pragma once
 #include "algebra/linear_algebra.hpp"
 #include "core/all.hpp"
+#include "graph/core.hpp"
 namespace flow {
 struct FlowEdge {
 	//! Capacity of the edge.

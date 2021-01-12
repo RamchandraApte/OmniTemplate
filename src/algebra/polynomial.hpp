@@ -1,5 +1,6 @@
 #pragma once
 #include "core/all.hpp"
+#include "number_theory/modulo.hpp"
 /**
  * @brief  Polynomial class. poly[i] is coefficient for x^i
  * Example: `Polynomial<ll>{1, 2, 3}` is \f$3x^2+2x+1\f$

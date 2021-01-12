@@ -1,5 +1,6 @@
 #pragma once
 #include "core/all.hpp"
+#include "graph/core.hpp"
 /*! Returns articulation points and bridges of \param graph.
  * @returns pair of a vector with 1s for all the articulation points and a vector of bridge edges
  */

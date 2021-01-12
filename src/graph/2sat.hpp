@@ -1,6 +1,7 @@
 #pragma once
 #include "core/all.hpp"
 #include "graph/all.hpp"
+#include "graph/core.hpp"
 namespace sat2 {
 optional<vector<char>> sat2(const vector<array<ll, 2>> &cnf, const ll n) {
 	/*! @brief Takes a 2 SAT instance and returns a solution.
