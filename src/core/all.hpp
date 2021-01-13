@@ -8,11 +8,31 @@
 #ifdef REALGCC
 #include <bits/extc++.h>
 #else
+#if 0
+#include <algorithm>
+#include <cassert>
+#include <chrono>
+#include <climits>
+#include <complex>
+#include <functional>
+#include <iostream>
+#include <iterator>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <stack>
+#include <string>
+#include <thread>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+#endif
 #include <bits/stdc++.h>
 #endif
 #include <experimental/iterator>
 #include <experimental/source_location>
-#endif
+#endif // PRE
 #define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))
 #define al(v) begin(v), end(v)
@@ -32,6 +52,11 @@ bool debug_mode = false;
 #define import(a)                                                                                  \
 	using namespace a;                                                                         \
 	lets_count{#a "::", ""};
+#ifndef LOCAL
+#define cerr()                                                                                     \
+	if (false)                                                                                 \
+	cerr
+#endif
 using namespace std;
 vector<pair<string, string>> lets{
     {"__debug::", ""}, {"const ", ""}, {"__cxx11::basic_string<char>", "string"}};
@@ -70,7 +95,6 @@ using order_stat_map = tree<T, V, less<>, rb_tree_tag, tree_order_statistics_nod
 auto constexpr inf = ll(numeric_limits<ll>::max()) / 8; /*!< Infinity */
 auto const delim = ", "s;				/*!< Delimiter for debug output */
 auto constexpr tau = 2 * 3.1415926535897932384626433L;	/*!< Pi */
-extern bool multitest;
 
 #include "debug.hpp"
 #include "io.hpp"

@@ -64,7 +64,7 @@ class SegmentTree {
 		get_core(idx).qsum = ret;
 	}
 	/*! Push lazy updates down*/
-	void down(const Node idx, const ll node_l, const ll node_r) {
+	void down([[maybe_unused]] const Node idx, const ll node_l, const ll node_r) {
 		const bool leaf = node_r - node_l == 1;
 		if constexpr (has_ptr) {
 			if (!leaf) {

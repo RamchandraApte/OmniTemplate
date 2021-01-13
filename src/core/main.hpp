@@ -1,14 +1,11 @@
 #pragma once
 #include "core/all.hpp"
 #include "time.hpp"
-void main2();
-#if 0
-string s = __FILE__;
-ifstream input{s.substr(0,s.size()-string{"cpp"}.size())+"in"};
-auto& in = input?input:cin;
-#else
-auto &in = cin;
-#endif
+struct set_multitest {
+	inline static bool multitest{};
+	explicit set_multitest(const bool val = true) { multitest = val; }
+};
+extern void main2();
 int main(int argc, char *argv[]) {
 #ifdef LOCAL
 	debug_mode = true;
@@ -22,7 +19,7 @@ int main(int argc, char *argv[]) {
 	if (!debug_mode) {
 		cerr.rdbuf(nullptr);
 	}
-	for (ios &os : initializer_list<reference_wrapper<ios>>{in, cout, cerr, clog}) {
+	for (ios &os : initializer_list<reference_wrapper<ios>>{cin, cout, (cerr), clog}) {
 		fixed(os);
 		if (os.rdbuf()) {
 			os.exceptions(ios::failbit | ios::badbit | ios::eofbit);
@@ -32,7 +29,7 @@ int main(int argc, char *argv[]) {
 	cout.precision(numeric_limits<ld>::max_digits10);
 	timer _t;
 	ll t = 1;
-	if (multitest) {
+	if (set_multitest::multitest) {
 		cin >> t;
 	}
 	fo(i, t) { main2(); }

@@ -9,7 +9,7 @@ add_custom_target(test_all COMMAND ${CMAKE_BINARY_DIR}/test DEPENDS test)
 
 add_executable(test src/test/test.cpp)
 include_directories(src/ src/graph)
-set (CMAKE_CXX_FLAGS "-fmax-errors=2 -std=c++17")
+set (CMAKE_CXX_FLAGS "-fmax-errors=2 -std=c++17 -Wno-subobject-linkage -Wno-sign-compare -Wno-unused -Wall -Wextra")
 set (CMAKE_CXX_FLAGS_DEBUG "-fsanitize=address,undefined -ggdb3 -D_GLIBCXX_DEBUG")
 set (CMAKE_CXX_FLAGS_RELWITHDEBINFO "-g -D_GLIBCXX_ASSERTIONS -DLOCAL")
 set (CMAKE_EXPORT_COMPILE_COMMANDS True)

@@ -1,15 +1,14 @@
-#include "core/all.hpp"
 #include "core/main.hpp"
-#define GRAPH
-#define MATRIX
+//#define GRAPH
+//#define MATRIX
 #ifdef GRAPH
-#include "graph/all.hpp"
+#include "graph/core.hpp"
 #endif
 #ifdef MATRIX
 #include "algebra/linear_algebra.hpp"
 #include "number_theory/number_theory.hpp"
 #endif
-bool multitest{};
+// set_multitest _{};
 void main2() {
 #ifdef GRAPH
 	GraphAdj g(10);
@@ -23,4 +22,5 @@ void main2() {
 	ll a, b;
 	cin >> a >> b;
 	cout << a + b << endl;
+	cerr << "DEBUG MESSAGE!" << endl;
 }
