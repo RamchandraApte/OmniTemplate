@@ -1,14 +1,29 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="namespacegraph__theory" kind="namespace" language="C++">
     <compoundname>graph_theory</compoundname>
     <innerclass refid="structgraph__theory_1_1BFS" prot="public">graph_theory::BFS</innerclass>
     <innerclass refid="structgraph__theory_1_1DFS" prot="public">graph_theory::DFS</innerclass>
     <innerclass refid="structgraph__theory_1_1edge" prot="public">graph_theory::edge</innerclass>
     <innerclass refid="structgraph__theory_1_1GeneralSearch" prot="public">graph_theory::GeneralSearch</innerclass>
+    <innerclass refid="structgraph__theory_1_1GraphAdj" prot="public">graph_theory::GraphAdj</innerclass>
     <innernamespace refid="namespacegraph__theory_1_1bipartite">graph_theory::bipartite</innernamespace>
     <innernamespace refid="namespacegraph__theory_1_1test">graph_theory::test</innernamespace>
       <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacegraph__theory_1adf2ab789ab7321886b5f11d88a9e7fe6" prot="public" static="no">
+        <type>vector&lt; vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &gt;</type>
+        <definition>using graph_theory::GraphAdj_Base = typedef vector&lt;vector&lt;ll&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>GraphAdj_Base</name>
+        <briefdescription>
+<para>Adjacency-list representation of graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="6" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" prot="public" static="no">
         <type>vector&lt; vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &gt;</type>
         <definition>using graph_theory::GraphAdj = typedef vector&lt;vector&lt;ll&gt; &gt;</definition>
@@ -21,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="7" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="7" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="2274" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="2274" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -45,9 +60,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="14" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="14" bodyend="16"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="structgraph__theory_1_1edge_1ac97b1e4068cb11d040a30689327e322f" compoundref="graph_2all_8hpp" startline="11" endline="11">graph_theory::edge::to_tuple</references>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="30" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="30" bodyend="30"/>
+        <references refid="structgraph__theory_1_1edge_1ac97b1e4068cb11d040a30689327e322f" compoundref="core_8hpp" startline="27" endline="27">graph_theory::edge::to_tuple</references>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1a9112d064de59f0aa5737bc1d90e9bf32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -68,18 +82,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="17" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="17" bodyend="19"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="structgraph__theory_1_1edge_1ac97b1e4068cb11d040a30689327e322f" compoundref="graph_2all_8hpp" startline="11" endline="11">graph_theory::edge::to_tuple</references>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="31" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="31" bodyend="31"/>
+        <references refid="structgraph__theory_1_1edge_1ac97b1e4068cb11d040a30689327e322f" compoundref="core_8hpp" startline="27" endline="27">graph_theory::edge::to_tuple</references>
       </memberdef>
-      <memberdef kind="function" id="namespacegraph__theory_1a283db7058efe0355744471a1532e4960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacegraph__theory_1ac98f689dd795d68d4d96aabe64b5de71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Stream</type>
           </param>
         </templateparamlist>
         <type>auto &amp;</type>
-        <definition>auto&amp; graph_theory::operator&lt;&lt;</definition>
+        <definition>auto &amp; graph_theory::operator&lt;&lt;</definition>
         <argsstring>(Stream &amp;os, edge const &amp;e)</argsstring>
         <name>operator&lt;&lt;</name>
         <param>
@@ -97,48 +110,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="21" column="13" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="21" bodyend="23"/>
-        <references refid="structgraph__theory_1_1edge_1ae8364c3bd91a36e17fc27897682b793b" compoundref="graph_2all_8hpp" startline="10">graph_theory::edge::a</references>
-        <references refid="structgraph__theory_1_1edge_1a57daf64fddd9cbc445c13c4a828a2a06" compoundref="graph_2all_8hpp" startline="10">graph_theory::edge::b</references>
-        <references refid="structgraph__theory_1_1edge_1afd1df0689bec85ffbdb52d3735a2edc6" compoundref="graph_2all_8hpp" startline="10">graph_theory::edge::weight</references>
-      </memberdef>
-      <memberdef kind="function" id="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>auto</type>
-        <definition>auto graph_theory::add_edge</definition>
-        <argsstring>(GraphAdj &amp;graph, ll u, ll v)</argsstring>
-        <name>add_edge</name>
-        <param>
-          <type><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref> &amp;</type>
-          <declname>graph</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>u</declname>
-        </param>
-        <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-<para>Adds edge <formula id="22">$u \leftrightarrow v$</formula> to graph graph. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="25" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="25" bodyend="28"/>
-        <referencedby refid="biconnected_8hpp_1a789f23d7fc22d09960694892eeb41223" compoundref="biconnected_8hpp" startline="87" endline="126">biconnected_ear</referencedby>
-        <referencedby refid="namespacegraph__theory_1aa68bcc78bd4d2bbd33ce272bbb2d5f33" compoundref="graph_2all_8hpp" startline="193" endline="200">graph_in</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1test_1afca7670537e2da47c79f8e3602e96c2c" compoundref="test__all_8hpp" startline="60" endline="70">graph_theory::test::test_add_edge</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1test_1a89fa4a3244eff73fe109343d7e132c43" compoundref="test__all_8hpp" startline="8" endline="18">graph_theory::test::test_BFS</referencedby>
-        <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="105">test_biconnected</referencedby>
-        <referencedby refid="test__centroid_8hpp_1a1f3c802afdfa77c5389c557f5284a486" compoundref="test__centroid_8hpp" startline="3" endline="13">test_centroid_decomp</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1a7e5ad591c1ee6db41745438d98b39825" compoundref="test__bipartite_8hpp" startline="4" endline="20">graph_theory::bipartite::test::test_color2</referencedby>
-        <referencedby refid="namespacegraph__draw_1_1test_1a037737d6386f4405a42dc842eb4d7436" compoundref="test__graph__draw_8hpp" startline="4" endline="13">graph_draw::test::test_graph_draw</referencedby>
-        <referencedby refid="graph__view_8hpp_1ac5d2f097a07285733e610a52b16e790b" compoundref="graph__view_8hpp" startline="35" endline="51">test_graph_view</referencedby>
-        <referencedby refid="namespacehld_1_1test_1a2c2ea10aedda3e4e51f08d38ea3fa3f0" compoundref="test__hld_8hpp" startline="4" endline="27">hld::test::test_hld</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1bipartite_1_1test_1af862fd7b59fb6a9e0a396a5bd8801c3e" compoundref="test__bipartite_8hpp" startline="21" endline="83">graph_theory::bipartite::test::test_max_match</referencedby>
-        <referencedby refid="tree_8hpp_1a3723e2fdc7693c4777b321d0619f189d" compoundref="tree_8hpp" startline="16" endline="38">test_tree_diameter</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="33" column="13" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="33" bodyend="35"/>
+        <references refid="structgraph__theory_1_1edge_1ae8364c3bd91a36e17fc27897682b793b" compoundref="core_8hpp" startline="26">graph_theory::edge::a</references>
+        <references refid="structgraph__theory_1_1edge_1a57daf64fddd9cbc445c13c4a828a2a06" compoundref="core_8hpp" startline="26">graph_theory::edge::b</references>
+        <references refid="structgraph__theory_1_1edge_1afd1df0689bec85ffbdb52d3735a2edc6" compoundref="core_8hpp" startline="26">graph_theory::edge::weight</references>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -154,17 +129,19 @@
           <declname>source</declname>
         </param>
         <briefdescription>
+<para>Adds edge <formula id="22">$u \leftrightarrow v$</formula> to graph graph. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
 <para>Given an adjacency-list of a graph, returns the shortest distance to each vertex from the source. Algorithm: Dijkstra</para>
+<para>Given an adjacency-list of a graph, returns the shortest distance to each vertex from the source. Algorithm: Dijkstra</para>
+<para>Given an adjacency-list of a graph, returns the shortest distance to each vertex from the source. Algorithm: Dijkstra</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="29" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="29" bodyend="55"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="74">inf</references>
-        <referencedby refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" compoundref="test__all_8hpp" startline="23" endline="39">graph_theory::test::test_shortest_dist</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="37" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="37" bodyend="63"/>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="95">inf</references>
+        <referencedby refid="namespacegraph__theory_1_1test_1a85895e3668b3921ec39edbbe8ab3cb37" compoundref="test__all_8hpp" startline="25" endline="41">graph_theory::test::test_shortest_dist</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1ae6ad3f54671798a8d8f3c4253ea83db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -183,9 +160,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="60" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="60" bodyend="74"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="structlinear__algebra_1_1matrix_1ad02294881d9dd92ee77b417d416bed33" compoundref="linear__algebra_8hpp" startline="36" endline="36">linear_algebra::matrix&lt; T &gt;::is_square</references>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="68" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="68" bodyend="82"/>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="structlinear__algebra_1_1matrix_1ad02294881d9dd92ee77b417d416bed33" compoundref="linear__algebra_8hpp" startline="37" endline="37">linear_algebra::matrix&lt; T &gt;::is_square</references>
         <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="11">linear_algebra::matrix&lt; T &gt;::rows_n</references>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1a43f33335bd84b91252969b3b17f8b09d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -208,19 +185,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="76" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="76" bodyend="87"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
-        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="89">ret</references>
-        <referencedby refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" compoundref="test__all_8hpp" startline="40" endline="45">graph_theory::test::test_mst</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="84" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="84" bodyend="95"/>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="38">al</references>
+        <referencedby refid="namespacegraph__theory_1_1test_1ab6022fd4e376f6aa5e2fe088ff623d57" compoundref="test__all_8hpp" startline="42" endline="47">graph_theory::test::test_mst</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespacegraph__theory_1a1fa8a9b42e79b9ce10e89e4659164f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacegraph__theory_1a9d6eaad6577fb0289aee53b10fd4a260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Searcher</type>
           </param>
         </templateparamlist>
         <type>vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>vector&lt;ll&gt; graph_theory::get_size</definition>
+        <definition>vector&lt; ll &gt; graph_theory::get_size</definition>
         <argsstring>(const Searcher &amp;search)</argsstring>
         <name>get_size</name>
         <param>
@@ -234,10 +210,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="113" column="20" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="113" bodyend="121"/>
-        <references refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" compoundref="range_8hpp" startline="53" endline="56">rev</references>
-        <references refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" compoundref="lca_8hpp" startline="4">tree::sz</references>
-        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="47">centroid_decomp</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="123" column="20" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="123" bodyend="131"/>
+        <references refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" compoundref="range_8hpp" startline="57" endline="60">rev</references>
+        <references refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" compoundref="lca_8hpp" startline="4">tree::sz</references>
+        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="49">centroid_decomp</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1a7ffa7c1e75caecd92d5c385d41eb313d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -258,10 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="138" column="13" declfile="/home/ram/OmniTemplate/src/graph/all.hpp" declline="138" declcolumn="13"/>
-        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="48">biconnected</referencedby>
-        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="47">centroid_decomp</referencedby>
-        <referencedby refid="biconnected_8hpp_1a6b3f22cd584c5d8be1de2703c3b9e004" compoundref="biconnected_8hpp" startline="51" endline="85">ear_decomp</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="148" column="13" declfile="/home/ram/OmniTemplate/src/graph/core.hpp" declline="148" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1a4ebc5c354c7f3d8a187b1af524050c0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -282,10 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="161" column="13" declfile="/home/ram/OmniTemplate/src/graph/all.hpp" declline="161" declcolumn="13"/>
-        <referencedby refid="namespaceflow_1ab1878f3966f553be99c58d55aa46709e" compoundref="flow_8hpp" startline="60" endline="158">flow::dinic</referencedby>
-        <referencedby refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" compoundref="flow_8hpp" startline="13" endline="59">flow::edmond_karp</referencedby>
-        <referencedby refid="graph__view_8hpp_1ac5d2f097a07285733e610a52b16e790b" compoundref="graph__view_8hpp" startline="35" endline="51">test_graph_view</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="171" column="13" declfile="/home/ram/OmniTemplate/src/graph/core.hpp" declline="171" declcolumn="13"/>
         <referencedby refid="tree_8hpp_1a202200d4d06aea05b7638be837590286" compoundref="tree_8hpp" startline="5" endline="15">tree_diameter</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1a5250f51004add91c3b7f66fe5a030a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -294,7 +264,7 @@
         <argsstring>(const GraphAdj &amp;graph)</argsstring>
         <name>trans</name>
         <param>
-          <type>const <ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref> &amp;</type>
+          <type>const <ref refid="structgraph__theory_1_1GraphAdj" kindref="compound">GraphAdj</ref> &amp;</type>
           <declname>graph</declname>
         </param>
         <briefdescription>
@@ -304,10 +274,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="163" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="163" bodyend="171"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <referencedby refid="namespacegraph__theory_1afcb5da494d1b16139a1be66e66543043" compoundref="graph_2all_8hpp" startline="174" endline="192">scc</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" compoundref="test__all_8hpp" startline="19" endline="22">graph_theory::test::test_trans</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="173" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="173" bodyend="181"/>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <referencedby refid="namespacegraph__theory_1afcb5da494d1b16139a1be66e66543043" compoundref="core_8hpp" startline="184" endline="202">scc</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1test_1a39d1cd9f78ffe067260878347c9e178d" compoundref="test__all_8hpp" startline="20" endline="24">graph_theory::test::test_trans</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1afcb5da494d1b16139a1be66e66543043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -315,7 +285,7 @@
         <argsstring>(const GraphAdj &amp;graph)</argsstring>
         <name>scc</name>
         <param>
-          <type>const <ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref> &amp;</type>
+          <type>const <ref refid="structgraph__theory_1_1GraphAdj" kindref="compound">GraphAdj</ref> &amp;</type>
           <declname>graph</declname>
         </param>
         <briefdescription>
@@ -325,10 +295,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="174" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="174" bodyend="192"/>
-        <references refid="namespacegraph__theory_1a5250f51004add91c3b7f66fe5a030a2f" compoundref="graph_2all_8hpp" startline="163" endline="171">trans</references>
-        <referencedby refid="namespacesat2_1a7c5b410fc1eefa671c8e9531c2e29cec" compoundref="2sat_8hpp" startline="5" endline="30">sat2::sat2</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" compoundref="test__all_8hpp" startline="46" endline="59">graph_theory::test::test_scc</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="184" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="184" bodyend="202"/>
+        <references refid="namespacegraph__theory_1a5250f51004add91c3b7f66fe5a030a2f" compoundref="core_8hpp" startline="173" endline="181">trans</references>
+        <referencedby refid="namespacesat2_1a7e3bde170b608f8eb02f83eaf34073e3" compoundref="2sat_8hpp" startline="6" endline="31">sat2::sat2</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1test_1a12ae68923e728fc307296eb6e6a56466" compoundref="test__all_8hpp" startline="48" endline="61">graph_theory::test::test_scc</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacegraph__theory_1aa68bcc78bd4d2bbd33ce272bbb2d5f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -336,7 +306,7 @@
         <argsstring>(GraphAdj &amp;g, ll m)</argsstring>
         <name>graph_in</name>
         <param>
-          <type><ref refid="namespacegraph__theory_1a5ab361e566cb00eee5329a02c4553780" kindref="member">GraphAdj</ref> &amp;</type>
+          <type><ref refid="structgraph__theory_1_1GraphAdj" kindref="compound">GraphAdj</ref> &amp;</type>
           <declname>g</declname>
         </param>
         <param>
@@ -344,21 +314,54 @@
           <declname>m</declname>
         </param>
         <briefdescription>
+<para>Reads 1-indexed list of edges into graph g. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
 <para>Reads 1-indexed list of edges into graph g</para>
+<para>Reads 1-indexed list of edges into graph g</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="193" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="193" bodyend="200"/>
-        <references refid="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" compoundref="graph_2all_8hpp" startline="25" endline="28">add_edge</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="205" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="205" bodyend="207"/>
+        <references refid="structgraph__theory_1_1GraphAdj_1a63eca6a610102ccb3d716c5a9ac88f08" compoundref="core_8hpp" startline="13" endline="22">graph_theory::GraphAdj::read</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraph__theory_1a2abf7b81ca97d786b3c5157c655066f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto graph_theory::add_edge</definition>
+        <argsstring>(GraphAdj &amp;graph, ll u, ll v)</argsstring>
+        <name>add_edge</name>
+        <param>
+          <type><ref refid="structgraph__theory_1_1GraphAdj" kindref="compound">GraphAdj</ref> &amp;</type>
+          <declname>graph</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Adds edge <formula id="22">$u \leftrightarrow v$</formula> to graph graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="2288" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="2288" bodyend="2291"/>
+        <referencedby refid="test__compiled_8cpp_1a789f23d7fc22d09960694892eeb41223" compoundref="test__compiled_8cpp" startline="2557" endline="2609">biconnected_ear</referencedby>
+        <referencedby refid="test__compiled_8cpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__compiled_8cpp" startline="2633" endline="2722">test_biconnected</referencedby>
+        <referencedby refid="test__compiled_8cpp_1a1f3c802afdfa77c5389c557f5284a486" compoundref="test__compiled_8cpp" startline="3337" endline="3349">test_centroid_decomp</referencedby>
+        <referencedby refid="namespacegraph__draw_1_1test_1a037737d6386f4405a42dc842eb4d7436" compoundref="test__compiled_8cpp" startline="4481" endline="4490">graph_draw::test::test_graph_draw</referencedby>
+        <referencedby refid="test__compiled_8cpp_1ac5d2f097a07285733e610a52b16e790b" compoundref="test__compiled_8cpp" startline="3022" endline="3038">test_graph_view</referencedby>
+        <referencedby refid="test__compiled_8cpp_1a3723e2fdc7693c4777b321d0619f189d" compoundref="test__compiled_8cpp" startline="3116" endline="3138">test_tree_diameter</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="5" column="22"/>
+    <location file="/home/ram/OmniTemplate/src/graph/bipartite.hpp" line="4" column="1"/>
   </compounddef>
 </doxygen>

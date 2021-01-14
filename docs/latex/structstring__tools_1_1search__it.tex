@@ -26,9 +26,19 @@ Collaboration diagram for string\+\_\+tools\+::search\+\_\+it\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}{iterator\+\_\+category}} = input\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}{iterator\+\_\+category}} = input\+\_\+iterator\+\_\+tag
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstring__tools_1_1search__it_aca022e021ec03287386571ef78a8e954}{search\+\_\+it}} (string const \&t\+\_\+, string const \&s\+\_\+)
+\item 
+\mbox{\hyperlink{structstring__tools_1_1search__it_a1605669d491f38f76e0f32902a4b0ce7}{search\+\_\+it}} ()
+\item 
+auto \mbox{\hyperlink{structstring__tools_1_1search__it_af1edaa6e375d857575d012a55cdd4980}{operator$\ast$}} ()
+\item 
+void \mbox{\hyperlink{structstring__tools_1_1search__it_ae3b12022612273c38ee27b30942ded0b}{operator++}} ()
 \item 
 \mbox{\hyperlink{structstring__tools_1_1search__it_aca022e021ec03287386571ef78a8e954}{search\+\_\+it}} (string const \&t\+\_\+, string const \&s\+\_\+)
 \item 
@@ -41,15 +51,15 @@ void \mbox{\hyperlink{structstring__tools_1_1search__it_ae3b12022612273c38ee27b3
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const string \& \mbox{\hyperlink{structstring__tools_1_1search__it_af4f997651360785c26b02a9dc4825318}{t}}
+string const  \& \mbox{\hyperlink{structstring__tools_1_1search__it_a14e5ffebdd56dc850d3f567f7a2bcfea}{t}}
 \item 
-const string \mbox{\hyperlink{structstring__tools_1_1search__it_adf1d8385f726abce3cd93b1217f51bbe}{s}}
+string const \mbox{\hyperlink{structstring__tools_1_1search__it_a27c559aeb3162c49801b37724cd4312c}{s}}
 \item 
 const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structstring__tools_1_1search__it_aab70ce1b2fdb25d6476e2a68e3e42fef}{n}}
 \item 
 const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structstring__tools_1_1search__it_a87ec86b38282706ad524ea778ba728b0}{ed}}
 \item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structstring__tools_1_1search__it_a187978317937eb139741d9f64948adeb}{p}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{structstring__tools_1_1search__it_a3e2ab355700aab9c01656f76e4dec132}{p}}
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structstring__tools_1_1search__it_abbec6589aea3d745e199d755d85d554a}{i}} = 0
 \item 
@@ -64,7 +74,13 @@ Search iterator for looping through all matches of a string s in t
 \mbox{\Hypertarget{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}\label{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!iterator\_category@{iterator\_category}}
 \index{iterator\_category@{iterator\_category}!string\_tools::search\_it@{string\_tools::search\_it}}
-\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}{string\+\_\+tools\+::search\+\_\+it\+::iterator\+\_\+category}} =  input\+\_\+iterator\+\_\+tag}
+
+\mbox{\Hypertarget{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}\label{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}} 
+\index{string\_tools::search\_it@{string\_tools::search\_it}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!string\_tools::search\_it@{string\_tools::search\_it}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{structstring__tools_1_1search__it_acb50112dd85865f007cd61cce21075ca}{string\+\_\+tools\+::search\+\_\+it\+::iterator\+\_\+category}} =  input\+\_\+iterator\+\_\+tag}
 
 
@@ -73,13 +89,25 @@ Search iterator for looping through all matches of a string s in t
 \mbox{\Hypertarget{structstring__tools_1_1search__it_aca022e021ec03287386571ef78a8e954}\label{structstring__tools_1_1search__it_aca022e021ec03287386571ef78a8e954}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!search\_it@{search\_it}}
 \index{search\_it@{search\_it}!string\_tools::search\_it@{string\_tools::search\_it}}
-\doxysubsubsection{\texorpdfstring{search\_it()}{search\_it()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{search\_it()}{search\_it()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily string\+\_\+tools\+::search\+\_\+it\+::search\+\_\+it (\begin{DoxyParamCaption}\item[{string const \&}]{t\+\_\+,  }\item[{string const \&}]{s\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{structstring__tools_1_1search__it_a1605669d491f38f76e0f32902a4b0ce7}\label{structstring__tools_1_1search__it_a1605669d491f38f76e0f32902a4b0ce7}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!search\_it@{search\_it}}
 \index{search\_it@{search\_it}!string\_tools::search\_it@{string\_tools::search\_it}}
-\doxysubsubsection{\texorpdfstring{search\_it()}{search\_it()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{search\_it()}{search\_it()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily string\+\_\+tools\+::search\+\_\+it\+::search\+\_\+it (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1search__it_aca022e021ec03287386571ef78a8e954}\label{structstring__tools_1_1search__it_aca022e021ec03287386571ef78a8e954}} 
+\index{string\_tools::search\_it@{string\_tools::search\_it}!search\_it@{search\_it}}
+\index{search\_it@{search\_it}!string\_tools::search\_it@{string\_tools::search\_it}}
+\doxysubsubsection{\texorpdfstring{search\_it()}{search\_it()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily string\+\_\+tools\+::search\+\_\+it\+::search\+\_\+it (\begin{DoxyParamCaption}\item[{string const \&}]{t\+\_\+,  }\item[{string const \&}]{s\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1search__it_a1605669d491f38f76e0f32902a4b0ce7}\label{structstring__tools_1_1search__it_a1605669d491f38f76e0f32902a4b0ce7}} 
+\index{string\_tools::search\_it@{string\_tools::search\_it}!search\_it@{search\_it}}
+\index{search\_it@{search\_it}!string\_tools::search\_it@{string\_tools::search\_it}}
+\doxysubsubsection{\texorpdfstring{search\_it()}{search\_it()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily string\+\_\+tools\+::search\+\_\+it\+::search\+\_\+it (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
 
@@ -88,13 +116,25 @@ Search iterator for looping through all matches of a string s in t
 \mbox{\Hypertarget{structstring__tools_1_1search__it_af1edaa6e375d857575d012a55cdd4980}\label{structstring__tools_1_1search__it_af1edaa6e375d857575d012a55cdd4980}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!string\_tools::search\_it@{string\_tools::search\_it}}
-\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto string\+\_\+tools\+::search\+\_\+it\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1search__it_af1edaa6e375d857575d012a55cdd4980}\label{structstring__tools_1_1search__it_af1edaa6e375d857575d012a55cdd4980}} 
+\index{string\_tools::search\_it@{string\_tools::search\_it}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!string\_tools::search\_it@{string\_tools::search\_it}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily auto string\+\_\+tools\+::search\+\_\+it\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{structstring__tools_1_1search__it_ae3b12022612273c38ee27b30942ded0b}\label{structstring__tools_1_1search__it_ae3b12022612273c38ee27b30942ded0b}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!operator++@{operator++}}
 \index{operator++@{operator++}!string\_tools::search\_it@{string\_tools::search\_it}}
-\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void string\+\_\+tools\+::search\+\_\+it\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1search__it_ae3b12022612273c38ee27b30942ded0b}\label{structstring__tools_1_1search__it_ae3b12022612273c38ee27b30942ded0b}} 
+\index{string\_tools::search\_it@{string\_tools::search\_it}!operator++@{operator++}}
+\index{operator++@{operator++}!string\_tools::search\_it@{string\_tools::search\_it}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void string\+\_\+tools\+::search\+\_\+it\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -124,26 +164,27 @@ Search iterator for looping through all matches of a string s in t
 \doxysubsubsection{\texorpdfstring{o}{o}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} string\+\_\+tools\+::search\+\_\+it\+::o = 0}
 
-\mbox{\Hypertarget{structstring__tools_1_1search__it_a187978317937eb139741d9f64948adeb}\label{structstring__tools_1_1search__it_a187978317937eb139741d9f64948adeb}} 
+\mbox{\Hypertarget{structstring__tools_1_1search__it_a3e2ab355700aab9c01656f76e4dec132}\label{structstring__tools_1_1search__it_a3e2ab355700aab9c01656f76e4dec132}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!p@{p}}
 \index{p@{p}!string\_tools::search\_it@{string\_tools::search\_it}}
 \doxysubsubsection{\texorpdfstring{p}{p}}
-{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structll}{ll}}$>$ string\+\_\+tools\+::search\+\_\+it\+::p}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ string\+\_\+tools\+::search\+\_\+it\+::p}
 
-\mbox{\Hypertarget{structstring__tools_1_1search__it_adf1d8385f726abce3cd93b1217f51bbe}\label{structstring__tools_1_1search__it_adf1d8385f726abce3cd93b1217f51bbe}} 
+\mbox{\Hypertarget{structstring__tools_1_1search__it_a27c559aeb3162c49801b37724cd4312c}\label{structstring__tools_1_1search__it_a27c559aeb3162c49801b37724cd4312c}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!s@{s}}
 \index{s@{s}!string\_tools::search\_it@{string\_tools::search\_it}}
 \doxysubsubsection{\texorpdfstring{s}{s}}
-{\footnotesize\ttfamily const string string\+\_\+tools\+::search\+\_\+it\+::s}
+{\footnotesize\ttfamily string const string\+\_\+tools\+::search\+\_\+it\+::s}
 
-\mbox{\Hypertarget{structstring__tools_1_1search__it_af4f997651360785c26b02a9dc4825318}\label{structstring__tools_1_1search__it_af4f997651360785c26b02a9dc4825318}} 
+\mbox{\Hypertarget{structstring__tools_1_1search__it_a14e5ffebdd56dc850d3f567f7a2bcfea}\label{structstring__tools_1_1search__it_a14e5ffebdd56dc850d3f567f7a2bcfea}} 
 \index{string\_tools::search\_it@{string\_tools::search\_it}!t@{t}}
 \index{t@{t}!string\_tools::search\_it@{string\_tools::search\_it}}
 \doxysubsubsection{\texorpdfstring{t}{t}}
-{\footnotesize\ttfamily const string\& string\+\_\+tools\+::search\+\_\+it\+::t}
+{\footnotesize\ttfamily string const  \& string\+\_\+tools\+::search\+\_\+it\+::t}
 
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/src/utility/\mbox{\hyperlink{string_8hpp}{string.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/string/\mbox{\hyperlink{string_8hpp}{string.\+hpp}}\item 
+/home/ram/\+Omni\+Template/src/test/\mbox{\hyperlink{test__compiled_8cpp}{test\+\_\+compiled.\+cpp}}\end{DoxyCompactItemize}

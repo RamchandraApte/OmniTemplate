@@ -75,6 +75,10 @@
               using <a href="#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc-self">Node</a> = <a href="structsplay__tree_1_1SplayNode.html" class="m-doc">SplayNode</a>&lt;T&gt;
             </dt>
             <dd><span></span></dd>
+            <dt>
+              using <a href="#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a> = <a href="structsplay__tree_1_1SplayNode.html" class="m-doc">SplayNode</a>&lt;T&gt;
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-static-methods">
@@ -94,6 +98,20 @@
               <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const b) -&gt; <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">static void <a href="#ac6144f6ba3df06f3eb31da230d62a50b" class="m-doc">destroy</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const node)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <div class="m-doc-template">template&lt;bool i&gt;</div>
+              <span class="m-doc-wrap-bumper">static auto <a href="#ac3a1a0fa259a0f23787211fb94152acd" class="m-doc">extremum</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* x) -&gt; <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">static auto <a href="#a21a513a7ac2715f280d2a89b3890722a" class="m-doc">join</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const a,
+              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const b) -&gt; <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="typeless-methods">
@@ -105,6 +123,14 @@
             <dd><span></span></dd>
             <dt id="a04a5fff3d078c370872ba89bbc90b979">
               <span class="m-doc-wrap-bumper"><a href="#a04a5fff3d078c370872ba89bbc90b979" class="m-doc-self">~SplayTree</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#aa627e1ec6a9f5f62cb2aba123f47df0b" class="m-doc">SplayTree</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a04a5fff3d078c370872ba89bbc90b979" class="m-doc">~SplayTree</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -148,13 +174,49 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a45aa483490efb984be745d3847061eba" class="m-doc-self">end</a>(</span><span class="m-doc-wrap">) -&gt; <a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a></span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a80ab90fbd7be1405ae05399b0fc2f2f1" class="m-doc">insert</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const x)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a2bf075a9e6a46e3f9b61e7b00b546707" class="m-doc">insert</a>(</span><span class="m-doc-wrap">const T&amp; key)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a967e320e3d33cad8b0a9c30cd51ed924" class="m-doc">erase</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const x)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a3c4ae0ba499f4f13a60602ca082365fc" class="m-doc">erase</a>(</span><span class="m-doc-wrap">const T&amp; key)</span>
+            </dt>
+            <dd>Erases the node with key key from the splay tree.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a63ec7e70e6422bbf64cb0b2e1bf497a9" class="m-doc">find</a>(</span><span class="m-doc-wrap">const T&amp; key) -&gt; <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a9dc668b2583940705651fc11072d47da" class="m-doc">size</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
+            </dt>
+            <dd>Returns the number of nodes in the splay tree.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a91876a3a77e0f9c9c8550bf527a2f96f" class="m-doc">empty</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2f4c63a201ae3d63d08229382dcbfc67" class="m-doc">begin</a>(</span><span class="m-doc-wrap">) -&gt; <a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a45aa483490efb984be745d3847061eba" class="m-doc">end</a>(</span><span class="m-doc-wrap">) -&gt; <a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a></span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
             <dt>
-              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* <a href="#a673d3706c5c3e58495775af5aac944c9" class="m-doc">root</a>
+              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* <a href="#a43c37e09882abec66c0871d4a678ae45" class="m-doc">root</a>
             </dt>
             <dd></dd>
             <dt>
@@ -162,6 +224,19 @@
             </dt>
             <dd></dd>
           </dl>
+        </section>
+        <section>
+          <h2>Typedef documentation</h2>
+          <section class="m-doc-details" id="a7ebf6727cb412c312c2da10112ff4db4"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              using splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /><a href="#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc-self">Node</a> = <a href="structsplay__tree_1_1SplayNode.html" class="m-doc">SplayNode</a>&lt;T&gt;
+            </h3>
+            <p><span></span></p>
+          </div></section>
         </section>
         <section>
           <h2>Function documentation</h2>
@@ -185,6 +260,60 @@
             </h3>
             <p><span></span></p>
 <p>Return the extremum of the subtree x. Minimum if i is false, maximum if i is true.</p>
+          </div></section>
+          <section class="m-doc-details" id="ac6144f6ba3df06f3eb31da230d62a50b"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">static void splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac6144f6ba3df06f3eb31da230d62a50b" class="m-doc-self">destroy</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const node)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Destroy the subtree node</p>
+          </div></section>
+          <section class="m-doc-details" id="ac3a1a0fa259a0f23787211fb94152acd"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+                template&lt;bool i&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">static <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac3a1a0fa259a0f23787211fb94152acd" class="m-doc-self">extremum</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* x)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Return the extremum of the subtree x. Minimum if i is false, maximum if i is true.</p>
+          </div></section>
+          <section class="m-doc-details" id="a21a513a7ac2715f280d2a89b3890722a"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">static <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a21a513a7ac2715f280d2a89b3890722a" class="m-doc-self">join</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const a,
+              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const b)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="aa627e1ec6a9f5f62cb2aba123f47df0b"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa627e1ec6a9f5f62cb2aba123f47df0b" class="m-doc-self">SplayTree</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a04a5fff3d078c370872ba89bbc90b979"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a04a5fff3d078c370872ba89bbc90b979" class="m-doc-self">~SplayTree</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p><span></span></p>
           </div></section>
           <section class="m-doc-details" id="a80ab90fbd7be1405ae05399b0fc2f2f1"><div>
             <h3>
@@ -225,15 +354,108 @@
             </h3>
 <p>Returns node with key key</p>
           </div></section>
+          <section class="m-doc-details" id="a80ab90fbd7be1405ae05399b0fc2f2f1"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a80ab90fbd7be1405ae05399b0fc2f2f1" class="m-doc-self">insert</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const x)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Insert node x into the splay tree</p>
+          </div></section>
+          <section class="m-doc-details" id="a2bf075a9e6a46e3f9b61e7b00b546707"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2bf075a9e6a46e3f9b61e7b00b546707" class="m-doc-self">insert</a>(</span><span class="m-doc-wrap">const T&amp; key)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Insert key key into the splay tree</p>
+          </div></section>
+          <section class="m-doc-details" id="a967e320e3d33cad8b0a9c30cd51ed924"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a967e320e3d33cad8b0a9c30cd51ed924" class="m-doc-self">erase</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>*const x)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Erase node x from the splay tree</p>
+          </div></section>
+          <section class="m-doc-details" id="a3c4ae0ba499f4f13a60602ca082365fc"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3c4ae0ba499f4f13a60602ca082365fc" class="m-doc-self">erase</a>(</span><span class="m-doc-wrap">const T&amp; key)</span></span>
+            </h3>
+            <p>Erases the node with key key from the splay tree.</p>
+          </div></section>
+          <section class="m-doc-details" id="a63ec7e70e6422bbf64cb0b2e1bf497a9"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a63ec7e70e6422bbf64cb0b2e1bf497a9" class="m-doc-self">find</a>(</span><span class="m-doc-wrap">const T&amp; key)</span></span>
+            </h3>
+<p>Returns node with key key</p>
+          </div></section>
+          <section class="m-doc-details" id="a9dc668b2583940705651fc11072d47da"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9dc668b2583940705651fc11072d47da" class="m-doc-self">size</a>(</span><span class="m-doc-wrap">) const</span></span>
+            </h3>
+            <p>Returns the number of nodes in the splay tree.</p>
+          </div></section>
+          <section class="m-doc-details" id="a91876a3a77e0f9c9c8550bf527a2f96f"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">bool splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a91876a3a77e0f9c9c8550bf527a2f96f" class="m-doc-self">empty</a>(</span><span class="m-doc-wrap">) const</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a2f4c63a201ae3d63d08229382dcbfc67"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a> splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2f4c63a201ae3d63d08229382dcbfc67" class="m-doc-self">begin</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a45aa483490efb984be745d3847061eba"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a> splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a45aa483490efb984be745d3847061eba" class="m-doc-self">end</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
         </section>
         <section>
           <h2>Variable documentation</h2>
-          <section class="m-doc-details" id="a673d3706c5c3e58495775af5aac944c9"><div>
+          <section class="m-doc-details" id="a43c37e09882abec66c0871d4a678ae45"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;typename T&gt;
               </div>
-              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /><a href="#a673d3706c5c3e58495775af5aac944c9" class="m-doc-self">root</a>
+              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* splay_tree::<wbr />SplayTree&lt;T&gt;::<wbr /><a href="#a43c37e09882abec66c0871d4a678ae45" class="m-doc-self">root</a>
             </h3>
 <p>Root node</p>
           </div></section>
@@ -291,7 +513,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

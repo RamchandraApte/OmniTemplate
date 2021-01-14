@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structutility_1_1fix" kind="struct" language="C++" prot="public">
     <compoundname>utility::fix</compoundname>
     <includes refid="utility_8hpp" local="no">utility.hpp</includes>
@@ -21,7 +21,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="14" column="6" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="14" bodyend="-1"/>
-        <referencedby refid="structutility_1_1fix_1a93b091b536b383499aaf376d12f92fa7" compoundref="utility_8hpp" startline="16" endline="16">utility::fix&lt; Func &gt;::operator()</referencedby>
+        <referencedby refid="structutility_1_1fix_1a93b091b536b383499aaf376d12f92fa7" compoundref="utility_8hpp" startline="16" endline="18">utility::fix&lt; Func &gt;::operator()</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -64,19 +64,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="16" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="16" bodyend="16"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="16" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="16" bodyend="18"/>
         <references refid="structutility_1_1fix_1a3afbbbf98d76d3123362956f5b586940" compoundref="utility_8hpp" startline="14">utility::fix&lt; Func &gt;::func</references>
+      </memberdef>
+      <memberdef kind="function" id="structutility_1_1fix_1a0dc72e4b470b6c975318e9127706510f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>utility::fix&lt; Func &gt;::fix</definition>
+        <argsstring>(const Func &amp;func_)</argsstring>
+        <name>fix</name>
+        <param>
+          <type>const Func &amp;</type>
+          <declname>func_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="448" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="448" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="structutility_1_1fix_1a93b091b536b383499aaf376d12f92fa7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) utility::fix&lt; Func &gt;::operator()</definition>
+        <argsstring>(Args &amp;&amp;... args) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="449" column="22" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="449" bodyend="451"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. </para>
     </briefdescription>
     <detaileddescription>
-<para>Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. </para>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="13" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="13" bodyend="17"/>
+    <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="13" column="12" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="13" bodyend="19"/>
     <listofallmembers>
       <member refid="structutility_1_1fix_1a0dc72e4b470b6c975318e9127706510f" prot="public" virt="non-virtual"><scope>utility::fix</scope><name>fix</name></member>
+      <member refid="structutility_1_1fix_1a0dc72e4b470b6c975318e9127706510f" prot="public" virt="non-virtual"><scope>utility::fix</scope><name>fix</name></member>
       <member refid="structutility_1_1fix_1a3afbbbf98d76d3123362956f5b586940" prot="public" virt="non-virtual"><scope>utility::fix</scope><name>func</name></member>
+      <member refid="structutility_1_1fix_1a93b091b536b383499aaf376d12f92fa7" prot="public" virt="non-virtual"><scope>utility::fix</scope><name>operator()</name></member>
       <member refid="structutility_1_1fix_1a93b091b536b383499aaf376d12f92fa7" prot="public" virt="non-virtual"><scope>utility::fix</scope><name>operator()</name></member>
     </listofallmembers>
   </compounddef>

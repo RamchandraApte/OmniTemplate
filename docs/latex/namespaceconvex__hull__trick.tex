@@ -13,13 +13,13 @@ struct \mbox{\hyperlink{structconvex__hull__trick_1_1CHT}{C\+HT}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-auto \mbox{\hyperlink{namespaceconvex__hull__trick_a884b15c6042069f32e237941b4047536}{dot}} (\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_a884b15c6042069f32e237941b4047536}{dot}} (\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&b)
 \item 
-auto \mbox{\hyperlink{namespaceconvex__hull__trick_a4f9b285a0e38652eb9839ac60b39e34a}{wedge}} (\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_a4f9b285a0e38652eb9839ac60b39e34a}{wedge}} (\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&a, \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&b)
 \item 
-auto \mbox{\hyperlink{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf}{area}} (const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
+auto \mbox{\hyperlink{namespaceconvex__hull__trick_abeaee6745d46728e8edf0f80a1e92ddf}{area}} (const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \item 
-bool \mbox{\hyperlink{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5}{ccw}} (const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
+bool \mbox{\hyperlink{namespaceconvex__hull__trick_a09a415224250703a38ef6bd668e1cac5}{ccw}} (const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&a, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&b, const \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} \&c)
 \begin{DoxyCompactList}\small\item\em Returns whether moving through $a \rightarrow b \rightarrow c$ is counterclockwise. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{namespaceconvex__hull__trick_aa194f52c547fd3298f72caf6371a23ed}{hull}} (vector$<$ \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$ v, bool do\+\_\+sort=true)
 \item 
@@ -96,6 +96,10 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Range , typename Func $>$ \\
 auto convex\+\_\+hull\+\_\+trick\+::convex\+\_\+min (\begin{DoxyParamCaption}\item[{const Range \&}]{r,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
 
+Returns x in Range r that minimizes the value of a convex function f(x).
+
+Returns x in Range r that minimizes the value of a convex function f(x).
+
 Returns x in Range r that minimizes the value of a convex function f(x).Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -109,6 +113,10 @@ Returns x in Range r that minimizes the value of a convex function f(x).Here is 
 \doxysubsubsection{\texorpdfstring{dot()}{dot()}}
 {\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
 
+returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$
+
+returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$
+
 returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -121,6 +129,10 @@ returns the dot product of 2D vectors a and b, i.\+e. $a \cdot b$Here is the cal
 \index{hull@{hull}!convex\_hull\_trick@{convex\_hull\_trick}}
 \doxysubsubsection{\texorpdfstring{hull()}{hull()}}
 {\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::hull (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} $>$}]{v,  }\item[{bool}]{do\+\_\+sort = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Returns the convex hull of the points in v
+
+Returns the convex hull of the points in v
 
 Returns the convex hull of the points in vHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -141,6 +153,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{wedge@{wedge}!convex\_hull\_trick@{convex\_hull\_trick}}
 \doxysubsubsection{\texorpdfstring{wedge()}{wedge()}}
 {\footnotesize\ttfamily auto convex\+\_\+hull\+\_\+trick\+::wedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{a,  }\item[{\mbox{\hyperlink{core_2all_8hpp_ae6bbe80dfafc6e30f518f3de1cafec50}{point}} const \&}]{b }\end{DoxyParamCaption})}
+
+Returns the wedge product of 2D vectors a and b, $a \wedge b$. This is the signed area of the parallelogram spanned by vectors $\vec{a}$ and $\vec{b}$.
+
+Returns the wedge product of 2D vectors a and b, $a \wedge b$. This is the signed area of the parallelogram spanned by vectors $\vec{a}$ and $\vec{b}$.
 
 Returns the wedge product of 2D vectors a and b, $a \wedge b$. This is the signed area of the parallelogram spanned by vectors $\vec{a}$ and $\vec{b}$.Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

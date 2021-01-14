@@ -68,6 +68,10 @@
               <span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-flat m-info">explicit</span> </span>
             </dt>
             <dd>Construct a dsu with n elements.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd>Construct a dsu with n elements.</dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -82,17 +86,26 @@
               <a href="structll.html" class="m-doc">ll</a> y) -&gt; bool</span>
             </dt>
             <dd>Joins the set containing x with the set containing y.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
+            </dt>
+            <dd>Returns the representative element of x.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a11446b57ae0bf69361258cb4ee2fd212" class="m-doc">join</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x,
+              <a href="structll.html" class="m-doc">ll</a> y) -&gt; bool</span>
+            </dt>
+            <dd>Joins the set containing x with the set containing y.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="a7ef7cd6ab6ec798033dadfb372e05e17">
-              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a7ef7cd6ab6ec798033dadfb372e05e17" class="m-doc-self">parent</a>
+            <dt id="a3d0a7cd63b9c90f5a19a03f7f2abb6d8">
+              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a3d0a7cd63b9c90f5a19a03f7f2abb6d8" class="m-doc-self">parent</a>
             </dt>
             <dd>The parent of each element.</dd>
             <dt>
-              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#ad4fe417b29f22c83906ca9a97b3b2d6a" class="m-doc">size_</a>
+              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a2e6386657bcc35b96faf72d4bc87f933" class="m-doc">size_</a>
             </dt>
             <dd></dd>
           </dl>
@@ -102,6 +115,14 @@
           <section class="m-doc-details" id="ada73da3392d6444f9b29d60669f3c762"><div>
             <h3>
               <span class="m-doc-wrap-bumper"> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc-self">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-info">explicit</span> </span></span>
+            </h3>
+            <p>Construct a dsu with n elements.</p>
+<p>Initially each element is in its own set.</p>
+          </div></section>
+          <section class="m-doc-details" id="ada73da3392d6444f9b29d60669f3c762"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ada73da3392d6444f9b29d60669f3c762" class="m-doc-self">dsu</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> n) <span class="m-label m-info">explicit</span> </span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
             </h3>
             <p>Construct a dsu with n elements.</p>
 <p>Initially each element is in its own set.</p>
@@ -121,12 +142,35 @@
               </tfoot>
             </table>
           </div></section>
+          <section class="m-doc-details" id="a5a58bd229ccd7eac0892b762d178981c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5a58bd229ccd7eac0892b762d178981c" class="m-doc-self">find</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) const</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p>Returns the representative element of x.</p>
+          </div></section>
+          <section class="m-doc-details" id="a11446b57ae0bf69361258cb4ee2fd212"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool dsu_ds::<wbr />dsu::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a11446b57ae0bf69361258cb4ee2fd212" class="m-doc-self">join</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x,
+              <a href="structll.html" class="m-doc">ll</a> y)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p>Joins the set containing x with the set containing y.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>true if the set containing x is different from the set containing y. Returns false otherwise, since nothing is done.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
         </section>
         <section>
           <h2>Variable documentation</h2>
-          <section class="m-doc-details" id="ad4fe417b29f22c83906ca9a97b3b2d6a"><div>
+          <section class="m-doc-details" id="a2e6386657bcc35b96faf72d4bc87f933"><div>
             <h3>
-              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; dsu_ds::<wbr />dsu::<wbr /><a href="#ad4fe417b29f22c83906ca9a97b3b2d6a" class="m-doc-self">size_</a>
+              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; dsu_ds::<wbr />dsu::<wbr /><a href="#a2e6386657bcc35b96faf72d4bc87f933" class="m-doc-self">size_</a>
             </h3>
 <p>Size of set of representative element idx</p>
           </div></section>
@@ -175,7 +219,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

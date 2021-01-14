@@ -1,7 +1,8 @@
 \hypertarget{operations_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/core/operations.hpp File Reference}
 \label{operations_8hpp}\index{/home/ram/OmniTemplate/src/core/operations.hpp@{/home/ram/OmniTemplate/src/core/operations.hpp}}
 {\ttfamily \#include \char`\"{}range.\+hpp\char`\"{}}\newline
-Include dependency graph for operations.\+hpp\+:\nopagebreak
+Include dependency graph for operations.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,77 +17,68 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{operations_8hpp__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structMax}{Max}}
-\item 
-struct \mbox{\hyperlink{structMin}{Min}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{operations_8hpp_a2e3fb564092d70d9bee87555035d8711}{aug}}(op)
 \item 
-\#define \mbox{\hyperlink{operations_8hpp_afcd538daef660984ecb8abf34697904b}{ret}}(x,  id)
-\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{operations_8hpp_aef20301df3ed18a53843fb3a5b69bd5b}{F\+U\+N\+C\+T\+OR}}(func)
+\begin{DoxyCompactList}\small\item\em Expands to a functor type that calls func. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}{bin\+\_\+op}} = T($\ast$)(T, T)
+using \mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}} = struct \{ template$<$ typename... Ts $>$ decltype(auto) operator()(Ts \&\&... args) const \{ return(max)(forward$<$ decltype(args)$>$(args)...)
+\item 
+using \mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}} = struct \{ template$<$ typename... Ts $>$ decltype(auto) operator()(Ts \&\&... args) const \{ return(min)(forward$<$ decltype(args)$>$(args)...)
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a141476c36a8f609ac7c776be162abb92}{operator+=}} (T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a141476c36a8f609ac7c776be162abb92}{operator+=}} (T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a566f5b78944cfa1ff2b470ecd0522ce1}{operator-\/=}} (T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a566f5b78944cfa1ff2b470ecd0522ce1}{operator-\/=}} (T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ac66e5f2d4fb3a7d5076a44e419736713}{operator$\ast$=}} (T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ac66e5f2d4fb3a7d5076a44e419736713}{operator$\ast$=}} (T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a35c5f7ec97de94c93f2301e16d3f7efa}{operator/=}} (T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a35c5f7ec97de94c93f2301e16d3f7efa}{operator/=}} (T1 \&a, const T2 \&b)
 \item 
 {\footnotesize template$<$typename T $>$ }\\enable\+\_\+if\+\_\+t$<$ is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$, T $>$ \mbox{\hyperlink{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d}{invert}} (multiplies$<$$>$, const T \&x)
 \item 
-{\footnotesize template$<$typename Group $>$ }\\Group \mbox{\hyperlink{operations_8hpp_ae9e59a2d15287021fd21d14d2eb206c4}{operator/}} (Group const \&a, Group const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename Group $>$ }\\Group \mbox{\hyperlink{operations_8hpp_ae9e59a2d15287021fd21d14d2eb206c4}{operator/}} (Group const \&a, Group const \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{operations_8hpp_ab6822e2f5527212c7db6dd31be7f3ba6}{operator-\/}} (const T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{operations_8hpp_ab6822e2f5527212c7db6dd31be7f3ba6}{operator-\/}} (const T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{operations_8hpp_a98ed0803268ba29fcc8977206b177923}{operator!=}} (const T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{operations_8hpp_a98ed0803268ba29fcc8977206b177923}{operator!=}} (const T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a1297749985d820e08c6c88a285dc80eb}{operator$<$=}} (const T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a1297749985d820e08c6c88a285dc80eb}{operator$<$=}} (const T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ae3edbf9ffcbf3c8b40d15f6666442cef}{operator$>$=}} (const T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ae3edbf9ffcbf3c8b40d15f6666442cef}{operator$>$=}} (const T1 \&a, const T2 \&b)
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ad8f1353b1f5665443a78d860006e9920}{operator$>$}} (const T1 \&a, const T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\auto \mbox{\hyperlink{operations_8hpp_ad8f1353b1f5665443a78d860006e9920}{operator$>$}} (const T1 \&a, const T2 \&b)
 \item 
-unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{operations_8hpp_a239c272472acf3f9ce7f2e44f0895160}{operator+}} (unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ a, unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{operations_8hpp_a239c272472acf3f9ce7f2e44f0895160}{operator+}} (unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ a, unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ const \&b)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a8acbbd6e305005c27020dfb9bbe27d5a}{operator$\vert$}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a8acbbd6e305005c27020dfb9bbe27d5a}{operator$\vert$}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&b)
 \begin{DoxyCompactList}\small\item\em Returns union of sets a and b. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a9e98ecb7739ca6a5c0069a9a26d2a731}{operator\&}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a9e98ecb7739ca6a5c0069a9a26d2a731}{operator\&}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&b)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a17c44ba56ddae051a9fdf806cab4bb7b}{sub\+\_\+set}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}, unordered\+\_\+set$<$ T $>$ \&\mbox{\hyperlink{operations_8hpp_afcd538daef660984ecb8abf34697904b}{ret}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a17c44ba56ddae051a9fdf806cab4bb7b}{sub\+\_\+set}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&b, unordered\+\_\+set$<$ T $>$ \&ret)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_af237204859d16b6fadb92d576c7b33b1}{operator-\/}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_af237204859d16b6fadb92d576c7b33b1}{operator-\/}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&b)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a278d4d0450b96c1926a34fe49f29d602}{operator$^\wedge$}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a278d4d0450b96c1926a34fe49f29d602}{operator$^\wedge$}} (unordered\+\_\+set$<$ T $>$ const \&a, unordered\+\_\+set$<$ T $>$ const \&b)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a7fcf9006b0b6d5ce6b426ac6dea3b567}{operator$\ast$}} (vector$<$ T $>$ a, vector$<$ T $>$ \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{operations_8hpp_a7fcf9006b0b6d5ce6b426ac6dea3b567}{operator$\ast$}} (vector$<$ T $>$ a, vector$<$ T $>$ b)
 \item 
 {\footnotesize template$<$typename Iterator $>$ }\\auto \mbox{\hyperlink{operations_8hpp_af877591533298d5fba3df85680cabb60}{operator+}} (Iterator it, enable\+\_\+if\+\_\+t$<$!is\+\_\+same$<$ typename iterator\+\_\+traits$<$ decltype(it)$>$\+::iterator\+\_\+category, random\+\_\+access\+\_\+iterator\+\_\+tag $>$\+::value, \mbox{\hyperlink{structll}{ll}} $>$ n)
-\item 
-constexpr \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_ac969ae49524a67aba9be0f061955ef23}{identity}} (\mbox{\hyperlink{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}{bin\+\_\+op}}$<$ \mbox{\hyperlink{structll}{ll}} const \& $>$ const \&f)
-\item 
-constexpr \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a1927210d55cc1384803f4a609d7174ee}{identity}} (\mbox{\hyperlink{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}{bin\+\_\+op}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&f)
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a09af32a8d21cf0ca5017ce40502a2a09}{identity}} (plus$<$$>$, \mbox{\hyperlink{structll}{ll}})
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_acc5a0ae67ef6a3bd347c85cab4a15313}{identity}} (multiplies$<$$>$, \mbox{\hyperlink{structll}{ll}})
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}{identity}} (\mbox{\hyperlink{structMax}{Max}}, \mbox{\hyperlink{structll}{ll}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}{identity}} (\mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}}, \mbox{\hyperlink{structll}{ll}})
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}{identity}} (\mbox{\hyperlink{structMin}{Min}}, \mbox{\hyperlink{structll}{ll}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}{identity}} (\mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}}, \mbox{\hyperlink{structll}{ll}})
 \end{DoxyCompactItemize}
 
 
@@ -99,72 +91,70 @@ constexpr \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a1927
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keyword}{template} <\textcolor{keyword}{typename} T1, \textcolor{keyword}{typename} T2>                                    \(\backslash\)}
-\DoxyCodeLine{    auto \textcolor{keyword}{operator} op\#\#=(T1 \&a, \textcolor{keyword}{const} T2 \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}) \{                              \(\backslash\)}
-\DoxyCodeLine{        return a = a op \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}};                                             \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keyword}{template} <\textcolor{keyword}{typename} T1, \textcolor{keyword}{typename} T2> \textcolor{keyword}{auto} \textcolor{keyword}{operator} op\#\#=(T1 \&a, \textcolor{keyword}{const} T2 \&b) \{              \(\backslash\)}
+\DoxyCodeLine{        return a = a op b;                                                                 \(\backslash\)}
 \DoxyCodeLine{    \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{operations_8hpp_afcd538daef660984ecb8abf34697904b}\label{operations_8hpp_afcd538daef660984ecb8abf34697904b}} 
-\index{operations.hpp@{operations.hpp}!ret@{ret}}
-\index{ret@{ret}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{ret}{ret}}
-{\footnotesize\ttfamily \#define ret(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{operations_8hpp_aef20301df3ed18a53843fb3a5b69bd5b}\label{operations_8hpp_aef20301df3ed18a53843fb3a5b69bd5b}} 
+\index{operations.hpp@{operations.hpp}!FUNCTOR@{FUNCTOR}}
+\index{FUNCTOR@{FUNCTOR}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{FUNCTOR}{FUNCTOR}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{if} (f == \textcolor{keyword}{static\_cast<}decltype(f)\textcolor{keyword}{>}(x)) \{                                \(\backslash\)}
-\DoxyCodeLine{        return id;                                                     \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keyword}{struct }\{                                                                                   \(\backslash\)}
+\DoxyCodeLine{        template <\textcolor{keyword}{typename}... Ts> decltype(\textcolor{keyword}{auto}) operator()(Ts \&\&... args)\textcolor{keyword}{ const }\{         \(\backslash\)}
+\DoxyCodeLine{            return (func)(forward<decltype(args)>(args)...);                           \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                  \(\backslash\)}
 \DoxyCodeLine{    \}}
 
 \end{DoxyCode}
 
 
+Expands to a functor type that calls func. 
+
+
+
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}\label{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}} 
-\index{operations.hpp@{operations.hpp}!bin\_op@{bin\_op}}
-\index{bin\_op@{bin\_op}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{bin\_op}{bin\_op}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-using \mbox{\hyperlink{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}{bin\+\_\+op}} =  T ($\ast$)(T, T)}
+\mbox{\Hypertarget{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}\label{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}} 
+\index{operations.hpp@{operations.hpp}!Max@{Max}}
+\index{Max@{Max}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{Max}{Max}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}} =  struct \{ template $<$typename... Ts$>$ decltype(auto) operator()(Ts \&\&... args) const \{ return ( max )(forward$<$decltype(args)$>$(args)...)}
+
+\mbox{\Hypertarget{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}\label{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}} 
+\index{operations.hpp@{operations.hpp}!Min@{Min}}
+\index{Min@{Min}!operations.hpp@{operations.hpp}}
+\doxysubsubsection{\texorpdfstring{Min}{Min}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}} =  struct \{ template $<$typename... Ts$>$ decltype(auto) operator()(Ts \&\&... args) const \{ return ( min )(forward$<$decltype(args)$>$(args)...)}
 
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{operations_8hpp_a1927210d55cc1384803f4a609d7174ee}\label{operations_8hpp_a1927210d55cc1384803f4a609d7174ee}} 
-\index{operations.hpp@{operations.hpp}!identity@{identity}}
-\index{identity@{identity}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
-{\footnotesize\ttfamily constexpr \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}{bin\+\_\+op}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
-
-\mbox{\Hypertarget{operations_8hpp_ac969ae49524a67aba9be0f061955ef23}\label{operations_8hpp_ac969ae49524a67aba9be0f061955ef23}} 
-\index{operations.hpp@{operations.hpp}!identity@{identity}}
-\index{identity@{identity}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
-{\footnotesize\ttfamily constexpr \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{operations_8hpp_a64c6323262b07d406b77207ebe2d87b5}{bin\+\_\+op}}$<$ \mbox{\hyperlink{structll}{ll}} const \& $>$ const \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
-
 \mbox{\Hypertarget{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}\label{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMax}{Max}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}\label{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMin}{Min}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_acc5a0ae67ef6a3bd347c85cab4a15313}\label{operations_8hpp_acc5a0ae67ef6a3bd347c85cab4a15313}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{multiplies$<$$>$}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_a09af32a8d21cf0ca5017ce40502a2a09}\label{operations_8hpp_a09af32a8d21cf0ca5017ce40502a2a09}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{plus$<$$>$}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d}\label{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d}} 

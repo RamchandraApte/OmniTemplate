@@ -1,6 +1,7 @@
 \hypertarget{biconnected_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/graph/biconnected.hpp File Reference}
 \label{biconnected_8hpp}\index{/home/ram/OmniTemplate/src/graph/biconnected.hpp@{/home/ram/OmniTemplate/src/graph/biconnected.hpp}}
 {\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graph/core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}test\+\_\+biconnected.\+hpp\char`\"{}}\newline
 Include dependency graph for biconnected.\+hpp\+:\nopagebreak
 \begin{figure}[H]
@@ -9,8 +10,7 @@ Include dependency graph for biconnected.\+hpp\+:\nopagebreak
 \includegraphics[width=350pt]{biconnected_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +20,11 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-pair$<$ vector$<$ char $>$, vector$<$ array$<$ \mbox{\hyperlink{structll}{ll}}, 2 $>$ $>$ $>$ \mbox{\hyperlink{biconnected_8hpp_a72476443ae31ddf840e52f4a47f79055}{biconnected}} (const Graph\+Adj \&graph)
+pair$<$ vector$<$ char $>$, vector$<$ array$<$ \mbox{\hyperlink{structll}{ll}}, 2 $>$ $>$ $>$ \mbox{\hyperlink{biconnected_8hpp_a72476443ae31ddf840e52f4a47f79055}{biconnected}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph)
 \item 
-vector$<$ vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$ $>$ \mbox{\hyperlink{biconnected_8hpp_a6b3f22cd584c5d8be1de2703c3b9e004}{ear\+\_\+decomp}} (const Graph\+Adj \&graph)
+vector$<$ vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$ $>$ \mbox{\hyperlink{biconnected_8hpp_a6b3f22cd584c5d8be1de2703c3b9e004}{ear\+\_\+decomp}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph)
 \begin{DoxyCompactList}\small\item\em Returns ear decomposition of graph. \end{DoxyCompactList}\item 
-pair$<$ vector$<$ char $>$, vector$<$ array$<$ \mbox{\hyperlink{structll}{ll}}, 2 $>$ $>$ $>$ \mbox{\hyperlink{biconnected_8hpp_a789f23d7fc22d09960694892eeb41223}{biconnected\+\_\+ear}} (Graph\+Adj graph)
+pair$<$ vector$<$ char $>$, vector$<$ array$<$ \mbox{\hyperlink{structll}{ll}}, 2 $>$ $>$ $>$ \mbox{\hyperlink{biconnected_8hpp_a789f23d7fc22d09960694892eeb41223}{biconnected\+\_\+ear}} (\mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} graph)
 \begin{DoxyCompactList}\small\item\em Finds biconnected components of graph using ear decompositions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -33,16 +33,13 @@ pair$<$ vector$<$ char $>$, vector$<$ array$<$ \mbox{\hyperlink{structll}{ll}}, 
 \index{biconnected.hpp@{biconnected.hpp}!biconnected@{biconnected}}
 \index{biconnected@{biconnected}!biconnected.hpp@{biconnected.hpp}}
 \doxysubsubsection{\texorpdfstring{biconnected()}{biconnected()}}
-{\footnotesize\ttfamily pair$<$vector$<$char$>$, vector$<$array$<$\mbox{\hyperlink{structll}{ll}}, 2$>$ $>$ $>$ biconnected (\begin{DoxyParamCaption}\item[{const Graph\+Adj \&}]{graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily pair$<$vector$<$char$>$, vector$<$array$<$\mbox{\hyperlink{structll}{ll}}, 2$>$ $>$ $>$ biconnected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&}]{graph }\end{DoxyParamCaption})}
 
 Returns articulation points and bridges of
 \begin{DoxyParams}{Parameters}
 {\em graph.} & \\
 \hline
 \end{DoxyParams}
-\begin{DoxyPrecond}{Precondition}
-graph must be connected 
-\end{DoxyPrecond}
 \begin{DoxyReturn}{Returns}
 pair of a vector with 1s for all the articulation points and a vector of bridge edges 
 \end{DoxyReturn}
@@ -50,7 +47,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=298pt]{biconnected_8hpp_a72476443ae31ddf840e52f4a47f79055_cgraph}
+\includegraphics[width=278pt]{biconnected_8hpp_a72476443ae31ddf840e52f4a47f79055_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -64,18 +61,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{biconnected.hpp@{biconnected.hpp}!biconnected\_ear@{biconnected\_ear}}
 \index{biconnected\_ear@{biconnected\_ear}!biconnected.hpp@{biconnected.hpp}}
 \doxysubsubsection{\texorpdfstring{biconnected\_ear()}{biconnected\_ear()}}
-{\footnotesize\ttfamily pair$<$vector$<$char$>$, vector$<$array$<$\mbox{\hyperlink{structll}{ll}}, 2$>$ $>$ $>$ biconnected\+\_\+ear (\begin{DoxyParamCaption}\item[{Graph\+Adj}]{graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily pair$<$vector$<$char$>$, vector$<$array$<$\mbox{\hyperlink{structll}{ll}}, 2$>$ $>$ $>$ biconnected\+\_\+ear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}}}]{graph }\end{DoxyParamCaption})}
 
 
 
 Finds biconnected components of graph using ear decompositions. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{biconnected_8hpp_a789f23d7fc22d09960694892eeb41223_cgraph}
+\includegraphics[width=344pt]{biconnected_8hpp_a789f23d7fc22d09960694892eeb41223_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -89,7 +85,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{biconnected.hpp@{biconnected.hpp}!ear\_decomp@{ear\_decomp}}
 \index{ear\_decomp@{ear\_decomp}!biconnected.hpp@{biconnected.hpp}}
 \doxysubsubsection{\texorpdfstring{ear\_decomp()}{ear\_decomp()}}
-{\footnotesize\ttfamily vector$<$vector$<$vector$<$\mbox{\hyperlink{structll}{ll}}$>$ $>$ $>$ ear\+\_\+decomp (\begin{DoxyParamCaption}\item[{const Graph\+Adj \&}]{graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$vector$<$vector$<$\mbox{\hyperlink{structll}{ll}}$>$ $>$ $>$ ear\+\_\+decomp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&}]{graph }\end{DoxyParamCaption})}
 
 
 
@@ -100,13 +96,6 @@ Returns ear decomposition of graph.
 {\em graph} & the graph as an adjacency list \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=299pt]{biconnected_8hpp_a6b3f22cd584c5d8be1de2703c3b9e004_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

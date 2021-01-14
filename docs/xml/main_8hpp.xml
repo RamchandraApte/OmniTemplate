@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="main_8hpp" kind="file" language="C++">
     <compoundname>main.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
     <includes refid="time_8hpp" local="yes">time.hpp</includes>
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="test_8cpp" local="yes">/home/ram/OmniTemplate/src/test/test.cpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>bits/stdc++.h</label>
@@ -18,10 +19,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -38,11 +39,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -50,19 +51,19 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -73,12 +74,12 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -90,33 +91,17 @@
       <node id="2">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
         <link refid="main_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" prot="public" static="no" mutable="no">
-        <type>auto &amp;</type>
-        <definition>auto&amp; in</definition>
-        <argsstring></argsstring>
-        <name>in</name>
-        <initializer>= cin</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="10" column="6" bodyfile="/home/ram/OmniTemplate/src/core/main.hpp" bodystart="10" bodyend="-1"/>
-        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
-      </memberdef>
-      </sectiondef>
+    <innerclass refid="structset__multitest" prot="public">set_multitest</innerclass>
       <sectiondef kind="func">
       <memberdef kind="function" id="main_8hpp_1af095a232149097b5605064623a9345ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -129,9 +114,32 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="4" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test.cpp" bodystart="52" bodyend="52" declfile="/home/ram/OmniTemplate/src/core/main.hpp" declline="4" declcolumn="6"/>
-        <references refid="test_8cpp_1aa1c715cac916839a95e25b65b4071c4a" compoundref="test_8cpp" startline="26" endline="51">test_all</references>
-        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="8" column="13" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="4496" bodyend="4525" declfile="/home/ram/OmniTemplate/src/core/main.hpp" declline="8" declcolumn="13"/>
+        <references refid="test__bit_8hpp_1af86f570cf0a5201c700ffeec06aec7f6" compoundref="test__bit_8hpp" startline="3" endline="16">test_bit</references>
+        <references refid="namespacecombinatorics_1_1test_1a28cd50807d464588cc9b5add7bed4f97" compoundref="test__combinatorics_8hpp" startline="28" endline="32">combinatorics::test::test_combinatorics</references>
+        <references refid="namespacecoroutine_1_1test_1a22ebde81203b27ead34dd1fcc2afdbfc" compoundref="test__compiled_8cpp" startline="4439" endline="4449">coroutine::test::test_coroutine</references>
+        <references refid="namespaceutility_1_1test_1aa1aed4e58acebcfd6d9150b64f4ad975" compoundref="test__utility_8hpp" startline="50" endline="59">utility::test::test_counting_sort</references>
+        <references refid="namespacestring__tools_1_1test_1a5165ff514ae968de6c81aedd2ce599ab" compoundref="test__dict__search_8hpp" startline="37" endline="40">string_tools::test::test_dict_search</references>
+        <references refid="namespacedsu__ds_1_1test_1adafe4323a317f827a39c3516cf6d792b" compoundref="test__dsu_8hpp" startline="4" endline="16">dsu_ds::test::test_dsu</references>
+        <references refid="namespaceconvex__hull__trick_1_1test_1a05eb98d10b7444bbdc9fe64f4d99676a" compoundref="test__cht_8hpp" startline="59" endline="67">convex_hull_trick::test::test_geometry</references>
+        <references refid="namespacegraph__draw_1_1test_1a037737d6386f4405a42dc842eb4d7436" compoundref="test__compiled_8cpp" startline="4481" endline="4490">graph_draw::test::test_graph_draw</references>
+        <references refid="namespacegraph__theory_1_1test_1a147e0cf4f86928e4e422c6b9198a2371" compoundref="test__all_8hpp" startline="73" endline="87">graph_theory::test::test_graph_theory</references>
+        <references refid="namespacehld_1_1test_1a2c2ea10aedda3e4e51f08d38ea3fa3f0" compoundref="test__hld_8hpp" startline="4" endline="27">hld::test::test_hld</references>
+        <references refid="namespacelinear__algebra_1_1test_1aec6af708eda9aa2982dcba2a651f4bf9" compoundref="test__linear__algebra_8hpp" startline="27" endline="32">linear_algebra::test::test_linear_algebra</references>
+        <references refid="namespacelink__cut_1_1test_1ad63bee2821de932f5d295238e48d106f" compoundref="test__link__cut_8hpp" startline="3" endline="48">link_cut::test::test_link_cut_tree</references>
+        <references refid="namespacemodulo__namespace_1_1test_1a1574d4c610506ea86664c88fc549aedf" compoundref="test__modulo_8hpp" startline="16" endline="19">modulo_namespace::test::test_modulo</references>
+        <references refid="test__number__theory_8hpp_1aed36f6b8b9706133e9b5302b1618e9ef" compoundref="test__number__theory_8hpp" startline="70" endline="79">test_number_theory</references>
+        <references refid="namespacepermutation_1_1test_1a35c04b3a3683be26d7eb0723d772fad4" compoundref="test__permutation_8hpp" startline="25" endline="29">permutation::test::test_permutation</references>
+        <references refid="namespacepolynomial__ns_1_1test_1a5ed51dd96ea5d0597e0c721fb647bfcc" compoundref="test__polynomial_8hpp" startline="3" endline="19">polynomial_ns::test::test_polynomial</references>
+        <references refid="namespacequeue__tools_1_1test_1ae0e3be2c757c8f50b8baee654071b01e" compoundref="test__queue_8hpp" startline="55" endline="59">queue_tools::test::test_queue</references>
+        <references refid="namespacesat2_1_1test_1a39c93d63732b7216ede171b3589de7f2" compoundref="test__2sat_8hpp" startline="4" endline="16">sat2::test::test_sat2</references>
+        <references refid="namespacesegment__tree_1_1test_1a9d9bbf8a59763caf631ceb0808e1b105" compoundref="test__segment__tree_8hpp" startline="66" endline="80">segment_tree::test::test_segment_tree</references>
+        <references refid="namespacesparse__table_1_1test_1ad6ec7466ef06bcb50a79ee26c4a05db0" compoundref="test__sparse__table_8hpp" startline="17" endline="23">sparse_table::test::test_sparse_table</references>
+        <references refid="namespacesplay__tree_1_1test_1a5aa5fd954b1cb0fb099a2310d2801e9e" compoundref="test__splay__tree_8hpp" startline="4" endline="33">splay_tree::test::test_splay_tree</references>
+        <references refid="namespacestring__tools_1_1test_1a93443a5be0ecc44e9264ce39390c8441" compoundref="test__string_8hpp" startline="24" endline="27">string_tools::test::test_string</references>
+        <references refid="namespacestring__tools_1_1test_1a81ed0421a8991a10c16c1fdaa0cf8cf6" compoundref="test__suffix__array_8hpp" startline="25" endline="35">string_tools::test::test_suffix_array</references>
+        <references refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" compoundref="test__utility_8hpp" startline="60" endline="68">utility::test::test_utility</references>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="9" endline="36">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -153,12 +161,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="12" column="5" bodyfile="/home/ram/OmniTemplate/src/core/main.hpp" bodystart="12" bodyend="40"/>
-        <references refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" compoundref="core_2all_8hpp" startline="20">debug_mode</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" compoundref="main_8hpp" startline="10">in</references>
-        <references refid="main_8hpp_1af095a232149097b5605064623a9345ac" compoundref="test_8cpp" startline="52" endline="52">main2</references>
-        <references refid="core_2all_8hpp_1a5da77c5a58b4193f997d91f2130efd53" compoundref="test_8cpp" startline="25">multitest</references>
+        <location file="/home/ram/OmniTemplate/src/core/main.hpp" line="9" column="5" bodyfile="/home/ram/OmniTemplate/src/core/main.hpp" bodystart="9" bodyend="36"/>
+        <references refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" compoundref="core_2all_8hpp" startline="56">cerr</references>
+        <references refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" compoundref="core_2all_8hpp" startline="39">debug_mode</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="main_8hpp_1af095a232149097b5605064623a9345ac" compoundref="test__compiled_8cpp" startline="4496" endline="4525">main2</references>
+        <references refid="structset__multitest_1a20d0d5a0be72afc726d24cff42a14130" compoundref="main_8hpp" startline="5">set_multitest::multitest</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -169,43 +177,39 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="time_8hpp" kindref="compound">time.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8hpp_1af095a232149097b5605064623a9345ac" kindref="member">main2</ref>();</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>__FILE__;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">ifstream<sp/>input{s.substr(0,s.size()-</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;cpp&quot;</highlight><highlight class="normal">}.size())+</highlight><highlight class="stringliteral">&quot;in&quot;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/><ref refid="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" kindref="member">in</ref><sp/>=<sp/>input?input:cin;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10" refid="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" kindref="member">in</ref><sp/>=<sp/>cin;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>LOCAL</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>argc)<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argv[i]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;-q&quot;</highlight><highlight class="normal">s)<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ios::sync_with_stdio(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr.rdbuf(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(ios<sp/>&amp;os<sp/>:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{<ref refid="main_8hpp_1acf30f45bb690161eda6eb343b019d6e7" kindref="member">in</ref>,<sp/>cout,<sp/>cerr,<sp/>clog})<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixed(os);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(os.rdbuf())<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.exceptions(ios::failbit<sp/>|<sp/>ios::badbit<sp/>|<sp/>ios::eofbit);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.precision(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>?<sp/>numeric_limits&lt;ld&gt;::max_digits10<sp/>:<sp/>5);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>cout.precision(numeric_limits&lt;ld&gt;::max_digits10);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>t<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="core_2all_8hpp_1a5da77c5a58b4193f997d91f2130efd53" kindref="member">multitest</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cin<sp/>&gt;&gt;<sp/>t;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>t)<sp/>{<sp/><ref refid="main_8hpp_1af095a232149097b5605064623a9345ac" kindref="member">main2</ref>();<sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="4" refid="structset__multitest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structset__multitest" kindref="compound">set_multitest</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="structset__multitest_1a20d0d5a0be72afc726d24cff42a14130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structset__multitest_1a20d0d5a0be72afc726d24cff42a14130" kindref="member">multitest</ref>{};</highlight></codeline>
+<codeline lineno="6" refid="structset__multitest_1a746c648fb7b25d87a0f67c3f4da2f2f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structset__multitest_1a746c648fb7b25d87a0f67c3f4da2f2f2" kindref="member">set_multitest</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{<sp/><ref refid="structset__multitest_1a20d0d5a0be72afc726d24cff42a14130" kindref="member">multitest</ref><sp/>=<sp/>val;<sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8hpp_1af095a232149097b5605064623a9345ac" kindref="member">main2</ref>();</highlight></codeline>
+<codeline lineno="9" refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>argc)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argv[i]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;-q&quot;</highlight><highlight class="normal">s)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>ios::sync_with_stdio(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" kindref="member">cerr</ref>.rdbuf(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(ios<sp/>&amp;os<sp/>:<sp/>initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{cin,<sp/>cout,<sp/>(<ref refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" kindref="member">cerr</ref>),<sp/>clog})<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixed(os);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(os.rdbuf())<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.exceptions(ios::failbit<sp/>|<sp/>ios::badbit<sp/>|<sp/>ios::eofbit);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os.precision(</highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>?<sp/>numeric_limits&lt;ld&gt;::max_digits10<sp/>:<sp/>5);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>cout.precision(numeric_limits&lt;ld&gt;::max_digits10);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>t<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structset__multitest_1a20d0d5a0be72afc726d24cff42a14130" kindref="member">set_multitest::multitest</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cin<sp/>&gt;&gt;<sp/>t;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>t)<sp/>{<sp/><ref refid="main_8hpp_1af095a232149097b5605064623a9345ac" kindref="member">main2</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/main.hpp"/>
   </compounddef>

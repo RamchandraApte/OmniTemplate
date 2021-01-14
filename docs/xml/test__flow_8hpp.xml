@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="test__flow_8hpp" kind="file" language="C++">
     <compoundname>test_flow.hpp</compoundname>
     <includes refid="flow_8hpp" local="yes">flow.hpp</includes>
@@ -20,6 +20,8 @@
         <link refid="polynomial_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>algebra/linear_algebra.hpp</label>
@@ -34,14 +36,22 @@
       <node id="7">
         <label>experimental/source_location</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="6">
         <label>experimental/iterator</label>
+      </node>
+      <node id="15">
+        <label>graph/core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>core/all.hpp</label>
@@ -54,11 +64,11 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -72,27 +82,27 @@
       <node id="12">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="10">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="11">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -102,25 +112,33 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ds/dsu.hpp</label>
+        <link refid="dsu_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="7">
+      <node id="6">
         <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
         <link refid="test__all_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="11">
         <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
         <link refid="test__graph__draw_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="9">
         <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
         <link refid="test__hld_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -131,14 +149,16 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="7">
         <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
         <link refid="test_8cpp"/>
       </node>
-      <node id="6">
+      <node id="5">
         <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
         <link refid="test__2sat_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -146,35 +166,33 @@
         <link refid="test__flow_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
         <link refid="graph_2all_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="4">
         <label>/home/ram/OmniTemplate/src/graph/2sat.hpp</label>
         <link refid="2sat_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="10">
@@ -222,7 +240,7 @@
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" kindref="member">total_flow</ref>(algo(<ref refid="namespaceflow" kindref="compound">flow</ref>))<sp/>==<sp/>7);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="30" refid="namespaceflow_1_1test_1a66e8ca51e96f06ce0369f386cab9ac25" refkind="member"><highlight class="normal"><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/><ref refid="namespaceflow_1_1test_1a66e8ca51e96f06ce0369f386cab9ac25" kindref="member">random_flow</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30" refid="namespaceflow_1_1test_1a32a94ae42f633485db361cf67447df2f" refkind="member"><highlight class="normal"><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/><ref refid="namespaceflow_1_1test_1a32a94ae42f633485db361cf67447df2f" kindref="member">random_flow</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n<sp/>=<sp/>2<sp/>+<sp/>(<ref refid="namespaceutility_1a7fea553f6f915aa6c2affe79637d9b9f" kindref="member">reng</ref>()<sp/>%<sp/>30);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix&lt;ll&gt;</ref><sp/><ref refid="namespaceflow" kindref="compound">flow</ref>(n,<sp/>n);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i2,<sp/>n)<sp/>{</highlight></codeline>
@@ -236,20 +254,21 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceflow" kindref="compound">flow</ref>;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44" refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func2&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" kindref="member">test_compare_flow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Func1<sp/>&amp;algo1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Func2<sp/>&amp;algo2,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n_it<sp/>=<sp/>100)<sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>n_it)<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceflow" kindref="compound">flow</ref><sp/>=<sp/><ref refid="namespaceflow_1_1test_1a66e8ca51e96f06ce0369f386cab9ac25" kindref="member">random_flow</ref>();</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME<sp/>generated<sp/>flow<sp/>diff?</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" kindref="member">total_flow</ref>(algo1(<ref refid="namespaceflow" kindref="compound">flow</ref>))<sp/>==<sp/><ref refid="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" kindref="member">total_flow</ref>(algo2(<ref refid="namespaceflow" kindref="compound">flow</ref>)));</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="51" refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" kindref="member">test_flow</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1a736d0df4682738fa9d4502d37fda8352" kindref="member">test_flow_algo</ref>(<ref refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" kindref="member">edmond_karp</ref>);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1a736d0df4682738fa9d4502d37fda8352" kindref="member">test_flow_algo</ref>(<ref refid="namespaceflow_1ab1878f3966f553be99c58d55aa46709e" kindref="member">dinic</ref>);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" kindref="member">test_compare_flow</ref>(<ref refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" kindref="member">edmond_karp</ref>,<sp/><ref refid="namespaceflow_1ab1878f3966f553be99c58d55aa46709e" kindref="member">dinic</ref>);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>flow::test</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceflow_1_1test" kindref="compound">flow::test</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func2&gt;</highlight></codeline>
+<codeline lineno="45" refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" kindref="member">test_compare_flow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Func1<sp/>&amp;algo1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Func2<sp/>&amp;algo2,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n_it<sp/>=<sp/>100)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>n_it)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceflow" kindref="compound">flow</ref><sp/>=<sp/><ref refid="namespaceflow_1_1test_1a32a94ae42f633485db361cf67447df2f" kindref="member">random_flow</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME<sp/>generated<sp/>flow<sp/>diff?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" kindref="member">total_flow</ref>(algo1(<ref refid="namespaceflow" kindref="compound">flow</ref>))<sp/>==<sp/><ref refid="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" kindref="member">total_flow</ref>(algo2(<ref refid="namespaceflow" kindref="compound">flow</ref>)));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52" refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" kindref="member">test_flow</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1a736d0df4682738fa9d4502d37fda8352" kindref="member">test_flow_algo</ref>(<ref refid="namespaceflow_1a019c8d89498d267345fd2f560909fa7a" kindref="member">edmond_karp</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1a736d0df4682738fa9d4502d37fda8352" kindref="member">test_flow_algo</ref>(<ref refid="namespaceflow_1ab162ee0224ccca8ae082128f2825d92c" kindref="member">dinic</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" kindref="member">test_compare_flow</ref>(<ref refid="namespaceflow_1a019c8d89498d267345fd2f560909fa7a" kindref="member">edmond_karp</ref>,<sp/><ref refid="namespaceflow_1ab162ee0224ccca8ae082128f2825d92c" kindref="member">dinic</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>flow::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceflow_1_1test" kindref="compound">flow::test</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/graph/test_flow.hpp"/>
   </compounddef>

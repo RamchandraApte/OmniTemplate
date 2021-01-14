@@ -15,49 +15,51 @@ struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{ar$<$ T\mbox{[}n\mbo
 struct \mbox{\hyperlink{structutility_1_1Empty}{Empty}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1fix}{fix}}
-\item 
+\begin{DoxyCompactList}\small\item\em Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
-\item 
+\begin{DoxyCompactList}\small\item\em Random device patch to fix libstdc++\textquotesingle{}s broken implementation on Windows. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1with}{with}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets v to new\+\_\+ temporary while with object is alive. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{ar\+\_\+t}} = typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$ T $>$\+::type
 \item 
-using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
+using \mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a1507417750abfb917c914c44e07ed713}{max\+\_\+eq}} (T \&x, const T \&y)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceutility_acf80bb2a56236f08271b2d70689cc1f6}{min\+\_\+eq}} (T \&x, const T \&y)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_ae423116f6315d5e998219f27f1f8c401}{min\+\_\+eq}} (T \&x, const T \&y)
-\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceutility_a80f7a687b4e8d135cde1ae1d6b169d13}{max\+\_\+eq}} (T \&x, const T \&y)
+\begin{DoxyCompactList}\small\item\em Set x to the minimum of x and y. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a6e069fcf8b422fbc525eba2543e36a6e}{cache}} (const T \&f)
-\item 
+\begin{DoxyCompactList}\small\item\em Set x to the minimum of x and y. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ }\\auto \mbox{\hyperlink{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}{uniq}} (Cont v, Eq const \&up=Eq\{\}, T const \&sp=T\{\})
 \begin{DoxyCompactList}\small\item\em Remove all duplicates element from. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}{key\+\_\+compare}} (const Func \&f, T g=T\{\})
-\item 
+{\footnotesize template$<$typename Compare  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_a3f485f407bcf34b3ad3831f7fda882e4}{key\+\_\+compare}} (const Func \&func, const Compare \&compare=\{\})
+\begin{DoxyCompactList}\small\item\em Compare using key. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a50e9430d1096ce6997ae910135a9533f}{prev\+\_\+less}} (const T \&v)
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a005fc5d8af9bba651f00c74372466b83}{bit\+\_\+ceil}} (\mbox{\hyperlink{structll}{ll}} x)
-\item 
+\begin{DoxyCompactList}\small\item\em Return the smallest power of two that is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a14dc21f495425ccdc1ec35fe45d45591}{power\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the smallest power of base that is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}{log\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the smallest exponent such that base raised to exponent is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
+\begin{DoxyCompactList}\small\item\em next combination of bits Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{swap2}} (T \&a, T \&b, const Func \&func)
+\begin{DoxyCompactList}\small\item\em Stable sorts a and b by func. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iter , typename Proj $>$ }\\void \mbox{\hyperlink{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383}{counting\+\_\+sort}} (Iter a, Iter b, const Proj \&proj, const \mbox{\hyperlink{structll}{ll}} proj\+\_\+size)
 \item 
-{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{swap2}} (T \&a, T \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}, const Func \&func)
-\item 
-{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
+{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{ssize}} (const Cont \&\mbox{\hyperlink{test__compiled_8cpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{reng}} \{\mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}}\{\}()\}
+default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{reng}} \{\mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}}\{\}()\}
 \end{DoxyCompactItemize}
 
 
@@ -69,11 +71,11 @@ default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utility\+::ar\+\_\+t}} = typedef typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$T$>$\+::type}
 
-\mbox{\Hypertarget{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}\label{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}} 
+\mbox{\Hypertarget{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}\label{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}} 
 \index{utility@{utility}!random\_device@{random\_device}}
 \index{random\_device@{random\_device}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{random\_device}{random\_device}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utility\+::random\+\_\+device}} = typedef \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}} \mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{utility\+::random\+\_\+device}}}
 
 
 
@@ -84,7 +86,12 @@ using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utili
 \doxysubsubsection{\texorpdfstring{bit\_ceil()}{bit\_ceil()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::bit\+\_\+ceil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
-Return the smallest power of two that is at least xHere is the caller graph for this function\+:\nopagebreak
+
+
+Return the smallest power of two that is at least x. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -98,18 +105,54 @@ Return the smallest power of two that is at least xHere is the caller graph for 
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto utility\+::cache (\begin{DoxyParamCaption}\item[{const T \&}]{f }\end{DoxyParamCaption})}
 
-Cache calls to f using a map of type T\mbox{\Hypertarget{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}\label{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}} 
-\index{utility@{utility}!key\_compare@{key\_compare}}
-\index{key\_compare@{key\_compare}!utility@{utility}}
-\doxysubsubsection{\texorpdfstring{key\_compare()}{key\_compare()}}
-{\footnotesize\ttfamily template$<$typename T  = less$<$$>$, typename Func $>$ \\
-auto utility\+::key\+\_\+compare (\begin{DoxyParamCaption}\item[{const Func \&}]{f,  }\item[{T}]{g = {\ttfamily T\{\}} }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+Set x to the minimum of x and y. 
+
+Cache calls to f using a map of type T.
+
+Cache calls to f using a map of type T \mbox{\Hypertarget{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383}\label{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383}} 
+\index{utility@{utility}!counting\_sort@{counting\_sort}}
+\index{counting\_sort@{counting\_sort}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{counting\_sort()}{counting\_sort()}}
+{\footnotesize\ttfamily template$<$typename Iter , typename Proj $>$ \\
+void utility\+::counting\+\_\+sort (\begin{DoxyParamCaption}\item[{Iter}]{a,  }\item[{Iter}]{b,  }\item[{const Proj \&}]{proj,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{proj\+\_\+size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceutility_aa705afaf267f70799bd4ec8cbf040455_icgraph}
+\includegraphics[width=350pt]{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutility_a3f485f407bcf34b3ad3831f7fda882e4}\label{namespaceutility_a3f485f407bcf34b3ad3831f7fda882e4}} 
+\index{utility@{utility}!key\_compare@{key\_compare}}
+\index{key\_compare@{key\_compare}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{key\_compare()}{key\_compare()}}
+{\footnotesize\ttfamily template$<$typename Compare  = less$<$$>$, typename Func $>$ \\
+auto utility\+::key\+\_\+compare (\begin{DoxyParamCaption}\item[{const Func \&}]{func,  }\item[{const Compare \&}]{compare = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Compare using key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & The key function \\
+\hline
+{\em compare} & the comparison function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A comparison functor that compares two arugments by the key. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutility_a3f485f407bcf34b3ad3831f7fda882e4_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}\label{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}} 
@@ -118,33 +161,44 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{log\_ceil()}{log\_ceil()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::log\+\_\+ceil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{base }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespaceutility_a1507417750abfb917c914c44e07ed713}\label{namespaceutility_a1507417750abfb917c914c44e07ed713}} 
+
+
+Returns the smallest exponent such that base raised to exponent is at least x. 
+
+\mbox{\Hypertarget{namespaceutility_a80f7a687b4e8d135cde1ae1d6b169d13}\label{namespaceutility_a80f7a687b4e8d135cde1ae1d6b169d13}} 
 \index{utility@{utility}!max\_eq@{max\_eq}}
 \index{max\_eq@{max\_eq}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{max\_eq()}{max\_eq()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-auto utility\+::max\+\_\+eq (\begin{DoxyParamCaption}\item[{T \&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
+void utility\+::max\+\_\+eq (\begin{DoxyParamCaption}\item[{T \&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
+
+
+
+Set x to the minimum of x and y. 
+
+Set x to the maximum of x and y.
+
+Set x to the maximum of x and y Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceutility_a80f7a687b4e8d135cde1ae1d6b169d13_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceutility_acf80bb2a56236f08271b2d70689cc1f6}\label{namespaceutility_acf80bb2a56236f08271b2d70689cc1f6}} 
+\index{utility@{utility}!min\_eq@{min\_eq}}
+\index{min\_eq@{min\_eq}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{min\_eq()}{min\_eq()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void utility\+::min\+\_\+eq (\begin{DoxyParamCaption}\item[{T \&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceutility_a1507417750abfb917c914c44e07ed713_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespaceutility_ae423116f6315d5e998219f27f1f8c401}\label{namespaceutility_ae423116f6315d5e998219f27f1f8c401}} 
-\index{utility@{utility}!min\_eq@{min\_eq}}
-\index{min\_eq@{min\_eq}!utility@{utility}}
-\doxysubsubsection{\texorpdfstring{min\_eq()}{min\_eq()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-auto utility\+::min\+\_\+eq (\begin{DoxyParamCaption}\item[{T \&}]{x,  }\item[{const T \&}]{y }\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespaceutility_ae423116f6315d5e998219f27f1f8c401_icgraph}
+\includegraphics[width=350pt]{namespaceutility_acf80bb2a56236f08271b2d70689cc1f6_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}\label{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}} 
@@ -153,7 +207,15 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{next\_comb()}{next\_comb()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::next\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{x }\end{DoxyParamCaption})}
 
-Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). Note, such y must exist.Here is the caller graph for this function\+:\nopagebreak
+
+
+next combination of bits Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). 
+
+\begin{DoxyPrecond}{Precondition}
+T\+He desired y must exist. 
+\end{DoxyPrecond}
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -165,6 +227,10 @@ Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(
 \index{power\_ceil@{power\_ceil}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{power\_ceil()}{power\_ceil()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} utility\+::power\+\_\+ceil (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{x,  }\item[{const \mbox{\hyperlink{structll}{ll}}}]{base }\end{DoxyParamCaption})}
+
+
+
+Returns the smallest power of base that is at least x. 
 
 \mbox{\Hypertarget{namespaceutility_a50e9430d1096ce6997ae910135a9533f}\label{namespaceutility_a50e9430d1096ce6997ae910135a9533f}} 
 \index{utility@{utility}!prev\_less@{prev\_less}}
@@ -180,7 +246,8 @@ auto utility\+::prev\+\_\+less (\begin{DoxyParamCaption}\item[{const T \&}]{v }\
 {\footnotesize\ttfamily template$<$typename Cont $>$ \\
 \mbox{\hyperlink{structll}{ll}} utility\+::ssize (\begin{DoxyParamCaption}\item[{const Cont \&}]{cont }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -194,7 +261,12 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T , typename Func $>$ \\
 void utility\+::swap2 (\begin{DoxyParamCaption}\item[{T \&}]{a,  }\item[{T \&}]{b,  }\item[{const Func \&}]{func }\end{DoxyParamCaption})}
 
-Stable sorts a and b by func.Here is the caller graph for this function\+:\nopagebreak
+
+
+Stable sorts a and b by func. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -219,7 +291,8 @@ Remove all duplicates element from.
 {\em v} & are distinct and sorted \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -233,5 +306,5 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{utility@{utility}!reng@{reng}}
 \index{reng@{reng}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{reng}{reng}}
-{\footnotesize\ttfamily default\+\_\+random\+\_\+engine utility\+::reng \{\mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}}\{\}()\}}
+{\footnotesize\ttfamily default\+\_\+random\+\_\+engine utility\+::reng \{\mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}}\{\}()\}}
 

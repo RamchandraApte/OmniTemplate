@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="test__cht_8hpp" kind="file" language="C++">
     <compoundname>test_cht.hpp</compoundname>
     <includes refid="cht_8hpp" local="yes">cht.hpp</includes>
@@ -17,10 +17,10 @@
       <node id="6">
         <label>experimental/source_location</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -43,11 +43,11 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -55,27 +55,27 @@
       <node id="11">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="10">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -120,9 +120,9 @@
 <codeline lineno="20" refid="namespaceconvex__hull__trick_1_1test_1a9b689c83ba8f830281d1aabf43efd1e4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceconvex__hull__trick_1_1test_1a9b689c83ba8f830281d1aabf43efd1e4" kindref="member">test_ccw</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((<ref refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" kindref="member">ccw</ref>({1,<sp/>0},<sp/>{1,<sp/>1},<sp/>{0,<sp/>1})));</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>assert((!<ref refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" kindref="member">ccw</ref>({0,<sp/>1},<sp/>{1,<sp/>1},<sp/>{1,<sp/>0})));</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>test_collinear<sp/>=<sp/>[&amp;](<ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref><sp/>a,<sp/><ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>,<sp/><ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref><sp/>c)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>test_collinear<sp/>=<sp/>[&amp;](<ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref><sp/>a,<sp/><ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref><sp/>b,<sp/><ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref><sp/>c)<sp/>{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" kindref="member">ccw</ref>(a,<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>,<sp/>c);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceconvex__hull__trick_1a09a415224250703a38ef6bd668e1cac5" kindref="member">ccw</ref>(a,<sp/>b,<sp/>c);</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(invalid_argument<sp/>&amp;)<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>

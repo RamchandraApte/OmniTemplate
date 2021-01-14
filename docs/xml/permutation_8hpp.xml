@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="permutation_8hpp" kind="file" language="C++">
     <compoundname>permutation.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
     <includes refid="modulo_8hpp" local="yes">number_theory/modulo.hpp</includes>
     <includedby refid="test__permutation_8hpp" local="yes">/home/ram/OmniTemplate/src/combinatorics/test_permutation.hpp</includedby>
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
+    <includedby refid="suffix__array_8hpp" local="yes">/home/ram/OmniTemplate/src/string/suffix_array.hpp</includedby>
     <incdepgraph>
       <node id="11">
         <label>number_theory/modulo.hpp</label>
@@ -19,10 +20,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -47,11 +48,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -59,27 +60,27 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -90,12 +91,26 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="5">
+        <label>/home/ram/OmniTemplate/src/string/suffix_array.hpp</label>
+        <link refid="suffix__array_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/ram/OmniTemplate/src/string/test_suffix_array.hpp</label>
+        <link refid="test__suffix__array_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/combinatorics/permutation.hpp</label>
         <link refid="permutation_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -105,8 +120,6 @@
       <node id="4">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classpermutation_1_1Permutation" prot="public">permutation::Permutation</innerclass>
@@ -136,39 +149,40 @@
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>x<sp/>=<sp/>i;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cycle.push_back(x);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[x];</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>(*this)[x];</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(x<sp/>!=<sp/>i);</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cycles.push_back(cycle);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cycles;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40" refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" kindref="member">Permutation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>&amp;cycles,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>shift<sp/>=<sp/>1)<sp/>:<sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref>(n)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;cycle<sp/>:<sp/>cycles)<sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>cycle.size())<sp/>{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(cycle),<sp/>modulo::modulus};</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">[cycle[i]]<sp/>=<sp/>cycle[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{i}<sp/>+<sp/>shift)];</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="49" refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" kindref="member">identity</ref>(multiplies&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref>(<ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>));<sp/>}</highlight></codeline>
-<codeline lineno="53" refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.size()<sp/>==<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.size());</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>c(a.size());</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>a.size())<sp/>{<sp/>c[i]<sp/>=<sp/>a[<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>[i]];<sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="namespacepermutation_1a68e876731be5159eaefd46b1fb8fe031" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1a68e876731be5159eaefd46b1fb8fe031" kindref="member">invert</ref>(multiplies&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;p)<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>inv(p.size());</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>p.size())<sp/>{<sp/>inv[p[i]]<sp/>=<sp/>i;<sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inv;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="78" refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref>(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>.to_cycles(),<sp/><ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>.size(),<sp/>n);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>permutation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepermutation" kindref="compound">permutation</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" kindref="member">Permutation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/>&amp;cycles,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>shift<sp/>=<sp/>1)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref>(n)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;cycle<sp/>:<sp/>cycles)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>cycle.size())<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(cycle),<sp/>modulo::modulus};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*this)[cycle[i]]<sp/>=<sp/>cycle[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{i}<sp/>+<sp/>shift)];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50" refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" kindref="member">identity</ref>(multiplies&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref>(<ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>));<sp/>}</highlight></codeline>
+<codeline lineno="54" refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1a68665163bd10ce50e6606b1babe2e041" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a.size()<sp/>==<sp/>b.size());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>c(a.size());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>a.size())<sp/>{<sp/>c[i]<sp/>=<sp/>a[b[i]];<sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="namespacepermutation_1a68e876731be5159eaefd46b1fb8fe031" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1a68e876731be5159eaefd46b1fb8fe031" kindref="member">invert</ref>(multiplies&lt;&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;p)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>inv(p.size());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>p.size())<sp/>{<sp/>inv[p[i]]<sp/>=<sp/>i;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inv;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79" refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" refkind="member"><highlight class="normal"><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref><sp/>&amp;<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpermutation_1_1Permutation" kindref="compound">Permutation</ref>(<ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>.to_cycles(),<sp/><ref refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" kindref="member">perm</ref>.size(),<sp/>n);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>permutation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepermutation" kindref="compound">permutation</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/combinatorics/permutation.hpp"/>
   </compounddef>

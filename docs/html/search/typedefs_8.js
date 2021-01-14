@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['node_1089',['Node',['../classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571',1,'segment_tree::SegmentTree::Node()'],['../structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4',1,'splay_tree::SplayTree::Node()'],['../namespacelink__cut.html#a09d87e8cebaf4f6d638db321c396f97b',1,'link_cut::Node()']]]
+  ['max_1175',['Max',['../operations_8hpp.html#a8ca39513ee57e00e1d6eecf32fd87035',1,'Max():&#160;operations.hpp'],['../test__compiled_8cpp.html#a8ca39513ee57e00e1d6eecf32fd87035',1,'Max():&#160;test_compiled.cpp']]],
+  ['min_1176',['Min',['../operations_8hpp.html#a6e5336c573515260e7a624f1f72924a1',1,'Min():&#160;operations.hpp'],['../test__compiled_8cpp.html#a6e5336c573515260e7a624f1f72924a1',1,'Min():&#160;test_compiled.cpp']]]
 ];

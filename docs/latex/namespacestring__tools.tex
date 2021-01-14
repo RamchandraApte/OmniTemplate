@@ -1,5 +1,10 @@
 \hypertarget{namespacestring__tools}{}\doxysection{string\+\_\+tools Namespace Reference}
 \label{namespacestring__tools}\index{string\_tools@{string\_tools}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestring__tools_1_1test}{test}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -8,19 +13,25 @@ struct \mbox{\hyperlink{structstring__tools_1_1bytehash}{bytehash}}
 struct \mbox{\hyperlink{structstring__tools_1_1hash__str}{hash\+\_\+str}}
 \item 
 struct \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}}
+\item 
+struct \mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}{prefix}} (string const \&s)
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_a4a75212a844e6d429ae67ed0bb52ac1c}{prefix}} (string const \&s)
 \item 
 auto \mbox{\hyperlink{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}{search\+\_\+all}} (string const \&t, string const \&s)
 \item 
-auto \mbox{\hyperlink{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}{operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+auto \mbox{\hyperlink{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}{operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
-auto \mbox{\hyperlink{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}{operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+auto \mbox{\hyperlink{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}{operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
 {\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a9ea78f4e72ed84a9dc9c77e705185739}{search\+\_\+ra}} (const Ts \&... args)
+\item 
+\mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacestring__tools_af59e7388a466fccce148991db2eb61db}{suffix\+\_\+array}} (string str)
+\item 
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_ab41ebf14517712e71f78118e8b897214}{lcp\+\_\+array}} (const string \&str, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&suffix\+\_\+arr)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -30,6 +41,28 @@ string \mbox{\hyperlink{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacestring__tools_ab41ebf14517712e71f78118e8b897214}\label{namespacestring__tools_ab41ebf14517712e71f78118e8b897214}} 
+\index{string\_tools@{string\_tools}!lcp\_array@{lcp\_array}}
+\index{lcp\_array@{lcp\_array}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{lcp\_array()}{lcp\_array()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ string\+\_\+tools\+::lcp\+\_\+array (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&}]{suffix\+\_\+arr }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacestring__tools_ab41ebf14517712e71f78118e8b897214_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacestring__tools_ab41ebf14517712e71f78118e8b897214_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}\label{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}} 
 \index{string\_tools@{string\_tools}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!string\_tools@{string\_tools}}
@@ -42,18 +75,18 @@ string \mbox{\hyperlink{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily auto string\+\_\+tools\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{a,  }\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{b }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}\label{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}} 
+\mbox{\Hypertarget{namespacestring__tools_a4a75212a844e6d429ae67ed0bb52ac1c}\label{namespacestring__tools_a4a75212a844e6d429ae67ed0bb52ac1c}} 
 \index{string\_tools@{string\_tools}!prefix@{prefix}}
 \index{prefix@{prefix}!string\_tools@{string\_tools}}
 \doxysubsubsection{\texorpdfstring{prefix()}{prefix()}}
-{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structll}{ll}}$>$ string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{s }\end{DoxyParamCaption})}
 
 Returns prefix function of string s Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65_icgraph}
+\includegraphics[width=350pt]{namespacestring__tools_a4a75212a844e6d429ae67ed0bb52ac1c_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}\label{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}} 
@@ -77,6 +110,28 @@ Find all substrings of t equal to s Here is the call graph for this function\+:
 {\footnotesize\ttfamily template$<$typename... Ts$>$ \\
 auto string\+\_\+tools\+::search\+\_\+ra (\begin{DoxyParamCaption}\item[{const Ts \&...}]{args }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{namespacestring__tools_af59e7388a466fccce148991db2eb61db}\label{namespacestring__tools_af59e7388a466fccce148991db2eb61db}} 
+\index{string\_tools@{string\_tools}!suffix\_array@{suffix\_array}}
+\index{suffix\_array@{suffix\_array}!string\_tools@{string\_tools}}
+\doxysubsubsection{\texorpdfstring{suffix\_array()}{suffix\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} string\+\_\+tools\+::suffix\+\_\+array (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{namespacestring__tools_af59e7388a466fccce148991db2eb61db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacestring__tools_af59e7388a466fccce148991db2eb61db_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Variable Documentation}

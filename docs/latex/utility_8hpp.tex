@@ -1,7 +1,8 @@
 \hypertarget{utility_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/core/utility.hpp File Reference}
 \label{utility_8hpp}\index{/home/ram/OmniTemplate/src/core/utility.hpp@{/home/ram/OmniTemplate/src/core/utility.hpp}}
 {\ttfamily \#include \char`\"{}range.\+hpp\char`\"{}}\newline
-Include dependency graph for utility.\+hpp\+:\nopagebreak
+Include dependency graph for utility.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,15 +21,15 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structutility_1_1with}{utility\+::with$<$ T $>$}}
-\item 
+\begin{DoxyCompactList}\small\item\em Sets v to new\+\_\+ temporary while with object is alive. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix$<$ Func $>$}}
-\item 
+\begin{DoxyCompactList}\small\item\em Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar}{utility\+::ar$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{utility\+::ar$<$ T\mbox{[}n\mbox{]}$>$}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1random__device__patch}{utility\+::random\+\_\+device\+\_\+patch}}
-\item 
+\begin{DoxyCompactList}\small\item\em Random device patch to fix libstdc++\textquotesingle{}s broken implementation on Windows. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1Empty}{utility\+::\+Empty}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
@@ -39,7 +40,9 @@ struct \mbox{\hyperlink{structutility_1_1Empty}{utility\+::\+Empty}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{utility_8hpp_a76cdb96860b77886867832efcffeeb32}{lambda}}(f)~\mbox{[}$\,$\mbox{]}(auto \&\&... args) \{ return f(forward$<$decltype(args)$>$(args)...); \}
+\#define \mbox{\hyperlink{utility_8hpp_a21362d5df7197db64cd8c8e4602d7f52}{L\+A\+M\+B\+DA}}(f)~\mbox{[}\&, this\mbox{]}(auto \&\&...args) -\/$>$ decltype(auto) \{ return f(forward$<$decltype(args)$>$(args)...); \}
+\item 
+\#define \mbox{\hyperlink{utility_8hpp_a28bca63adefcbb2c4a2dbf5e9e9a57fe}{D\+E\+F\+I\+N\+E\+\_\+\+F\+U\+N\+C\+\_\+\+EQ}}(func)
 \item 
 \#define \mbox{\hyperlink{utility_8hpp_a4072e106efe575805c4864dbbd387090}{U\+S\+E\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+P\+A\+T\+CH}}
 \end{DoxyCompactItemize}
@@ -48,48 +51,61 @@ struct \mbox{\hyperlink{structutility_1_1Empty}{utility\+::\+Empty}}
 \item 
 {\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespaceutility_a5527c46ab55c32f4bdf48a47564e3cf0}{utility\+::ar\+\_\+t}} = typename \mbox{\hyperlink{structutility_1_1ar}{ar}}$<$ T $>$\+::type
 \item 
-using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utility\+::random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
+using \mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{utility\+::random\+\_\+device}} = \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a1507417750abfb917c914c44e07ed713}{utility\+::max\+\_\+eq}} (T \&x, const T \&y)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceutility_acf80bb2a56236f08271b2d70689cc1f6}{utility\+::min\+\_\+eq}} (T \&x, const T \&y)
 \item 
-{\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_ae423116f6315d5e998219f27f1f8c401}{utility\+::min\+\_\+eq}} (T \&x, const T \&y)
-\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceutility_a80f7a687b4e8d135cde1ae1d6b169d13}{utility\+::max\+\_\+eq}} (T \&x, const T \&y)
+\begin{DoxyCompactList}\small\item\em Set x to the minimum of x and y. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a6e069fcf8b422fbc525eba2543e36a6e}{utility\+::cache}} (const T \&f)
-\item 
+\begin{DoxyCompactList}\small\item\em Set x to the minimum of x and y. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Eq  = equal\+\_\+to$<$$>$, typename T  = less$<$$>$, typename Cont $>$ }\\auto \mbox{\hyperlink{namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf}{utility\+::uniq}} (Cont v, Eq const \&up=Eq\{\}, T const \&sp=T\{\})
 \begin{DoxyCompactList}\small\item\em Remove all duplicates element from. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_aa705afaf267f70799bd4ec8cbf040455}{utility\+::key\+\_\+compare}} (const Func \&f, T g=T\{\})
-\item 
+{\footnotesize template$<$typename Compare  = less$<$$>$, typename Func $>$ }\\auto \mbox{\hyperlink{namespaceutility_a3f485f407bcf34b3ad3831f7fda882e4}{utility\+::key\+\_\+compare}} (const Func \&func, const Compare \&compare=\{\})
+\begin{DoxyCompactList}\small\item\em Compare using key. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespaceutility_a50e9430d1096ce6997ae910135a9533f}{utility\+::prev\+\_\+less}} (const T \&v)
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a005fc5d8af9bba651f00c74372466b83}{utility\+::bit\+\_\+ceil}} (\mbox{\hyperlink{structll}{ll}} x)
-\item 
+\begin{DoxyCompactList}\small\item\em Return the smallest power of two that is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a14dc21f495425ccdc1ec35fe45d45591}{utility\+::power\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the smallest power of base that is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a750478c01441fac1c27f14bea2cb74ea}{utility\+::log\+\_\+ceil}} (const \mbox{\hyperlink{structll}{ll}} x, const \mbox{\hyperlink{structll}{ll}} base)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the smallest exponent such that base raised to exponent is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{utility\+::next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
+\begin{DoxyCompactList}\small\item\em next combination of bits Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{utility\+::swap2}} (T \&a, T \&b, const Func \&func)
+\begin{DoxyCompactList}\small\item\em Stable sorts a and b by func. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iter , typename Proj $>$ }\\void \mbox{\hyperlink{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383}{utility\+::counting\+\_\+sort}} (Iter a, Iter b, const Proj \&proj, const \mbox{\hyperlink{structll}{ll}} proj\+\_\+size)
 \item 
-{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_aa72cfb348ae79fd2bdb5ded63cd36ef2}{utility\+::swap2}} (T \&a, T \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}, const Func \&func)
-\item 
-{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{utility\+::ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
+{\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{utility\+::ssize}} (const Cont \&\mbox{\hyperlink{test__compiled_8cpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{utility\+::reng}} \{\mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{random\+\_\+device}}\{\}()\}
+default\+\_\+random\+\_\+engine \mbox{\hyperlink{namespaceutility_a7fea553f6f915aa6c2affe79637d9b9f}{utility\+::reng}} \{\mbox{\hyperlink{namespaceutility_afaacd9ae54757a29e4d3e5381d8cfcdf}{random\+\_\+device}}\{\}()\}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{utility_8hpp_a76cdb96860b77886867832efcffeeb32}\label{utility_8hpp_a76cdb96860b77886867832efcffeeb32}} 
-\index{utility.hpp@{utility.hpp}!lambda@{lambda}}
-\index{lambda@{lambda}!utility.hpp@{utility.hpp}}
-\doxysubsubsection{\texorpdfstring{lambda}{lambda}}
-{\footnotesize\ttfamily \#define lambda(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{[}$\,$\mbox{]}(auto \&\&... args) \{ return f(forward$<$decltype(args)$>$(args)...); \}}
+\mbox{\Hypertarget{utility_8hpp_a28bca63adefcbb2c4a2dbf5e9e9a57fe}\label{utility_8hpp_a28bca63adefcbb2c4a2dbf5e9e9a57fe}} 
+\index{utility.hpp@{utility.hpp}!DEFINE\_FUNC\_EQ@{DEFINE\_FUNC\_EQ}}
+\index{DEFINE\_FUNC\_EQ@{DEFINE\_FUNC\_EQ}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_FUNC\_EQ}{DEFINE\_FUNC\_EQ}}
+{\footnotesize\ttfamily \#define D\+E\+F\+I\+N\+E\+\_\+\+F\+U\+N\+C\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keywordtype}{void} func\#\#\_eq(T \&x, \textcolor{keyword}{const} T \&y) \{ x = func(x, y); \}                 \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{utility_8hpp_a21362d5df7197db64cd8c8e4602d7f52}\label{utility_8hpp_a21362d5df7197db64cd8c8e4602d7f52}} 
+\index{utility.hpp@{utility.hpp}!LAMBDA@{LAMBDA}}
+\index{LAMBDA@{LAMBDA}!utility.hpp@{utility.hpp}}
+\doxysubsubsection{\texorpdfstring{LAMBDA}{LAMBDA}}
+{\footnotesize\ttfamily \#define L\+A\+M\+B\+DA(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{[}\&, this\mbox{]}(auto \&\&...args) -\/$>$ decltype(auto) \{ return f(forward$<$decltype(args)$>$(args)...); \}}
 
 \mbox{\Hypertarget{utility_8hpp_a4072e106efe575805c4864dbbd387090}\label{utility_8hpp_a4072e106efe575805c4864dbbd387090}} 
 \index{utility.hpp@{utility.hpp}!USE\_RANDOM\_DEVICE\_PATCH@{USE\_RANDOM\_DEVICE\_PATCH}}

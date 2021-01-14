@@ -52,7 +52,7 @@ bool debug_mode = false;
 #define import(a)                                                                                  \
 	using namespace a;                                                                         \
 	lets_count{#a "::", ""};
-#ifndef LOCAL
+#ifndef DEBUG
 #define cerr()                                                                                     \
 	if (false)                                                                                 \
 	cerr

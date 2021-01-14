@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="persistent_8hpp" kind="file" language="C++">
     <compoundname>persistent.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
@@ -11,10 +11,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -31,11 +31,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -43,10 +43,10 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
@@ -58,31 +58,25 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
       <node id="2">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/ds/persistent.hpp</label>
@@ -103,26 +97,23 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3" refid="namespacepersistent" refkind="compound"><highlight class="normal"></highlight><highlight class="comment">/*inline*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepersistent" kindref="compound">persistent</ref><sp/>{</highlight></codeline>
 <codeline lineno="5" refid="structpersistent_1_1first__cmp" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpersistent_1_1first__cmp" kindref="compound">first_cmp</ref><sp/>{</highlight></codeline>
-<codeline lineno="6" refid="structpersistent_1_1first__cmp_1a7b8fbb5ea87d4bc3ab32ec623b06b6cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpersistent_1_1first__cmp_1a7b8fbb5ea87d4bc3ab32ec623b06b6cb" kindref="member">operator()</ref>(T<sp/>a,<sp/>T<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.first<sp/>&lt;<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.first;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="17" refid="structpersistent_1_1pers" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpersistent_1_1pers" kindref="compound">pers</ref><sp/>{</highlight></codeline>
-<codeline lineno="18" refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" kindref="member">tim</ref><sp/>=<sp/>0LL;<sp/></highlight></codeline>
-<codeline lineno="19" refid="structpersistent_1_1pers_1aca1368b7234aeaa330d30014ab74aecb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>pair&lt;ll,<sp/>T&gt;;</highlight></codeline>
-<codeline lineno="20" refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>set&lt;event,<sp/>first_cmp&gt;<sp/><ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>;</highlight></codeline>
-<codeline lineno="21" refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;v)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>e{<ref refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" kindref="member">tim</ref>,<sp/>v};</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>.erase(e);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>.insert(e);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="26" refid="structpersistent_1_1pers_1ad16e2906f0acb5b44696b3e732756ea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*--<ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>.upper_bound({tim,<sp/>T{}})).second;<sp/>}</highlight></codeline>
-<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="29" refid="namespacepersistent_1aafe71ec52739bdcd46b2a85ac35ec776" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacepersistent_1aafe71ec52739bdcd46b2a85ac35ec776" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structpersistent_1_1pers" kindref="compound">pers&lt;T&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;p)<sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>static_cast&lt;T&gt;(p);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>persistent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="structpersistent_1_1first__cmp_1a7b8fbb5ea87d4bc3ab32ec623b06b6cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpersistent_1_1first__cmp_1a7b8fbb5ea87d4bc3ab32ec623b06b6cb" kindref="member">operator()</ref>(T<sp/>a,<sp/>T<sp/>b)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.first<sp/>&lt;<sp/>b.first;<sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15" refid="structpersistent_1_1pers" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpersistent_1_1pers" kindref="compound">pers</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" kindref="member">tim</ref><sp/>=<sp/>0LL;<sp/></highlight></codeline>
+<codeline lineno="17" refid="structpersistent_1_1pers_1aca1368b7234aeaa330d30014ab74aecb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>pair&lt;ll,<sp/>T&gt;;</highlight></codeline>
+<codeline lineno="18" refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>set&lt;event,<sp/>first_cmp&gt;<sp/><ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpersistent_1_1pers_1a11fc55a84cb1327a5797ea29352eb8b9" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;v)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>e{<ref refid="structpersistent_1_1pers_1a7284254ccae070c4b705a05a8d118b92" kindref="member">tim</ref>,<sp/>v};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>.erase(e);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>.insert(e);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24" refid="structpersistent_1_1pers_1ad16e2906f0acb5b44696b3e732756ea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*--<ref refid="structpersistent_1_1pers_1aa69f50e85db0c10e684390388ef6f23b" kindref="member">s</ref>.upper_bound({tim,<sp/>T{}})).second;<sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26" refid="namespacepersistent_1aafe71ec52739bdcd46b2a85ac35ec776" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacepersistent_1aafe71ec52739bdcd46b2a85ac35ec776" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structpersistent_1_1pers" kindref="compound">pers&lt;T&gt;</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;p)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>static_cast&lt;T&gt;(p);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>persistent</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/ds/persistent.hpp"/>
   </compounddef>

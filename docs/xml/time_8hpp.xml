@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="time_8hpp" kind="file" language="C++">
     <compoundname>time.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
@@ -19,10 +19,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -39,11 +39,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -51,27 +51,27 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -101,8 +101,6 @@
       <node id="3">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
       <node id="6">
         <label>/home/ram/OmniTemplate/src/ds/test_segment_tree.hpp</label>
@@ -114,6 +112,8 @@
         <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
         <link refid="main_8hpp"/>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -131,24 +131,23 @@
 <codeline lineno="7" refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(clock_::now())<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>;</highlight></codeline>
 <codeline lineno="8" refid="structtime__tools_1_1timer_1a7fe96a11cb200ff618cdc06c239cd1c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref>()<sp/>:<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>(<ref refid="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" kindref="member">clock_</ref>::now())<sp/>{}</highlight></codeline>
 <codeline lineno="9" refid="structtime__tools_1_1timer_1a9dec58724371809e1822c943cb94bfba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer_1a9dec58724371809e1822c943cb94bfba" kindref="member">~timer</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>duration:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>duration&lt;ld&gt;(clock_::now()<sp/>-<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>).count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>s&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="15" refid="namespacetime__tools_1a4d00a3da24d192703891d9dba336e6b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacetime__tools_1a4d00a3da24d192703891d9dba336e6b5" kindref="member">bench</ref>(Func<sp/>a)<sp/>{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(a)<sp/>ans<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a;<sp/>++i)<sp/>{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>a;<sp/>++j)<sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans<sp/>+=<sp/>((-i)<sp/>%<sp/>(j));</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>avoid<sp/>the<sp/>benchmark<sp/>from<sp/>being<sp/>optimized<sp/>out.<sp/>I<sp/>don&apos;t<sp/>know<sp/>if<sp/>this<sp/>actually<sp/>works.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>_unused<sp/>=<sp/>ans;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>time_tools</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetime__tools" kindref="compound">time_tools</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" kindref="member">cerr</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>duration:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>duration&lt;ld&gt;(clock_::now()<sp/>-<sp/><ref refid="structtime__tools_1_1timer_1ad3a3d5f9131f82434437f052fbefef8c" kindref="member">t1</ref>).count()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>s&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14" refid="namespacetime__tools_1a4d00a3da24d192703891d9dba336e6b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacetime__tools_1a4d00a3da24d192703891d9dba336e6b5" kindref="member">bench</ref>(Func<sp/>a)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtime__tools_1_1timer" kindref="compound">timer</ref><sp/>_t;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>decltype(a)<sp/>ans<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(decltype(a)<sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;<sp/>a;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans<sp/>+=<sp/>((-i)<sp/>%<sp/>(j));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>avoid<sp/>the<sp/>benchmark<sp/>from<sp/>being<sp/>optimized<sp/>out.<sp/>I<sp/>don&apos;t<sp/>know<sp/>if<sp/>this<sp/>actually<sp/>works.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>_unused<sp/>=<sp/>ans;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>time_tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetime__tools" kindref="compound">time_tools</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/time.hpp"/>
   </compounddef>

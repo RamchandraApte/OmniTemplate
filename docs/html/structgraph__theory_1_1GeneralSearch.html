@@ -44,7 +44,7 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="graph_2all_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/all.hpp&gt;</a></div>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="core_8hpp.html">&lt;/home/ram/OmniTemplate/src/graph/core.hpp&gt;</a></div>
           <div class="m-doc-template">template&lt;typename Searcher, typename Graph&gt;</div>
           <span class="m-breadcrumb"><a href="namespacegraph__theory.html">graph_theory</a>::<wbr/></span>GeneralSearch <span class="m-thin">struct</span>
         </h1>
@@ -69,6 +69,10 @@
               <span class="m-doc-wrap-bumper"><a href="#a5d1bf0cacd1f3e805ac724fc3ffc91ca" class="m-doc-self">GeneralSearch</a>(</span><span class="m-doc-wrap">const Graph&amp; g_)</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a5d1bf0cacd1f3e805ac724fc3ffc91ca" class="m-doc">GeneralSearch</a>(</span><span class="m-doc-wrap">const Graph&amp; g_)</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -83,37 +87,78 @@
               const <a href="structll.html" class="m-doc">ll</a> par)</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#aba4f495d3fd8c83c5e28e27315e8d920" class="m-doc">operator()</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a2f3f6311a56c13381b5439266caaeb7e" class="m-doc">add</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> child,
+              const <a href="structll.html" class="m-doc">ll</a> par)</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="a8ce5f9c8c5cba4adbbb66eb804363456">
-              const Graph&amp; <a href="#a8ce5f9c8c5cba4adbbb66eb804363456" class="m-doc-self">graph</a>
+            <dt id="ab22ab5308883a177f882564afe0cbf95">
+              Graph const &amp; <a href="#ab22ab5308883a177f882564afe0cbf95" class="m-doc-self">graph</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a8f85e90fb507ef03e5280a38c01a72cb">
-              vector&lt;char&gt; <a href="#a8f85e90fb507ef03e5280a38c01a72cb" class="m-doc-self">visited</a>
+            <dt id="abebd4916073c7e7ff088ddddd55be0c8">
+              vector&lt;char&gt; <a href="#abebd4916073c7e7ff088ddddd55be0c8" class="m-doc-self">visited</a>
             </dt>
             <dd>Whether vertex idx is visited.</dd>
-            <dt id="ab65b2c9f98ace39d40abfaf399c135a7">
-              deque&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#ab65b2c9f98ace39d40abfaf399c135a7" class="m-doc-self">queue</a>
+            <dt id="a9738ee2f64e463dc533fe1ff04c885cb">
+              deque&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a9738ee2f64e463dc533fe1ff04c885cb" class="m-doc-self">queue</a>
             </dt>
             <dd>Queue.</dd>
-            <dt id="a3ed9b9d45c85402850e22f6e98055045">
-              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a3ed9b9d45c85402850e22f6e98055045" class="m-doc-self">parent</a>
+            <dt id="ab8d80b4e0cd248fc612456967f039324">
+              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#ab8d80b4e0cd248fc612456967f039324" class="m-doc-self">parent</a>
             </dt>
             <dd>Parent of vertex idx.</dd>
-            <dt id="aadc7aa595d1aa3509f0ba6ee8489cf36">
-              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#aadc7aa595d1aa3509f0ba6ee8489cf36" class="m-doc-self">distance</a>
+            <dt id="acbe630ca07775d3fe3596aff2601418e">
+              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#acbe630ca07775d3fe3596aff2601418e" class="m-doc-self">distance</a>
             </dt>
             <dd>Distance from source to vertex idx.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a5d1bf0cacd1f3e805ac724fc3ffc91ca"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Searcher, typename Graph&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> graph_theory::<wbr />GeneralSearch&lt;Searcher, Graph&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5d1bf0cacd1f3e805ac724fc3ffc91ca" class="m-doc-self">GeneralSearch</a>(</span><span class="m-doc-wrap">const Graph&amp; g_)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
           <section class="m-doc-details" id="a2f3f6311a56c13381b5439266caaeb7e"><div>
             <h3>
+              <div class="m-doc-template">
+                template&lt;typename Searcher, typename Graph&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void graph_theory::<wbr />GeneralSearch&lt;Searcher, Graph&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2f3f6311a56c13381b5439266caaeb7e" class="m-doc-self">add</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> child,
+              const <a href="structll.html" class="m-doc">ll</a> par)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Add vertex j as a child of already visited vertex i in the searcher tree</p>
+          </div></section>
+          <section class="m-doc-details" id="aba4f495d3fd8c83c5e28e27315e8d920"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Searcher, typename Graph&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void graph_theory::<wbr />GeneralSearch&lt;Searcher, Graph&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aba4f495d3fd8c83c5e28e27315e8d920" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a2f3f6311a56c13381b5439266caaeb7e"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
               <div class="m-doc-template">
                 template&lt;typename Searcher, typename Graph&gt;
               </div>
@@ -168,7 +213,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

@@ -26,16 +26,24 @@ Collaboration diagram for B\+IT$<$ Value, Monoid\+Op $>$\+:\nopagebreak
 Value \mbox{\hyperlink{classBIT_a495d58c744095867ad69123897c60700}{query}} (\mbox{\hyperlink{structll}{ll}} r) const
 \begin{DoxyCompactList}\small\item\em Returns sum of Monoid over elements in \mbox{[}0, r) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBIT_a20ea8eb0ea2065179c756ec96417227f}{update}} (\mbox{\hyperlink{structll}{ll}} idx, const Value value)
+\begin{DoxyCompactList}\small\item\em Update the value at idx by value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}{B\+IT}} (const \mbox{\hyperlink{structll}{ll}} size\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg. \end{DoxyCompactList}\item 
+Value \mbox{\hyperlink{classBIT_a495d58c744095867ad69123897c60700}{query}} (\mbox{\hyperlink{structll}{ll}} r) const
+\begin{DoxyCompactList}\small\item\em Returns sum of Monoid over elements in \mbox{[}0, r) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBIT_a20ea8eb0ea2065179c756ec96417227f}{update}} (\mbox{\hyperlink{structll}{ll}} idx, const Value value)
 \begin{DoxyCompactList}\small\item\em Update the value at idx by value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classBIT_afaa408fe21402732f980204b6211425d}{get\+\_\+len}} (const \mbox{\hyperlink{structll}{ll}} idx)
+\begin{DoxyCompactList}\small\item\em Returns the length of the range of elements idx is responsible for. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classBIT_afaa408fe21402732f980204b6211425d}{get\+\_\+len}} (const \mbox{\hyperlink{structll}{ll}} idx)
 \begin{DoxyCompactList}\small\item\em Returns the length of the range of elements idx is responsible for. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ Value $>$ \mbox{\hyperlink{classBIT_a9d071c0f10d6aa215511828b7099806b}{arr}}
+vector$<$ Value $>$ \mbox{\hyperlink{classBIT_aa5a5572e0dfe58878ee2a10adfbab76e}{arr}}
 \begin{DoxyCompactList}\small\item\em The array storing the \mbox{\hyperlink{classBIT}{B\+IT}}\textquotesingle{}s internal values. \end{DoxyCompactList}\item 
 Monoid\+Op \mbox{\hyperlink{classBIT_a805ad548af6a5b423fc13749e6dacf6d}{op}} \{\}
 \begin{DoxyCompactList}\small\item\em The monoid operation functor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -60,7 +68,18 @@ Binary indexed tree (also called Fenwick tree)
 \mbox{\Hypertarget{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}\label{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}} 
 \index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!BIT@{BIT}}
 \index{BIT@{BIT}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
-\doxysubsubsection{\texorpdfstring{BIT()}{BIT()}}
+\doxysubsubsection{\texorpdfstring{BIT()}{BIT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+\mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::\mbox{\hyperlink{classBIT}{B\+IT}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{size\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg. 
+
+\mbox{\Hypertarget{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}\label{classBIT_a6408bcee08d49c8ab90ac83bdba0f2f1}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!BIT@{BIT}}
+\index{BIT@{BIT}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{BIT()}{BIT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::\mbox{\hyperlink{classBIT}{B\+IT}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{size\+\_\+arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
@@ -74,7 +93,7 @@ Construct a \mbox{\hyperlink{classBIT}{B\+IT}} of size size\+\_\+arg.
 \mbox{\Hypertarget{classBIT_afaa408fe21402732f980204b6211425d}\label{classBIT_afaa408fe21402732f980204b6211425d}} 
 \index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!get\_len@{get\_len}}
 \index{get\_len@{get\_len}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
-\doxysubsubsection{\texorpdfstring{get\_len()}{get\_len()}}
+\doxysubsubsection{\texorpdfstring{get\_len()}{get\_len()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::get\+\_\+len (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
 
@@ -89,10 +108,47 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classBIT_afaa408fe21402732f980204b6211425d_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classBIT_afaa408fe21402732f980204b6211425d}\label{classBIT_afaa408fe21402732f980204b6211425d}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!get\_len@{get\_len}}
+\index{get\_len@{get\_len}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{get\_len()}{get\_len()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+static \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::get\+\_\+len (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Returns the length of the range of elements idx is responsible for. 
+
 \mbox{\Hypertarget{classBIT_a495d58c744095867ad69123897c60700}\label{classBIT_a495d58c744095867ad69123897c60700}} 
 \index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!query@{query}}
 \index{query@{query}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
-\doxysubsubsection{\texorpdfstring{query()}{query()}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+Value \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns sum of Monoid over elements in \mbox{[}0, r) 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classBIT_a495d58c744095867ad69123897c60700_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classBIT_a495d58c744095867ad69123897c60700_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBIT_a495d58c744095867ad69123897c60700}\label{classBIT_a495d58c744095867ad69123897c60700}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!query@{query}}
+\index{query@{query}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 Value \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -104,20 +160,13 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=311pt]{classBIT_a495d58c744095867ad69123897c60700_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classBIT_a495d58c744095867ad69123897c60700_icgraph}
+\includegraphics[width=235pt]{classBIT_a495d58c744095867ad69123897c60700_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classBIT_a20ea8eb0ea2065179c756ec96417227f}\label{classBIT_a20ea8eb0ea2065179c756ec96417227f}} 
 \index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!update@{update}}
 \index{update@{update}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
 void \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{idx,  }\item[{const Value}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -143,18 +192,36 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classBIT_a20ea8eb0ea2065179c756ec96417227f_icgraph}
+\includegraphics[width=323pt]{classBIT_a20ea8eb0ea2065179c756ec96417227f_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classBIT_a20ea8eb0ea2065179c756ec96417227f}\label{classBIT_a20ea8eb0ea2065179c756ec96417227f}} 
+\index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!update@{update}}
+\index{update@{update}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
+void \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{idx,  }\item[{const Value}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the value at idx by value. 
+
+Note that this does {\itshape not} set the value to value. 
+\begin{DoxyParams}{Parameters}
+{\em idx} & the index of the element \\
+\hline
+{\em value} & the value the element will be updated by \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classBIT_a9d071c0f10d6aa215511828b7099806b}\label{classBIT_a9d071c0f10d6aa215511828b7099806b}} 
+\mbox{\Hypertarget{classBIT_aa5a5572e0dfe58878ee2a10adfbab76e}\label{classBIT_aa5a5572e0dfe58878ee2a10adfbab76e}} 
 \index{BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}!arr@{arr}}
 \index{arr@{arr}!BIT$<$ Value, MonoidOp $>$@{BIT$<$ Value, MonoidOp $>$}}
 \doxysubsubsection{\texorpdfstring{arr}{arr}}
 {\footnotesize\ttfamily template$<$typename Value , typename Monoid\+Op  = plus$<$$>$$>$ \\
-vector$<$Value$>$ \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::arr\hspace{0.3cm}{\ttfamily [private]}}
+vector$<$ Value $>$ \mbox{\hyperlink{classBIT}{B\+IT}}$<$ Value, Monoid\+Op $>$\+::arr\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -173,6 +240,7 @@ The monoid operation functor.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{bit_8hpp}{bit.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{bit_8hpp}{bit.\+hpp}}\item 
+/home/ram/\+Omni\+Template/src/test/\mbox{\hyperlink{test__compiled_8cpp}{test\+\_\+compiled.\+cpp}}\end{DoxyCompactItemize}

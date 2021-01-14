@@ -1,8 +1,8 @@
 #pragma once
 #include "operations.hpp"
 #include "range.hpp"
-// Enabling LOCAL enables debug features
-#ifdef LOCAL
+// Enabling DEBUG enables debug features
+#ifdef DEBUG
 #define dbg(x) (++debug_tools::depth, debug(x, #x##s))
 #else
 #define NDEBUG

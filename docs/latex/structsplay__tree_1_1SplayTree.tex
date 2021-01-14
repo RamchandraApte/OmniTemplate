@@ -23,9 +23,33 @@ struct \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} = \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$ T $>$
+\item 
+using \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} = \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$ T $>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_aa627e1ec6a9f5f62cb2aba123f47df0b}{Splay\+Tree}} ()
+\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a04a5fff3d078c370872ba89bbc90b979}{$\sim$\+Splay\+Tree}} ()
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1}{insert}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const x)
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}{insert}} (const T \&key)
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924}{erase}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const x)
+\item 
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc}{erase}} (const T \&key)
+\begin{DoxyCompactList}\small\item\em Erases the node with key key from the splay tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a63ec7e70e6422bbf64cb0b2e1bf497a9}{find}} (const T \&key)
+\item 
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of nodes in the splay tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}{empty}} () const
+\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a2f4c63a201ae3d63d08229382dcbfc67}{begin}} ()
+\item 
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a45aa483490efb984be745d3847061eba}{end}} ()
 \item 
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree_aa627e1ec6a9f5f62cb2aba123f47df0b}{Splay\+Tree}} ()
 \item 
@@ -56,12 +80,18 @@ static void \mbox{\hyperlink{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb3
 \item 
 {\footnotesize template$<$bool i$>$ }\\static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_ac3a1a0fa259a0f23787211fb94152acd}{extremum}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$x)
 \item 
-static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}{join}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const a, \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}{join}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const a, \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const b)
+\item 
+static void \mbox{\hyperlink{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb31da230d62a50b}{destroy}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const node)
+\item 
+{\footnotesize template$<$bool i$>$ }\\static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_ac3a1a0fa259a0f23787211fb94152acd}{extremum}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$x)
+\item 
+static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}{join}} (\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const a, \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const b)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a673d3706c5c3e58495775af5aac944c9}{root}} \{\}
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a43c37e09882abec66c0871d4a678ae45}{root}} \{\}
 \item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7adb23c86a9cb77d3a9d8afbaba65cf7}{size\+\_\+}} \{\}
 \end{DoxyCompactItemize}
@@ -71,7 +101,14 @@ static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da101
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}\label{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!Node@{Node}}
 \index{Node@{Node}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Node}{Node}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} =  \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$T$>$}
+
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}\label{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 using \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} =  \mbox{\hyperlink{structsplay__tree_1_1SplayNode}{Splay\+Node}}$<$T$>$}
 
@@ -81,14 +118,14 @@ using \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Spla
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_aa627e1ec6a9f5f62cb2aba123f47df0b}\label{structsplay__tree_1_1SplayTree_aa627e1ec6a9f5f62cb2aba123f47df0b}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!SplayTree@{SplayTree}}
 \index{SplayTree@{SplayTree}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{SplayTree()}{SplayTree()}}
+\doxysubsubsection{\texorpdfstring{SplayTree()}{SplayTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{structsplay__tree_1_1SplayTree}{Splay\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a04a5fff3d078c370872ba89bbc90b979}\label{structsplay__tree_1_1SplayTree_a04a5fff3d078c370872ba89bbc90b979}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!````~SplayTree@{$\sim$SplayTree}}
 \index{````~SplayTree@{$\sim$SplayTree}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{$\sim$SplayTree()}{~SplayTree()}}
+\doxysubsubsection{\texorpdfstring{$\sim$SplayTree()}{~SplayTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{structsplay__tree_1_1SplayTree}{Splay\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -99,27 +136,49 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a04a5fff3d078c370872ba89bbc90b979_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_aa627e1ec6a9f5f62cb2aba123f47df0b}\label{structsplay__tree_1_1SplayTree_aa627e1ec6a9f5f62cb2aba123f47df0b}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!SplayTree@{SplayTree}}
+\index{SplayTree@{SplayTree}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SplayTree()}{SplayTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{structsplay__tree_1_1SplayTree}{Splay\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a04a5fff3d078c370872ba89bbc90b979}\label{structsplay__tree_1_1SplayTree_a04a5fff3d078c370872ba89bbc90b979}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!````~SplayTree@{$\sim$SplayTree}}
+\index{````~SplayTree@{$\sim$SplayTree}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SplayTree()}{~SplayTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{structsplay__tree_1_1SplayTree}{Splay\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a2f4c63a201ae3d63d08229382dcbfc67}\label{structsplay__tree_1_1SplayTree_a2f4c63a201ae3d63d08229382dcbfc67}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!begin@{begin}}
 \index{begin@{begin}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a2f4c63a201ae3d63d08229382dcbfc67_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a2f4c63a201ae3d63d08229382dcbfc67}\label{structsplay__tree_1_1SplayTree_a2f4c63a201ae3d63d08229382dcbfc67}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb31da230d62a50b}\label{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb31da230d62a50b}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!destroy@{destroy}}
 \index{destroy@{destroy}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 static void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
@@ -130,10 +189,17 @@ Destroy the subtree nodeHere is the caller graph for this function\+:\nopagebrea
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb31da230d62a50b_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}\label{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}} 
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb31da230d62a50b}\label{structsplay__tree_1_1SplayTree_ac6144f6ba3df06f3eb31da230d62a50b}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Destroy the subtree node\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}\label{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!empty@{empty}}
 \index{empty@{empty}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 bool \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -144,31 +210,47 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}\label{structsplay__tree_1_1SplayTree_a91876a3a77e0f9c9c8550bf527a2f96f}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a45aa483490efb984be745d3847061eba}\label{structsplay__tree_1_1SplayTree_a45aa483490efb984be745d3847061eba}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!end@{end}}
 \index{end@{end}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{end()}{end()}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a45aa483490efb984be745d3847061eba_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a45aa483490efb984be745d3847061eba}\label{structsplay__tree_1_1SplayTree_a45aa483490efb984be745d3847061eba}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!end@{end}}
+\index{end@{end}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_1_1iterator}{iterator}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc}\label{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!erase@{erase}}
 \index{erase@{erase}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{const T \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -190,10 +272,36 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=201pt]{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc}\label{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{const T \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Erases the node with key key from the splay tree. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{structsplay__tree_1_1SplayTree_a3c4ae0ba499f4f13a60602ca082365fc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924}\label{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!erase@{erase}}
 \index{erase@{erase}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -204,17 +312,41 @@ Erase node x from the splay treeHere is the call graph for this function\+:\nopa
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924}\label{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Erase node x from the splay treeHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a967e320e3d33cad8b0a9c30cd51ed924_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_ac3a1a0fa259a0f23787211fb94152acd}\label{structsplay__tree_1_1SplayTree_ac3a1a0fa259a0f23787211fb94152acd}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!extremum@{extremum}}
 \index{extremum@{extremum}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{extremum()}{extremum()}}
+\doxysubsubsection{\texorpdfstring{extremum()}{extremum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$bool i$>$ \\
+static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::extremum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Return the extremum of the subtree x. Minimum if i is false, maximum if i is true.\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_ac3a1a0fa259a0f23787211fb94152acd}\label{structsplay__tree_1_1SplayTree_ac3a1a0fa259a0f23787211fb94152acd}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!extremum@{extremum}}
+\index{extremum@{extremum}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{extremum()}{extremum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 template$<$bool i$>$ \\
 static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::extremum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
@@ -222,21 +354,29 @@ static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da101
 Return the extremum of the subtree x. Minimum if i is false, maximum if i is true.\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a63ec7e70e6422bbf64cb0b2e1bf497a9}\label{structsplay__tree_1_1SplayTree_a63ec7e70e6422bbf64cb0b2e1bf497a9}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!find@{find}}
 \index{find@{find}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{find()}{find()}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns node with key key Here is the caller graph for this function\+:\nopagebreak
+Returns node with key key Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a63ec7e70e6422bbf64cb0b2e1bf497a9_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}\label{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}} 
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a63ec7e70e6422bbf64cb0b2e1bf497a9}\label{structsplay__tree_1_1SplayTree_a63ec7e70e6422bbf64cb0b2e1bf497a9}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!find@{find}}
+\index{find@{find}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns node with key key \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}\label{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!insert@{insert}}
 \index{insert@{insert}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -247,10 +387,25 @@ Insert key key into the splay treeHere is the call graph for this function\+:\no
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}\label{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert key key into the splay treeHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a2bf075a9e6a46e3f9b61e7b00b546707_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1}\label{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!insert@{insert}}
 \index{insert@{insert}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -261,17 +416,25 @@ Insert node x into the splay treeHere is the call graph for this function\+:\nop
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}\label{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}} 
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1}\label{structsplay__tree_1_1SplayTree_a80ab90fbd7be1405ae05399b0fc2f2f1}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert node x into the splay tree\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}\label{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!join@{join}}
 \index{join@{join}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{join()}{join()}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{a,  }\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
@@ -282,17 +445,32 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}\label{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!join@{join}}
+\index{join@{join}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{a,  }\item[{\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$const}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a21a513a7ac2715f280d2a89b3890722a_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da}\label{structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!size@{size}}
 \index{size@{size}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{size()}{size()}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -300,22 +478,34 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Returns the number of nodes in the splay tree. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da}\label{structsplay__tree_1_1SplayTree_a9dc668b2583940705651fc11072d47da}} 
+\index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!size@{size}}
+\index{size@{size}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of nodes in the splay tree. 
+
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a673d3706c5c3e58495775af5aac944c9}\label{structsplay__tree_1_1SplayTree_a673d3706c5c3e58495775af5aac944c9}} 
+\mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a43c37e09882abec66c0871d4a678ae45}\label{structsplay__tree_1_1SplayTree_a43c37e09882abec66c0871d4a678ae45}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!root@{root}}
 \index{root@{root}!splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{root}{root}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}}$\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::root \{\}}
+\mbox{\hyperlink{structsplay__tree_1_1SplayTree_a7ebf6727cb412c312c2da10112ff4db4}{Node}} $\ast$ \mbox{\hyperlink{structsplay__tree_1_1SplayTree}{splay\+\_\+tree\+::\+Splay\+Tree}}$<$ T $>$\+::root \{\}}
 
 Root node \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a7adb23c86a9cb77d3a9d8afbaba65cf7}\label{structsplay__tree_1_1SplayTree_a7adb23c86a9cb77d3a9d8afbaba65cf7}} 
 \index{splay\_tree::SplayTree$<$ T $>$@{splay\_tree::SplayTree$<$ T $>$}!size\_@{size\_}}
@@ -326,6 +516,7 @@ Root node \mbox{\Hypertarget{structsplay__tree_1_1SplayTree_a7adb23c86a9cb77d3a9
 
 Size of the splay tree 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{splay__tree_8hpp}{splay\+\_\+tree.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{splay__tree_8hpp}{splay\+\_\+tree.\+hpp}}\item 
+/home/ram/\+Omni\+Template/src/test/\mbox{\hyperlink{test__compiled_8cpp}{test\+\_\+compiled.\+cpp}}\end{DoxyCompactItemize}

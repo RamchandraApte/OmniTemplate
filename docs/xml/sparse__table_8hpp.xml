@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="sparse__table_8hpp" kind="file" language="C++">
     <compoundname>sparse_table.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
@@ -19,10 +19,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -39,11 +39,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -51,27 +51,27 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -81,7 +81,7 @@
         <link refid="sparse__table_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -89,7 +89,7 @@
       <node id="6">
         <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
         <link refid="test__hld_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -100,20 +100,18 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
         <link refid="test_8cpp"/>
       </node>
       <node id="2">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
-      <node id="4">
+      <node id="3">
         <label>/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</label>
         <link refid="test__sparse__table_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -128,71 +126,81 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3" refid="namespacesparse__table" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table" kindref="compound">sparse_table</ref><sp/>{</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>return<sp/>identity<sp/>when<sp/>l<sp/>=<sp/>r</highlight></codeline>
-<codeline lineno="8" refid="classsparse__table_1_1SparseTable" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Semilattice&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsparse__table_1_1SparseTable" kindref="compound">SparseTable</ref><sp/>{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="10" refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" kindref="member">SparseTable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;T&gt;<sp/>&amp;arr)<sp/>:<sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>(<ref refid="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" kindref="member">log_ceil</ref>(arr.size(),<sp/>2),<sp/>vector&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(arr.size()))<sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>[0]<sp/>=<sp/>arr;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(pw,<sp/>1,<sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>.size())<sp/>{</highlight></codeline>
+<codeline lineno="7" refid="classsparse__table_1_1SparseTable" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Semilattice&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsparse__table_1_1SparseTable" kindref="compound">SparseTable</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" kindref="member">SparseTable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;T&gt;<sp/>&amp;arr)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>(<ref refid="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" kindref="member">log_ceil</ref>(arr.size(),<sp/>2),<sp/>vector&lt;<ref refid="structll" kindref="compound">ll</ref>&gt;(arr.size()))<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>[0]<sp/>=<sp/>arr;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(pw,<sp/>1,<sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>.size())<sp/>{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>arr.size())<sp/>{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>half<sp/>=<sp/>1LL<sp/>&lt;&lt;<sp/>(pw<sp/>-<sp/>1);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>[pw][i]<sp/>=<sp/>Semilattice{}(<ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>[pw<sp/>-<sp/>1][i],<sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>[pw<sp/>-<sp/>1][min(i<sp/>+<sp/>half,<sp/><ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(arr)<sp/>-<sp/>1)]);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="19" refid="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>r<sp/>-<sp/>l;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>put<sp/>this<sp/>in<sp/>a<sp/>function</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>floor_log2<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>)<sp/>*<sp/>CHAR_BIT)<sp/>-<sp/>1<sp/>-<sp/>__builtin_clzll(len);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Semilattice{}(<ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>[floor_log2][l],<sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>[floor_log2][r<sp/>-<sp/>(1LL<sp/>&lt;&lt;<sp/>floor_log2)]);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="27" refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/><ref refid="classsparse__table_1_1SparseTable_1a180b42df8629e589b65c7a82f6c40808" kindref="member">meet</ref>;<sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="35" refid="classsparse__table_1_1DisjointSparseTable" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Mono</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsparse__table_1_1DisjointSparseTable" kindref="compound">DisjointSparseTable</ref><sp/>{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="37" refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" kindref="member">DisjointSparseTable</ref>(vector&lt;T&gt;<sp/>arr)<sp/>:<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>(<ref refid="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" kindref="member">log_ceil</ref>(arr.size(),<sp/>2),<sp/>vector&lt;T&gt;(<ref refid="namespaceutility_1a14dc21f495425ccdc1ec35fe45d45591" kindref="member">power_ceil</ref>(arr.size(),<sp/>2)))<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr.resize(<ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[0].size(),<sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(Monoid{},<sp/>T{}));</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(level,<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>.size())<sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(block,<sp/>1LL<sp/>&lt;&lt;<sp/>level)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>half<sp/>of<sp/>the<sp/>block<sp/>contains<sp/>suffix<sp/>sums,<sp/>the<sp/>second<sp/>half<sp/>contains<sp/>prefix<sp/>sums</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>start<sp/>=<sp/>block<sp/>&lt;&lt;<sp/>(<ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>.size()<sp/>-<sp/>level);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>end<sp/>=<sp/>(block<sp/>+<sp/>1)<sp/>&lt;&lt;<sp/>(<ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>.size()<sp/>-<sp/>level);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>middle<sp/>=<sp/>(end<sp/>+<sp/>start)<sp/>/<sp/>2;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>arr[middle];</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[level][middle]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(x,<sp/>middle<sp/>+<sp/>1,<sp/>end)<sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>Monoid{}(val,<sp/>arr[x]);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[level][x]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>arr[middle<sp/>-<sp/>1];</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[level][middle<sp/>-<sp/>1]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" kindref="member">fr</ref>(x,<sp/>start,<sp/>middle<sp/>-<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>Monoid{}(val,<sp/>arr[x]);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[level][x]<sp/>=<sp/>val;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61" refid="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(l<sp/>&lt;<sp/>r);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>half<sp/>open<sp/>interval<sp/>to<sp/>closed<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--r;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(l<sp/>==<sp/>r){</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>.back()[l];</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>of<sp/>the<sp/>leftmost<sp/>different<sp/>bit<sp/>from<sp/>the<sp/>right</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pos_diff<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>)<sp/>*<sp/>CHAR_BIT)<sp/>-<sp/>1<sp/>-<sp/>__builtin_clzll(l<sp/>^<sp/>r);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>.size()<sp/>-<sp/>1<sp/>-<sp/>pos_diff;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Monoid{}(<ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[level][l],<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>[level][r]);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="75" refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;T&gt;&gt;<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a9eca81324cb28eea79212d5385d6d2c1" kindref="member">sum</ref>;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sparse_table</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table" kindref="compound">sparse_table</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>[pw][i]<sp/>=<sp/>Semilattice{}(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>[pw<sp/>-<sp/>1][i],<sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>[pw<sp/>-<sp/>1][min(i<sp/>+<sp/>half,<sp/><ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(arr)<sp/>-<sp/>1)]);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20" refid="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classsparse__table_1_1SparseTable_1a0ad8b0233da443f1f842b27183f05265" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>r<sp/>-<sp/>l;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(Semilattice{},<sp/>T{});</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>put<sp/>this<sp/>in<sp/>a<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>floor_log2<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>)<sp/>*<sp/>CHAR_BIT)<sp/>-<sp/>1<sp/>-<sp/>__builtin_clzll(len);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Semilattice{}(<ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>[floor_log2][l],</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>[floor_log2][r<sp/>-<sp/>(1LL<sp/>&lt;&lt;<sp/>floor_log2)]);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/><ref refid="classsparse__table_1_1SparseTable_1a8d0493a9c23b2db01c53ad88fb4332f0" kindref="member">meet</ref>;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40" refid="classsparse__table_1_1DisjointSparseTable" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Mono</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsparse__table_1_1DisjointSparseTable" kindref="compound">DisjointSparseTable</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1aef1bf29d0fe4ca8fa924001bf90fde22" kindref="member">DisjointSparseTable</ref>(vector&lt;T&gt;<sp/>arr)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>(<ref refid="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" kindref="member">log_ceil</ref>(arr.size(),<sp/>2),<sp/>vector&lt;T&gt;(<ref refid="namespaceutility_1a14dc21f495425ccdc1ec35fe45d45591" kindref="member">power_ceil</ref>(arr.size(),<sp/>2)))<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr.resize(<ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[0].size(),<sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(Monoid{},<sp/>T{}));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(level,<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>.size())<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(block,<sp/>1LL<sp/>&lt;&lt;<sp/>level)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>half<sp/>of<sp/>the<sp/>block<sp/>contains<sp/>suffix<sp/>sums,<sp/>the<sp/>second<sp/>half</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>contains<sp/>prefix<sp/>sums</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>start<sp/>=<sp/>block<sp/>&lt;&lt;<sp/>(<ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>.size()<sp/>-<sp/>level);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>end<sp/>=<sp/>(block<sp/>+<sp/>1)<sp/>&lt;&lt;<sp/>(<ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>.size()<sp/>-<sp/>level);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>middle<sp/>=<sp/>(end<sp/>+<sp/>start)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>arr[middle];</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[level][middle]<sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(x,<sp/>middle<sp/>+<sp/>1,<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>Monoid{}(val,<sp/>arr[x]);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[level][x]<sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>arr[middle<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[level][middle<sp/>-<sp/>1]<sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" kindref="member">fr</ref>(x,<sp/>start,<sp/>middle<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>val<sp/>=<sp/>Monoid{}(val,<sp/>arr[x]);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[level][x]<sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68" refid="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1a771c763802ff4f1679749951ae94393e" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>l,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(l<sp/>&lt;=<sp/>r);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(l<sp/>==<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(Monoid{},<sp/>T{});</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(l<sp/>+<sp/>1<sp/>==<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>.back()[l];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>half<sp/>open<sp/>interval<sp/>to<sp/>closed<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--r;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>of<sp/>the<sp/>leftmost<sp/>different<sp/>bit<sp/>from<sp/>the<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pos_diff<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>)<sp/>*<sp/>CHAR_BIT)<sp/>-<sp/>1<sp/>-<sp/>__builtin_clzll(l<sp/>^<sp/>r);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>level<sp/>=<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>.size()<sp/>-<sp/>1<sp/>-<sp/>pos_diff;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Monoid{}(<ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[level][l],<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>[level][r]);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85" refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;T&gt;&gt;<sp/><ref refid="classsparse__table_1_1DisjointSparseTable_1afd23a4ac9f85358855420c012795a2e3" kindref="member">sum</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sparse_table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table" kindref="compound">sparse_table</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/ds/sparse_table.hpp"/>
   </compounddef>

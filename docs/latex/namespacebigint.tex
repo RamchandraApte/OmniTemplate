@@ -1,22 +1,50 @@
 \hypertarget{namespacebigint}{}\doxysection{bigint Namespace Reference}
 \label{namespacebigint}\index{bigint@{bigint}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebigint_1_1test}{test}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structbigint_1_1bigint}{bigint}}
+struct \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacebigint_af4352ea3f90e44bbfe72018e96a89bce}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structbigint_1_1bigint}{bigint}} const \&a)
+{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacebigint_a33b1bd079994beb869f90c2ed86fe8c5}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} const \&bigint)
+\item 
+auto \mbox{\hyperlink{namespacebigint_a0499d0013049b30834ebbcffc14d8f92}{operator+}} (\mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} const \&a, \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} const \&b)
+\item 
+bool \mbox{\hyperlink{namespacebigint_a1c313eef0ad422d61739b7e3cd97d849}{operator==}} (const \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} \&a, const \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} \&b)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacebigint_af4352ea3f90e44bbfe72018e96a89bce}\label{namespacebigint_af4352ea3f90e44bbfe72018e96a89bce}} 
+\mbox{\Hypertarget{namespacebigint_a0499d0013049b30834ebbcffc14d8f92}\label{namespacebigint_a0499d0013049b30834ebbcffc14d8f92}} 
+\index{bigint@{bigint}!operator+@{operator+}}
+\index{operator+@{operator+}!bigint@{bigint}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily auto bigint\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} const \&}]{a,  }\item[{\mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} const \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebigint_a33b1bd079994beb869f90c2ed86fe8c5}\label{namespacebigint_a33b1bd079994beb869f90c2ed86fe8c5}} 
 \index{bigint@{bigint}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!bigint@{bigint}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
 {\footnotesize\ttfamily template$<$typename Stream $>$ \\
-auto\& bigint\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structbigint_1_1bigint}{bigint}} const \&}]{a }\end{DoxyParamCaption})}
+auto\& bigint\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} const \&}]{bigint }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{namespacebigint_a1c313eef0ad422d61739b7e3cd97d849}\label{namespacebigint_a1c313eef0ad422d61739b7e3cd97d849}} 
+\index{bigint@{bigint}!operator==@{operator==}}
+\index{operator==@{operator==}!bigint@{bigint}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool bigint\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} \&}]{a,  }\item[{const \mbox{\hyperlink{structbigint_1_1BigInt}{Big\+Int}} \&}]{b }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{namespacebigint_a1c313eef0ad422d61739b7e3cd97d849_cgraph}
+\end{center}
+\end{figure}

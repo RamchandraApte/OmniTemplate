@@ -122,7 +122,12 @@ $O(n)$
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a8d5d8abcf2da6437d67365cf2f70ef66" class="m-doc">HLD</a>(</span><span class="m-doc-wrap">const <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph,
+              <span class="m-doc-wrap-bumper"><a href="#a8d5d8abcf2da6437d67365cf2f70ef66" class="m-doc">HLD</a>(</span><span class="m-doc-wrap">const <a href="structgraph__theory_1_1GraphAdj.html" class="m-doc">GraphAdj</a>&amp; graph,
+              const vector&lt;T&gt;&amp; data) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a8d5d8abcf2da6437d67365cf2f70ef66" class="m-doc">HLD</a>(</span><span class="m-doc-wrap">const <a href="structgraph__theory_1_1GraphAdj.html" class="m-doc">GraphAdj</a>&amp; graph,
               const vector&lt;T&gt;&amp; data) <span class="m-label m-flat m-info">explicit</span> </span>
             </dt>
             <dd><span></span></dd>
@@ -149,6 +154,24 @@ $O(n)$
               const T&amp; val)</span>
             </dt>
             <dd>Update the values of vertices on the path from u to v by val.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename Func&gt;</div>
+              <span class="m-doc-wrap-bumper">void <a href="#ace75fa88e8df29573405e9241c56baf0" class="m-doc">func_path</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <a href="structll.html" class="m-doc">ll</a> v,
+              const Func&amp; func)</span>
+            </dt>
+            <dd>Calls func (could be an update or query function, for example) on each heavy chain in the path.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a89ad91fa5429a48db553da8d44849415" class="m-doc">query</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <a href="structll.html" class="m-doc">ll</a> v) -&gt; T</span>
+            </dt>
+            <dd>Returns the Monoid sum over values of vertices on the path from u to v.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a5010452fe04b89ecba385cec7a0c183f" class="m-doc">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <a href="structll.html" class="m-doc">ll</a> v,
+              const T&amp; val)</span>
+            </dt>
+            <dd>Update the values of vertices on the path from u to v by val.</dd>
           </dl>
         </section>
         <section>
@@ -158,7 +181,19 @@ $O(n)$
               <div class="m-doc-template">
                 template&lt;typename T, typename Monoid, typename QueryDS&gt;
               </div>
-              <span class="m-doc-wrap-bumper"> hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8d5d8abcf2da6437d67365cf2f70ef66" class="m-doc-self">HLD</a>(</span><span class="m-doc-wrap">const <a href="namespacegraph__theory.html#a5ab361e566cb00eee5329a02c4553780" class="m-doc">GraphAdj</a>&amp; graph,
+              <span class="m-doc-wrap-bumper"> hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8d5d8abcf2da6437d67365cf2f70ef66" class="m-doc-self">HLD</a>(</span><span class="m-doc-wrap">const <a href="structgraph__theory_1_1GraphAdj.html" class="m-doc">GraphAdj</a>&amp; graph,
+              const vector&lt;T&gt;&amp; data) <span class="m-label m-info">explicit</span> </span></span>
+            </h3>
+            <p><span></span></p>
+<p>&lt; Data permuted by pos</p>
+          </div></section>
+          <section class="m-doc-details" id="a8d5d8abcf2da6437d67365cf2f70ef66"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Monoid, typename QueryDS&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8d5d8abcf2da6437d67365cf2f70ef66" class="m-doc-self">HLD</a>(</span><span class="m-doc-wrap">const <a href="structgraph__theory_1_1GraphAdj.html" class="m-doc">GraphAdj</a>&amp; graph,
               const vector&lt;T&gt;&amp; data) <span class="m-label m-info">explicit</span> </span></span>
             </h3>
             <p><span></span></p>
@@ -194,6 +229,63 @@ $O(n)$
                 </tr>
               </tfoot>
             </table>
+          </div></section>
+          <section class="m-doc-details" id="ace75fa88e8df29573405e9241c56baf0"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Monoid, typename QueryDS&gt;
+                template&lt;typename Func&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ace75fa88e8df29573405e9241c56baf0" class="m-doc-self">func_path</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <a href="structll.html" class="m-doc">ll</a> v,
+              const Func&amp; func)</span></span>
+            </h3>
+            <p>Calls func (could be an update or query function, for example) on each heavy chain in the path.</p>
+          </div></section>
+          <section class="m-doc-details" id="a89ad91fa5429a48db553da8d44849415"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Monoid, typename QueryDS&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a89ad91fa5429a48db553da8d44849415" class="m-doc-self">query</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <a href="structll.html" class="m-doc">ll</a> v)</span></span>
+            </h3>
+            <p>Returns the Monoid sum over values of vertices on the path from u to v.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">u</td>
+                  <td>The start vertex.</td>
+                </tr>
+                <tr>
+                  <td>v</td>
+                  <td>The end vertex.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>T</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a5010452fe04b89ecba385cec7a0c183f"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Monoid, typename QueryDS&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void hld::<wbr />HLD&lt;T, Monoid, QueryDS&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5010452fe04b89ecba385cec7a0c183f" class="m-doc-self">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> u,
+              <a href="structll.html" class="m-doc">ll</a> v,
+              const T&amp; val)</span></span>
+            </h3>
+            <p>Update the values of vertices on the path from u to v by val.</p>
           </div></section>
         </section>
       </div>
@@ -240,7 +332,7 @@ $O(n)$
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

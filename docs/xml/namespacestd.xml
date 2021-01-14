@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="namespacestd" kind="namespace" language="C++">
     <compoundname>std</compoundname>
     <innerclass refid="classstd_1_1allocator" prot="public">std::allocator</innerclass>
@@ -33,11 +33,15 @@
     <innerclass refid="classstd_1_1exception" prot="public">std::exception</innerclass>
     <innerclass refid="classstd_1_1forward__list" prot="public">std::forward_list</innerclass>
     <innerclass refid="classstd_1_1fstream" prot="public">std::fstream</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01ll_01_4" prot="public">std::hash&lt; ll &gt;</innerclass>
     <innerclass refid="structstd_1_1hash_3_01modulo_01_4" prot="public">std::hash&lt; modulo &gt;</innerclass>
     <innerclass refid="classstd_1_1ifstream" prot="public">std::ifstream</innerclass>
     <innerclass refid="classstd_1_1invalid__argument" prot="public">std::invalid_argument</innerclass>
     <innerclass refid="classstd_1_1ios" prot="public">std::ios</innerclass>
     <innerclass refid="classstd_1_1ios__base" prot="public">std::ios_base</innerclass>
+    <innerclass refid="structstd_1_1is__integral_3_01ll_01_4" prot="public">std::is_integral&lt; ll &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__signed_3_01ll_01_4" prot="public">std::is_signed&lt; ll &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__unsigned_3_01ll_01_4" prot="public">std::is_unsigned&lt; ll &gt;</innerclass>
     <innerclass refid="classstd_1_1istream" prot="public">std::istream</innerclass>
     <innerclass refid="classstd_1_1istringstream" prot="public">std::istringstream</innerclass>
     <innerclass refid="classstd_1_1jthread" prot="public">std::jthread</innerclass>
@@ -49,6 +53,7 @@
     <innerclass refid="classstd_1_1multimap" prot="public">std::multimap</innerclass>
     <innerclass refid="classstd_1_1multiset" prot="public">std::multiset</innerclass>
     <innerclass refid="classstd_1_1mutex" prot="public">std::mutex</innerclass>
+    <innerclass refid="structstd_1_1numeric__limits_3_01ll_01_4" prot="public">std::numeric_limits&lt; ll &gt;</innerclass>
     <innerclass refid="classstd_1_1ofstream" prot="public">std::ofstream</innerclass>
     <innerclass refid="classstd_1_1ostream" prot="public">std::ostream</innerclass>
     <innerclass refid="classstd_1_1ostringstream" prot="public">std::ostringstream</innerclass>
@@ -102,7 +107,7 @@
     <innerclass refid="classstd_1_1wstring__view" prot="public">std::wstring_view</innerclass>
     <innerclass refid="classstd_1_1wstringstream" prot="public">std::wstringstream</innerclass>
       <sectiondef kind="func">
-      <memberdef kind="function" id="io_8hpp_1a40cf53faa8f3a9512c4dad9945ecb425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="io_8hpp_1a2939a795e467c7daa07c80b7456d78b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename Stream</type>
@@ -114,7 +119,7 @@
           </param>
         </templateparamlist>
         <type>auto &amp;</type>
-        <definition>auto&amp; std::operator&lt;&lt;</definition>
+        <definition>auto &amp; std::operator&lt;&lt;</definition>
         <argsstring>(Stream &amp;os, pair&lt; T... &gt; const &amp;p)</argsstring>
         <name>operator&lt;&lt;</name>
         <param>
@@ -131,8 +136,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="53" column="1" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="53" bodyend="55"/>
-        <references refid="core_2all_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" compoundref="core_2all_8hpp" startline="75">delim</references>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="46" column="15" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="46" bodyend="48"/>
+        <references refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" compoundref="core_2all_8hpp" startline="96">delim</references>
         <references refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="28" endline="35">debug_tools::simple_tp</references>
       </memberdef>
       <memberdef kind="function" id="io_8hpp_1a2f89b21c3f2e0f24bcda02b8d1432695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -162,8 +167,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="58" column="15" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="58" bodyend="72"/>
-        <references refid="core_2all_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" compoundref="core_2all_8hpp" startline="75">delim</references>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="52" column="1" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="52" bodyend="67"/>
+        <references refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" compoundref="core_2all_8hpp" startline="96">delim</references>
         <references refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="28" endline="35">debug_tools::simple_tp</references>
       </memberdef>
       <memberdef kind="function" id="io_8hpp_1a26ed2eacd641d0bb463e15dd04d3dd63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -190,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="74" column="1" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="74" bodyend="80"/>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="69" column="1" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="69" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="cht_8hpp_1a18b063c150d95a5ec77dab71218c4f48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -211,11 +216,74 @@
         </detaileddescription>
         <inbodydescription>
 <para>Compare points a and b lexicographically</para>
+<para>Compare points a and b lexicographically</para>
+<para>Compare points a and b lexicographically</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/cht.hpp" line="4" column="1" bodyfile="/home/ram/OmniTemplate/src/ds/cht.hpp" bodystart="4" bodyend="7"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" compoundref="utility_8hpp" startline="39" endline="41">utility::key_compare</references>
-        <references refid="range_8hpp_1adf37877debb40c87ce158743d128a8df" compoundref="range_8hpp" startline="39" endline="39">operator&lt;</references>
+        <references refid="namespaceutility_1a3f485f407bcf34b3ad3831f7fda882e4" compoundref="utility_8hpp" startline="52" endline="56">utility::key_compare</references>
+        <references refid="range_8hpp_1adf37877debb40c87ce158743d128a8df" compoundref="range_8hpp" startline="38" endline="38">operator&lt;</references>
+      </memberdef>
+      <memberdef kind="function" id="test__compiled_8cpp_1a49bbb01635e28db8562b0e6878febef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Stream</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto &amp;</type>
+        <definition>auto&amp; std::operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;os, optional&lt; T &gt; const &amp;opt)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>optional&lt; T &gt; const &amp;</type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="425" column="15" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="425" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="my__int_8hpp_1a9c62d70a4d570035afd252221695db29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ll_t</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;is_same_v&lt;ll_t, <ref refid="structll" kindref="compound">ll</ref>&gt;, void&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto std::operator+</definition>
+        <argsstring>(T a, ll_t b)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>T</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>ll_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/utility/my_int.hpp" line="76" column="6" bodyfile="/home/ram/OmniTemplate/src/utility/my_int.hpp" bodystart="76" bodyend="78"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

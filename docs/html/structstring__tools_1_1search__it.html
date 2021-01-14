@@ -45,7 +45,7 @@
       <div class="m-col-l-10 m-push-l-1">
         <h1>
           <span class="m-breadcrumb"><a href="namespacestring__tools.html">string_tools</a>::<wbr/></span>search_it <span class="m-thin">struct</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;/home/ram/OmniTemplate/src/utility/string.hpp&gt;</a></div>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;/home/ram/OmniTemplate/src/string/string.hpp&gt;</a></div>
         </h1>
         <div class="m-block m-default">
           <h3>Contents</h3>
@@ -80,6 +80,10 @@
               using <a href="#acb50112dd85865f007cd61cce21075ca" class="m-doc-self">iterator_category</a> = input_iterator_tag
             </dt>
             <dd><span></span></dd>
+            <dt>
+              using <a href="#acb50112dd85865f007cd61cce21075ca" class="m-doc">iterator_category</a> = input_iterator_tag
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="typeless-methods">
@@ -92,6 +96,15 @@
             <dd><span></span></dd>
             <dt id="a1605669d491f38f76e0f32902a4b0ce7">
               <span class="m-doc-wrap-bumper"><a href="#a1605669d491f38f76e0f32902a4b0ce7" class="m-doc-self">search_it</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#aca022e021ec03287386571ef78a8e954" class="m-doc">search_it</a>(</span><span class="m-doc-wrap">string const&amp; t_,
+              string const&amp; s_)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a1605669d491f38f76e0f32902a4b0ce7" class="m-doc">search_it</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">explicit</span> </span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -107,17 +120,25 @@
               <span class="m-doc-wrap-bumper">void <a href="#ae3b12022612273c38ee27b30942ded0b" class="m-doc-self">operator++</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af1edaa6e375d857575d012a55cdd4980" class="m-doc">operator*</a>(</span><span class="m-doc-wrap">) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#ae3b12022612273c38ee27b30942ded0b" class="m-doc">operator++</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="af4f997651360785c26b02a9dc4825318">
-              const string&amp; <a href="#af4f997651360785c26b02a9dc4825318" class="m-doc-self">t</a>
+            <dt id="a14e5ffebdd56dc850d3f567f7a2bcfea">
+              string const &amp; <a href="#a14e5ffebdd56dc850d3f567f7a2bcfea" class="m-doc-self">t</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="adf1d8385f726abce3cd93b1217f51bbe">
-              const string <a href="#adf1d8385f726abce3cd93b1217f51bbe" class="m-doc-self">s</a>
+            <dt id="a27c559aeb3162c49801b37724cd4312c">
+              string const <a href="#a27c559aeb3162c49801b37724cd4312c" class="m-doc-self">s</a>
             </dt>
             <dd><span></span></dd>
             <dt id="aab70ce1b2fdb25d6476e2a68e3e42fef">
@@ -128,8 +149,8 @@
               const <a href="structll.html" class="m-doc">ll</a> <a href="#a87ec86b38282706ad524ea778ba728b0" class="m-doc-self">ed</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a187978317937eb139741d9f64948adeb">
-              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a187978317937eb139741d9f64948adeb" class="m-doc-self">p</a>
+            <dt id="a3e2ab355700aab9c01656f76e4dec132">
+              vector&lt;<a href="structll.html" class="m-doc">ll</a>&gt; <a href="#a3e2ab355700aab9c01656f76e4dec132" class="m-doc-self">p</a>
             </dt>
             <dd><span></span></dd>
             <dt id="abbec6589aea3d745e199d755d85d554a">
@@ -141,6 +162,48 @@
             </dt>
             <dd><span></span></dd>
           </dl>
+        </section>
+        <section>
+          <h2>Typedef documentation</h2>
+          <section class="m-doc-details" id="acb50112dd85865f007cd61cce21075ca"><div>
+            <h3>
+              using string_tools::<wbr />search_it::<wbr /><a href="#acb50112dd85865f007cd61cce21075ca" class="m-doc-self">iterator_category</a> = input_iterator_tag
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="aca022e021ec03287386571ef78a8e954"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> string_tools::<wbr />search_it::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aca022e021ec03287386571ef78a8e954" class="m-doc-self">search_it</a>(</span><span class="m-doc-wrap">string const&amp; t_,
+              string const&amp; s_)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a1605669d491f38f76e0f32902a4b0ce7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> string_tools::<wbr />search_it::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1605669d491f38f76e0f32902a4b0ce7" class="m-doc-self">search_it</a>(</span><span class="m-doc-wrap">) <span class="m-label m-info">explicit</span> </span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="af1edaa6e375d857575d012a55cdd4980"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">auto string_tools::<wbr />search_it::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af1edaa6e375d857575d012a55cdd4980" class="m-doc-self">operator*</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ae3b12022612273c38ee27b30942ded0b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void string_tools::<wbr />search_it::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae3b12022612273c38ee27b30942ded0b" class="m-doc-self">operator++</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
         </section>
       </div>
     </div>
@@ -186,7 +249,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

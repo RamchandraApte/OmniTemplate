@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="test__utility_8hpp" kind="file" language="C++">
     <compoundname>test_utility.hpp</compoundname>
     <includes refid="utility_8hpp" local="yes">utility.hpp</includes>
@@ -11,7 +11,7 @@
       <node id="7">
         <label>experimental/source_location</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
         <childnode refid="3" relation="include">
@@ -31,9 +31,9 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -58,16 +58,16 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="10">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -111,7 +111,7 @@
 <codeline lineno="17"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="18" refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" kindref="member">test_key_compare</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/>a{24,<sp/>25};</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" kindref="member">key_compare</ref>&lt;greater&lt;&gt;&gt;([&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>i)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a[i];<sp/>})(1,<sp/>0));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a3f485f407bcf34b3ad3831f7fda882e4" kindref="member">key_compare</ref>&lt;greater&lt;&gt;&gt;([&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>i)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a[i];<sp/>})(1,<sp/>0));</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="22" refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" kindref="member">test_bit_ceil</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(0)<sp/>==<sp/>1);</highlight></codeline>
@@ -141,16 +141,27 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(is_same_v&lt;<ref refid="namespaceutility_1a5527c46ab55c32f4bdf48a47564e3cf0" kindref="member">ar_t</ref>&lt;<ref refid="structll" kindref="compound">ll</ref>[2][3]&gt;,<sp/>array&lt;array&lt;ll,<sp/>3&gt;,<sp/>2&gt;&gt;);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(is_same_v&lt;<ref refid="namespaceutility_1a5527c46ab55c32f4bdf48a47564e3cf0" kindref="member">ar_t</ref>&lt;array&lt;ll,<sp/>200&gt;[2][3]&gt;,<sp/>array&lt;array&lt;array&lt;ll,<sp/>200&gt;,<sp/>3&gt;,<sp/>2&gt;&gt;);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="50" refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" kindref="member">test_utility</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a5b509a14966e453c36c0b3263b8c73f3" kindref="member">test_with</ref>();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" kindref="member">test_uniq</ref>();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" kindref="member">test_next_comb</ref>();</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a2a5b83eea34a4e85d3d8ec37b9f1f774" kindref="member">test_ar</ref>();</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" kindref="member">test_bit_ceil</ref>();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" kindref="member">test_key_compare</ref>();</highlight></codeline>
-<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>utility::test</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility_1_1test" kindref="compound">utility::test</ref>;</highlight></codeline>
+<codeline lineno="50" refid="namespaceutility_1_1test_1aa1aed4e58acebcfd6d9150b64f4ad975" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1aa1aed4e58acebcfd6d9150b64f4ad975" kindref="member">test_counting_sort</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>test<sp/>stability</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;ll&gt;<sp/>vec{3,<sp/>1,<sp/>5,<sp/>1,<sp/>2,<sp/>3,<sp/>4};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sorted_vec<sp/>=<sp/>vec;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(sorted_vec));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>count_sorted_vec<sp/>=<sp/>vec;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1a713c1fa985af64dbe0374a15cc3d4383" kindref="member">counting_sort</ref>(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(count_sorted_vec),<sp/>[](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>},<sp/>*max_element(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(vec))<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(count_sorted_vec<sp/>==<sp/>sorted_vec);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60" refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1_1test_1a8aec6a2b496df7ad483a46db1649ea2c" kindref="member">test_utility</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a5b509a14966e453c36c0b3263b8c73f3" kindref="member">test_with</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" kindref="member">test_uniq</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" kindref="member">test_next_comb</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a2a5b83eea34a4e85d3d8ec37b9f1f774" kindref="member">test_ar</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" kindref="member">test_bit_ceil</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" kindref="member">test_key_compare</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1_1test_1aa1aed4e58acebcfd6d9150b64f4ad975" kindref="member">test_counting_sort</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>utility::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility_1_1test" kindref="compound">utility::test</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/test_utility.hpp"/>
   </compounddef>

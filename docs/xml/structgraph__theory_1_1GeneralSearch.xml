@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structgraph__theory_1_1GeneralSearch" kind="struct" language="C++" prot="public">
     <compoundname>graph_theory::GeneralSearch</compoundname>
-    <includes refid="graph_2all_8hpp" local="no">all.hpp</includes>
+    <includes refid="core_8hpp" local="no">core.hpp</includes>
     <templateparamlist>
       <param>
         <type>typename Searcher</type>
@@ -12,9 +12,9 @@
       </param>
     </templateparamlist>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1a8ce5f9c8c5cba4adbbb66eb804363456" prot="public" static="no" mutable="no">
-        <type>const Graph &amp;</type>
-        <definition>const Graph&amp; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::graph</definition>
+      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1ab22ab5308883a177f882564afe0cbf95" prot="public" static="no" mutable="no">
+        <type>Graph const  &amp;</type>
+        <definition>Graph const  &amp; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::graph</definition>
         <argsstring></argsstring>
         <name>graph</name>
         <briefdescription>
@@ -23,12 +23,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="90" column="13" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="90" bodyend="-1"/>
-        <referencedby refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" compoundref="graph_2all_8hpp" startline="96" endline="104">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::operator()</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="98" column="13" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="98" bodyend="-1"/>
+        <referencedby refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" compoundref="core_8hpp" startline="106" endline="114">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::operator()</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1a8f85e90fb507ef03e5280a38c01a72cb" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1abebd4916073c7e7ff088ddddd55be0c8" prot="public" static="no" mutable="no">
         <type>vector&lt; char &gt;</type>
-        <definition>vector&lt;char&gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::visited</definition>
+        <definition>vector&lt; char &gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::visited</definition>
         <argsstring></argsstring>
         <name>visited</name>
         <briefdescription>
@@ -38,12 +38,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="91" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="91" bodyend="-1"/>
-        <referencedby refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" compoundref="graph_2all_8hpp" startline="96" endline="104">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::operator()</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="99" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="99" bodyend="-1"/>
+        <referencedby refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" compoundref="core_8hpp" startline="106" endline="114">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::operator()</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1ab65b2c9f98ace39d40abfaf399c135a7" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1a9738ee2f64e463dc533fe1ff04c885cb" prot="public" static="no" mutable="no">
         <type>deque&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>deque&lt;ll&gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::queue</definition>
+        <definition>deque&lt; ll &gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::queue</definition>
         <argsstring></argsstring>
         <name>queue</name>
         <briefdescription>
@@ -53,11 +53,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="92" column="7" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="92" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="100" column="7" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="100" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1a3ed9b9d45c85402850e22f6e98055045" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1ab8d80b4e0cd248fc612456967f039324" prot="public" static="no" mutable="no">
         <type>vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>vector&lt;ll&gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::parent</definition>
+        <definition>vector&lt; ll &gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::parent</definition>
         <argsstring></argsstring>
         <name>parent</name>
         <briefdescription>
@@ -67,13 +67,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="93" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="93" bodyend="-1"/>
-        <referencedby refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" compoundref="graph_2all_8hpp" startline="105" endline="110">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::add</referencedby>
-        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="48" endline="62">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="101" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="101" bodyend="-1"/>
+        <referencedby refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" compoundref="core_8hpp" startline="115" endline="120">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::add</referencedby>
+        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="50" endline="64">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1aadc7aa595d1aa3509f0ba6ee8489cf36" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structgraph__theory_1_1GeneralSearch_1acbe630ca07775d3fe3596aff2601418e" prot="public" static="no" mutable="no">
         <type>vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>vector&lt;ll&gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::distance</definition>
+        <definition>vector&lt; ll &gt; graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::distance</definition>
         <argsstring></argsstring>
         <name>distance</name>
         <briefdescription>
@@ -83,9 +83,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="94" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="94" bodyend="-1"/>
-        <referencedby refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" compoundref="graph_2all_8hpp" startline="105" endline="110">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::add</referencedby>
-        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="48" endline="62">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="102" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="102" bodyend="-1"/>
+        <referencedby refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" compoundref="core_8hpp" startline="115" endline="120">graph_theory::GeneralSearch&lt; DFS&lt; GraphAdj &gt;, GraphAdj &gt;::add</referencedby>
+        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="50" endline="64">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="95" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="95" bodyend="95"/>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="103" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="103" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="96" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="96" bodyend="104"/>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="106" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="106" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -139,7 +139,59 @@
         <inbodydescription>
 <para>Add vertex j as a child of already visited vertex i in the searcher tree</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="105" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="105" bodyend="110"/>
+        <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="115" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="115" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraph__theory_1_1GeneralSearch_1a5d1bf0cacd1f3e805ac724fc3ffc91ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::GeneralSearch</definition>
+        <argsstring>(const Graph &amp;g_)</argsstring>
+        <name>GeneralSearch</name>
+        <param>
+          <type>const Graph &amp;</type>
+          <declname>g_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="2358" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="2358" bodyend="2360"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="2361" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="2361" bodyend="2369"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graph_theory::GeneralSearch&lt; Searcher, Graph &gt;::add</definition>
+        <argsstring>(const ll child, const ll par)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>child</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>par</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add vertex j as a child of already visited vertex i in the searcher tree</para>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="2370" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="2370" bodyend="2375"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -238,16 +290,19 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/src/graph/all.hpp" line="89" column="34" bodyfile="/home/ram/OmniTemplate/src/graph/all.hpp" bodystart="89" bodyend="111"/>
+    <location file="/home/ram/OmniTemplate/src/graph/core.hpp" line="97" column="14" bodyfile="/home/ram/OmniTemplate/src/graph/core.hpp" bodystart="97" bodyend="121"/>
     <listofallmembers>
       <member refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>add</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1aadc7aa595d1aa3509f0ba6ee8489cf36" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>distance</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1a2f3f6311a56c13381b5439266caaeb7e" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>add</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1acbe630ca07775d3fe3596aff2601418e" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>distance</name></member>
       <member refid="structgraph__theory_1_1GeneralSearch_1a5d1bf0cacd1f3e805ac724fc3ffc91ca" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>GeneralSearch</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1a8ce5f9c8c5cba4adbbb66eb804363456" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>graph</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1a5d1bf0cacd1f3e805ac724fc3ffc91ca" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>GeneralSearch</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1ab22ab5308883a177f882564afe0cbf95" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>graph</name></member>
       <member refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>operator()</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1a3ed9b9d45c85402850e22f6e98055045" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>parent</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1ab65b2c9f98ace39d40abfaf399c135a7" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>queue</name></member>
-      <member refid="structgraph__theory_1_1GeneralSearch_1a8f85e90fb507ef03e5280a38c01a72cb" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>visited</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1aba4f495d3fd8c83c5e28e27315e8d920" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>operator()</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1ab8d80b4e0cd248fc612456967f039324" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>parent</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1a9738ee2f64e463dc533fe1ff04c885cb" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>queue</name></member>
+      <member refid="structgraph__theory_1_1GeneralSearch_1abebd4916073c7e7ff088ddddd55be0c8" prot="public" virt="non-virtual"><scope>graph_theory::GeneralSearch</scope><name>visited</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

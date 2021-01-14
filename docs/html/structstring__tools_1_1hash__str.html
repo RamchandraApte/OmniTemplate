@@ -45,7 +45,7 @@
       <div class="m-col-l-10 m-push-l-1">
         <h1>
           <span class="m-breadcrumb"><a href="namespacestring__tools.html">string_tools</a>::<wbr/></span>hash_str <span class="m-thin">struct</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;/home/ram/OmniTemplate/src/utility/string.hpp&gt;</a></div>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;/home/ram/OmniTemplate/src/string/string.hpp&gt;</a></div>
         </h1>
         <div class="m-block m-default">
           <h3>Contents</h3>
@@ -97,8 +97,8 @@ $O(1)$
         <section id="pub-static-attribs">
           <h2><a href="#pub-static-attribs">Public static variables</a></h2>
           <dl class="m-doc">
-            <dt id="a6a815a0256e241866570471a3f19e1ea">
-              static auto <a href="#a6a815a0256e241866570471a3f19e1ea" class="m-doc-self">lcg_mod</a> <span class="m-label m-flat m-primary">constexpr</span>
+            <dt id="aa9060adc6314cf1ec5d0053f36ae8b2c">
+              static auto <a href="#aa9060adc6314cf1ec5d0053f36ae8b2c" class="m-doc-self">lcg_mod</a> <span class="m-label m-flat m-primary">constexpr</span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -110,6 +110,10 @@ $O(1)$
               <span class="m-doc-wrap-bumper"><a href="#aba56bc5901a45e72721a12256a831e69" class="m-doc-self">hash_str</a>(</span><span class="m-doc-wrap">const string_view str) <span class="m-label m-flat m-info">explicit</span> </span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#aba56bc5901a45e72721a12256a831e69" class="m-doc">hash_str</a>(</span><span class="m-doc-wrap">const string_view str) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -119,24 +123,45 @@ $O(1)$
               <span class="m-doc-wrap-bumper">auto <a href="#a75581b5cc9b3b8bfc41efbe0b395818d" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap">const string_view v) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a75581b5cc9b3b8bfc41efbe0b395818d" class="m-doc">operator()</a>(</span><span class="m-doc-wrap">const string_view v) const -&gt; <a href="structll.html" class="m-doc">ll</a></span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="ac76e86127435197776e56d58da7ac0fe">
-              const char* <a href="#ac76e86127435197776e56d58da7ac0fe" class="m-doc-self">st</a>
+            <dt id="aa3e90f086689a026dca8369ea3e7731a">
+              const char* <a href="#aa3e90f086689a026dca8369ea3e7731a" class="m-doc-self">st</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="afa31acfdc5552d831c95b7987963076b">
-              vector&lt;modulo&gt; <a href="#afa31acfdc5552d831c95b7987963076b" class="m-doc-self">h</a>
+            <dt id="a2230ffd9a6373a583e8e52f822966744">
+              vector&lt;<a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>&gt; <a href="#a2230ffd9a6373a583e8e52f822966744" class="m-doc-self">h</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a9fd079ff6e9ccf0a24a43a553a09358a">
-              vector&lt;modulo&gt; <a href="#a9fd079ff6e9ccf0a24a43a553a09358a" class="m-doc-self">p</a>
+            <dt id="a010f516d75bf3e9084b1e0689d2fd024">
+              vector&lt;<a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>&gt; <a href="#a010f516d75bf3e9084b1e0689d2fd024" class="m-doc-self">p</a>
             </dt>
             <dd><span></span></dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="aba56bc5901a45e72721a12256a831e69"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> string_tools::<wbr />hash_str::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aba56bc5901a45e72721a12256a831e69" class="m-doc-self">hash_str</a>(</span><span class="m-doc-wrap">const string_view str) <span class="m-label m-info">explicit</span> </span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a75581b5cc9b3b8bfc41efbe0b395818d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> string_tools::<wbr />hash_str::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a75581b5cc9b3b8bfc41efbe0b395818d" class="m-doc-self">operator()</a>(</span><span class="m-doc-wrap">const string_view v) const</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
         </section>
       </div>
     </div>
@@ -182,7 +207,7 @@ $O(1)$
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

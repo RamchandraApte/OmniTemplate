@@ -53,7 +53,6 @@
             <li>
               Reference
               <ul>
-                <li><a href="#nested-classes">Classes</a></li>
                 <li><a href="#typedef-members">Typedefs</a></li>
                 <li><a href="#func-members">Functions</a></li>
                 <li><a href="#define-members">Defines</a></li>
@@ -61,25 +60,15 @@
             </li>
           </ul>
         </div>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
-          <dl class="m-doc">
-            <dt>
-              struct <a href="structMax.html" class="m-doc">Max</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              struct <a href="structMin.html" class="m-doc">Min</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
         <section id="typedef-members">
           <h2><a href="#typedef-members">Typedefs</a></h2>
           <dl class="m-doc">
-            <dt id="a64c6323262b07d406b77207ebe2d87b5">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              using <a href="#a64c6323262b07d406b77207ebe2d87b5" class="m-doc-self">bin_op</a> = T(*)(T, T)
+            <dt id="a8ca39513ee57e00e1d6eecf32fd87035">
+              using <a href="#a8ca39513ee57e00e1d6eecf32fd87035" class="m-doc-self">Max</a> = struct { template&lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp; ... args) const { return(max)(forward&lt;decltype(args)&gt;(args)...)
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6e5336c573515260e7a624f1f72924a1">
+              using <a href="#a6e5336c573515260e7a624f1f72924a1" class="m-doc-self">Min</a> = struct { template&lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp; ... args) const { return(min)(forward&lt;decltype(args)&gt;(args)...)
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -201,14 +190,6 @@
               enable_if_t&lt;!is_same&lt;typename iterator_traits&lt;decltype(it)&gt;::iterator_category, random_access_iterator_tag&gt;::value, <a href="structll.html" class="m-doc">ll</a>&gt; n) -&gt; auto</span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ac969ae49524a67aba9be0f061955ef23">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac969ae49524a67aba9be0f061955ef23" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap"><a href="operations_8hpp.html#a64c6323262b07d406b77207ebe2d87b5" class="m-doc">bin_<wbr />op</a>&lt;<a href="structll.html" class="m-doc">ll</a> const&amp;&gt; const&amp; f) -&gt; <a href="structll.html" class="m-doc">ll</a> <span class="m-label m-flat m-primary">constexpr</span></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a1927210d55cc1384803f4a609d7174ee">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1927210d55cc1384803f4a609d7174ee" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap"><a href="operations_8hpp.html#a64c6323262b07d406b77207ebe2d87b5" class="m-doc">bin_<wbr />op</a>&lt;<a href="structll.html" class="m-doc">ll</a>&gt; const&amp; f) -&gt; <a href="structll.html" class="m-doc">ll</a> <span class="m-label m-flat m-primary">constexpr</span></span>
-            </dt>
-            <dd><span></span></dd>
             <dt id="a09af32a8d21cf0ca5017ce40502a2a09">
               <span class="m-doc-wrap-bumper">auto <a href="#a09af32a8d21cf0ca5017ce40502a2a09" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap">plus&lt;&gt;,
               <a href="structll.html" class="m-doc">ll</a>) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
@@ -220,12 +201,12 @@
             </dt>
             <dd><span></span></dd>
             <dt id="a19000e539a20acfdcd7e8fdce1d970f4">
-              <span class="m-doc-wrap-bumper">auto <a href="#a19000e539a20acfdcd7e8fdce1d970f4" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap"><a href="structMax.html" class="m-doc">Max</a>,
+              <span class="m-doc-wrap-bumper">auto <a href="#a19000e539a20acfdcd7e8fdce1d970f4" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap"><a href="operations_8hpp.html#a8ca39513ee57e00e1d6eecf32fd87035" class="m-doc">Max</a>,
               <a href="structll.html" class="m-doc">ll</a>) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
             <dd><span></span></dd>
             <dt id="aa9ba94adf14b5b5566e3a750fa5255b3">
-              <span class="m-doc-wrap-bumper">auto <a href="#aa9ba94adf14b5b5566e3a750fa5255b3" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap"><a href="structMin.html" class="m-doc">Min</a>,
+              <span class="m-doc-wrap-bumper">auto <a href="#aa9ba94adf14b5b5566e3a750fa5255b3" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap"><a href="operations_8hpp.html#a6e5336c573515260e7a624f1f72924a1" class="m-doc">Min</a>,
               <a href="structll.html" class="m-doc">ll</a>) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
             <dd><span></span></dd>
@@ -238,11 +219,10 @@
               <span class="m-doc-wrap-bumper">#define <a href="#a2e3fb564092d70d9bee87555035d8711" class="m-doc-self">aug</a>(</span><span class="m-doc-wrap">op)</span>
             </dt>
             <dd><span></span></dd>
-            <dt id="afcd538daef660984ecb8abf34697904b">
-              <span class="m-doc-wrap-bumper">#define <a href="#afcd538daef660984ecb8abf34697904b" class="m-doc-self">ret</a>(</span><span class="m-doc-wrap">x,
-              id)</span>
+            <dt id="aef20301df3ed18a53843fb3a5b69bd5b">
+              <span class="m-doc-wrap-bumper">#define <a href="#aef20301df3ed18a53843fb3a5b69bd5b" class="m-doc-self">FUNCTOR</a>(</span><span class="m-doc-wrap">func)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Expands to a functor type that calls func.</dd>
           </dl>
         </section>
         <section>
@@ -323,7 +303,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

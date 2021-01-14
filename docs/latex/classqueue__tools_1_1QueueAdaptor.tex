@@ -30,9 +30,35 @@ using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} = typename Stack\+::reference
 \item 
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} = typename Stack\+::const\+\_\+reference
+\item 
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}{container\+\_\+type}} = Stack
+\item 
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}{value\+\_\+type}} = typename Stack\+::value\+\_\+type
+\item 
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}{size\+\_\+type}} = typename Stack\+::size\+\_\+type
+\item 
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} = typename Stack\+::reference
+\item 
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} = typename Stack\+::const\+\_\+reference
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178}{front}} () const
+\item 
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_ac807754cdc69adb7dcfd12c02a21d7cb}{front}} ()
+\item 
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153}{back}} () const
+\item 
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_ad3a4f68bb1c2cbd0bedd8094e732bece}{back}} ()
+\item 
+bool \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b}{empty}} () const
+\item 
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}{size\+\_\+type}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078}{size}} () const
+\item 
+void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808}{push}} (const \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}{value\+\_\+type}} \&val)
+\item 
+void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8}{pop}} ()
 \item 
 \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178}{front}} () const
 \item 
@@ -56,9 +82,15 @@ void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69
 const auto \& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a409777bac8958f09bf99f9ca2ff64ab0}{get\+\_\+left}} ()
 \item 
 const auto \& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a39e37c34ea5fd27421f3f8dabe733a28}{get\+\_\+right}} ()
+\item 
+const auto \& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a409777bac8958f09bf99f9ca2ff64ab0}{get\+\_\+left}} ()
+\item 
+const auto \& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a39e37c34ea5fd27421f3f8dabe733a28}{get\+\_\+right}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1}{check\+\_\+invariant}} () const
 \item 
 void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1}{check\+\_\+invariant}} () const
 \end{DoxyCompactItemize}
@@ -83,35 +115,70 @@ If there is one element, it is in left.
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}\label{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!const\_reference@{const\_reference}}
 \index{const\_reference@{const\_reference}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} =  typename Stack\+::const\+\_\+reference}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}\label{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} =  typename Stack\+::const\+\_\+reference}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}\label{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!container\_type@{container\_type}}
 \index{container\_type@{container\_type}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{container\_type}{container\_type}}
+\doxysubsubsection{\texorpdfstring{container\_type}{container\_type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}{container\+\_\+type}} =  Stack}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}\label{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!container\_type@{container\_type}}
+\index{container\_type@{container\_type}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{container\_type}{container\_type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a0a12e0ff52602d46cea6f7bb072933f6}{container\+\_\+type}} =  Stack}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}\label{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!reference@{reference}}
 \index{reference@{reference}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{reference}{reference}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} =  typename Stack\+::reference}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}\label{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!reference@{reference}}
+\index{reference@{reference}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} =  typename Stack\+::reference}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}\label{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!size\_type@{size\_type}}
 \index{size\_type@{size\_type}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}{size\+\_\+type}} =  typename Stack\+::size\+\_\+type}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}\label{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}{size\+\_\+type}} =  typename Stack\+::size\+\_\+type}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}\label{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!value\_type@{value\_type}}
 \index{value\_type@{value\_type}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}{value\+\_\+type}} =  typename Stack\+::value\+\_\+type}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}\label{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}{value\+\_\+type}} =  typename Stack\+::value\+\_\+type}
 
@@ -121,14 +188,21 @@ using \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_ad3a4f68bb1c2cbd0bedd8094e732bece}\label{classqueue__tools_1_1QueueAdaptor_ad3a4f68bb1c2cbd0bedd8094e732bece}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!back@{back}}
 \index{back@{back}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_ad3a4f68bb1c2cbd0bedd8094e732bece}\label{classqueue__tools_1_1QueueAdaptor_ad3a4f68bb1c2cbd0bedd8094e732bece}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!back@{back}}
+\index{back@{back}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153}\label{classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!back@{back}}
 \index{back@{back}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -139,10 +213,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153}\label{classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!back@{back}}
+\index{back@{back}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1}\label{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!check\_invariant@{check\_invariant}}
 \index{check\_invariant@{check\_invariant}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{check\_invariant()}{check\_invariant()}}
+\doxysubsubsection{\texorpdfstring{check\_invariant()}{check\_invariant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::check\+\_\+invariant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
@@ -153,10 +234,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1}\label{classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!check\_invariant@{check\_invariant}}
+\index{check\_invariant@{check\_invariant}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{check\_invariant()}{check\_invariant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::check\+\_\+invariant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b}\label{classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!empty@{empty}}
 \index{empty@{empty}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 bool \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -167,17 +255,31 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b}\label{classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!empty@{empty}}
+\index{empty@{empty}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+bool \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_ac807754cdc69adb7dcfd12c02a21d7cb}\label{classqueue__tools_1_1QueueAdaptor_ac807754cdc69adb7dcfd12c02a21d7cb}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!front@{front}}
 \index{front@{front}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_ac807754cdc69adb7dcfd12c02a21d7cb}\label{classqueue__tools_1_1QueueAdaptor_ac807754cdc69adb7dcfd12c02a21d7cb}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!front@{front}}
+\index{front@{front}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_aaad88193dddc1d17404808cb98e1e79f}{reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178}\label{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!front@{front}}
 \index{front@{front}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -188,24 +290,45 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178}\label{classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!front@{front}}
+\index{front@{front}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_abfe056cff4a6a88624024d16b0442236}{const\+\_\+reference}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a409777bac8958f09bf99f9ca2ff64ab0}\label{classqueue__tools_1_1QueueAdaptor_a409777bac8958f09bf99f9ca2ff64ab0}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!get\_left@{get\_left}}
 \index{get\_left@{get\_left}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{get\_left()}{get\_left()}}
+\doxysubsubsection{\texorpdfstring{get\_left()}{get\_left()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+const auto\& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::get\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a409777bac8958f09bf99f9ca2ff64ab0}\label{classqueue__tools_1_1QueueAdaptor_a409777bac8958f09bf99f9ca2ff64ab0}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!get\_left@{get\_left}}
+\index{get\_left@{get\_left}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{get\_left()}{get\_left()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 const auto\& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::get\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a39e37c34ea5fd27421f3f8dabe733a28}\label{classqueue__tools_1_1QueueAdaptor_a39e37c34ea5fd27421f3f8dabe733a28}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!get\_right@{get\_right}}
 \index{get\_right@{get\_right}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{get\_right()}{get\_right()}}
+\doxysubsubsection{\texorpdfstring{get\_right()}{get\_right()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+const auto\& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::get\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a39e37c34ea5fd27421f3f8dabe733a28}\label{classqueue__tools_1_1QueueAdaptor_a39e37c34ea5fd27421f3f8dabe733a28}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!get\_right@{get\_right}}
+\index{get\_right@{get\_right}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{get\_right()}{get\_right()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 const auto\& \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::get\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8}\label{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!pop@{pop}}
 \index{pop@{pop}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -216,10 +339,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8}\label{classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!pop@{pop}}
+\index{pop@{pop}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808}\label{classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!push@{push}}
 \index{push@{push}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{push()}{push()}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}{value\+\_\+type}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -230,10 +360,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808}\label{classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!push@{push}}
+\index{push@{push}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+void \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::push (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a41d9b80dbd9c412dbc7326586dbb3540}{value\+\_\+type}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078}\label{classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078}} 
 \index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!size@{size}}
 \index{size@{size}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
-\doxysubsubsection{\texorpdfstring{size()}{size()}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Stack $>$ \\
 \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}{size\+\_\+type}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -244,6 +381,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078}\label{classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078}} 
+\index{queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}!size@{size}}
+\index{size@{size}!queue\_tools::QueueAdaptor$<$ Stack $>$@{queue\_tools::QueueAdaptor$<$ Stack $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Stack $>$ \\
+\mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor_a7eb2812a5b5f265784995e3b1d796c0b}{size\+\_\+type}} \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+Queue\+Adaptor}}$<$ Stack $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -263,6 +407,7 @@ Stack \mbox{\hyperlink{classqueue__tools_1_1QueueAdaptor}{queue\+\_\+tools\+::\+
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{queue_8hpp}{queue.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/ds/\mbox{\hyperlink{queue_8hpp}{queue.\+hpp}}\item 
+/home/ram/\+Omni\+Template/src/test/\mbox{\hyperlink{test__compiled_8cpp}{test\+\_\+compiled.\+cpp}}\end{DoxyCompactItemize}

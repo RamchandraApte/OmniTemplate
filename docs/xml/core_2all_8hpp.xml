@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="core_2all_8hpp" kind="file" language="C++">
     <compoundname>all.hpp</compoundname>
     <includes local="no">bits/stdc++.h</includes>
     <includes local="no">experimental/iterator</includes>
     <includes local="no">experimental/source_location</includes>
-    <includes refid="io_8hpp" local="yes">io.hpp</includes>
     <includes refid="debug_8hpp" local="yes">debug.hpp</includes>
+    <includes refid="io_8hpp" local="yes">io.hpp</includes>
     <includes refid="operations_8hpp" local="yes">operations.hpp</includes>
     <includes refid="range_8hpp" local="yes">range.hpp</includes>
     <includes refid="utility_8hpp" local="yes">utility.hpp</includes>
@@ -30,9 +30,9 @@
     <includedby refid="splay__tree_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/splay_tree.hpp</includedby>
     <includedby refid="treap_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/treap.hpp</includedby>
     <includedby refid="2sat_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/2sat.hpp</includedby>
-    <includedby refid="graph_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/all.hpp</includedby>
     <includedby refid="biconnected_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/biconnected.hpp</includedby>
     <includedby refid="bipartite_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/bipartite.hpp</includedby>
+    <includedby refid="graph_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/all.hpp</includedby>
     <includedby refid="flow_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/flow.hpp</includedby>
     <includedby refid="graph__view_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/graph_view.hpp</includedby>
     <includedby refid="tree_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/tree/tree.hpp</includedby>
@@ -41,9 +41,12 @@
     <includedby refid="link__cut_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</includedby>
     <includedby refid="modulo_8hpp" local="yes">/home/ram/OmniTemplate/src/number_theory/modulo.hpp</includedby>
     <includedby refid="number__theory_8hpp" local="yes">/home/ram/OmniTemplate/src/number_theory/number_theory.hpp</includedby>
+    <includedby refid="dict__search_8hpp" local="yes">/home/ram/OmniTemplate/src/string/dict_search.hpp</includedby>
+    <includedby refid="string_8hpp" local="yes">/home/ram/OmniTemplate/src/string/string.hpp</includedby>
+    <includedby refid="suffix__array_8hpp" local="yes">/home/ram/OmniTemplate/src/string/suffix_array.hpp</includedby>
+    <includedby refid="test_8cpp" local="yes">/home/ram/OmniTemplate/src/test/test.cpp</includedby>
     <includedby refid="coroutine_8hpp" local="yes">/home/ram/OmniTemplate/src/utility/coroutine.hpp</includedby>
     <includedby refid="graph__draw_8hpp" local="yes">/home/ram/OmniTemplate/src/utility/graph_draw.hpp</includedby>
-    <includedby refid="string_8hpp" local="yes">/home/ram/OmniTemplate/src/utility/string.hpp</includedby>
     <incdepgraph>
       <node id="2">
         <label>bits/stdc++.h</label>
@@ -51,10 +54,10 @@
       <node id="4">
         <label>experimental/source_location</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -71,11 +74,11 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
@@ -83,147 +86,169 @@
       <node id="9">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="8">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="5">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="57">
+      <node id="64">
         <label>/home/ram/OmniTemplate/src/number_theory/modulo.hpp</label>
         <link refid="modulo_8hpp"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="60" relation="include">
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="50">
         <label>/home/ram/OmniTemplate/src/ds/test_cht.hpp</label>
         <link refid="test__cht_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="32">
         <label>/home/ram/OmniTemplate/src/combinatorics/test_combinatorics.hpp</label>
         <link refid="test__combinatorics_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
-        <link refid="test__all_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="46">
-        <label>/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</label>
-        <link refid="test__splay__tree_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>/home/ram/OmniTemplate/src/combinatorics/test_permutation.hpp</label>
-        <link refid="test__permutation_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>/home/ram/OmniTemplate/src/algebra/test_polynomial.hpp</label>
-        <link refid="test__polynomial_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="42">
-        <label>/home/ram/OmniTemplate/src/ds/test_queue.hpp</label>
-        <link refid="test__queue_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="39">
-        <label>/home/ram/OmniTemplate/src/ds/test_dsu.hpp</label>
-        <link refid="test__dsu_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="43">
-        <label>/home/ram/OmniTemplate/src/ds/sparse_table.hpp</label>
-        <link refid="sparse__table_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="44" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="31">
-        <label>/home/ram/OmniTemplate/src/core/time.hpp</label>
-        <link refid="time_8hpp"/>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
-        <link refid="test__graph__draw_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
-        <link refid="test__hld_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>/home/ram/OmniTemplate/src/algebra/polynomial.hpp</label>
-        <link refid="polynomial_8hpp"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="12">
-        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
-        <link refid="hld_8hpp"/>
-        <childnode refid="3" relation="include">
+        <label>/home/ram/OmniTemplate/src/graph/test_all.hpp</label>
+        <link refid="test__all_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</label>
+        <link refid="test__splay__tree_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>/home/ram/OmniTemplate/src/string/string.hpp</label>
+        <link refid="string_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>/home/ram/OmniTemplate/src/combinatorics/test_permutation.hpp</label>
+        <link refid="test__permutation_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>/home/ram/OmniTemplate/src/algebra/test_polynomial.hpp</label>
+        <link refid="test__polynomial_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>/home/ram/OmniTemplate/src/string/suffix_array.hpp</label>
+        <link refid="suffix__array_8hpp"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>/home/ram/OmniTemplate/src/ds/test_queue.hpp</label>
+        <link refid="test__queue_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>/home/ram/OmniTemplate/src/ds/test_dsu.hpp</label>
+        <link refid="test__dsu_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>/home/ram/OmniTemplate/src/string/test_string.hpp</label>
+        <link refid="test__string_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>/home/ram/OmniTemplate/src/ds/sparse_table.hpp</label>
+        <link refid="sparse__table_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="64">
-        <label>/home/ram/OmniTemplate/src/utility/test_string.hpp</label>
-        <link refid="test__string_8hpp"/>
+      <node id="44">
+        <label>/home/ram/OmniTemplate/src/core/time.hpp</label>
+        <link refid="time_8hpp"/>
+        <childnode refid="43" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/ram/OmniTemplate/src/utility/test_graph_draw.hpp</label>
+        <link refid="test__graph__draw_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_hld.hpp</label>
+        <link refid="test__hld_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/ram/OmniTemplate/src/algebra/polynomial.hpp</label>
+        <link refid="polynomial_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/ram/OmniTemplate/src/graph/tree/hld.hpp</label>
+        <link refid="hld_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -231,75 +256,115 @@
         <link refid="linear__algebra_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="31">
         <label>/home/ram/OmniTemplate/src/combinatorics/combinatorics.hpp</label>
         <link refid="combinatorics_8hpp"/>
-        <childnode refid="21" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="25">
+      <node id="36">
+        <label>/home/ram/OmniTemplate/src/string/test_suffix_array.hpp</label>
+        <link refid="test__suffix__array_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>/home/ram/OmniTemplate/src/utility/my_int.hpp</label>
+        <link refid="my__int_8hpp"/>
+      </node>
+      <node id="38">
         <label>/home/ram/OmniTemplate/src/core/operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="26" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
-      <node id="58">
+      <node id="65">
         <label>/home/ram/OmniTemplate/src/number_theory/number_theory.hpp</label>
         <link refid="number__theory_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="59" relation="include">
-        </childnode>
-      </node>
-      <node id="61">
-        <label>/home/ram/OmniTemplate/src/utility/coroutine.hpp</label>
-        <link refid="coroutine_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="62" relation="include">
-        </childnode>
-      </node>
-      <node id="60">
-        <label>/home/ram/OmniTemplate/src/number_theory/test_modulo.hpp</label>
-        <link refid="test__modulo_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
       </node>
-      <node id="22">
+      <node id="72">
+        <label>/home/ram/OmniTemplate/src/utility/coroutine.hpp</label>
+        <link refid="coroutine_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>/home/ram/OmniTemplate/src/number_theory/test_modulo.hpp</label>
+        <link refid="test__modulo_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
         <label>/home/ram/OmniTemplate/src/combinatorics/permutation.hpp</label>
         <link refid="permutation_8hpp"/>
-        <childnode refid="23" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="8">
         <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
         <link refid="test_8cpp"/>
       </node>
-      <node id="48">
+      <node id="62">
         <label>/home/ram/OmniTemplate/src/ds/treap.hpp</label>
         <link refid="treap_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="71">
+        <label>/home/ram/OmniTemplate/src/string/test_dict_search.hpp</label>
+        <link refid="test__dict__search_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
         <label>/home/ram/OmniTemplate/src/ds/cht.hpp</label>
         <link refid="cht_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/ram/OmniTemplate/src/graph/core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -311,223 +376,251 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="51" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
         <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="56" relation="include">
         </childnode>
         <childnode refid="54" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="57" relation="include">
+        <childnode refid="56" relation="include">
         </childnode>
         <childnode refid="58" relation="include">
         </childnode>
-        <childnode refid="61" relation="include">
+        <childnode refid="62" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="63" relation="include">
         </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
-      <node id="55">
+      <node id="26">
         <label>/home/ram/OmniTemplate/src/graph/tree/test_centroid.hpp</label>
         <link refid="test__centroid_8hpp"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="45">
+      <node id="58">
         <label>/home/ram/OmniTemplate/src/ds/splay_tree.hpp</label>
         <link refid="splay__tree_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="46" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="60" relation="include">
         </childnode>
       </node>
-      <node id="47">
+      <node id="61">
+        <label>/home/ram/OmniTemplate/src/graph/tree/test_link_cut.hpp</label>
+        <link refid="test__link__cut_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
         <label>/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</label>
         <link refid="link__cut_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="19">
         <label>/home/ram/OmniTemplate/src/graph/test_biconnected.hpp</label>
         <link refid="test__biconnected_8hpp"/>
-        <childnode refid="49" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="7">
         <label>/home/ram/OmniTemplate/src/algebra/test_linear_algebra.hpp</label>
         <link refid="test__linear__algebra_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="42">
         <label>/home/ram/OmniTemplate/src/core/test_utility.hpp</label>
         <link refid="test__utility_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>/home/ram/OmniTemplate/src/ds/queue.hpp</label>
+        <link refid="queue_8hpp"/>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>/home/ram/OmniTemplate/src/ds/segment_tree.hpp</label>
+        <link refid="segment__tree_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ram/OmniTemplate/src/algebra/test_big_integer.hpp</label>
+        <link refid="test__big__integer_8hpp"/>
+      </node>
+      <node id="47">
+        <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
+        <link refid="bit_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
+        <link refid="test__2sat_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>/home/ram/OmniTemplate/src/number_theory/test_number_theory.hpp</label>
+        <link refid="test__number__theory_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/ram/OmniTemplate/src/graph/biconnected.hpp</label>
+        <link refid="biconnected_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/ram/OmniTemplate/src/graph/test_flow.hpp</label>
+        <link refid="test__flow_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>/home/ram/OmniTemplate/src/string/dict_search.hpp</label>
+        <link refid="dict__search_8hpp"/>
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
       <node id="41">
-        <label>/home/ram/OmniTemplate/src/ds/queue.hpp</label>
-        <link refid="queue_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="42" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>/home/ram/OmniTemplate/src/ds/segment_tree.hpp</label>
-        <link refid="segment__tree_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
-        <link refid="bit_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>/home/ram/OmniTemplate/src/graph/test_2sat.hpp</label>
-        <link refid="test__2sat_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="59">
-        <label>/home/ram/OmniTemplate/src/number_theory/test_number_theory.hpp</label>
-        <link refid="test__number__theory_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="49">
-        <label>/home/ram/OmniTemplate/src/graph/biconnected.hpp</label>
-        <link refid="biconnected_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="50" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>/home/ram/OmniTemplate/src/graph/test_flow.hpp</label>
-        <link refid="test__flow_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="28">
         <label>/home/ram/OmniTemplate/src/core/utility.hpp</label>
         <link refid="utility_8hpp"/>
         <childnode refid="1" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
-      <node id="24">
+      <node id="37">
         <label>/home/ram/OmniTemplate/src/core/range.hpp</label>
         <link refid="range_8hpp"/>
-        <childnode refid="25" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
         <childnode refid="1" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
-      <node id="40">
+      <node id="53">
         <label>/home/ram/OmniTemplate/src/ds/persistent.hpp</label>
         <link refid="persistent_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="62">
+      <node id="73">
         <label>/home/ram/OmniTemplate/src/utility/test_coroutine.hpp</label>
         <link refid="test__coroutine_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="21">
         <label>/home/ram/OmniTemplate/src/graph/test_bipartite.hpp</label>
         <link refid="test__bipartite_8hpp"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="46">
         <label>/home/ram/OmniTemplate/src/ds/test_segment_tree.hpp</label>
         <link refid="test__segment__tree_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="35">
+      <node id="27">
+        <label>/home/ram/OmniTemplate/src/graph/tree/lca.hpp</label>
+        <link refid="lca_8hpp"/>
+      </node>
+      <node id="48">
         <label>/home/ram/OmniTemplate/src/ds/test_bit.hpp</label>
         <link refid="test__bit_8hpp"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -535,123 +628,121 @@
         <link refid="big__integer_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="51">
+      <node id="20">
         <label>/home/ram/OmniTemplate/src/graph/bipartite.hpp</label>
         <link refid="bipartite_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
-        <link refid="graph_2all_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/ram/OmniTemplate/src/graph/all.hpp</label>
+        <link refid="graph_2all_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="40">
         <label>/home/ram/OmniTemplate/src/core/io.hpp</label>
         <link refid="io_8hpp"/>
         <childnode refid="1" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="24">
         <label>/home/ram/OmniTemplate/src/graph/graph_view.hpp</label>
         <link refid="graph__view_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>/home/ram/OmniTemplate/src/graph/2sat.hpp</label>
         <link refid="2sat_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="63">
-        <label>/home/ram/OmniTemplate/src/utility/string.hpp</label>
-        <link refid="string_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="5">
         <label>/home/ram/OmniTemplate/src/algebra/fft.hpp</label>
         <link refid="fft_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="54">
-        <label>/home/ram/OmniTemplate/src/graph/tree/centroid.hpp</label>
-        <link refid="centroid_8hpp"/>
-        <childnode refid="55" relation="include">
-        </childnode>
-      </node>
-      <node id="30">
-        <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
-        <link refid="main_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="44">
-        <label>/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</label>
-        <link refid="test__sparse__table_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="56">
+      <node id="43">
+        <label>/home/ram/OmniTemplate/src/core/main.hpp</label>
+        <link refid="main_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/ram/OmniTemplate/src/graph/tree/centroid.hpp</label>
+        <link refid="centroid_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp</label>
+        <link refid="test__sparse__table_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
         <label>/home/ram/OmniTemplate/src/graph/tree/tree.hpp</label>
         <link refid="tree_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="39">
         <label>/home/ram/OmniTemplate/src/core/debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="27" relation="include">
-        </childnode>
         <childnode refid="1" relation="include">
         </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
       </node>
-      <node id="16">
+      <node id="22">
         <label>/home/ram/OmniTemplate/src/graph/flow.hpp</label>
         <link refid="flow_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>/home/ram/OmniTemplate/src/ds/dsu.hpp</label>
+        <link refid="dsu_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-      </node>
-      <node id="38">
-        <label>/home/ram/OmniTemplate/src/ds/dsu.hpp</label>
-        <link refid="dsu_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>/home/ram/OmniTemplate/src/utility/graph_draw.hpp</label>
         <link refid="graph__draw_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -673,31 +764,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="16" column="16" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="16" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="36" column="18" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" prot="public" static="no">
         <name>fr</name>
         <param><defname>i</defname></param>
         <param><defname>...</defname></param>
-        <initializer>for ([[maybe_unused]] const auto i : <ref refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref>(<ref refid="range_8hpp_1a6288a170c5a67a2c0b45c858a043722a" kindref="member">ra</ref>{__VA_ARGS__}))</initializer>
+        <initializer>for ([[maybe_unused]] const auto i : <ref refid="test__compiled_8cpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref>(<ref refid="range_8hpp_1a6288a170c5a67a2c0b45c858a043722a" kindref="member">ra</ref>{__VA_ARGS__}))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="17" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="17" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="core_2all_8hpp_1a50383951d2a9d4f1a855b2cec5e03274" prot="public" static="no">
-        <name>this</name>
-        <initializer>(*this)</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="18" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="18" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="37" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" prot="public" static="no">
         <name>al</name>
@@ -709,7 +789,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="19" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="19" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="38" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a7f10cc81a560bb73b2eb647dfb10c9db" prot="public" static="no">
         <name>rel_assert</name>
@@ -721,12 +801,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="22" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="22" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="41" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a108d6c5c51dd46e82a62b262394f0242" prot="public" static="no">
         <name>WARN</name>
         <param><defname>msg</defname></param>
-        <initializer>	[[deprecated(msg)]] auto warn = []() { <ref refid="core_2all_8hpp_1a7f10cc81a560bb73b2eb647dfb10c9db" kindref="member">rel_assert</ref>(msg); };             \
+        <initializer>	[[deprecated(msg)]] auto warn = []() { <ref refid="test__compiled_8cpp_1a7f10cc81a560bb73b2eb647dfb10c9db" kindref="member">rel_assert</ref>(msg); };                                 \
 	warn();</initializer>
         <briefdescription>
         </briefdescription>
@@ -734,19 +814,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="23" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="23" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="42" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1ad47194c03eba4b38147c9d01c0166802" prot="public" static="no">
         <name>TODO</name>
         <param><defname>msg</defname></param>
-        <initializer><ref refid="core_2all_8hpp_1a108d6c5c51dd46e82a62b262394f0242" kindref="member">WARN</ref>(&quot;TODO: &quot; msg)</initializer>
+        <initializer><ref refid="test__compiled_8cpp_1a108d6c5c51dd46e82a62b262394f0242" kindref="member">WARN</ref>(&quot;TODO: &quot; msg)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="26" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="26" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="45" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a38dec4d2a6700e0c88ced9eeebb3dfaa" prot="public" static="no">
         <name>paste2</name>
@@ -759,71 +839,71 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="27" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="27" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="46" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a396f7338a30cd5803df5ae220da88711" prot="public" static="no">
         <name>paste</name>
         <param><defname>x</defname></param>
         <param><defname>y</defname></param>
-        <initializer><ref refid="core_2all_8hpp_1a38dec4d2a6700e0c88ced9eeebb3dfaa" kindref="member">paste2</ref>(x, y)</initializer>
+        <initializer><ref refid="test__compiled_8cpp_1a38dec4d2a6700e0c88ced9eeebb3dfaa" kindref="member">paste2</ref>(x, y)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="28" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="28" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="47" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a5f81e19fe0a4c7a463bf91e49e641270" prot="public" static="no">
         <name>lets_count</name>
-        <initializer><ref refid="structlets__add" kindref="compound">lets_add</ref> <ref refid="core_2all_8hpp_1a396f7338a30cd5803df5ae220da88711" kindref="member">paste</ref>(_l, __COUNTER__)</initializer>
+        <initializer><ref refid="structlets__add" kindref="compound">lets_add</ref> <ref refid="test__compiled_8cpp_1a396f7338a30cd5803df5ae220da88711" kindref="member">paste</ref>(_l, __COUNTER__)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="29" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="29" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="48" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" prot="public" static="no">
         <name>let</name>
         <param><defname>a</defname></param>
         <param><defname>...</defname></param>
-        <initializer>	using a = __VA_ARGS__;                                                 \
-	<ref refid="core_2all_8hpp_1a5f81e19fe0a4c7a463bf91e49e641270" kindref="member">lets_count</ref>{#__VA_ARGS__, #a};</initializer>
+        <initializer>	using a = __VA_ARGS__;                                                                     \
+	<ref refid="test__compiled_8cpp_1a5f81e19fe0a4c7a463bf91e49e641270" kindref="member">lets_count</ref>{#__VA_ARGS__, #a};</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="30" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="30" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="49" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="core_2all_8hpp_1a7796040cab730b2436f078c78d117cab" prot="public" static="no">
         <name>import</name>
         <param><defname>a</defname></param>
-        <initializer>	using namespace a;                                                     \
-	<ref refid="core_2all_8hpp_1a5f81e19fe0a4c7a463bf91e49e641270" kindref="member">lets_count</ref>{#a &quot;::&quot;, &quot;&quot;};</initializer>
+        <initializer>	using namespace a;                                                                         \
+	<ref refid="test__compiled_8cpp_1a5f81e19fe0a4c7a463bf91e49e641270" kindref="member">lets_count</ref>{#a &quot;::&quot;, &quot;&quot;};</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="33" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="33" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="52" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="core_2all_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" prot="public" static="no">
-        <name>df</name>
-        <param><defname>x</defname></param>
-        <param><defname>v</defname></param>
-        <initializer>remove_const_t&lt;decltype(v)&gt; x = v</initializer>
+      <memberdef kind="define" id="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" prot="public" static="no">
+        <name>cerr</name>
+        <param></param>
+        <initializer>	if (false)                                                                                 \
+	cerr</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="36" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="36" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="56" column="9" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -838,7 +918,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="56" column="48" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="56" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="78" column="48" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="78" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" prot="public" static="no">
         <type>long long</type>
@@ -851,7 +931,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="57" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="57" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="80" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1a2e2e73e53fc509e05f252ef083503838" prot="public" static="no">
         <type>long double</type>
@@ -864,7 +944,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="58" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="58" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="81" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1a58e2677d80a09b5be0f0e56ef70d4507" prot="public" static="no">
         <type>pair&lt; <ref refid="structll" kindref="compound">ll</ref>, <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
@@ -877,7 +957,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="59" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="59" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="82" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" prot="public" static="no">
         <type>complex&lt; double &gt;</type>
@@ -890,7 +970,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="60" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="60" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="83" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" prot="public" static="no">
         <type>complex&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
@@ -903,7 +983,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="61" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="61" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="84" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1ac0b978e8ffc2c44656160a679f86e22a" prot="public" static="no">
         <templateparamlist>
@@ -924,7 +1004,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="64" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="64" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="86" column="15" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="86" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" prot="public" static="no">
         <type>high_resolution_clock</type>
@@ -937,7 +1017,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="65" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="65" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="87" column="1" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -953,26 +1033,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="20" column="6" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="20" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="39" column="6" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="39" bodyend="-1"/>
         <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="38" endline="48">debug_tools::debug</referencedby>
-        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="9" endline="36">main</referencedby>
       </memberdef>
       <memberdef kind="variable" id="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" prot="public" static="no" mutable="no">
         <type>vector&lt; pair&lt; string, string &gt; &gt;</type>
         <definition>vector&lt;pair&lt;string, string&gt; &gt; lets</definition>
         <argsstring></argsstring>
         <name>lets</name>
-        <initializer>{{&quot;__debug::&quot;, &quot;&quot;},
-				  {&quot;const &quot;, &quot;&quot;},
-				  {&quot;__cxx11::basic_string&lt;char&gt;&quot;, &quot;string&quot;}}</initializer>
+        <initializer>{
+    {&quot;__debug::&quot;, &quot;&quot;}, {&quot;const &quot;, &quot;&quot;}, {&quot;__cxx11::basic_string&lt;char&gt;&quot;, &quot;string&quot;}}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="38" column="8" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="38" bodyend="-1"/>
-        <referencedby refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" compoundref="core_2all_8hpp" startline="42" endline="42">lets_add::lets_add</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="61" column="8" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="61" bodyend="-1"/>
+        <referencedby refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" compoundref="core_2all_8hpp" startline="64" endline="64">lets_add::lets_add</referencedby>
         <referencedby refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="28" endline="35">debug_tools::simple_tp</referencedby>
       </memberdef>
       <memberdef kind="variable" id="core_2all_8hpp_1aa3bd6940ab68cd10b31ac2ff2495ffab" prot="public" static="no" mutable="no">
@@ -987,7 +1066,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="49" column="32" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="49" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="71" column="32" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" prot="public" static="no" constexpr="yes" mutable="no">
         <type>constexpr auto</type>
@@ -1002,23 +1081,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="74" column="16" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="74" bodyend="-1"/>
-        <referencedby refid="classpolynomial__ns_1_1Polynomial_1a07d232f6e14fade387c39fe8ea8e6b96" compoundref="polynomial_8hpp" startline="16" endline="24">polynomial_ns::Polynomial&lt; T &gt;::degree</referencedby>
-        <referencedby refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" compoundref="graph_2all_8hpp" startline="29" endline="55">graph_theory::shortest_dist</referencedby>
-        <referencedby refid="operations_8hpp_1ac969ae49524a67aba9be0f061955ef23" compoundref="operations_8hpp" startline="93" endline="97">identity</referencedby>
-        <referencedby refid="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" compoundref="queue_8hpp" startline="84" endline="84">queue_tools::MinStack&lt; T &gt;::min</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="95" column="16" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="95" bodyend="-1"/>
+        <referencedby refid="classpolynomial__ns_1_1Polynomial_1a07d232f6e14fade387c39fe8ea8e6b96" compoundref="polynomial_8hpp" startline="18" endline="27">polynomial_ns::Polynomial&lt; T &gt;::degree</referencedby>
+        <referencedby refid="operations_8hpp_1a19000e539a20acfdcd7e8fdce1d970f4" compoundref="operations_8hpp" startline="100" endline="100">identity</referencedby>
+        <referencedby refid="classqueue__tools_1_1MinStack_1abdcf9b4a593fa77e2702ee740814ff8b" compoundref="queue_8hpp" startline="77" endline="77">queue_tools::MinStack&lt; T &gt;::min</referencedby>
         <referencedby refid="namespaceconvex__hull__trick_1_1test_1af431d14b14918c006bfb450ff5a69a81" compoundref="test__cht_8hpp" startline="48" endline="58">convex_hull_trick::test::test_cht</referencedby>
         <referencedby refid="namespacequeue__tools_1_1test_1abbd87df8add26a608947323b21bb1921" compoundref="test__queue_8hpp" startline="40" endline="54">queue_tools::test::test_minqueue</referencedby>
         <referencedby refid="namespacesegment__tree_1_1test_1a216822c7d0ea6df09e13ff90a519e0fd" compoundref="test__segment__tree_8hpp" startline="4" endline="65">segment_tree::test::test_segment_tree_impl</referencedby>
-        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="48">biconnected</referencedby>
-        <referencedby refid="namespacegraph__theory_1_1bipartite_1a4fb82505ab0cb90e7ddf16db6a87e366" compoundref="bipartite_8hpp" startline="25" endline="82">graph_theory::bipartite::max_match</referencedby>
-        <referencedby refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" compoundref="flow_8hpp" startline="13" endline="59">flow::edmond_karp</referencedby>
-        <referencedby refid="namespaceflow_1ab1878f3966f553be99c58d55aa46709e" compoundref="flow_8hpp" startline="60" endline="158">flow::dinic</referencedby>
-        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="47">centroid_decomp</referencedby>
+        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="53">biconnected</referencedby>
+        <referencedby refid="namespacegraph__theory_1_1bipartite_1a4fb82505ab0cb90e7ddf16db6a87e366" compoundref="bipartite_8hpp" startline="26" endline="83">graph_theory::bipartite::max_match</referencedby>
+        <referencedby refid="namespacegraph__theory_1a934a24e545f14f58f25359de518e8d1d" compoundref="core_8hpp" startline="37" endline="63">graph_theory::shortest_dist</referencedby>
+        <referencedby refid="namespaceflow_1a019c8d89498d267345fd2f560909fa7a" compoundref="flow_8hpp" startline="14" endline="61">flow::edmond_karp</referencedby>
+        <referencedby refid="namespaceflow_1ab162ee0224ccca8ae082128f2825d92c" compoundref="flow_8hpp" startline="62" endline="158">flow::dinic</referencedby>
+        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="49">centroid_decomp</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="core_2all_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" prot="public" static="no" mutable="no">
-        <type>const auto</type>
-        <definition>const auto delim</definition>
+      <memberdef kind="variable" id="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const delim</definition>
         <argsstring></argsstring>
         <name>delim</name>
         <initializer>= &quot;, &quot;s</initializer>
@@ -1029,11 +1108,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="75" column="12" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="75" bodyend="-1"/>
-        <referencedby refid="namespacelinear__algebra_1a453fd75a1c2a470143f42979d102abe1" compoundref="linear__algebra_8hpp" startline="113" endline="121">linear_algebra::operator&lt;&lt;</referencedby>
-        <referencedby refid="io_8hpp_1affce1f2cffc83e9e4ecc9203fdd32d29" compoundref="io_8hpp" startline="35" endline="43">operator&lt;&lt;</referencedby>
-        <referencedby refid="io_8hpp_1a40cf53faa8f3a9512c4dad9945ecb425" compoundref="io_8hpp" startline="53" endline="55">std::operator&lt;&lt;</referencedby>
-        <referencedby refid="namespacedsu__ds_1a7c3dbc9f3763e1bd7e1faf0bdff90f78" compoundref="dsu_8hpp" startline="28" endline="37">dsu_ds::operator&lt;&lt;</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="96" column="12" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="96" bodyend="-1"/>
+        <referencedby refid="namespacelinear__algebra_1a38136f13fc6e85ec90ee2524af1a13e0" compoundref="linear__algebra_8hpp" startline="115" endline="123">linear_algebra::operator&lt;&lt;</referencedby>
+        <referencedby refid="io_8hpp_1affce1f2cffc83e9e4ecc9203fdd32d29" compoundref="io_8hpp" startline="30" endline="38">operator&lt;&lt;</referencedby>
+        <referencedby refid="io_8hpp_1a2939a795e467c7daa07c80b7456d78b4" compoundref="io_8hpp" startline="46" endline="48">std::operator&lt;&lt;</referencedby>
+        <referencedby refid="namespacedsu__ds_1a42947339830a2cede9e140e4283aff36" compoundref="dsu_8hpp" startline="29" endline="38">dsu_ds::operator&lt;&lt;</referencedby>
       </memberdef>
       <memberdef kind="variable" id="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" prot="public" static="no" constexpr="yes" mutable="no">
         <type>constexpr auto</type>
@@ -1048,22 +1127,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="76" column="16" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="76" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="97" column="16" bodyfile="/home/ram/OmniTemplate/src/core/all.hpp" bodystart="97" bodyend="-1"/>
         <referencedby refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="core_2all_8hpp_1a5da77c5a58b4193f997d91f2130efd53" prot="public" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool multitest</definition>
-        <argsstring></argsstring>
-        <name>multitest</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/all.hpp" line="77" column="13" bodyfile="/home/ram/OmniTemplate/src/test/test.cpp" bodystart="25" bodyend="-1" declfile="/home/ram/OmniTemplate/src/core/all.hpp" declline="77" declcolumn="13"/>
-        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="12" endline="40">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1081,79 +1146,98 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>REALGCC</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bits/extc++.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bits/stdc++.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;experimental/iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;experimental/source_location&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fo(i,<sp/>...)<sp/>for<sp/>([[maybe_unused]]<sp/>const<sp/>auto<sp/>i<sp/>:<sp/>ra{__VA_ARGS__})</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fr(i,<sp/>...)<sp/>for<sp/>([[maybe_unused]]<sp/>const<sp/>auto<sp/>i<sp/>:<sp/>rev(ra{__VA_ARGS__}))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="core_2all_8hpp_1a50383951d2a9d4f1a855b2cec5e03274" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>this<sp/>(*this)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>al(v)<sp/>begin(v),<sp/>end(v)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>rel_assert(msg)<sp/>if<sp/>constexpr(debug_mode){static_assert(false,<sp/>msg);}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="core_2all_8hpp_1a7f10cc81a560bb73b2eb647dfb10c9db" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>rel_assert(...)<sp/>s</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="core_2all_8hpp_1a108d6c5c51dd46e82a62b262394f0242" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WARN(msg)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>[[deprecated(msg)]]<sp/>auto<sp/>warn<sp/>=<sp/>[]()<sp/>{<sp/>rel_assert(msg);<sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>warn();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="core_2all_8hpp_1ad47194c03eba4b38147c9d01c0166802" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TODO(msg)<sp/>WARN(&quot;TODO:<sp/>&quot;<sp/>msg)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="core_2all_8hpp_1a38dec4d2a6700e0c88ced9eeebb3dfaa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>paste2(x,<sp/>y)<sp/>x##y</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="core_2all_8hpp_1a396f7338a30cd5803df5ae220da88711" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>paste(x,<sp/>y)<sp/>paste2(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="core_2all_8hpp_1a5f81e19fe0a4c7a463bf91e49e641270" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>lets_count<sp/>lets_add<sp/>paste(_l,<sp/>__COUNTER__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>let(a,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>a<sp/>=<sp/>__VA_ARGS__;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lets_count{#__VA_ARGS__,<sp/>#a};</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="core_2all_8hpp_1a7796040cab730b2436f078c78d117cab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>import(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>namespace<sp/>a;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lets_count{#a<sp/>&quot;::&quot;,<sp/>&quot;&quot;};</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="core_2all_8hpp_1a1a5cedaa2166b87bc174d54c6a9aae47" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>df(x,<sp/>v)<sp/>remove_const_t&lt;decltype(v)&gt;<sp/>x<sp/>=<sp/>v</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="38" refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" refkind="member"><highlight class="normal">vector&lt;pair&lt;string,<sp/>string&gt;&gt;<sp/><ref refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" kindref="member">lets</ref>{{</highlight><highlight class="stringliteral">&quot;__debug::&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;const<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;__cxx11::basic_string&lt;char&gt;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;string&quot;</highlight><highlight class="normal">}};</highlight></codeline>
-<codeline lineno="41" refid="structlets__add" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlets__add" kindref="compound">lets_add</ref><sp/>{</highlight></codeline>
-<codeline lineno="42" refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" kindref="member">lets_add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{<sp/><ref refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" kindref="member">lets</ref>.push_back({a,<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>});<sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>REALGCC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(__gnu_pbds);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">__gnu_cxx::power</ref>;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::priority_queue;</highlight></codeline>
-<codeline lineno="49" refid="core_2all_8hpp_1aa3bd6940ab68cd10b31ac2ff2495ffab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(std);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>import(experimental);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>experimental::make_ostream_joiner;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>experimental::ostream_joiner;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>experimental::source_location;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(chrono);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(literals);</highlight></codeline>
-<codeline lineno="56" refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(placeholders)<sp/><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="57" refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="structll" kindref="compound">ll</ref>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="58" refid="core_2all_8hpp_1a2e2e73e53fc509e05f252ef083503838" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1a2e2e73e53fc509e05f252ef083503838" kindref="member">ld</ref>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="59" refid="core_2all_8hpp_1a58e2677d80a09b5be0f0e56ef70d4507" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1a58e2677d80a09b5be0f0e56ef70d4507" kindref="member">pr</ref>,<sp/>pair&lt;ll,<sp/>ll&gt;);</highlight></codeline>
-<codeline lineno="60" refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref>,<sp/>complex&lt;double&gt;);</highlight></codeline>
-<codeline lineno="61" refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref>,<sp/>complex&lt;ll&gt;);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Comp&gt;</highlight></codeline>
-<codeline lineno="64" refid="core_2all_8hpp_1ac0b978e8ffc2c44656160a679f86e22a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ac0b978e8ffc2c44656160a679f86e22a" kindref="member">prio_queue_t</ref><sp/>=<sp/>std::priority_queue&lt;T,<sp/>vector&lt;T&gt;,<sp/>Comp&gt;;</highlight></codeline>
-<codeline lineno="65" refid="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" kindref="member">clock_</ref>,<sp/>high_resolution_clock);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(this_thread);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>REALGCC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V<sp/>=<sp/>null_type&gt;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>order_stat_map<sp/>=</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>tree&lt;T,<sp/>V,<sp/>less&lt;&gt;,<sp/>rb_tree_tag,<sp/>tree_order_statistics_node_update&gt;;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref><sp/>=<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(numeric_limits&lt;ll&gt;::max())<sp/>/<sp/>8;<sp/></highlight></codeline>
-<codeline lineno="75" refid="core_2all_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" refkind="member"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" kindref="member">delim</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">s;<sp/></highlight></codeline>
-<codeline lineno="76" refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" refkind="member"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" kindref="member">tau</ref><sp/>=<sp/>2<sp/>*<sp/>3.1415926535897932384626433L;<sp/></highlight></codeline>
-<codeline lineno="77"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1a5da77c5a58b4193f997d91f2130efd53" kindref="member">multitest</ref>;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="io_8hpp" kindref="compound">io.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8hpp" kindref="compound">debug.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="operations_8hpp" kindref="compound">operations.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="range_8hpp" kindref="compound">range.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utility_8hpp" kindref="compound">utility.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;climits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;complex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stack&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bits/stdc++.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;experimental/iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;experimental/source_location&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>PRE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fo(i,<sp/>...)<sp/>for<sp/>([[maybe_unused]]<sp/>const<sp/>auto<sp/>i<sp/>:<sp/>ra{__VA_ARGS__})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>fr(i,<sp/>...)<sp/>for<sp/>([[maybe_unused]]<sp/>const<sp/>auto<sp/>i<sp/>:<sp/>rev(ra{__VA_ARGS__}))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>al(v)<sp/>begin(v),<sp/>end(v)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" kindref="member">debug_mode</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>rel_assert(msg)<sp/>if<sp/>constexpr(debug_mode){static_assert(false,<sp/>msg);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>rel_assert(...)<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="core_2all_8hpp_1a7f10cc81a560bb73b2eb647dfb10c9db" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WARN(msg)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43" refid="core_2all_8hpp_1a108d6c5c51dd46e82a62b262394f0242" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>[[deprecated(msg)]]<sp/>auto<sp/>warn<sp/>=<sp/>[]()<sp/>{<sp/>rel_assert(msg);<sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>warn();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TODO(msg)<sp/>WARN(&quot;TODO:<sp/>&quot;<sp/>msg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="core_2all_8hpp_1ad47194c03eba4b38147c9d01c0166802" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>paste2(x,<sp/>y)<sp/>x##y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="core_2all_8hpp_1a38dec4d2a6700e0c88ced9eeebb3dfaa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>paste(x,<sp/>y)<sp/>paste2(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="core_2all_8hpp_1a396f7338a30cd5803df5ae220da88711" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>lets_count<sp/>lets_add<sp/>paste(_l,<sp/>__COUNTER__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="core_2all_8hpp_1a5f81e19fe0a4c7a463bf91e49e641270" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>let(a,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50" refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>a<sp/>=<sp/>__VA_ARGS__;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lets_count{#__VA_ARGS__,<sp/>#a};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>import(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53" refid="core_2all_8hpp_1a7796040cab730b2436f078c78d117cab" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>using<sp/>namespace<sp/>a;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>lets_count{#a<sp/>&quot;::&quot;,<sp/>&quot;&quot;};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cerr()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="57" refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(false)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>cerr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="61" refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" refkind="member"><highlight class="normal">vector&lt;pair&lt;string,<sp/>string&gt;&gt;<sp/><ref refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" kindref="member">lets</ref>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;__debug::&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},<sp/>{</highlight><highlight class="stringliteral">&quot;const<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},<sp/>{</highlight><highlight class="stringliteral">&quot;__cxx11::basic_string&lt;char&gt;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;string&quot;</highlight><highlight class="normal">}};</highlight></codeline>
+<codeline lineno="63" refid="structlets__add" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlets__add" kindref="compound">lets_add</ref><sp/>{</highlight></codeline>
+<codeline lineno="64" refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlets__add_1a0ec85cd9b6101f88a531cd43e6aa5f87" kindref="member">lets_add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;b)<sp/>{<sp/><ref refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" kindref="member">lets</ref>.push_back({a,<sp/>b});<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>REALGCC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(__gnu_pbds);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">__gnu_cxx::power</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::priority_queue;</highlight></codeline>
+<codeline lineno="71" refid="core_2all_8hpp_1aa3bd6940ab68cd10b31ac2ff2495ffab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(std);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>import(experimental);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>experimental::make_ostream_joiner;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>experimental::ostream_joiner;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>experimental::source_location;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(chrono);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(literals);</highlight></codeline>
+<codeline lineno="78" refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(placeholders)<sp/><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>move<sp/>this<sp/>to<sp/>abbrev.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="structll" kindref="compound">ll</ref>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81" refid="core_2all_8hpp_1a2e2e73e53fc509e05f252ef083503838" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1a2e2e73e53fc509e05f252ef083503838" kindref="member">ld</ref>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82" refid="core_2all_8hpp_1a58e2677d80a09b5be0f0e56ef70d4507" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1a58e2677d80a09b5be0f0e56ef70d4507" kindref="member">pr</ref>,<sp/>pair&lt;ll,<sp/>ll&gt;);</highlight></codeline>
+<codeline lineno="83" refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref>,<sp/>complex&lt;double&gt;);</highlight></codeline>
+<codeline lineno="84" refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1ae6bbe80dfafc6e30f518f3de1cafec50" kindref="member">point</ref>,<sp/>complex&lt;ll&gt;);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86" refid="core_2all_8hpp_1ac0b978e8ffc2c44656160a679f86e22a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Comp&gt;<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ac0b978e8ffc2c44656160a679f86e22a" kindref="member">prio_queue_t</ref><sp/>=<sp/>std::priority_queue&lt;T,<sp/>vector&lt;T&gt;,<sp/>Comp&gt;;</highlight></codeline>
+<codeline lineno="87" refid="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" refkind="member"><highlight class="normal"><ref refid="core_2all_8hpp_1a30d2d6ecdd50cafce635775b6e4e1cf2" kindref="member">let</ref>(<ref refid="core_2all_8hpp_1a71fb2247d044e41f5345bcdb26020926" kindref="member">clock_</ref>,<sp/>high_resolution_clock);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal">(this_thread);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>REALGCC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V<sp/>=<sp/>null_type&gt;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>order_stat_map<sp/>=<sp/>tree&lt;T,<sp/>V,<sp/>less&lt;&gt;,<sp/>rb_tree_tag,<sp/>tree_order_statistics_node_update&gt;;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref><sp/>=<sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(numeric_limits&lt;ll&gt;::max())<sp/>/<sp/>8;<sp/></highlight></codeline>
+<codeline lineno="96" refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" refkind="member"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">s;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" refkind="member"><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>constexpr<sp/><ref refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" kindref="member">tau</ref><sp/>=<sp/>2<sp/>*<sp/>3.1415926535897932384626433L;<sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8hpp" kindref="compound">debug.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="io_8hpp" kindref="compound">io.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="operations_8hpp" kindref="compound">operations.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="range_8hpp" kindref="compound">range.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utility_8hpp" kindref="compound">utility.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/all.hpp"/>
   </compounddef>

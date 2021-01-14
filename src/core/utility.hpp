@@ -145,5 +145,23 @@ struct Empty {};
 using random_device = random_device_patch;
 #endif
 default_random_engine reng{random_device{}()};
+template <typename Compare = less<>> class chained_compare {
+      public:
+	chained_compare(const Compare &comp_ = {}) : comp{comp_} {}
+	template <typename T1, typename T2, typename... Ts>
+	bool operator()(const T1 &arg1, const T2 &arg2, const Ts &...args) {
+		return comp(arg1, arg2) && (*this)(arg2, args...);
+	}
+	template <typename T1> bool operator()(const T1 &arg1) { return true; }
+
+      private:
+	Compare comp;
+};
+// bool valid_index = true;
+/*! @brief Return whether idx is a valid index for vec. Note that if idx is negative this returns
+ * false.*/
+template <typename T> bool valid_idx(const vector<T> &vec, const size_t idx) {
+	return idx < vec.size();
+}
 } // namespace utility
 using namespace utility;

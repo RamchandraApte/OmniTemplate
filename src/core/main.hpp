@@ -7,7 +7,7 @@ struct set_multitest {
 };
 extern void main2();
 int main(int argc, char *argv[]) {
-#ifdef LOCAL
+#ifdef DEBUG
 	debug_mode = true;
 #endif
 	fo(i, argc) {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 	if (!debug_mode) {
 		cerr.rdbuf(nullptr);
 	}
-	for (ios &os : initializer_list<reference_wrapper<ios>>{cin, cout, (cerr), clog}) {
+	for (ios &os : initializer_list<reference_wrapper<ios>>{orig_cin, cout, orig_cerr, clog}) {
 		fixed(os);
 		if (os.rdbuf()) {
 			os.exceptions(ios::failbit | ios::badbit | ios::eofbit);

@@ -2,14 +2,16 @@
 \label{number__theory_8hpp}\index{/home/ram/OmniTemplate/src/number\_theory/number\_theory.hpp@{/home/ram/OmniTemplate/src/number\_theory/number\_theory.hpp}}
 {\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}modulo.\+hpp\char`\"{}}\newline
-Include dependency graph for number\+\_\+theory.\+hpp\+:\nopagebreak
+Include dependency graph for number\+\_\+theory.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{number__theory_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,11 +29,11 @@ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{number__theory_8h
 \begin{DoxyCompactList}\small\item\em Linear time prime sieve. \end{DoxyCompactList}\item 
 unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{number__theory_8hpp_a2be64a5779e00fe36e74d3496e92e64b}{fac}} (\mbox{\hyperlink{structll}{ll}} n)
 \begin{DoxyCompactList}\small\item\em Returns the factorization of n. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egcd}} (const \mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}}, \mbox{\hyperlink{structll}{ll}} \&x, \mbox{\hyperlink{structll}{ll}} \&y)
+void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egcd}} (const \mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} b, \mbox{\hyperlink{structll}{ll}} \&x, \mbox{\hyperlink{structll}{ll}} \&y)
 \begin{DoxyCompactList}\small\item\em Sets x and y so that $x\cdot a + y\cdot b = \gcd(a,b)$. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f}{totient}} (\mbox{\hyperlink{structll}{ll}} n)
 \begin{DoxyCompactList}\small\item\em Returns the totient of the integer n. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}{dlog}} (const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} a, const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}{dlog}} (const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} a, const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} b)
 \begin{DoxyCompactList}\small\item\em Finds x such that a$^\wedge$x = b (mod M) using baby-\/step giant-\/step algorithm. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{number__theory_8hpp_a6542b189f3759f43899a8b1978d58e2c}{primitive\+\_\+root}} ()
 \begin{DoxyCompactList}\small\item\em Returns a primitive root modulo M. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -74,15 +76,15 @@ Finds x such that a$^\wedge$x = b (mod M) using baby-\/step giant-\/step algorit
 \begin{DoxyPrecond}{Precondition}
 a and M must be coprime. 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -106,7 +108,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=299pt]{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -126,8 +129,7 @@ Returns the factorization of n.
 \begin{DoxyReturn}{Returns}
 a map from the prime to the exponent 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -177,15 +179,15 @@ Here is the caller graph for this function\+:
 
 Returns a primitive root modulo M. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{number__theory_8hpp_a6542b189f3759f43899a8b1978d58e2c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -210,7 +212,8 @@ Linear time prime sieve.
 \begin{DoxyReturn}{Returns}
 a vector where ret\mbox{[}idx\mbox{]} is the smallest prime divisor of idx 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -230,15 +233,15 @@ Returns the totient of the integer n.
 \begin{DoxyPrecond}{Precondition}
 n $>$= 1 
 \end{DoxyPrecond}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{number__theory_8hpp_af0753ff92c84e6924e1fd6461e77b16f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

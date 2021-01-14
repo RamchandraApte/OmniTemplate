@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['treap_5ft_1098',['treap_t',['../treap_8hpp.html#a7c3f109eab4e8235dee6ef14bfdf920b',1,'treap.hpp']]],
-  ['type_1099',['type',['../structutility_1_1ar.html#aae344b98b22daaa6e15b3631b7a09d64',1,'utility::ar::type()'],['../structutility_1_1ar_3_01T_0fn_0e_4.html#ae7db76e54caf04247c14edb24b1653ef',1,'utility::ar&lt; T[n]&gt;::type()']]]
+  ['size_5ftype_1185',['size_type',['../classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b',1,'queue_tools::QueueAdaptor::size_type()'],['../classqueue__tools_1_1MinStack.html#aff2ea0311c1f8eb54918cc87d25673ba',1,'queue_tools::MinStack::size_type()'],['../classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b',1,'queue_tools::QueueAdaptor::size_type()'],['../classqueue__tools_1_1MinStack.html#aff2ea0311c1f8eb54918cc87d25673ba',1,'queue_tools::MinStack::size_type()']]]
 ];

@@ -83,6 +83,10 @@
               <span class="m-doc-wrap-bumper"><a href="#a6408bcee08d49c8ab90ac83bdba0f2f1" class="m-doc-self">BIT</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> size_arg) <span class="m-label m-flat m-info">explicit</span> </span>
             </dt>
             <dd>Construct a <a href="classBIT.html" class="m-doc">BIT</a> of size size_arg.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a6408bcee08d49c8ab90ac83bdba0f2f1" class="m-doc">BIT</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> size_arg) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd>Construct a <a href="classBIT.html" class="m-doc">BIT</a> of size size_arg.</dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -97,12 +101,68 @@
               const Value value)</span>
             </dt>
             <dd>Update the value at idx by value.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a495d58c744095867ad69123897c60700" class="m-doc">query</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> r) const -&gt; Value</span>
+            </dt>
+            <dd>Returns sum of Monoid over elements in [0, r)</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a20ea8eb0ea2065179c756ec96417227f" class="m-doc">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> idx,
+              const Value value)</span>
+            </dt>
+            <dd>Update the value at idx by value.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a6408bcee08d49c8ab90ac83bdba0f2f1"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Value, typename MonoidOp&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> BIT&lt;Value, MonoidOp&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6408bcee08d49c8ab90ac83bdba0f2f1" class="m-doc-self">BIT</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> size_arg) <span class="m-label m-info">explicit</span> </span></span>
+            </h3>
+            <p>Construct a <a href="classBIT.html" class="m-doc">BIT</a> of size size_arg.</p>
+          </div></section>
           <section class="m-doc-details" id="a20ea8eb0ea2065179c756ec96417227f"><div>
             <h3>
+              <div class="m-doc-template">
+                template&lt;typename Value, typename MonoidOp&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void BIT&lt;Value, MonoidOp&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a20ea8eb0ea2065179c756ec96417227f" class="m-doc-self">update</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> idx,
+              const Value value)</span></span>
+            </h3>
+            <p>Update the value at idx by value.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">idx</td>
+                  <td>the index of the element</td>
+                </tr>
+                <tr>
+                  <td>value</td>
+                  <td>the value the element will be updated by</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Note that this does <em>not</em> set the value to value.</p>
+          </div></section>
+          <section class="m-doc-details" id="a495d58c744095867ad69123897c60700"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Value, typename MonoidOp&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">Value BIT&lt;Value, MonoidOp&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a495d58c744095867ad69123897c60700" class="m-doc-self">query</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> r) const</span></span>
+            </h3>
+            <p>Returns sum of Monoid over elements in [0, r)</p>
+          </div></section>
+          <section class="m-doc-details" id="a20ea8eb0ea2065179c756ec96417227f"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
               <div class="m-doc-template">
                 template&lt;typename Value, typename MonoidOp&gt;
               </div>
@@ -172,7 +232,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

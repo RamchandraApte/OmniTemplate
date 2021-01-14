@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="fft_8hpp" kind="file" language="C++">
     <compoundname>fft.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
@@ -11,10 +11,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -31,11 +31,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -43,19 +43,19 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -64,25 +64,19 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
       <node id="2">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/algebra/fft.hpp</label>
@@ -115,10 +109,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="43" column="20" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="43" bodyend="60"/>
-        <references refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" compoundref="utility_8hpp" startline="57" endline="63">utility::bit_ceil</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" compoundref="core_2all_8hpp" startline="76">tau</references>
-        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="74">conv</referencedby>
+        <references refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" compoundref="utility_8hpp" startline="73" endline="78">utility::bit_ceil</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" compoundref="core_2all_8hpp" startline="97">tau</references>
+        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="72">conv</referencedby>
         <referencedby refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" compoundref="fft_8hpp" startline="62" endline="69">ifft</referencedby>
       </memberdef>
       <memberdef kind="function" id="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -144,7 +138,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="62" column="20" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="62" bodyend="69"/>
         <references refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</references>
-        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="74">conv</referencedby>
+        <referencedby refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" compoundref="fft_8hpp" startline="72" endline="72">conv</referencedby>
       </memberdef>
       <memberdef kind="function" id="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -171,8 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="72" column="18" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="72" bodyend="74"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
+        <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp" line="72" column="18" bodyfile="/home/ram/OmniTemplate/src/algebra/fft.hpp" bodystart="72" bodyend="72"/>
         <references refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</references>
         <references refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" compoundref="fft_8hpp" startline="62" endline="69">ifft</references>
       </memberdef>
@@ -192,29 +185,29 @@
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>nx2(v.size());</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>v.resize(n);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(v,<sp/>2*d,<sp/>s);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(v,<sp/>2*d,<sp/>s+d);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(v,<sp/>2<sp/>*<sp/>d,<sp/>s);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(v,<sp/>2<sp/>*<sp/>d,<sp/>s<sp/>+<sp/>d);</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>=<sp/>exp(<ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref>{-</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">{<ref refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" kindref="member">tau</ref>}<sp/>*<sp/>1.0i<sp/>/<sp/>(n<sp/>/<sp/>d)});</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref>{1};</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>s;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;com&gt;<sp/>out(n<sp/>/<sp/>d);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,n/(2*d)){</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>od<sp/>=<sp/>p*v[i+d];</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j]<sp/>=<sp/>v[i]+od;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j+n/(2*d)]<sp/>=<sp/>v[i]-od;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p*=e;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i+=2*d;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(j,<sp/>n<sp/>/<sp/>(2<sp/>*<sp/>d))<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>od<sp/>=<sp/>p<sp/>*<sp/>v[i<sp/>+<sp/>d];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j]<sp/>=<sp/>v[i]<sp/>+<sp/>od;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j<sp/>+<sp/>n<sp/>/<sp/>(2<sp/>*<sp/>d)]<sp/>=<sp/>v[i]<sp/>-<sp/>od;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>*=<sp/>e;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>+=<sp/>2<sp/>*<sp/>d;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>s;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>x:out){</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>out)<sp/>{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v[i]<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i+=d;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>+=<sp/>d;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" kindref="member">ifft</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>v){</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>reverse(begin(v)+1,<sp/>end(v));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" kindref="member">ifft</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;v)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>reverse(begin(v)<sp/>+<sp/>1,<sp/>end(v));</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(v);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>x:<sp/>v){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x<sp/>:<sp/>v)<sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>/=<sp/><ref refid="core_2all_8hpp_1ac6774acaa7fff278845893bd84e35525" kindref="member">com</ref>(v.size());</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">}</highlight></codeline>
@@ -249,9 +242,7 @@
 <codeline lineno="69"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Cont&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" kindref="member">conv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" kindref="member">ifft</ref>(<ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(a)<sp/>*<sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>));</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72" refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Cont&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="fft_8hpp_1ad433b30dd657e617f55a72340fcefd4a" kindref="member">conv</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Cont<sp/>&amp;b)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="fft_8hpp_1af359fe1ab295171c84c1da7bdfc95018" kindref="member">ifft</ref>(<ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(a)<sp/>*<sp/><ref refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" kindref="member">fft</ref>(b));<sp/>}</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/algebra/fft.hpp"/>
   </compounddef>

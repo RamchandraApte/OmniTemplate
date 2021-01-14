@@ -57,6 +57,18 @@ void test_counting_sort() {
 	    al(count_sorted_vec), [](auto x) { return x; }, *max_element(al(vec)) + 1);
 	assert(count_sorted_vec == sorted_vec);
 }
+void test_chained_compare() {
+	assert(chained_compare{}(1, 2, 3));
+	assert(!chained_compare{}(3, 2, 1));
+	assert(!chained_compare{}(1, 3, 2));
+	assert(chained_compare{greater{}}(3, 2, 1));
+}
+void test_valid_idx() {
+	vector<ll> vec{1, 2, 3};
+	fo(idx, -10, -1) { assert(!valid_idx(vec, idx)); }
+	fo(idx, vec.size()) { assert(valid_idx(vec, idx)); }
+	fo(idx, vec.size(), vec.size() + 10) { assert(!valid_idx(vec, idx)); }
+}
 void test_utility() {
 	test_with();
 	test_uniq();
@@ -65,6 +77,8 @@ void test_utility() {
 	test_bit_ceil();
 	test_key_compare();
 	test_counting_sort();
+	test_chained_compare();
+	test_valid_idx();
 }
 } // namespace utility::test
 using namespace utility::test;

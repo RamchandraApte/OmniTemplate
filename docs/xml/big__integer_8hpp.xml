@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="big__integer_8hpp" kind="file" language="C++">
     <compoundname>big_integer.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
+    <includedby refid="test__big__integer_8hpp" local="yes">/home/ram/OmniTemplate/src/algebra/test_big_integer.hpp</includedby>
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <incdepgraph>
       <node id="3">
@@ -11,10 +12,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -31,11 +32,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -43,10 +44,10 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
@@ -58,40 +59,40 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
       <node id="2">
+        <label>/home/ram/OmniTemplate/src/algebra/test_big_integer.hpp</label>
+        <link refid="test__big__integer_8hpp"/>
+      </node>
+      <node id="3">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/algebra/big_integer.hpp</label>
         <link refid="big__integer_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="structbigint_1_1bigint" prot="public">bigint::bigint</innerclass>
+    <innerclass refid="structbigint_1_1BigInt" prot="public">bigint::BigInt</innerclass>
     <innernamespace refid="namespacebigint">bigint</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -101,31 +102,34 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3" refid="namespacebigint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebigint" kindref="compound">bigint</ref><sp/>{</highlight></codeline>
-<codeline lineno="4" refid="structbigint_1_1bigint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="namespacebigint" kindref="compound">bigint</ref><sp/>{</highlight></codeline>
-<codeline lineno="5" refid="structbigint_1_1bigint_1a9c73973c3aeb34e64a5077b75eb8b0c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ull&gt;<sp/><ref refid="structbigint_1_1bigint_1a9c73973c3aeb34e64a5077b75eb8b0c2" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="6" refid="structbigint_1_1bigint_1a2104d28d86c22e149f16f912b8d4e39e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1bigint_1a2104d28d86c22e149f16f912b8d4e39e" kindref="member">bigint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;ull&gt;<sp/>&amp;v_)<sp/>:<sp/>v(v_)<sp/>{}</highlight></codeline>
-<codeline lineno="7" refid="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" kindref="member">operator[]</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i<sp/>&lt;<sp/><ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(v)<sp/>?<sp/>v[i]<sp/>:<sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="9" refid="namespacebigint_1af4352ea3f90e44bbfe72018e96a89bce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacebigint_1af4352ea3f90e44bbfe72018e96a89bce" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="namespacebigint" kindref="compound">bigint</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a)<sp/>{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/>a.<ref refid="structbigint_1_1bigint_1a9c73973c3aeb34e64a5077b75eb8b0c2" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacelinear__algebra_1a297c703d12bd9b758de47e299044d8f2" kindref="member">operator+</ref>(<ref refid="namespacebigint" kindref="compound">bigint</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/>a,<sp/><ref refid="namespacebigint" kindref="compound">bigint</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>){</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>addo<sp/>__builtin_add_overflow</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>initializer_list<sp/>xs{a,<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>};</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1aa5114a4fed348a29fb92123470476b1b" kindref="member">ull</ref><sp/>sm<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>x:<sp/>xs){sm+=x.v.size();}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacebigint" kindref="compound">bigint</ref><sp/>c(sm+1);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,sm){</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>x:<sp/>xs){</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c.v[i+1]<sp/>|=<sp/>addo(c.v[i],<sp/>x[i],<sp/>c.v.data()+i);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="4" refid="structbigint_1_1BigInt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="structbigint_1_1BigInt_1a504225280978105f6c6f39a90fe16ac8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1BigInt_1a504225280978105f6c6f39a90fe16ac8" kindref="member">DigitType</ref><sp/>=<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int;</highlight></codeline>
+<codeline lineno="6" refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;DigitType&gt;<sp/><ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>explicit<sp/>BigInt(const<sp/>ll<sp/>size_)<sp/>:<sp/>digits(size_)<sp/>{}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structbigint_1_1BigInt_1a4382cb920aa30a6712e1827b36200553" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1BigInt_1a4382cb920aa30a6712e1827b36200553" kindref="member">BigInt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;DigitType&gt;<sp/>&amp;digits_)<sp/>:<sp/><ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>(digits_)<sp/>{}</highlight></codeline>
+<codeline lineno="9" refid="structbigint_1_1BigInt_1afede551067e0a006db36065c3c6b3f2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structbigint_1_1BigInt_1afede551067e0a006db36065c3c6b3f2c" kindref="member">BigInt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1BigInt_1a504225280978105f6c6f39a90fe16ac8" kindref="member">DigitType</ref><sp/>n)<sp/>:<sp/><ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>{n}<sp/>{}</highlight></codeline>
+<codeline lineno="10" refid="structbigint_1_1BigInt_1a9b9c2c376d5f790991f541553de43bd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1BigInt_1a9b9c2c376d5f790991f541553de43bd0" kindref="member">operator[]</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>i)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i<sp/>&lt;<sp/><ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>)<sp/>?<sp/><ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>[i]<sp/>:<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12" refid="namespacebigint_1a33b1bd079994beb869f90c2ed86fe8c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacebigint_1a33b1bd079994beb869f90c2ed86fe8c5" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacebigint" kindref="compound">bigint</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/><ref refid="namespacebigint" kindref="compound">bigint</ref>.digits;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15" refid="namespacebigint_1a0499d0013049b30834ebbcffc14d8f92" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacebigint_1a0499d0013049b30834ebbcffc14d8f92" kindref="member">operator+</ref>(<ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a,<sp/><ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/>ret(max(a.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>.size(),<sp/>b.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>.size())<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>copy(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(a.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>),<sp/>begin(ret.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>carry{};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>b.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>.size()<sp/>+<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sum<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ret.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>[i])<sp/>+<sp/>b[i]<sp/>+<sp/>carry;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>[i]<sp/>=<sp/>sum;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>carry<sp/>=<sp/>(sum<sp/>&gt;<sp/>numeric_limits&lt;BigInt::DigitType&gt;::max());</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>bigint</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebigint" kindref="compound">bigint</ref>;</highlight></codeline>
+<codeline lineno="26" refid="namespacebigint_1a1c313eef0ad422d61739b7e3cd97d849" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacebigint_1a1c313eef0ad422d61739b7e3cd97d849" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/>&amp;a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structbigint_1_1BigInt" kindref="compound">BigInt</ref><sp/>&amp;b)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrange" kindref="compound">range&lt;int_it&lt;ll&gt;</ref>&gt;<sp/>rng{0,<sp/>max(<ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(a.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>),<sp/><ref refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kindref="member">ssize</ref>(b.<ref refid="structbigint_1_1BigInt_1af91705a7c72d0379a9a0b51097c16a4f" kindref="member">digits</ref>))};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>all_of(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(rng),<sp/>[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a[idx]<sp/>==<sp/>b[idx];<sp/>});</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>bigint</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebigint" kindref="compound">bigint</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/algebra/big_integer.hpp"/>
   </compounddef>

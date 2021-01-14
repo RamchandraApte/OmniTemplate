@@ -8,11 +8,11 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecombinatorics_a7c355be8fa586494f280768dc777dede}{perm}} (const T a, const T \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecombinatorics_a7c355be8fa586494f280768dc777dede}{perm}} (const T a, const T b)
 \item 
 {\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecombinatorics_a20e5a1b40f76572aa1e18b228b6e4849}{fact}} (const T n)
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecombinatorics_a24ea271b6415a4679e019562f474d88f}{choose}} (const T a, const T \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacecombinatorics_a24ea271b6415a4679e019562f474d88f}{choose}} (const T a, const T b)
 \end{DoxyCompactItemize}
 
 
@@ -26,6 +26,10 @@ Combinatorics header.
 \doxysubsubsection{\texorpdfstring{choose()}{choose()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 T combinatorics\+::choose (\begin{DoxyParamCaption}\item[{const T}]{a,  }\item[{const T}]{b }\end{DoxyParamCaption})}
+
+Returns a choose b, i.\+e. $\binom{a}{b}$
+
+Returns a choose b, i.\+e. $\binom{a}{b}$
 
 Returns a choose b, i.\+e. $\binom{a}{b}$Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -48,6 +52,10 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 T combinatorics\+::fact (\begin{DoxyParamCaption}\item[{const T}]{n }\end{DoxyParamCaption})}
 
+Return the factorial of n, i.\+e. $n!$.
+
+Return the factorial of n, i.\+e. $n!$.
+
 Return the factorial of n, i.\+e. $n!$.Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -68,6 +76,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{perm()}{perm()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 T combinatorics\+::perm (\begin{DoxyParamCaption}\item[{const T}]{a,  }\item[{const T}]{b }\end{DoxyParamCaption})}
+
+Return $P(a,b)$, the falling factorial.
+
+Return $P(a,b)$, the falling factorial.
 
 Return $P(a,b)$, the falling factorial.Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

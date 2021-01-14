@@ -5,7 +5,7 @@
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacedebug__tools_a991f9f01ab3a0e664fabf0bd17fab95c}{type\+\_\+name}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} T const \&v)
 \item 
-auto \mbox{\hyperlink{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}{replace}} (string s, const string \&a, const string \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+auto \mbox{\hyperlink{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}{replace}} (string s, const string \&a, const string \&b)
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{namespacedebug__tools_a3aa6fe2ec65b64f87ad431efde3822c7}{simple\+\_\+tp}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const T \&v)
 \item 
@@ -29,11 +29,19 @@ Debugging tools
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto debug\+\_\+tools\+::debug (\begin{DoxyParamCaption}\item[{const T \&}]{x,  }\item[{const string \&}]{name,  }\item[{source\+\_\+location const \&}]{loc = {\ttfamily source\+\_\+location\+:\+:current()} }\end{DoxyParamCaption})}
 
+Debug print x
+
+Debug print x
+
 Debug print x\mbox{\Hypertarget{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}\label{namespacedebug__tools_a2b613fd4caa0fb48d04eb7e6f3bf6dff}} 
 \index{debug\_tools@{debug\_tools}!replace@{replace}}
 \index{replace@{replace}!debug\_tools@{debug\_tools}}
 \doxysubsubsection{\texorpdfstring{replace()}{replace()}}
 {\footnotesize\ttfamily auto debug\+\_\+tools\+::replace (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{const string \&}]{a,  }\item[{const string \&}]{b }\end{DoxyParamCaption})}
+
+Replace all occurences of a in s with b
+
+Replace all occurences of a in s with b
 
 Replace all occurences of a in s with bHere is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -48,6 +56,10 @@ Replace all occurences of a in s with bHere is the caller graph for this functio
 \doxysubsubsection{\texorpdfstring{simple\_tp()}{simple\_tp()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto debug\+\_\+tools\+::simple\+\_\+tp (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} const T \&}]{v }\end{DoxyParamCaption})}
+
+Return the simplified type of v
+
+Return the simplified type of v
 
 Return the simplified type of vHere is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -69,6 +81,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{type\_name()}{type\_name()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto debug\+\_\+tools\+::type\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} T const \&}]{v }\end{DoxyParamCaption})}
+
+Return the type name of the type of value
+
+Return the type name of the type of value
 
 Return the type name of the type of valueHere is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

@@ -11,8 +11,7 @@ Heavy-\/light decomposition.
 
 
 
-Collaboration diagram for hld\+::H\+LD$<$ T, Monoid, Query\+DS $>$\+:
-\nopagebreak
+Collaboration diagram for hld\+::H\+LD$<$ T, Monoid, Query\+DS $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +21,15 @@ Collaboration diagram for hld\+::H\+LD$<$ T, Monoid, Query\+DS $>$\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}{H\+LD}} (const \mbox{\hyperlink{namespacegraph__theory_a5ab361e566cb00eee5329a02c4553780}{Graph\+Adj}} \&graph, const vector$<$ T $>$ \&data)
+\mbox{\hyperlink{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}{H\+LD}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph, const vector$<$ T $>$ \&data)
+\item 
+{\footnotesize template$<$typename Func $>$ }\\void \mbox{\hyperlink{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0}{func\+\_\+path}} (\mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} v, const Func \&func)
+\begin{DoxyCompactList}\small\item\em Calls func (could be an update or query function, for example) on each heavy chain in the path. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415}{query}} (\mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} v)
+\begin{DoxyCompactList}\small\item\em Returns the Monoid sum over values of vertices on the path from u to v. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f}{update}} (\mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} v, const T \&val)
+\begin{DoxyCompactList}\small\item\em Update the values of vertices on the path from u to v by val. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}{H\+LD}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph, const vector$<$ T $>$ \&data)
 \item 
 {\footnotesize template$<$typename Func $>$ }\\void \mbox{\hyperlink{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0}{func\+\_\+path}} (\mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} v, const Func \&func)
 \begin{DoxyCompactList}\small\item\em Calls func (could be an update or query function, for example) on each heavy chain in the path. \end{DoxyCompactList}\item 
@@ -33,11 +40,11 @@ void \mbox{\hyperlink{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f}{update}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD_a891f87bda863c1d391e15455a63db9f5}{heavy}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD_a1c4a091ce383d094dc4039c8d6dc0a6b}{heavy}}
 \begin{DoxyCompactList}\small\item\em Heavy child. \end{DoxyCompactList}\item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD_aa7fead41864b4d6eac6470e62da467b5}{head}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD_a1fcfa427f9e7cb91ba01f9ce713b742f}{head}}
 \begin{DoxyCompactList}\small\item\em Head of heavy path. \end{DoxyCompactList}\item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD_a6aa11b93d4b28d9353bf1b8568acce04}{pos}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD_ace0152174421ed8614d349cdb58ef58b}{pos}}
 \begin{DoxyCompactList}\small\item\em Position in segment tree. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}} \mbox{\hyperlink{classhld_1_1HLD_a521f3dfd2740fbb7f76946702355baf5}{d}}
 \item 
@@ -61,9 +68,16 @@ Space complexity $O(n)$
 \mbox{\Hypertarget{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}\label{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!HLD@{HLD}}
 \index{HLD@{HLD}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
-\doxysubsubsection{\texorpdfstring{HLD()}{HLD()}}
+\doxysubsubsection{\texorpdfstring{HLD()}{HLD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
-\mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::\mbox{\hyperlink{classhld_1_1HLD}{H\+LD}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacegraph__theory_a5ab361e566cb00eee5329a02c4553780}{Graph\+Adj}} \&}]{graph,  }\item[{const vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+\mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::\mbox{\hyperlink{classhld_1_1HLD}{H\+LD}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&}]{graph,  }\item[{const vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+$<$ Data permuted by pos\mbox{\Hypertarget{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}\label{classhld_1_1HLD_a8d5d8abcf2da6437d67365cf2f70ef66}} 
+\index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!HLD@{HLD}}
+\index{HLD@{HLD}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
+\doxysubsubsection{\texorpdfstring{HLD()}{HLD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
+\mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::\mbox{\hyperlink{classhld_1_1HLD}{H\+LD}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&}]{graph,  }\item[{const vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
 $<$ Data permuted by pos
 
@@ -71,7 +85,7 @@ $<$ Data permuted by pos
 \mbox{\Hypertarget{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0}\label{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!func\_path@{func\_path}}
 \index{func\_path@{func\_path}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
-\doxysubsubsection{\texorpdfstring{func\_path()}{func\_path()}}
+\doxysubsubsection{\texorpdfstring{func\_path()}{func\_path()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
 template$<$typename Func $>$ \\
 void \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::func\+\_\+path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v,  }\item[{const Func \&}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
@@ -94,10 +108,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=326pt]{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0}\label{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0}} 
+\index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!func\_path@{func\_path}}
+\index{func\_path@{func\_path}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
+\doxysubsubsection{\texorpdfstring{func\_path()}{func\_path()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
+template$<$typename Func $>$ \\
+void \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::func\+\_\+path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v,  }\item[{const Func \&}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calls func (could be an update or query function, for example) on each heavy chain in the path. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classhld_1_1HLD_ace75fa88e8df29573405e9241c56baf0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415}\label{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!query@{query}}
 \index{query@{query}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
-\doxysubsubsection{\texorpdfstring{query()}{query()}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
 T \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -119,13 +152,42 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415_cgraph}
+\includegraphics[width=262pt]{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415}\label{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415}} 
+\index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!query@{query}}
+\index{query@{query}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
+T \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Monoid sum over values of vertices on the path from u to v. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The start vertex. \\
+\hline
+{\em v} & The end vertex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classhld_1_1HLD_a89ad91fa5429a48db553da8d44849415_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f}\label{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!update@{update}}
 \index{update@{update}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
 void \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -140,6 +202,17 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f}\label{classhld_1_1HLD_a5010452fe04b89ecba385cec7a0c183f}} 
+\index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!update@{update}}
+\index{update@{update}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
+void \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the values of vertices on the path from u to v by val. 
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -157,34 +230,34 @@ Here is the call graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
 Query\+DS \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::ds \{vector$<$T$>$\{-\/100, -\/100\}\}\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classhld_1_1HLD_aa7fead41864b4d6eac6470e62da467b5}\label{classhld_1_1HLD_aa7fead41864b4d6eac6470e62da467b5}} 
+\mbox{\Hypertarget{classhld_1_1HLD_a1fcfa427f9e7cb91ba01f9ce713b742f}\label{classhld_1_1HLD_a1fcfa427f9e7cb91ba01f9ce713b742f}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!head@{head}}
 \index{head@{head}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
 \doxysubsubsection{\texorpdfstring{head}{head}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
-vector$<$\mbox{\hyperlink{structll}{ll}}$>$ \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Head of heavy path. 
 
-\mbox{\Hypertarget{classhld_1_1HLD_a891f87bda863c1d391e15455a63db9f5}\label{classhld_1_1HLD_a891f87bda863c1d391e15455a63db9f5}} 
+\mbox{\Hypertarget{classhld_1_1HLD_a1c4a091ce383d094dc4039c8d6dc0a6b}\label{classhld_1_1HLD_a1c4a091ce383d094dc4039c8d6dc0a6b}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!heavy@{heavy}}
 \index{heavy@{heavy}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
 \doxysubsubsection{\texorpdfstring{heavy}{heavy}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
-vector$<$\mbox{\hyperlink{structll}{ll}}$>$ \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::heavy\hspace{0.3cm}{\ttfamily [private]}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::heavy\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Heavy child. 
 
-\mbox{\Hypertarget{classhld_1_1HLD_a6aa11b93d4b28d9353bf1b8568acce04}\label{classhld_1_1HLD_a6aa11b93d4b28d9353bf1b8568acce04}} 
+\mbox{\Hypertarget{classhld_1_1HLD_ace0152174421ed8614d349cdb58ef58b}\label{classhld_1_1HLD_ace0152174421ed8614d349cdb58ef58b}} 
 \index{hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}!pos@{pos}}
 \index{pos@{pos}!hld::HLD$<$ T, Monoid, QueryDS $>$@{hld::HLD$<$ T, Monoid, QueryDS $>$}}
 \doxysubsubsection{\texorpdfstring{pos}{pos}}
 {\footnotesize\ttfamily template$<$typename T , typename Monoid , typename Query\+DS $>$ \\
-vector$<$\mbox{\hyperlink{structll}{ll}}$>$ \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::pos\hspace{0.3cm}{\ttfamily [private]}}
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{classhld_1_1HLD}{hld\+::\+H\+LD}}$<$ T, Monoid, Query\+DS $>$\+::pos\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -192,6 +265,7 @@ Position in segment tree.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/src/graph/tree/\mbox{\hyperlink{hld_8hpp}{hld.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/graph/tree/\mbox{\hyperlink{hld_8hpp}{hld.\+hpp}}\item 
+/home/ram/\+Omni\+Template/src/test/\mbox{\hyperlink{test__compiled_8cpp}{test\+\_\+compiled.\+cpp}}\end{DoxyCompactItemize}

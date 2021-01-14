@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="test__modulo_8hpp" kind="file" language="C++">
     <compoundname>test_modulo.hpp</compoundname>
     <includes refid="modulo_8hpp" local="yes">modulo.hpp</includes>
@@ -17,10 +17,10 @@
       <node id="6">
         <label>experimental/source_location</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -43,11 +43,11 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -55,27 +55,27 @@
       <node id="11">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="10">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -103,13 +103,13 @@
 <codeline lineno="3" refid="namespacemodulo__namespace_1_1test_1a528d9ed1db3200393555b3dc75036599" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemodulo__namespace_1_1test_1a528d9ed1db3200393555b3dc75036599" kindref="member">test_power</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" kindref="member">power</ref>(2,<sp/>3)<sp/>==<sp/>8);</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" kindref="member">power</ref>(3,<sp/>10)<sp/>==<sp/>59049);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(1e9<sp/>+<sp/>7),<sp/><ref refid="structmodulo__namespace_1_1modulo_1a3fb17100685d3dfe8246407138109bc6" kindref="member">modulo::modulus</ref>};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(1e9<sp/>+<sp/>7),<sp/><ref refid="structmodulo__namespace_1_1modulo_1ae2bc70014960c66ea5184cae85a330cc" kindref="member">modulo::modulus</ref>};</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" kindref="member">power</ref>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{3},<sp/>1000)<sp/>==<sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{56888193});</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" kindref="member">power</ref>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{3},<sp/>-1000)<sp/>*<sp/><ref refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" kindref="member">power</ref>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{3},<sp/>1000)<sp/>==<sp/>1);</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="namespacemodulo__namespace_1a8e6fc91a032b336ea0bbed9eabf54f69" kindref="member">power</ref>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{1},<sp/>0)<sp/>==<sp/>1);</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="11" refid="namespacemodulo__namespace_1_1test_1a1125f7652707749c464a2dfa2732a94c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemodulo__namespace_1_1test_1a1125f7652707749c464a2dfa2732a94c" kindref="member">test_md</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{7,<sp/><ref refid="structmodulo__namespace_1_1modulo_1a3fb17100685d3dfe8246407138109bc6" kindref="member">modulo::modulus</ref>};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{7,<sp/><ref refid="structmodulo__namespace_1_1modulo_1ae2bc70014960c66ea5184cae85a330cc" kindref="member">modulo::modulus</ref>};</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{34}<sp/>/<sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{-2}<sp/>==<sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{4});</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{2}<sp/>-<sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{6}<sp/>==<sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{3});</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">}</highlight></codeline>

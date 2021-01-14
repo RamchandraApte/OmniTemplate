@@ -1,16 +1,112 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="lca_8hpp" kind="file" language="C++">
     <compoundname>lca.hpp</compoundname>
-    <includes local="yes">core.hpp</includes>
+    <includes refid="core_8hpp" local="yes">core.hpp</includes>
     <incdepgraph>
+      <node id="14">
+        <label>number_theory/modulo.hpp</label>
+        <link refid="modulo_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>bits/stdc++.h</label>
+      </node>
+      <node id="15">
+        <label>polynomial.hpp</label>
+        <link refid="polynomial_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>algebra/linear_algebra.hpp</label>
+        <link refid="linear__algebra_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="9">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>experimental/iterator</label>
+      </node>
       <node id="2">
         <label>core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>core/all.hpp</label>
+        <link refid="core_2all_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>range.hpp</label>
+        <link refid="range_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/graph/tree/lca.hpp</label>
         <link refid="lca_8hpp"/>
         <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>debug.hpp</label>
+        <link refid="debug_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ds/dsu.hpp</label>
+        <link refid="dsu_8hpp"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -22,26 +118,26 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;core.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_8hpp" kindref="compound">core.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3" refid="namespacetree" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetree" kindref="compound">tree</ref><sp/>{</highlight></codeline>
-<codeline lineno="4" refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" kindref="member">sz</ref><sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="4" refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" kindref="member">sz</ref><sp/>=<sp/>30;</highlight></codeline>
 <codeline lineno="5" refid="structtree_1_1no" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtree_1_1no" kindref="compound">no</ref><sp/>{</highlight></codeline>
 <codeline lineno="6" refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;no<sp/>*&gt;<sp/><ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>;</highlight></codeline>
 <codeline lineno="7" refid="structtree_1_1no_1aaee193ab7c73293313b957b397f2b6b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structtree_1_1no_1aaee193ab7c73293313b957b397f2b6b2" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="8" refid="structtree_1_1no_1ace71f0011f855bca48eb7d708854bbfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree_1_1no_1ace71f0011f855bca48eb7d708854bbfb" kindref="member">no</ref>(T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;v_,<sp/><ref refid="structtree_1_1no" kindref="compound">no</ref><sp/>*pa<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>:<sp/><ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>(<ref refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" kindref="member">sz</ref>),<sp/><ref refid="structtree_1_1no_1aaee193ab7c73293313b957b397f2b6b2" kindref="member">v</ref>(v_)<sp/>{</highlight></codeline>
+<codeline lineno="8" refid="structtree_1_1no_1ace71f0011f855bca48eb7d708854bbfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree_1_1no_1ace71f0011f855bca48eb7d708854bbfb" kindref="member">no</ref>(T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;v_,<sp/><ref refid="structtree_1_1no" kindref="compound">no</ref><sp/>*pa<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>:<sp/><ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>(<ref refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" kindref="member">sz</ref>),<sp/><ref refid="structtree_1_1no_1aaee193ab7c73293313b957b397f2b6b2" kindref="member">v</ref>(v_)<sp/>{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pa)<sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pa<sp/>=<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/><ref refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" kindref="member">sz</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/><ref refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" kindref="member">sz</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[i]<sp/>=<sp/>pa;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pa<sp/>=<sp/>pa-&gt;p[i];</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="17" refid="structtree_1_1no_1a6706d57cfed232149e1af1c15dfd2dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structtree_1_1no_1a6706d57cfed232149e1af1c15dfd2dfa" kindref="member">gt</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>h)<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="abbrev_8hpp_1a52c977d91e62bd8e617e5cb2926547e1" kindref="member">bt</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>(h);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="abbrev_8hpp_1a52c977d91e62bd8e617e5cb2926547e1" kindref="member">bt</ref><sp/>b(h);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/><ref refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" kindref="member">sz</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>[i])<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/><ref refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" kindref="member">sz</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b[i])<sp/>{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x-&gt;p[i];</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -49,33 +145,33 @@
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="27" refid="structtree_1_1no_1af0b6086861d10ce510b9a5619bd3ef36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[0]<sp/>!=<sp/>&amp;</highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline lineno="28" refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" kindref="member">dp</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="abbrev_8hpp_1a52c977d91e62bd8e617e5cb2926547e1" kindref="member">bt</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="abbrev_8hpp_1a52c977d91e62bd8e617e5cb2926547e1" kindref="member">bt</ref><sp/>b;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;i<sp/>:<sp/><ref refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref>(<ref refid="structrange" kindref="compound">ra</ref>{<ref refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" kindref="member">sz</ref>}))<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;i<sp/>:<sp/><ref refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref>(<ref refid="structrange" kindref="compound">ra</ref>{<ref refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" kindref="member">sz</ref>}))<sp/>{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*x.p[i])<sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>*x.p[i];</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>[i]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b[i]<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>.to_ullong())<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(b.to_ullong())<sp/>+<sp/>1;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="40" refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" kindref="member">lca</ref>(<ref refid="structtree_1_1no" kindref="compound">no&lt;T&gt;</ref><sp/>*a,<sp/><ref refid="structtree_1_1no" kindref="compound">no&lt;T&gt;</ref><sp/>*<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>da<sp/>=<sp/>a-&gt;<ref refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" kindref="member">dp</ref>(),<sp/>db<sp/>=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>-&gt;dp();</highlight></codeline>
+<codeline lineno="40" refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" kindref="member">lca</ref>(<ref refid="structtree_1_1no" kindref="compound">no&lt;T&gt;</ref><sp/>*a,<sp/><ref refid="structtree_1_1no" kindref="compound">no&lt;T&gt;</ref><sp/>*b)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>da<sp/>=<sp/>a-&gt;<ref refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" kindref="member">dp</ref>(),<sp/>db<sp/>=<sp/>b-&gt;<ref refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" kindref="member">dp</ref>();</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(da<sp/>&gt;<sp/>db)<sp/>{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swap(a,<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swap(a,<sp/>b);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref><sp/>=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>-&gt;gt(db<sp/>-<sp/>da);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>b-&gt;<ref refid="structtree_1_1no_1a6706d57cfed232149e1af1c15dfd2dfa" kindref="member">gt</ref>(db<sp/>-<sp/>da);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/>b)<sp/>{</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;i<sp/>:<sp/><ref refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref>(<ref refid="structrange" kindref="compound">ra</ref>{<ref refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" kindref="member">sz</ref>}))<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[i]<sp/>!=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>-&gt;p[i])<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;i<sp/>:<sp/><ref refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref>(<ref refid="structrange" kindref="compound">ra</ref>{<ref refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" kindref="member">sz</ref>}))<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[i]<sp/>!=<sp/>b-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[i])<sp/>{</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[i];</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref><sp/>=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>-&gt;p[i];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>b-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[i];</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[0]<sp/>==<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>-&gt;p[0]);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(a-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[0]<sp/>==<sp/>b-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[0]);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a-&gt;<ref refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" kindref="member">p</ref>[0];</highlight></codeline>
 <codeline lineno="57"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="58"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tree</highlight><highlight class="normal"></highlight></codeline>

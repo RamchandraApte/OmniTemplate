@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="template_8hpp" kind="file" language="C++">
     <compoundname>template.hpp</compoundname>
     <includes refid="big__integer_8hpp" local="yes">algebra/big_integer.hpp</includes>
@@ -27,12 +27,11 @@
     <includes refid="tree_8hpp" local="yes">graph/tree/tree.hpp</includes>
     <includes refid="modulo_8hpp" local="yes">number_theory/modulo.hpp</includes>
     <includes refid="number__theory_8hpp" local="yes">number_theory/number_theory.hpp</includes>
+    <includes refid="string_8hpp" local="yes">string/string.hpp</includes>
     <includes refid="utility_8hpp" local="yes">utility.hpp</includes>
     <includes refid="abbrev_8hpp" local="yes">utility/abbrev.hpp</includes>
     <includes refid="coroutine_8hpp" local="yes">utility/coroutine.hpp</includes>
     <includes refid="graph__draw_8hpp" local="yes">utility/graph_draw.hpp</includes>
-    <includes refid="string_8hpp" local="yes">utility/string.hpp</includes>
-    <includedby refid="test_8cpp" local="yes">/home/ram/OmniTemplate/src/test/test.cpp</includedby>
     <incdepgraph>
       <node id="14">
         <label>number_theory/modulo.hpp</label>
@@ -42,6 +41,14 @@
       </node>
       <node id="4">
         <label>bits/stdc++.h</label>
+      </node>
+      <node id="42">
+        <label>string/string.hpp</label>
+        <link refid="string_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
       <node id="26">
         <label>ds/sparse_table.hpp</label>
@@ -60,8 +67,10 @@
         <link refid="polynomial_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
-      <node id="38">
+      <node id="39">
         <label>graph/tree/hld.hpp</label>
         <link refid="hld_8hpp"/>
         <childnode refid="3" relation="include">
@@ -90,16 +99,16 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="5">
         <label>experimental/iterator</label>
       </node>
-      <node id="40">
+      <node id="41">
         <label>number_theory/number_theory.hpp</label>
         <link refid="number__theory_8hpp"/>
         <childnode refid="3" relation="include">
@@ -107,7 +116,7 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="44">
         <label>utility/coroutine.hpp</label>
         <link refid="coroutine_8hpp"/>
         <childnode refid="3" relation="include">
@@ -133,6 +142,14 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="32">
+        <label>graph/core.hpp</label>
+        <link refid="core_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
       <node id="3">
         <label>core/all.hpp</label>
         <link refid="core_2all_8hpp"/>
@@ -144,16 +161,16 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="43">
         <label>utility/abbrev.hpp</label>
         <link refid="abbrev_8hpp"/>
       </node>
@@ -163,7 +180,7 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="39">
+      <node id="40">
         <label>graph/tree/link_cut.hpp</label>
         <link refid="link__cut_8hpp"/>
         <childnode refid="3" relation="include">
@@ -171,7 +188,7 @@
         <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="33">
         <label>test_biconnected.hpp</label>
         <link refid="test__biconnected_8hpp"/>
         <childnode refid="31" relation="include">
@@ -204,20 +221,22 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>test_flow.hpp</label>
         <link refid="test__flow_8hpp"/>
-        <childnode refid="34" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="11">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="3" relation="include">
@@ -266,25 +285,25 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
         <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -299,10 +318,12 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="34">
         <label>bipartite.hpp</label>
         <link refid="bipartite_8hpp"/>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="30">
@@ -310,15 +331,15 @@
         <link refid="graph_2all_8hpp"/>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
@@ -326,17 +347,21 @@
         </childnode>
         <childnode refid="37" relation="include">
         </childnode>
-      </node>
-      <node id="7">
-        <label>io.hpp</label>
-        <link refid="io_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
       </node>
-      <node id="35">
+      <node id="10">
+        <label>io.hpp</label>
+        <link refid="io_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
         <label>graph_view.hpp</label>
         <link refid="graph__view_8hpp"/>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="29">
@@ -346,11 +371,7 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-      </node>
-      <node id="44">
-        <label>utility/string.hpp</label>
-        <link refid="string_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="12">
@@ -367,26 +388,28 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="38">
         <label>tree/tree.hpp</label>
         <link refid="tree_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
       </node>
-      <node id="34">
+      <node id="35">
         <label>flow.hpp</label>
         <link refid="flow_8hpp"/>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="22">
@@ -395,7 +418,7 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="45">
         <label>utility/graph_draw.hpp</label>
         <link refid="graph__draw_8hpp"/>
         <childnode refid="3" relation="include">
@@ -404,18 +427,6 @@
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="2">
-        <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
-        <link refid="test_8cpp"/>
-      </node>
-      <node id="1">
-        <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
-        <link refid="template_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -447,11 +458,11 @@
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tree_8hpp" kindref="compound">graph/tree/tree.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="modulo_8hpp" kindref="compound">number_theory/modulo.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="number__theory_8hpp" kindref="compound">number_theory/number_theory.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utility_8hpp" kindref="compound">utility.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="abbrev_8hpp" kindref="compound">utility/abbrev.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="coroutine_8hpp" kindref="compound">utility/coroutine.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graph__draw_8hpp" kindref="compound">utility/graph_draw.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8hpp" kindref="compound">utility/string.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8hpp" kindref="compound">string/string.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utility_8hpp" kindref="compound">utility.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="abbrev_8hpp" kindref="compound">utility/abbrev.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="coroutine_8hpp" kindref="compound">utility/coroutine.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="graph__draw_8hpp" kindref="compound">utility/graph_draw.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/template.hpp"/>
   </compounddef>

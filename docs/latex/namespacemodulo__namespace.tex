@@ -20,11 +20,11 @@ struct \mbox{\hyperlink{structmodulo__namespace_1_1no__mod}{no\+\_\+mod}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69}{power}} (T a, \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69}{power}} (T a, \mbox{\hyperlink{structll}{ll}} b)
 \begin{DoxyCompactList}\small\item\em Returns $a^b$. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacemodulo__namespace_a2507e89fefa09a358a9de729b15dd642}{mod}} (\mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacemodulo__namespace_a2507e89fefa09a358a9de729b15dd642}{mod}} (\mbox{\hyperlink{structll}{ll}} a, const \mbox{\hyperlink{structll}{ll}} b)
 \begin{DoxyCompactList}\small\item\em Returns the remainder of a divided by b as a nonnegative integer in \mbox{[}0, b). \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacemodulo__namespace_a0a666ddbbb5d4d02c4aee66be7577292}{mod\+\_\+eq}} (\mbox{\hyperlink{structll}{ll}} \&a, const \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespacemodulo__namespace_a0a666ddbbb5d4d02c4aee66be7577292}{mod\+\_\+eq}} (\mbox{\hyperlink{structll}{ll}} \&a, const \mbox{\hyperlink{structll}{ll}} b)
 \item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_a69f587d528c1bb1f78d8a538b133e57b}{operator\char`\"{}\char`\"{}\+\_\+M}} (const unsigned long long x)
 \item 
@@ -32,7 +32,7 @@ struct \mbox{\hyperlink{structmodulo__namespace_1_1no__mod}{no\+\_\+mod}}
 \item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_aab105decd35962ad192ea2187706df9b}{identity}} (multiplies$<$$>$, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}})
 \item 
-\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_aa39044c62fae2707474b9960d257d9dd}{operator+}} (\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&a, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_aa39044c62fae2707474b9960d257d9dd}{operator+}} (\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&a, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&b)
 \item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_aef9f34a9358f523b5e12f6897a806e7e}{operator++}} (\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \&a)
 \item 
@@ -40,11 +40,13 @@ struct \mbox{\hyperlink{structmodulo__namespace_1_1no__mod}{no\+\_\+mod}}
 \item 
 \mbox{\hyperlink{namespacemodulo__namespace_a533cfa2e1e3a79428a3b5e00430ad125}{bin}} (==, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}})
 \item 
-\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_a7d1e0e6527c5e49efdc1ef0780a055c8}{operator$\ast$}} (\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&a, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_a7d1e0e6527c5e49efdc1ef0780a055c8}{operator$\ast$}} (\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&a, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&b)
 \item 
-\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_aac690d54b7665a90ca461724df8907c0}{invert}} (multiplies$<$$>$, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&\mbox{\hyperlink{my__int_8hpp_a9dc54a811b75d3d05d3deff10980ca7e}{b}})
+\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{namespacemodulo__namespace_aac690d54b7665a90ca461724df8907c0}{invert}} (multiplies$<$$>$, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&b)
 \item 
-{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacemodulo__namespace_ad645d89c7a55337c12edadb8376670e3}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&m)
+{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacemodulo__namespace_a561c93db625469ab20895dabddbae1b8}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&m)
+\item 
+auto \mbox{\hyperlink{namespacemodulo__namespace_a2f1a91608676548419fa75266f0a00bf}{operator==}} (\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&a, \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&b)
 \end{DoxyCompactItemize}
 
 
@@ -77,7 +79,8 @@ using \mbox{\hyperlink{namespacemodulo__namespace_a0329c7316dfca40b316f6ad7a6b60
 \doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} modulo\+\_\+namespace\+::identity (\begin{DoxyParamCaption}\item[{plus$<$$>$}]{,  }\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}}}]{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -90,6 +93,10 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{invert()}{invert()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} modulo\+\_\+namespace\+::invert (\begin{DoxyParamCaption}\item[{multiplies$<$$>$}]{,  }\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{b }\end{DoxyParamCaption})}
 
+Computes the modular inverse $b^{-1} \pmod{M}$
+
+Computes the modular inverse $b^{-1} \pmod{M}$
+
 Computes the modular inverse $b^{-1} \pmod{M}$Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -97,7 +104,8 @@ Computes the modular inverse $b^{-1} \pmod{M}$Here is the call graph for this fu
 \includegraphics[width=350pt]{namespacemodulo__namespace_aac690d54b7665a90ca461724df8907c0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -114,7 +122,8 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Returns the remainder of a divided by b as a nonnegative integer in \mbox{[}0, b). 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -146,7 +155,11 @@ Set a to the remainder when divided by b. Here is the call graph for this functi
 \doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} modulo\+\_\+namespace\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{a,  }\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{b }\end{DoxyParamCaption})}
 
-Computes a times b modulo \mbox{\hyperlink{structmodulo__namespace_1_1modulo_a3fb17100685d3dfe8246407138109bc6}{modulo\+::modulus}} using long double\mbox{\Hypertarget{namespacemodulo__namespace_aa39044c62fae2707474b9960d257d9dd}\label{namespacemodulo__namespace_aa39044c62fae2707474b9960d257d9dd}} 
+Computes a times b modulo \mbox{\hyperlink{structmodulo__namespace_1_1modulo_ae2bc70014960c66ea5184cae85a330cc}{modulo\+::modulus}} using long double
+
+Computes a times b modulo \mbox{\hyperlink{structmodulo__namespace_1_1modulo_ae2bc70014960c66ea5184cae85a330cc}{modulo\+::modulus}} using long double
+
+Computes a times b modulo \mbox{\hyperlink{structmodulo__namespace_1_1modulo_ae2bc70014960c66ea5184cae85a330cc}{modulo\+::modulus}} using long double\mbox{\Hypertarget{namespacemodulo__namespace_aa39044c62fae2707474b9960d257d9dd}\label{namespacemodulo__namespace_aa39044c62fae2707474b9960d257d9dd}} 
 \index{modulo\_namespace@{modulo\_namespace}!operator+@{operator+}}
 \index{operator+@{operator+}!modulo\_namespace@{modulo\_namespace}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
@@ -164,12 +177,18 @@ Computes a times b modulo \mbox{\hyperlink{structmodulo__namespace_1_1modulo_a3f
 \doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} modulo\+\_\+namespace\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{a }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemodulo__namespace_ad645d89c7a55337c12edadb8376670e3}\label{namespacemodulo__namespace_ad645d89c7a55337c12edadb8376670e3}} 
+\mbox{\Hypertarget{namespacemodulo__namespace_a561c93db625469ab20895dabddbae1b8}\label{namespacemodulo__namespace_a561c93db625469ab20895dabddbae1b8}} 
 \index{modulo\_namespace@{modulo\_namespace}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!modulo\_namespace@{modulo\_namespace}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
 {\footnotesize\ttfamily template$<$typename Stream $>$ \\
-auto\& modulo\+\_\+namespace\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{m }\end{DoxyParamCaption})}
+auto \& modulo\+\_\+namespace\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacemodulo__namespace_a2f1a91608676548419fa75266f0a00bf}\label{namespacemodulo__namespace_a2f1a91608676548419fa75266f0a00bf}} 
+\index{modulo\_namespace@{modulo\_namespace}!operator==@{operator==}}
+\index{operator==@{operator==}!modulo\_namespace@{modulo\_namespace}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto modulo\+\_\+namespace\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{a,  }\item[{\mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} const \&}]{b }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69}\label{namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69}} 
 \index{modulo\_namespace@{modulo\_namespace}!power@{power}}
@@ -196,7 +215,8 @@ Time complexity\+: $O(\log_2 |b|)$ multiplications Here is the call graph for th
 \includegraphics[width=350pt]{namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

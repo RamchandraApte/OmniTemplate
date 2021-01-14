@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structsplay__tree_1_1PathParent" kind="struct" language="C++" prot="public">
     <compoundname>splay_tree::PathParent</compoundname>
     <includes refid="splay__tree_8hpp" local="no">splay_tree.hpp</includes>
@@ -9,9 +9,9 @@
       </param>
     </templateparamlist>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structsplay__tree_1_1PathParent_1acc553251873a0e2300106f2160994766" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structsplay__tree_1_1PathParent_1a023303f904294f1ab583fca194636003" prot="public" static="no" mutable="no">
         <type>Node *</type>
-        <definition>Node* splay_tree::PathParent&lt; Node &gt;::path_parent</definition>
+        <definition>Node * splay_tree::PathParent&lt; Node &gt;::path_parent</definition>
         <argsstring></argsstring>
         <name>path_parent</name>
         <initializer>{}</initializer>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="7" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="7" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="5" column="34" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="5" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -29,9 +29,54 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="6" column="17" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="6" bodyend="8"/>
+    <collaborationgraph>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>splay_tree::PathParent&lt; Node &gt;</label>
+        <link refid="structsplay__tree_1_1PathParent"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>path_parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::array&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>splay_tree::SplayNode&lt; T, has_link_cut &gt;</label>
+        <link refid="structsplay__tree_1_1SplayNode"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>child</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::array&lt; splay_tree::SplayNode *, 2 &gt;</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; splay_tree::SplayNode *, 2 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>conditional_t&lt; false , PathParent&lt; SplayNode&lt; T, false  &gt; &gt;, Empty &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" line="5" column="12" bodyfile="/home/ram/OmniTemplate/src/ds/splay_tree.hpp" bodystart="5" bodyend="5"/>
     <listofallmembers>
-      <member refid="structsplay__tree_1_1PathParent_1acc553251873a0e2300106f2160994766" prot="public" virt="non-virtual"><scope>splay_tree::PathParent</scope><name>path_parent</name></member>
+      <member refid="structsplay__tree_1_1PathParent_1a023303f904294f1ab583fca194636003" prot="public" virt="non-virtual"><scope>splay_tree::PathParent</scope><name>path_parent</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

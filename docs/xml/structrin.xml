@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structrin" kind="struct" language="C++" prot="public">
     <compoundname>rin</compoundname>
     <includes refid="io_8hpp" local="no">io.hpp</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structrin_1ae4efd5288509cef3672521280920f24d" prot="public" static="no" mutable="no">
         <type>istream &amp;</type>
-        <definition>istream&amp; rin::in</definition>
+        <definition>istream &amp; rin::in</definition>
         <argsstring></argsstring>
         <name>in</name>
         <briefdescription>
@@ -69,7 +69,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="11" column="1" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="11" bodyend="16"/>
-        <references refid="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" compoundref="io_8hpp" startline="8">in</references>
+        <references refid="structrin_1ae4efd5288509cef3672521280920f24d" compoundref="io_8hpp" startline="8">in</references>
       </memberdef>
       <memberdef kind="function" id="structrin_1a7c7bbc816095cbe239ce52b980d7117e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -91,7 +91,80 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="17" column="17" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="17" bodyend="20"/>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="17" column="17" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>rin::rin</definition>
+        <argsstring>(istream &amp;in_)</argsstring>
+        <name>rin</name>
+        <param>
+          <type>istream &amp;</type>
+          <declname>in_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="358" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="358" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="structrin_1a13b9d026853a96ff1ab4e29bc6d5185c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto &amp;</type>
+        <definition>auto&amp; rin::operator&lt;&lt;</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="359" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="359" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="structrin_1ac54363dcbc7ce811509e7ff360b78dad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto &amp;</type>
+        <definition>auto&amp; rin::operator&lt;&lt;</definition>
+        <argsstring>(string const &amp;s)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>string const &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="360" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="360" bodyend="365"/>
+        <references refid="test__compiled_8cpp_1acf30f45bb690161eda6eb343b019d6e7" compoundref="test__compiled_8cpp" startline="1140">in</references>
+      </memberdef>
+      <memberdef kind="function" id="structrin_1a7c7bbc816095cbe239ce52b980d7117e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structrin" kindref="compound">rin</ref> &amp;</type>
+        <definition>rin&amp; rin::operator&gt;&gt;</definition>
+        <argsstring>(T &amp;x)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="366" column="17" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="366" bodyend="366"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -129,12 +202,16 @@
         <label>std::ios_base</label>
       </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="7" column="10" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="7" bodyend="21"/>
+    <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="7" column="1" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="7" bodyend="18"/>
     <listofallmembers>
-      <member refid="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" prot="public" virt="non-virtual"><scope>rin</scope><name>in</name></member>
+      <member refid="structrin_1ae4efd5288509cef3672521280920f24d" prot="public" virt="non-virtual"><scope>rin</scope><name>in</name></member>
+      <member refid="structrin_1a13b9d026853a96ff1ab4e29bc6d5185c" prot="public" virt="non-virtual"><scope>rin</scope><name>operator&lt;&lt;</name></member>
+      <member refid="structrin_1ac54363dcbc7ce811509e7ff360b78dad" prot="public" virt="non-virtual"><scope>rin</scope><name>operator&lt;&lt;</name></member>
       <member refid="structrin_1a13b9d026853a96ff1ab4e29bc6d5185c" prot="public" virt="non-virtual"><scope>rin</scope><name>operator&lt;&lt;</name></member>
       <member refid="structrin_1ac54363dcbc7ce811509e7ff360b78dad" prot="public" virt="non-virtual"><scope>rin</scope><name>operator&lt;&lt;</name></member>
       <member refid="structrin_1a7c7bbc816095cbe239ce52b980d7117e" prot="public" virt="non-virtual"><scope>rin</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structrin_1a7c7bbc816095cbe239ce52b980d7117e" prot="public" virt="non-virtual"><scope>rin</scope><name>operator&gt;&gt;</name></member>
+      <member refid="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" prot="public" virt="non-virtual"><scope>rin</scope><name>rin</name></member>
       <member refid="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" prot="public" virt="non-virtual"><scope>rin</scope><name>rin</name></member>
     </listofallmembers>
   </compounddef>

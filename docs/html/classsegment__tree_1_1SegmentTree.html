@@ -82,6 +82,10 @@
               using <a href="#a50d361dc1883b3aaa88142238c091571" class="m-doc-self">Node</a> = conditional_t&lt;has_ptr, <a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*, <a href="structll.html" class="m-doc">ll</a>&gt;
             </dt>
             <dd><span></span></dd>
+            <dt>
+              using <a href="#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> = conditional_t&lt;has_ptr, <a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*, <a href="structll.html" class="m-doc">ll</a>&gt;
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-static-methods">
@@ -89,6 +93,12 @@
           <dl class="m-doc">
             <dt id="a2bab4503b7a982cd822c2d5cb48c8e11">
               <span class="m-doc-wrap-bumper">static auto <a href="#a2bab4503b7a982cd822c2d5cb48c8e11" class="m-doc-self">mid</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r,
+              const <a href="structll.html" class="m-doc">ll</a> i) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">static auto <a href="#a2bab4503b7a982cd822c2d5cb48c8e11" class="m-doc">mid</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> node_l,
               const <a href="structll.html" class="m-doc">ll</a> node_r,
               const <a href="structll.html" class="m-doc">ll</a> i) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
@@ -104,6 +114,18 @@
             <dd><span></span></dd>
             <dt id="a7b87087b2001e8a0f470a4e78f394502">
               <span class="m-doc-wrap-bumper"><a href="#a7b87087b2001e8a0f470a4e78f394502" class="m-doc-self">SegmentTree</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a9f3420768798bd5b372b6f6a079de487" class="m-doc">~SegmentTree</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#addcc5c68b1d667b6a4f868e287dc9bbf" class="m-doc">SegmentTree</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> size_arg)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a7b87087b2001e8a0f470a4e78f394502" class="m-doc">SegmentTree</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr)</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -145,7 +167,7 @@
             </dt>
             <dd><span></span></dd>
             <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a52f59c0f0db30957d70083a26e7ac967" class="m-doc">down</a>(</span><span class="m-doc-wrap">const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              <span class="m-doc-wrap-bumper">void <a href="#a800501714b462945aca69aef474dbfbc" class="m-doc">down</a>(</span><span class="m-doc-wrap">] const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
               const <a href="structll.html" class="m-doc">ll</a> node_l,
               const <a href="structll.html" class="m-doc">ll</a> node_r)</span>
             </dt>
@@ -188,10 +210,108 @@
               <span class="m-doc-wrap-bumper">void <a href="#a4062ab69d3598b338ba182ca6ae17ffe" class="m-doc">destroy</a>(</span><span class="m-doc-wrap"><a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> node)</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac8ebb88c3ad2fedecb123e31552fde60" class="m-doc">get_core</a>(</span><span class="m-doc-wrap"><a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*const&amp; obj) -&gt; auto&amp;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7b3d2ec003c25e51626c78595ba53401" class="m-doc">get_core</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> idx) -&gt; auto&amp;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a3d4b3dd98355d9e414bc04cdcf5f5457" class="m-doc">get_child</a>(</span><span class="m-doc-wrap"><a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*const&amp; obj,
+              const <a href="structll.html" class="m-doc">ll</a> i) -&gt; auto&amp;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6a4f7d2b00e4bc94806364ec0f999700" class="m-doc">get_child</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> i) -&gt; auto</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#ab4671ac300a724a5bbfdd92c68abcfcb" class="m-doc">build</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#ad8b2ae5fb114f861e0dcc0fb5d370b8f" class="m-doc">build</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr,
+              const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a52f59c0f0db30957d70083a26e7ac967" class="m-doc">down</a>(</span><span class="m-doc-wrap">const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aee0899b7aed45c73f0142ce425937fde" class="m-doc">query</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r) -&gt; T</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad39bd604bb4dc65a3204865f578f6fd9" class="m-doc">query</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> custom_root) -&gt; T</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad2c2369ddf9d9fb8ca78e367ff129839" class="m-doc">query</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r) -&gt; T</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5207ffe18417463bef339fd6d3183b5c" class="m-doc">update</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const T val,
+              <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r) -&gt; <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad2375790875e1231b39795e93d61e176" class="m-doc">update</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const T val) -&gt; <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a4062ab69d3598b338ba182ca6ae17ffe" class="m-doc">destroy</a>(</span><span class="m-doc-wrap"><a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> node)</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section>
+          <h2>Typedef documentation</h2>
+          <section class="m-doc-details" id="a50d361dc1883b3aaa88142238c091571"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              using segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /><a href="#a50d361dc1883b3aaa88142238c091571" class="m-doc-self">Node</a> = conditional_t&lt;has_ptr, <a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*, <a href="structll.html" class="m-doc">ll</a>&gt;
+            </h3>
+            <p><span></span></p>
+          </div></section>
+        </section>
+        <section>
           <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a2bab4503b7a982cd822c2d5cb48c8e11"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">static <a href="structll.html" class="m-doc">ll</a> segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2bab4503b7a982cd822c2d5cb48c8e11" class="m-doc-self">mid</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r,
+              const <a href="structll.html" class="m-doc">ll</a> i)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
           <section class="m-doc-details" id="a9f3420768798bd5b372b6f6a079de487"><div>
             <h3>
               <div class="m-doc-template">
@@ -202,12 +322,43 @@
             <p><span></span></p>
 <p>Free memory allocator by the segment tree. Note: does not work for persistent</p>
           </div></section>
-          <section class="m-doc-details" id="a52f59c0f0db30957d70083a26e7ac967"><div>
+          <section class="m-doc-details" id="addcc5c68b1d667b6a4f868e287dc9bbf"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#addcc5c68b1d667b6a4f868e287dc9bbf" class="m-doc-self">SegmentTree</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> size_arg)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a7b87087b2001e8a0f470a4e78f394502"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7b87087b2001e8a0f470a4e78f394502" class="m-doc-self">SegmentTree</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a9f3420768798bd5b372b6f6a079de487"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9f3420768798bd5b372b6f6a079de487" class="m-doc-self">~SegmentTree</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Free memory allocator by the segment tree. Note: does not work for persistent</p>
+          </div></section>
+          <section class="m-doc-details" id="a800501714b462945aca69aef474dbfbc"><div>
             <h3>
               <div class="m-doc-template">
                 template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
               </div>
-              <span class="m-doc-wrap-bumper">void segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a52f59c0f0db30957d70083a26e7ac967" class="m-doc-self">down</a>(</span><span class="m-doc-wrap">const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              <span class="m-doc-wrap-bumper">void segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a800501714b462945aca69aef474dbfbc" class="m-doc-self">down</a>(</span><span class="m-doc-wrap">] const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
               const <a href="structll.html" class="m-doc">ll</a> node_l,
               const <a href="structll.html" class="m-doc">ll</a> node_r)</span></span>
             </h3>
@@ -244,6 +395,160 @@
           </div></section>
           <section class="m-doc-details" id="a4062ab69d3598b338ba182ca6ae17ffe"><div>
             <h3>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4062ab69d3598b338ba182ca6ae17ffe" class="m-doc-self">destroy</a>(</span><span class="m-doc-wrap"><a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> node)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Deallocate memory associated with the subtree of node</p>
+          </div></section>
+          <section class="m-doc-details" id="ac8ebb88c3ad2fedecb123e31552fde60"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto&amp; segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac8ebb88c3ad2fedecb123e31552fde60" class="m-doc-self">get_core</a>(</span><span class="m-doc-wrap"><a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*const&amp; obj)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a7b3d2ec003c25e51626c78595ba53401"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto&amp; segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7b3d2ec003c25e51626c78595ba53401" class="m-doc-self">get_core</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> idx)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a3d4b3dd98355d9e414bc04cdcf5f5457"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto&amp; segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3d4b3dd98355d9e414bc04cdcf5f5457" class="m-doc-self">get_child</a>(</span><span class="m-doc-wrap"><a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html" class="m-doc">NodeExp</a>*const&amp; obj,
+              const <a href="structll.html" class="m-doc">ll</a> i)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a6a4f7d2b00e4bc94806364ec0f999700"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">auto segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6a4f7d2b00e4bc94806364ec0f999700" class="m-doc-self">get_child</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> i)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ab4671ac300a724a5bbfdd92c68abcfcb"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab4671ac300a724a5bbfdd92c68abcfcb" class="m-doc-self">build</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ad8b2ae5fb114f861e0dcc0fb5d370b8f"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad8b2ae5fb114f861e0dcc0fb5d370b8f" class="m-doc-self">build</a>(</span><span class="m-doc-wrap">const vector&lt;T&gt;&amp; arr,
+              const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a52f59c0f0db30957d70083a26e7ac967"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a52f59c0f0db30957d70083a26e7ac967" class="m-doc-self">down</a>(</span><span class="m-doc-wrap">const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r)</span></span>
+            </h3>
+<p>Push lazy updates down</p><p>Push lazy update down</p>
+          </div></section>
+          <section class="m-doc-details" id="aee0899b7aed45c73f0142ce425937fde"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aee0899b7aed45c73f0142ce425937fde" class="m-doc-self">query</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Returns the sum over the intersection of [query_l, query_r) with [node_l, node_r)</p>
+          </div></section>
+          <section class="m-doc-details" id="ad39bd604bb4dc65a3204865f578f6fd9"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad39bd604bb4dc65a3204865f578f6fd9" class="m-doc-self">query</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> custom_root)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ad2c2369ddf9d9fb8ca78e367ff129839"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">T segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad2c2369ddf9d9fb8ca78e367ff129839" class="m-doc-self">query</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a5207ffe18417463bef339fd6d3183b5c"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5207ffe18417463bef339fd6d3183b5c" class="m-doc-self">update</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const T val,
+              <a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> idx,
+              const <a href="structll.html" class="m-doc">ll</a> node_l,
+              const <a href="structll.html" class="m-doc">ll</a> node_r)</span></span>
+            </h3>
+            <p><span></span></p>
+<p>Update the range l to r with the update val returns the new node</p>
+          </div></section>
+          <section class="m-doc-details" id="ad2375790875e1231b39795e93d61e176"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571" class="m-doc">Node</a> segment_tree::<wbr />SegmentTree&lt;T, Query, Update, has_lazy, has_ptr, has_pers, base&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad2375790875e1231b39795e93d61e176" class="m-doc-self">update</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> l,
+              const <a href="structll.html" class="m-doc">ll</a> r,
+              const T val)</span></span>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a4062ab69d3598b338ba182ca6ae17ffe"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
               <div class="m-doc-template">
                 template&lt;typename T, typename Query, typename Update, bool has_lazy, bool has_ptr, bool has_pers, <a href="structll.html" class="m-doc">ll</a> base&gt;
               </div>
@@ -297,7 +602,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

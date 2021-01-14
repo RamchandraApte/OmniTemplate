@@ -90,16 +90,16 @@
               <div class="m-doc-template">template&lt;typename Func&gt;</div>
               struct <a href="structutility_1_1fix.html" class="m-doc">fix</a>
             </dt>
-            <dd></dd>
+            <dd>Helper for lambda recursive functions. The recursive function is passed to Func as the first argument.</dd>
             <dt>
               struct <a href="structutility_1_1random__device__patch.html" class="m-doc">random_device_patch</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>Random device patch to fix libstdc++&#x27;s broken implementation on Windows.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
               struct <a href="structutility_1_1with.html" class="m-doc">with</a>
             </dt>
-            <dd></dd>
+            <dd>Sets v to new_ temporary while with object is alive.</dd>
           </dl>
         </section>
         <section id="typedef-members">
@@ -111,7 +111,7 @@
             </dt>
             <dd><span></span></dd>
             <dt>
-              using <a href="#a8575a7ae9db3044c9cef77ddcc62ab7c" class="m-doc">random_device</a> = <a href="structutility_1_1random__device__patch.html" class="m-doc">random_<wbr />device_<wbr />patch</a>
+              using <a href="#afaacd9ae54757a29e4d3e5381d8cfcdf" class="m-doc">random_device</a> = <a href="structutility_1_1random__device__patch.html" class="m-doc">random_<wbr />device_<wbr />patch</a>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -121,21 +121,21 @@
           <dl class="m-doc">
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a1507417750abfb917c914c44e07ed713" class="m-doc">max_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
-              const T&amp; y) -&gt; auto</span>
+              <span class="m-doc-wrap-bumper">void <a href="#acf80bb2a56236f08271b2d70689cc1f6" class="m-doc">min_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
+              const T&amp; y)</span>
             </dt>
             <dd><span></span></dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#ae423116f6315d5e998219f27f1f8c401" class="m-doc">min_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
-              const T&amp; y) -&gt; auto</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a80f7a687b4e8d135cde1ae1d6b169d13" class="m-doc">max_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
+              const T&amp; y)</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Set x to the minimum of x and y.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a6e069fcf8b422fbc525eba2543e36a6e" class="m-doc">cache</a>(</span><span class="m-doc-wrap">const T&amp; f) -&gt; auto</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Set x to the minimum of x and y.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename Eq = equal_to&lt;&gt;, typename T = less&lt;&gt;, typename Cont&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a531cc980b5de78f0c2f36ae3210cb9cf" class="m-doc">uniq</a>(</span><span class="m-doc-wrap">Cont v,
@@ -144,11 +144,11 @@
             </dt>
             <dd>Remove all duplicates element from.</dd>
             <dt>
-              <div class="m-doc-template">template&lt;typename T = less&lt;&gt;, typename Func&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#aa705afaf267f70799bd4ec8cbf040455" class="m-doc">key_compare</a>(</span><span class="m-doc-wrap">const Func&amp; f,
-              T g = T{}) -&gt; auto</span>
+              <div class="m-doc-template">template&lt;typename Compare = less&lt;&gt;, typename Func&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a3f485f407bcf34b3ad3831f7fda882e4" class="m-doc">key_compare</a>(</span><span class="m-doc-wrap">const Func&amp; func,
+              const Compare&amp; compare = {}) -&gt; auto</span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Compare using key.</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a50e9430d1096ce6997ae910135a9533f" class="m-doc">prev_less</a>(</span><span class="m-doc-wrap">const T&amp; v) -&gt; auto</span>
@@ -157,26 +157,34 @@
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a005fc5d8af9bba651f00c74372466b83" class="m-doc">bit_ceil</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Return the smallest power of two that is at least x.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a14dc21f495425ccdc1ec35fe45d45591" class="m-doc">power_ceil</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> x,
               const <a href="structll.html" class="m-doc">ll</a> base) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Returns the smallest power of base that is at least x.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a750478c01441fac1c27f14bea2cb74ea" class="m-doc">log_ceil</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> x,
               const <a href="structll.html" class="m-doc">ll</a> base) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Returns the smallest exponent such that base raised to exponent is at least x.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a7cd324d23686536d1d4eeb92afb61ed4" class="m-doc">next_comb</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x).</dd>
             <dt>
               <div class="m-doc-template">template&lt;typename T, typename Func&gt;</div>
               <span class="m-doc-wrap-bumper">void <a href="#aa72cfb348ae79fd2bdb5ded63cd36ef2" class="m-doc">swap2</a>(</span><span class="m-doc-wrap">T&amp; a,
               T&amp; b,
               const Func&amp; func)</span>
+            </dt>
+            <dd>Stable sorts a and b by func.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename Iter, typename Proj&gt;</div>
+              <span class="m-doc-wrap-bumper">void <a href="#a713c1fa985af64dbe0374a15cc3d4383" class="m-doc">counting_sort</a>(</span><span class="m-doc-wrap">Iter a,
+              Iter b,
+              const Proj&amp; proj,
+              const <a href="structll.html" class="m-doc">ll</a> proj_size)</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -207,9 +215,9 @@
             </h3>
             <p><span></span></p>
           </div></section>
-          <section class="m-doc-details" id="a8575a7ae9db3044c9cef77ddcc62ab7c"><div>
+          <section class="m-doc-details" id="afaacd9ae54757a29e4d3e5381d8cfcdf"><div>
             <h3>
-              using utility::<wbr /><a href="#a8575a7ae9db3044c9cef77ddcc62ab7c" class="m-doc-self">random_device</a> = <a href="structutility_1_1random__device__patch.html" class="m-doc">random_<wbr />device_<wbr />patch</a>
+              typedef <a href="structutility_1_1random__device__patch.html" class="m-doc">random_<wbr />device_<wbr />patch</a> utility::<wbr /><a href="#afaacd9ae54757a29e4d3e5381d8cfcdf" class="m-doc-self">random_device</a>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
             </h3>
             <p><span></span></p>
@@ -217,27 +225,28 @@
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a1507417750abfb917c914c44e07ed713"><div>
+          <section class="m-doc-details" id="acf80bb2a56236f08271b2d70689cc1f6"><div>
             <h3>
               <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
               <div class="m-doc-template">
                 template&lt;typename T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1507417750abfb917c914c44e07ed713" class="m-doc-self">max_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
+              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acf80bb2a56236f08271b2d70689cc1f6" class="m-doc-self">min_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
               const T&amp; y)</span></span>
             </h3>
             <p><span></span></p>
           </div></section>
-          <section class="m-doc-details" id="ae423116f6315d5e998219f27f1f8c401"><div>
+          <section class="m-doc-details" id="a80f7a687b4e8d135cde1ae1d6b169d13"><div>
             <h3>
               <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
               <div class="m-doc-template">
                 template&lt;typename T&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae423116f6315d5e998219f27f1f8c401" class="m-doc-self">min_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
+              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a80f7a687b4e8d135cde1ae1d6b169d13" class="m-doc-self">max_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
               const T&amp; y)</span></span>
             </h3>
-            <p><span></span></p>
+            <p>Set x to the minimum of x and y.</p>
+<p>Set x to the maximum of x and y.</p><p>Set x to the maximum of x and y</p>
           </div></section>
           <section class="m-doc-details" id="a6e069fcf8b422fbc525eba2543e36a6e"><div>
             <h3>
@@ -247,8 +256,8 @@
               </div>
               <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6e069fcf8b422fbc525eba2543e36a6e" class="m-doc-self">cache</a>(</span><span class="m-doc-wrap">const T&amp; f)</span></span>
             </h3>
-            <p><span></span></p>
-<p>Cache calls to f using a map of type T</p>
+            <p>Set x to the minimum of x and y.</p>
+<p>Cache calls to f using a map of type T.</p><p>Cache calls to f using a map of type T</p>
           </div></section>
           <section class="m-doc-details" id="a531cc980b5de78f0c2f36ae3210cb9cf"><div>
             <h3>
@@ -281,16 +290,37 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-doc-details" id="aa705afaf267f70799bd4ec8cbf040455"><div>
+          <section class="m-doc-details" id="a3f485f407bcf34b3ad3831f7fda882e4"><div>
             <h3>
               <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
               <div class="m-doc-template">
-                template&lt;typename T = less&lt;&gt;, typename Func&gt;
+                template&lt;typename Compare = less&lt;&gt;, typename Func&gt;
               </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa705afaf267f70799bd4ec8cbf040455" class="m-doc-self">key_compare</a>(</span><span class="m-doc-wrap">const Func&amp; f,
-              T g = T{})</span></span>
+              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3f485f407bcf34b3ad3831f7fda882e4" class="m-doc-self">key_compare</a>(</span><span class="m-doc-wrap">const Func&amp; func,
+              const Compare&amp; compare = {})</span></span>
             </h3>
-            <p><span></span></p>
+            <p>Compare using key.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">func</td>
+                  <td>The key function</td>
+                </tr>
+                <tr>
+                  <td>compare</td>
+                  <td>the comparison function.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A comparison functor that compares two arugments by the key.</td>
+                </tr>
+              </tfoot>
+            </table>
           </div></section>
           <section class="m-doc-details" id="a50e9430d1096ce6997ae910135a9533f"><div>
             <h3>
@@ -307,8 +337,7 @@
               <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a005fc5d8af9bba651f00c74372466b83" class="m-doc-self">bit_ceil</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
-<p>Return the smallest power of two that is at least x</p>
+            <p>Return the smallest power of two that is at least x.</p>
           </div></section>
           <section class="m-doc-details" id="a14dc21f495425ccdc1ec35fe45d45591"><div>
             <h3>
@@ -316,7 +345,7 @@
               const <a href="structll.html" class="m-doc">ll</a> base)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Returns the smallest power of base that is at least x.</p>
           </div></section>
           <section class="m-doc-details" id="a750478c01441fac1c27f14bea2cb74ea"><div>
             <h3>
@@ -324,15 +353,15 @@
               const <a href="structll.html" class="m-doc">ll</a> base)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>Returns the smallest exponent such that base raised to exponent is at least x.</p>
           </div></section>
           <section class="m-doc-details" id="a7cd324d23686536d1d4eeb92afb61ed4"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7cd324d23686536d1d4eeb92afb61ed4" class="m-doc-self">next_comb</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
             </h3>
-            <p><span></span></p>
-<p>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</p>
+            <p>next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x).</p>
+<aside class="m-note m-success"><h4>Precondition</h4><p>THe desired y must exist.</p></aside>
           </div></section>
           <section class="m-doc-details" id="aa72cfb348ae79fd2bdb5ded63cd36ef2"><div>
             <h3>
@@ -344,8 +373,20 @@
               T&amp; b,
               const Func&amp; func)</span></span>
             </h3>
+            <p>Stable sorts a and b by func.</p>
+          </div></section>
+          <section class="m-doc-details" id="a713c1fa985af64dbe0374a15cc3d4383"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Iter, typename Proj&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a713c1fa985af64dbe0374a15cc3d4383" class="m-doc-self">counting_sort</a>(</span><span class="m-doc-wrap">Iter a,
+              Iter b,
+              const Proj&amp; proj,
+              const <a href="structll.html" class="m-doc">ll</a> proj_size)</span></span>
+            </h3>
             <p><span></span></p>
-<p>Stable sorts a and b by func.</p>
           </div></section>
           <section class="m-doc-details" id="adafa966f1819210cf795fff85b2a40c5"><div>
             <h3>
@@ -412,7 +453,7 @@
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

@@ -27,6 +27,7 @@ enable_if_t<is_same<T, istream>::value, rin> operator>>(Stream &is, T &x) {
 	rin r{is};
 	return r >> x;
 }
+// TODO make this generic for all tuple-like types
 template <typename Stream, typename... T> auto &operator<<(Stream &os, tuple<T...> t) {
 	apply(
 	    [&](auto &f, auto &... x) {
@@ -72,9 +73,11 @@ auto operator<<(rin &os, const T &v) -> decltype(begin(v), declval<decltype(os)>
 	}
 	return os;
 }
-#if __cplusplus >= 201703L
 template <typename Stream, typename T> auto &operator<<(Stream &os, optional<T> const &opt) {
 	return opt ? (os << *opt) : (os << "nullopt");
 }
-#endif
+rin rin_cin{cin};
+auto &orig_cin = cin;
+auto &orig_cerr = cerr;
+#define cin rin_cin
 } // namespace std

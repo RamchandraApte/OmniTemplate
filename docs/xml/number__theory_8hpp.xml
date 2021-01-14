@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="number__theory_8hpp" kind="file" language="C++">
     <compoundname>number_theory.hpp</compoundname>
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
@@ -19,10 +19,10 @@
       <node id="5">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -47,11 +47,11 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -59,27 +59,27 @@
       <node id="10">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="9">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -89,24 +89,22 @@
         <link refid="number__theory_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>/home/ram/OmniTemplate/src/test/test.cpp</label>
         <link refid="test_8cpp"/>
       </node>
-      <node id="4">
+      <node id="3">
         <label>/home/ram/OmniTemplate/src/number_theory/test_number_theory.hpp</label>
         <link refid="test__number__theory_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>/home/ram/OmniTemplate/src/core/template.hpp</label>
         <link refid="template_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="var">
@@ -123,7 +121,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="4" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="4" bodyend="-1"/>
         <referencedby refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</referencedby>
-        <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="100">fac</referencedby>
+        <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -144,12 +142,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="6" column="6" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="6" bodyend="32"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="38">al</references>
         <references refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" compoundref="number__theory_8hpp" startline="4">divs</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="78" endline="80">permutation::power</references>
-        <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="100">fac</referencedby>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="79" endline="81">permutation::power</references>
+        <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</referencedby>
         <referencedby refid="test__number__theory_8hpp_1a87d7c3ba2489977a16ec40544a918e00" compoundref="test__number__theory_8hpp" startline="2" endline="9">test_prime</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a1dba9e869972ca1e250a48ddd5f8f72b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -169,8 +166,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="34" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="34" bodyend="49"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="19">al</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="38">al</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
         <referencedby refid="test__number__theory_8hpp_1a3e935b9aca6e9dfa6b0a8ef9a4c7e153" compoundref="test__number__theory_8hpp" startline="10" endline="17">test_divisors</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1ae8dd217fd3a3de037c6a1031aef548aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -202,7 +199,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="56" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="56" bodyend="71"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
         <referencedby refid="test__number__theory_8hpp_1a8956d5feae5d2dd01656f6f960d568c7" compoundref="test__number__theory_8hpp" startline="18" endline="18">test_sieve</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -224,13 +221,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="76" column="15" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="76" bodyend="100"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
+        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="76" column="15" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="76" bodyend="98"/>
         <references refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" compoundref="number__theory_8hpp" startline="4">divs</references>
         <references refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</references>
-        <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="143" endline="166">primitive_root</referencedby>
+        <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="141" endline="164">primitive_root</referencedby>
         <referencedby refid="test__number__theory_8hpp_1afcfd3b1e3415393029bc6a496d825459" compoundref="test__number__theory_8hpp" startline="19" endline="27">test_fac</referencedby>
-        <referencedby refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="108" endline="115">totient</referencedby>
+        <referencedby refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="106" endline="113">totient</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -260,8 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="102" column="6" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="102" bodyend="104"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
+        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="100" column="6" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="100" bodyend="102"/>
         <references refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" compoundref="modulo_8hpp" startline="29" endline="35">modulo_namespace::mod</references>
         <referencedby refid="test__number__theory_8hpp_1ae2f84cd254fbf1373fc273141ce470ed" compoundref="test__number__theory_8hpp" startline="28" endline="32">test_egcd</referencedby>
       </memberdef>
@@ -284,12 +279,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="108" column="4" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="108" bodyend="115"/>
-        <references refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="100">fac</references>
-        <references refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" compoundref="combinatorics_8hpp" startline="10" endline="13">combinatorics::fact</references>
-        <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="119" endline="140">dlog</referencedby>
-        <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="143" endline="166">primitive_root</referencedby>
-        <referencedby refid="test__number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" compoundref="test__number__theory_8hpp" startline="40" endline="40">test_totient</referencedby>
+        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="106" column="4" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="106" bodyend="113"/>
+        <references refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</references>
+        <references refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" compoundref="combinatorics_8hpp" startline="9" endline="12">combinatorics::fact</references>
+        <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="117" endline="138">dlog</referencedby>
+        <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="141" endline="164">primitive_root</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" compoundref="test__number__theory_8hpp" startline="40" endline="43">test_totient</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -314,13 +309,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="119" column="4" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="119" bodyend="140"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
+        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="117" column="4" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="117" bodyend="138"/>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
         <references refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" compoundref="modulo_8hpp" startline="29" endline="35">modulo_namespace::mod</references>
-        <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="78" endline="80">permutation::power</references>
-        <references refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="108" endline="115">totient</references>
-        <referencedby refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" compoundref="test__number__theory_8hpp" startline="41" endline="56">test_dlog</referencedby>
+        <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="79" endline="81">permutation::power</references>
+        <references refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="106" endline="113">totient</references>
+        <referencedby refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" compoundref="test__number__theory_8hpp" startline="44" endline="59">test_dlog</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref></type>
@@ -334,12 +328,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="143" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="143" bodyend="166"/>
-        <references refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="100">fac</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="78" endline="80">permutation::power</references>
-        <references refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="108" endline="115">totient</references>
-        <referencedby refid="test__number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" compoundref="test__number__theory_8hpp" startline="57" endline="66">test_primitive_root</referencedby>
+        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="141" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="141" bodyend="164"/>
+        <references refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="79" endline="81">permutation::power</references>
+        <references refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="106" endline="113">totient</references>
+        <referencedby refid="test__number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" compoundref="test__number__theory_8hpp" startline="60" endline="69">test_primitive_root</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -358,12 +352,12 @@
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{n,<sp/>modulo::modulus};</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>tz<sp/>=<sp/>__builtin_ctz(n<sp/>-<sp/>1);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref><sp/>=<sp/>(n<sp/>-<sp/>1)<sp/>&gt;&gt;<sp/>tz;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>(n<sp/>-<sp/>1)<sp/>&gt;&gt;<sp/>tz;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>prime_a<sp/>=<sp/>[&amp;](<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;a)<sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a<sp/>==<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(a,<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(a,<sp/>b);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p<sp/>==<sp/>1)<sp/>{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -422,78 +416,76 @@
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" kindref="member">prime</ref>(n))<sp/>{</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{n,<sp/>modulo::modulus};</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>c<sp/>=<sp/>0;<sp/>g<sp/>==<sp/>n;<sp/>++c)<sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x)<sp/>{</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>x<sp/>+<sp/>x<sp/>+<sp/>c;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a<sp/>=<sp/>0,<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref><sp/>=<sp/>a;<sp/>a<sp/>=<sp/>f(a),<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref><sp/>=<sp/>f(f(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)),</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(g<sp/>=<sp/>gcd(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a<sp/>-<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>),<sp/>n))<sp/>==<sp/>1;)<sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g<sp/>==<sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{{n,<sp/>1}};</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(1<sp/>&lt;<sp/>g<sp/>&amp;&amp;<sp/>g<sp/>&lt;<sp/>n<sp/>&amp;&amp;<sp/>!(n<sp/>%<sp/>g));</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(g)<sp/>+<sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(n<sp/>/<sp/>g);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="102" refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" kindref="member">egcd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;y)<sp/>{</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>?<sp/><ref refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" kindref="member">egcd</ref>(<ref refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" kindref="member">mod</ref>(<ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>,<sp/>a),<sp/>a,<sp/>y,<sp/>x),<sp/>x<sp/>-=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref><sp/>/<sp/>a<sp/>*<sp/>y<sp/>:<sp/>(x<sp/>=<sp/>0,<sp/>y<sp/>=<sp/>1);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="108" refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n&gt;=1);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref><sp/>=<sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(n);</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/><ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>-=<sp/>n<sp/>/<sp/>p.first;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="119" refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" kindref="member">dlog</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(gcd(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(a),<sp/>modulo::modulus)<sp/>==<sp/>1);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(a,<sp/>x)<sp/>==<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>);</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sq<sp/>=<sp/>sqrt(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(modulo::modulus))<sp/>+<sp/>1;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_map&lt;modulo,<sp/>ll&gt;<sp/>powers;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a_sq<sp/>=<sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(a,<sp/>sq);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>pw<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>sq<sp/>+<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>powers[pw]<sp/>=<sp/>i;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pw<sp/>*=<sp/>a_sq;</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" kindref="member">b</ref>;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structll" kindref="compound">ll</ref><sp/>cnt<sp/>=<sp/>0;;<sp/>++cnt)<sp/>{</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>powers.find(x);<sp/>it<sp/>!=<sp/>end(powers))<sp/>{</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>check(<ref refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" kindref="member">mod</ref>(it-&gt;second<sp/>*<sp/>sq<sp/>-<sp/>cnt,<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(modulo::modulus)));</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>*=<sp/>a;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143" refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" refkind="member"><highlight class="normal"><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/><ref refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" kindref="member">primitive_root</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(modulo::modulus<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tot<sp/>=<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(modulo::modulus);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pfactor<sp/>=<sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(tot);</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>1,<sp/>modulo::modulus)<sp/>{</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>is_primitive_root<sp/>=<sp/>[&amp;]<sp/>{</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gcd(i,<sp/>modulo::modulus)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/>pfactor)<sp/>{</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{i},<sp/>tot<sp/>/<sp/>p.first)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_primitive_root())<sp/>{</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>invalid_argument{</highlight><highlight class="stringliteral">&quot;M<sp/>has<sp/>no<sp/>primitive<sp/>root!&quot;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>[&amp;](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>x<sp/>+<sp/>x<sp/>+<sp/>c;<sp/>};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a<sp/>=<sp/>0,<sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>f(a),<sp/>b<sp/>=<sp/>f(f(b)),<sp/>(g<sp/>=<sp/>gcd(<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(a<sp/>-<sp/>b),<sp/>n))<sp/>==<sp/>1;)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g<sp/>==<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{{n,<sp/>1}};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(1<sp/>&lt;<sp/>g<sp/>&amp;&amp;<sp/>g<sp/>&lt;<sp/>n<sp/>&amp;&amp;<sp/>!(n<sp/>%<sp/>g));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(g)<sp/>+<sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(n<sp/>/<sp/>g);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100" refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" kindref="member">egcd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>b,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>&amp;y)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>?<sp/><ref refid="number__theory_8hpp_1aa6039763e84c50eb24fdee392c581898" kindref="member">egcd</ref>(<ref refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" kindref="member">mod</ref>(b,<sp/>a),<sp/>a,<sp/>y,<sp/>x),<sp/>x<sp/>-=<sp/>b<sp/>/<sp/>a<sp/>*<sp/>y<sp/>:<sp/>(x<sp/>=<sp/>0,<sp/>y<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106" refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(n<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref><sp/>=<sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(n);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;p<sp/>:<sp/><ref refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" kindref="member">fact</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>-=<sp/>n<sp/>/<sp/>p.first;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117" refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" kindref="member">dlog</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(gcd(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(a),<sp/>modulo::modulus)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>check<sp/>=<sp/>[&amp;](<ref refid="structll" kindref="compound">ll</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(a,<sp/>x)<sp/>==<sp/>b);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>sq<sp/>=<sp/>sqrt(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(modulo::modulus))<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_map&lt;modulo,<sp/>ll&gt;<sp/>powers;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a_sq<sp/>=<sp/><ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(a,<sp/>sq);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/>pw<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>sq<sp/>+<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>powers[pw]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pw<sp/>*=<sp/>a_sq;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structll" kindref="compound">ll</ref><sp/>cnt<sp/>=<sp/>0;;<sp/>++cnt)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>powers.find(x);<sp/>it<sp/>!=<sp/>end(powers))<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>check(<ref refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" kindref="member">mod</ref>(it-&gt;second<sp/>*<sp/>sq<sp/>-<sp/>cnt,<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(modulo::modulus)));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>*=<sp/>a;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" refkind="member"><highlight class="normal"><ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref><sp/><ref refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" kindref="member">primitive_root</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(modulo::modulus<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tot<sp/>=<sp/><ref refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kindref="member">totient</ref>(modulo::modulus);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pfactor<sp/>=<sp/><ref refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" kindref="member">fac</ref>(tot);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>1,<sp/>modulo::modulus)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>is_primitive_root<sp/>=<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gcd(i,<sp/>modulo::modulus)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>:<sp/>pfactor)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" kindref="member">power</ref>(<ref refid="structmodulo__namespace_1_1modulo" kindref="compound">modulo</ref>{i},<sp/>tot<sp/>/<sp/>p.first)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_primitive_root())<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>invalid_argument{</highlight><highlight class="stringliteral">&quot;M<sp/>has<sp/>no<sp/>primitive<sp/>root!&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp"/>
   </compounddef>

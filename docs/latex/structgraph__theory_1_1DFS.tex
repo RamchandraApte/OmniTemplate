@@ -7,12 +7,11 @@ Depth-\/first search.
 
 
 
-{\ttfamily \#include $<$all.\+hpp$>$}
+{\ttfamily \#include $<$core.\+hpp$>$}
 
 
 
-Inheritance diagram for graph\+\_\+theory\+::D\+FS$<$ Graph $>$\+:
-\nopagebreak
+Inheritance diagram for graph\+\_\+theory\+::D\+FS$<$ Graph $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -33,11 +32,21 @@ Collaboration diagram for graph\+\_\+theory\+::D\+FS$<$ Graph $>$\+:
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}{General\+Search\+\_\+t}} = \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}$<$ \mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}, Graph $>$
+\item 
+using \mbox{\hyperlink{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}{General\+Search\+\_\+t}} = \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}$<$ \mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}, Graph $>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83}{operator()}} (const \mbox{\hyperlink{structll}{ll}} source)
+\item 
+void \mbox{\hyperlink{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83}{operator()}} (const \mbox{\hyperlink{structll}{ll}} source)
+\item 
+\mbox{\hyperlink{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}{General\+Search}} (const Graph \&g\+\_\+)
+\item 
+\mbox{\hyperlink{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}{General\+Search}} (const Graph \&g\+\_\+)
+\item 
+\mbox{\hyperlink{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}{General\+Search}} (const Graph \&g\+\_\+)
 \item 
 \mbox{\hyperlink{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}{General\+Search}} (const Graph \&g\+\_\+)
 \end{DoxyCompactItemize}
@@ -54,7 +63,14 @@ Depth-\/first search.
 \mbox{\Hypertarget{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}\label{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}} 
 \index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!GeneralSearch\_t@{GeneralSearch\_t}}
 \index{GeneralSearch\_t@{GeneralSearch\_t}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
-\doxysubsubsection{\texorpdfstring{GeneralSearch\_t}{GeneralSearch\_t}}
+\doxysubsubsection{\texorpdfstring{GeneralSearch\_t}{GeneralSearch\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
+using \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+FS}}$<$ Graph $>$\+::\mbox{\hyperlink{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}{General\+Search\+\_\+t}} =  \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}$<$\mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}, Graph$>$}
+
+\mbox{\Hypertarget{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}\label{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}} 
+\index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!GeneralSearch\_t@{GeneralSearch\_t}}
+\index{GeneralSearch\_t@{GeneralSearch\_t}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
+\doxysubsubsection{\texorpdfstring{GeneralSearch\_t}{GeneralSearch\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
 using \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+FS}}$<$ Graph $>$\+::\mbox{\hyperlink{structgraph__theory_1_1DFS_a71954b9b77a8dd543923250a39461b06}{General\+Search\+\_\+t}} =  \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}$<$\mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}, Graph$>$}
 
@@ -64,14 +80,35 @@ using \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+FS}
 \mbox{\Hypertarget{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}\label{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}} 
 \index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!GeneralSearch@{GeneralSearch}}
 \index{GeneralSearch@{GeneralSearch}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
-\doxysubsubsection{\texorpdfstring{GeneralSearch()}{GeneralSearch()}}
+\doxysubsubsection{\texorpdfstring{GeneralSearch()}{GeneralSearch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
+\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}\label{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}} 
+\index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!GeneralSearch@{GeneralSearch}}
+\index{GeneralSearch@{GeneralSearch}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
+\doxysubsubsection{\texorpdfstring{GeneralSearch()}{GeneralSearch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
+\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}\label{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}} 
+\index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!GeneralSearch@{GeneralSearch}}
+\index{GeneralSearch@{GeneralSearch}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
+\doxysubsubsection{\texorpdfstring{GeneralSearch()}{GeneralSearch()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
+\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}\label{structgraph__theory_1_1DFS_a5d1bf0cacd1f3e805ac724fc3ffc91ca}} 
+\index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!GeneralSearch@{GeneralSearch}}
+\index{GeneralSearch@{GeneralSearch}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
+\doxysubsubsection{\texorpdfstring{GeneralSearch()}{GeneralSearch()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
 \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search}}$<$ Searcher, Graph $>$\+::\mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{General\+Search}}\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83}\label{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83}} 
 \index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!operator()@{operator()}}
 \index{operator()@{operator()}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
 void \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+FS}}$<$ Graph $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -82,8 +119,16 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83}\label{structgraph__theory_1_1DFS_a7a852aab8ddbe3b598770dd45073ff83}} 
+\index{graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!graph\_theory::DFS$<$ Graph $>$@{graph\_theory::DFS$<$ Graph $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Graph  = Graph\+Adj$>$ \\
+void \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+FS}}$<$ Graph $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ram/\+Omni\+Template/src/graph/\mbox{\hyperlink{graph_2all_8hpp}{all.\+hpp}}\end{DoxyCompactItemize}
+/home/ram/\+Omni\+Template/src/graph/\mbox{\hyperlink{core_8hpp}{core.\+hpp}}\item 
+/home/ram/\+Omni\+Template/src/test/\mbox{\hyperlink{test__compiled_8cpp}{test\+\_\+compiled.\+cpp}}\end{DoxyCompactItemize}

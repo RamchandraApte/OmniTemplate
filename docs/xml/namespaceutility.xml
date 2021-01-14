@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="namespaceutility" kind="namespace" language="C++">
     <compoundname>utility</compoundname>
     <innerclass refid="structutility_1_1ar" prot="public">utility::ar</innerclass>
@@ -26,11 +26,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="97" column="13" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="97" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="135" column="13" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="135" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" prot="public" static="no">
+      <memberdef kind="typedef" id="namespaceutility_1afaacd9ae54757a29e4d3e5381d8cfcdf" prot="public" static="no">
         <type><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref></type>
-        <definition>using utility::random_device = typedef random_device_patch</definition>
+        <definition>typedef random_device_patch utility::random_device</definition>
         <argsstring></argsstring>
         <name>random_device</name>
         <briefdescription>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="108" column="1" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="108" bodyend="-1"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="145" column="1" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="145" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -48,54 +48,28 @@
         <definition>default_random_engine utility::reng</definition>
         <argsstring></argsstring>
         <name>reng</name>
-        <initializer>{<ref refid="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" kindref="member">random_device</ref>{}()}</initializer>
+        <initializer>{<ref refid="namespaceutility_1afaacd9ae54757a29e4d3e5381d8cfcdf" kindref="member">random_device</ref>{}()}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="110" column="23" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="110" bodyend="-1"/>
-        <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="105">test_biconnected</referencedby>
-        <referencedby refid="namespaceflow_1_1test_1a66e8ca51e96f06ce0369f386cab9ac25" compoundref="test__flow_8hpp" startline="30" endline="43">flow::test::random_flow</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="147" column="23" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="147" bodyend="-1"/>
+        <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="112">test_biconnected</referencedby>
+        <referencedby refid="namespaceflow_1_1test_1a32a94ae42f633485db361cf67447df2f" compoundref="test__flow_8hpp" startline="30" endline="43">flow::test::random_flow</referencedby>
+        <referencedby refid="namespacestring__tools_1_1test_1aac2edb1d7263538c044fead501c02085" compoundref="test__suffix__array_8hpp" startline="9" endline="15">string_tools::test::random_str</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespaceutility_1a1507417750abfb917c914c44e07ed713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1acf80bb2a56236f08271b2d70689cc1f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type>auto</type>
-        <definition>auto utility::max_eq</definition>
-        <argsstring>(T &amp;x, const T &amp;y)</argsstring>
-        <name>max_eq</name>
-        <param>
-          <type>T &amp;</type>
-          <declname>x</declname>
-        </param>
-        <param>
-          <type>const T &amp;</type>
-          <declname>y</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="19" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="19" bodyend="19"/>
-        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="47">centroid_decomp</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="namespaceutility_1ae423116f6315d5e998219f27f1f8c401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>auto</type>
-        <definition>auto utility::min_eq</definition>
+        <type>void</type>
+        <definition>void utility::min_eq</definition>
         <argsstring>(T &amp;x, const T &amp;y)</argsstring>
         <name>min_eq</name>
         <param>
@@ -112,9 +86,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="20" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="20" bodyend="20"/>
-        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="48">biconnected</referencedby>
-        <referencedby refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" compoundref="flow_8hpp" startline="13" endline="59">flow::edmond_karp</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="25" column="19" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="25" bodyend="25"/>
+        <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="53">biconnected</referencedby>
+        <referencedby refid="namespaceflow_1a019c8d89498d267345fd2f560909fa7a" compoundref="flow_8hpp" startline="14" endline="61">flow::edmond_karp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutility_1a80f7a687b4e8d135cde1ae1d6b169d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void utility::max_eq</definition>
+        <argsstring>(T &amp;x, const T &amp;y)</argsstring>
+        <name>max_eq</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Set x to the minimum of x and y. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set x to the maximum of x and y.</para>
+<para>Set x to the maximum of x and y </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="27" column="19" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="27" bodyend="27"/>
+        <referencedby refid="centroid_8hpp_1a3831178b7f165ffd952602f1ec4ba6a4" compoundref="centroid_8hpp" startline="6" endline="49">centroid_decomp</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a6e069fcf8b422fbc525eba2543e36a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -131,13 +135,15 @@
           <declname>f</declname>
         </param>
         <briefdescription>
+<para>Set x to the minimum of x and y. </para>
         </briefdescription>
         <detaileddescription>
+<para>Cache calls to f using a map of type T.</para>
+<para>Cache calls to f using a map of type T </para>
         </detaileddescription>
         <inbodydescription>
-<para>Cache calls to f using a map of type T</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="21" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="21" bodyend="30"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="29" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="29" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a531cc980b5de78f0c2f36ae3210cb9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -196,14 +202,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="34" column="7" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="34" bodyend="38"/>
-        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">convex_hull_trick::CHT::CHT</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="41" column="7" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="41" bodyend="45"/>
+        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="68" endline="71">convex_hull_trick::CHT::CHT</referencedby>
         <referencedby refid="namespaceutility_1_1test_1a29adbf9294cbaa7132f9d922bea29299" compoundref="test__utility_8hpp" startline="14" endline="17">utility::test::test_uniq</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespaceutility_1aa705afaf267f70799bd4ec8cbf040455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a3f485f407bcf34b3ad3831f7fda882e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>typename T</type>
+            <type>typename Compare</type>
             <defval>less&lt;&gt;</defval>
           </param>
           <param>
@@ -212,27 +218,49 @@
         </templateparamlist>
         <type>auto</type>
         <definition>auto utility::key_compare</definition>
-        <argsstring>(const Func &amp;f, T g=T{})</argsstring>
+        <argsstring>(const Func &amp;func, const Compare &amp;compare={})</argsstring>
         <name>key_compare</name>
         <param>
           <type>const Func &amp;</type>
-          <declname>f</declname>
+          <declname>func</declname>
         </param>
         <param>
-          <type>T</type>
-          <declname>g</declname>
-          <defval>T{}</defval>
+          <type>const Compare &amp;</type>
+          <declname>compare</declname>
+          <defval>{}</defval>
         </param>
         <briefdescription>
+<para>Compare using key. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the comparison function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A comparison functor that compares two arugments by the key. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="39" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="39" bodyend="41"/>
-        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="70" endline="73">convex_hull_trick::CHT::CHT</referencedby>
-        <referencedby refid="namespaceconvex__hull__trick_1aa194f52c547fd3298f72caf6371a23ed" compoundref="cht_8hpp" startline="42" endline="58">convex_hull_trick::hull</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="52" column="6" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="52" bodyend="56"/>
+        <referencedby refid="structconvex__hull__trick_1_1CHT_1a2166ed9dd69f17fe9f4ed77fbf4d0907" compoundref="cht_8hpp" startline="68" endline="71">convex_hull_trick::CHT::CHT</referencedby>
+        <referencedby refid="namespaceconvex__hull__trick_1aa194f52c547fd3298f72caf6371a23ed" compoundref="cht_8hpp" startline="40" endline="58">convex_hull_trick::hull</referencedby>
         <referencedby refid="cht_8hpp_1a18b063c150d95a5ec77dab71218c4f48" compoundref="cht_8hpp" startline="4" endline="7">std::operator&lt;</referencedby>
+        <referencedby refid="namespacestring__tools_1_1test_1ae99e912d4303fb69fb94d5197acfb0fa" compoundref="test__suffix__array_8hpp" startline="3" endline="8">string_tools::test::suffix_array_naive</referencedby>
         <referencedby refid="namespaceutility_1_1test_1a027d0f534d798b71531e664ed33a7318" compoundref="test__utility_8hpp" startline="18" endline="21">utility::test::test_key_compare</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a50e9430d1096ce6997ae910135a9533f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -255,8 +283,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="42" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="42" bodyend="56"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="57" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="57" bodyend="71"/>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -268,13 +296,13 @@
           <declname>x</declname>
         </param>
         <briefdescription>
+<para>Return the smallest power of two that is at least x. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Return the smallest power of two that is at least x</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="57" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="57" bodyend="63"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="73" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="73" bodyend="78"/>
         <referencedby refid="fft_8hpp_1a27632dcb2490189a02cc98a2029a4be3" compoundref="fft_8hpp" startline="43" endline="60">fft</referencedby>
         <referencedby refid="namespaceutility_1_1test_1a1dc18cbf86fee8a275f4cc46d125f43c" compoundref="test__utility_8hpp" startline="22" endline="31">utility::test::test_bit_ceil</referencedby>
       </memberdef>
@@ -292,12 +320,13 @@
           <declname>base</declname>
         </param>
         <briefdescription>
+<para>Returns the smallest power of base that is at least x. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="65" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="65" bodyend="70"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="81" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="81" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -313,12 +342,13 @@
           <declname>base</declname>
         </param>
         <briefdescription>
+<para>Returns the smallest exponent such that base raised to exponent is at least x. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="71" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="71" bodyend="76"/>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="88" column="4" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="88" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -330,14 +360,16 @@
           <declname>x</declname>
         </param>
         <briefdescription>
+<para>next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="pre"><para>THe desired y must exist. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
-<para>Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). Note, such y must exist.</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="77" column="5" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="77" bodyend="86"/>
-        <references refid="operations_8hpp_1afcd538daef660984ecb8abf34697904b" compoundref="operations_8hpp" startline="89">ret</references>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="97" column="5" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="97" bodyend="104"/>
         <referencedby refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" compoundref="test__utility_8hpp" startline="32" endline="45">utility::test::test_next_comb</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -366,16 +398,55 @@
           <declname>func</declname>
         </param>
         <briefdescription>
+<para>Stable sorts a and b by func. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>Stable sorts a and b by func.</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="87" column="20" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="87" bodyend="92"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="48" endline="62">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
-        <referencedby refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" compoundref="dsu_8hpp" startline="15" endline="25">dsu_ds::dsu::join</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="106" column="20" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="106" bodyend="110"/>
+        <referencedby refid="classhld_1_1HLD_1ace75fa88e8df29573405e9241c56baf0" compoundref="hld_8hpp" startline="50" endline="64">hld::HLD&lt; T, Monoid, QueryDS &gt;::func_path</referencedby>
+        <referencedby refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" compoundref="dsu_8hpp" startline="16" endline="26">dsu_ds::dsu::join</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutility_1a713c1fa985af64dbe0374a15cc3d4383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Iter</type>
+          </param>
+          <param>
+            <type>typename Proj</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void utility::counting_sort</definition>
+        <argsstring>(Iter a, Iter b, const Proj &amp;proj, const ll proj_size)</argsstring>
+        <name>counting_sort</name>
+        <param>
+          <type>Iter</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Iter</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const Proj &amp;</type>
+          <declname>proj</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>proj_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="112" column="6" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="112" bodyend="130"/>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="38">al</references>
+        <referencedby refid="namespacestring__tools_1af59e7388a466fccce148991db2eb61db" compoundref="suffix__array_8hpp" startline="6" endline="44">string_tools::suffix_array</referencedby>
+        <referencedby refid="namespaceutility_1_1test_1aa1aed4e58acebcfd6d9150b64f4ad975" compoundref="test__utility_8hpp" startline="50" endline="59">utility::test::test_counting_sort</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -397,18 +468,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="93" column="16" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="93" bodyend="93"/>
-        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" compoundref="range_8hpp" startline="60">cont</references>
-        <referencedby refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" compoundref="permutation_8hpp" startline="49" endline="49">permutation::identity</referencedby>
-        <referencedby refid="structbigint_1_1bigint_1a1589b9707458aa79ca2a2928b9f0e865" compoundref="big__integer_8hpp" startline="7" endline="7">bigint::bigint::operator[]</referencedby>
-        <referencedby refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" compoundref="permutation_8hpp" startline="40" endline="47">permutation::Permutation::Permutation</referencedby>
-        <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="10" endline="18">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="131" column="16" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="131" bodyend="131"/>
+        <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" compoundref="range_8hpp" startline="66">cont</references>
+        <referencedby refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" compoundref="permutation_8hpp" startline="50" endline="50">permutation::identity</referencedby>
+        <referencedby refid="namespacebigint_1a1c313eef0ad422d61739b7e3cd97d849" compoundref="big__integer_8hpp" startline="26" endline="29">bigint::operator==</referencedby>
+        <referencedby refid="structbigint_1_1BigInt_1a9b9c2c376d5f790991f541553de43bd0" compoundref="big__integer_8hpp" startline="10" endline="10">bigint::BigInt::operator[]</referencedby>
+        <referencedby refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" compoundref="permutation_8hpp" startline="40" endline="48">permutation::Permutation::Permutation</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1a0bfc816d1bbcfa5a160a8f34400816d4" compoundref="dict__search_8hpp" startline="102" endline="115">string_tools::Trie&lt; start, alphabet_size &gt;::search</referencedby>
+        <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="9" endline="19">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/core/test_utility.hpp" line="3" column="23"/>
+    <location file="/home/ram/OmniTemplate/src/core/test_utility.hpp" line="3" column="1"/>
   </compounddef>
 </doxygen>

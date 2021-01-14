@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structtree_1_1no" kind="struct" language="C++" prot="public">
     <compoundname>tree::no</compoundname>
     <includes refid="lca_8hpp" local="no">lca.hpp</includes>
@@ -61,9 +61,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" line="8" column="1" bodyfile="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" bodystart="8" bodyend="16"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
         <references refid="structtree_1_1no_1a3dd518d66a2bf5c95d277ff8d9638c1a" compoundref="lca_8hpp" startline="6">tree::no&lt; T &gt;::p</references>
-        <references refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" compoundref="lca_8hpp" startline="4">tree::sz</references>
+        <references refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" compoundref="lca_8hpp" startline="4">tree::sz</references>
       </memberdef>
       <memberdef kind="function" id="structtree_1_1no_1a6706d57cfed232149e1af1c15dfd2dfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -81,9 +81,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" line="17" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" bodystart="17" bodyend="26"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="16">fo</references>
-        <references refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" compoundref="lca_8hpp" startline="4">tree::sz</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" compoundref="lca_8hpp" startline="4">tree::sz</references>
+        <referencedby refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" compoundref="lca_8hpp" startline="40" endline="57">tree::lca</referencedby>
       </memberdef>
       <memberdef kind="function" id="structtree_1_1no_1af0b6086861d10ce510b9a5619bd3ef36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -111,9 +111,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" line="28" column="6" bodyfile="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" bodystart="28" bodyend="38"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
-        <references refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" compoundref="range_8hpp" startline="53" endline="56">rev</references>
-        <references refid="namespacetree_1abbd5aff5c7f9d3fd17bb986aae13ca53" compoundref="lca_8hpp" startline="4">tree::sz</references>
+        <references refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" compoundref="range_8hpp" startline="57" endline="60">rev</references>
+        <references refid="namespacetree_1ae464c2bd0d1e78d727832472c579c2f6" compoundref="lca_8hpp" startline="4">tree::sz</references>
         <referencedby refid="namespacetree_1ad6fb77bc640502f7cfbc3b49c7891419" compoundref="lca_8hpp" startline="40" endline="57">tree::lca</referencedby>
       </memberdef>
       </sectiondef>
@@ -122,18 +121,36 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="2">
+      <node id="4">
         <label>T</label>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; tree::no * &gt;</label>
+        <childnode refid="1" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; tree::no * &gt;</edgelabel>
+        </childnode>
       </node>
       <node id="1">
         <label>tree::no&lt; T &gt;</label>
         <link refid="structtree_1_1no"/>
         <childnode refid="2" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
           <edgelabel>v</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" line="5" column="21" bodyfile="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" bodystart="5" bodyend="39"/>
+    <location file="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" line="5" column="12" bodyfile="/home/ram/OmniTemplate/src/graph/tree/lca.hpp" bodystart="5" bodyend="39"/>
     <listofallmembers>
       <member refid="structtree_1_1no_1af0fdce790d620d5787ac8efe7642ce70" prot="public" virt="non-virtual"><scope>tree::no</scope><name>dp</name></member>
       <member refid="structtree_1_1no_1a6706d57cfed232149e1af1c15dfd2dfa" prot="public" virt="non-virtual"><scope>tree::no</scope><name>gt</name></member>

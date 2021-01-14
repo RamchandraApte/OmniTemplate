@@ -1,14 +1,21 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="test__sparse__table_8hpp" kind="file" language="C++">
     <compoundname>test_sparse_table.hpp</compoundname>
+    <includes refid="modulo_8hpp" local="yes">number_theory/modulo.hpp</includes>
     <includes refid="sparse__table_8hpp" local="yes">sparse_table.hpp</includes>
     <includedby refid="test_8cpp" local="yes">/home/ram/OmniTemplate/src/test/test.cpp</includedby>
     <incdepgraph>
+      <node id="2">
+        <label>number_theory/modulo.hpp</label>
+        <link refid="modulo_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>bits/stdc++.h</label>
       </node>
-      <node id="2">
+      <node id="12">
         <label>sparse_table.hpp</label>
         <link refid="sparse__table_8hpp"/>
         <childnode refid="3" relation="include">
@@ -17,10 +24,10 @@
       <node id="6">
         <label>experimental/source_location</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -37,11 +44,11 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -49,19 +56,19 @@
       <node id="11">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="10">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -69,13 +76,15 @@
         <link refid="test__sparse__table_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -99,24 +108,30 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sparse__table_8hpp" kindref="compound">sparse_table.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="namespacesparse__table_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table_1_1test" kindref="compound">sparse_table::test</ref><sp/>{</highlight></codeline>
-<codeline lineno="4" refid="namespacesparse__table_1_1test_1a274f88cabaff31f12dbb19ed28eb1bb7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Table,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Monoid&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacesparse__table_1_1test_1a274f88cabaff31f12dbb19ed28eb1bb7" kindref="member">test_sparse_table_impl</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;T&gt;<sp/>data{6,<sp/>2,<sp/>4,<sp/>1,<sp/>7,<sp/>3,<sp/>4,<sp/>2,<sp/>7,<sp/>2,<sp/>4,<sp/>1,<sp/>6};</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>Table&lt;T,<sp/>Monoid&gt;<sp/>sp{data};</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(start,<sp/>data.size())<sp/>{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(end,<sp/>start<sp/>+<sp/>1,<sp/>data.size())<sp/>{<sp/>assert(sp.query(start,<sp/>end)<sp/>==<sp/>accumulate(begin(data)<sp/>+<sp/>start,<sp/>begin(data)<sp/>+<sp/>end,<sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(Monoid{},<sp/>T{}),<sp/>Monoid{}));<sp/>}</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="11" refid="namespacesparse__table_1_1test_1ad6ec7466ef06bcb50a79ee26c4a05db0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacesparse__table_1_1test_1ad6ec7466ef06bcb50a79ee26c4a05db0" kindref="member">test_sparse_table</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(1e9<sp/>+<sp/>7),<sp/>modulo::modulus};</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;SparseTable,<sp/>ll,<sp/>Min&gt;();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>ll,<sp/>Min&gt;();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>ll,<sp/>plus&lt;&gt;&gt;();</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>modulo,<sp/>multiplies&lt;&gt;&gt;();</highlight></codeline>
-<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sparse_table::test</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table_1_1test" kindref="compound">sparse_table::test</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="modulo_8hpp" kindref="compound">number_theory/modulo.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sparse__table_8hpp" kindref="compound">sparse_table.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="namespacesparse__table_1_1test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table_1_1test" kindref="compound">sparse_table::test</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Table,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Monoid&gt;</highlight></codeline>
+<codeline lineno="6" refid="namespacesparse__table_1_1test_1a274f88cabaff31f12dbb19ed28eb1bb7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacesparse__table_1_1test_1a274f88cabaff31f12dbb19ed28eb1bb7" kindref="member">test_sparse_table_impl</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;T&gt;<sp/>data{6,<sp/>2,<sp/>4,<sp/>1,<sp/>7,<sp/>3,<sp/>4,<sp/>2,<sp/>7,<sp/>2,<sp/>4,<sp/>1,<sp/>6};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>Table&lt;T,<sp/>Monoid&gt;<sp/>sp{data};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(start,<sp/>data.size())<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(end,<sp/>start,<sp/>data.size())<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(sp.query(start,<sp/>end)<sp/>==</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>accumulate(begin(data)<sp/>+<sp/>start,<sp/>begin(data)<sp/>+<sp/>end,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(Monoid{},<sp/>T{}),<sp/>Monoid{}));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17" refid="namespacesparse__table_1_1test_1ad6ec7466ef06bcb50a79ee26c4a05db0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacesparse__table_1_1test_1ad6ec7466ef06bcb50a79ee26c4a05db0" kindref="member">test_sparse_table</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>_m{<ref refid="core_2all_8hpp_1ad54dde638d1ae3e9bb08956f539b1883" kindref="member">ll</ref>(1e9<sp/>+<sp/>7),<sp/>modulo::modulus};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;SparseTable,<sp/>ll,<sp/>Min&gt;();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>ll,<sp/>Min&gt;();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>ll,<sp/>plus&lt;&gt;&gt;();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>test_sparse_table_impl&lt;DisjointSparseTable,<sp/>modulo,<sp/>multiplies&lt;&gt;&gt;();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sparse_table::test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesparse__table_1_1test" kindref="compound">sparse_table::test</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/ds/test_sparse_table.hpp"/>
   </compounddef>
