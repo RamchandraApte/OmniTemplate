@@ -87,16 +87,20 @@ auto operator+(Iterator it,
 	return it;
 }
 /** @brief Expands to a functor type that calls func */
-#define FUNCTOR(func)                                                                              \
-	struct {                                                                                   \
-		template <typename... Ts> decltype(auto) operator()(Ts &&... args) const {         \
+#define FUNCTOR(name, func)                                                                        \
+	struct name {                                                                              \
+		template <typename... Ts> decltype(auto) operator()(Ts &&...args) const {          \
 			return (func)(forward<decltype(args)>(args)...);                           \
 		}                                                                                  \
 	}
-using Max = FUNCTOR(max);
-using Min = FUNCTOR(min);
-ll identity(plus<>, ll) { return 0; }
-ll identity(multiplies<>, ll) { return 1; }
+FUNCTOR(Max, max);
+FUNCTOR(Min, min);
+template <typename T, typename = enable_if_t<is_arithmetic_v<T>>> T identity(plus<>, T) {
+	return 0;
+}
+template <typename T, typename = enable_if_t<is_arithmetic_v<T>>> T identity(multiplies<>, T) {
+	return 1;
+}
 ll identity(Max, ll) { return -inf; }
 ll identity(Min, ll) { return inf; }
 // TODO convert all macros to UPPER_CASE

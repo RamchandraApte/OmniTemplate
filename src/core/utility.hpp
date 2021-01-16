@@ -163,5 +163,16 @@ template <typename Compare = less<>> class chained_compare {
 template <typename T> bool valid_idx(const vector<T> &vec, const size_t idx) {
 	return idx < vec.size();
 }
+template <typename InputIt> auto iterator_identity() {
+	return identity(plus<>{}, typename InputIt::value_type{});
+};
+template <typename InputIt> decltype(auto) accumulate(InputIt a, InputIt b) {
+	return accumulate(a, b, iterator_identity<InputIt>());
+}
+template <typename InputIt> auto get_partial_sum(InputIt a, InputIt b) {
+	vector sums(distance(a, b) + 1, iterator_identity<InputIt>());
+	partial_sum(a, b, begin(sums) + 1);
+	return sums;
+}
 } // namespace utility
 using namespace utility;

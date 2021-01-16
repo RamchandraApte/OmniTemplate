@@ -69,6 +69,16 @@ void test_valid_idx() {
 	fo(idx, vec.size()) { assert(valid_idx(vec, idx)); }
 	fo(idx, vec.size(), vec.size() + 10) { assert(!valid_idx(vec, idx)); }
 }
+void test_accumulate() {
+	ll int_max = numeric_limits<int>::max();
+	vector<ll> vec{int_max, 1};
+	static_assert(is_same_v<decltype(accumulate(al(vec))), ll>);
+	assert(accumulate(al(vec)) == int_max + 1);
+}
+void test_get_partial_sum() {
+	vector<float> nums{1.5, 2.5, 3.5};
+	assert((get_partial_sum(al(nums)) == vector<float>{0, 1.5, 4, 7.5}));
+}
 void test_utility() {
 	test_with();
 	test_uniq();
@@ -79,6 +89,8 @@ void test_utility() {
 	test_counting_sort();
 	test_chained_compare();
 	test_valid_idx();
+	test_accumulate();
+	test_get_partial_sum();
 }
 } // namespace utility::test
 using namespace utility::test;
