@@ -28,7 +28,27 @@
 #include <unordered_set>
 #include <vector>
 #endif
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <algorithm>
+#include <cassert>
+#include <chrono>
+#include <climits>
+#include <complex>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <stack>
+#include <thread>
+#include <type_traits>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+//#include <filesystem>
 #endif
 #include <experimental/iterator>
 #include <experimental/source_location>
