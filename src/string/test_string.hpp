@@ -30,8 +30,14 @@ vector<ll> brute_search_all(const string &t, const string &s) {
 	}
 	return expected;
 }
+vector<ll> search_it_all(const string &t, const string &s) {
+	const auto cont = search_ra(t, s);
+	return {begin(cont), end(cont)};
+}
+
 void test_search_it_one(const string &t, const string &s) {
 	assert(search_all(t, s) == brute_search_all(t, s));
+	assert(search_it_all(t, s) == brute_search_all(t, s));
 }
 void test_search_it() {
 	test_search_it_one("abbaababaaabbaababaa"s, "aba"s);

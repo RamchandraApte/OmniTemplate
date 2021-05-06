@@ -72,26 +72,27 @@ auto search_all(string const &t, string const &s) {
 	}
 	return v;
 }
-string empstr = "";
+
 /*! Search iterator for looping through all matches of a string s in t*/
 struct search_it : it_base<ll> {
 	using iterator_category = input_iterator_tag;
 	const string t, s;
-	const ll n, ed;
+	const ll n{}, ed{};
 	vector<ll> p;
 	ll i = 0, o = 0;
-	search_it(string const &t_, string const &s_)
+	explicit search_it(string const &t_, string const &s_)
 	    : t(t_), s(s_), n(s.size()), ed(n + 1 + t.size()), p(n) {
 		++*this;
 	}
-	explicit search_it() : search_it(empstr, empstr) {}
+	explicit search_it(const ll i_) : i(i_) {}
 	auto operator*() {
 		assert(n);
-		return i - (n + 1);
+		return i - n - s.size();
 	}
 	void operator++() {
+		assert(i < ed);
 		for (++i; i < ed; ++i) {
-			auto cur = i <= n ? s.c_str()[i] : t[**this];
+			auto cur = i <= n ? s.c_str()[i] : t[i - (n + 1)];
 			for (ll j = o;; j = p[j - 1]) {
 				if (s[j] == cur) {
 					o = j + 1;
@@ -111,34 +112,11 @@ struct search_it : it_base<ll> {
 		}
 	}
 };
-auto operator==(search_it const &a, search_it const &b) {
-	bool sa = a.n, sb = b.n;
-	if (sa ^ sb) {
-		return a.i == b.i;
-	}
-	if (sa) {
-		return a.i == a.ed;
-	}
-	if (sb) {
-		return b.ed == b.i;
-	}
-	assert(false);
-}
-auto operator<(search_it const &a, search_it const &b) {
-	bool sa = a.n, sb = b.n;
-	if (sa ^ sb) {
-		return a.i < b.i;
-	}
-	if (sa) {
-		return a.i < a.ed;
-	}
-	if (sb) {
-		return b.ed < b.i;
-	}
-	assert(false);
-}
-template <typename... Ts> auto search_ra(const Ts &... args) {
-	return range{search_it(args...), search_it()};
+bool operator==(search_it const &a, search_it const &b) { return a.i == b.i; }
+bool operator<(search_it const &a, search_it const &b) { return a.i < b.i; }
+template <typename... Ts> auto search_ra(const string &t, const string &s) {
+	auto start = search_it(t, s);
+	return range{start, search_it(start.ed)};
 }
 } // namespace string_tools
 using namespace string_tools;

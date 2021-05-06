@@ -29,7 +29,9 @@
 bool multitest{};
 // FIXME why can't we compile this on G++-10? Compiler bug?
 void main2() {
+	// TODO use a test registry
 	// test_bigint();
+	test_string();
 	test_counting_sort();
 	test_suffix_array();
 	test_dict_search();
@@ -43,7 +45,6 @@ void main2() {
 	test_splay_tree();
 	test_geometry();
 	test_combinatorics();
-	test_string();
 	test_coroutine();
 	test_linear_algebra();
 	test_permutation();
