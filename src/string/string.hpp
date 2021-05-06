@@ -59,13 +59,15 @@ vector<ll> prefix(string const &s) {
 	}
 	return p;
 }
-/*! Find all substrings of t equal to s*/
+/*! Find all substrings of t equal to s. Returns list of start index for each match. s must be a
+ * nonempty string*/
 auto search_all(string const &t, string const &s) {
+	assert(!s.empty());
 	auto p = prefix(s + '\0' + t);
 	vector<ll> v;
 	fo(i, t.size()) {
 		if (p[s.size() + 1 + i] == s.size()) {
-			v.push_back(i);
+			v.push_back(i + 1 - s.size());
 		}
 	}
 	return v;
@@ -74,7 +76,7 @@ string empstr = "";
 /*! Search iterator for looping through all matches of a string s in t*/
 struct search_it : it_base<ll> {
 	using iterator_category = input_iterator_tag;
-	string const &t, s;
+	const string t, s;
 	const ll n, ed;
 	vector<ll> p;
 	ll i = 0, o = 0;
