@@ -9,14 +9,11 @@ Requires GNU G++ compiler and C++17.
 
 Use the compile.sh script.
 
-```
-compile/sh
-
 ## Compilation
 
 ```
-cmake -B build # Configure
-cmake --build build # Compile the code
+cmake -B build && # Configure
+cmake --build build && # Compile the code
 ./build/test # Test the code
 ```
 
