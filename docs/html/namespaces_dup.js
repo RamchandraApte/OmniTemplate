@@ -1,0 +1,28 @@
+var namespaces_dup =
+[
+    [ "bigint", "namespacebigint.html", "namespacebigint" ],
+    [ "combinatorics", "namespacecombinatorics.html", "namespacecombinatorics" ],
+    [ "convex_hull_trick", "namespaceconvex__hull__trick.html", "namespaceconvex__hull__trick" ],
+    [ "coroutine", "namespacecoroutine.html", "namespacecoroutine" ],
+    [ "debug_tools", "namespacedebug__tools.html", null ],
+    [ "dsu_ds", "namespacedsu__ds.html", "namespacedsu__ds" ],
+    [ "flow", "namespaceflow.html", "namespaceflow" ],
+    [ "graph_draw", "namespacegraph__draw.html", "namespacegraph__draw" ],
+    [ "graph_theory", "namespacegraph__theory.html", "namespacegraph__theory" ],
+    [ "hld", "namespacehld.html", "namespacehld" ],
+    [ "linear_algebra", "namespacelinear__algebra.html", "namespacelinear__algebra" ],
+    [ "link_cut", "namespacelink__cut.html", "namespacelink__cut" ],
+    [ "modulo_namespace", "namespacemodulo__namespace.html", "namespacemodulo__namespace" ],
+    [ "permutation", "namespacepermutation.html", "namespacepermutation" ],
+    [ "persistent", "namespacepersistent.html", null ],
+    [ "polynomial_ns", "namespacepolynomial__ns.html", "namespacepolynomial__ns" ],
+    [ "queue_tools", "namespacequeue__tools.html", "namespacequeue__tools" ],
+    [ "sat2", "namespacesat2.html", "namespacesat2" ],
+    [ "segment_tree", "namespacesegment__tree.html", "namespacesegment__tree" ],
+    [ "sparse_table", "namespacesparse__table.html", "namespacesparse__table" ],
+    [ "splay_tree", "namespacesplay__tree.html", "namespacesplay__tree" ],
+    [ "string_tools", "namespacestring__tools.html", "namespacestring__tools" ],
+    [ "time_tools", "namespacetime__tools.html", null ],
+    [ "tree", "namespacetree.html", null ],
+    [ "utility", "namespaceutility.html", "namespaceutility" ]
+];
