@@ -1,0 +1,68 @@
+\hypertarget{core_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/graph/core.hpp File Reference}
+\label{core_8hpp}\index{/home/ram/OmniTemplate/src/graph/core.hpp@{/home/ram/OmniTemplate/src/graph/core.hpp}}
+{\ttfamily \#include \char`\"{}algebra/linear\+\_\+algebra.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ds/dsu.\+hpp\char`\"{}}\newline
+Include dependency graph for core.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{graph\+\_\+theory\+::\+Graph\+Adj}}
+\item 
+struct \mbox{\hyperlink{structgraph__theory_1_1edge}{graph\+\_\+theory\+::edge}}
+\begin{DoxyCompactList}\small\item\em Edge with weight weight from a to b. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structgraph__theory_1_1GeneralSearch}{graph\+\_\+theory\+::\+General\+Search$<$ Searcher, Graph $>$}}
+\begin{DoxyCompactList}\small\item\em Generalized graph searcher/visitor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+F\+S$<$ Graph $>$}}
+\begin{DoxyCompactList}\small\item\em Depth-\/first search. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structgraph__theory_1_1BFS}{graph\+\_\+theory\+::\+B\+F\+S$<$ Graph $>$}}
+\begin{DoxyCompactList}\small\item\em Breadth-\/first search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegraph__theory}{graph\+\_\+theory}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacegraph__theory_adf2ab789ab7321886b5f11d88a9e7fe6}{graph\+\_\+theory\+::\+Graph\+Adj\+\_\+\+Base}} = vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em Adjacency-\/list representation of graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacegraph__theory_a4dbe54e2a6c2e93add66dc32c647c876}{graph\+\_\+theory\+::operator$<$}} (\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&a, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&b)
+\begin{DoxyCompactList}\small\item\em Compare the edges by weight, with ties compared by a and b. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacegraph__theory_a9112d064de59f0aa5737bc1d90e9bf32}{graph\+\_\+theory\+::operator==}} (\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&a, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&b)
+\item 
+{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacegraph__theory_a283db7058efe0355744471a1532e4960}{graph\+\_\+theory\+::operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&e)
+\begin{DoxyCompactList}\small\item\em Print the edge. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}{graph\+\_\+theory\+::shortest\+\_\+dist}} (vector$<$ vector$<$ \mbox{\hyperlink{core_2all_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$ graph, \mbox{\hyperlink{structll}{ll}} source)
+\begin{DoxyCompactList}\small\item\em Adds edge $u \leftrightarrow v$ to graph graph. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacegraph__theory_ae6ad3f54671798a8d8f3c4253ea83db4}{graph\+\_\+theory\+::shortest\+\_\+dist}} (\mbox{\hyperlink{structlinear__algebra_1_1matrix}{matrix}}$<$ \mbox{\hyperlink{structll}{ll}} $>$ const \&graph)
+\begin{DoxyCompactList}\small\item\em Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacegraph__theory_a43f33335bd84b91252969b3b17f8b09d}{graph\+\_\+theory\+::mst}} (vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$ edges, const \mbox{\hyperlink{structll}{ll}} n)
+\item 
+{\footnotesize template$<$typename Searcher $>$ }\\vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}{graph\+\_\+theory\+::get\+\_\+size}} (const Searcher \&search)
+\begin{DoxyCompactList}\small\item\em Given a searcher object, returns an array containing the size of each subtree. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph $>$ }\\\mbox{\hyperlink{namespacegraph__theory_a7ffa7c1e75caecd92d5c385d41eb313d}{graph\+\_\+theory\+::\+D\+FS}} (Graph) -\/$>$ \mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}$<$ Graph $>$
+\item 
+{\footnotesize template$<$typename Graph $>$ }\\\mbox{\hyperlink{namespacegraph__theory_a4ebc5c354c7f3d8a187b1af524050c0a}{graph\+\_\+theory\+::\+B\+FS}} (Graph) -\/$>$ \mbox{\hyperlink{structgraph__theory_1_1BFS}{B\+FS}}$<$ Graph $>$
+\item 
+auto \mbox{\hyperlink{namespacegraph__theory_a5250f51004add91c3b7f66fe5a030a2f}{graph\+\_\+theory\+::trans}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph)
+\begin{DoxyCompactList}\small\item\em Returns the transpose graph of directed graph. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacegraph__theory_afcb5da494d1b16139a1be66e66543043}{graph\+\_\+theory\+::scc}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph)
+\begin{DoxyCompactList}\small\item\em Returns the strongly connected component for each vertex of the graph g. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacegraph__theory_aa68bcc78bd4d2bbd33ce272bbb2d5f33}{graph\+\_\+theory\+::graph\+\_\+in}} (\mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&g, \mbox{\hyperlink{structll}{ll}} m)
+\begin{DoxyCompactList}\small\item\em Reads 1-\/indexed list of edges into graph g. \end{DoxyCompactList}\end{DoxyCompactItemize}

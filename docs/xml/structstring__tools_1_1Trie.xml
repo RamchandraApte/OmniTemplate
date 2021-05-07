@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="structstring__tools_1_1Trie" kind="struct" language="C++" prot="public">
+    <compoundname>string_tools::Trie</compoundname>
+    <includes refid="dict__search_8hpp" local="no">dict_search.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <declname>start</declname>
+        <defname>start</defname>
+        <defval>&apos;a&apos;</defval>
+      </param>
+      <param>
+        <type><ref refid="structll" kindref="compound">ll</ref></type>
+        <declname>alphabet_size</declname>
+        <defname>alphabet_size</defname>
+        <defval>26</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1ad058f2470e8934ee58e8466071470445" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool string_tools::Trie&lt; start, alphabet_size &gt;::leaf</definition>
+        <argsstring></argsstring>
+        <name>leaf</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether this node is a leaf node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="6" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1ab8f1d2a13b82d8dbaccc886df20f8371" compoundref="dict__search_8hpp" startline="86" endline="96">string_tools::Trie&lt; start, alphabet_size &gt;::exit_link</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1a3a4a07a6e9479d4a03f558a514be4664" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string string_tools::Trie&lt; start, alphabet_size &gt;::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The string for this leaf node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="8" column="8" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="8" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1a9fe6156d37bd26e9fd4d8e9b5a6e21c4" compoundref="dict__search_8hpp" startline="30" endline="38">string_tools::Trie&lt; start, alphabet_size &gt;::insert</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1ac02e556e3dfd0c6608ffde23cee5a9dc" compoundref="dict__search_8hpp" startline="40" endline="43">string_tools::Trie&lt; start, alphabet_size &gt;::find_leaf</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1a219e9e60d7843d09a2e4d2ee54b733ee" compoundref="dict__search_8hpp" startline="45" endline="54">string_tools::Trie&lt; start, alphabet_size &gt;::find_node</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1a7962b53f5ad52f4df60dd7aafa376cf0" prot="public" static="no" mutable="no">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parent of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="10" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="10" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1a819249dc8ec7d31d7666f3c6a9b85e3c" compoundref="dict__search_8hpp" startline="20" endline="28">string_tools::Trie&lt; start, alphabet_size &gt;::next_default</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1ab8f1d2a13b82d8dbaccc886df20f8371" compoundref="dict__search_8hpp" startline="86" endline="96">string_tools::Trie&lt; start, alphabet_size &gt;::exit_link</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1aef06d67ed53a08634d0df64b6e9df1af" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char string_tools::Trie&lt; start, alphabet_size &gt;::edge_char</definition>
+        <argsstring></argsstring>
+        <name>edge_char</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Character for the edge to the parent </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="12" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="12" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1a819249dc8ec7d31d7666f3c6a9b85e3c" compoundref="dict__search_8hpp" startline="20" endline="28">string_tools::Trie&lt; start, alphabet_size &gt;::next_default</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1afe826d471a843b31caa9c69d79e675ee" prot="private" static="no" mutable="no">
+        <type>array&lt; <ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *, alphabet_size &gt;</type>
+        <definition>array&lt;Trie *, alphabet_size&gt; string_tools::Trie&lt; start, alphabet_size &gt;::next_storage</definition>
+        <argsstring></argsstring>
+        <name>next_storage</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="118" column="7" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="118" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" compoundref="dict__search_8hpp" startline="14" endline="14">string_tools::Trie&lt; start, alphabet_size &gt;::next</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1ab189b614c6f5996aa334ecb1ecb961be" prot="private" static="no" mutable="no">
+        <type>array&lt; <ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *, alphabet_size &gt;</type>
+        <definition>array&lt;Trie *, alphabet_size&gt; string_tools::Trie&lt; start, alphabet_size &gt;::go_cache</definition>
+        <argsstring></argsstring>
+        <name>go_cache</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="119" column="7" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="119" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1add3a2c8ef2f3c49a0d027923cd83dce4" prot="private" static="no" mutable="no">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::suffix_link_cache</definition>
+        <argsstring></argsstring>
+        <name>suffix_link_cache</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="120" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="120" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structstring__tools_1_1Trie_1a4a9753a6a7efc00d537c7c2d22747595" prot="private" static="no" mutable="no">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::exit_link_cache</definition>
+        <argsstring></argsstring>
+        <name>exit_link_cache</name>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="121" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="121" bodyend="-1"/>
+        <referencedby refid="structstring__tools_1_1Trie_1ab8f1d2a13b82d8dbaccc886df20f8371" compoundref="dict__search_8hpp" startline="86" endline="96">string_tools::Trie&lt; start, alphabet_size &gt;::exit_link</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *&amp;</type>
+        <definition>Trie*&amp; string_tools::Trie&lt; start, alphabet_size &gt;::next</definition>
+        <argsstring>(const char c)</argsstring>
+        <name>next</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Returns the child corresponding to the character c. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="14" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="14" bodyend="14"/>
+        <references refid="structstring__tools_1_1Trie_1afe826d471a843b31caa9c69d79e675ee" compoundref="dict__search_8hpp" startline="118">string_tools::Trie&lt; start, alphabet_size &gt;::next_storage</references>
+        <referencedby refid="structstring__tools_1_1Trie_1a219e9e60d7843d09a2e4d2ee54b733ee" compoundref="dict__search_8hpp" startline="45" endline="54">string_tools::Trie&lt; start, alphabet_size &gt;::find_node</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1a58174618b92907ee56eb2914625b7959" compoundref="dict__search_8hpp" startline="15" endline="17">string_tools::Trie&lt; start, alphabet_size &gt;::next</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1a819249dc8ec7d31d7666f3c6a9b85e3c" compoundref="dict__search_8hpp" startline="20" endline="28">string_tools::Trie&lt; start, alphabet_size &gt;::next_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1a58174618b92907ee56eb2914625b7959" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto &amp;</type>
+        <definition>auto&amp; string_tools::Trie&lt; start, alphabet_size &gt;::next</definition>
+        <argsstring>(const char c) const</argsstring>
+        <name>next</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="15" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="15" bodyend="17"/>
+        <references refid="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" compoundref="dict__search_8hpp" startline="14" endline="14">string_tools::Trie&lt; start, alphabet_size &gt;::next</references>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1a819249dc8ec7d31d7666f3c6a9b85e3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::next_default</definition>
+        <argsstring>(const char c)</argsstring>
+        <name>next_default</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Returns the child corresponding to the character c. A new child is created if no such child exists. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="20" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="20" bodyend="28"/>
+        <references refid="structstring__tools_1_1Trie_1aef06d67ed53a08634d0df64b6e9df1af" compoundref="dict__search_8hpp" startline="12">string_tools::Trie&lt; start, alphabet_size &gt;::edge_char</references>
+        <references refid="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" compoundref="dict__search_8hpp" startline="14" endline="14">string_tools::Trie&lt; start, alphabet_size &gt;::next</references>
+        <references refid="structstring__tools_1_1Trie_1a7962b53f5ad52f4df60dd7aafa376cf0" compoundref="dict__search_8hpp" startline="10">string_tools::Trie&lt; start, alphabet_size &gt;::parent</references>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1a9fe6156d37bd26e9fd4d8e9b5a6e21c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void string_tools::Trie&lt; start, alphabet_size &gt;::insert</definition>
+        <argsstring>(const string &amp;str)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>inserts str into the trie </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="30" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="30" bodyend="38"/>
+        <references refid="structstring__tools_1_1Trie_1a3a4a07a6e9479d4a03f558a514be4664" compoundref="dict__search_8hpp" startline="8">string_tools::Trie&lt; start, alphabet_size &gt;::str</references>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1ac02e556e3dfd0c6608ffde23cee5a9dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::find_leaf</definition>
+        <argsstring>(const string &amp;str)</argsstring>
+        <name>find_leaf</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Return the leaf node for str, or nullptr if none exists. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="40" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="40" bodyend="43"/>
+        <references refid="structstring__tools_1_1Trie_1a219e9e60d7843d09a2e4d2ee54b733ee" compoundref="dict__search_8hpp" startline="45" endline="54">string_tools::Trie&lt; start, alphabet_size &gt;::find_node</references>
+        <references refid="structstring__tools_1_1Trie_1a3a4a07a6e9479d4a03f558a514be4664" compoundref="dict__search_8hpp" startline="8">string_tools::Trie&lt; start, alphabet_size &gt;::str</references>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1a219e9e60d7843d09a2e4d2ee54b733ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::find_node</definition>
+        <argsstring>(const string &amp;str)</argsstring>
+        <name>find_node</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Returns node corresponding to str (including non-leaf nodes), otherwise nullptr. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="45" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="45" bodyend="54"/>
+        <references refid="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" compoundref="dict__search_8hpp" startline="14" endline="14">string_tools::Trie&lt; start, alphabet_size &gt;::next</references>
+        <references refid="structstring__tools_1_1Trie_1a3a4a07a6e9479d4a03f558a514be4664" compoundref="dict__search_8hpp" startline="8">string_tools::Trie&lt; start, alphabet_size &gt;::str</references>
+        <referencedby refid="structstring__tools_1_1Trie_1ac02e556e3dfd0c6608ffde23cee5a9dc" compoundref="dict__search_8hpp" startline="40" endline="43">string_tools::Trie&lt; start, alphabet_size &gt;::find_leaf</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::link</definition>
+        <argsstring>()</argsstring>
+        <name>link</name>
+        <briefdescription>
+<para>returns the suffix link </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="56" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="56" bodyend="70"/>
+        <references refid="structstring__tools_1_1Trie_1aef06d67ed53a08634d0df64b6e9df1af" compoundref="dict__search_8hpp" startline="12">string_tools::Trie&lt; start, alphabet_size &gt;::edge_char</references>
+        <references refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</references>
+        <references refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</references>
+        <references refid="structstring__tools_1_1Trie_1a7962b53f5ad52f4df60dd7aafa376cf0" compoundref="dict__search_8hpp" startline="10">string_tools::Trie&lt; start, alphabet_size &gt;::parent</references>
+        <references refid="structstring__tools_1_1Trie_1add3a2c8ef2f3c49a0d027923cd83dce4" compoundref="dict__search_8hpp" startline="120">string_tools::Trie&lt; start, alphabet_size &gt;::suffix_link_cache</references>
+        <referencedby refid="structstring__tools_1_1Trie_1ab8f1d2a13b82d8dbaccc886df20f8371" compoundref="dict__search_8hpp" startline="86" endline="96">string_tools::Trie&lt; start, alphabet_size &gt;::exit_link</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::go</definition>
+        <argsstring>(const char c)</argsstring>
+        <name>go</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Goes to the node for the largest suffix of the current string plus c. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="72" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="72" bodyend="84"/>
+        <references refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</references>
+        <references refid="structstring__tools_1_1Trie_1ab189b614c6f5996aa334ecb1ecb961be" compoundref="dict__search_8hpp" startline="119">string_tools::Trie&lt; start, alphabet_size &gt;::go_cache</references>
+        <references refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</references>
+        <references refid="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" compoundref="dict__search_8hpp" startline="14" endline="14">string_tools::Trie&lt; start, alphabet_size &gt;::next</references>
+        <references refid="structstring__tools_1_1Trie_1a7962b53f5ad52f4df60dd7aafa376cf0" compoundref="dict__search_8hpp" startline="10">string_tools::Trie&lt; start, alphabet_size &gt;::parent</references>
+        <referencedby refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" compoundref="dict__search_8hpp" startline="72" endline="84">string_tools::Trie&lt; start, alphabet_size &gt;::go</referencedby>
+        <referencedby refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1ab8f1d2a13b82d8dbaccc886df20f8371" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstring__tools_1_1Trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* string_tools::Trie&lt; start, alphabet_size &gt;::exit_link</definition>
+        <argsstring>()</argsstring>
+        <name>exit_link</name>
+        <briefdescription>
+<para>Returns the exit link, the next leaf suffix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="86" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="86" bodyend="96"/>
+        <references refid="structstring__tools_1_1Trie_1a4a9753a6a7efc00d537c7c2d22747595" compoundref="dict__search_8hpp" startline="121">string_tools::Trie&lt; start, alphabet_size &gt;::exit_link_cache</references>
+        <references refid="structstring__tools_1_1Trie_1ad058f2470e8934ee58e8466071470445" compoundref="dict__search_8hpp" startline="6">string_tools::Trie&lt; start, alphabet_size &gt;::leaf</references>
+        <references refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" compoundref="dict__search_8hpp" startline="56" endline="70">string_tools::Trie&lt; start, alphabet_size &gt;::link</references>
+        <references refid="structstring__tools_1_1Trie_1a7962b53f5ad52f4df60dd7aafa376cf0" compoundref="dict__search_8hpp" startline="10">string_tools::Trie&lt; start, alphabet_size &gt;::parent</references>
+      </memberdef>
+      <memberdef kind="function" id="structstring__tools_1_1Trie_1a0bfc816d1bbcfa5a160a8f34400816d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto string_tools::Trie&lt; start, alphabet_size &gt;::search</definition>
+        <argsstring>(const string &amp;text)</argsstring>
+        <name>search</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the patterns in text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a vector of ((left, right), node) pairs for each match where [left, right) is the range of the match, and node is the node corresponding to the match. character of the match </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="102" column="6" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="102" bodyend="115"/>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" compoundref="utility_8hpp" startline="131" endline="131">utility::ssize</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>T</label>
+      </node>
+      <node id="5">
+        <label>std::array&lt; T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::array&lt; string_tools::Trie *, 26 &gt;</label>
+        <childnode refid="1" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; string_tools::Trie *, 26 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>string_tools::Trie&lt; start, alphabet_size &gt;</label>
+        <link refid="structstring__tools_1_1Trie"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>suffix_link_cache</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>exit_link_cache</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>str</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>go_cache</edgelabel>
+          <edgelabel>next_storage</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ram/OmniTemplate/src/string/dict_search.hpp" line="4" column="18" bodyfile="/home/ram/OmniTemplate/src/string/dict_search.hpp" bodystart="4" bodyend="122"/>
+    <listofallmembers>
+      <member refid="structstring__tools_1_1Trie_1aef06d67ed53a08634d0df64b6e9df1af" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>edge_char</name></member>
+      <member refid="structstring__tools_1_1Trie_1ab8f1d2a13b82d8dbaccc886df20f8371" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>exit_link</name></member>
+      <member refid="structstring__tools_1_1Trie_1a4a9753a6a7efc00d537c7c2d22747595" prot="private" virt="non-virtual"><scope>string_tools::Trie</scope><name>exit_link_cache</name></member>
+      <member refid="structstring__tools_1_1Trie_1ac02e556e3dfd0c6608ffde23cee5a9dc" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>find_leaf</name></member>
+      <member refid="structstring__tools_1_1Trie_1a219e9e60d7843d09a2e4d2ee54b733ee" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>find_node</name></member>
+      <member refid="structstring__tools_1_1Trie_1aa30d5277840d084371dcb2193168b4a0" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>go</name></member>
+      <member refid="structstring__tools_1_1Trie_1ab189b614c6f5996aa334ecb1ecb961be" prot="private" virt="non-virtual"><scope>string_tools::Trie</scope><name>go_cache</name></member>
+      <member refid="structstring__tools_1_1Trie_1a9fe6156d37bd26e9fd4d8e9b5a6e21c4" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>insert</name></member>
+      <member refid="structstring__tools_1_1Trie_1ad058f2470e8934ee58e8466071470445" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>leaf</name></member>
+      <member refid="structstring__tools_1_1Trie_1ad0189e6ff15f4d305addadb7e011b80b" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>link</name></member>
+      <member refid="structstring__tools_1_1Trie_1ad3ba1336804cc5520df5c870e806e26b" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>next</name></member>
+      <member refid="structstring__tools_1_1Trie_1a58174618b92907ee56eb2914625b7959" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>next</name></member>
+      <member refid="structstring__tools_1_1Trie_1a819249dc8ec7d31d7666f3c6a9b85e3c" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>next_default</name></member>
+      <member refid="structstring__tools_1_1Trie_1afe826d471a843b31caa9c69d79e675ee" prot="private" virt="non-virtual"><scope>string_tools::Trie</scope><name>next_storage</name></member>
+      <member refid="structstring__tools_1_1Trie_1a7962b53f5ad52f4df60dd7aafa376cf0" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>parent</name></member>
+      <member refid="structstring__tools_1_1Trie_1a0bfc816d1bbcfa5a160a8f34400816d4" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>search</name></member>
+      <member refid="structstring__tools_1_1Trie_1a3a4a07a6e9479d4a03f558a514be4664" prot="public" virt="non-virtual"><scope>string_tools::Trie</scope><name>str</name></member>
+      <member refid="structstring__tools_1_1Trie_1add3a2c8ef2f3c49a0d027923cd83dce4" prot="private" virt="non-virtual"><scope>string_tools::Trie</scope><name>suffix_link_cache</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

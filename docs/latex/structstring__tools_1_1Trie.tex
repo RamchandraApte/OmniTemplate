@@ -1,0 +1,320 @@
+\hypertarget{structstring__tools_1_1Trie}{}\doxysection{string\+\_\+tools\+::Trie$<$ start, alphabet\+\_\+size $>$ Struct Template Reference}
+\label{structstring__tools_1_1Trie}\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+
+
+{\ttfamily \#include $<$dict\+\_\+search.\+hpp$>$}
+
+
+
+Collaboration diagram for string\+\_\+tools\+::Trie$<$ start, alphabet\+\_\+size $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$\& \mbox{\hyperlink{structstring__tools_1_1Trie_ad3ba1336804cc5520df5c870e806e26b}{next}} (const char c)
+\begin{DoxyCompactList}\small\item\em Returns the child corresponding to the character c. \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{structstring__tools_1_1Trie_a58174618b92907ee56eb2914625b7959}{next}} (const char c) const
+\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_a819249dc8ec7d31d7666f3c6a9b85e3c}{next\+\_\+default}} (const char c)
+\begin{DoxyCompactList}\small\item\em Returns the child corresponding to the character c. A new child is created if no such child exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structstring__tools_1_1Trie_a9fe6156d37bd26e9fd4d8e9b5a6e21c4}{insert}} (const string \&\mbox{\hyperlink{structstring__tools_1_1Trie_a3a4a07a6e9479d4a03f558a514be4664}{str}})
+\begin{DoxyCompactList}\small\item\em inserts str into the trie \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_ac02e556e3dfd0c6608ffde23cee5a9dc}{find\+\_\+leaf}} (const string \&\mbox{\hyperlink{structstring__tools_1_1Trie_a3a4a07a6e9479d4a03f558a514be4664}{str}})
+\begin{DoxyCompactList}\small\item\em Return the leaf node for str, or nullptr if none exists. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_a219e9e60d7843d09a2e4d2ee54b733ee}{find\+\_\+node}} (const string \&\mbox{\hyperlink{structstring__tools_1_1Trie_a3a4a07a6e9479d4a03f558a514be4664}{str}})
+\begin{DoxyCompactList}\small\item\em Returns node corresponding to str (including non-\/leaf nodes), otherwise nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_ad0189e6ff15f4d305addadb7e011b80b}{link}} ()
+\begin{DoxyCompactList}\small\item\em returns the suffix link \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_aa30d5277840d084371dcb2193168b4a0}{go}} (const char c)
+\begin{DoxyCompactList}\small\item\em Goes to the node for the largest suffix of the current string plus c. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_ab8f1d2a13b82d8dbaccc886df20f8371}{exit\+\_\+link}} ()
+\begin{DoxyCompactList}\small\item\em Returns the exit link, the next leaf suffix. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{structstring__tools_1_1Trie_a0bfc816d1bbcfa5a160a8f34400816d4}{search}} (const string \&text)
+\begin{DoxyCompactList}\small\item\em Searches for the patterns in text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structstring__tools_1_1Trie_ad058f2470e8934ee58e8466071470445}{leaf}} \{\}
+\item 
+string \mbox{\hyperlink{structstring__tools_1_1Trie_a3a4a07a6e9479d4a03f558a514be4664}{str}}
+\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_a7962b53f5ad52f4df60dd7aafa376cf0}{parent}} \{\}
+\item 
+char \mbox{\hyperlink{structstring__tools_1_1Trie_aef06d67ed53a08634d0df64b6e9df1af}{edge\+\_\+char}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+array$<$ \mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$, alphabet\+\_\+size $>$ \mbox{\hyperlink{structstring__tools_1_1Trie_afe826d471a843b31caa9c69d79e675ee}{next\+\_\+storage}} \{\}
+\item 
+array$<$ \mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$, alphabet\+\_\+size $>$ \mbox{\hyperlink{structstring__tools_1_1Trie_ab189b614c6f5996aa334ecb1ecb961be}{go\+\_\+cache}} \{\}
+\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_add3a2c8ef2f3c49a0d027923cd83dce4}{suffix\+\_\+link\+\_\+cache}} \{\}
+\item 
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie_a4a9753a6a7efc00d537c7c2d22747595}{exit\+\_\+link\+\_\+cache}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_ab8f1d2a13b82d8dbaccc886df20f8371}\label{structstring__tools_1_1Trie_ab8f1d2a13b82d8dbaccc886df20f8371}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!exit\_link@{exit\_link}}
+\index{exit\_link@{exit\_link}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{exit\_link()}{exit\_link()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::exit\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the exit link, the next leaf suffix. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie_ab8f1d2a13b82d8dbaccc886df20f8371_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_ac02e556e3dfd0c6608ffde23cee5a9dc}\label{structstring__tools_1_1Trie_ac02e556e3dfd0c6608ffde23cee5a9dc}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!find\_leaf@{find\_leaf}}
+\index{find\_leaf@{find\_leaf}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{find\_leaf()}{find\_leaf()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::find\+\_\+leaf (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the leaf node for str, or nullptr if none exists. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie_ac02e556e3dfd0c6608ffde23cee5a9dc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_a219e9e60d7843d09a2e4d2ee54b733ee}\label{structstring__tools_1_1Trie_a219e9e60d7843d09a2e4d2ee54b733ee}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!find\_node@{find\_node}}
+\index{find\_node@{find\_node}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{find\_node()}{find\_node()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::find\+\_\+node (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns node corresponding to str (including non-\/leaf nodes), otherwise nullptr. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structstring__tools_1_1Trie_a219e9e60d7843d09a2e4d2ee54b733ee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structstring__tools_1_1Trie_a219e9e60d7843d09a2e4d2ee54b733ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_aa30d5277840d084371dcb2193168b4a0}\label{structstring__tools_1_1Trie_aa30d5277840d084371dcb2193168b4a0}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!go@{go}}
+\index{go@{go}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{go()}{go()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::go (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Goes to the node for the largest suffix of the current string plus c. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie_aa30d5277840d084371dcb2193168b4a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie_aa30d5277840d084371dcb2193168b4a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_a9fe6156d37bd26e9fd4d8e9b5a6e21c4}\label{structstring__tools_1_1Trie_a9fe6156d37bd26e9fd4d8e9b5a6e21c4}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!insert@{insert}}
+\index{insert@{insert}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+void \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::insert (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+inserts str into the trie 
+
+\mbox{\Hypertarget{structstring__tools_1_1Trie_ad0189e6ff15f4d305addadb7e011b80b}\label{structstring__tools_1_1Trie_ad0189e6ff15f4d305addadb7e011b80b}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!link@{link}}
+\index{link@{link}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{link()}{link()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the suffix link 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie_ad0189e6ff15f4d305addadb7e011b80b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{structstring__tools_1_1Trie_ad0189e6ff15f4d305addadb7e011b80b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_ad3ba1336804cc5520df5c870e806e26b}\label{structstring__tools_1_1Trie_ad3ba1336804cc5520df5c870e806e26b}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!next@{next}}
+\index{next@{next}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$\& \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::next (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the child corresponding to the character c. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structstring__tools_1_1Trie_ad3ba1336804cc5520df5c870e806e26b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_a58174618b92907ee56eb2914625b7959}\label{structstring__tools_1_1Trie_a58174618b92907ee56eb2914625b7959}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!next@{next}}
+\index{next@{next}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+auto\& \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::next (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structstring__tools_1_1Trie_a58174618b92907ee56eb2914625b7959_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_a819249dc8ec7d31d7666f3c6a9b85e3c}\label{structstring__tools_1_1Trie_a819249dc8ec7d31d7666f3c6a9b85e3c}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!next\_default@{next\_default}}
+\index{next\_default@{next\_default}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{next\_default()}{next\_default()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::next\+\_\+default (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the child corresponding to the character c. A new child is created if no such child exists. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structstring__tools_1_1Trie_a819249dc8ec7d31d7666f3c6a9b85e3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_a0bfc816d1bbcfa5a160a8f34400816d4}\label{structstring__tools_1_1Trie_a0bfc816d1bbcfa5a160a8f34400816d4}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!search@{search}}
+\index{search@{search}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+auto \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::search (\begin{DoxyParamCaption}\item[{const string \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for the patterns in text. 
+
+\begin{DoxyReturn}{Returns}
+a vector of ((left, right), node) pairs for each match where \mbox{[}left, right) is the range of the match, and node is the node corresponding to the match. character of the match 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{structstring__tools_1_1Trie_a0bfc816d1bbcfa5a160a8f34400816d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structstring__tools_1_1Trie_aef06d67ed53a08634d0df64b6e9df1af}\label{structstring__tools_1_1Trie_aef06d67ed53a08634d0df64b6e9df1af}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!edge\_char@{edge\_char}}
+\index{edge\_char@{edge\_char}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{edge\_char}{edge\_char}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+char \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::edge\+\_\+char \{\}}
+
+Character for the edge to the parent \mbox{\Hypertarget{structstring__tools_1_1Trie_a4a9753a6a7efc00d537c7c2d22747595}\label{structstring__tools_1_1Trie_a4a9753a6a7efc00d537c7c2d22747595}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!exit\_link\_cache@{exit\_link\_cache}}
+\index{exit\_link\_cache@{exit\_link\_cache}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{exit\_link\_cache}{exit\_link\_cache}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::exit\+\_\+link\+\_\+cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1Trie_ab189b614c6f5996aa334ecb1ecb961be}\label{structstring__tools_1_1Trie_ab189b614c6f5996aa334ecb1ecb961be}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!go\_cache@{go\_cache}}
+\index{go\_cache@{go\_cache}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{go\_cache}{go\_cache}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+array$<$\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$, alphabet\+\_\+size$>$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::go\+\_\+cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1Trie_ad058f2470e8934ee58e8466071470445}\label{structstring__tools_1_1Trie_ad058f2470e8934ee58e8466071470445}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!leaf@{leaf}}
+\index{leaf@{leaf}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{leaf}{leaf}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+bool \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::leaf \{\}}
+
+Whether this node is a leaf node \mbox{\Hypertarget{structstring__tools_1_1Trie_afe826d471a843b31caa9c69d79e675ee}\label{structstring__tools_1_1Trie_afe826d471a843b31caa9c69d79e675ee}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!next\_storage@{next\_storage}}
+\index{next\_storage@{next\_storage}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{next\_storage}{next\_storage}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+array$<$\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}} $\ast$, alphabet\+\_\+size$>$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::next\+\_\+storage \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structstring__tools_1_1Trie_a7962b53f5ad52f4df60dd7aafa376cf0}\label{structstring__tools_1_1Trie_a7962b53f5ad52f4df60dd7aafa376cf0}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!parent@{parent}}
+\index{parent@{parent}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::parent \{\}}
+
+Parent of this node \mbox{\Hypertarget{structstring__tools_1_1Trie_a3a4a07a6e9479d4a03f558a514be4664}\label{structstring__tools_1_1Trie_a3a4a07a6e9479d4a03f558a514be4664}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!str@{str}}
+\index{str@{str}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+string \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::str}
+
+The string for this leaf node \mbox{\Hypertarget{structstring__tools_1_1Trie_add3a2c8ef2f3c49a0d027923cd83dce4}\label{structstring__tools_1_1Trie_add3a2c8ef2f3c49a0d027923cd83dce4}} 
+\index{string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}!suffix\_link\_cache@{suffix\_link\_cache}}
+\index{suffix\_link\_cache@{suffix\_link\_cache}!string\_tools::Trie$<$ start, alphabet\_size $>$@{string\_tools::Trie$<$ start, alphabet\_size $>$}}
+\doxysubsubsection{\texorpdfstring{suffix\_link\_cache}{suffix\_link\_cache}}
+{\footnotesize\ttfamily template$<$ll start = \textquotesingle{}a\textquotesingle{}, ll alphabet\+\_\+size = 26$>$ \\
+\mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}$\ast$ \mbox{\hyperlink{structstring__tools_1_1Trie}{string\+\_\+tools\+::\+Trie}}$<$ start, alphabet\+\_\+size $>$\+::suffix\+\_\+link\+\_\+cache \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ram/\+Omni\+Template/src/string/\mbox{\hyperlink{dict__search_8hpp}{dict\+\_\+search.\+hpp}}\end{DoxyCompactItemize}
