@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('operations_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">operations.hpp</div>  </div>
@@ -158,50 +184,58 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    advance(it, n);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> it;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define FUNCTOR(func)                                                                              \</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="operations_8hpp.html#aef20301df3ed18a53843fb3a5b69bd5b">   91</a></span>&#160;<span class="preprocessor">    struct {                                                                                   \</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">        template &lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp;... args) const {         \</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#define FUNCTOR(name, func)                                                                        \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a39eacc49492732c9298320c8a78b50ad">   91</a></span>&#160;<span class="preprocessor">    struct name {                                                                              \</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">        template &lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp;...args) const {          \</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">            return (func)(forward&lt;decltype(args)&gt;(args)...);                           \</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">        }                                                                                  \</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">    }</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a8ca39513ee57e00e1d6eecf32fd87035">   96</a></span>&#160;<span class="keyword">using</span> <a class="code" href="operations_8hpp.html#a8ca39513ee57e00e1d6eecf32fd87035">Max</a> = <a class="code" href="operations_8hpp.html#aef20301df3ed18a53843fb3a5b69bd5b">FUNCTOR</a>(max);</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a6e5336c573515260e7a624f1f72924a1">   97</a></span>&#160;<span class="keyword">using</span> <a class="code" href="operations_8hpp.html#a6e5336c573515260e7a624f1f72924a1">Min</a> = <a class="code" href="operations_8hpp.html#aef20301df3ed18a53843fb3a5b69bd5b">FUNCTOR</a>(min);</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">   98</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">identity</a>(plus&lt;&gt;, <a class="code" href="structll.html">ll</a>) { <span class="keywordflow">return</span> 0; }</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="operations_8hpp.html#acc5a0ae67ef6a3bd347c85cab4a15313">   99</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">identity</a>(multiplies&lt;&gt;, <a class="code" href="structll.html">ll</a>) { <span class="keywordflow">return</span> 1; }</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a19000e539a20acfdcd7e8fdce1d970f4">  100</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">identity</a>(<a class="code" href="operations_8hpp.html#a8ca39513ee57e00e1d6eecf32fd87035">Max</a>, <a class="code" href="structll.html">ll</a>) { <span class="keywordflow">return</span> -<a class="code" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>; }</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="operations_8hpp.html#aa9ba94adf14b5b5566e3a750fa5255b3">  101</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">identity</a>(<a class="code" href="operations_8hpp.html#a6e5336c573515260e7a624f1f72924a1">Min</a>, <a class="code" href="structll.html">ll</a>) { <span class="keywordflow">return</span> <a class="code" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>; }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// TODO convert all macros to UPPER_CASE</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//} // namespace operations</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">// using namespace operations;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structMax.html#ac790aaf2e5309bbf7d80ffc9c26f1701">   96</a></span>&#160;<a class="code" href="operations_8hpp.html#a39eacc49492732c9298320c8a78b50ad">FUNCTOR</a>(<a class="code" href="structMax.html">Max</a>, max);</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structMin.html#a346d8e06fb28fa01f7bf83331c34b242">   97</a></span>&#160;<a class="code" href="operations_8hpp.html#a39eacc49492732c9298320c8a78b50ad">FUNCTOR</a>(<a class="code" href="structMin.html">Min</a>, min);</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">   98</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = enable_if_t&lt;is_arithmetic_v&lt;T&gt;&gt;&gt; T <a class="code" href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">identity</a>(plus&lt;&gt;, T) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a882b3269af17d13f1e1a394e7913fdc5">  101</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> = enable_if_t&lt;is_arithmetic_v&lt;T&gt;&gt;&gt; T <a class="code" href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">identity</a>(multiplies&lt;&gt;, T) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="operations_8hpp.html#a19000e539a20acfdcd7e8fdce1d970f4">  104</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">identity</a>(<a class="code" href="structMax.html">Max</a>, <a class="code" href="structll.html">ll</a>) { <span class="keywordflow">return</span> -<a class="code" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>; }</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="operations_8hpp.html#aa9ba94adf14b5b5566e3a750fa5255b3">  105</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">identity</a>(<a class="code" href="structMin.html">Min</a>, <a class="code" href="structll.html">ll</a>) { <span class="keywordflow">return</span> <a class="code" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// TODO convert all macros to UPPER_CASE</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">//} // namespace operations</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// using namespace operations;</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="aoperations_8hpp_html_ae9e59a2d15287021fd21d14d2eb206c4"><div class="ttname"><a href="operations_8hpp.html#ae9e59a2d15287021fd21d14d2eb206c4">operator/</a></div><div class="ttdeci">Group operator/(Group const &amp;a, Group const &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:15</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a9e98ecb7739ca6a5c0069a9a26d2a731"><div class="ttname"><a href="operations_8hpp.html#a9e98ecb7739ca6a5c0069a9a26d2a731">operator&amp;</a></div><div class="ttdeci">auto operator&amp;(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:46</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a17c44ba56ddae051a9fdf806cab4bb7b"><div class="ttname"><a href="operations_8hpp.html#a17c44ba56ddae051a9fdf806cab4bb7b">sub_set</a></div><div class="ttdeci">auto sub_set(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b, unordered_set&lt; T &gt; &amp;ret)</div><div class="ttdef"><b>Definition:</b> operations.hpp:57</div></div>
-<div class="ttc" id="aoperations_8hpp_html_a09af32a8d21cf0ca5017ce40502a2a09"><div class="ttname"><a href="operations_8hpp.html#a09af32a8d21cf0ca5017ce40502a2a09">identity</a></div><div class="ttdeci">ll identity(plus&lt;&gt;, ll)</div><div class="ttdef"><b>Definition:</b> operations.hpp:98</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a278d4d0450b96c1926a34fe49f29d602"><div class="ttname"><a href="operations_8hpp.html#a278d4d0450b96c1926a34fe49f29d602">operator^</a></div><div class="ttdeci">auto operator^(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:69</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a8acbbd6e305005c27020dfb9bbe27d5a"><div class="ttname"><a href="operations_8hpp.html#a8acbbd6e305005c27020dfb9bbe27d5a">operator|</a></div><div class="ttdeci">auto operator|(unordered_set&lt; T &gt; const &amp;a, unordered_set&lt; T &gt; const &amp;b)</div><div class="ttdoc">Returns union of sets a and b.</div><div class="ttdef"><b>Definition:</b> operations.hpp:40</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:38</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:95</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:57</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:114</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a239c272472acf3f9ce7f2e44f0895160"><div class="ttname"><a href="operations_8hpp.html#a239c272472acf3f9ce7f2e44f0895160">operator+</a></div><div class="ttdeci">unordered_map&lt; ll, ll &gt; operator+(unordered_map&lt; ll, ll &gt; a, unordered_map&lt; ll, ll &gt; const &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:27</div></div>
-<div class="ttc" id="aoperations_8hpp_html_aef20301df3ed18a53843fb3a5b69bd5b"><div class="ttname"><a href="operations_8hpp.html#aef20301df3ed18a53843fb3a5b69bd5b">FUNCTOR</a></div><div class="ttdeci">#define FUNCTOR(func)</div><div class="ttdoc">Expands to a functor type that calls func.</div><div class="ttdef"><b>Definition:</b> operations.hpp:90</div></div>
+<div class="ttc" id="aoperations_8hpp_html_a0fea197d8d19ab6ebe48c69665bbff99"><div class="ttname"><a href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">identity</a></div><div class="ttdeci">T identity(plus&lt;&gt;, T)</div><div class="ttdef"><b>Definition:</b> operations.hpp:98</div></div>
 <div class="ttc" id="aoperations_8hpp_html_ae3edbf9ffcbf3c8b40d15f6666442cef"><div class="ttname"><a href="operations_8hpp.html#ae3edbf9ffcbf3c8b40d15f6666442cef">operator&gt;=</a></div><div class="ttdeci">auto operator&gt;=(const T1 &amp;a, const T2 &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:25</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a4cb6b7e98aadd3fa7ffc759c5e14596d"><div class="ttname"><a href="operations_8hpp.html#a4cb6b7e98aadd3fa7ffc759c5e14596d">invert</a></div><div class="ttdeci">enable_if_t&lt; is_floating_point_v&lt; T &gt;, T &gt; invert(multiplies&lt;&gt;, const T &amp;x)</div><div class="ttdef"><b>Definition:</b> operations.hpp:12</div></div>
 <div class="ttc" id="arange_8hpp_html"><div class="ttname"><a href="range_8hpp.html">range.hpp</a></div></div>
-<div class="ttc" id="aoperations_8hpp_html_a8ca39513ee57e00e1d6eecf32fd87035"><div class="ttname"><a href="operations_8hpp.html#a8ca39513ee57e00e1d6eecf32fd87035">Max</a></div><div class="ttdeci">struct { template&lt; typename... Ts &gt; decltype(auto) operator()(Ts &amp;&amp;... args) const { return(max)(forward&lt; decltype(args)&gt;(args)...) Max</div><div class="ttdef"><b>Definition:</b> operations.hpp:96</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a7fcf9006b0b6d5ce6b426ac6dea3b567"><div class="ttname"><a href="operations_8hpp.html#a7fcf9006b0b6d5ce6b426ac6dea3b567">operator*</a></div><div class="ttdeci">auto operator*(vector&lt; T &gt; a, vector&lt; T &gt; b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:74</div></div>
+<div class="ttc" id="astructMin_html"><div class="ttname"><a href="structMin.html">Min</a></div><div class="ttdef"><b>Definition:</b> operations.hpp:97</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a1297749985d820e08c6c88a285dc80eb"><div class="ttname"><a href="operations_8hpp.html#a1297749985d820e08c6c88a285dc80eb">operator&lt;=</a></div><div class="ttdeci">auto operator&lt;=(const T1 &amp;a, const T2 &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:24</div></div>
-<div class="ttc" id="aoperations_8hpp_html_a6e5336c573515260e7a624f1f72924a1"><div class="ttname"><a href="operations_8hpp.html#a6e5336c573515260e7a624f1f72924a1">Min</a></div><div class="ttdeci">struct { template&lt; typename... Ts &gt; decltype(auto) operator()(Ts &amp;&amp;... args) const { return(min)(forward&lt; decltype(args)&gt;(args)...) Min</div><div class="ttdef"><b>Definition:</b> operations.hpp:97</div></div>
 <div class="ttc" id="aoperations_8hpp_html_ad8f1353b1f5665443a78d860006e9920"><div class="ttname"><a href="operations_8hpp.html#ad8f1353b1f5665443a78d860006e9920">operator&gt;</a></div><div class="ttdeci">auto operator&gt;(const T1 &amp;a, const T2 &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:26</div></div>
 <div class="ttc" id="aoperations_8hpp_html_ab6822e2f5527212c7db6dd31be7f3ba6"><div class="ttname"><a href="operations_8hpp.html#ab6822e2f5527212c7db6dd31be7f3ba6">operator-</a></div><div class="ttdeci">constexpr auto operator-(const T1 &amp;a, const T2 &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:18</div></div>
+<div class="ttc" id="astructMax_html"><div class="ttname"><a href="structMax.html">Max</a></div><div class="ttdef"><b>Definition:</b> operations.hpp:96</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a2e3fb564092d70d9bee87555035d8711"><div class="ttname"><a href="operations_8hpp.html#a2e3fb564092d70d9bee87555035d8711">aug</a></div><div class="ttdeci">#define aug(op)</div><div class="ttdef"><b>Definition:</b> operations.hpp:4</div></div>
+<div class="ttc" id="aoperations_8hpp_html_a39eacc49492732c9298320c8a78b50ad"><div class="ttname"><a href="operations_8hpp.html#a39eacc49492732c9298320c8a78b50ad">FUNCTOR</a></div><div class="ttdeci">#define FUNCTOR(name, func)</div><div class="ttdoc">Expands to a functor type that calls func.</div><div class="ttdef"><b>Definition:</b> operations.hpp:90</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <div class="ttc" id="aoperations_8hpp_html_a98ed0803268ba29fcc8977206b177923"><div class="ttname"><a href="operations_8hpp.html#a98ed0803268ba29fcc8977206b177923">operator!=</a></div><div class="ttdeci">constexpr auto operator!=(const T1 &amp;a, const T2 &amp;b)</div><div class="ttdef"><b>Definition:</b> operations.hpp:21</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="operations_8hpp.html">operations.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,26 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structMin" kind="struct" language="C++" prot="public">
     <compoundname>Min</compoundname>
     <includes refid="operations_8hpp" local="no">operations.hpp</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="structMin_1ad62e831f067eda6b8cb817f0c5893f8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structMin_1a346d8e06fb28fa01f7bf83331c34b242" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>typename T</type>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
           </param>
         </templateparamlist>
-        <type>auto</type>
-        <definition>auto Min::operator()</definition>
-        <argsstring>(T a, T b) const</argsstring>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) Min::operator()</definition>
+        <argsstring>(Ts &amp;&amp;...args) const</argsstring>
         <name>operator()</name>
         <param>
-          <type>T</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>T</type>
-          <declname>b</declname>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -28,17 +26,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="109" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="109" bodyend="109"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="97" column="31" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="97" bodyend="97"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="108" column="10" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="108" bodyend="110"/>
+    <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="97" column="1" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="97" bodyend="97"/>
     <listofallmembers>
-      <member refid="structMin_1ad62e831f067eda6b8cb817f0c5893f8b" prot="public" virt="non-virtual"><scope>Min</scope><name>operator()</name></member>
+      <member refid="structMin_1a346d8e06fb28fa01f7bf83331c34b242" prot="public" virt="non-virtual"><scope>Min</scope><name>operator()</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -4,6 +4,7 @@
     <compoundname>utility</compoundname>
     <innerclass refid="structutility_1_1ar" prot="public">utility::ar</innerclass>
     <innerclass refid="structutility_1_1ar_3_01T_0fn_0e_4" prot="public">utility::ar&lt; T[n]&gt;</innerclass>
+    <innerclass refid="classutility_1_1chained__compare" prot="public">utility::chained_compare</innerclass>
     <innerclass refid="structutility_1_1Empty" prot="public">utility::Empty</innerclass>
     <innerclass refid="structutility_1_1fix" prot="public">utility::fix</innerclass>
     <innerclass refid="structutility_1_1random__device__patch" prot="public">utility::random_device_patch</innerclass>
@@ -28,9 +29,9 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="135" column="13" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="135" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespaceutility_1afaacd9ae54757a29e4d3e5381d8cfcdf" prot="public" static="no">
+      <memberdef kind="typedef" id="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" prot="public" static="no">
         <type><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref></type>
-        <definition>typedef random_device_patch utility::random_device</definition>
+        <definition>using utility::random_device = typedef random_device_patch</definition>
         <argsstring></argsstring>
         <name>random_device</name>
         <briefdescription>
@@ -48,7 +49,7 @@
         <definition>default_random_engine utility::reng</definition>
         <argsstring></argsstring>
         <name>reng</name>
-        <initializer>{<ref refid="namespaceutility_1afaacd9ae54757a29e4d3e5381d8cfcdf" kindref="member">random_device</ref>{}()}</initializer>
+        <initializer>{<ref refid="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" kindref="member">random_device</ref>{}()}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -57,7 +58,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="147" column="23" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="147" bodyend="-1"/>
         <referencedby refid="test__biconnected_8hpp_1a07c975aa9b96f7bdb70155ae0c3acd17" compoundref="test__biconnected_8hpp" startline="23" endline="112">test_biconnected</referencedby>
-        <referencedby refid="namespaceflow_1_1test_1a32a94ae42f633485db361cf67447df2f" compoundref="test__flow_8hpp" startline="30" endline="43">flow::test::random_flow</referencedby>
+        <referencedby refid="namespaceflow_1_1test_1a66e8ca51e96f06ce0369f386cab9ac25" compoundref="test__flow_8hpp" startline="30" endline="43">flow::test::random_flow</referencedby>
         <referencedby refid="namespacestring__tools_1_1test_1aac2edb1d7263538c044fead501c02085" compoundref="test__suffix__array_8hpp" startline="9" endline="15">string_tools::test::random_str</referencedby>
       </memberdef>
       </sectiondef>
@@ -88,7 +89,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="25" column="19" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="25" bodyend="25"/>
         <referencedby refid="biconnected_8hpp_1a72476443ae31ddf840e52f4a47f79055" compoundref="biconnected_8hpp" startline="7" endline="53">biconnected</referencedby>
-        <referencedby refid="namespaceflow_1a019c8d89498d267345fd2f560909fa7a" compoundref="flow_8hpp" startline="14" endline="61">flow::edmond_karp</referencedby>
+        <referencedby refid="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" compoundref="flow_8hpp" startline="14" endline="61">flow::edmond_karp</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a80f7a687b4e8d135cde1ae1d6b169d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -112,7 +113,6 @@
 <para>Set x to the minimum of x and y. </para>
         </briefdescription>
         <detaileddescription>
-<para>Set x to the maximum of x and y.</para>
 <para>Set x to the maximum of x and y </para>
         </detaileddescription>
         <inbodydescription>
@@ -138,7 +138,6 @@
 <para>Set x to the minimum of x and y. </para>
         </briefdescription>
         <detaileddescription>
-<para>Cache calls to f using a map of type T.</para>
 <para>Cache calls to f using a map of type T </para>
         </detaileddescription>
         <inbodydescription>
@@ -284,7 +283,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="57" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="57" bodyend="71"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
       </memberdef>
       <memberdef kind="function" id="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -372,7 +371,7 @@
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="97" column="5" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="97" bodyend="104"/>
         <referencedby refid="namespaceutility_1_1test_1a7185c2baa5f4d2655e37174048fa6e1f" compoundref="test__utility_8hpp" startline="32" endline="45">utility::test::test_next_comb</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceutility_1a4c8a9d0142092c8f2255e518bfdf9dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -382,9 +381,9 @@
           </param>
         </templateparamlist>
         <type>void</type>
-        <definition>void utility::swap2</definition>
+        <definition>void utility::sort2</definition>
         <argsstring>(T &amp;a, T &amp;b, const Func &amp;func)</argsstring>
-        <name>swap2</name>
+        <name>sort2</name>
         <param>
           <type>T &amp;</type>
           <declname>a</declname>
@@ -444,7 +443,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="112" column="6" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="112" bodyend="130"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="38">al</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="57">al</references>
         <referencedby refid="namespacestring__tools_1af59e7388a466fccce148991db2eb61db" compoundref="suffix__array_8hpp" startline="6" endline="44">string_tools::suffix_array</referencedby>
         <referencedby refid="namespaceutility_1_1test_1aa1aed4e58acebcfd6d9150b64f4ad975" compoundref="test__utility_8hpp" startline="50" endline="59">utility::test::test_counting_sort</referencedby>
       </memberdef>
@@ -470,12 +469,116 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="131" column="16" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="131" bodyend="131"/>
         <references refid="range_8hpp_1a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" compoundref="range_8hpp" startline="66">cont</references>
-        <referencedby refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" compoundref="permutation_8hpp" startline="50" endline="50">permutation::identity</referencedby>
+        <referencedby refid="namespacepermutation_1a4c6e81c9c25d20631e5b1a63edeedb74" compoundref="permutation_8hpp" startline="52" endline="52">permutation::identity</referencedby>
         <referencedby refid="namespacebigint_1a1c313eef0ad422d61739b7e3cd97d849" compoundref="big__integer_8hpp" startline="26" endline="29">bigint::operator==</referencedby>
         <referencedby refid="structbigint_1_1BigInt_1a9b9c2c376d5f790991f541553de43bd0" compoundref="big__integer_8hpp" startline="10" endline="10">bigint::BigInt::operator[]</referencedby>
         <referencedby refid="classpermutation_1_1Permutation_1a0b7480d74a8c5d9db8da2151638b4048" compoundref="permutation_8hpp" startline="40" endline="48">permutation::Permutation::Permutation</referencedby>
         <referencedby refid="structstring__tools_1_1Trie_1a0bfc816d1bbcfa5a160a8f34400816d4" compoundref="dict__search_8hpp" startline="102" endline="115">string_tools::Trie&lt; start, alphabet_size &gt;::search</referencedby>
         <referencedby refid="classsparse__table_1_1SparseTable_1a625a4d7a54800fdde78057a1fcc670db" compoundref="sparse__table_8hpp" startline="9" endline="19">sparse_table::SparseTable&lt; T, Semilattice &gt;::SparseTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutility_1a416532ff53790338172141074151fd05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool utility::valid_idx</definition>
+        <argsstring>(const vector&lt; T &gt; &amp;vec, const size_t idx)</argsstring>
+        <name>valid_idx</name>
+        <param>
+          <type>const vector&lt; T &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Return whether idx is a valid index for vec. Note that if idx is negative this returns false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="163" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="163" bodyend="165"/>
+        <referencedby refid="namespaceutility_1_1test_1ad5fcf407d6e5ae3ca2f4e018b99a46ea" compoundref="test__utility_8hpp" startline="66" endline="71">utility::test::test_valid_idx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutility_1aed2adcc88a8abb68fe298905798fa8ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputIt</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::iterator_identity</definition>
+        <argsstring>()</argsstring>
+        <name>iterator_identity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="166" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="166" bodyend="168"/>
+        <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="39" endline="41">linear_algebra::identity</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutility_1a547ec88ecb50fe12150a8d293de2ce75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputIt</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) utility::accumulate</definition>
+        <argsstring>(InputIt a, InputIt b)</argsstring>
+        <name>accumulate</name>
+        <param>
+          <type>InputIt</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>InputIt</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="169" column="22" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="169" bodyend="171"/>
+        <referencedby refid="namespacecombinatorics_1a7c355be8fa586494f280768dc777dede" compoundref="combinatorics_8hpp" startline="5" endline="8">combinatorics::perm</referencedby>
+        <referencedby refid="namespaceutility_1_1test_1ab3119b39975103a9eb91adc193296f50" compoundref="test__utility_8hpp" startline="72" endline="77">utility::test::test_accumulate</referencedby>
+        <referencedby refid="namespacesparse__table_1_1test_1a274f88cabaff31f12dbb19ed28eb1bb7" compoundref="test__sparse__table_8hpp" startline="6" endline="16">sparse_table::test::test_sparse_table_impl</referencedby>
+        <referencedby refid="namespaceflow_1a6fb3adf4fcf060a6ce41b19c6c5ac5b1" compoundref="flow_8hpp" startline="159" endline="159">flow::total_flow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceutility_1a9503cf05b32620d818c2ff7e3c5cb20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputIt</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto utility::get_partial_sum</definition>
+        <argsstring>(InputIt a, InputIt b)</argsstring>
+        <name>get_partial_sum</name>
+        <param>
+          <type>InputIt</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>InputIt</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/utility.hpp" line="172" column="18" bodyfile="/home/ram/OmniTemplate/src/core/utility.hpp" bodystart="172" bodyend="176"/>
+        <referencedby refid="namespaceutility_1_1test_1ac7ae1797bce001e4a1d668c5da58d252" compoundref="test__utility_8hpp" startline="78" endline="81">utility::test::test_get_partial_sum</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

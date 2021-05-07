@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['_7esegmenttree_1070',['~SegmentTree',['../classsegment__tree_1_1SegmentTree.html#a9f3420768798bd5b372b6f6a079de487',1,'segment_tree::SegmentTree::~SegmentTree()'],['../classsegment__tree_1_1SegmentTree.html#a9f3420768798bd5b372b6f6a079de487',1,'segment_tree::SegmentTree::~SegmentTree()']]],
-  ['_7esplaytree_1071',['~SplayTree',['../structsplay__tree_1_1SplayTree.html#a04a5fff3d078c370872ba89bbc90b979',1,'splay_tree::SplayTree::~SplayTree()'],['../structsplay__tree_1_1SplayTree.html#a04a5fff3d078c370872ba89bbc90b979',1,'splay_tree::SplayTree::~SplayTree()']]],
-  ['_7etimer_1072',['~timer',['../structtime__tools_1_1timer.html#a9dec58724371809e1822c943cb94bfba',1,'time_tools::timer::~timer()'],['../structtime__tools_1_1timer.html#a9dec58724371809e1822c943cb94bfba',1,'time_tools::timer::~timer()']]],
-  ['_7ewith_1073',['~with',['../structutility_1_1with.html#a9bc4eb3d7206708b6a7ec8753a866f6a',1,'utility::with::~with()'],['../structutility_1_1with.html#a9bc4eb3d7206708b6a7ec8753a866f6a',1,'utility::with::~with()']]]
+  ['wedge_1098',['wedge',['../namespaceconvex__hull__trick.html#a4f9b285a0e38652eb9839ac60b39e34a',1,'wedge():&#160;cht.hpp'],['../namespaceconvex__hull__trick.html#a4f9b285a0e38652eb9839ac60b39e34a',1,'convex_hull_trick::wedge()']]],
+  ['with_1099',['with',['../structutility_1_1with.html#a20244f8d345341882e7ca37b49f2ca77',1,'utility::with']]]
 ];

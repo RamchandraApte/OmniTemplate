@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('bipartite_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">bipartite.hpp</div>  </div>
@@ -163,24 +189,28 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace graph_theory::bipartite</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacegraph__theory_1_1bipartite.html">graph_theory::bipartite</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="astructgraph__theory_1_1BFS_html"><div class="ttname"><a href="structgraph__theory_1_1BFS.html">graph_theory::BFS</a></div><div class="ttdoc">Breadth-first search.</div><div class="ttdef"><b>Definition:</b> core.hpp:150</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:38</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:57</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html_a49f9badd40714410a5ee8e010e73010a"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html#a49f9badd40714410a5ee8e010e73010a">graph_theory::bipartite::color2</a></div><div class="ttdeci">auto color2(const GraphAdj &amp;graph)</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:6</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html">graph_theory::bipartite</a></div><div class="ttdef"><b>Definition:</b> bipartite.hpp:4</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:95</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ab89b6ceb8bf54011eedd872b54361eca"><div class="ttname"><a href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a></div><div class="ttdeci">constexpr auto inf</div><div class="ttdef"><b>Definition:</b> all.hpp:114</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html_a4fb82505ab0cb90e7ddf16db6a87e366"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html#a4fb82505ab0cb90e7ddf16db6a87e366">graph_theory::bipartite::max_match</a></div><div class="ttdeci">auto max_match(const GraphAdj &amp;graph)</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:26</div></div>
 <div class="ttc" id="astructutility_1_1fix_html"><div class="ttname"><a href="structutility_1_1fix.html">utility::fix</a></div><div class="ttdoc">Helper for lambda recursive functions. The recursive function is passed to Func as the first argument...</div><div class="ttdef"><b>Definition:</b> utility.hpp:13</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="anamespacegraph__theory_1_1bipartite_html_ae739c99222c6a26403aa49b60cefe831"><div class="ttname"><a href="namespacegraph__theory_1_1bipartite.html#ae739c99222c6a26403aa49b60cefe831">graph_theory::bipartite::matching_size</a></div><div class="ttdeci">ll matching_size(const vector&lt; ll &gt; &amp;matching)</div><div class="ttdoc">Returns the size of the matching.</div><div class="ttdef"><b>Definition:</b> bipartite.hpp:88</div></div>
 <div class="ttc" id="astructgraph__theory_1_1GraphAdj_html"><div class="ttname"><a href="structgraph__theory_1_1GraphAdj.html">graph_theory::GraphAdj</a></div><div class="ttdef"><b>Definition:</b> core.hpp:7</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li><li class="navelem"><a class="el" href="bipartite_8hpp.html">bipartite.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

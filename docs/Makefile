@@ -124,6 +124,32 @@ test/fast:
 .PHONY : test/fast
 
 #=============================================================================
+# Target rules for targets named coverage
+
+# Build rule for target.
+coverage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 coverage
+.PHONY : coverage
+
+# fast build rule for target.
+coverage/fast:
+	$(MAKE) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+.PHONY : coverage/fast
+
+#=============================================================================
+# Target rules for targets named test_all
+
+# Build rule for target.
+test_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_all
+.PHONY : test_all
+
+# fast build rule for target.
+test_all/fast:
+	$(MAKE) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/build
+.PHONY : test_all/fast
+
+#=============================================================================
 # Target rules for targets named docs
 
 # Build rule for target.
@@ -135,6 +161,21 @@ docs: cmake_check_build_system
 docs/fast:
 	$(MAKE) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
 .PHONY : docs/fast
+
+# target to build an object file
+cmake_pch.hxx.gch:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
+
+# target to preprocess a source file
+cmake_pch.hxx.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/cmake_pch.hxx.i
+.PHONY : cmake_pch.hxx.i
+
+# target to generate assembly for a file
+cmake_pch.hxx.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/cmake_pch.hxx.s
+.PHONY : cmake_pch.hxx.s
 
 src/test/test.o: src/test/test.cpp.o
 
@@ -172,7 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... coverage"
+	@echo "... test_all"
 	@echo "... docs"
+	@echo "... cmake_pch.hxx.gch"
+	@echo "... cmake_pch.hxx.i"
+	@echo "... cmake_pch.hxx.s"
 	@echo "... src/test/test.o"
 	@echo "... src/test/test.i"
 	@echo "... src/test/test.s"

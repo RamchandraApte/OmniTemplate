@@ -1,247 +1,397 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>splay_tree::SplayTree::iterator struct | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
-  <link rel="icon" href="favicon-light.png" type="image/png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#cb4b16" />
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OmniTemplate: splay_tree::SplayTree&lt; T &gt;::iterator Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
-      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
-        </svg></a>
-        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
-        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
-      </div>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="3">
-            <li><a href="annotated.html">Classes</a></li>
-            <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <use href="#m-doc-search-icon-path" />
-            </svg></a></li>
-          </ol>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">OmniTemplate
+   </div>
+   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
         </div>
-      </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-</nav></header>
-<main><article>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <h1>
-          <span class="m-breadcrumb"><a href="namespacesplay__tree.html">splay_tree</a>::<wbr/></span><span class="m-breadcrumb"><a href="structsplay__tree_1_1SplayTree.html">SplayTree</a>::<wbr/></span>iterator <span class="m-thin">struct</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="splay__tree_8hpp.html">&lt;/home/ram/OmniTemplate/src/ds/splay_tree.hpp&gt;</a></div>
-        </h1>
-        <p>Splay tree node.</p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#base-classes">Base classes</a></li>
-                <li><a href="#pub-types">Public types</a></li>
-                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
-                <li><a href="#pub-methods">Public functions</a></li>
-                <li><a href="#pub-attribs">Public variables</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-<p>Splay tree iterator</p>
-        <section id="base-classes">
-          <h2><a href="#base-classes">Base classes</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              struct <a href="structit__base.html" class="m-doc">it_base&lt;T&gt;</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="pub-types">
-          <h2><a href="#pub-types">Public types</a></h2>
-          <dl class="m-doc">
-            <dt id="a69bb5a2446e8219c0eca5b6791272e23">
-              using <a href="#a69bb5a2446e8219c0eca5b6791272e23" class="m-doc-self">iterator_category</a> = bidirectional_iterator_tag
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#a69bb5a2446e8219c0eca5b6791272e23" class="m-doc">iterator_category</a> = bidirectional_iterator_tag
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="typeless-methods">
-          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
-          <dl class="m-doc">
-            <dt id="ab0ea6ed296b79fa203a92992006448ea">
-              <span class="m-doc-wrap-bumper"><a href="#ab0ea6ed296b79fa203a92992006448ea" class="m-doc-self">iterator</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* node_arg)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper"><a href="#ab0ea6ed296b79fa203a92992006448ea" class="m-doc">iterator</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* node_arg)</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="pub-methods">
-          <h2><a href="#pub-methods">Public functions</a></h2>
-          <dl class="m-doc">
-            <dt id="a1b2e58809547e4402b8a7ef16ed8253d">
-              <span class="m-doc-wrap-bumper">void <a href="#a1b2e58809547e4402b8a7ef16ed8253d" class="m-doc-self">operator--</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a87fdbf8660f782a32ee209ab7108c0e8">
-              <span class="m-doc-wrap-bumper">void <a href="#a87fdbf8660f782a32ee209ab7108c0e8" class="m-doc-self">operator++</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="afdc7a7403ba2e1b78fac2480a82e974f">
-              <span class="m-doc-wrap-bumper">auto <a href="#afdc7a7403ba2e1b78fac2480a82e974f" class="m-doc-self">operator*</a>(</span><span class="m-doc-wrap">) -&gt; const T&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ac7fc8c5b9cf35ae5b350631deda6b3c3">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac7fc8c5b9cf35ae5b350631deda6b3c3" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap">const <a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a> oth) const -&gt; bool</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a1b2e58809547e4402b8a7ef16ed8253d" class="m-doc">operator--</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a87fdbf8660f782a32ee209ab7108c0e8" class="m-doc">operator++</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#afdc7a7403ba2e1b78fac2480a82e974f" class="m-doc">operator*</a>(</span><span class="m-doc-wrap">) -&gt; const T&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#ac7fc8c5b9cf35ae5b350631deda6b3c3" class="m-doc">operator==</a>(</span><span class="m-doc-wrap">const <a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a> oth) const -&gt; bool</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="pub-attribs">
-          <h2><a href="#pub-attribs">Public variables</a></h2>
-          <dl class="m-doc">
-            <dt id="ad3b5ad84c1a0138db075e2c61eb83144">
-              <a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* <a href="#ad3b5ad84c1a0138db075e2c61eb83144" class="m-doc-self">node</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section>
-          <h2>Typedef documentation</h2>
-          <section class="m-doc-details" id="a69bb5a2446e8219c0eca5b6791272e23"><div>
-            <h3>
-              using splay_tree::<wbr />SplayTree::<wbr />iterator::<wbr /><a href="#a69bb5a2446e8219c0eca5b6791272e23" class="m-doc-self">iterator_category</a> = bidirectional_iterator_tag
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-        <section>
-          <h2>Function documentation</h2>
-          <section class="m-doc-details" id="ab0ea6ed296b79fa203a92992006448ea"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"> splay_tree::<wbr />SplayTree::<wbr />iterator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab0ea6ed296b79fa203a92992006448ea" class="m-doc-self">iterator</a>(</span><span class="m-doc-wrap"><a href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4" class="m-doc">Node</a>* node_arg)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a1b2e58809547e4402b8a7ef16ed8253d"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">void splay_tree::<wbr />SplayTree::<wbr />iterator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1b2e58809547e4402b8a7ef16ed8253d" class="m-doc-self">operator--</a>(</span><span class="m-doc-wrap">)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a87fdbf8660f782a32ee209ab7108c0e8"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">void splay_tree::<wbr />SplayTree::<wbr />iterator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a87fdbf8660f782a32ee209ab7108c0e8" class="m-doc-self">operator++</a>(</span><span class="m-doc-wrap">)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="afdc7a7403ba2e1b78fac2480a82e974f"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">const T&amp; splay_tree::<wbr />SplayTree::<wbr />iterator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afdc7a7403ba2e1b78fac2480a82e974f" class="m-doc-self">operator*</a>(</span><span class="m-doc-wrap">)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="ac7fc8c5b9cf35ae5b350631deda6b3c3"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">bool splay_tree::<wbr />SplayTree::<wbr />iterator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac7fc8c5b9cf35ae5b350631deda6b3c3" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap">const <a href="structsplay__tree_1_1SplayTree_1_1iterator.html" class="m-doc">iterator</a> oth) const</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-      </div>
-    </div>
-  </div>
-</article></main>
-<div class="m-doc-search" id="search">
-  <a href="#!" onclick="return hideSearch()"></a>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-m-8 m-push-m-2">
-        <div class="m-doc-search-header m-text m-small">
-          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
-          <div id="search-symbolcount">&hellip;</div>
-        </div>
-        <div class="m-doc-search-content">
-          <form>
-            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
-          </form>
-          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
-          <div id="search-help" class="m-text m-dim m-text-center">
-            <p class="m-noindent">Search for symbols, directories, files, pages or
-            modules. You can omit any prefix from the symbol or file path; adding a
-            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
-            directory.</p>
-            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
-            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
-            <span class="m-label m-dim">Enter</span> to go.
-            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
-            copy a link to the result using <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
-          </div>
-          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
-          <ul id="search-results"></ul>
-        </div>
-      </div>
-    </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script src="searchdata-v1.js" async="async"></script>
-<footer><nav>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
-      </div>
-    </div>
-  </div>
-</nav></footer>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structsplay__tree_1_1SplayTree_1_1iterator.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="structsplay__tree_1_1SplayTree_1_1iterator-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">splay_tree::SplayTree&lt; T &gt;::iterator Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Splay tree node.  
+ <a href="structsplay__tree_1_1SplayTree_1_1iterator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="splay__tree_8hpp_source.html">splay_tree.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for splay_tree::SplayTree&lt; T &gt;::iterator:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_1_1iterator__inherit__graph.svg" width="172" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for splay_tree::SplayTree&lt; T &gt;::iterator:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_1_1iterator__coll__graph.svg" width="100%" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a69bb5a2446e8219c0eca5b6791272e23"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a69bb5a2446e8219c0eca5b6791272e23">iterator_category</a> = bidirectional_iterator_tag</td></tr>
+<tr class="separator:a69bb5a2446e8219c0eca5b6791272e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structit__base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structit__base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td></tr>
+<tr class="memitem:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> = T</td></tr>
+<tr class="separator:a750730b3baf6464b16f1483c656f5dce inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> = T *</td></tr>
+<tr class="separator:aff4e3754839c1106ced2e57a47d44425 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> = T &amp;</td></tr>
+<tr class="separator:a65ea2a2492ba8ae44a336fd192f5ff2a inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> = <a class="el" href="structll.html">ll</a></td></tr>
+<tr class="separator:a2f441c3115c3b785aedc6816276d7511 inherit pub_types_structit__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1b2e58809547e4402b8a7ef16ed8253d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a1b2e58809547e4402b8a7ef16ed8253d">operator--</a> ()</td></tr>
+<tr class="separator:a1b2e58809547e4402b8a7ef16ed8253d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fdbf8660f782a32ee209ab7108c0e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a87fdbf8660f782a32ee209ab7108c0e8">operator++</a> ()</td></tr>
+<tr class="separator:a87fdbf8660f782a32ee209ab7108c0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc7a7403ba2e1b78fac2480a82e974f"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#afdc7a7403ba2e1b78fac2480a82e974f">operator*</a> ()</td></tr>
+<tr class="separator:afdc7a7403ba2e1b78fac2480a82e974f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ea6ed296b79fa203a92992006448ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ab0ea6ed296b79fa203a92992006448ea">iterator</a> (<a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *node_arg)</td></tr>
+<tr class="separator:ab0ea6ed296b79fa203a92992006448ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fc8c5b9cf35ae5b350631deda6b3c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ac7fc8c5b9cf35ae5b350631deda6b3c3">operator==</a> (const <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a> oth) const</td></tr>
+<tr class="separator:ac7fc8c5b9cf35ae5b350631deda6b3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3c9fb5e7acf1d7fbb16ca90c28158e90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a3c9fb5e7acf1d7fbb16ca90c28158e90">node</a></td></tr>
+<tr class="separator:a3c9fb5e7acf1d7fbb16ca90c28158e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5de551652a02ec33810bc159032be3de"><td class="memTemplParams" colspan="2">template&lt;bool dir&gt; </td></tr>
+<tr class="memitem:a5de551652a02ec33810bc159032be3de"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a5de551652a02ec33810bc159032be3de">advance</a> ()</td></tr>
+<tr class="separator:a5de551652a02ec33810bc159032be3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+struct splay_tree::SplayTree&lt; T &gt;::iterator</h3>
+
+<p>Splay tree node. </p>
+<p>Splay tree iterator </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a69bb5a2446e8219c0eca5b6791272e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69bb5a2446e8219c0eca5b6791272e23">&#9670;&nbsp;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::<a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a69bb5a2446e8219c0eca5b6791272e23">iterator::iterator_category</a> =  bidirectional_iterator_tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab0ea6ed296b79fa203a92992006448ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ea6ed296b79fa203a92992006448ea">&#9670;&nbsp;</a></span>iterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::iterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a> *&#160;</td>
+          <td class="paramname"><em>node_arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5de551652a02ec33810bc159032be3de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de551652a02ec33810bc159032be3de">&#9670;&nbsp;</a></span>advance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;bool dir&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::advance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="structsplay__tree_1_1SplayTree_1_1iterator_a5de551652a02ec33810bc159032be3de_cgraph.svg" width="388" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afdc7a7403ba2e1b78fac2480a82e974f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc7a7403ba2e1b78fac2480a82e974f">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87fdbf8660f782a32ee209ab7108c0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87fdbf8660f782a32ee209ab7108c0e8">&#9670;&nbsp;</a></span>operator++()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b2e58809547e4402b8a7ef16ed8253d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b2e58809547e4402b8a7ef16ed8253d">&#9670;&nbsp;</a></span>operator--()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::operator-- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7fc8c5b9cf35ae5b350631deda6b3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7fc8c5b9cf35ae5b350631deda6b3c3">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a>&#160;</td>
+          <td class="paramname"><em>oth</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3c9fb5e7acf1d7fbb16ca90c28158e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9fb5e7acf1d7fbb16ca90c28158e90">&#9670;&nbsp;</a></span>node</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">Node</a>* <a class="el" href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a>&lt; T &gt;::iterator::node</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/ram/OmniTemplate/src/ds/<a class="el" href="splay__tree_8hpp_source.html">splay_tree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacesplay__tree.html">splay_tree</a></li><li class="navelem"><a class="el" href="structsplay__tree_1_1SplayTree.html">SplayTree</a></li><li class="navelem"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

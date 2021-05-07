@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('structsplay__tree_1_1SplayTree_1_1iterator.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacesplay__tree.html">splay_tree</a></li><li class="navelem"><a class="el" href="structsplay__tree_1_1SplayTree.html">SplayTree</a></li><li class="navelem"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">iterator</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">splay_tree::SplayTree&lt; T &gt;::iterator Member List</div>  </div>
@@ -81,34 +107,26 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a5de551652a02ec33810bc159032be3de">advance</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a5de551652a02ec33810bc159032be3de">advance</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ab0ea6ed296b79fa203a92992006448ea">iterator</a>(Node *node_arg)</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ab0ea6ed296b79fa203a92992006448ea">iterator</a>(Node *node_arg)</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a69bb5a2446e8219c0eca5b6791272e23">iterator_category</a> typedef</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a69bb5a2446e8219c0eca5b6791272e23">iterator_category</a> typedef</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ad3b5ad84c1a0138db075e2c61eb83144">node</a></td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a3c9fb5e7acf1d7fbb16ca90c28158e90">node</a></td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#afdc7a7403ba2e1b78fac2480a82e974f">operator*</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#afdc7a7403ba2e1b78fac2480a82e974f">operator*</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a87fdbf8660f782a32ee209ab7108c0e8">operator++</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a87fdbf8660f782a32ee209ab7108c0e8">operator++</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a1b2e58809547e4402b8a7ef16ed8253d">operator--</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a1b2e58809547e4402b8a7ef16ed8253d">operator--</a>()</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ac7fc8c5b9cf35ae5b350631deda6b3c3">operator==</a>(const iterator oth) const</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ac7fc8c5b9cf35ae5b350631deda6b3c3">operator==</a>(const iterator oth) const</td><td class="entry"><a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html">splay_tree::SplayTree&lt; T &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

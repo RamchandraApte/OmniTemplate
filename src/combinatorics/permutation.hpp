@@ -47,6 +47,8 @@ class Permutation : public vector<ll> {
 		}
 	}
 };
+/** @brief Returns the identity permutation
+ */
 Permutation identity(multiplies<>, const Permutation &perm) { return Permutation(ssize(perm)); }
 /** @brief Returns the composition of permutations a and b, so that ret[i] = a[b[i]].
  * @return \f$a\cdot b\f$

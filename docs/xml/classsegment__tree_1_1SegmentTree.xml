@@ -55,19 +55,6 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="41" column="1" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" prot="public" static="no">
-        <type>conditional_t&lt; has_ptr, <ref refid="structsegment__tree_1_1SegmentTree_1_1NodeExp" kindref="compound">NodeExp</ref> *, <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>using segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::Node =  conditional_t&lt;has_ptr, NodeExp *, ll&gt;</definition>
-        <argsstring></argsstring>
-        <name>Node</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1705" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1705" bodyend="-1"/>
-      </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classsegment__tree_1_1SegmentTree_1a0a3c79962f762f46cb1bb0197dd56fbc" prot="private" static="no" mutable="no">
@@ -117,9 +104,9 @@
         <referencedby refid="classsegment__tree_1_1SegmentTree_1ad2375790875e1231b39795e93d61e176" compoundref="segment__tree_8hpp" startline="155" endline="160">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update</referencedby>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1a9f3420768798bd5b372b6f6a079de487" compoundref="segment__tree_8hpp" startline="171" endline="176">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::~SegmentTree</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="classsegment__tree_1_1SegmentTree_1a1192e3d264a45fdabbb16fca92e0dae8" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classsegment__tree_1_1SegmentTree_1a26e5975caa51fd679fadc38ef7a48fbb" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="structsegment__tree_1_1SegmentTree_1_1NodeCore" kindref="compound">NodeCore</ref> &gt;</type>
-        <definition>vector&lt; NodeCore &gt; segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::nodes</definition>
+        <definition>vector&lt;NodeCore&gt; segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::nodes</definition>
         <argsstring></argsstring>
         <name>nodes</name>
         <briefdescription>
@@ -205,7 +192,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="44" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="44" bodyend="44"/>
-        <references refid="classsegment__tree_1_1SegmentTree_1a1192e3d264a45fdabbb16fca92e0dae8" compoundref="segment__tree_8hpp" startline="182">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::nodes</references>
+        <references refid="classsegment__tree_1_1SegmentTree_1a26e5975caa51fd679fadc38ef7a48fbb" compoundref="segment__tree_8hpp" startline="182">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::nodes</references>
       </memberdef>
       <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>auto &amp;</type>
@@ -227,7 +214,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="45" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="45" bodyend="45"/>
-        <references refid="structsegment__tree_1_1SegmentTree_1_1NodeExp_1aa898619e89d94503f31c63baec827cc2" compoundref="segment__tree_8hpp" startline="39">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeExp::child</references>
+        <references refid="structsegment__tree_1_1SegmentTree_1_1NodeExp_1a4523e07aa838284e536323455a6d948e" compoundref="segment__tree_8hpp" startline="39">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeExp::child</references>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" compoundref="segment__tree_8hpp" startline="52" endline="65">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</referencedby>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1a4062ab69d3598b338ba182ca6ae17ffe" compoundref="segment__tree_8hpp" startline="161" endline="170">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::destroy</referencedby>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1a800501714b462945aca69aef474dbfbc" compoundref="segment__tree_8hpp" startline="67" endline="88">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::down</referencedby>
@@ -306,7 +293,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="52" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="52" bodyend="65"/>
         <references refid="classsegment__tree_1_1SegmentTree_1ab4671ac300a724a5bbfdd92c68abcfcb" compoundref="segment__tree_8hpp" startline="51" endline="51">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
         <references refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" compoundref="segment__tree_8hpp" startline="45" endline="45">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</references>
         <references refid="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" compoundref="segment__tree_8hpp" startline="43" endline="43">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core</references>
         <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="39" endline="41">linear_algebra::identity</references>
@@ -339,7 +326,7 @@
 <para>Push lazy update down</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="67" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="67" bodyend="88"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
         <references refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" compoundref="segment__tree_8hpp" startline="45" endline="45">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</references>
         <references refid="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" compoundref="segment__tree_8hpp" startline="43" endline="43">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core</references>
         <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="39" endline="41">linear_algebra::identity</references>
@@ -380,7 +367,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="89" column="3" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="89" bodyend="107"/>
         <references refid="classsegment__tree_1_1SegmentTree_1a800501714b462945aca69aef474dbfbc" compoundref="segment__tree_8hpp" startline="67" endline="88">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::down</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
         <references refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" compoundref="segment__tree_8hpp" startline="45" endline="45">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</references>
         <references refid="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" compoundref="segment__tree_8hpp" startline="43" endline="43">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core</references>
         <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="39" endline="41">linear_algebra::identity</references>
@@ -477,7 +464,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="115" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="115" bodyend="154"/>
         <references refid="classsegment__tree_1_1SegmentTree_1a800501714b462945aca69aef474dbfbc" compoundref="segment__tree_8hpp" startline="67" endline="88">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::down</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
         <references refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" compoundref="segment__tree_8hpp" startline="45" endline="45">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</references>
         <references refid="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" compoundref="segment__tree_8hpp" startline="43" endline="43">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core</references>
         <references refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" compoundref="linear__algebra_8hpp" startline="39" endline="41">linear_algebra::identity</references>
@@ -529,7 +516,7 @@
 <para>Deallocate memory associated with the subtree of node</para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="161" column="6" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="161" bodyend="170"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
         <references refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" compoundref="segment__tree_8hpp" startline="45" endline="45">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</references>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1a9f3420768798bd5b372b6f6a079de487" compoundref="segment__tree_8hpp" startline="171" endline="176">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::~SegmentTree</referencedby>
       </memberdef>
@@ -548,380 +535,6 @@
         <location file="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" line="171" column="1" bodyfile="/home/ram/OmniTemplate/src/ds/segment_tree.hpp" bodystart="171" bodyend="176"/>
         <references refid="classsegment__tree_1_1SegmentTree_1a4062ab69d3598b338ba182ca6ae17ffe" compoundref="segment__tree_8hpp" startline="161" endline="170">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::destroy</references>
         <references refid="classsegment__tree_1_1SegmentTree_1ad753751360f0d9cefe864d4fd22fec83" compoundref="segment__tree_8hpp" startline="181">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::root</references>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1addcc5c68b1d667b6a4f868e287dc9bbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::SegmentTree</definition>
-        <argsstring>(const ll size_arg)</argsstring>
-        <name>SegmentTree</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>size_arg</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1684" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1684" bodyend="1692"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a7b87087b2001e8a0f470a4e78f394502" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::SegmentTree</definition>
-        <argsstring>(const vector&lt; T &gt; &amp;arr)</argsstring>
-        <name>SegmentTree</name>
-        <param>
-          <type>const vector&lt; T &gt; &amp;</type>
-          <declname>arr</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1693" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1693" bodyend="1693"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>auto &amp;</type>
-        <definition>auto&amp; segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core</definition>
-        <argsstring>(NodeExp *const &amp;obj)</argsstring>
-        <name>get_core</name>
-        <param>
-          <type><ref refid="structsegment__tree_1_1SegmentTree_1_1NodeExp" kindref="compound">NodeExp</ref> *const &amp;</type>
-          <declname>obj</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1707" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1707" bodyend="1707"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a7b3d2ec003c25e51626c78595ba53401" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>auto &amp;</type>
-        <definition>auto&amp; segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_core</definition>
-        <argsstring>(const ll idx)</argsstring>
-        <name>get_core</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>idx</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1708" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1708" bodyend="1708"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>auto &amp;</type>
-        <definition>auto&amp; segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</definition>
-        <argsstring>(NodeExp *const &amp;obj, const ll i)</argsstring>
-        <name>get_child</name>
-        <param>
-          <type><ref refid="structsegment__tree_1_1SegmentTree_1_1NodeExp" kindref="compound">NodeExp</ref> *const &amp;</type>
-          <declname>obj</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>i</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1709" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1709" bodyend="1709"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a6a4f7d2b00e4bc94806364ec0f999700" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>auto</type>
-        <definition>auto segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::get_child</definition>
-        <argsstring>(const ll idx, const ll i)</argsstring>
-        <name>get_child</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>idx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>i</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1710" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1710" bodyend="1710"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1ab4671ac300a724a5bbfdd92c68abcfcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</definition>
-        <argsstring>(const vector&lt; T &gt; &amp;arr)</argsstring>
-        <name>build</name>
-        <param>
-          <type>const vector&lt; T &gt; &amp;</type>
-          <declname>arr</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1715" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1715" bodyend="1715"/>
-        <references refid="classsegment__tree_1_1SegmentTree_1ab4671ac300a724a5bbfdd92c68abcfcb" compoundref="test__compiled_8cpp" startline="1715" endline="1715">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</references>
-        <referencedby refid="classsegment__tree_1_1SegmentTree_1ab4671ac300a724a5bbfdd92c68abcfcb" compoundref="test__compiled_8cpp" startline="1715" endline="1715">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</definition>
-        <argsstring>(const vector&lt; T &gt; &amp;arr, const Node idx, const ll node_l, const ll node_r)</argsstring>
-        <name>build</name>
-        <param>
-          <type>const vector&lt; T &gt; &amp;</type>
-          <declname>arr</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-          <declname>idx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1716" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1716" bodyend="1729"/>
-        <references refid="test__compiled_8cpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="test__compiled_8cpp" startline="39">fo</references>
-        <references refid="test__compiled_8cpp_1a09af32a8d21cf0ca5017ce40502a2a09" compoundref="test__compiled_8cpp" startline="292" endline="292">identity</references>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a52f59c0f0db30957d70083a26e7ac967" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::down</definition>
-        <argsstring>(const Node idx, const ll node_l, const ll node_r)</argsstring>
-        <name>down</name>
-        <param>
-          <type>const <ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-          <declname>idx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Push lazy updates down </para>
-        </detaileddescription>
-        <inbodydescription>
-<para>Push lazy update down</para>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1731" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1731" bodyend="1752"/>
-        <references refid="test__compiled_8cpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="test__compiled_8cpp" startline="39">fo</references>
-        <references refid="test__compiled_8cpp_1a09af32a8d21cf0ca5017ce40502a2a09" compoundref="test__compiled_8cpp" startline="292" endline="292">identity</references>
-        <references refid="structsegment__tree_1_1SegmentTree_1_1NodeCore_1a4852cef24d043d15388e91826ca726e6" compoundref="segment__tree_8hpp" startline="36">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeCore::qsum</references>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>T</type>
-        <definition>T segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</definition>
-        <argsstring>(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)</argsstring>
-        <name>query</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>r</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-          <declname>idx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-<para>Returns the sum over the intersection of [query_l, query_r) with [node_l, node_r)</para>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1753" column="3" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1753" bodyend="1771"/>
-        <references refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" compoundref="treap_8hpp" startline="109" endline="122">down</references>
-        <references refid="test__compiled_8cpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="test__compiled_8cpp" startline="39">fo</references>
-        <references refid="test__compiled_8cpp_1a09af32a8d21cf0ca5017ce40502a2a09" compoundref="test__compiled_8cpp" startline="292" endline="292">identity</references>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1ad39bd604bb4dc65a3204865f578f6fd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>T</type>
-        <definition>T segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</definition>
-        <argsstring>(const ll l, const ll r, const Node custom_root)</argsstring>
-        <name>query</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>r</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-          <declname>custom_root</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1772" column="3" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1772" bodyend="1777"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1ad2c2369ddf9d9fb8ca78e367ff129839" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>T</type>
-        <definition>T segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</definition>
-        <argsstring>(const ll l, const ll r)</argsstring>
-        <name>query</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1778" column="3" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1778" bodyend="1778"/>
-        <references refid="classsegment__tree_1_1SegmentTree_1ad2c2369ddf9d9fb8ca78e367ff129839" compoundref="test__compiled_8cpp" startline="1778" endline="1778">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</references>
-        <referencedby refid="classsegment__tree_1_1SegmentTree_1ad2c2369ddf9d9fb8ca78e367ff129839" compoundref="test__compiled_8cpp" startline="1778" endline="1778">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a5207ffe18417463bef339fd6d3183b5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-        <definition>Node segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update</definition>
-        <argsstring>(const ll l, const ll r, const T val, Node idx, const ll node_l, const ll node_r)</argsstring>
-        <name>update</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>r</declname>
-        </param>
-        <param>
-          <type>const T</type>
-          <declname>val</declname>
-        </param>
-        <param>
-          <type><ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-          <declname>idx</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_r</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-<para>Update the range l to r with the update val returns the new node</para>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1779" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1779" bodyend="1818"/>
-        <references refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" compoundref="treap_8hpp" startline="109" endline="122">down</references>
-        <references refid="test__compiled_8cpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="test__compiled_8cpp" startline="39">fo</references>
-        <references refid="test__compiled_8cpp_1a09af32a8d21cf0ca5017ce40502a2a09" compoundref="test__compiled_8cpp" startline="292" endline="292">identity</references>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1ad2375790875e1231b39795e93d61e176" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-        <definition>Node segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update</definition>
-        <argsstring>(const ll l, const ll r, const T val)</argsstring>
-        <name>update</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>r</declname>
-        </param>
-        <param>
-          <type>const T</type>
-          <declname>val</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1819" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1819" bodyend="1824"/>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a4062ab69d3598b338ba182ca6ae17ffe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::destroy</definition>
-        <argsstring>(Node node)</argsstring>
-        <name>destroy</name>
-        <param>
-          <type><ref refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" kindref="member">Node</ref></type>
-          <declname>node</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-<para>Deallocate memory associated with the subtree of node</para>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1825" column="6" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1825" bodyend="1834"/>
-        <references refid="test__compiled_8cpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="test__compiled_8cpp" startline="39">fo</references>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a9f3420768798bd5b372b6f6a079de487" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::~SegmentTree</definition>
-        <argsstring>()</argsstring>
-        <name>~SegmentTree</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-<para>Free memory allocator by the segment tree. Note: does not work for persistent</para>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1835" column="1" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1835" bodyend="1840"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -952,31 +565,6 @@
         <referencedby refid="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" compoundref="segment__tree_8hpp" startline="52" endline="65">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::build</referencedby>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" compoundref="segment__tree_8hpp" startline="89" endline="107">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</referencedby>
         <referencedby refid="classsegment__tree_1_1SegmentTree_1a5207ffe18417463bef339fd6d3183b5c" compoundref="segment__tree_8hpp" startline="115" endline="154">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="classsegment__tree_1_1SegmentTree_1a2bab4503b7a982cd822c2d5cb48c8e11" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="structll" kindref="compound">ll</ref></type>
-        <definition>static ll segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::mid</definition>
-        <argsstring>(const ll node_l, const ll node_r, const ll i)</argsstring>
-        <name>mid</name>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_l</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>node_r</declname>
-        </param>
-        <param>
-          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
-          <declname>i</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/test/test_compiled.cpp" line="1711" column="11" bodyfile="/home/ram/OmniTemplate/src/test/test_compiled.cpp" bodystart="1711" bodyend="1714"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1077,43 +665,25 @@
     <listofallmembers>
       <member refid="classsegment__tree_1_1SegmentTree_1ab4671ac300a724a5bbfdd92c68abcfcb" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>build</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>build</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1ab4671ac300a724a5bbfdd92c68abcfcb" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>build</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1ad8b2ae5fb114f861e0dcc0fb5d370b8f" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>build</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a53e7eb2ce3b43919d36510dc56b980b3" prot="private" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>ceil_size</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a4062ab69d3598b338ba182ca6ae17ffe" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>destroy</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a4062ab69d3598b338ba182ca6ae17ffe" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>destroy</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a800501714b462945aca69aef474dbfbc" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>down</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a52f59c0f0db30957d70083a26e7ac967" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>down</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_child</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a6a4f7d2b00e4bc94806364ec0f999700" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_child</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a3d4b3dd98355d9e414bc04cdcf5f5457" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_child</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a6a4f7d2b00e4bc94806364ec0f999700" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_child</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_core</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a7b3d2ec003c25e51626c78595ba53401" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_core</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1ac8ebb88c3ad2fedecb123e31552fde60" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_core</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a7b3d2ec003c25e51626c78595ba53401" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>get_core</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a2bab4503b7a982cd822c2d5cb48c8e11" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>mid</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a2bab4503b7a982cd822c2d5cb48c8e11" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>mid</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>Node</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a50d361dc1883b3aaa88142238c091571" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>Node</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a1192e3d264a45fdabbb16fca92e0dae8" prot="private" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>nodes</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>query</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1ad39bd604bb4dc65a3204865f578f6fd9" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>query</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1ad2c2369ddf9d9fb8ca78e367ff129839" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>query</name></member>
+      <member refid="classsegment__tree_1_1SegmentTree_1a26e5975caa51fd679fadc38ef7a48fbb" prot="private" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>nodes</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>query</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1ad39bd604bb4dc65a3204865f578f6fd9" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>query</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1ad2c2369ddf9d9fb8ca78e367ff129839" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>query</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1ad753751360f0d9cefe864d4fd22fec83" prot="private" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>root</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1addcc5c68b1d667b6a4f868e287dc9bbf" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>SegmentTree</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a7b87087b2001e8a0f470a4e78f394502" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>SegmentTree</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1addcc5c68b1d667b6a4f868e287dc9bbf" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>SegmentTree</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a7b87087b2001e8a0f470a4e78f394502" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>SegmentTree</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a0a3c79962f762f46cb1bb0197dd56fbc" prot="private" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>size_</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a5207ffe18417463bef339fd6d3183b5c" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>update</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1ad2375790875e1231b39795e93d61e176" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>update</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a5207ffe18417463bef339fd6d3183b5c" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>update</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1ad2375790875e1231b39795e93d61e176" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>update</name></member>
-      <member refid="classsegment__tree_1_1SegmentTree_1a9f3420768798bd5b372b6f6a079de487" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>~SegmentTree</name></member>
       <member refid="classsegment__tree_1_1SegmentTree_1a9f3420768798bd5b372b6f6a079de487" prot="public" virt="non-virtual"><scope>segment_tree::SegmentTree</scope><name>~SegmentTree</name></member>
     </listofallmembers>
   </compounddef>

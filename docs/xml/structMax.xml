@@ -1,26 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="structMax" kind="struct" language="C++" prot="public">
     <compoundname>Max</compoundname>
     <includes refid="operations_8hpp" local="no">operations.hpp</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="structMax_1a4655e1340fe57b865ca75fb4b6bc6a05" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structMax_1ac790aaf2e5309bbf7d80ffc9c26f1701" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>typename T</type>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
           </param>
         </templateparamlist>
-        <type>auto</type>
-        <definition>auto Max::operator()</definition>
-        <argsstring>(T a, T b) const</argsstring>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) Max::operator()</definition>
+        <argsstring>(Ts &amp;&amp;...args) const</argsstring>
         <name>operator()</name>
         <param>
-          <type>T</type>
-          <declname>a</declname>
-        </param>
-        <param>
-          <type>T</type>
-          <declname>b</declname>
+          <type>Ts &amp;&amp;...</type>
+          <declname>args</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -28,17 +26,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="105" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="105" bodyend="105"/>
-        <references refid="my__int_8hpp_1a9dc54a811b75d3d05d3deff10980ca7e" compoundref="my__int_8hpp" startline="61">b</references>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="96" column="31" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="96" bodyend="96"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="104" column="10" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="104" bodyend="106"/>
+    <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="96" column="1" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="96" bodyend="96"/>
     <listofallmembers>
-      <member refid="structMax_1a4655e1340fe57b865ca75fb4b6bc6a05" prot="public" virt="non-virtual"><scope>Max</scope><name>operator()</name></member>
+      <member refid="structMax_1ac790aaf2e5309bbf7d80ffc9c26f1701" prot="public" virt="non-virtual"><scope>Max</scope><name>operator()</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

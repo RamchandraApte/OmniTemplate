@@ -6,11 +6,23 @@
     <includedby refid="debug_8hpp" local="yes">/home/ram/OmniTemplate/src/core/debug.hpp</includedby>
     <includedby refid="core_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/core/all.hpp</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>bits/stdc++.h</label>
+      <node id="10">
+        <label>functional</label>
       </node>
-      <node id="6">
+      <node id="14">
+        <label>queue</label>
+      </node>
+      <node id="5">
+        <label>cassert</label>
+      </node>
+      <node id="13">
+        <label>numeric</label>
+      </node>
+      <node id="24">
         <label>experimental/source_location</label>
+      </node>
+      <node id="12">
+        <label>map</label>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/core/operations.hpp</label>
@@ -18,8 +30,14 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="20">
+        <label>unordered_set</label>
+      </node>
+      <node id="23">
         <label>experimental/iterator</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
       </node>
       <node id="3">
         <label>core/all.hpp</label>
@@ -34,14 +52,59 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
         <childnode refid="1" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="15">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>vector</label>
+      </node>
+      <node id="17">
+        <label>stack</label>
+      </node>
+      <node id="27">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
         <childnode refid="2" relation="include">
@@ -53,13 +116,40 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="21">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="26">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="7">
+        <label>climits</label>
+      </node>
+      <node id="6">
+        <label>chrono</label>
+      </node>
+      <node id="18">
+        <label>thread</label>
+      </node>
+      <node id="19">
+        <label>type_traits</label>
+      </node>
+      <node id="16">
+        <label>set</label>
+      </node>
+      <node id="8">
+        <label>complex</label>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="25">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
         <childnode refid="1" relation="include">
@@ -704,6 +794,8 @@
         </childnode>
       </node>
     </invincdepgraph>
+    <innerclass refid="structMax" prot="public">Max</innerclass>
+    <innerclass refid="structMin" prot="public">Min</innerclass>
       <sectiondef kind="define">
       <memberdef kind="define" id="operations_8hpp_1a2e3fb564092d70d9bee87555035d8711" prot="public" static="no">
         <name>aug</name>
@@ -719,11 +811,12 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="4" column="9" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="4" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="operations_8hpp_1aef20301df3ed18a53843fb3a5b69bd5b" prot="public" static="no">
+      <memberdef kind="define" id="operations_8hpp_1a39eacc49492732c9298320c8a78b50ad" prot="public" static="no">
         <name>FUNCTOR</name>
+        <param><defname>name</defname></param>
         <param><defname>func</defname></param>
-        <initializer>	struct {                                                                                   \
-		template &lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp;... args) const {         \
+        <initializer>	struct name {                                                                              \
+		template &lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp;...args) const {          \
 			return (func)(forward&lt;decltype(args)&gt;(args)...);                           \
 		}                                                                                  \
 	}</initializer>
@@ -735,34 +828,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="90" column="9" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="90" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="operations_8hpp_1a8ca39513ee57e00e1d6eecf32fd87035" prot="public" static="no">
-        <type>struct { template&lt; typename... Ts &gt; decltype(auto) operator()(Ts &amp;&amp;... args) const { return(max)(forward&lt; decltype(args)&gt;(args)...)</type>
-        <definition>using Max =  struct { template &lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp;... args) const { return ( max )(forward&lt;decltype(args)&gt;(args)...)</definition>
-        <argsstring></argsstring>
-        <name>Max</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="96" column="1" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="96" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="operations_8hpp_1a6e5336c573515260e7a624f1f72924a1" prot="public" static="no">
-        <type>struct { template&lt; typename... Ts &gt; decltype(auto) operator()(Ts &amp;&amp;... args) const { return(min)(forward&lt; decltype(args)&gt;(args)...)</type>
-        <definition>using Min =  struct { template &lt;typename... Ts&gt; decltype(auto) operator()(Ts &amp;&amp;... args) const { return ( min )(forward&lt;decltype(args)&gt;(args)...)</definition>
-        <argsstring></argsstring>
-        <name>Min</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="97" column="1" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="97" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -906,6 +971,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="12" column="25" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="12" bodyend="14"/>
+        <referencedby refid="namespacestring__tools_1a2034667d39d31db823e82b7c0270d56c" compoundref="suffix__array_8hpp" startline="45" endline="65">string_tools::lcp_array</referencedby>
         <referencedby refid="operations_8hpp_1ae9e59a2d15287021fd21d14d2eb206c4" compoundref="operations_8hpp" startline="15" endline="17">operator/</referencedby>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1ae9e59a2d15287021fd21d14d2eb206c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1147,7 +1213,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="40" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="40" bodyend="45"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="38">al</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="57">al</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a9e98ecb7739ca6a5c0069a9a26d2a731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -1286,7 +1352,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="74" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="74" bodyend="79"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1af877591533298d5fba3df85680cabb60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -1314,16 +1380,25 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="81" column="6" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="81" bodyend="88"/>
       </memberdef>
-      <memberdef kind="function" id="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structll" kindref="compound">ll</ref></type>
-        <definition>ll identity</definition>
-        <argsstring>(plus&lt;&gt;, ll)</argsstring>
+      <memberdef kind="function" id="operations_8hpp_1a0fea197d8d19ab6ebe48c69665bbff99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;is_arithmetic_v&lt;T&gt;&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T identity</definition>
+        <argsstring>(plus&lt;&gt;, T)</argsstring>
         <name>identity</name>
         <param>
           <type>plus&lt;&gt;</type>
         </param>
         <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <type>T</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -1331,18 +1406,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="98" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="98" bodyend="98"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="98" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="98" bodyend="100"/>
       </memberdef>
-      <memberdef kind="function" id="operations_8hpp_1acc5a0ae67ef6a3bd347c85cab4a15313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structll" kindref="compound">ll</ref></type>
-        <definition>ll identity</definition>
-        <argsstring>(multiplies&lt;&gt;, ll)</argsstring>
+      <memberdef kind="function" id="operations_8hpp_1a882b3269af17d13f1e1a394e7913fdc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>enable_if_t&lt;is_arithmetic_v&lt;T&gt;&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T identity</definition>
+        <argsstring>(multiplies&lt;&gt;, T)</argsstring>
         <name>identity</name>
         <param>
           <type>multiplies&lt;&gt;</type>
         </param>
         <param>
-          <type><ref refid="structll" kindref="compound">ll</ref></type>
+          <type>T</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -1350,7 +1434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="99" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="99" bodyend="99"/>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="101" column="18" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="101" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1a19000e539a20acfdcd7e8fdce1d970f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1358,7 +1442,7 @@
         <argsstring>(Max, ll)</argsstring>
         <name>identity</name>
         <param>
-          <type><ref refid="operations_8hpp_1a8ca39513ee57e00e1d6eecf32fd87035" kindref="member">Max</ref></type>
+          <type><ref refid="structMax" kindref="compound">Max</ref></type>
         </param>
         <param>
           <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1369,8 +1453,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="100" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="100" bodyend="100"/>
-        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="95">inf</references>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="104" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="104" bodyend="104"/>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="114">inf</references>
       </memberdef>
       <memberdef kind="function" id="operations_8hpp_1aa9ba94adf14b5b5566e3a750fa5255b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1378,7 +1462,7 @@
         <argsstring>(Min, ll)</argsstring>
         <name>identity</name>
         <param>
-          <type><ref refid="operations_8hpp_1a6e5336c573515260e7a624f1f72924a1" kindref="member">Min</ref></type>
+          <type><ref refid="structMin" kindref="compound">Min</ref></type>
         </param>
         <param>
           <type><ref refid="structll" kindref="compound">ll</ref></type>
@@ -1389,8 +1473,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="101" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="101" bodyend="101"/>
-        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="95">inf</references>
+        <location file="/home/ram/OmniTemplate/src/core/operations.hpp" line="105" column="4" bodyfile="/home/ram/OmniTemplate/src/core/operations.hpp" bodystart="105" bodyend="105"/>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="114">inf</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1479,21 +1563,25 @@
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>advance(it,<sp/>n);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="90"><highlight class="preprocessor">#define<sp/>FUNCTOR(func)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="91" refid="operations_8hpp_1aef20301df3ed18a53843fb3a5b69bd5b" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>struct<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>Ts&gt;<sp/>decltype(auto)<sp/>operator()(Ts<sp/>&amp;&amp;...<sp/>args)<sp/>const<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor">#define<sp/>FUNCTOR(name,<sp/>func)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="91" refid="operations_8hpp_1a39eacc49492732c9298320c8a78b50ad" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>struct<sp/>name<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>template<sp/>&lt;typename...<sp/>Ts&gt;<sp/>decltype(auto)<sp/>operator()(Ts<sp/>&amp;&amp;...args)<sp/>const<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(func)(forward&lt;decltype(args)&gt;(args)...);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96" refid="operations_8hpp_1a8ca39513ee57e00e1d6eecf32fd87035" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1a8ca39513ee57e00e1d6eecf32fd87035" kindref="member">Max</ref><sp/>=<sp/><ref refid="operations_8hpp_1aef20301df3ed18a53843fb3a5b69bd5b" kindref="member">FUNCTOR</ref>(max);</highlight></codeline>
-<codeline lineno="97" refid="operations_8hpp_1a6e5336c573515260e7a624f1f72924a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="operations_8hpp_1a6e5336c573515260e7a624f1f72924a1" kindref="member">Min</ref><sp/>=<sp/><ref refid="operations_8hpp_1aef20301df3ed18a53843fb3a5b69bd5b" kindref="member">FUNCTOR</ref>(min);</highlight></codeline>
-<codeline lineno="98" refid="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" kindref="member">identity</ref>(plus&lt;&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="99" refid="operations_8hpp_1acc5a0ae67ef6a3bd347c85cab4a15313" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" kindref="member">identity</ref>(multiplies&lt;&gt;,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/>}</highlight></codeline>
-<codeline lineno="100" refid="operations_8hpp_1a19000e539a20acfdcd7e8fdce1d970f4" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" kindref="member">identity</ref>(<ref refid="operations_8hpp_1a8ca39513ee57e00e1d6eecf32fd87035" kindref="member">Max</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="101" refid="operations_8hpp_1aa9ba94adf14b5b5566e3a750fa5255b3" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="operations_8hpp_1a09af32a8d21cf0ca5017ce40502a2a09" kindref="member">identity</ref>(<ref refid="operations_8hpp_1a6e5336c573515260e7a624f1f72924a1" kindref="member">Min</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>convert<sp/>all<sp/>macros<sp/>to<sp/>UPPER_CASE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//}<sp/>//<sp/>namespace<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/>using<sp/>namespace<sp/>operations;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structMax_1ac790aaf2e5309bbf7d80ffc9c26f1701" refkind="member"><highlight class="normal"><ref refid="operations_8hpp_1a39eacc49492732c9298320c8a78b50ad" kindref="member">FUNCTOR</ref>(<ref refid="structMax" kindref="compound">Max</ref>,<sp/>max);</highlight></codeline>
+<codeline lineno="97" refid="structMin_1a346d8e06fb28fa01f7bf83331c34b242" refkind="member"><highlight class="normal"><ref refid="operations_8hpp_1a39eacc49492732c9298320c8a78b50ad" kindref="member">FUNCTOR</ref>(<ref refid="structMin" kindref="compound">Min</ref>,<sp/>min);</highlight></codeline>
+<codeline lineno="98" refid="operations_8hpp_1a0fea197d8d19ab6ebe48c69665bbff99" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>=<sp/>enable_if_t&lt;is_arithmetic_v&lt;T&gt;&gt;&gt;<sp/>T<sp/><ref refid="operations_8hpp_1a0fea197d8d19ab6ebe48c69665bbff99" kindref="member">identity</ref>(plus&lt;&gt;,<sp/>T)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101" refid="operations_8hpp_1a882b3269af17d13f1e1a394e7913fdc5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>=<sp/>enable_if_t&lt;is_arithmetic_v&lt;T&gt;&gt;&gt;<sp/>T<sp/><ref refid="operations_8hpp_1a0fea197d8d19ab6ebe48c69665bbff99" kindref="member">identity</ref>(multiplies&lt;&gt;,<sp/>T)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104" refid="operations_8hpp_1a19000e539a20acfdcd7e8fdce1d970f4" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="operations_8hpp_1a0fea197d8d19ab6ebe48c69665bbff99" kindref="member">identity</ref>(<ref refid="structMax" kindref="compound">Max</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-<ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="105" refid="operations_8hpp_1aa9ba94adf14b5b5566e3a750fa5255b3" refkind="member"><highlight class="normal"><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="operations_8hpp_1a0fea197d8d19ab6ebe48c69665bbff99" kindref="member">identity</ref>(<ref refid="structMin" kindref="compound">Min</ref>,<sp/><ref refid="structll" kindref="compound">ll</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kindref="member">inf</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>convert<sp/>all<sp/>macros<sp/>to<sp/>UPPER_CASE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//}<sp/>//<sp/>namespace<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>using<sp/>namespace<sp/>operations;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/operations.hpp"/>
   </compounddef>

@@ -1,293 +1,724 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>/home/ram/OmniTemplate/src/core/all.hpp file | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
-  <link rel="icon" href="favicon-light.png" type="image/png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#cb4b16" />
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OmniTemplate: /home/ram/OmniTemplate/src/core/all.hpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
-      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
-        </svg></a>
-        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
-        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
-      </div>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="3">
-            <li><a href="annotated.html">Classes</a></li>
-            <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <use href="#m-doc-search-icon-path" />
-            </svg></a></li>
-          </ol>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">OmniTemplate
+   </div>
+   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
         </div>
-      </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-</nav></header>
-<main><article>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <h1>
-          <span class="m-breadcrumb"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">/home/ram/OmniTemplate/src</a>/</span><span class="m-breadcrumb"><a href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a>/</span>all.hpp <span class="m-thin">file</span>
-        </h1>
-        <p><span></span></p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#namespaces">Namespaces</a></li>
-                <li><a href="#nested-classes">Classes</a></li>
-                <li><a href="#typedef-members">Typedefs</a></li>
-                <li><a href="#var-members">Variables</a></li>
-                <li><a href="#define-members">Defines</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <section id="namespaces">
-          <h2><a href="#namespaces">Namespaces</a></h2>
-          <dl class="m-doc">
-            <dt>namespace <a href="namespacechrono.html" class="m-doc">chrono</a></dt>
-            <dd><span></span></dd>
-            <dt>namespace <a href="namespaceliterals.html" class="m-doc">literals</a></dt>
-            <dd><span></span></dd>
-            <dt>namespace <a href="namespaceplaceholders.html" class="m-doc">placeholders</a></dt>
-            <dd><span></span></dd>
-            <dt>namespace <a href="namespacethis__thread.html" class="m-doc">this_thread</a></dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
-          <dl class="m-doc">
-            <dt>
-              struct <a href="structlets__add.html" class="m-doc">lets_add</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="typedef-members">
-          <h2><a href="#typedef-members">Typedefs</a></h2>
-          <dl class="m-doc">
-            <dt id="aa5114a4fed348a29fb92123470476b1b">
-              using <a href="#aa5114a4fed348a29fb92123470476b1b" class="m-doc-self">ull</a> = unsigned long long
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ad54dde638d1ae3e9bb08956f539b1883">
-              using <a href="#ad54dde638d1ae3e9bb08956f539b1883" class="m-doc-self">ll</a> = long long
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a2e2e73e53fc509e05f252ef083503838">
-              using <a href="#a2e2e73e53fc509e05f252ef083503838" class="m-doc-self">ld</a> = long double
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a58e2677d80a09b5be0f0e56ef70d4507">
-              using <a href="#a58e2677d80a09b5be0f0e56ef70d4507" class="m-doc-self">pr</a> = pair&lt;<a href="structll.html" class="m-doc">ll</a>, <a href="structll.html" class="m-doc">ll</a>&gt;
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ac6774acaa7fff278845893bd84e35525">
-              using <a href="#ac6774acaa7fff278845893bd84e35525" class="m-doc-self">com</a> = complex&lt;double&gt;
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ae6bbe80dfafc6e30f518f3de1cafec50">
-              using <a href="#ae6bbe80dfafc6e30f518f3de1cafec50" class="m-doc-self">point</a> = complex&lt;<a href="structll.html" class="m-doc">ll</a>&gt;
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ac0b978e8ffc2c44656160a679f86e22a">
-              <div class="m-doc-template">template&lt;typename T, typename Comp&gt;</div>
-              using <a href="#ac0b978e8ffc2c44656160a679f86e22a" class="m-doc-self">prio_queue_t</a> = std::priority_queue&lt;T, vector&lt;T&gt;, Comp&gt;
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a71fb2247d044e41f5345bcdb26020926">
-              using <a href="#a71fb2247d044e41f5345bcdb26020926" class="m-doc-self">clock_</a> = high_resolution_clock
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="var-members">
-          <h2><a href="#var-members">Variables</a></h2>
-          <dl class="m-doc">
-            <dt id="aa021995764a0c77f628e3411497239cc">
-              bool <a href="#aa021995764a0c77f628e3411497239cc" class="m-doc-self">debug_mode</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a10aff294e2147e1cfe921bc2648b4399">
-              vector&lt;pair&lt;string, string&gt;&gt; <a href="#a10aff294e2147e1cfe921bc2648b4399" class="m-doc-self">lets</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="aa3bd6940ab68cd10b31ac2ff2495ffab">
-              <a href="structlets__add.html" class="m-doc">lets_<wbr />add</a> <a href="#aa3bd6940ab68cd10b31ac2ff2495ffab" class="m-doc-self">_l__COUNTER__</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              auto <a href="#ab89b6ceb8bf54011eedd872b54361eca" class="m-doc">inf</a> <span class="m-label m-flat m-primary">constexpr</span>
-            </dt>
-            <dd></dd>
-            <dt>
-              auto const <a href="#a4d5579d5eb92e5c3234831659c6d02cf" class="m-doc">delim</a>
-            </dt>
-            <dd></dd>
-            <dt>
-              auto <a href="#a989a29f26fc8591b33ecf33d4d2c7029" class="m-doc">tau</a> <span class="m-label m-flat m-primary">constexpr</span>
-            </dt>
-            <dd></dd>
-          </dl>
-        </section>
-        <section id="define-members">
-          <h2><a href="#define-members">Defines</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <span class="m-doc-wrap-bumper">#define <a href="#a9d597f42af7d85fd96c46aa17cc610d9" class="m-doc">fo</a>(</span><span class="m-doc-wrap">i,
-              ...)</span>
-            </dt>
-            <dd></dd>
-            <dt id="a7b724588414fb77283c807a1ad82313c">
-              <span class="m-doc-wrap-bumper">#define <a href="#a7b724588414fb77283c807a1ad82313c" class="m-doc-self">fr</a>(</span><span class="m-doc-wrap">i,
-              ...)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a2f9ddbc7133cc3a48efbc824006bd3cb">
-              <span class="m-doc-wrap-bumper">#define <a href="#a2f9ddbc7133cc3a48efbc824006bd3cb" class="m-doc-self">al</a>(</span><span class="m-doc-wrap">v)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a7f10cc81a560bb73b2eb647dfb10c9db">
-              <span class="m-doc-wrap-bumper">#define <a href="#a7f10cc81a560bb73b2eb647dfb10c9db" class="m-doc-self">rel_assert</a>(</span><span class="m-doc-wrap">...)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a108d6c5c51dd46e82a62b262394f0242">
-              <span class="m-doc-wrap-bumper">#define <a href="#a108d6c5c51dd46e82a62b262394f0242" class="m-doc-self">WARN</a>(</span><span class="m-doc-wrap">msg)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ad47194c03eba4b38147c9d01c0166802">
-              <span class="m-doc-wrap-bumper">#define <a href="#ad47194c03eba4b38147c9d01c0166802" class="m-doc-self">TODO</a>(</span><span class="m-doc-wrap">msg)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a38dec4d2a6700e0c88ced9eeebb3dfaa">
-              <span class="m-doc-wrap-bumper">#define <a href="#a38dec4d2a6700e0c88ced9eeebb3dfaa" class="m-doc-self">paste2</a>(</span><span class="m-doc-wrap">x,
-              y)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a396f7338a30cd5803df5ae220da88711">
-              <span class="m-doc-wrap-bumper">#define <a href="#a396f7338a30cd5803df5ae220da88711" class="m-doc-self">paste</a>(</span><span class="m-doc-wrap">x,
-              y)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a5f81e19fe0a4c7a463bf91e49e641270">
-              <span class="m-doc-wrap-bumper">#define <a href="#a5f81e19fe0a4c7a463bf91e49e641270" class="m-doc-self">lets_count</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a30d2d6ecdd50cafce635775b6e4e1cf2">
-              <span class="m-doc-wrap-bumper">#define <a href="#a30d2d6ecdd50cafce635775b6e4e1cf2" class="m-doc-self">let</a>(</span><span class="m-doc-wrap">a,
-              ...)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a7796040cab730b2436f078c78d117cab">
-              <span class="m-doc-wrap-bumper">#define <a href="#a7796040cab730b2436f078c78d117cab" class="m-doc-self">import</a>(</span><span class="m-doc-wrap">a)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ad8a867e2e93131cb4d4afbedcd38245a">
-              <span class="m-doc-wrap-bumper">#define <a href="#ad8a867e2e93131cb4d4afbedcd38245a" class="m-doc-self">cerr</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section>
-          <h2>Variable documentation</h2>
-          <section class="m-doc-details" id="ab89b6ceb8bf54011eedd872b54361eca"><div>
-            <h3>
-              auto <a href="#ab89b6ceb8bf54011eedd872b54361eca" class="m-doc-self">inf</a> <span class="m-label m-primary">constexpr</span>
-            </h3>
-<p>Infinity</p>
-          </div></section>
-          <section class="m-doc-details" id="a4d5579d5eb92e5c3234831659c6d02cf"><div>
-            <h3>
-              auto const <a href="#a4d5579d5eb92e5c3234831659c6d02cf" class="m-doc-self">delim</a>
-            </h3>
-<p>Delimiter for debug output</p>
-          </div></section>
-          <section class="m-doc-details" id="a989a29f26fc8591b33ecf33d4d2c7029"><div>
-            <h3>
-              auto <a href="#a989a29f26fc8591b33ecf33d4d2c7029" class="m-doc-self">tau</a> <span class="m-label m-primary">constexpr</span>
-            </h3>
-<p>Pi</p>
-          </div></section>
-        </section>
-        <section>
-          <h2>Define documentation</h2>
-          <section class="m-doc-details" id="a9d597f42af7d85fd96c46aa17cc610d9"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">#define <a href="#a9d597f42af7d85fd96c46aa17cc610d9" class="m-doc-self">fo</a>(</span><span class="m-doc-wrap">i,
-              ...)</span>
-            </h3>
-<p>Contains core files for the template</p>
-          </div></section>
-        </section>
-      </div>
-    </div>
-  </div>
-</article></main>
-<div class="m-doc-search" id="search">
-  <a href="#!" onclick="return hideSearch()"></a>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-m-8 m-push-m-2">
-        <div class="m-doc-search-header m-text m-small">
-          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
-          <div id="search-symbolcount">&hellip;</div>
-        </div>
-        <div class="m-doc-search-content">
-          <form>
-            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
-          </form>
-          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
-          <div id="search-help" class="m-text m-dim m-text-center">
-            <p class="m-noindent">Search for symbols, directories, files, pages or
-            modules. You can omit any prefix from the symbol or file path; adding a
-            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
-            directory.</p>
-            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
-            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
-            <span class="m-label m-dim">Enter</span> to go.
-            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
-            copy a link to the result using <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
-          </div>
-          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
-          <ul id="search-results"></ul>
-        </div>
-      </div>
-    </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script src="searchdata-v1.js" async="async"></script>
-<footer><nav>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
-      </div>
-    </div>
-  </div>
-</nav></footer>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('core_2all_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">all.hpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;complex&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;experimental/iterator&gt;</code><br />
+<code>#include &lt;experimental/source_location&gt;</code><br />
+<code>#include &quot;<a class="el" href="debug_8hpp_source.html">debug.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="io_8hpp_source.html">io.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="operations_8hpp_source.html">operations.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="range_8hpp_source.html">range.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utility_8hpp_source.html">utility.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for all.hpp:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="core_2all_8hpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="core_2all_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<p><a href="core_2all_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlets__add.html">lets_add</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td></tr>
+<tr class="separator:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b724588414fb77283c807a1ad82313c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td></tr>
+<tr class="separator:a7b724588414fb77283c807a1ad82313c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9ddbc7133cc3a48efbc824006bd3cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a>(v)&#160;&#160;&#160;begin(v), end(v)</td></tr>
+<tr class="separator:a2f9ddbc7133cc3a48efbc824006bd3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f10cc81a560bb73b2eb647dfb10c9db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a>(...)&#160;&#160;&#160;s</td></tr>
+<tr class="separator:a7f10cc81a560bb73b2eb647dfb10c9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108d6c5c51dd46e82a62b262394f0242"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a108d6c5c51dd46e82a62b262394f0242">WARN</a>(msg)</td></tr>
+<tr class="separator:a108d6c5c51dd46e82a62b262394f0242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47194c03eba4b38147c9d01c0166802"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ad47194c03eba4b38147c9d01c0166802">TODO</a>(msg)&#160;&#160;&#160;<a class="el" href="core_2all_8hpp.html#a108d6c5c51dd46e82a62b262394f0242">WARN</a>(&quot;TODO: &quot; msg)</td></tr>
+<tr class="separator:ad47194c03eba4b38147c9d01c0166802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dec4d2a6700e0c88ced9eeebb3dfaa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a38dec4d2a6700e0c88ced9eeebb3dfaa">paste2</a>(x,  y)&#160;&#160;&#160;x##y</td></tr>
+<tr class="separator:a38dec4d2a6700e0c88ced9eeebb3dfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396f7338a30cd5803df5ae220da88711"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a396f7338a30cd5803df5ae220da88711">paste</a>(x,  y)&#160;&#160;&#160;<a class="el" href="core_2all_8hpp.html#a38dec4d2a6700e0c88ced9eeebb3dfaa">paste2</a>(x, y)</td></tr>
+<tr class="separator:a396f7338a30cd5803df5ae220da88711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f81e19fe0a4c7a463bf91e49e641270"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a5f81e19fe0a4c7a463bf91e49e641270">lets_count</a>&#160;&#160;&#160;<a class="el" href="structlets__add.html">lets_add</a> <a class="el" href="core_2all_8hpp.html#a396f7338a30cd5803df5ae220da88711">paste</a>(_l, __COUNTER__)</td></tr>
+<tr class="separator:a5f81e19fe0a4c7a463bf91e49e641270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d2d6ecdd50cafce635775b6e4e1cf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a30d2d6ecdd50cafce635775b6e4e1cf2">let</a>(a, ...)</td></tr>
+<tr class="separator:a30d2d6ecdd50cafce635775b6e4e1cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7796040cab730b2436f078c78d117cab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a7796040cab730b2436f078c78d117cab">import</a>(a)</td></tr>
+<tr class="separator:a7796040cab730b2436f078c78d117cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a867e2e93131cb4d4afbedcd38245a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a>()</td></tr>
+<tr class="separator:ad8a867e2e93131cb4d4afbedcd38245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aa5114a4fed348a29fb92123470476b1b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a> = unsigned long long</td></tr>
+<tr class="separator:aa5114a4fed348a29fb92123470476b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54dde638d1ae3e9bb08956f539b1883"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a> = long long</td></tr>
+<tr class="separator:ad54dde638d1ae3e9bb08956f539b1883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2e73e53fc509e05f252ef083503838"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a> = long double</td></tr>
+<tr class="separator:a2e2e73e53fc509e05f252ef083503838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e2677d80a09b5be0f0e56ef70d4507"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a58e2677d80a09b5be0f0e56ef70d4507">pr</a> = pair&lt; <a class="el" href="structll.html">ll</a>, <a class="el" href="structll.html">ll</a> &gt;</td></tr>
+<tr class="separator:a58e2677d80a09b5be0f0e56ef70d4507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6774acaa7fff278845893bd84e35525"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ac6774acaa7fff278845893bd84e35525">com</a> = complex&lt; double &gt;</td></tr>
+<tr class="separator:ac6774acaa7fff278845893bd84e35525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6bbe80dfafc6e30f518f3de1cafec50"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> = complex&lt; <a class="el" href="structll.html">ll</a> &gt;</td></tr>
+<tr class="separator:ae6bbe80dfafc6e30f518f3de1cafec50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b978e8ffc2c44656160a679f86e22a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Comp &gt; </td></tr>
+<tr class="memitem:ac0b978e8ffc2c44656160a679f86e22a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a">prio_queue_t</a> = std::priority_queue&lt; T, vector&lt; T &gt;, Comp &gt;</td></tr>
+<tr class="separator:ac0b978e8ffc2c44656160a679f86e22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fb2247d044e41f5345bcdb26020926"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a71fb2247d044e41f5345bcdb26020926">clock_</a> = high_resolution_clock</td></tr>
+<tr class="separator:a71fb2247d044e41f5345bcdb26020926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa021995764a0c77f628e3411497239cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a> = false</td></tr>
+<tr class="separator:aa021995764a0c77f628e3411497239cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10aff294e2147e1cfe921bc2648b4399"><td class="memItemLeft" align="right" valign="top">vector&lt; pair&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a10aff294e2147e1cfe921bc2648b4399">lets</a></td></tr>
+<tr class="separator:a10aff294e2147e1cfe921bc2648b4399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3bd6940ab68cd10b31ac2ff2495ffab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlets__add.html">lets_add</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#aa3bd6940ab68cd10b31ac2ff2495ffab">_l__COUNTER__</a> {&quot;std&quot; &quot;::&quot;, &quot;&quot;}</td></tr>
+<tr class="separator:aa3bd6940ab68cd10b31ac2ff2495ffab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89b6ceb8bf54011eedd872b54361eca"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a> = <a class="el" href="structll.html">ll</a>(numeric_limits&lt;<a class="el" href="structll.html">ll</a>&gt;::max()) / 8</td></tr>
+<tr class="separator:ab89b6ceb8bf54011eedd872b54361eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5579d5eb92e5c3234831659c6d02cf"><td class="memItemLeft" align="right" valign="top">auto const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a4d5579d5eb92e5c3234831659c6d02cf">delim</a> = &quot;, &quot;s</td></tr>
+<tr class="separator:a4d5579d5eb92e5c3234831659c6d02cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989a29f26fc8591b33ecf33d4d2c7029"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a989a29f26fc8591b33ecf33d4d2c7029">tau</a> = 2 * 3.1415926535897932384626433L</td></tr>
+<tr class="separator:a989a29f26fc8591b33ecf33d4d2c7029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2f9ddbc7133cc3a48efbc824006bd3cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9ddbc7133cc3a48efbc824006bd3cb">&#9670;&nbsp;</a></span>al</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define al</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v</td><td>)</td>
+          <td>&#160;&#160;&#160;begin(v), end(v)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8a867e2e93131cb4d4afbedcd38245a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a867e2e93131cb4d4afbedcd38245a">&#9670;&nbsp;</a></span>cerr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cerr</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span> (<span class="keyword">false</span>)                                                                                 \</div>
+<div class="line">    cerr</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9d597f42af7d85fd96c46aa17cc610d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d597f42af7d85fd96c46aa17cc610d9">&#9670;&nbsp;</a></span>fo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define fo</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contains core files for the template </p>
+
+</div>
+</div>
+<a id="a7b724588414fb77283c807a1ad82313c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b724588414fb77283c807a1ad82313c">&#9670;&nbsp;</a></span>fr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define fr</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7796040cab730b2436f078c78d117cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7796040cab730b2436f078c78d117cab">&#9670;&nbsp;</a></span>import</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define import</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">using namespace </span>a;                                                                         \</div>
+<div class="line">    lets_count{#a <span class="stringliteral">&quot;::&quot;</span>, <span class="stringliteral">&quot;&quot;</span>};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a30d2d6ecdd50cafce635775b6e4e1cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d2d6ecdd50cafce635775b6e4e1cf2">&#9670;&nbsp;</a></span>let</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define let</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">using</span> a = __VA_ARGS__;                                                                     \</div>
+<div class="line">    lets_count{#__VA_ARGS__, #a};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5f81e19fe0a4c7a463bf91e49e641270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f81e19fe0a4c7a463bf91e49e641270">&#9670;&nbsp;</a></span>lets_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define lets_count&#160;&#160;&#160;<a class="el" href="structlets__add.html">lets_add</a> <a class="el" href="core_2all_8hpp.html#a396f7338a30cd5803df5ae220da88711">paste</a>(_l, __COUNTER__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a396f7338a30cd5803df5ae220da88711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396f7338a30cd5803df5ae220da88711">&#9670;&nbsp;</a></span>paste</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define paste</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="core_2all_8hpp.html#a38dec4d2a6700e0c88ced9eeebb3dfaa">paste2</a>(x, y)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38dec4d2a6700e0c88ced9eeebb3dfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dec4d2a6700e0c88ced9eeebb3dfaa">&#9670;&nbsp;</a></span>paste2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define paste2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;x##y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f10cc81a560bb73b2eb647dfb10c9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f10cc81a560bb73b2eb647dfb10c9db">&#9670;&nbsp;</a></span>rel_assert</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rel_assert</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad47194c03eba4b38147c9d01c0166802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47194c03eba4b38147c9d01c0166802">&#9670;&nbsp;</a></span>TODO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TODO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="core_2all_8hpp.html#a108d6c5c51dd46e82a62b262394f0242">WARN</a>(&quot;TODO: &quot; msg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a108d6c5c51dd46e82a62b262394f0242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108d6c5c51dd46e82a62b262394f0242">&#9670;&nbsp;</a></span>WARN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WARN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    [[deprecated(msg)]] <span class="keyword">auto</span> warn = []() { <a class="code" href="core_2all_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a>(msg); };                                 \</div>
+<div class="line">    warn();</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a71fb2247d044e41f5345bcdb26020926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71fb2247d044e41f5345bcdb26020926">&#9670;&nbsp;</a></span>clock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_2all_8hpp.html#a71fb2247d044e41f5345bcdb26020926">clock_</a> =  high_resolution_clock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6774acaa7fff278845893bd84e35525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6774acaa7fff278845893bd84e35525">&#9670;&nbsp;</a></span>com</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_2all_8hpp.html#ac6774acaa7fff278845893bd84e35525">com</a> =  complex&lt;double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e2e73e53fc509e05f252ef083503838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e2e73e53fc509e05f252ef083503838">&#9670;&nbsp;</a></span>ld</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a> =  long double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad54dde638d1ae3e9bb08956f539b1883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54dde638d1ae3e9bb08956f539b1883">&#9670;&nbsp;</a></span>ll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structll.html">ll</a> =  long long</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6bbe80dfafc6e30f518f3de1cafec50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6bbe80dfafc6e30f518f3de1cafec50">&#9670;&nbsp;</a></span>point</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_2all_8hpp.html#ae6bbe80dfafc6e30f518f3de1cafec50">point</a> =  complex&lt;<a class="el" href="structll.html">ll</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58e2677d80a09b5be0f0e56ef70d4507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e2677d80a09b5be0f0e56ef70d4507">&#9670;&nbsp;</a></span>pr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_2all_8hpp.html#a58e2677d80a09b5be0f0e56ef70d4507">pr</a> =  pair&lt;<a class="el" href="structll.html">ll</a>, <a class="el" href="structll.html">ll</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0b978e8ffc2c44656160a679f86e22a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b978e8ffc2c44656160a679f86e22a">&#9670;&nbsp;</a></span>prio_queue_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Comp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="core_2all_8hpp.html#ac0b978e8ffc2c44656160a679f86e22a">prio_queue_t</a> =  std::priority_queue&lt;T, vector&lt;T&gt;, Comp&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5114a4fed348a29fb92123470476b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5114a4fed348a29fb92123470476b1b">&#9670;&nbsp;</a></span>ull</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned long long <a class="el" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa3bd6940ab68cd10b31ac2ff2495ffab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3bd6940ab68cd10b31ac2ff2495ffab">&#9670;&nbsp;</a></span>_l__COUNTER__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlets__add.html">lets_add</a> _l__COUNTER__ {&quot;std&quot; &quot;::&quot;, &quot;&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa021995764a0c77f628e3411497239cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa021995764a0c77f628e3411497239cc">&#9670;&nbsp;</a></span>debug_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool debug_mode = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d5579d5eb92e5c3234831659c6d02cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5579d5eb92e5c3234831659c6d02cf">&#9670;&nbsp;</a></span>delim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto const delim = &quot;, &quot;s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Delimiter for debug output </p>
+
+</div>
+</div>
+<a id="ab89b6ceb8bf54011eedd872b54361eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89b6ceb8bf54011eedd872b54361eca">&#9670;&nbsp;</a></span>inf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto inf = <a class="el" href="structll.html">ll</a>(numeric_limits&lt;<a class="el" href="structll.html">ll</a>&gt;::max()) / 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Infinity </p>
+
+</div>
+</div>
+<a id="a10aff294e2147e1cfe921bc2648b4399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10aff294e2147e1cfe921bc2648b4399">&#9670;&nbsp;</a></span>lets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;pair&lt;string, string&gt; &gt; lets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    {<span class="stringliteral">&quot;__debug::&quot;</span>, <span class="stringliteral">&quot;&quot;</span>}, {<span class="stringliteral">&quot;const &quot;</span>, <span class="stringliteral">&quot;&quot;</span>}, {<span class="stringliteral">&quot;__cxx11::basic_string&lt;char&gt;&quot;</span>, <span class="stringliteral">&quot;string&quot;</span>}}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a989a29f26fc8591b33ecf33d4d2c7029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989a29f26fc8591b33ecf33d4d2c7029">&#9670;&nbsp;</a></span>tau</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto tau = 2 * 3.1415926535897932384626433L</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pi </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="acore_2all_8hpp_html_a7f10cc81a560bb73b2eb647dfb10c9db"><div class="ttname"><a href="core_2all_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a></div><div class="ttdeci">#define rel_assert(...)</div><div class="ttdef"><b>Definition:</b> all.hpp:60</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="core_2all_8hpp.html">all.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

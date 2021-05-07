@@ -6,20 +6,38 @@
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <includedby refid="test__bit_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/test_bit.hpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>bits/stdc++.h</label>
+      <node id="9">
+        <label>functional</label>
       </node>
-      <node id="5">
-        <label>experimental/source_location</label>
-      </node>
-      <node id="7">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+      <node id="13">
+        <label>queue</label>
       </node>
       <node id="4">
+        <label>cassert</label>
+      </node>
+      <node id="12">
+        <label>numeric</label>
+      </node>
+      <node id="23">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>unordered_set</label>
+      </node>
+      <node id="22">
         <label>experimental/iterator</label>
+      </node>
+      <node id="8">
+        <label>fstream</label>
       </node>
       <node id="2">
         <label>core/all.hpp</label>
@@ -32,14 +50,53 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>random</label>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/ds/bit.hpp</label>
@@ -47,30 +104,63 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="21">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>stack</label>
+      </node>
+      <node id="28">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="26">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="27">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="6">
+        <label>climits</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="17">
+        <label>thread</label>
+      </node>
+      <node id="18">
+        <label>type_traits</label>
+      </node>
+      <node id="15">
+        <label>set</label>
+      </node>
+      <node id="7">
+        <label>complex</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -107,21 +197,21 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight></codeline>
 <codeline lineno="8" refid="classBIT" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Mono</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">Op<sp/>=<sp/>plus&lt;&gt;&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBIT" kindref="compound">BIT</ref><sp/>{</highlight></codeline>
-<codeline lineno="11" refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Value&gt;<sp/><ref refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" kindref="member">arr</ref>;</highlight></codeline>
+<codeline lineno="11" refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;Value&gt;<sp/><ref refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" kindref="member">arr</ref>;</highlight></codeline>
 <codeline lineno="12" refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>MonoidOp<sp/><ref refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" kindref="member">op</ref>{};<sp/></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="15" refid="classBIT_1a6408bcee08d49c8ab90ac83bdba0f2f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classBIT_1a6408bcee08d49c8ab90ac83bdba0f2f1" kindref="member">BIT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>size_arg)</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" kindref="member">arr</ref>(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(size_arg)<sp/>+<sp/>1,<sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(MonoidOp{},<sp/>Value{}))<sp/>{}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" kindref="member">arr</ref>(<ref refid="namespaceutility_1a005fc5d8af9bba651f00c74372466b83" kindref="member">bit_ceil</ref>(size_arg)<sp/>+<sp/>1,<sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(MonoidOp{},<sp/>Value{}))<sp/>{}</highlight></codeline>
 <codeline lineno="18" refid="classBIT_1a495d58c744095867ad69123897c60700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Value<sp/><ref refid="classBIT_1a495d58c744095867ad69123897c60700" kindref="member">query</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>r)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(MonoidOp{},<sp/>Value{});</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>r;<sp/>r<sp/>-=<sp/><ref refid="classBIT_1afaa408fe21402732f980204b6211425d" kindref="member">get_len</ref>(r))<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/><ref refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" kindref="member">op</ref>(sum,<sp/><ref refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" kindref="member">arr</ref>[r]);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/><ref refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" kindref="member">op</ref>(sum,<sp/><ref refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" kindref="member">arr</ref>[r]);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="31" refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBIT_1a20ea8eb0ea2065179c756ec96417227f" kindref="member">update</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>idx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Value<sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(++idx;<sp/>idx<sp/>&lt;<sp/><ref refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" kindref="member">arr</ref>.size();<sp/>idx<sp/>+=<sp/><ref refid="classBIT_1afaa408fe21402732f980204b6211425d" kindref="member">get_len</ref>(idx))<sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" kindref="member">arr</ref>[idx]<sp/>=<sp/><ref refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" kindref="member">op</ref>(<ref refid="classBIT_1aa5a5572e0dfe58878ee2a10adfbab76e" kindref="member">arr</ref>[idx],<sp/>value);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(++idx;<sp/>idx<sp/>&lt;<sp/><ref refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" kindref="member">arr</ref>.size();<sp/>idx<sp/>+=<sp/><ref refid="classBIT_1afaa408fe21402732f980204b6211425d" kindref="member">get_len</ref>(idx))<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" kindref="member">arr</ref>[idx]<sp/>=<sp/><ref refid="classBIT_1a805ad548af6a5b423fc13749e6dacf6d" kindref="member">op</ref>(<ref refid="classBIT_1a9d071c0f10d6aa215511828b7099806b" kindref="member">arr</ref>[idx],<sp/>value);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>

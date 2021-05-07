@@ -1,6 +1,24 @@
 \hypertarget{core_2all_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/core/all.hpp File Reference}
 \label{core_2all_8hpp}\index{/home/ram/OmniTemplate/src/core/all.hpp@{/home/ram/OmniTemplate/src/core/all.hpp}}
-{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$experimental/iterator$>$}\newline
 {\ttfamily \#include $<$experimental/source\+\_\+location$>$}\newline
 {\ttfamily \#include \char`\"{}debug.\+hpp\char`\"{}}\newline
@@ -32,7 +50,7 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 \item 
 \#define \mbox{\hyperlink{core_2all_8hpp_a9d597f42af7d85fd96c46aa17cc610d9}{fo}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})
 \item 
-\#define \mbox{\hyperlink{core_2all_8hpp_a7b724588414fb77283c807a1ad82313c}{fr}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{test__compiled_8cpp_a438bd5fc0a79e42a6a2abb632203f925}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))
+\#define \mbox{\hyperlink{core_2all_8hpp_a7b724588414fb77283c807a1ad82313c}{fr}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a438bd5fc0a79e42a6a2abb632203f925}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))
 \item 
 \#define \mbox{\hyperlink{core_2all_8hpp_a2f9ddbc7133cc3a48efbc824006bd3cb}{al}}(v)~begin(v), end(v)
 \item 
@@ -40,13 +58,13 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 \item 
 \#define \mbox{\hyperlink{core_2all_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(msg)
 \item 
-\#define \mbox{\hyperlink{core_2all_8hpp_ad47194c03eba4b38147c9d01c0166802}{T\+O\+DO}}(msg)~\mbox{\hyperlink{test__compiled_8cpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(\char`\"{}T\+O\+D\+O\+: \char`\"{} msg)
+\#define \mbox{\hyperlink{core_2all_8hpp_ad47194c03eba4b38147c9d01c0166802}{T\+O\+DO}}(msg)~\mbox{\hyperlink{core_2all_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(\char`\"{}T\+O\+D\+O\+: \char`\"{} msg)
 \item 
 \#define \mbox{\hyperlink{core_2all_8hpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}{paste2}}(x,  y)~x\#\#y
 \item 
-\#define \mbox{\hyperlink{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}{paste}}(x,  y)~\mbox{\hyperlink{test__compiled_8cpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}{paste2}}(x, y)
+\#define \mbox{\hyperlink{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}{paste}}(x,  y)~\mbox{\hyperlink{core_2all_8hpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}{paste2}}(x, y)
 \item 
-\#define \mbox{\hyperlink{core_2all_8hpp_a5f81e19fe0a4c7a463bf91e49e641270}{lets\+\_\+count}}~\mbox{\hyperlink{structlets__add}{lets\+\_\+add}} \mbox{\hyperlink{test__compiled_8cpp_a396f7338a30cd5803df5ae220da88711}{paste}}(\+\_\+l, \+\_\+\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+\_\+)
+\#define \mbox{\hyperlink{core_2all_8hpp_a5f81e19fe0a4c7a463bf91e49e641270}{lets\+\_\+count}}~\mbox{\hyperlink{structlets__add}{lets\+\_\+add}} \mbox{\hyperlink{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}{paste}}(\+\_\+l, \+\_\+\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+\_\+)
 \item 
 \#define \mbox{\hyperlink{core_2all_8hpp_a30d2d6ecdd50cafce635775b6e4e1cf2}{let}}(a, ...)
 \item 
@@ -119,7 +137,7 @@ Contains core files for the template \mbox{\Hypertarget{core_2all_8hpp_a7b724588
 \index{all.hpp@{all.hpp}!fr@{fr}}
 \index{fr@{fr}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{fr}{fr}}
-{\footnotesize\ttfamily \#define fr(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{test__compiled_8cpp_a438bd5fc0a79e42a6a2abb632203f925}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))}
+{\footnotesize\ttfamily \#define fr(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a438bd5fc0a79e42a6a2abb632203f925}{rev}}(\mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}))}
 
 \mbox{\Hypertarget{core_2all_8hpp_a7796040cab730b2436f078c78d117cab}\label{core_2all_8hpp_a7796040cab730b2436f078c78d117cab}} 
 \index{all.hpp@{all.hpp}!import@{import}}
@@ -149,13 +167,13 @@ Contains core files for the template \mbox{\Hypertarget{core_2all_8hpp_a7b724588
 \index{all.hpp@{all.hpp}!lets\_count@{lets\_count}}
 \index{lets\_count@{lets\_count}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{lets\_count}{lets\_count}}
-{\footnotesize\ttfamily \#define lets\+\_\+count~\mbox{\hyperlink{structlets__add}{lets\+\_\+add}} \mbox{\hyperlink{test__compiled_8cpp_a396f7338a30cd5803df5ae220da88711}{paste}}(\+\_\+l, \+\_\+\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+\_\+)}
+{\footnotesize\ttfamily \#define lets\+\_\+count~\mbox{\hyperlink{structlets__add}{lets\+\_\+add}} \mbox{\hyperlink{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}{paste}}(\+\_\+l, \+\_\+\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+\_\+)}
 
 \mbox{\Hypertarget{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}\label{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}} 
 \index{all.hpp@{all.hpp}!paste@{paste}}
 \index{paste@{paste}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{paste}{paste}}
-{\footnotesize\ttfamily \#define paste(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~\mbox{\hyperlink{test__compiled_8cpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}{paste2}}(x, y)}
+{\footnotesize\ttfamily \#define paste(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~\mbox{\hyperlink{core_2all_8hpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}{paste2}}(x, y)}
 
 \mbox{\Hypertarget{core_2all_8hpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}\label{core_2all_8hpp_a38dec4d2a6700e0c88ced9eeebb3dfaa}} 
 \index{all.hpp@{all.hpp}!paste2@{paste2}}
@@ -173,7 +191,7 @@ Contains core files for the template \mbox{\Hypertarget{core_2all_8hpp_a7b724588
 \index{all.hpp@{all.hpp}!TODO@{TODO}}
 \index{TODO@{TODO}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{TODO}{TODO}}
-{\footnotesize\ttfamily \#define T\+O\+DO(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~\mbox{\hyperlink{test__compiled_8cpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(\char`\"{}T\+O\+D\+O\+: \char`\"{} msg)}
+{\footnotesize\ttfamily \#define T\+O\+DO(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~\mbox{\hyperlink{core_2all_8hpp_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+RN}}(\char`\"{}T\+O\+D\+O\+: \char`\"{} msg)}
 
 \mbox{\Hypertarget{core_2all_8hpp_a108d6c5c51dd46e82a62b262394f0242}\label{core_2all_8hpp_a108d6c5c51dd46e82a62b262394f0242}} 
 \index{all.hpp@{all.hpp}!WARN@{WARN}}

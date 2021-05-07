@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('range_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">range.hpp</div>  </div>
@@ -169,12 +195,13 @@ $(function() {
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="astructint__it_html_a85eb0ee7f734e93b64a6432da5c2ab56"><div class="ttname"><a href="structint__it.html#a85eb0ee7f734e93b64a6432da5c2ab56">int_it::operator--</a></div><div class="ttdeci">int_it operator--(int)</div><div class="ttdef"><b>Definition:</b> range.hpp:24</div></div>
 <div class="ttc" id="astructrange_html_ad05dc640fa5b15e5bcffec3e6e195ab9"><div class="ttname"><a href="structrange.html#ad05dc640fa5b15e5bcffec3e6e195ab9">range::range</a></div><div class="ttdeci">range(T ed_)</div><div class="ttdef"><b>Definition:</b> range.hpp:43</div></div>
 <div class="ttc" id="astructrange_html_ae3f4c53575e4bd9a8ddfa92c3646c7b5"><div class="ttname"><a href="structrange.html#ae3f4c53575e4bd9a8ddfa92c3646c7b5">range::ed</a></div><div class="ttdeci">T ed</div><div class="ttdef"><b>Definition:</b> range.hpp:42</div></div>
 <div class="ttc" id="astructrange_html_acc39e7240d6dd0d4f4069a610e0c366b"><div class="ttname"><a href="structrange.html#acc39e7240d6dd0d4f4069a610e0c366b">range::range</a></div><div class="ttdeci">range(T const &amp;bg_, T const &amp;ed_)</div><div class="ttdef"><b>Definition:</b> range.hpp:44</div></div>
 <div class="ttc" id="arange_8hpp_html_a8b072587149274d1639908e4edb23d3d"><div class="ttname"><a href="range_8hpp.html#a8b072587149274d1639908e4edb23d3d">operator-</a></div><div class="ttdeci">int_it&lt; T &gt; operator-(int_it&lt; T &gt; const &amp;a)</div><div class="ttdef"><b>Definition:</b> range.hpp:65</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:38</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:57</div></div>
 <div class="ttc" id="astructint__it_html_a2892123a79f6f13fa6a9f16e8f5f207b"><div class="ttname"><a href="structint__it.html#a2892123a79f6f13fa6a9f16e8f5f207b">int_it::operator++</a></div><div class="ttdeci">int_it operator++(int)</div><div class="ttdef"><b>Definition:</b> range.hpp:29</div></div>
 <div class="ttc" id="arange_8hpp_html_a2e6b26fca3ba13b074816e7b97f8245d"><div class="ttname"><a href="range_8hpp.html#a2e6b26fca3ba13b074816e7b97f8245d">operator^</a></div><div class="ttdeci">auto operator^(range&lt; T &gt; const &amp;a, range&lt; T &gt; const &amp;b)</div><div class="ttdef"><b>Definition:</b> range.hpp:82</div></div>
 <div class="ttc" id="astructint__it_html"><div class="ttname"><a href="structint__it.html">int_it</a></div><div class="ttdef"><b>Definition:</b> range.hpp:9</div></div>
@@ -197,7 +224,7 @@ $(function() {
 <div class="ttc" id="astructint__it_html_a3a2c84ca5c1870c3047e052b5f5b3395"><div class="ttname"><a href="structint__it.html#a3a2c84ca5c1870c3047e052b5f5b3395">int_it::operator-</a></div><div class="ttdeci">ll operator-(int_it&lt; T &gt; const &amp;y) const</div><div class="ttdef"><b>Definition:</b> range.hpp:21</div></div>
 <div class="ttc" id="astructint__it_html_ad986a324b4a8e1c5a8fca9e411d6c078"><div class="ttname"><a href="structint__it.html#ad986a324b4a8e1c5a8fca9e411d6c078">int_it::iterator_category</a></div><div class="ttdeci">random_access_iterator_tag iterator_category</div><div class="ttdef"><b>Definition:</b> range.hpp:10</div></div>
 <div class="ttc" id="astructrange_html"><div class="ttname"><a href="structrange.html">range</a></div><div class="ttdef"><b>Definition:</b> range.hpp:41</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:80</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:99</div></div>
 <div class="ttc" id="astructint__it_html_afda2c78b3b1431cd325a63e47d5b4f9b"><div class="ttname"><a href="structint__it.html#afda2c78b3b1431cd325a63e47d5b4f9b">int_it::operator--</a></div><div class="ttdeci">int_it operator--()</div><div class="ttdef"><b>Definition:</b> range.hpp:23</div></div>
 <div class="ttc" id="arange_8hpp_html_a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc"><div class="ttname"><a href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc">over</a></div><div class="ttdeci">@ over</div><div class="ttdef"><b>Definition:</b> range.hpp:66</div></div>
 <div class="ttc" id="arange_8hpp_html_acb6120c8a8224e1d4465bf980bc01d07"><div class="ttname"><a href="range_8hpp.html#acb6120c8a8224e1d4465bf980bc01d07">operator+</a></div><div class="ttdeci">int_it&lt; T &gt; operator+(int_it&lt; T &gt; const &amp;a, int_it&lt; T &gt; const &amp;b)</div><div class="ttdef"><b>Definition:</b> range.hpp:62</div></div>
@@ -211,10 +238,13 @@ $(function() {
 <div class="ttc" id="arange_8hpp_html_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e"><div class="ttname"><a href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e">cont</a></div><div class="ttdeci">@ cont</div><div class="ttdef"><b>Definition:</b> range.hpp:66</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="range_8hpp.html">range.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

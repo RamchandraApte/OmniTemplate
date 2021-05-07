@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('permutation_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b953371115990fc405ce78459a213a8f.html">combinatorics</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">permutation.hpp</div>  </div>
@@ -113,48 +139,52 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="namespacepermutation.html#a4c6e81c9c25d20631e5b1a63edeedb74">   50</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#a4c6e81c9c25d20631e5b1a63edeedb74">identity</a>(multiplies&lt;&gt;, <span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>) { <span class="keywordflow">return</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a>(<a class="code" href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">ssize</a>(<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>)); }</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacepermutation.html#a68665163bd10ce50e6606b1babe2e041">   54</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#a68665163bd10ce50e6606b1babe2e041">operator*</a>(<span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;b) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    assert(a.size() == b.size());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> c(a.size());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, a.size()) { c[i] = a[b[i]]; }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> c;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="namespacepermutation.html#a68e876731be5159eaefd46b1fb8fe031">   67</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#a68e876731be5159eaefd46b1fb8fe031">invert</a>(multiplies&lt;&gt;, <span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;p) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> inv(p.size());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, p.size()) { inv[p[i]] = i; }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> inv;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">   79</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">power</a>(<span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>, <a class="code" href="structll.html">ll</a> n) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a>(<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>.to_cycles(), <a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>.size(), n);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace permutation</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacepermutation.html">permutation</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacepermutation.html#a4c6e81c9c25d20631e5b1a63edeedb74">   52</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#a4c6e81c9c25d20631e5b1a63edeedb74">identity</a>(multiplies&lt;&gt;, <span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>) { <span class="keywordflow">return</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a>(<a class="code" href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">ssize</a>(<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>)); }</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespacepermutation.html#a68665163bd10ce50e6606b1babe2e041">   56</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#a68665163bd10ce50e6606b1babe2e041">operator*</a>(<span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;a, <span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;b) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    assert(a.size() == b.size());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> c(a.size());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, a.size()) { c[i] = a[b[i]]; }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="namespacepermutation.html#a68e876731be5159eaefd46b1fb8fe031">   69</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#a68e876731be5159eaefd46b1fb8fe031">invert</a>(multiplies&lt;&gt;, <span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;p) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> inv(p.size());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, p.size()) { inv[p[i]] = i; }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> inv;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">   81</a></span>&#160;<a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> <a class="code" href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">power</a>(<span class="keyword">const</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>, <a class="code" href="structll.html">ll</a> n) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classpermutation_1_1Permutation.html">Permutation</a>(<a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>.to_cycles(), <a class="code" href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">perm</a>.size(), n);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">// namespace permutation</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacepermutation.html">permutation</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="aclasspermutation_1_1Permutation_html"><div class="ttname"><a href="classpermutation_1_1Permutation.html">permutation::Permutation</a></div><div class="ttdoc">Permutation class.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:13</div></div>
 <div class="ttc" id="aclasspermutation_1_1Permutation_html_a7ca9cba1f9e0ee8243e3c69848479860"><div class="ttname"><a href="classpermutation_1_1Permutation.html#a7ca9cba1f9e0ee8243e3c69848479860">permutation::Permutation::Permutation</a></div><div class="ttdeci">Permutation(ll n)</div><div class="ttdef"><b>Definition:</b> permutation.hpp:16</div></div>
 <div class="ttc" id="aclasspermutation_1_1Permutation_html_a0b7480d74a8c5d9db8da2151638b4048"><div class="ttname"><a href="classpermutation_1_1Permutation.html#a0b7480d74a8c5d9db8da2151638b4048">permutation::Permutation::Permutation</a></div><div class="ttdeci">Permutation(const vector&lt; vector&lt; ll &gt;&gt; &amp;cycles, const ll n, const ll shift=1)</div><div class="ttdef"><b>Definition:</b> permutation.hpp:40</div></div>
 <div class="ttc" id="aclasspermutation_1_1Permutation_html_af8c149f764bad9b01291d966d1719102"><div class="ttname"><a href="classpermutation_1_1Permutation.html#af8c149f764bad9b01291d966d1719102">permutation::Permutation::Permutation</a></div><div class="ttdeci">Permutation(const initializer_list&lt; ll &gt; &amp;arr)</div><div class="ttdef"><b>Definition:</b> permutation.hpp:17</div></div>
-<div class="ttc" id="anamespacepermutation_html_ade64590f0931d6f5d80521cdf52e4bed"><div class="ttname"><a href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">permutation::power</a></div><div class="ttdeci">Permutation power(const Permutation &amp;perm, ll n)</div><div class="ttdoc">Returns in linear-time, perm^n using cycle-decomposition.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:79</div></div>
-<div class="ttc" id="anamespacepermutation_html_a68e876731be5159eaefd46b1fb8fe031"><div class="ttname"><a href="namespacepermutation.html#a68e876731be5159eaefd46b1fb8fe031">permutation::invert</a></div><div class="ttdeci">Permutation invert(multiplies&lt;&gt;, const Permutation &amp;p)</div><div class="ttdoc">Inverts a permutation.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:67</div></div>
+<div class="ttc" id="anamespacepermutation_html_ade64590f0931d6f5d80521cdf52e4bed"><div class="ttname"><a href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">permutation::power</a></div><div class="ttdeci">Permutation power(const Permutation &amp;perm, ll n)</div><div class="ttdoc">Returns in linear-time, perm^n using cycle-decomposition.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:81</div></div>
+<div class="ttc" id="anamespacepermutation_html_a68e876731be5159eaefd46b1fb8fe031"><div class="ttname"><a href="namespacepermutation.html#a68e876731be5159eaefd46b1fb8fe031">permutation::invert</a></div><div class="ttdeci">Permutation invert(multiplies&lt;&gt;, const Permutation &amp;p)</div><div class="ttdoc">Inverts a permutation.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:69</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="astructutility_1_1with_html"><div class="ttname"><a href="structutility_1_1with.html">utility::with</a></div><div class="ttdoc">Sets v to new_ temporary while with object is alive.</div><div class="ttdef"><b>Definition:</b> utility.hpp:5</div></div>
-<div class="ttc" id="anamespacepermutation_html_a68665163bd10ce50e6606b1babe2e041"><div class="ttname"><a href="namespacepermutation.html#a68665163bd10ce50e6606b1babe2e041">permutation::operator*</a></div><div class="ttdeci">Permutation operator*(const Permutation &amp;a, const Permutation &amp;b)</div><div class="ttdoc">Returns the composition of permutations a and b, so that ret[i] = a[b[i]].</div><div class="ttdef"><b>Definition:</b> permutation.hpp:54</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="anamespacepermutation_html_a68665163bd10ce50e6606b1babe2e041"><div class="ttname"><a href="namespacepermutation.html#a68665163bd10ce50e6606b1babe2e041">permutation::operator*</a></div><div class="ttdeci">Permutation operator*(const Permutation &amp;a, const Permutation &amp;b)</div><div class="ttdoc">Returns the composition of permutations a and b, so that ret[i] = a[b[i]].</div><div class="ttdef"><b>Definition:</b> permutation.hpp:56</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html">modulo_namespace::modulo</a></div><div class="ttdef"><b>Definition:</b> modulo.hpp:41</div></div>
 <div class="ttc" id="aclasspermutation_1_1Permutation_html_a1ac3027ff7bee17edbbb2f4f956f665b"><div class="ttname"><a href="classpermutation_1_1Permutation.html#a1ac3027ff7bee17edbbb2f4f956f665b">permutation::Permutation::to_cycles</a></div><div class="ttdeci">vector&lt; vector&lt; ll &gt; &gt; to_cycles() const</div><div class="ttdoc">Returns the cycle decomposition of the permutation.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:23</div></div>
 <div class="ttc" id="anamespacecombinatorics_html_a7c355be8fa586494f280768dc777dede"><div class="ttname"><a href="namespacecombinatorics.html#a7c355be8fa586494f280768dc777dede">combinatorics::perm</a></div><div class="ttdeci">T perm(const T a, const T b)</div><div class="ttdef"><b>Definition:</b> combinatorics.hpp:5</div></div>
 <div class="ttc" id="anamespacepermutation_html"><div class="ttname"><a href="namespacepermutation.html">permutation</a></div><div class="ttdoc">Permutation namespace.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:8</div></div>
 <div class="ttc" id="anamespaceutility_html_adafa966f1819210cf795fff85b2a40c5"><div class="ttname"><a href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">utility::ssize</a></div><div class="ttdeci">ll ssize(const Cont &amp;cont)</div><div class="ttdef"><b>Definition:</b> utility.hpp:131</div></div>
-<div class="ttc" id="anamespacepermutation_html_a4c6e81c9c25d20631e5b1a63edeedb74"><div class="ttname"><a href="namespacepermutation.html#a4c6e81c9c25d20631e5b1a63edeedb74">permutation::identity</a></div><div class="ttdeci">Permutation identity(multiplies&lt;&gt;, const Permutation &amp;perm)</div><div class="ttdef"><b>Definition:</b> permutation.hpp:50</div></div>
+<div class="ttc" id="anamespacepermutation_html_a4c6e81c9c25d20631e5b1a63edeedb74"><div class="ttname"><a href="namespacepermutation.html#a4c6e81c9c25d20631e5b1a63edeedb74">permutation::identity</a></div><div class="ttdeci">Permutation identity(multiplies&lt;&gt;, const Permutation &amp;perm)</div><div class="ttdoc">Returns the identity permutation.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:52</div></div>
 <div class="ttc" id="amodulo_8hpp_html"><div class="ttname"><a href="modulo_8hpp.html">modulo.hpp</a></div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b953371115990fc405ce78459a213a8f.html">combinatorics</a></li><li class="navelem"><a class="el" href="permutation_8hpp.html">permutation.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

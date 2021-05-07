@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,17 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('globals_vars.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,46 +102,38 @@ $(function() {
 &#160;<ul>
 <li>_l__COUNTER__
 : <a class="el" href="core_2all_8hpp.html#aa3bd6940ab68cd10b31ac2ff2495ffab">all.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#aa3bd6940ab68cd10b31ac2ff2495ffab">test_compiled.cpp</a>
 </li>
 <li>debug_mode
 : <a class="el" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">all.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#aa021995764a0c77f628e3411497239cc">test_compiled.cpp</a>
 </li>
 <li>delim
 : <a class="el" href="core_2all_8hpp.html#a4d5579d5eb92e5c3234831659c6d02cf">all.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a4d5579d5eb92e5c3234831659c6d02cf">test_compiled.cpp</a>
 </li>
 <li>divs
 : <a class="el" href="number__theory_8hpp.html#a1463d536aba4bb122d7fe13985968590">number_theory.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a1463d536aba4bb122d7fe13985968590">test_compiled.cpp</a>
-</li>
-<li>in
-: <a class="el" href="test__compiled_8cpp.html#acf30f45bb690161eda6eb343b019d6e7">test_compiled.cpp</a>
 </li>
 <li>inf
 : <a class="el" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">all.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#ab89b6ceb8bf54011eedd872b54361eca">test_compiled.cpp</a>
 </li>
 <li>lets
 : <a class="el" href="core_2all_8hpp.html#a10aff294e2147e1cfe921bc2648b4399">all.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a10aff294e2147e1cfe921bc2648b4399">test_compiled.cpp</a>
 </li>
 <li>multitest
 : <a class="el" href="test_8cpp.html#a5da77c5a58b4193f997d91f2130efd53">test.cpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a5da77c5a58b4193f997d91f2130efd53">test_compiled.cpp</a>
 </li>
 <li>tau
 : <a class="el" href="core_2all_8hpp.html#a989a29f26fc8591b33ecf33d4d2c7029">all.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a989a29f26fc8591b33ecf33d4d2c7029">test_compiled.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

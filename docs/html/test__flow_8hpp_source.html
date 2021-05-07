@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('test__flow_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test_flow.hpp</div>  </div>
@@ -106,7 +132,7 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        assert(<a class="code" href="namespaceflow.html#a6fb3adf4fcf060a6ce41b19c6c5ac5b1">total_flow</a>(algo(<a class="code" href="namespaceflow.html">flow</a>)) == 7);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespaceflow_1_1test.html#a32a94ae42f633485db361cf67447df2f">   30</a></span>&#160;<a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <a class="code" href="namespaceflow_1_1test.html#a32a94ae42f633485db361cf67447df2f">random_flow</a>() {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespaceflow_1_1test.html#a66e8ca51e96f06ce0369f386cab9ac25">   30</a></span>&#160;<a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <a class="code" href="namespaceflow_1_1test.html#a66e8ca51e96f06ce0369f386cab9ac25">random_flow</a>() {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> n = 2 + (<a class="code" href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">reng</a>() % 30);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;ll&gt;</a> <a class="code" href="namespaceflow.html">flow</a>(n, n);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i2, n) {</div>
@@ -123,38 +149,42 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Func1, <span class="keyword">typename</span> Func2&gt;</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespaceflow_1_1test.html#ae4d5bb4d481a3e83a36a3797ff8f782c">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceflow_1_1test.html#ae4d5bb4d481a3e83a36a3797ff8f782c">test_compare_flow</a>(<span class="keyword">const</span> Func1 &amp;algo1, <span class="keyword">const</span> Func2 &amp;algo2, <a class="code" href="structll.html">ll</a> n_it = 100) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, n_it) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="namespaceflow.html">flow</a> = <a class="code" href="namespaceflow_1_1test.html#a32a94ae42f633485db361cf67447df2f">random_flow</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="namespaceflow.html">flow</a> = <a class="code" href="namespaceflow_1_1test.html#a66e8ca51e96f06ce0369f386cab9ac25">random_flow</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">// FIXME generated flow diff?</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        assert(<a class="code" href="namespaceflow.html#a6fb3adf4fcf060a6ce41b19c6c5ac5b1">total_flow</a>(algo1(<a class="code" href="namespaceflow.html">flow</a>)) == <a class="code" href="namespaceflow.html#a6fb3adf4fcf060a6ce41b19c6c5ac5b1">total_flow</a>(algo2(<a class="code" href="namespaceflow.html">flow</a>)));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespaceflow_1_1test.html#ae0cbf7db821b857cafff43a95f252818">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceflow_1_1test.html#ae0cbf7db821b857cafff43a95f252818">test_flow</a>() {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="namespaceflow_1_1test.html#a736d0df4682738fa9d4502d37fda8352">test_flow_algo</a>(<a class="code" href="namespaceflow.html#a019c8d89498d267345fd2f560909fa7a">edmond_karp</a>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="namespaceflow_1_1test.html#a736d0df4682738fa9d4502d37fda8352">test_flow_algo</a>(<a class="code" href="namespaceflow.html#ab162ee0224ccca8ae082128f2825d92c">dinic</a>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="namespaceflow_1_1test.html#ae4d5bb4d481a3e83a36a3797ff8f782c">test_compare_flow</a>(<a class="code" href="namespaceflow.html#a019c8d89498d267345fd2f560909fa7a">edmond_karp</a>, <a class="code" href="namespaceflow.html#ab162ee0224ccca8ae082128f2825d92c">dinic</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="namespaceflow_1_1test.html#a736d0df4682738fa9d4502d37fda8352">test_flow_algo</a>(<a class="code" href="namespaceflow.html#a724fa814b55772a3c6ba9254b8403e70">edmond_karp</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="namespaceflow_1_1test.html#a736d0df4682738fa9d4502d37fda8352">test_flow_algo</a>(<a class="code" href="namespaceflow.html#ab1878f3966f553be99c58d55aa46709e">dinic</a>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="namespaceflow_1_1test.html#ae4d5bb4d481a3e83a36a3797ff8f782c">test_compare_flow</a>(<a class="code" href="namespaceflow.html#a724fa814b55772a3c6ba9254b8403e70">edmond_karp</a>, <a class="code" href="namespaceflow.html#ab1878f3966f553be99c58d55aa46709e">dinic</a>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">// namespace flow::test</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceflow_1_1test.html">flow::test</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespaceflow_1_1test_html_a736d0df4682738fa9d4502d37fda8352"><div class="ttname"><a href="namespaceflow_1_1test.html#a736d0df4682738fa9d4502d37fda8352">flow::test::test_flow_algo</a></div><div class="ttdeci">void test_flow_algo(const Func &amp;algo)</div><div class="ttdef"><b>Definition:</b> test_flow.hpp:4</div></div>
 <div class="ttc" id="anamespaceflow_html_a6fb3adf4fcf060a6ce41b19c6c5ac5b1"><div class="ttname"><a href="namespaceflow.html#a6fb3adf4fcf060a6ce41b19c6c5ac5b1">flow::total_flow</a></div><div class="ttdeci">ll total_flow(const matrix&lt; ll &gt; &amp;flow)</div><div class="ttdef"><b>Definition:</b> flow.hpp:159</div></div>
 <div class="ttc" id="anamespaceflow_1_1test_html"><div class="ttname"><a href="namespaceflow_1_1test.html">flow::test</a></div><div class="ttdef"><b>Definition:</b> test_flow.hpp:3</div></div>
 <div class="ttc" id="anamespaceutility_html_a7fea553f6f915aa6c2affe79637d9b9f"><div class="ttname"><a href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">utility::reng</a></div><div class="ttdeci">default_random_engine reng</div><div class="ttdef"><b>Definition:</b> utility.hpp:147</div></div>
 <div class="ttc" id="anamespaceflow_html"><div class="ttname"><a href="namespaceflow.html">flow</a></div><div class="ttdef"><b>Definition:</b> flow.hpp:5</div></div>
 <div class="ttc" id="aflow_8hpp_html"><div class="ttname"><a href="flow_8hpp.html">flow.hpp</a></div></div>
-<div class="ttc" id="anamespaceflow_html_ab162ee0224ccca8ae082128f2825d92c"><div class="ttname"><a href="namespaceflow.html#ab162ee0224ccca8ae082128f2825d92c">flow::dinic</a></div><div class="ttdeci">matrix&lt; ll &gt; dinic(const matrix&lt; ll &gt; &amp;capacity)</div><div class="ttdef"><b>Definition:</b> flow.hpp:62</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
-<div class="ttc" id="anamespaceflow_html_a019c8d89498d267345fd2f560909fa7a"><div class="ttname"><a href="namespaceflow.html#a019c8d89498d267345fd2f560909fa7a">flow::edmond_karp</a></div><div class="ttdeci">matrix&lt; ll &gt; edmond_karp(const matrix&lt; ll &gt; &amp;capacity)</div><div class="ttdef"><b>Definition:</b> flow.hpp:14</div></div>
-<div class="ttc" id="anamespaceflow_1_1test_html_a32a94ae42f633485db361cf67447df2f"><div class="ttname"><a href="namespaceflow_1_1test.html#a32a94ae42f633485db361cf67447df2f">flow::test::random_flow</a></div><div class="ttdeci">matrix&lt; ll &gt; random_flow()</div><div class="ttdef"><b>Definition:</b> test_flow.hpp:30</div></div>
+<div class="ttc" id="anamespaceflow_html_ab1878f3966f553be99c58d55aa46709e"><div class="ttname"><a href="namespaceflow.html#ab1878f3966f553be99c58d55aa46709e">flow::dinic</a></div><div class="ttdeci">matrix&lt; ll &gt; dinic(const matrix&lt; ll &gt; &amp;capacity)</div><div class="ttdef"><b>Definition:</b> flow.hpp:62</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
+<div class="ttc" id="anamespaceflow_html_a724fa814b55772a3c6ba9254b8403e70"><div class="ttname"><a href="namespaceflow.html#a724fa814b55772a3c6ba9254b8403e70">flow::edmond_karp</a></div><div class="ttdeci">matrix&lt; ll &gt; edmond_karp(const matrix&lt; ll &gt; &amp;capacity)</div><div class="ttdef"><b>Definition:</b> flow.hpp:14</div></div>
 <div class="ttc" id="anamespaceflow_1_1test_html_ae4d5bb4d481a3e83a36a3797ff8f782c"><div class="ttname"><a href="namespaceflow_1_1test.html#ae4d5bb4d481a3e83a36a3797ff8f782c">flow::test::test_compare_flow</a></div><div class="ttdeci">void test_compare_flow(const Func1 &amp;algo1, const Func2 &amp;algo2, ll n_it=100)</div><div class="ttdef"><b>Definition:</b> test_flow.hpp:45</div></div>
 <div class="ttc" id="astructlinear__algebra_1_1matrix_html"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix</a></div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:9</div></div>
 <div class="ttc" id="anamespaceflow_1_1test_html_ae0cbf7db821b857cafff43a95f252818"><div class="ttname"><a href="namespaceflow_1_1test.html#ae0cbf7db821b857cafff43a95f252818">flow::test::test_flow</a></div><div class="ttdeci">void test_flow()</div><div class="ttdef"><b>Definition:</b> test_flow.hpp:52</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
+<div class="ttc" id="anamespaceflow_1_1test_html_a66e8ca51e96f06ce0369f386cab9ac25"><div class="ttname"><a href="namespaceflow_1_1test.html#a66e8ca51e96f06ce0369f386cab9ac25">flow::test::random_flow</a></div><div class="ttdeci">matrix&lt; ll &gt; random_flow()</div><div class="ttdef"><b>Definition:</b> test_flow.hpp:30</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li><li class="navelem"><a class="el" href="test__flow_8hpp.html">test_flow.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

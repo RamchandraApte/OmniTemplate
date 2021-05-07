@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('test__sparse__table_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test_sparse_table.hpp</div>  </div>
@@ -88,7 +114,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(start, data.size()) {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(end, start, data.size()) {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            assert(sp.query(start, end) ==</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                   accumulate(begin(data) + start, begin(data) + end,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                   <a class="code" href="namespaceutility.html#a547ec88ecb50fe12150a8d293de2ce75">accumulate</a>(begin(data) + start, begin(data) + end,</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                      <a class="code" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a>(Monoid{}, T{}), Monoid{}));</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
@@ -103,20 +129,25 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <span class="comment">// namespace sparse_table::test</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesparse__table_1_1test.html">sparse_table::test</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="asparse__table_8hpp_html"><div class="ttname"><a href="sparse__table_8hpp.html">sparse_table.hpp</a></div></div>
 <div class="ttc" id="anamespacesparse__table_1_1test_html_a274f88cabaff31f12dbb19ed28eb1bb7"><div class="ttname"><a href="namespacesparse__table_1_1test.html#a274f88cabaff31f12dbb19ed28eb1bb7">sparse_table::test::test_sparse_table_impl</a></div><div class="ttdeci">void test_sparse_table_impl()</div><div class="ttdef"><b>Definition:</b> test_sparse_table.hpp:6</div></div>
 <div class="ttc" id="anamespacelinear__algebra_html_aac11793366a8aa7d2396775fdb1ba8ca"><div class="ttname"><a href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">linear_algebra::identity</a></div><div class="ttdeci">auto identity(const plus&lt;&gt;, const matrix&lt; T &gt; &amp;mat)</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:39</div></div>
 <div class="ttc" id="astructutility_1_1with_html"><div class="ttname"><a href="structutility_1_1with.html">utility::with</a></div><div class="ttdoc">Sets v to new_ temporary while with object is alive.</div><div class="ttdef"><b>Definition:</b> utility.hpp:5</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="anamespacesparse__table_1_1test_html"><div class="ttname"><a href="namespacesparse__table_1_1test.html">sparse_table::test</a></div><div class="ttdef"><b>Definition:</b> test_sparse_table.hpp:4</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:80</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:99</div></div>
+<div class="ttc" id="anamespaceutility_html_a547ec88ecb50fe12150a8d293de2ce75"><div class="ttname"><a href="namespaceutility.html#a547ec88ecb50fe12150a8d293de2ce75">utility::accumulate</a></div><div class="ttdeci">decltype(auto) accumulate(InputIt a, InputIt b)</div><div class="ttdef"><b>Definition:</b> utility.hpp:169</div></div>
 <div class="ttc" id="anamespacesparse__table_1_1test_html_ad6ec7466ef06bcb50a79ee26c4a05db0"><div class="ttname"><a href="namespacesparse__table_1_1test.html#ad6ec7466ef06bcb50a79ee26c4a05db0">sparse_table::test::test_sparse_table</a></div><div class="ttdeci">void test_sparse_table()</div><div class="ttdef"><b>Definition:</b> test_sparse_table.hpp:17</div></div>
 <div class="ttc" id="amodulo_8hpp_html"><div class="ttname"><a href="modulo_8hpp.html">modulo.hpp</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li><li class="navelem"><a class="el" href="test__sparse__table_8hpp.html">test_sparse_table.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

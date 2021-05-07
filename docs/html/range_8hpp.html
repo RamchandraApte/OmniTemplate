@@ -1,233 +1,563 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>/home/ram/OmniTemplate/src/core/range.hpp file | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
-  <link rel="icon" href="favicon-light.png" type="image/png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#cb4b16" />
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OmniTemplate: /home/ram/OmniTemplate/src/core/range.hpp File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
-      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
-        </svg></a>
-        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
-        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
-      </div>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="3">
-            <li><a href="annotated.html">Classes</a></li>
-            <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <use href="#m-doc-search-icon-path" />
-            </svg></a></li>
-          </ol>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">OmniTemplate
+   </div>
+   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
         </div>
-      </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-</nav></header>
-<main><article>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <h1>
-          <span class="m-breadcrumb"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">/home/ram/OmniTemplate/src</a>/</span><span class="m-breadcrumb"><a href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a>/</span>range.hpp <span class="m-thin">file</span>
-        </h1>
-        <p><span></span></p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#nested-classes">Classes</a></li>
-                <li><a href="#enum-members">Enums</a></li>
-                <li><a href="#typedef-members">Typedefs</a></li>
-                <li><a href="#func-members">Functions</a></li>
-                <li><a href="#define-members">Defines</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              struct <a href="structit__base.html" class="m-doc">it_base</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              struct <a href="structint__it.html" class="m-doc">int_it</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              struct <a href="structrange.html" class="m-doc">range</a>
-            </dt>
-            <dd></dd>
-          </dl>
-        </section>
-        <section id="enum-members">
-          <h2><a href="#enum-members">Enums</a></h2>
-          <dl class="m-doc">
-            <dt id="a3642ae4ffe47e0d16c399aead9674f78">
-              <span class="m-doc-wrap-bumper">enum <a href="#a3642ae4ffe47e0d16c399aead9674f78" class="m-doc-self">isect</a> { </span><span class="m-doc-wrap"><a href="#a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" class="m-doc">null</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" class="m-doc">dis</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" class="m-doc">over</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" class="m-doc">cont</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" class="m-doc">eq</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4" class="m-doc">null</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536" class="m-doc">dis</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc" class="m-doc">over</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e" class="m-doc">cont</a>,
-              <a href="#a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015" class="m-doc">eq</a> }</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="typedef-members">
-          <h2><a href="#typedef-members">Typedefs</a></h2>
-          <dl class="m-doc">
-            <dt id="a6288a170c5a67a2c0b45c858a043722a">
-              using <a href="#a6288a170c5a67a2c0b45c858a043722a" class="m-doc-self">ra</a> = <a href="structrange.html" class="m-doc">range</a>&lt;<a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;<a href="structll.html" class="m-doc">ll</a>&gt;&gt;
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="func-members">
-          <h2><a href="#func-members">Functions</a></h2>
-          <dl class="m-doc">
-            <dt id="a2a9660e705c73071a9c68c86e5e92e29">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a2a9660e705c73071a9c68c86e5e92e29" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a,
-              <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="adf37877debb40c87ce158743d128a8df">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#adf37877debb40c87ce158743d128a8df" class="m-doc-self">operator&lt;</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a,
-              <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a5b1fcbc62cc963f6ab2598b13f114dd8">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a5b1fcbc62cc963f6ab2598b13f114dd8" class="m-doc-self">operator&lt;</a>(</span><span class="m-doc-wrap"><a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; a,
-              <a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a295cbb09d532a8eeeaab519fd1db0928">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a295cbb09d532a8eeeaab519fd1db0928" class="m-doc-self">operator&amp;</a>(</span><span class="m-doc-wrap"><a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; a,
-              <a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a438bd5fc0a79e42a6a2abb632203f925">
-              <div class="m-doc-template">template&lt;typename Range&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a438bd5fc0a79e42a6a2abb632203f925" class="m-doc-self">rev</a>(</span><span class="m-doc-wrap">const Range&amp; r) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="acb6120c8a8224e1d4465bf980bc01d07">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#acb6120c8a8224e1d4465bf980bc01d07" class="m-doc-self">operator+</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a,
-              <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; b) -&gt; <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a8b072587149274d1639908e4edb23d3d">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a8b072587149274d1639908e4edb23d3d" class="m-doc-self">operator-</a>(</span><span class="m-doc-wrap"><a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt; const&amp; a) -&gt; <a href="structint__it.html" class="m-doc">int_<wbr />it</a>&lt;T&gt;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a5eeb4818d038580518b4e590a066ec12">
-              <div class="m-doc-template">template&lt;typename T1, typename T2&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a5eeb4818d038580518b4e590a066ec12" class="m-doc-self">intersect</a>(</span><span class="m-doc-wrap">const T1&amp; a,
-              const T2&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a2e6b26fca3ba13b074816e7b97f8245d">
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a2e6b26fca3ba13b074816e7b97f8245d" class="m-doc-self">operator^</a>(</span><span class="m-doc-wrap"><a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; a,
-              <a href="structrange.html" class="m-doc">range</a>&lt;T&gt; const&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a3eb62dcf88ab5afad4d62c6fea4bb570">
-              <span class="m-doc-wrap-bumper">auto <a href="#a3eb62dcf88ab5afad4d62c6fea4bb570" class="m-doc-self">filter</a>(</span><span class="m-doc-wrap">vector&lt;<a href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a" class="m-doc">ra</a>&gt;&amp; v) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="define-members">
-          <h2><a href="#define-members">Defines</a></h2>
-          <dl class="m-doc">
-            <dt id="a198fc8d7aeb577c1c390bbf3cf9ade86">
-              <span class="m-doc-wrap-bumper">#define <a href="#a198fc8d7aeb577c1c390bbf3cf9ade86" class="m-doc-self">bin</a>(</span><span class="m-doc-wrap">op,
-              Tp)</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-      </div>
-    </div>
-  </div>
-</article></main>
-<div class="m-doc-search" id="search">
-  <a href="#!" onclick="return hideSearch()"></a>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-m-8 m-push-m-2">
-        <div class="m-doc-search-header m-text m-small">
-          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
-          <div id="search-symbolcount">&hellip;</div>
-        </div>
-        <div class="m-doc-search-content">
-          <form>
-            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
-          </form>
-          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
-          <div id="search-help" class="m-text m-dim m-text-center">
-            <p class="m-noindent">Search for symbols, directories, files, pages or
-            modules. You can omit any prefix from the symbol or file path; adding a
-            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
-            directory.</p>
-            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
-            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
-            <span class="m-label m-dim">Enter</span> to go.
-            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
-            copy a link to the result using <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
-          </div>
-          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
-          <ul id="search-results"></ul>
-        </div>
-      </div>
-    </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script src="searchdata-v1.js" async="async"></script>
-<footer><nav>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
-      </div>
-    </div>
-  </div>
-</nav></footer>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('range_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">range.hpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="core_2all_8hpp_source.html">core/all.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for range.hpp:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="range_8hpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="range_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<p><a href="range_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structit__base.html">it_base&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structint__it.html">int_it&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrange.html">range&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a198fc8d7aeb577c1c390bbf3cf9ade86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a198fc8d7aeb577c1c390bbf3cf9ade86">bin</a>(op,  Tp)&#160;&#160;&#160;auto operator op(Tp const &amp;a, Tp const &amp;b) { return a.x op b.x; }</td></tr>
+<tr class="separator:a198fc8d7aeb577c1c390bbf3cf9ade86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a6288a170c5a67a2c0b45c858a043722a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a> = <a class="el" href="structrange.html">range</a>&lt; <a class="el" href="structint__it.html">int_it</a>&lt; <a class="el" href="structll.html">ll</a> &gt; &gt;</td></tr>
+<tr class="separator:a6288a170c5a67a2c0b45c858a043722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a3642ae4ffe47e0d16c399aead9674f78"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78">isect</a> { <br />
+&#160;&#160;<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4">null</a>, 
+<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536">dis</a>, 
+<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc">over</a>, 
+<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e">cont</a>, 
+<br />
+&#160;&#160;<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015">eq</a>
+<br />
+ }</td></tr>
+<tr class="separator:a3642ae4ffe47e0d16c399aead9674f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2a9660e705c73071a9c68c86e5e92e29"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2a9660e705c73071a9c68c86e5e92e29"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a2a9660e705c73071a9c68c86e5e92e29">operator==</a> (<a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;a, <a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;b)</td></tr>
+<tr class="separator:a2a9660e705c73071a9c68c86e5e92e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf37877debb40c87ce158743d128a8df"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adf37877debb40c87ce158743d128a8df"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#adf37877debb40c87ce158743d128a8df">operator&lt;</a> (<a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;a, <a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;b)</td></tr>
+<tr class="separator:adf37877debb40c87ce158743d128a8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1fcbc62cc963f6ab2598b13f114dd8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5b1fcbc62cc963f6ab2598b13f114dd8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a5b1fcbc62cc963f6ab2598b13f114dd8">operator&lt;</a> (<a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;a, <a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;b)</td></tr>
+<tr class="separator:a5b1fcbc62cc963f6ab2598b13f114dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295cbb09d532a8eeeaab519fd1db0928"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a295cbb09d532a8eeeaab519fd1db0928"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a295cbb09d532a8eeeaab519fd1db0928">operator&amp;</a> (<a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;a, <a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;b)</td></tr>
+<tr class="separator:a295cbb09d532a8eeeaab519fd1db0928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438bd5fc0a79e42a6a2abb632203f925"><td class="memTemplParams" colspan="2">template&lt;typename Range &gt; </td></tr>
+<tr class="memitem:a438bd5fc0a79e42a6a2abb632203f925"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a> (const Range &amp;r)</td></tr>
+<tr class="separator:a438bd5fc0a79e42a6a2abb632203f925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6120c8a8224e1d4465bf980bc01d07"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acb6120c8a8224e1d4465bf980bc01d07"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#acb6120c8a8224e1d4465bf980bc01d07">operator+</a> (<a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;a, <a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;b)</td></tr>
+<tr class="separator:acb6120c8a8224e1d4465bf980bc01d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b072587149274d1639908e4edb23d3d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8b072587149274d1639908e4edb23d3d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a8b072587149274d1639908e4edb23d3d">operator-</a> (<a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;a)</td></tr>
+<tr class="separator:a8b072587149274d1639908e4edb23d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eeb4818d038580518b4e590a066ec12"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a5eeb4818d038580518b4e590a066ec12"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a5eeb4818d038580518b4e590a066ec12">intersect</a> (const T1 &amp;a, const T2 &amp;b)</td></tr>
+<tr class="separator:a5eeb4818d038580518b4e590a066ec12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6b26fca3ba13b074816e7b97f8245d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2e6b26fca3ba13b074816e7b97f8245d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a2e6b26fca3ba13b074816e7b97f8245d">operator^</a> (<a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;a, <a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;b)</td></tr>
+<tr class="separator:a2e6b26fca3ba13b074816e7b97f8245d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb62dcf88ab5afad4d62c6fea4bb570"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="range_8hpp.html#a3eb62dcf88ab5afad4d62c6fea4bb570">filter</a> (vector&lt; <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a> &gt; &amp;v)</td></tr>
+<tr class="separator:a3eb62dcf88ab5afad4d62c6fea4bb570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a198fc8d7aeb577c1c390bbf3cf9ade86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198fc8d7aeb577c1c390bbf3cf9ade86">&#9670;&nbsp;</a></span>bin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define bin</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">op, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Tp&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;auto operator op(Tp const &amp;a, Tp const &amp;b) { return a.x op b.x; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a6288a170c5a67a2c0b45c858a043722a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6288a170c5a67a2c0b45c858a043722a">&#9670;&nbsp;</a></span>ra</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a> =  <a class="el" href="structrange.html">range</a>&lt;<a class="el" href="structint__it.html">int_it</a>&lt;<a class="el" href="structll.html">ll</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a3642ae4ffe47e0d16c399aead9674f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3642ae4ffe47e0d16c399aead9674f78">&#9670;&nbsp;</a></span>isect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78">isect</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3642ae4ffe47e0d16c399aead9674f78af9a713ed26dee661a259730e650987e4"></a>null&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3642ae4ffe47e0d16c399aead9674f78ac667beae9e87c3d08798cd0a05efc536"></a>dis&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3642ae4ffe47e0d16c399aead9674f78a77dcb2124006c2c1902d0f49f75eacdc"></a>over&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e"></a>cont&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3642ae4ffe47e0d16c399aead9674f78ac1400642bc856b68972da1ae5e7a1015"></a>eq&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3eb62dcf88ab5afad4d62c6fea4bb570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb62dcf88ab5afad4d62c6fea4bb570">&#9670;&nbsp;</a></span>filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto filter </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eeb4818d038580518b4e590a066ec12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eeb4818d038580518b4e590a066ec12">&#9670;&nbsp;</a></span>intersect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto intersect </td>
+          <td>(</td>
+          <td class="paramtype">const T1 &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T2 &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="range_8hpp_a5eeb4818d038580518b4e590a066ec12_icgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a295cbb09d532a8eeeaab519fd1db0928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295cbb09d532a8eeeaab519fd1db0928">&#9670;&nbsp;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb6120c8a8224e1d4465bf980bc01d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6120c8a8224e1d4465bf980bc01d07">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structint__it.html">int_it</a>&lt;T&gt; operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b072587149274d1639908e4edb23d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b072587149274d1639908e4edb23d3d">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structint__it.html">int_it</a>&lt;T&gt; operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf37877debb40c87ce158743d128a8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf37877debb40c87ce158743d128a8df">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="range_8hpp_adf37877debb40c87ce158743d128a8df_icgraph.svg" width="263" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5b1fcbc62cc963f6ab2598b13f114dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1fcbc62cc963f6ab2598b13f114dd8">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a9660e705c73071a9c68c86e5e92e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9660e705c73071a9c68c86e5e92e29">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structint__it.html">int_it</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e6b26fca3ba13b074816e7b97f8245d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6b26fca3ba13b074816e7b97f8245d">&#9670;&nbsp;</a></span>operator^()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator^ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structrange.html">range</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="range_8hpp_a2e6b26fca3ba13b074816e7b97f8245d_cgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a438bd5fc0a79e42a6a2abb632203f925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438bd5fc0a79e42a6a2abb632203f925">&#9670;&nbsp;</a></span>rev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Range &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rev </td>
+          <td>(</td>
+          <td class="paramtype">const Range &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="range_8hpp_a438bd5fc0a79e42a6a2abb632203f925_icgraph.svg" width="100%" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="range_8hpp.html">range.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

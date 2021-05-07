@@ -5,11 +5,23 @@
     <includes refid="debug_8hpp" local="yes">debug.hpp</includes>
     <includedby refid="core_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/core/all.hpp</includedby>
     <incdepgraph>
-      <node id="6">
-        <label>bits/stdc++.h</label>
+      <node id="12">
+        <label>functional</label>
       </node>
-      <node id="8">
+      <node id="16">
+        <label>queue</label>
+      </node>
+      <node id="7">
+        <label>cassert</label>
+      </node>
+      <node id="15">
+        <label>numeric</label>
+      </node>
+      <node id="26">
         <label>experimental/source_location</label>
+      </node>
+      <node id="14">
+        <label>map</label>
       </node>
       <node id="3">
         <label>operations.hpp</label>
@@ -17,8 +29,14 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="22">
+        <label>unordered_set</label>
+      </node>
+      <node id="25">
         <label>experimental/iterator</label>
+      </node>
+      <node id="11">
+        <label>fstream</label>
       </node>
       <node id="5">
         <label>core/all.hpp</label>
@@ -29,6 +47,42 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="1" relation="include">
@@ -37,10 +91,19 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="17">
+        <label>random</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+      <node id="19">
+        <label>stack</label>
+      </node>
+      <node id="27">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
         <childnode refid="4" relation="include">
@@ -52,11 +115,38 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="23">
+        <label>utility</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/core/io.hpp</label>
         <link refid="io_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="9">
+        <label>climits</label>
+      </node>
+      <node id="8">
+        <label>chrono</label>
+      </node>
+      <node id="20">
+        <label>thread</label>
+      </node>
+      <node id="21">
+        <label>type_traits</label>
+      </node>
+      <node id="18">
+        <label>set</label>
+      </node>
+      <node id="10">
+        <label>complex</label>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
       </node>
       <node id="2">
         <label>debug.hpp</label>
@@ -705,6 +795,19 @@
     </invincdepgraph>
     <innerclass refid="structrin" prot="public">rin</innerclass>
     <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="io_8hpp_1a5623b1d0cbb6ab8353c440455eb7f3e1" prot="public" static="no">
+        <name>cin</name>
+        <initializer>rin_cin</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="82" column="9" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -793,8 +896,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="30" column="15" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="30" bodyend="38"/>
-        <references refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" compoundref="core_2all_8hpp" startline="96">delim</references>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="31" column="15" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="31" bodyend="39"/>
+        <references refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" compoundref="core_2all_8hpp" startline="115">delim</references>
       </memberdef>
       <memberdef kind="function" id="io_8hpp_1a1b122fd1e3de03a421d98f4bbb1473d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -826,7 +929,7 @@
         <inbodydescription>
 <para>Print arguments separated by spaces to stdout</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="39" column="20" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="39" bodyend="44"/>
+        <location file="/home/ram/OmniTemplate/src/core/io.hpp" line="40" column="20" bodyfile="/home/ram/OmniTemplate/src/core/io.hpp" bodystart="40" bodyend="45"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -837,12 +940,12 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8hpp" kindref="compound">debug.hpp</ref>&quot;</highlight></codeline>
 <codeline lineno="7" refid="structrin" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrin" kindref="compound">rin</ref><sp/>{</highlight></codeline>
-<codeline lineno="8" refid="structrin_1ae4efd5288509cef3672521280920f24d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>istream<sp/>&amp;<ref refid="structrin_1ae4efd5288509cef3672521280920f24d" kindref="member">in</ref>;</highlight></codeline>
-<codeline lineno="9" refid="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" kindref="member">rin</ref>(istream<sp/>&amp;in_)<sp/>:<sp/><ref refid="structrin_1ae4efd5288509cef3672521280920f24d" kindref="member">in</ref>(in_)<sp/>{}</highlight></codeline>
+<codeline lineno="8" refid="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>istream<sp/>&amp;<ref refid="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" kindref="member">in</ref>;</highlight></codeline>
+<codeline lineno="9" refid="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrin_1ae6238b84a27353d644112ea2fd3d3ca4" kindref="member">rin</ref>(istream<sp/>&amp;in_)<sp/>:<sp/><ref refid="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" kindref="member">in</ref>(in_)<sp/>{}</highlight></codeline>
 <codeline lineno="10" refid="structrin_1a13b9d026853a96ff1ab4e29bc6d5185c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structrin_1a13b9d026853a96ff1ab4e29bc6d5185c" kindref="member">operator&lt;&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline lineno="11" refid="structrin_1ac54363dcbc7ce811509e7ff360b78dad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="structrin_1ac54363dcbc7ce811509e7ff360b78dad" kindref="member">operator&lt;&lt;</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;s)<sp/>{</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s.empty())<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrin_1ae4efd5288509cef3672521280920f24d" kindref="member">in</ref><sp/>&gt;&gt;<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(s);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrin_1a6a3c084fd3bba7cfc6f8cbd6c832b18e" kindref="member">in</ref><sp/>&gt;&gt;<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(s);</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -859,56 +962,59 @@
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrin" kindref="compound">rin</ref><sp/>r{is};</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r<sp/>&gt;&gt;<sp/>x;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="30" refid="io_8hpp_1affce1f2cffc83e9e4ecc9203fdd32d29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/>tuple&lt;T...&gt;<sp/>t)<sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>apply(</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;f,<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;...<sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>f;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((os<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>&lt;&lt;<sp/>x),<sp/>...);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="39" refid="io_8hpp_1a1b122fd1e3de03a421d98f4bbb1473d5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="io_8hpp_1a1b122fd1e3de03a421d98f4bbb1473d5" kindref="member">print</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;arg1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ts<sp/>&amp;...<sp/>args)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>arg1;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>((cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>args),<sp/>...);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std<sp/>{</highlight></codeline>
-<codeline lineno="46" refid="io_8hpp_1a2939a795e467c7daa07c80b7456d78b4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/>pair&lt;T...&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;p)<sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/><ref refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" kindref="member">simple_tp</ref>(p)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>p.first<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>&lt;&lt;<sp/>p.second<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>enable_if<sp/>is<sp/>there<sp/>to<sp/>avoid<sp/>problems<sp/>with<sp/>ostringstream</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>fix<sp/>this<sp/>whole<sp/>IO<sp/>mess<sp/>one<sp/>day.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Container&gt;</highlight></codeline>
-<codeline lineno="52" refid="io_8hpp_1a2f89b21c3f2e0f24bcda02b8d1432695" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Container<sp/>&amp;v)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>enable_if_t&lt;is_same_v&lt;Stream,<sp/>ostream&gt;,<sp/>decltype(begin(v),<sp/>declval&lt;decltype(os)&gt;())&gt;<sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ed<sp/>=<sp/>begin(v);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>big<sp/>=<sp/>v.size()<sp/>&gt;<sp/>20;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(big)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>advance(ed,<sp/>20);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ed<sp/>=<sp/>end(v);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" kindref="member">simple_tp</ref>(v)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>copy(begin(v),<sp/>ed,<sp/>make_ostream_joiner(os,<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref>));</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(big)<sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="69" refid="io_8hpp_1a26ed2eacd641d0bb463e15dd04d3dd63" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(<ref refid="structrin" kindref="compound">rin</ref><sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;v)<sp/>-&gt;<sp/>decltype(begin(v),<sp/>declval&lt;decltype(os)&gt;())<sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;elem<sp/>:<sp/>v)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>elem;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__cplusplus<sp/>&gt;=<sp/>201703L</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/>optional&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;opt)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>make<sp/>this<sp/>generic<sp/>for<sp/>all<sp/>tuple-like<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="io_8hpp_1affce1f2cffc83e9e4ecc9203fdd32d29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/>tuple&lt;T...&gt;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>apply(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;f,<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;...<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>f;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((os<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>&lt;&lt;<sp/>x),<sp/>...);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40" refid="io_8hpp_1a1b122fd1e3de03a421d98f4bbb1473d5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="io_8hpp_1a1b122fd1e3de03a421d98f4bbb1473d5" kindref="member">print</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;arg1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ts<sp/>&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>arg1;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>((cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>args),<sp/>...);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std<sp/>{</highlight></codeline>
+<codeline lineno="47" refid="io_8hpp_1a40cf53faa8f3a9512c4dad9945ecb425" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/>pair&lt;T...&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;p)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/><ref refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" kindref="member">simple_tp</ref>(p)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>p.first<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>&lt;&lt;<sp/>p.second<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>enable_if<sp/>is<sp/>there<sp/>to<sp/>avoid<sp/>problems<sp/>with<sp/>ostringstream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>fix<sp/>this<sp/>whole<sp/>IO<sp/>mess<sp/>one<sp/>day.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Container&gt;</highlight></codeline>
+<codeline lineno="53" refid="io_8hpp_1a2f89b21c3f2e0f24bcda02b8d1432695" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Container<sp/>&amp;v)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>enable_if_t&lt;is_same_v&lt;Stream,<sp/>ostream&gt;,<sp/>decltype(begin(v),<sp/>declval&lt;decltype(os)&gt;())&gt;<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ed<sp/>=<sp/>begin(v);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>big<sp/>=<sp/>v.size()<sp/>&gt;<sp/>20;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(big)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>advance(ed,<sp/>20);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ed<sp/>=<sp/>end(v);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" kindref="member">simple_tp</ref>(v)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>copy(begin(v),<sp/>ed,<sp/>make_ostream_joiner(os,<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref>));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(big)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="70" refid="io_8hpp_1a26ed2eacd641d0bb463e15dd04d3dd63" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(<ref refid="structrin" kindref="compound">rin</ref><sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;v)<sp/>-&gt;<sp/>decltype(begin(v),<sp/>declval&lt;decltype(os)&gt;())<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;elem<sp/>:<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/>elem;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76" refid="io_8hpp_1a49bbb01635e28db8562b0e6878febef7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ab13ab1059a1675ee7a774c4524b84d23" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/>optional&lt;T&gt;<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;opt)<sp/>{</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>opt<sp/>?<sp/>(os<sp/>&lt;&lt;<sp/>*opt)<sp/>:<sp/>(os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nullopt&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>std</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="io_8hpp_1abe602cc706ddc3cda8fbf969d5a97386" refkind="member"><highlight class="normal"><ref refid="structrin" kindref="compound">rin</ref><sp/><ref refid="io_8hpp_1abe602cc706ddc3cda8fbf969d5a97386" kindref="member">rin_cin</ref>{<ref refid="io_8hpp_1a5623b1d0cbb6ab8353c440455eb7f3e1" kindref="member">cin</ref>};</highlight></codeline>
+<codeline lineno="80" refid="io_8hpp_1ad3d37d28ba906ccaf466014e09241de5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ad3d37d28ba906ccaf466014e09241de5" kindref="member">orig_cin</ref><sp/>=<sp/><ref refid="io_8hpp_1a5623b1d0cbb6ab8353c440455eb7f3e1" kindref="member">cin</ref>;</highlight></codeline>
+<codeline lineno="81" refid="io_8hpp_1ac42bccbb7905afc32ae4dddd1a4db540" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="io_8hpp_1ac42bccbb7905afc32ae4dddd1a4db540" kindref="member">orig_cerr</ref><sp/>=<sp/><ref refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" kindref="member">cerr</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cin<sp/>rin_cin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="io_8hpp_1a5623b1d0cbb6ab8353c440455eb7f3e1" refkind="member"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>std</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/io.hpp"/>
   </compounddef>

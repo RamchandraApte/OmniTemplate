@@ -7,20 +7,38 @@
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <includedby refid="test__utility_8hpp" local="yes">/home/ram/OmniTemplate/src/core/test_utility.hpp</includedby>
     <incdepgraph>
-      <node id="4">
-        <label>bits/stdc++.h</label>
+      <node id="10">
+        <label>functional</label>
       </node>
-      <node id="6">
+      <node id="14">
+        <label>queue</label>
+      </node>
+      <node id="5">
+        <label>cassert</label>
+      </node>
+      <node id="13">
+        <label>numeric</label>
+      </node>
+      <node id="24">
         <label>experimental/source_location</label>
       </node>
-      <node id="8">
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="26">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="20">
+        <label>unordered_set</label>
+      </node>
+      <node id="23">
         <label>experimental/iterator</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
       </node>
       <node id="3">
         <label>core/all.hpp</label>
@@ -33,14 +51,59 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="1" relation="include">
         </childnode>
+      </node>
+      <node id="15">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>vector</label>
+      </node>
+      <node id="17">
+        <label>stack</label>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/core/utility.hpp</label>
@@ -54,16 +117,43 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="21">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="27">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="7">
+        <label>climits</label>
+      </node>
+      <node id="6">
+        <label>chrono</label>
+      </node>
+      <node id="18">
+        <label>thread</label>
+      </node>
+      <node id="19">
+        <label>type_traits</label>
+      </node>
+      <node id="16">
+        <label>set</label>
+      </node>
+      <node id="8">
+        <label>complex</label>
+      </node>
+      <node id="4">
+        <label>algorithm</label>
+      </node>
+      <node id="25">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
@@ -711,6 +801,7 @@
     <innerclass refid="structutility_1_1ar_3_01T_0fn_0e_4" prot="public">utility::ar&lt; T[n]&gt;</innerclass>
     <innerclass refid="structutility_1_1random__device__patch" prot="public">utility::random_device_patch</innerclass>
     <innerclass refid="structutility_1_1Empty" prot="public">utility::Empty</innerclass>
+    <innerclass refid="classutility_1_1chained__compare" prot="public">utility::chained_compare</innerclass>
     <innernamespace refid="namespaceutility">utility</innernamespace>
       <sectiondef kind="define">
       <memberdef kind="define" id="utility_8hpp_1a21362d5df7197db64cd8c8e4602d7f52" prot="public" static="no">
@@ -759,7 +850,7 @@
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility" kindref="compound">utility</ref><sp/>{</highlight></codeline>
 <codeline lineno="5" refid="structutility_1_1with" refkind="compound"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">[[nodiscard]]<sp/><ref refid="structutility_1_1with" kindref="compound">with</ref><sp/>{</highlight></codeline>
 <codeline lineno="6" refid="structutility_1_1with_1a4dafe5db1067f2a1c9ede891630bfada" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structutility_1_1with_1a4dafe5db1067f2a1c9ede891630bfada" kindref="member">old</ref>;<sp/></highlight></codeline>
-<codeline lineno="7" refid="structutility_1_1with_1a46ccf5b3dc0b78575c267731c777b248" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>&amp;<ref refid="structutility_1_1with_1a46ccf5b3dc0b78575c267731c777b248" kindref="member">v</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="7" refid="structutility_1_1with_1a895ad458d1213df4ef45109dc34cea37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>&amp;<ref refid="structutility_1_1with_1a895ad458d1213df4ef45109dc34cea37" kindref="member">v</ref>;<sp/><sp/></highlight></codeline>
 <codeline lineno="8" refid="structutility_1_1with_1a20244f8d345341882e7ca37b49f2ca77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tp&gt;<sp/><ref refid="structutility_1_1with_1a20244f8d345341882e7ca37b49f2ca77" kindref="member">with</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tp<sp/>new_,<sp/>T<sp/>&amp;v_)<sp/>:<sp/>old(v_),<sp/>v(v_)<sp/>{<sp/>v<sp/>=<sp/>new_;<sp/>}</highlight></codeline>
 <codeline lineno="9" refid="structutility_1_1with_1a9bc4eb3d7206708b6a7ec8753a866f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structutility_1_1with_1a9bc4eb3d7206708b6a7ec8753a866f6a" kindref="member">~with</ref>()<sp/>{<sp/>v<sp/>=<sp/>old;<sp/>}</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">};</highlight></codeline>
@@ -841,7 +932,7 @@
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(__builtin_popcountll(ret)<sp/>==<sp/>__builtin_popcountll(x));</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
 <codeline lineno="104"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="106" refid="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" kindref="member">swap2</ref>(T<sp/>&amp;a,<sp/>T<sp/>&amp;b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Func<sp/>&amp;func)<sp/>{</highlight></codeline>
+<codeline lineno="106" refid="namespaceutility_1a4c8a9d0142092c8f2255e518bfdf9dc4" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Func&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1a4c8a9d0142092c8f2255e518bfdf9dc4" kindref="member">sort2</ref>(T<sp/>&amp;a,<sp/>T<sp/>&amp;b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Func<sp/>&amp;func)<sp/>{</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(func(a)<sp/>&gt;<sp/>func(b))<sp/>{</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swap(a,<sp/>b);</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -878,11 +969,38 @@
 <codeline lineno="142" refid="structutility_1_1Empty" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structutility_1_1Empty" kindref="compound">Empty</ref><sp/>{};</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USE_RANDOM_DEVICE_PATCH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="144" refid="utility_8hpp_1a4072e106efe575805c4864dbbd387090" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_RANDOM_DEVICE_PATCH</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145" refid="namespaceutility_1afaacd9ae54757a29e4d3e5381d8cfcdf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device</ref><sp/>=<sp/><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref>;</highlight></codeline>
+<codeline lineno="145" refid="namespaceutility_1a8575a7ae9db3044c9cef77ddcc62ab7c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device</ref><sp/>=<sp/><ref refid="structutility_1_1random__device__patch" kindref="compound">random_device_patch</ref>;</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="147" refid="namespaceutility_1a7fea553f6f915aa6c2affe79637d9b9f" refkind="member"><highlight class="normal">default_random_engine<sp/><ref refid="namespaceutility_1a7fea553f6f915aa6c2affe79637d9b9f" kindref="member">reng</ref>{<ref refid="structutility_1_1random__device__patch" kindref="compound">random_device</ref>{}()};</highlight></codeline>
-<codeline lineno="148"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>utility</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility" kindref="compound">utility</ref>;</highlight></codeline>
+<codeline lineno="148" refid="classutility_1_1chained__compare" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Compare<sp/>=<sp/>less&lt;&gt;&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classutility_1_1chained__compare" kindref="compound">chained_compare</ref><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="150" refid="classutility_1_1chained__compare_1a77969950a409fe737aa718dbf9a2f54f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classutility_1_1chained__compare_1a77969950a409fe737aa718dbf9a2f54f" kindref="member">chained_compare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Compare<sp/>&amp;comp_<sp/>=<sp/>{})<sp/>:<sp/><ref refid="classutility_1_1chained__compare_1af30c8c16291d6e7a02cbb72eee40d7ea" kindref="member">comp</ref>{comp_}<sp/>{}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T2,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="152" refid="classutility_1_1chained__compare_1a77584819fc150f55664da5ffc2372ee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classutility_1_1chained__compare_1a77584819fc150f55664da5ffc2372ee4" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;arg1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T2<sp/>&amp;arg2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Ts<sp/>&amp;...args)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classutility_1_1chained__compare_1af30c8c16291d6e7a02cbb72eee40d7ea" kindref="member">comp</ref>(arg1,<sp/>arg2)<sp/>&amp;&amp;<sp/>(*this)(arg2,<sp/>args...);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155" refid="classutility_1_1chained__compare_1a3405d4fa4516634808e9166924dc5d4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T1&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classutility_1_1chained__compare_1a3405d4fa4516634808e9166924dc5d4c" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T1<sp/>&amp;arg1)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="158" refid="classutility_1_1chained__compare_1af30c8c16291d6e7a02cbb72eee40d7ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Compare<sp/><ref refid="classutility_1_1chained__compare_1af30c8c16291d6e7a02cbb72eee40d7ea" kindref="member">comp</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bool<sp/>valid_index<sp/>=<sp/>true;</highlight></codeline>
+<codeline lineno="163" refid="namespaceutility_1a416532ff53790338172141074151fd05" refkind="member"><highlight class="comment"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1a416532ff53790338172141074151fd05" kindref="member">valid_idx</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;T&gt;<sp/>&amp;vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>idx)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx<sp/>&lt;<sp/>vec.size();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166" refid="namespaceutility_1aed2adcc88a8abb68fe298905798fa8ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InputIt&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1aed2adcc88a8abb68fe298905798fa8ae" kindref="member">iterator_identity</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacelinear__algebra_1aac11793366a8aa7d2396775fdb1ba8ca" kindref="member">identity</ref>(plus&lt;&gt;{},<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InputIt::value_type{});</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="169" refid="namespaceutility_1a547ec88ecb50fe12150a8d293de2ce75" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InputIt&gt;<sp/>decltype(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">)<sp/><ref refid="namespaceutility_1a547ec88ecb50fe12150a8d293de2ce75" kindref="member">accumulate</ref>(InputIt<sp/>a,<sp/>InputIt<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1a547ec88ecb50fe12150a8d293de2ce75" kindref="member">accumulate</ref>(a,<sp/>b,<sp/>iterator_identity&lt;InputIt&gt;());</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172" refid="namespaceutility_1a9503cf05b32620d818c2ff7e3c5cb20c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>InputIt&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceutility_1a9503cf05b32620d818c2ff7e3c5cb20c" kindref="member">get_partial_sum</ref>(InputIt<sp/>a,<sp/>InputIt<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>sums(distance(a,<sp/>b)<sp/>+<sp/>1,<sp/>iterator_identity&lt;InputIt&gt;());</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>partial_sum(a,<sp/>b,<sp/>begin(sums)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sums;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>utility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceutility" kindref="compound">utility</ref>;</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/core/utility.hpp"/>
   </compounddef>

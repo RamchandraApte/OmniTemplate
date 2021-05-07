@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('structSubgraph_1_1iterator.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="structSubgraph.html">Subgraph</a></li><li class="navelem"><a class="el" href="structSubgraph_1_1iterator.html">iterator</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Subgraph&lt; Graph, Pred &gt;::iterator Member List</div>  </div>
@@ -80,36 +106,29 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">adj_list</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">adj_list</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#aad7c6ef62b911de3d4074e08da866362">advance</a>()</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#aad7c6ef62b911de3d4074e08da866362">advance</a>()</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">difference_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a25fb1ad469d1925f007e97bf93fa6eaf">iterator</a>(const Subgraph &amp;subgraph_arg, const ll i_arg)</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a25fb1ad469d1925f007e97bf93fa6eaf">iterator</a>(const Subgraph &amp;subgraph_arg, const ll i_arg)</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a3b5d3735f55fb1e655bfc16e65d9f847">operator!=</a>(const iterator &amp;oth) const</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a3b5d3735f55fb1e655bfc16e65d9f847">operator!=</a>(const iterator &amp;oth) const</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">operator*</a>() const</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">operator*</a>() const</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a590bacc33ad746829d0b176e0b2fed5b">operator++</a>()</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a590bacc33ad746829d0b176e0b2fed5b">operator++</a>()</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">operator==</a>(const iterator &amp;oth) const</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">operator==</a>(const iterator &amp;oth) const</td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">pointer</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">reference</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">subgraph</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">subgraph</a></td><td class="entry"><a class="el" href="structSubgraph_1_1iterator.html">Subgraph&lt; Graph, Pred &gt;::iterator</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">value_type</a> typedef</td><td class="entry"><a class="el" href="structit__base.html">it_base&lt; ll &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

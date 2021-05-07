@@ -73,7 +73,9 @@ auto search_all(string const &t, string const &s) {
 	return v;
 }
 
-/*! Search iterator for looping through all matches of a string s in t*/
+/*! @brief Search iterator for looping through all matches of a string s in t using KMP.
+ *  Complexity: \f$O(n)\f$, where is the length between subsequent matches.
+ */
 struct search_it : it_base<ll> {
 	using iterator_category = input_iterator_tag;
 	const string t, s;

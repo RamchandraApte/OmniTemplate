@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,17 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_type.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -69,9 +99,7 @@ $(function() {
 </div>
 
 <div class="contents">
-&#160;
-
-<h3><a id="index_c"></a>- c -</h3><ul>
+&#160;<ul>
 <li>const_reference
 : <a class="el" href="classqueue__tools_1_1MinStack.html#a6fbd0283e2f3522ba2a795b8e3bfabd3">queue_tools::MinStack&lt; T, Base &gt;</a>
 , <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">queue_tools::QueueAdaptor&lt; Stack &gt;</a>
@@ -80,84 +108,44 @@ $(function() {
 : <a class="el" href="classqueue__tools_1_1MinStack.html#ac9ae47477c69e5faadb9c478a153c596">queue_tools::MinStack&lt; T, Base &gt;</a>
 , <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a0a12e0ff52602d46cea6f7bb072933f6">queue_tools::QueueAdaptor&lt; Stack &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_d"></a>- d -</h3><ul>
 <li>difference_type
 : <a class="el" href="structit__base.html#a2f441c3115c3b785aedc6816276d7511">it_base&lt; T &gt;</a>
 </li>
 <li>DigitType
 : <a class="el" href="structbigint_1_1BigInt.html#a504225280978105f6c6f39a90fe16ac8">bigint::BigInt</a>
 </li>
-</ul>
-
-
-<h3><a id="index_e"></a>- e -</h3><ul>
 <li>event
 : <a class="el" href="structpersistent_1_1pers.html#aca1368b7234aeaa330d30014ab74aecb">persistent::pers&lt; T &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_g"></a>- g -</h3><ul>
 <li>GeneralSearch_t
 : <a class="el" href="structgraph__theory_1_1BFS.html#ad85eddd9caeb226e88c6712cf3b86dbd">graph_theory::BFS&lt; Graph &gt;</a>
 , <a class="el" href="structgraph__theory_1_1DFS.html#a71954b9b77a8dd543923250a39461b06">graph_theory::DFS&lt; Graph &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_i"></a>- i -</h3><ul>
 <li>iterator_category
 : <a class="el" href="structint__it.html#ad986a324b4a8e1c5a8fca9e411d6c078">int_it&lt; T &gt;</a>
 , <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a69bb5a2446e8219c0eca5b6791272e23">splay_tree::SplayTree&lt; T &gt;::iterator</a>
 , <a class="el" href="structstring__tools_1_1search__it.html#acb50112dd85865f007cd61cce21075ca">string_tools::search_it</a>
 </li>
-</ul>
-
-
-<h3><a id="index_n"></a>- n -</h3><ul>
 <li>Node
 : <a class="el" href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
 , <a class="el" href="structsplay__tree_1_1SplayTree.html#a7ebf6727cb412c312c2da10112ff4db4">splay_tree::SplayTree&lt; T &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_p"></a>- p -</h3><ul>
 <li>pointer
 : <a class="el" href="structit__base.html#aff4e3754839c1106ced2e57a47d44425">it_base&lt; T &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_r"></a>- r -</h3><ul>
 <li>reference
 : <a class="el" href="structit__base.html#a65ea2a2492ba8ae44a336fd192f5ff2a">it_base&lt; T &gt;</a>
 , <a class="el" href="classqueue__tools_1_1MinStack.html#aa0f4720a343e959a1c4539604b48e91f">queue_tools::MinStack&lt; T, Base &gt;</a>
 , <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">queue_tools::QueueAdaptor&lt; Stack &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_s"></a>- s -</h3><ul>
 <li>size_type
 : <a class="el" href="classqueue__tools_1_1MinStack.html#aff2ea0311c1f8eb54918cc87d25673ba">queue_tools::MinStack&lt; T, Base &gt;</a>
 , <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b">queue_tools::QueueAdaptor&lt; Stack &gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_t"></a>- t -</h3><ul>
 <li>type
 : <a class="el" href="structutility_1_1ar.html#aae344b98b22daaa6e15b3631b7a09d64">utility::ar&lt; T &gt;</a>
 , <a class="el" href="structutility_1_1ar_3_01T_0fn_0e_4.html#ae7db76e54caf04247c14edb24b1653ef">utility::ar&lt; T[n]&gt;</a>
 </li>
-</ul>
-
-
-<h3><a id="index_v"></a>- v -</h3><ul>
 <li>value_type
 : <a class="el" href="structit__base.html#a750730b3baf6464b16f1483c656f5dce">it_base&lt; T &gt;</a>
 , <a class="el" href="classqueue__tools_1_1MinStack.html#ac879ccf41b218e3d75e227314e84e0c6">queue_tools::MinStack&lt; T, Base &gt;</a>
@@ -165,11 +153,14 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

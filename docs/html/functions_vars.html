@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,17 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_vars.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,13 +104,13 @@ $(function() {
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>a
 : <a class="el" href="structgraph__theory_1_1edge.html#ae8364c3bd91a36e17fc27897682b793b">graph_theory::edge</a>
-, <a class="el" href="structlinear__algebra_1_1matrix.html#ab36fb1d4542f2a43af3b44c22ffe083e">linear_algebra::matrix&lt; T &gt;</a>
+, <a class="el" href="structlinear__algebra_1_1matrix.html#a417f6b2bcd0bae5ec57612f6b228b879">linear_algebra::matrix&lt; T &gt;</a>
 </li>
 <li>adj_list
-: <a class="el" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">Subgraph&lt; Graph, Pred &gt;::iterator</a>
+: <a class="el" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">Subgraph&lt; Graph, Pred &gt;::iterator</a>
 </li>
 <li>arr
-: <a class="el" href="classBIT.html#aa5a5572e0dfe58878ee2a10adfbab76e">BIT&lt; Value, MonoidOp &gt;</a>
+: <a class="el" href="classBIT.html#a9d071c0f10d6aa215511828b7099806b">BIT&lt; Value, MonoidOp &gt;</a>
 </li>
 </ul>
 
@@ -103,11 +133,14 @@ $(function() {
 : <a class="el" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
 </li>
 <li>child
-: <a class="el" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#aa898619e89d94503f31c63baec827cc2">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeExp</a>
-, <a class="el" href="structsplay__tree_1_1SplayNode.html#a6aa336f7fa7dcd6d509cdb8bbf9967ee">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
+: <a class="el" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#a4523e07aa838284e536323455a6d948e">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeExp</a>
+, <a class="el" href="structsplay__tree_1_1SplayNode.html#a093b72ce317727a267a5d019b810942f">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
 </li>
 <li>cols_n
 : <a class="el" href="structlinear__algebra_1_1matrix.html#a4b8d6b65104e322826ecf447078cb953">linear_algebra::matrix&lt; T &gt;</a>
+</li>
+<li>comp
+: <a class="el" href="classutility_1_1chained__compare.html#af30c8c16291d6e7a02cbb72eee40d7ea">utility::chained_compare&lt; Compare &gt;</a>
 </li>
 </ul>
 
@@ -123,7 +156,7 @@ $(function() {
 : <a class="el" href="structbigint_1_1BigInt.html#af91705a7c72d0379a9a0b51097c16a4f">bigint::BigInt</a>
 </li>
 <li>distance
-: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#acbe630ca07775d3fe3596aff2601418e">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
+: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#aadc7aa595d1aa3509f0ba6ee8489cf36">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
 </li>
 <li>ds
 : <a class="el" href="classhld_1_1HLD.html#ac165aef014cd2c6e1cec6d56530e3881">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
@@ -140,7 +173,7 @@ $(function() {
 : <a class="el" href="structstring__tools_1_1Trie.html#aef06d67ed53a08634d0df64b6e9df1af">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>exit_link_cache
-: <a class="el" href="structstring__tools_1_1Trie.html#aa87f7b2f6bacc2e4d9237d2e6239a4ca">string_tools::Trie&lt; start, alphabet_size &gt;</a>
+: <a class="el" href="structstring__tools_1_1Trie.html#a4a9753a6a7efc00d537c7c2d22747595">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 </ul>
 
@@ -157,24 +190,24 @@ $(function() {
 
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>go_cache
-: <a class="el" href="structstring__tools_1_1Trie.html#a68714475e8fb4c336cdddd9157dccc8e">string_tools::Trie&lt; start, alphabet_size &gt;</a>
+: <a class="el" href="structstring__tools_1_1Trie.html#ab189b614c6f5996aa334ecb1ecb961be">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>graph
-: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#ab22ab5308883a177f882564afe0cbf95">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
-, <a class="el" href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">Subgraph&lt; Graph, Pred &gt;</a>
+: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#a7d5bd457d525004f65caaced910e30e5">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
+, <a class="el" href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">Subgraph&lt; Graph, Pred &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>h
-: <a class="el" href="structstring__tools_1_1hash__str.html#a2230ffd9a6373a583e8e52f822966744">string_tools::hash_str</a>
+: <a class="el" href="structstring__tools_1_1hash__str.html#afa31acfdc5552d831c95b7987963076b">string_tools::hash_str</a>
 </li>
 <li>head
-: <a class="el" href="classhld_1_1HLD.html#a1fcfa427f9e7cb91ba01f9ce713b742f">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
+: <a class="el" href="classhld_1_1HLD.html#aa7fead41864b4d6eac6470e62da467b5">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
 </li>
 <li>heavy
-: <a class="el" href="classhld_1_1HLD.html#a1c4a091ce383d094dc4039c8d6dc0a6b">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
+: <a class="el" href="classhld_1_1HLD.html#a891f87bda863c1d391e15455a63db9f5">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
 </li>
 </ul>
 
@@ -185,10 +218,10 @@ $(function() {
 , <a class="el" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">Subgraph&lt; Graph, Pred &gt;::iterator</a>
 </li>
 <li>in
-: <a class="el" href="structrin.html#ae4efd5288509cef3672521280920f24d">rin</a>
+: <a class="el" href="structrin.html#a6a3c084fd3bba7cfc6f8cbd6c832b18e">rin</a>
 </li>
 <li>it
-: <a class="el" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">Subgraph&lt; Graph, Pred &gt;::iterator</a>
+: <a class="el" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">Subgraph&lt; Graph, Pred &gt;::iterator</a>
 </li>
 </ul>
 
@@ -208,7 +241,7 @@ $(function() {
 : <a class="el" href="structsegment__tree_1_1SegmentTree_1_1LazyPart.html#a23a6ecc2e40bbe3d261dce229ebef13a">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::LazyPart</a>
 </li>
 <li>lcg_mod
-: <a class="el" href="structstring__tools_1_1hash__str.html#aa9060adc6314cf1ec5d0053f36ae8b2c">string_tools::hash_str</a>
+: <a class="el" href="structstring__tools_1_1hash__str.html#a6a815a0256e241866570471a3f19e1ea">string_tools::hash_str</a>
 </li>
 <li>leaf
 : <a class="el" href="structstring__tools_1_1Trie.html#ad058f2470e8934ee58e8466071470445">string_tools::Trie&lt; start, alphabet_size &gt;</a>
@@ -217,7 +250,7 @@ $(function() {
 : <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a0b55c24ddd0b4cedfc85710a6475bde3">queue_tools::QueueAdaptor&lt; Stack &gt;</a>
 </li>
 <li>lines
-: <a class="el" href="structconvex__hull__trick_1_1CHT.html#a5ef56ecabe31bd199faaffd423479507">convex_hull_trick::CHT</a>
+: <a class="el" href="structconvex__hull__trick_1_1CHT.html#a51367d06707736271c8a23d9ce294fbe">convex_hull_trick::CHT</a>
 </li>
 </ul>
 
@@ -227,10 +260,10 @@ $(function() {
 : <a class="el" href="structint__it.html#abf47510f41383d441e656a7a60e0ed19">int_it&lt; T &gt;</a>
 </li>
 <li>meet
-: <a class="el" href="classsparse__table_1_1SparseTable.html#a8d0493a9c23b2db01c53ad88fb4332f0">sparse_table::SparseTable&lt; T, Semilattice &gt;</a>
+: <a class="el" href="classsparse__table_1_1SparseTable.html#a180b42df8629e589b65c7a82f6c40808">sparse_table::SparseTable&lt; T, Semilattice &gt;</a>
 </li>
 <li>modulus
-: <a class="el" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo_namespace::modulo</a>
+: <a class="el" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo_namespace::modulo</a>
 </li>
 <li>multitest
 : <a class="el" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest</a>
@@ -243,13 +276,13 @@ $(function() {
 : <a class="el" href="structstring__tools_1_1search__it.html#aab70ce1b2fdb25d6476e2a68e3e42fef">string_tools::search_it</a>
 </li>
 <li>next_storage
-: <a class="el" href="structstring__tools_1_1Trie.html#ad2b4fa3f214be359fb0a17f4b8f848fd">string_tools::Trie&lt; start, alphabet_size &gt;</a>
+: <a class="el" href="structstring__tools_1_1Trie.html#afe826d471a843b31caa9c69d79e675ee">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>node
-: <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#ad3b5ad84c1a0138db075e2c61eb83144">splay_tree::SplayTree&lt; T &gt;::iterator</a>
+: <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a3c9fb5e7acf1d7fbb16ca90c28158e90">splay_tree::SplayTree&lt; T &gt;::iterator</a>
 </li>
 <li>nodes
-: <a class="el" href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
+: <a class="el" href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
 </li>
 </ul>
 
@@ -269,24 +302,24 @@ $(function() {
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>p
-: <a class="el" href="structstring__tools_1_1hash__str.html#a010f516d75bf3e9084b1e0689d2fd024">string_tools::hash_str</a>
-, <a class="el" href="structstring__tools_1_1search__it.html#a3e2ab355700aab9c01656f76e4dec132">string_tools::search_it</a>
+: <a class="el" href="structstring__tools_1_1hash__str.html#a9fd079ff6e9ccf0a24a43a553a09358a">string_tools::hash_str</a>
+, <a class="el" href="structstring__tools_1_1search__it.html#a187978317937eb139741d9f64948adeb">string_tools::search_it</a>
 , <a class="el" href="structtree_1_1no.html#a3dd518d66a2bf5c95d277ff8d9638c1a">tree::no&lt; T &gt;</a>
 </li>
 <li>parent
-: <a class="el" href="structdsu__ds_1_1dsu.html#a3d0a7cd63b9c90f5a19a03f7f2abb6d8">dsu_ds::dsu</a>
-, <a class="el" href="structgraph__theory_1_1GeneralSearch.html#ab8d80b4e0cd248fc612456967f039324">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
-, <a class="el" href="structsplay__tree_1_1SplayNode.html#a543aa24b599c0efa494914be781a2435">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
-, <a class="el" href="structstring__tools_1_1Trie.html#ac64a1f3655dbb77417b9be9c41ea2097">string_tools::Trie&lt; start, alphabet_size &gt;</a>
+: <a class="el" href="structdsu__ds_1_1dsu.html#a7ef7cd6ab6ec798033dadfb372e05e17">dsu_ds::dsu</a>
+, <a class="el" href="structgraph__theory_1_1GeneralSearch.html#a3ed9b9d45c85402850e22f6e98055045">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
+, <a class="el" href="structsplay__tree_1_1SplayNode.html#abd2f93c825b0b351f9f29d731150688f">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
+, <a class="el" href="structstring__tools_1_1Trie.html#a7962b53f5ad52f4df60dd7aafa376cf0">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>path_parent
-: <a class="el" href="structsplay__tree_1_1PathParent.html#a023303f904294f1ab583fca194636003">splay_tree::PathParent&lt; Node &gt;</a>
+: <a class="el" href="structsplay__tree_1_1PathParent.html#acc553251873a0e2300106f2160994766">splay_tree::PathParent&lt; Node &gt;</a>
 </li>
 <li>pos
-: <a class="el" href="classhld_1_1HLD.html#ace0152174421ed8614d349cdb58ef58b">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
+: <a class="el" href="classhld_1_1HLD.html#a6aa11b93d4b28d9353bf1b8568acce04">hld::HLD&lt; T, Monoid, QueryDS &gt;</a>
 </li>
 <li>pred
-: <a class="el" href="structSubgraph.html#af968f823bf4408c13440e2ccee5e9489">Subgraph&lt; Graph, Pred &gt;</a>
+: <a class="el" href="structSubgraph.html#a920e64e62c7a681239f9944d940c7528">Subgraph&lt; Graph, Pred &gt;</a>
 </li>
 <li>pri
 : <a class="el" href="structtreap.html#a44d79f0b2ed82d18375892821cf2d08e">treap&lt; Key, Data &gt;</a>
@@ -299,7 +332,7 @@ $(function() {
 : <a class="el" href="structsegment__tree_1_1SegmentTree_1_1NodeCore.html#a4852cef24d043d15388e91826ca726e6">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::NodeCore</a>
 </li>
 <li>queue
-: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#a9738ee2f64e463dc533fe1ff04c885cb">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
+: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#ab65b2c9f98ace39d40abfaf399c135a7">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
 </li>
 </ul>
 
@@ -316,7 +349,7 @@ $(function() {
 </li>
 <li>root
 : <a class="el" href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
-, <a class="el" href="structsplay__tree_1_1SplayTree.html#a43c37e09882abec66c0871d4a678ae45">splay_tree::SplayTree&lt; T &gt;</a>
+, <a class="el" href="structsplay__tree_1_1SplayTree.html#a673d3706c5c3e58495775af5aac944c9">splay_tree::SplayTree&lt; T &gt;</a>
 </li>
 <li>rows_n
 : <a class="el" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">linear_algebra::matrix&lt; T &gt;</a>
@@ -327,37 +360,37 @@ $(function() {
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>s
 : <a class="el" href="structpersistent_1_1pers.html#aa69f50e85db0c10e684390388ef6f23b">persistent::pers&lt; T &gt;</a>
-, <a class="el" href="structstring__tools_1_1search__it.html#a27c559aeb3162c49801b37724cd4312c">string_tools::search_it</a>
+, <a class="el" href="structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe">string_tools::search_it</a>
 </li>
 <li>size
 : <a class="el" href="structsize__data.html#a80d59df6df3a4dd01fdf8b3919785ecc">size_data&lt; Key &gt;</a>
 </li>
 <li>size_
-: <a class="el" href="structdsu__ds_1_1dsu.html#a2e6386657bcc35b96faf72d4bc87f933">dsu_ds::dsu</a>
+: <a class="el" href="structdsu__ds_1_1dsu.html#ad4fe417b29f22c83906ca9a97b3b2d6a">dsu_ds::dsu</a>
 , <a class="el" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
 , <a class="el" href="structsplay__tree_1_1SplayTree.html#a7adb23c86a9cb77d3a9d8afbaba65cf7">splay_tree::SplayTree&lt; T &gt;</a>
 </li>
 <li>st
-: <a class="el" href="structstring__tools_1_1hash__str.html#aa3e90f086689a026dca8369ea3e7731a">string_tools::hash_str</a>
+: <a class="el" href="structstring__tools_1_1hash__str.html#ac76e86127435197776e56d58da7ac0fe">string_tools::hash_str</a>
 </li>
 <li>str
 : <a class="el" href="structstring__tools_1_1Trie.html#a3a4a07a6e9479d4a03f558a514be4664">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>subgraph
-: <a class="el" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">Subgraph&lt; Graph, Pred &gt;::iterator</a>
+: <a class="el" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">Subgraph&lt; Graph, Pred &gt;::iterator</a>
 </li>
 <li>suffix_link_cache
-: <a class="el" href="structstring__tools_1_1Trie.html#aa1dfae41dfe9443b4ad82fb60725b53c">string_tools::Trie&lt; start, alphabet_size &gt;</a>
+: <a class="el" href="structstring__tools_1_1Trie.html#add3a2c8ef2f3c49a0d027923cd83dce4">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>sum
-: <a class="el" href="classsparse__table_1_1DisjointSparseTable.html#afd23a4ac9f85358855420c012795a2e3">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;</a>
+: <a class="el" href="classsparse__table_1_1DisjointSparseTable.html#a9eca81324cb28eea79212d5385d6d2c1">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_t"></a>- t -</h3><ul>
 <li>t
-: <a class="el" href="structstring__tools_1_1search__it.html#a14e5ffebdd56dc850d3f567f7a2bcfea">string_tools::search_it</a>
+: <a class="el" href="structstring__tools_1_1search__it.html#ad3d2409929107e72a52c886efcd70b8e">string_tools::search_it</a>
 </li>
 <li>t1
 : <a class="el" href="structtime__tools_1_1timer.html#ad3a3d5f9131f82434437f052fbefef8c">time_tools::timer</a>
@@ -371,13 +404,13 @@ $(function() {
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>v
 : <a class="el" href="structtree_1_1no.html#aaee193ab7c73293313b957b397f2b6b2">tree::no&lt; T &gt;</a>
-, <a class="el" href="structutility_1_1with.html#a46ccf5b3dc0b78575c267731c777b248">utility::with&lt; T &gt;</a>
+, <a class="el" href="structutility_1_1with.html#a895ad458d1213df4ef45109dc34cea37">utility::with&lt; T &gt;</a>
 </li>
 <li>value
 : <a class="el" href="structsplay__tree_1_1SplayNode.html#aeb587346f51a8c188a0cf74da7770be4">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
 </li>
 <li>visited
-: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#abebd4916073c7e7ff088ddddd55be0c8">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
+: <a class="el" href="structgraph__theory_1_1GeneralSearch.html#a8f85e90fb507ef03e5280a38c01a72cb">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
 </li>
 </ul>
 
@@ -397,11 +430,14 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

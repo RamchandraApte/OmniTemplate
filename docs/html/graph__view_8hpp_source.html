@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('graph__view_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">graph_view.hpp</div>  </div>
@@ -81,30 +107,30 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_8hpp.html">graph/core.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structSubgraph.html">    7</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Graph, <span class="keyword">typename</span> Pred&gt; <span class="keyword">struct </span><a class="code" href="structSubgraph.html">Subgraph</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">    8</a></span>&#160;    <span class="keyword">const</span> Graph &amp;<a class="code" href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">graph</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structSubgraph.html#af968f823bf4408c13440e2ccee5e9489">    9</a></span>&#160;    <span class="keyword">const</span> Pred &amp;<a class="code" href="structSubgraph.html#af968f823bf4408c13440e2ccee5e9489">pred</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">    8</a></span>&#160;    <span class="keyword">const</span> Graph &amp;<a class="code" href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">graph</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structSubgraph.html#a920e64e62c7a681239f9944d940c7528">    9</a></span>&#160;    <span class="keyword">const</span> Pred &amp;<a class="code" href="structSubgraph.html#a920e64e62c7a681239f9944d940c7528">pred</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structSubgraph.html#a0d61932ee9d61d8765fb5694edbcbbbd">   10</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structSubgraph.html#a0d61932ee9d61d8765fb5694edbcbbbd">Subgraph</a>(<span class="keyword">const</span> Graph &amp;graph_arg, <span class="keyword">const</span> Pred &amp;pred_arg)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        : <a class="code" href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">graph</a>{graph_arg}, <a class="code" href="structSubgraph.html#af968f823bf4408c13440e2ccee5e9489">pred</a>{pred_arg} {}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        : <a class="code" href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">graph</a>{graph_arg}, <a class="code" href="structSubgraph.html#a920e64e62c7a681239f9944d940c7528">pred</a>{pred_arg} {}</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html">   12</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structSubgraph_1_1iterator.html">iterator</a> : <a class="code" href="structit__base.html">it_base</a>&lt;ll&gt; {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">   13</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="structSubgraph.html">Subgraph</a> &amp;<a class="code" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">subgraph</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">   13</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="structSubgraph.html">Subgraph</a> &amp;<a class="code" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">subgraph</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">   14</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> <a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">   15</a></span>&#160;        <span class="keyword">const</span> vector&lt;ll&gt; &amp;<a class="code" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">adj_list</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">   16</a></span>&#160;        vector&lt;ll&gt;::const_iterator <a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">   15</a></span>&#160;        <span class="keyword">const</span> vector&lt;ll&gt; &amp;<a class="code" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">adj_list</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">   16</a></span>&#160;        vector&lt;ll&gt;::const_iterator <a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a25fb1ad469d1925f007e97bf93fa6eaf">   17</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="structSubgraph_1_1iterator.html#a25fb1ad469d1925f007e97bf93fa6eaf">iterator</a>(<span class="keyword">const</span> <a class="code" href="structSubgraph.html">Subgraph</a> &amp;subgraph_arg, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> i_arg)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            : <a class="code" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">subgraph</a>{subgraph_arg}, <a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>{i_arg}, <a class="code" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">adj_list</a>{<a class="code" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">subgraph</a>.<a class="code" href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">graph</a>[<a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>]},</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;              <a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>{<a class="code" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">adj_list</a>.begin()} {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            : <a class="code" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">subgraph</a>{subgraph_arg}, <a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>{i_arg}, <a class="code" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">adj_list</a>{<a class="code" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">subgraph</a>.<a class="code" href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">graph</a>[<a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>]},</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;              <a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>{<a class="code" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">adj_list</a>.begin()} {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="structSubgraph_1_1iterator.html#aad7c6ef62b911de3d4074e08da866362">advance</a>();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#aad7c6ef62b911de3d4074e08da866362">   22</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structSubgraph_1_1iterator.html#aad7c6ef62b911de3d4074e08da866362">advance</a>() {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">for</span> (; <a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a> != <a class="code" href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">adj_list</a>.end() &amp;&amp; !<a class="code" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">subgraph</a>.<a class="code" href="structSubgraph.html#af968f823bf4408c13440e2ccee5e9489">pred</a>(<a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>, *<a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>); ++<a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">for</span> (; <a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a> != <a class="code" href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">adj_list</a>.end() &amp;&amp; !<a class="code" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">subgraph</a>.<a class="code" href="structSubgraph.html#a920e64e62c7a681239f9944d940c7528">pred</a>(<a class="code" href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">i</a>, *<a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>); ++<a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">   26</a></span>&#160;        <a class="code" href="structll.html">ll</a> <a class="code" href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">   26</a></span>&#160;        <a class="code" href="structll.html">ll</a> <a class="code" href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>; }</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a590bacc33ad746829d0b176e0b2fed5b">   27</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="structSubgraph_1_1iterator.html#a590bacc33ad746829d0b176e0b2fed5b">operator++</a>() {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            ++<a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            ++<a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="structSubgraph_1_1iterator.html#aad7c6ef62b911de3d4074e08da866362">advance</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">   31</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">operator==</a>(<span class="keyword">const</span> <a class="code" href="structSubgraph_1_1iterator.html">iterator</a> &amp;oth)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a> == oth.<a class="code" href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">it</a>; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">   31</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">operator==</a>(<span class="keyword">const</span> <a class="code" href="structSubgraph_1_1iterator.html">iterator</a> &amp;oth)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a> == oth.<a class="code" href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">it</a>; }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">// FIXME should be genericized for all classes</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structSubgraph_1_1iterator.html#a3b5d3735f55fb1e655bfc16e65d9f847">   33</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structSubgraph_1_1iterator.html#a3b5d3735f55fb1e655bfc16e65d9f847">operator!=</a>(<span class="keyword">const</span> <a class="code" href="structSubgraph_1_1iterator.html">iterator</a> &amp;oth)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == oth); }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
@@ -114,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ed_it.it = ed_it.adj_list.end();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structrange.html">range&lt;iterator&gt;</a>{st_it, ed_it};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structSubgraph.html#ad83982532b85bb5379aa71b98c8d246f">   41</a></span>&#160;    <a class="code" href="structll.html">ll</a> <a class="code" href="structSubgraph.html#ad83982532b85bb5379aa71b98c8d246f">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">graph</a>.size(); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structSubgraph.html#ad83982532b85bb5379aa71b98c8d246f">   41</a></span>&#160;    <a class="code" href="structll.html">ll</a> <a class="code" href="structSubgraph.html#ad83982532b85bb5379aa71b98c8d246f">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">graph</a>.size(); }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="graph__view_8hpp.html#ac5d2f097a07285733e610a52b16e790b">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="graph__view_8hpp.html#ac5d2f097a07285733e610a52b16e790b">test_graph_view</a>() {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="structgraph__theory_1_1GraphAdj.html">GraphAdj</a> g(5);</div>
@@ -134,6 +160,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, g.size()) { assert(bfs.visited[i] == (i % 2 == 0)); }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="agraph__view_8hpp_html_ac5d2f097a07285733e610a52b16e790b"><div class="ttname"><a href="graph__view_8hpp.html#ac5d2f097a07285733e610a52b16e790b">test_graph_view</a></div><div class="ttdeci">void test_graph_view()</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:43</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html_ad228b426b788aff7396333cb2689a2a1"><div class="ttname"><a href="structSubgraph_1_1iterator.html#ad228b426b788aff7396333cb2689a2a1">Subgraph::iterator::operator*</a></div><div class="ttdeci">ll operator*() const</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:26</div></div>
 <div class="ttc" id="astructgraph__theory_1_1BFS_html"><div class="ttname"><a href="structgraph__theory_1_1BFS.html">graph_theory::BFS</a></div><div class="ttdoc">Breadth-first search.</div><div class="ttdef"><b>Definition:</b> core.hpp:150</div></div>
@@ -142,30 +169,33 @@ $(function() {
 <div class="ttc" id="astructSubgraph_html_ad83982532b85bb5379aa71b98c8d246f"><div class="ttname"><a href="structSubgraph.html#ad83982532b85bb5379aa71b98c8d246f">Subgraph::size</a></div><div class="ttdeci">ll size() const</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:41</div></div>
 <div class="ttc" id="astructgraph__theory_1_1GraphAdj_html_a1893210e27b58b19ec5cbf36a5aeb951"><div class="ttname"><a href="structgraph__theory_1_1GraphAdj.html#a1893210e27b58b19ec5cbf36a5aeb951">graph_theory::GraphAdj::add_edge</a></div><div class="ttdeci">void add_edge(const ll u, const ll v)</div><div class="ttdef"><b>Definition:</b> core.hpp:9</div></div>
 <div class="ttc" id="astructit__base_html"><div class="ttname"><a href="structit__base.html">it_base</a></div><div class="ttdef"><b>Definition:</b> range.hpp:3</div></div>
+<div class="ttc" id="astructSubgraph_html_a907d9f1d611ffa259c59bde70923e464"><div class="ttname"><a href="structSubgraph.html#a907d9f1d611ffa259c59bde70923e464">Subgraph::graph</a></div><div class="ttdeci">const Graph &amp; graph</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:8</div></div>
+<div class="ttc" id="astructSubgraph_1_1iterator_html_a9174ae6dfaba16acc3ec7dc1466d13bf"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a9174ae6dfaba16acc3ec7dc1466d13bf">Subgraph::iterator::it</a></div><div class="ttdeci">vector&lt; ll &gt;::const_iterator it</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:16</div></div>
+<div class="ttc" id="astructSubgraph_html_a920e64e62c7a681239f9944d940c7528"><div class="ttname"><a href="structSubgraph.html#a920e64e62c7a681239f9944d940c7528">Subgraph::pred</a></div><div class="ttdeci">const Pred &amp; pred</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:9</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
+<div class="ttc" id="astructSubgraph_1_1iterator_html_a7a7cb023f473158d850257096a13d1af"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">Subgraph::iterator::subgraph</a></div><div class="ttdeci">const Subgraph &amp; subgraph</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:13</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html_a25fb1ad469d1925f007e97bf93fa6eaf"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a25fb1ad469d1925f007e97bf93fa6eaf">Subgraph::iterator::iterator</a></div><div class="ttdeci">iterator(const Subgraph &amp;subgraph_arg, const ll i_arg)</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:17</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html_a446d48ffd07058bcce4bf3f616a004b1"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a446d48ffd07058bcce4bf3f616a004b1">Subgraph::iterator::i</a></div><div class="ttdeci">const ll i</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:14</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html_a0c63e38a83bcd42b04c0d9b55bdc4d62"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a0c63e38a83bcd42b04c0d9b55bdc4d62">Subgraph::iterator::operator==</a></div><div class="ttdeci">bool operator==(const iterator &amp;oth) const</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:31</div></div>
 <div class="ttc" id="astructrange_html"><div class="ttname"><a href="structrange.html">range</a></div><div class="ttdef"><b>Definition:</b> range.hpp:41</div></div>
-<div class="ttc" id="astructSubgraph_html_a729cb39ca9e3ec383acd385bc5dd334f"><div class="ttname"><a href="structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f">Subgraph::graph</a></div><div class="ttdeci">const Graph &amp; graph</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:8</div></div>
 <div class="ttc" id="astructgraph__theory_1_1GraphAdj_html"><div class="ttname"><a href="structgraph__theory_1_1GraphAdj.html">graph_theory::GraphAdj</a></div><div class="ttdef"><b>Definition:</b> core.hpp:7</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html_a590bacc33ad746829d0b176e0b2fed5b"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a590bacc33ad746829d0b176e0b2fed5b">Subgraph::iterator::operator++</a></div><div class="ttdeci">void operator++()</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:27</div></div>
-<div class="ttc" id="astructSubgraph_1_1iterator_html_aae8bd64ce5fd82007c9705df67cd3cf3"><div class="ttname"><a href="structSubgraph_1_1iterator.html#aae8bd64ce5fd82007c9705df67cd3cf3">Subgraph::iterator::it</a></div><div class="ttdeci">vector&lt; ll &gt;::const_iterator it</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:16</div></div>
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
-<div class="ttc" id="astructSubgraph_1_1iterator_html_ada834c740f17786c8902d57d9be1ded5"><div class="ttname"><a href="structSubgraph_1_1iterator.html#ada834c740f17786c8902d57d9be1ded5">Subgraph::iterator::adj_list</a></div><div class="ttdeci">const vector&lt; ll &gt; &amp; adj_list</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:15</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html_a3b5d3735f55fb1e655bfc16e65d9f847"><div class="ttname"><a href="structSubgraph_1_1iterator.html#a3b5d3735f55fb1e655bfc16e65d9f847">Subgraph::iterator::operator!=</a></div><div class="ttdeci">bool operator!=(const iterator &amp;oth) const</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:33</div></div>
-<div class="ttc" id="astructSubgraph_html_af968f823bf4408c13440e2ccee5e9489"><div class="ttname"><a href="structSubgraph.html#af968f823bf4408c13440e2ccee5e9489">Subgraph::pred</a></div><div class="ttdeci">const Pred &amp; pred</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:9</div></div>
-<div class="ttc" id="astructSubgraph_1_1iterator_html_acb4dc000038465da64d1859f489d61f3"><div class="ttname"><a href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">Subgraph::iterator::subgraph</a></div><div class="ttdeci">const Subgraph &amp; subgraph</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:13</div></div>
+<div class="ttc" id="astructSubgraph_1_1iterator_html_abc88317accab326a6eaf28a9a188b6a0"><div class="ttname"><a href="structSubgraph_1_1iterator.html#abc88317accab326a6eaf28a9a188b6a0">Subgraph::iterator::adj_list</a></div><div class="ttdeci">const vector&lt; ll &gt; &amp; adj_list</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:15</div></div>
 <div class="ttc" id="astructSubgraph_html_aa20007f84b399d375e9780dadfd40a10"><div class="ttname"><a href="structSubgraph.html#aa20007f84b399d375e9780dadfd40a10">Subgraph::operator[]</a></div><div class="ttdeci">range&lt; iterator &gt; operator[](const ll i) const</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:35</div></div>
 <div class="ttc" id="astructSubgraph_html"><div class="ttname"><a href="structSubgraph.html">Subgraph</a></div><div class="ttdoc">Filters graph by a predicate.</div><div class="ttdef"><b>Definition:</b> graph_view.hpp:7</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <div class="ttc" id="astructSubgraph_1_1iterator_html"><div class="ttname"><a href="structSubgraph_1_1iterator.html">Subgraph::iterator</a></div><div class="ttdef"><b>Definition:</b> graph_view.hpp:12</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li><li class="navelem"><a class="el" href="graph__view_8hpp.html">graph_view.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

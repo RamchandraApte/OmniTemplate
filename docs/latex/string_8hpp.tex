@@ -2,16 +2,14 @@
 \label{string_8hpp}\index{/home/ram/OmniTemplate/src/string/string.hpp@{/home/ram/OmniTemplate/src/string/string.hpp}}
 {\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}number\+\_\+theory/modulo.\+hpp\char`\"{}}\newline
-Include dependency graph for string.\+hpp\+:
-\nopagebreak
+Include dependency graph for string.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{string_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,7 +24,7 @@ struct \mbox{\hyperlink{structstring__tools_1_1hash__str}{string\+\_\+tools\+::h
 struct \mbox{\hyperlink{structstring__tools_1_1bytehash}{string\+\_\+tools\+::bytehash}}
 \item 
 struct \mbox{\hyperlink{structstring__tools_1_1search__it}{string\+\_\+tools\+::search\+\_\+it}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Search iterator for looping through all matches of a string s in t using K\+MP. Complexity\+: $O(n)$, where is the length between subsequent matches. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,18 +33,13 @@ struct \mbox{\hyperlink{structstring__tools_1_1search__it}{string\+\_\+tools\+::
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_a4a75212a844e6d429ae67ed0bb52ac1c}{string\+\_\+tools\+::prefix}} (string const \&s)
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}{string\+\_\+tools\+::prefix}} (string const \&s)
 \item 
 auto \mbox{\hyperlink{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}{string\+\_\+tools\+::search\+\_\+all}} (string const \&t, string const \&s)
 \item 
-auto \mbox{\hyperlink{namespacestring__tools_ae6f8c1cd029548c31fa4c1cfab06a52f}{string\+\_\+tools\+::operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
+bool \mbox{\hyperlink{namespacestring__tools_a8a767408e05473fa35a3fbfd34f7283a}{string\+\_\+tools\+::operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
-auto \mbox{\hyperlink{namespacestring__tools_a072e7010806806c68fa2f537b0677c74}{string\+\_\+tools\+::operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
+bool \mbox{\hyperlink{namespacestring__tools_a7707425b8a62bf2843b109e1c2252539}{string\+\_\+tools\+::operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
-{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a9ea78f4e72ed84a9dc9c77e705185739}{string\+\_\+tools\+::search\+\_\+ra}} (const Ts \&... args)
-\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-string \mbox{\hyperlink{namespacestring__tools_a01217477dcb709d208fc7a38ee91d26e}{string\+\_\+tools\+::empstr}} = \char`\"{}\char`\"{}
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9}{string\+\_\+tools\+::search\+\_\+ra}} (const string \&t, const string \&s)
 \end{DoxyCompactItemize}

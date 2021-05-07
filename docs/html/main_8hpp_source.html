@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('main_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">main.hpp</div>  </div>
@@ -98,7 +124,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a>) {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a>.rdbuf(<span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (ios &amp;os : initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{cin, cout, (<a class="code" href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a>), clog}) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (ios &amp;os : initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{<a class="code" href="io_8hpp.html#ad3d37d28ba906ccaf466014e09241de5">orig_cin</a>, cout, <a class="code" href="io_8hpp.html#ac42bccbb7905afc32ae4dddd1a4db540">orig_cerr</a>, clog}) {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        fixed(os);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (os.rdbuf()) {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            os.exceptions(ios::failbit | ios::badbit | ios::eofbit);</div>
@@ -109,28 +135,35 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structtime__tools_1_1timer.html">timer</a> _t;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structll.html">ll</a> t = 1;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest::multitest</a>) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        cin &gt;&gt; t;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="io_8hpp.html#a5623b1d0cbb6ab8353c440455eb7f3e1">cin</a> &gt;&gt; t;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, t) { <a class="code" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a>(); }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acore_2all_8hpp_html_aa021995764a0c77f628e3411497239cc"><div class="ttname"><a href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a></div><div class="ttdeci">bool debug_mode</div><div class="ttdef"><b>Definition:</b> all.hpp:39</div></div>
-<div class="ttc" id="amain_8hpp_html_af095a232149097b5605064623a9345ac"><div class="ttname"><a href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a></div><div class="ttdeci">void main2()</div><div class="ttdef"><b>Definition:</b> test_compiled.cpp:4496</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="acore_2all_8hpp_html_aa021995764a0c77f628e3411497239cc"><div class="ttname"><a href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a></div><div class="ttdeci">bool debug_mode</div><div class="ttdef"><b>Definition:</b> all.hpp:58</div></div>
+<div class="ttc" id="amain_8hpp_html_af095a232149097b5605064623a9345ac"><div class="ttname"><a href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a></div><div class="ttdeci">void main2()</div><div class="ttdef"><b>Definition:</b> test.cpp:31</div></div>
+<div class="ttc" id="aio_8hpp_html_a5623b1d0cbb6ab8353c440455eb7f3e1"><div class="ttname"><a href="io_8hpp.html#a5623b1d0cbb6ab8353c440455eb7f3e1">cin</a></div><div class="ttdeci">#define cin</div><div class="ttdef"><b>Definition:</b> io.hpp:82</div></div>
 <div class="ttc" id="astructtime__tools_1_1timer_html"><div class="ttname"><a href="structtime__tools_1_1timer.html">time_tools::timer</a></div><div class="ttdef"><b>Definition:</b> time.hpp:4</div></div>
 <div class="ttc" id="astructset__multitest_html_a746c648fb7b25d87a0f67c3f4da2f2f2"><div class="ttname"><a href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">set_multitest::set_multitest</a></div><div class="ttdeci">set_multitest(const bool val=true)</div><div class="ttdef"><b>Definition:</b> main.hpp:6</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad8a867e2e93131cb4d4afbedcd38245a"><div class="ttname"><a href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a></div><div class="ttdeci">#define cerr()</div><div class="ttdef"><b>Definition:</b> all.hpp:56</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad8a867e2e93131cb4d4afbedcd38245a"><div class="ttname"><a href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a></div><div class="ttdeci">#define cerr()</div><div class="ttdef"><b>Definition:</b> all.hpp:75</div></div>
 <div class="ttc" id="astructset__multitest_html_a20d0d5a0be72afc726d24cff42a14130"><div class="ttname"><a href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest::multitest</a></div><div class="ttdeci">static bool multitest</div><div class="ttdef"><b>Definition:</b> main.hpp:5</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="astructset__multitest_html"><div class="ttname"><a href="structset__multitest.html">set_multitest</a></div><div class="ttdef"><b>Definition:</b> main.hpp:4</div></div>
+<div class="ttc" id="aio_8hpp_html_ac42bccbb7905afc32ae4dddd1a4db540"><div class="ttname"><a href="io_8hpp.html#ac42bccbb7905afc32ae4dddd1a4db540">std::orig_cerr</a></div><div class="ttdeci">auto &amp; orig_cerr</div><div class="ttdef"><b>Definition:</b> io.hpp:81</div></div>
+<div class="ttc" id="aio_8hpp_html_ad3d37d28ba906ccaf466014e09241de5"><div class="ttname"><a href="io_8hpp.html#ad3d37d28ba906ccaf466014e09241de5">std::orig_cin</a></div><div class="ttdeci">auto &amp; orig_cin</div><div class="ttdef"><b>Definition:</b> io.hpp:80</div></div>
 <div class="ttc" id="atime_8hpp_html"><div class="ttname"><a href="time_8hpp.html">time.hpp</a></div></div>
 <div class="ttc" id="amain_8hpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> main.hpp:9</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="main_8hpp.html">main.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('classsegment__tree_1_1SegmentTree.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacesegment__tree.html">segment_tree</a></li><li class="navelem"><a class="el" href="classsegment__tree_1_1SegmentTree.html">SegmentTree</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt; Member List</div>  </div>
@@ -82,50 +108,35 @@ $(function() {
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ab4671ac300a724a5bbfdd92c68abcfcb">build</a>(const vector&lt; T &gt; &amp;arr)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad8b2ae5fb114f861e0dcc0fb5d370b8f">build</a>(const vector&lt; T &gt; &amp;arr, const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ab4671ac300a724a5bbfdd92c68abcfcb">build</a>(const vector&lt; T &gt; &amp;arr)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad8b2ae5fb114f861e0dcc0fb5d370b8f">build</a>(const vector&lt; T &gt; &amp;arr, const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">ceil_size</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a4062ab69d3598b338ba182ca6ae17ffe">destroy</a>(Node node)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a4062ab69d3598b338ba182ca6ae17ffe">destroy</a>(Node node)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a800501714b462945aca69aef474dbfbc">down</a>([[maybe_unused]] const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a52f59c0f0db30957d70083a26e7ac967">down</a>(const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a800501714b462945aca69aef474dbfbc">down</a>([[maybe_unused]] const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">get_child</a>(NodeExp *const &amp;obj, const ll i)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a6a4f7d2b00e4bc94806364ec0f999700">get_child</a>(const ll idx, const ll i)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">get_child</a>(NodeExp *const &amp;obj, const ll i)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a6a4f7d2b00e4bc94806364ec0f999700">get_child</a>(const ll idx, const ll i)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ac8ebb88c3ad2fedecb123e31552fde60">get_core</a>(NodeExp *const &amp;obj)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">get_core</a>(const ll idx)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ac8ebb88c3ad2fedecb123e31552fde60">get_core</a>(NodeExp *const &amp;obj)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">get_core</a>(const ll idx)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a2bab4503b7a982cd822c2d5cb48c8e11">mid</a>(const ll node_l, const ll node_r, const ll i)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a2bab4503b7a982cd822c2d5cb48c8e11">mid</a>(const ll node_l, const ll node_r, const ll i)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">Node</a> typedef</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">Node</a> typedef</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">nodes</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">nodes</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#aee0899b7aed45c73f0142ce425937fde">query</a>(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad39bd604bb4dc65a3204865f578f6fd9">query</a>(const ll l, const ll r, const Node custom_root)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad2c2369ddf9d9fb8ca78e367ff129839">query</a>(const ll l, const ll r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#aee0899b7aed45c73f0142ce425937fde">query</a>(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad39bd604bb4dc65a3204865f578f6fd9">query</a>(const ll l, const ll r, const Node custom_root)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad2c2369ddf9d9fb8ca78e367ff129839">query</a>(const ll l, const ll r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">root</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">SegmentTree</a>(const ll size_arg)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a7b87087b2001e8a0f470a4e78f394502">SegmentTree</a>(const vector&lt; T &gt; &amp;arr)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">SegmentTree</a>(const ll size_arg)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a7b87087b2001e8a0f470a4e78f394502">SegmentTree</a>(const vector&lt; T &gt; &amp;arr)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">size_</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a5207ffe18417463bef339fd6d3183b5c">update</a>(const ll l, const ll r, const T val, Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad2375790875e1231b39795e93d61e176">update</a>(const ll l, const ll r, const T val)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a5207ffe18417463bef339fd6d3183b5c">update</a>(const ll l, const ll r, const T val, Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad2375790875e1231b39795e93d61e176">update</a>(const ll l, const ll r, const T val)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a9f3420768798bd5b372b6f6a079de487">~SegmentTree</a>()</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">root</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">SegmentTree</a>(const ll size_arg)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a7b87087b2001e8a0f470a4e78f394502">SegmentTree</a>(const vector&lt; T &gt; &amp;arr)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">size_</a></td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a5207ffe18417463bef339fd6d3183b5c">update</a>(const ll l, const ll r, const T val, Node idx, const ll node_l, const ll node_r)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#ad2375790875e1231b39795e93d61e176">update</a>(const ll l, const ll r, const T val)</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html#a9f3420768798bd5b372b6f6a079de487">~SegmentTree</a>()</td><td class="entry"><a class="el" href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

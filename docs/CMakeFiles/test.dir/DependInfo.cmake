@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/cmake_pch.hxx.cxx" "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/cmake_pch.hxx.gch"
+  "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/cmake_pch.hxx" "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/cmake_pch.hxx.gch"
   "/home/ram/OmniTemplate/src/test/test.cpp" "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/src/test/test.cpp.o"
+  "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/cmake_pch.hxx" "/home/ram/OmniTemplate/docs/CMakeFiles/test.dir/src/test/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

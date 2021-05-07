@@ -103,7 +103,7 @@ ll log_ceil(const ll x, const ll base) {
 	return ret;
 }
 /** @brief Stable sorts a and b by func.*/
-template <typename T, typename Func> void swap2(T &a, T &b, const Func &func) {
+template <typename T, typename Func> void sort2(T &a, T &b, const Func &func) {
 	if (func(a) > func(b)) {
 		swap(a, b);
 	}

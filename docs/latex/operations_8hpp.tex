@@ -1,36 +1,34 @@
 \hypertarget{operations_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/core/operations.hpp File Reference}
 \label{operations_8hpp}\index{/home/ram/OmniTemplate/src/core/operations.hpp@{/home/ram/OmniTemplate/src/core/operations.hpp}}
 {\ttfamily \#include \char`\"{}range.\+hpp\char`\"{}}\newline
-Include dependency graph for operations.\+hpp\+:
-\nopagebreak
+Include dependency graph for operations.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{operations_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{operations_8hpp__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMax}{Max}}
+\item 
+struct \mbox{\hyperlink{structMin}{Min}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{operations_8hpp_a2e3fb564092d70d9bee87555035d8711}{aug}}(op)
 \item 
-\#define \mbox{\hyperlink{operations_8hpp_aef20301df3ed18a53843fb3a5b69bd5b}{F\+U\+N\+C\+T\+OR}}(func)
+\#define \mbox{\hyperlink{operations_8hpp_a39eacc49492732c9298320c8a78b50ad}{F\+U\+N\+C\+T\+OR}}(name,  func)
 \begin{DoxyCompactList}\small\item\em Expands to a functor type that calls func. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-using \mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}} = struct \{ template$<$ typename... Ts $>$ decltype(auto) operator()(Ts \&\&... args) const \{ return(max)(forward$<$ decltype(args)$>$(args)...)
-\item 
-using \mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}} = struct \{ template$<$ typename... Ts $>$ decltype(auto) operator()(Ts \&\&... args) const \{ return(min)(forward$<$ decltype(args)$>$(args)...)
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -72,13 +70,13 @@ unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll
 \item 
 {\footnotesize template$<$typename Iterator $>$ }\\auto \mbox{\hyperlink{operations_8hpp_af877591533298d5fba3df85680cabb60}{operator+}} (Iterator it, enable\+\_\+if\+\_\+t$<$!is\+\_\+same$<$ typename iterator\+\_\+traits$<$ decltype(it)$>$\+::iterator\+\_\+category, random\+\_\+access\+\_\+iterator\+\_\+tag $>$\+::value, \mbox{\hyperlink{structll}{ll}} $>$ n)
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a09af32a8d21cf0ca5017ce40502a2a09}{identity}} (plus$<$$>$, \mbox{\hyperlink{structll}{ll}})
+{\footnotesize template$<$typename T , typename  = enable\+\_\+if\+\_\+t$<$is\+\_\+arithmetic\+\_\+v$<$\+T$>$$>$$>$ }\\T \mbox{\hyperlink{operations_8hpp_a0fea197d8d19ab6ebe48c69665bbff99}{identity}} (plus$<$$>$, T)
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_acc5a0ae67ef6a3bd347c85cab4a15313}{identity}} (multiplies$<$$>$, \mbox{\hyperlink{structll}{ll}})
+{\footnotesize template$<$typename T , typename  = enable\+\_\+if\+\_\+t$<$is\+\_\+arithmetic\+\_\+v$<$\+T$>$$>$$>$ }\\T \mbox{\hyperlink{operations_8hpp_a882b3269af17d13f1e1a394e7913fdc5}{identity}} (multiplies$<$$>$, T)
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}{identity}} (\mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}}, \mbox{\hyperlink{structll}{ll}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}{identity}} (\mbox{\hyperlink{structMax}{Max}}, \mbox{\hyperlink{structll}{ll}})
 \item 
-\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}{identity}} (\mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}}, \mbox{\hyperlink{structll}{ll}})
+\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}{identity}} (\mbox{\hyperlink{structMin}{Min}}, \mbox{\hyperlink{structll}{ll}})
 \end{DoxyCompactItemize}
 
 
@@ -96,16 +94,16 @@ unordered\+\_\+map$<$ \mbox{\hyperlink{structll}{ll}}, \mbox{\hyperlink{structll
 \DoxyCodeLine{    \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{operations_8hpp_aef20301df3ed18a53843fb3a5b69bd5b}\label{operations_8hpp_aef20301df3ed18a53843fb3a5b69bd5b}} 
+\mbox{\Hypertarget{operations_8hpp_a39eacc49492732c9298320c8a78b50ad}\label{operations_8hpp_a39eacc49492732c9298320c8a78b50ad}} 
 \index{operations.hpp@{operations.hpp}!FUNCTOR@{FUNCTOR}}
 \index{FUNCTOR@{FUNCTOR}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{FUNCTOR}{FUNCTOR}}
-{\footnotesize\ttfamily \#define F\+U\+N\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{func }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keyword}{struct }\{                                                                                   \(\backslash\)}
-\DoxyCodeLine{        template <\textcolor{keyword}{typename}... Ts> decltype(\textcolor{keyword}{auto}) operator()(Ts \&\&... args)\textcolor{keyword}{ const }\{         \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keyword}{struct }name \{                                                                              \(\backslash\)}
+\DoxyCodeLine{        template <\textcolor{keyword}{typename}... Ts> decltype(\textcolor{keyword}{auto}) operator()(Ts \&\&...args)\textcolor{keyword}{ const }\{          \(\backslash\)}
 \DoxyCodeLine{            return (func)(forward<decltype(args)>(args)...);                           \(\backslash\)}
 \DoxyCodeLine{        \}                                                                                  \(\backslash\)}
 \DoxyCodeLine{    \}}
@@ -117,45 +115,32 @@ Expands to a functor type that calls func.
 
 
 
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}\label{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}} 
-\index{operations.hpp@{operations.hpp}!Max@{Max}}
-\index{Max@{Max}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{Max}{Max}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}} =  struct \{ template $<$typename... Ts$>$ decltype(auto) operator()(Ts \&\&... args) const \{ return ( max )(forward$<$decltype(args)$>$(args)...)}
-
-\mbox{\Hypertarget{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}\label{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}} 
-\index{operations.hpp@{operations.hpp}!Min@{Min}}
-\index{Min@{Min}!operations.hpp@{operations.hpp}}
-\doxysubsubsection{\texorpdfstring{Min}{Min}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}} =  struct \{ template $<$typename... Ts$>$ decltype(auto) operator()(Ts \&\&... args) const \{ return ( min )(forward$<$decltype(args)$>$(args)...)}
-
-
-
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}\label{operations_8hpp_a19000e539a20acfdcd7e8fdce1d970f4}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{operations_8hpp_a8ca39513ee57e00e1d6eecf32fd87035}{Max}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMax}{Max}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}\label{operations_8hpp_aa9ba94adf14b5b5566e3a750fa5255b3}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{operations_8hpp_a6e5336c573515260e7a624f1f72924a1}{Min}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMin}{Min}}}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{operations_8hpp_acc5a0ae67ef6a3bd347c85cab4a15313}\label{operations_8hpp_acc5a0ae67ef6a3bd347c85cab4a15313}} 
+\mbox{\Hypertarget{operations_8hpp_a882b3269af17d13f1e1a394e7913fdc5}\label{operations_8hpp_a882b3269af17d13f1e1a394e7913fdc5}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{multiplies$<$$>$}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename T , typename  = enable\+\_\+if\+\_\+t$<$is\+\_\+arithmetic\+\_\+v$<$\+T$>$$>$$>$ \\
+T identity (\begin{DoxyParamCaption}\item[{multiplies$<$$>$}]{,  }\item[{T}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{operations_8hpp_a09af32a8d21cf0ca5017ce40502a2a09}\label{operations_8hpp_a09af32a8d21cf0ca5017ce40502a2a09}} 
+\mbox{\Hypertarget{operations_8hpp_a0fea197d8d19ab6ebe48c69665bbff99}\label{operations_8hpp_a0fea197d8d19ab6ebe48c69665bbff99}} 
 \index{operations.hpp@{operations.hpp}!identity@{identity}}
 \index{identity@{identity}!operations.hpp@{operations.hpp}}
 \doxysubsubsection{\texorpdfstring{identity()}{identity()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structll}{ll}} identity (\begin{DoxyParamCaption}\item[{plus$<$$>$}]{,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename T , typename  = enable\+\_\+if\+\_\+t$<$is\+\_\+arithmetic\+\_\+v$<$\+T$>$$>$$>$ \\
+T identity (\begin{DoxyParamCaption}\item[{plus$<$$>$}]{,  }\item[{T}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d}\label{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d}} 
 \index{operations.hpp@{operations.hpp}!invert@{invert}}
@@ -168,7 +153,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=222pt]{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d_icgraph}
+\includegraphics[width=350pt]{operations_8hpp_a4cb6b7e98aadd3fa7ffc759c5e14596d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{operations_8hpp_a98ed0803268ba29fcc8977206b177923}\label{operations_8hpp_a98ed0803268ba29fcc8977206b177923}} 

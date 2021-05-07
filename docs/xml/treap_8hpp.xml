@@ -5,20 +5,38 @@
     <includes refid="core_2all_8hpp" local="yes">core/all.hpp</includes>
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>bits/stdc++.h</label>
+      <node id="9">
+        <label>functional</label>
       </node>
-      <node id="5">
-        <label>experimental/source_location</label>
-      </node>
-      <node id="7">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+      <node id="13">
+        <label>queue</label>
       </node>
       <node id="4">
+        <label>cassert</label>
+      </node>
+      <node id="12">
+        <label>numeric</label>
+      </node>
+      <node id="23">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>unordered_set</label>
+      </node>
+      <node id="22">
         <label>experimental/iterator</label>
+      </node>
+      <node id="8">
+        <label>fstream</label>
       </node>
       <node id="1">
         <label>/home/ram/OmniTemplate/src/ds/treap.hpp</label>
@@ -37,39 +55,111 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="14">
+        <label>random</label>
+      </node>
+      <node id="21">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>stack</label>
+      </node>
+      <node id="28">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="27">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="6">
+        <label>climits</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="17">
+        <label>thread</label>
+      </node>
+      <node id="18">
+        <label>type_traits</label>
+      </node>
+      <node id="15">
+        <label>set</label>
+      </node>
+      <node id="7">
+        <label>complex</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -92,7 +182,7 @@
         <name>flip</name>
         <param><defname>x</defname></param>
         <initializer>	if (trp-&gt;x) {                                                                              \
-		trp-&gt;x-&gt;<ref refid="test__compiled_8cpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref> ^= 1;                                                                  \
+		trp-&gt;x-&gt;<ref refid="range_8hpp_1a438bd5fc0a79e42a6a2abb632203f925" kindref="member">rev</ref> ^= 1;                                                                  \
 	}</initializer>
         <briefdescription>
         </briefdescription>
@@ -351,7 +441,6 @@
         <references refid="treap_8hpp_1a4a94ad7cd8f33ebf044afd6d79a174f8" compoundref="treap_8hpp" startline="109" endline="122">down</references>
         <references refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" compoundref="treap_8hpp" startline="29" endline="34">update_data</references>
         <referencedby refid="treap_8hpp_1add90798283a022be36a018723badda5b" compoundref="treap_8hpp" startline="99" endline="107">erase</referencedby>
-        <referencedby refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" compoundref="test__compiled_8cpp" startline="2175" endline="2182">splay_tree::SplayTree&lt; T &gt;::erase</referencedby>
         <referencedby refid="treap_8hpp_1a5029123d55b27e0746b8616a6f79eda3" compoundref="treap_8hpp" startline="148" endline="153">erase_imp</referencedby>
         <referencedby refid="treap_8hpp_1aa2ab504328f4d744315ec1da21b666f3" compoundref="treap_8hpp" startline="155" endline="161">get_imp</referencedby>
         <referencedby refid="treap_8hpp_1aa2a3eaf4c00318c5a4c9298b83d06003" compoundref="treap_8hpp" startline="141" endline="146">insert_imp</referencedby>
@@ -404,7 +493,6 @@
         <references refid="treap_8hpp_1ab4b19e3c8f0a975627a7261ed3e2c29b" compoundref="treap_8hpp" startline="37" endline="48">split</references>
         <references refid="treap_8hpp_1a9321be3a55db4ee924a0e968e12734a2" compoundref="treap_8hpp" startline="29" endline="34">update_data</references>
         <referencedby refid="treap_8hpp_1a14ea768f9d1a656b814be126c0a631c8" compoundref="treap_8hpp" startline="93" endline="96">insert</referencedby>
-        <referencedby refid="structsplay__tree_1_1SplayTree_1a2bf075a9e6a46e3f9b61e7b00b546707" compoundref="test__compiled_8cpp" startline="2171" endline="2174">splay_tree::SplayTree&lt; T &gt;::insert</referencedby>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1a14ea768f9d1a656b814be126c0a631c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -542,9 +630,7 @@
         <location file="/home/ram/OmniTemplate/src/ds/treap.hpp" line="109" column="18" bodyfile="/home/ram/OmniTemplate/src/ds/treap.hpp" bodystart="109" bodyend="122"/>
         <references refid="treap_8hpp_1a75a87b416e4b63590fe320df19d3c513">flip</references>
         <referencedby refid="treap_8hpp_1a4338e31f2a01e882efc6adf47768c076" compoundref="treap_8hpp" startline="57" endline="75">join</referencedby>
-        <referencedby refid="classsegment__tree_1_1SegmentTree_1aee0899b7aed45c73f0142ce425937fde" compoundref="test__compiled_8cpp" startline="1753" endline="1771">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::query</referencedby>
         <referencedby refid="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" compoundref="treap_8hpp" startline="123" endline="139">split_imp</referencedby>
-        <referencedby refid="classsegment__tree_1_1SegmentTree_1a5207ffe18417463bef339fd6d3183b5c" compoundref="test__compiled_8cpp" startline="1779" endline="1818">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="treap_8hpp_1aff38806a204c6e78d7945e04b556f588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>

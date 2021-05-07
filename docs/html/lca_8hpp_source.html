@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('lca_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li><li class="navelem"><a class="el" href="dir_1cc959f3490ebc60f7bf96b14f24e883.html">tree</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">lca.hpp</div>  </div>
@@ -137,16 +163,17 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace tree</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacetree.html">tree</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacetree_html_ae464c2bd0d1e78d727832472c579c2f6"><div class="ttname"><a href="namespacetree.html#ae464c2bd0d1e78d727832472c579c2f6">tree::sz</a></div><div class="ttdeci">ll const sz</div><div class="ttdef"><b>Definition:</b> lca.hpp:4</div></div>
 <div class="ttc" id="astructtree_1_1no_html_aaee193ab7c73293313b957b397f2b6b2"><div class="ttname"><a href="structtree_1_1no.html#aaee193ab7c73293313b957b397f2b6b2">tree::no::v</a></div><div class="ttdeci">T v</div><div class="ttdef"><b>Definition:</b> lca.hpp:7</div></div>
 <div class="ttc" id="anamespacetree_html"><div class="ttname"><a href="namespacetree.html">tree</a></div><div class="ttdef"><b>Definition:</b> lca.hpp:3</div></div>
 <div class="ttc" id="astructtree_1_1no_html_a3dd518d66a2bf5c95d277ff8d9638c1a"><div class="ttname"><a href="structtree_1_1no.html#a3dd518d66a2bf5c95d277ff8d9638c1a">tree::no::p</a></div><div class="ttdeci">vector&lt; no * &gt; p</div><div class="ttdef"><b>Definition:</b> lca.hpp:6</div></div>
 <div class="ttc" id="astructtree_1_1no_html"><div class="ttname"><a href="structtree_1_1no.html">tree::no</a></div><div class="ttdef"><b>Definition:</b> lca.hpp:5</div></div>
 <div class="ttc" id="anamespacetree_html_ad6fb77bc640502f7cfbc3b49c7891419"><div class="ttname"><a href="namespacetree.html#ad6fb77bc640502f7cfbc3b49c7891419">tree::lca</a></div><div class="ttdeci">auto lca(no&lt; T &gt; *a, no&lt; T &gt; *b)</div><div class="ttdef"><b>Definition:</b> lca.hpp:40</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="aabbrev_8hpp_html_a52c977d91e62bd8e617e5cb2926547e1"><div class="ttname"><a href="abbrev_8hpp.html#a52c977d91e62bd8e617e5cb2926547e1">bt</a></div><div class="ttdeci">bitset&lt; numeric_limits&lt; ll &gt;::digits &gt; bt</div><div class="ttdef"><b>Definition:</b> abbrev.hpp:9</div></div>
 <div class="ttc" id="astructrange_html"><div class="ttname"><a href="structrange.html">range</a></div><div class="ttdef"><b>Definition:</b> range.hpp:41</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:80</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:99</div></div>
 <div class="ttc" id="astructtree_1_1no_html_af0fdce790d620d5787ac8efe7642ce70"><div class="ttname"><a href="structtree_1_1no.html#af0fdce790d620d5787ac8efe7642ce70">tree::no::dp</a></div><div class="ttdeci">auto dp()</div><div class="ttdef"><b>Definition:</b> lca.hpp:28</div></div>
 <div class="ttc" id="arange_8hpp_html_a438bd5fc0a79e42a6a2abb632203f925"><div class="ttname"><a href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a></div><div class="ttdeci">auto rev(const Range &amp;r)</div><div class="ttdef"><b>Definition:</b> range.hpp:57</div></div>
 <div class="ttc" id="astructtree_1_1no_html_a6706d57cfed232149e1af1c15dfd2dfa"><div class="ttname"><a href="structtree_1_1no.html#a6706d57cfed232149e1af1c15dfd2dfa">tree::no::gt</a></div><div class="ttdeci">auto gt(ll h)</div><div class="ttdef"><b>Definition:</b> lca.hpp:17</div></div>
@@ -154,10 +181,13 @@ $(function() {
 <div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="core_8hpp.html">core.hpp</a></div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d182250f0c231765fc862e69db210731.html">graph</a></li><li class="navelem"><a class="el" href="dir_1cc959f3490ebc60f7bf96b14f24e883.html">tree</a></li><li class="navelem"><a class="el" href="lca_8hpp.html">lca.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

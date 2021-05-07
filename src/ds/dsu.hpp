@@ -19,7 +19,7 @@ struct dsu {
 		if (x == y) {
 			return false;
 		}
-		swap2(x, y, [&](auto idx) { return size_[idx]; });
+		sort2(x, y, [&](auto idx) { return size_[idx]; });
 		size_[y] += size_[x];
 		parent[x] = y;
 		return true;

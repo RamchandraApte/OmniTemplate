@@ -24,8 +24,6 @@ struct \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{namespacegraph__theory_adf2ab789ab7321886b5f11d88a9e7fe6}{Graph\+Adj\+\_\+\+Base}} = vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$
-\begin{DoxyCompactList}\small\item\em Adjacency-\/list representation of graph. \end{DoxyCompactList}\item 
-using \mbox{\hyperlink{namespacegraph__theory_a5ab361e566cb00eee5329a02c4553780}{Graph\+Adj}} = vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$
 \begin{DoxyCompactList}\small\item\em Adjacency-\/list representation of graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -34,7 +32,7 @@ bool \mbox{\hyperlink{namespacegraph__theory_a4dbe54e2a6c2e93add66dc32c647c876}{
 \begin{DoxyCompactList}\small\item\em Compare the edges by weight, with ties compared by a and b. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacegraph__theory_a9112d064de59f0aa5737bc1d90e9bf32}{operator==}} (\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&a, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&b)
 \item 
-{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacegraph__theory_ac98f689dd795d68d4d96aabe64b5de71}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&e)
+{\footnotesize template$<$typename Stream $>$ }\\auto \& \mbox{\hyperlink{namespacegraph__theory_a283db7058efe0355744471a1532e4960}{operator$<$$<$}} (Stream \&os, \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&e)
 \begin{DoxyCompactList}\small\item\em Print the edge. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{namespacegraph__theory_a934a24e545f14f58f25359de518e8d1d}{shortest\+\_\+dist}} (vector$<$ vector$<$ \mbox{\hyperlink{core_2all_8hpp_a58e2677d80a09b5be0f0e56ef70d4507}{pr}} $>$$>$ graph, \mbox{\hyperlink{structll}{ll}} source)
 \begin{DoxyCompactList}\small\item\em Adds edge $u \leftrightarrow v$ to graph graph. \end{DoxyCompactList}\item 
@@ -42,7 +40,7 @@ auto \mbox{\hyperlink{namespacegraph__theory_ae6ad3f54671798a8d8f3c4253ea83db4}{
 \begin{DoxyCompactList}\small\item\em Given a 2D matrix of distances for each edge in g, returns a 2D matrix of the shortest distances. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{namespacegraph__theory_a43f33335bd84b91252969b3b17f8b09d}{mst}} (vector$<$ \mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} $>$ edges, const \mbox{\hyperlink{structll}{ll}} n)
 \item 
-{\footnotesize template$<$typename Searcher $>$ }\\vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacegraph__theory_a9d6eaad6577fb0289aee53b10fd4a260}{get\+\_\+size}} (const Searcher \&search)
+{\footnotesize template$<$typename Searcher $>$ }\\vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}{get\+\_\+size}} (const Searcher \&search)
 \begin{DoxyCompactList}\small\item\em Given a searcher object, returns an array containing the size of each subtree. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph $>$ }\\\mbox{\hyperlink{namespacegraph__theory_a7ffa7c1e75caecd92d5c385d41eb313d}{D\+FS}} (Graph) -\/$>$ \mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}$<$ Graph $>$
 \item 
@@ -53,22 +51,10 @@ auto \mbox{\hyperlink{namespacegraph__theory_a5250f51004add91c3b7f66fe5a030a2f}{
 auto \mbox{\hyperlink{namespacegraph__theory_afcb5da494d1b16139a1be66e66543043}{scc}} (const \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph)
 \begin{DoxyCompactList}\small\item\em Returns the strongly connected component for each vertex of the graph g. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{namespacegraph__theory_aa68bcc78bd4d2bbd33ce272bbb2d5f33}{graph\+\_\+in}} (\mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&g, \mbox{\hyperlink{structll}{ll}} m)
-\begin{DoxyCompactList}\small\item\em Reads 1-\/indexed list of edges into graph g. \end{DoxyCompactList}\item 
-auto \mbox{\hyperlink{namespacegraph__theory_a2abf7b81ca97d786b3c5157c655066f1}{add\+\_\+edge}} (\mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&graph, \mbox{\hyperlink{structll}{ll}} u, \mbox{\hyperlink{structll}{ll}} v)
-\begin{DoxyCompactList}\small\item\em Adds edge $u \leftrightarrow v$ to graph graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reads 1-\/indexed list of edges into graph g. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{namespacegraph__theory_a5ab361e566cb00eee5329a02c4553780}\label{namespacegraph__theory_a5ab361e566cb00eee5329a02c4553780}} 
-\index{graph\_theory@{graph\_theory}!GraphAdj@{GraphAdj}}
-\index{GraphAdj@{GraphAdj}!graph\_theory@{graph\_theory}}
-\doxysubsubsection{\texorpdfstring{GraphAdj}{GraphAdj}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{graph\+\_\+theory\+::\+Graph\+Adj}} = typedef vector$<$vector$<$\mbox{\hyperlink{structll}{ll}}$>$ $>$}
-
-
-
-Adjacency-\/list representation of graph. 
-
 \mbox{\Hypertarget{namespacegraph__theory_adf2ab789ab7321886b5f11d88a9e7fe6}\label{namespacegraph__theory_adf2ab789ab7321886b5f11d88a9e7fe6}} 
 \index{graph\_theory@{graph\_theory}!GraphAdj\_Base@{GraphAdj\_Base}}
 \index{GraphAdj\_Base@{GraphAdj\_Base}!graph\_theory@{graph\_theory}}
@@ -82,23 +68,6 @@ Adjacency-\/list representation of graph.
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacegraph__theory_a2abf7b81ca97d786b3c5157c655066f1}\label{namespacegraph__theory_a2abf7b81ca97d786b3c5157c655066f1}} 
-\index{graph\_theory@{graph\_theory}!add\_edge@{add\_edge}}
-\index{add\_edge@{add\_edge}!graph\_theory@{graph\_theory}}
-\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
-{\footnotesize\ttfamily auto graph\+\_\+theory\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgraph__theory_1_1GraphAdj}{Graph\+Adj}} \&}]{graph,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{u,  }\item[{\mbox{\hyperlink{structll}{ll}}}]{v }\end{DoxyParamCaption})}
-
-
-
-Adds edge $u \leftrightarrow v$ to graph graph. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespacegraph__theory_a2abf7b81ca97d786b3c5157c655066f1_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{namespacegraph__theory_a4ebc5c354c7f3d8a187b1af524050c0a}\label{namespacegraph__theory_a4ebc5c354c7f3d8a187b1af524050c0a}} 
 \index{graph\_theory@{graph\_theory}!BFS@{BFS}}
 \index{BFS@{BFS}!graph\_theory@{graph\_theory}}
@@ -120,12 +89,12 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Graph $>$ \\
 \mbox{\hyperlink{structgraph__theory_1_1DFS}{graph\+\_\+theory\+::\+D\+FS}} (\begin{DoxyParamCaption}\item[{Graph}]{ }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{structgraph__theory_1_1DFS}{D\+FS}}$<$ Graph $>$}
 
-\mbox{\Hypertarget{namespacegraph__theory_a9d6eaad6577fb0289aee53b10fd4a260}\label{namespacegraph__theory_a9d6eaad6577fb0289aee53b10fd4a260}} 
+\mbox{\Hypertarget{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}\label{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d}} 
 \index{graph\_theory@{graph\_theory}!get\_size@{get\_size}}
 \index{get\_size@{get\_size}!graph\_theory@{graph\_theory}}
 \doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
 {\footnotesize\ttfamily template$<$typename Searcher $>$ \\
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ graph\+\_\+theory\+::get\+\_\+size (\begin{DoxyParamCaption}\item[{const Searcher \&}]{search }\end{DoxyParamCaption})}
+vector$<$\mbox{\hyperlink{structll}{ll}}$>$ graph\+\_\+theory\+::get\+\_\+size (\begin{DoxyParamCaption}\item[{const Searcher \&}]{search }\end{DoxyParamCaption})}
 
 
 
@@ -135,14 +104,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=275pt]{namespacegraph__theory_a9d6eaad6577fb0289aee53b10fd4a260_cgraph}
+\includegraphics[width=275pt]{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacegraph__theory_a9d6eaad6577fb0289aee53b10fd4a260_icgraph}
+\includegraphics[width=350pt]{namespacegraph__theory_a1fa8a9b42e79b9ce10e89e4659164f8d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacegraph__theory_aa68bcc78bd4d2bbd33ce272bbb2d5f33}\label{namespacegraph__theory_aa68bcc78bd4d2bbd33ce272bbb2d5f33}} 
@@ -155,9 +124,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Reads 1-\/indexed list of edges into graph g. 
 
-Reads 1-\/indexed list of edges into graph g
-
-Reads 1-\/indexed list of edges into graph gHere is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -194,12 +161,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespacegraph__theory_a4dbe54e2a6c2e93add66dc32c647c876_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacegraph__theory_ac98f689dd795d68d4d96aabe64b5de71}\label{namespacegraph__theory_ac98f689dd795d68d4d96aabe64b5de71}} 
+\mbox{\Hypertarget{namespacegraph__theory_a283db7058efe0355744471a1532e4960}\label{namespacegraph__theory_a283db7058efe0355744471a1532e4960}} 
 \index{graph\_theory@{graph\_theory}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!graph\_theory@{graph\_theory}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
 {\footnotesize\ttfamily template$<$typename Stream $>$ \\
-auto \& graph\+\_\+theory\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&}]{e }\end{DoxyParamCaption})}
+auto\& graph\+\_\+theory\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{\mbox{\hyperlink{structgraph__theory_1_1edge}{edge}} const \&}]{e }\end{DoxyParamCaption})}
 
 
 
@@ -268,10 +235,6 @@ We do not consider paths of length zero. Algorithm\+: Floyd-\/\+Warshall Here is
 
 
 Adds edge $u \leftrightarrow v$ to graph graph. 
-
-Given an adjacency-\/list of a graph, returns the shortest distance to each vertex from the source. Algorithm\+: Dijkstra
-
-Given an adjacency-\/list of a graph, returns the shortest distance to each vertex from the source. Algorithm\+: Dijkstra
 
 Given an adjacency-\/list of a graph, returns the shortest distance to each vertex from the source. Algorithm\+: DijkstraHere is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['go_5fcache_1099',['go_cache',['../structstring__tools_1_1Trie.html#a68714475e8fb4c336cdddd9157dccc8e',1,'string_tools::Trie']]],
-  ['graph_1100',['graph',['../structgraph__theory_1_1GeneralSearch.html#ab22ab5308883a177f882564afe0cbf95',1,'graph_theory::GeneralSearch::graph()'],['../structSubgraph.html#a729cb39ca9e3ec383acd385bc5dd334f',1,'Subgraph::graph()']]]
+  ['go_5fcache_1129',['go_cache',['../structstring__tools_1_1Trie.html#ab189b614c6f5996aa334ecb1ecb961be',1,'string_tools::Trie']]],
+  ['graph_1130',['graph',['../structgraph__theory_1_1GeneralSearch.html#a7d5bd457d525004f65caaced910e30e5',1,'graph_theory::GeneralSearch::graph()'],['../structSubgraph.html#a907d9f1d611ffa259c59bde70923e464',1,'Subgraph::graph()']]]
 ];

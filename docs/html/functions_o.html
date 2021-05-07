@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,17 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_o.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -103,10 +133,13 @@ $(function() {
 : <a class="el" href="structgraph__theory_1_1BFS.html#ad5324017ef8da193e0e6387715d5a597">graph_theory::BFS&lt; Graph &gt;</a>
 , <a class="el" href="structgraph__theory_1_1DFS.html#a7a852aab8ddbe3b598770dd45073ff83">graph_theory::DFS&lt; Graph &gt;</a>
 , <a class="el" href="structgraph__theory_1_1GeneralSearch.html#aba4f495d3fd8c83c5e28e27315e8d920">graph_theory::GeneralSearch&lt; Searcher, Graph &gt;</a>
+, <a class="el" href="structMax.html#ac790aaf2e5309bbf7d80ffc9c26f1701">Max</a>
+, <a class="el" href="structMin.html#a346d8e06fb28fa01f7bf83331c34b242">Min</a>
 , <a class="el" href="structpersistent_1_1first__cmp.html#a7b8fbb5ea87d4bc3ab32ec623b06b6cb">persistent::first_cmp</a>
 , <a class="el" href="structstd_1_1hash_3_01modulo_01_4.html#a509450130beda45a43f665c115bac2e7">std::hash&lt; modulo &gt;</a>
 , <a class="el" href="structstring__tools_1_1bytehash.html#afc02fa27b45d663d63c6b9f2532a150c">string_tools::bytehash</a>
 , <a class="el" href="structstring__tools_1_1hash__str.html#a75581b5cc9b3b8bfc41efbe0b395818d">string_tools::hash_str</a>
+, <a class="el" href="classutility_1_1chained__compare.html#a77584819fc150f55664da5ffc2372ee4">utility::chained_compare&lt; Compare &gt;</a>
 , <a class="el" href="structutility_1_1fix.html#a93b091b536b383499aaf376d12f92fa7">utility::fix&lt; Func &gt;</a>
 , <a class="el" href="structutility_1_1random__device__patch.html#a7cd4a52d04894da5d2ca621a419da09a">utility::random_device_patch</a>
 </li>
@@ -120,7 +153,7 @@ $(function() {
 : <a class="el" href="structint__it.html#aff5e9dd149ee82a037564e075635b763">int_it&lt; T &gt;</a>
 </li>
 <li>operator++()
-: <a class="el" href="structint__it.html#a5cd1e32162f9ad122fb85002d6321013">int_it&lt; T &gt;</a>
+: <a class="el" href="structint__it.html#a2892123a79f6f13fa6a9f16e8f5f207b">int_it&lt; T &gt;</a>
 , <a class="el" href="structll.html#ab3dcffcb63a9afc64a1ed739c72f7367">ll</a>
 , <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a87fdbf8660f782a32ee209ab7108c0e8">splay_tree::SplayTree&lt; T &gt;::iterator</a>
 , <a class="el" href="structstring__tools_1_1search__it.html#ae3b12022612273c38ee27b30942ded0b">string_tools::search_it</a>
@@ -139,7 +172,7 @@ $(function() {
 , <a class="el" href="structsplay__tree_1_1SplayTree_1_1iterator.html#a1b2e58809547e4402b8a7ef16ed8253d">splay_tree::SplayTree&lt; T &gt;::iterator</a>
 </li>
 <li>operator&lt;&lt;()
-: <a class="el" href="structrin.html#ac54363dcbc7ce811509e7ff360b78dad">rin</a>
+: <a class="el" href="structrin.html#a13b9d026853a96ff1ab4e29bc6d5185c">rin</a>
 </li>
 <li>operator=()
 : <a class="el" href="structpersistent_1_1pers.html#a11fc55a84cb1327a5797ea29352eb8b9">persistent::pers&lt; T &gt;</a>
@@ -158,11 +191,14 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

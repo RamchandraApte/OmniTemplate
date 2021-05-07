@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,17 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('globals_func.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,19 +104,327 @@ $(function() {
 <h3><a id="index_b"></a>- b -</h3><ul>
 <li>biconnected()
 : <a class="el" href="biconnected_8hpp.html#a72476443ae31ddf840e52f4a47f79055">biconnected.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a72476443ae31ddf840e52f4a47f79055">test_compiled.cpp</a>
 </li>
 <li>biconnected_ear()
 : <a class="el" href="biconnected_8hpp.html#a789f23d7fc22d09960694892eeb41223">biconnected.hpp</a>
-, <a class="el" href="test__compiled_8cpp.html#a789f23d7fc22d09960694892eeb41223">test_compiled.cpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_c"></a>- c -</h3><ul>
+<li>ceil_div()
+: <a class="el" href="my__int_8hpp.html#ab40cf8d960a2bfa49f09a97ed15c056d">my_int.hpp</a>
+</li>
+<li>centroid_decomp()
+: <a class="el" href="centroid_8hpp.html#a3831178b7f165ffd952602f1ec4ba6a4">centroid.hpp</a>
+</li>
+<li>conv()
+: <a class="el" href="fft_8hpp.html#ad433b30dd657e617f55a72340fcefd4a">fft.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_d"></a>- d -</h3><ul>
+<li>divisors()
+: <a class="el" href="number__theory_8hpp.html#a1dba9e869972ca1e250a48ddd5f8f72b">number_theory.hpp</a>
+</li>
+<li>dlog()
+: <a class="el" href="number__theory_8hpp.html#a67527905c2b2c027c8b458902db2d05a">number_theory.hpp</a>
+</li>
+<li>down()
+: <a class="el" href="treap_8hpp.html#a4a94ad7cd8f33ebf044afd6d79a174f8">treap.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_e"></a>- e -</h3><ul>
+<li>ear_decomp()
+: <a class="el" href="biconnected_8hpp.html#a6b3f22cd584c5d8be1de2703c3b9e004">biconnected.hpp</a>
+</li>
+<li>egcd()
+: <a class="el" href="number__theory_8hpp.html#aa6039763e84c50eb24fdee392c581898">number_theory.hpp</a>
+</li>
+<li>erase()
+: <a class="el" href="treap_8hpp.html#add90798283a022be36a018723badda5b">treap.hpp</a>
+</li>
+<li>erase_imp()
+: <a class="el" href="treap_8hpp.html#a5029123d55b27e0746b8616a6f79eda3">treap.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_f"></a>- f -</h3><ul>
+<li>fac()
+: <a class="el" href="number__theory_8hpp.html#a2be64a5779e00fe36e74d3496e92e64b">number_theory.hpp</a>
+</li>
+<li>fft()
+: <a class="el" href="fft_8hpp.html#a27632dcb2490189a02cc98a2029a4be3">fft.hpp</a>
+</li>
+<li>filter()
+: <a class="el" href="range_8hpp.html#a3eb62dcf88ab5afad4d62c6fea4bb570">range.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_g"></a>- g -</h3><ul>
+<li>get_data()
+: <a class="el" href="treap_8hpp.html#a88d816c35d3a703c27719dabc1631d79">treap.hpp</a>
+</li>
+<li>get_imp()
+: <a class="el" href="treap_8hpp.html#aa2ab504328f4d744315ec1da21b666f3">treap.hpp</a>
+</li>
+<li>graph_disunion()
+: <a class="el" href="test__biconnected_8hpp.html#acecf2de539ad624328fba6f40a848ef1">test_biconnected.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_i"></a>- i -</h3><ul>
+<li>identity()
+: <a class="el" href="operations_8hpp.html#a0fea197d8d19ab6ebe48c69665bbff99">operations.hpp</a>
+</li>
+<li>ifft()
+: <a class="el" href="fft_8hpp.html#af359fe1ab295171c84c1da7bdfc95018">fft.hpp</a>
+</li>
+<li>insert()
+: <a class="el" href="treap_8hpp.html#ad45b31cb3a5a560af114abfcbce83936">treap.hpp</a>
+</li>
+<li>insert_imp()
+: <a class="el" href="treap_8hpp.html#aa2a3eaf4c00318c5a4c9298b83d06003">treap.hpp</a>
+</li>
+<li>intersect()
+: <a class="el" href="range_8hpp.html#a5eeb4818d038580518b4e590a066ec12">range.hpp</a>
+</li>
+<li>invert()
+: <a class="el" href="operations_8hpp.html#a4cb6b7e98aadd3fa7ffc759c5e14596d">operations.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_j"></a>- j -</h3><ul>
+<li>join()
+: <a class="el" href="treap_8hpp.html#a4338e31f2a01e882efc6adf47768c076">treap.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>let()
+: <a class="el" href="abbrev_8hpp.html#ac29f7525a6b1cabf97dc12e636eb6488">abbrev.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">main.hpp</a>
+</li>
+<li>main2()
+: <a class="el" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main.hpp</a>
+, <a class="el" href="test_8cpp.html#af095a232149097b5605064623a9345ac">test.cpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>operator!=()
+: <a class="el" href="operations_8hpp.html#a98ed0803268ba29fcc8977206b177923">operations.hpp</a>
+</li>
+<li>operator&quot;&quot;_ll()
+: <a class="el" href="my__int_8hpp.html#ae6bb4b1c502150862dc1bd720dddd1bd">my_int.hpp</a>
+</li>
+<li>operator%()
+: <a class="el" href="my__int_8hpp.html#a5683757111c643b4f25e4bd44c9b43d6">my_int.hpp</a>
+</li>
+<li>operator&amp;()
+: <a class="el" href="my__int_8hpp.html#aa3e03dfc13fb08fd0890e9891f1d270e">my_int.hpp</a>
+, <a class="el" href="operations_8hpp.html#a9e98ecb7739ca6a5c0069a9a26d2a731">operations.hpp</a>
+, <a class="el" href="range_8hpp.html#a295cbb09d532a8eeeaab519fd1db0928">range.hpp</a>
+, <a class="el" href="my__int_8hpp.html#a9b2eee581ee9ecf1605147ab0c35c575">my_int.hpp</a>
+</li>
+<li>operator*()
+: <a class="el" href="operations_8hpp.html#a7fcf9006b0b6d5ce6b426ac6dea3b567">operations.hpp</a>
+, <a class="el" href="my__int_8hpp.html#af2b3846e8acafcb6f3213db0c0036252">my_int.hpp</a>
+</li>
+<li>operator*=()
+: <a class="el" href="operations_8hpp.html#ac66e5f2d4fb3a7d5076a44e419736713">operations.hpp</a>
+</li>
+<li>operator+()
+: <a class="el" href="my__int_8hpp.html#a89863f5d564a94c728d284514f71a09a">my_int.hpp</a>
+, <a class="el" href="operations_8hpp.html#a239c272472acf3f9ce7f2e44f0895160">operations.hpp</a>
+, <a class="el" href="range_8hpp.html#acb6120c8a8224e1d4465bf980bc01d07">range.hpp</a>
+, <a class="el" href="treap_8hpp.html#a8e26670f57733242dc7312c4072c49b6">treap.hpp</a>
+, <a class="el" href="my__int_8hpp.html#adc9ca497c254909c83f973aa03b0e1c4">my_int.hpp</a>
+</li>
+<li>operator+=()
+: <a class="el" href="operations_8hpp.html#a141476c36a8f609ac7c776be162abb92">operations.hpp</a>
+</li>
+<li>operator-()
+: <a class="el" href="operations_8hpp.html#ab6822e2f5527212c7db6dd31be7f3ba6">operations.hpp</a>
+, <a class="el" href="range_8hpp.html#a8b072587149274d1639908e4edb23d3d">range.hpp</a>
+</li>
+<li>operator-=()
+: <a class="el" href="operations_8hpp.html#a566f5b78944cfa1ff2b470ecd0522ce1">operations.hpp</a>
+</li>
+<li>operator/()
+: <a class="el" href="operations_8hpp.html#ae9e59a2d15287021fd21d14d2eb206c4">operations.hpp</a>
+, <a class="el" href="my__int_8hpp.html#a16edb2064180aa002b50c0df6971ac76">my_int.hpp</a>
+</li>
+<li>operator/=()
+: <a class="el" href="operations_8hpp.html#a35c5f7ec97de94c93f2301e16d3f7efa">operations.hpp</a>
+</li>
+<li>operator&lt;()
+: <a class="el" href="my__int_8hpp.html#a7781b25df43bf46926920191911d737b">my_int.hpp</a>
+, <a class="el" href="range_8hpp.html#adf37877debb40c87ce158743d128a8df">range.hpp</a>
+, <a class="el" href="my__int_8hpp.html#abe88c83cf5dc9b46884a1b2bc8183e68">my_int.hpp</a>
+</li>
+<li>operator&lt;&lt;()
+: <a class="el" href="io_8hpp.html#ab13ab1059a1675ee7a774c4524b84d23">io.hpp</a>
+, <a class="el" href="my__int_8hpp.html#aa6336f6e0326e004c4e921f41742977c">my_int.hpp</a>
+, <a class="el" href="treap_8hpp.html#adc9b978577ebe26d5cef50ae4dde2362">treap.hpp</a>
+, <a class="el" href="my__int_8hpp.html#a514556e3fea9889325683b6d0d0b39b9">my_int.hpp</a>
+, <a class="el" href="treap_8hpp.html#a1bb22f09c6a50d177b40b56d60bb62f0">treap.hpp</a>
+, <a class="el" href="my__int_8hpp.html#a89f069c59e076c7159834f53d76fb267">my_int.hpp</a>
+</li>
+<li>operator&lt;=()
+: <a class="el" href="operations_8hpp.html#a1297749985d820e08c6c88a285dc80eb">operations.hpp</a>
+</li>
+<li>operator==()
+: <a class="el" href="my__int_8hpp.html#a9e5a071bceddccdc70270c68e1c62000">my_int.hpp</a>
+, <a class="el" href="range_8hpp.html#a2a9660e705c73071a9c68c86e5e92e29">range.hpp</a>
+, <a class="el" href="my__int_8hpp.html#ad6c4a2aed28be9e342d2ad975e4136c6">my_int.hpp</a>
+</li>
+<li>operator&gt;()
+: <a class="el" href="operations_8hpp.html#ad8f1353b1f5665443a78d860006e9920">operations.hpp</a>
+</li>
+<li>operator&gt;=()
+: <a class="el" href="operations_8hpp.html#ae3edbf9ffcbf3c8b40d15f6666442cef">operations.hpp</a>
+</li>
+<li>operator&gt;&gt;()
+: <a class="el" href="my__int_8hpp.html#acca7da4ef13b9d21d66d02bf959f78d0">my_int.hpp</a>
+, <a class="el" href="io_8hpp.html#a7df52f31e81b51a76e8f8699accaf3b1">io.hpp</a>
+, <a class="el" href="my__int_8hpp.html#a075c178690dc773422a3aeaf1ffa8173">my_int.hpp</a>
+</li>
+<li>operator^()
+: <a class="el" href="operations_8hpp.html#a278d4d0450b96c1926a34fe49f29d602">operations.hpp</a>
+, <a class="el" href="range_8hpp.html#a2e6b26fca3ba13b074816e7b97f8245d">range.hpp</a>
+, <a class="el" href="my__int_8hpp.html#ac6d529776051928bfb80844daec345a9">my_int.hpp</a>
+</li>
+<li>operator|()
+: <a class="el" href="operations_8hpp.html#a8acbbd6e305005c27020dfb9bbe27d5a">operations.hpp</a>
+, <a class="el" href="my__int_8hpp.html#aaa2f10d451711a02282b53f8d67322a9">my_int.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>permute()
+: <a class="el" href="test__biconnected_8hpp.html#a48fe6b184e236d8a81058e4d85ff49c3">test_biconnected.hpp</a>
+</li>
+<li>prime()
+: <a class="el" href="number__theory_8hpp.html#a02e886c6eb18cd3b8894ea2ba9ca9784">number_theory.hpp</a>
+</li>
+<li>primitive_root()
+: <a class="el" href="number__theory_8hpp.html#a6542b189f3759f43899a8b1978d58e2c">number_theory.hpp</a>
+</li>
+<li>print()
+: <a class="el" href="io_8hpp.html#a1b122fd1e3de03a421d98f4bbb1473d5">io.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>rev()
+: <a class="el" href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">range.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_s"></a>- s -</h3><ul>
+<li>sieve()
+: <a class="el" href="number__theory_8hpp.html#ae8dd217fd3a3de037c6a1031aef548aa">number_theory.hpp</a>
+</li>
+<li>split()
+: <a class="el" href="treap_8hpp.html#ab4b19e3c8f0a975627a7261ed3e2c29b">treap.hpp</a>
+</li>
+<li>split_imp()
+: <a class="el" href="treap_8hpp.html#aff38806a204c6e78d7945e04b556f588">treap.hpp</a>
+</li>
+<li>sub_set()
+: <a class="el" href="operations_8hpp.html#a17c44ba56ddae051a9fdf806cab4bb7b">operations.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>test_biconnected()
+: <a class="el" href="test__biconnected_8hpp.html#a07c975aa9b96f7bdb70155ae0c3acd17">test_biconnected.hpp</a>
+</li>
+<li>test_bit()
+: <a class="el" href="test__bit_8hpp.html#af86f570cf0a5201c700ffeec06aec7f6">test_bit.hpp</a>
+</li>
+<li>test_centroid_decomp()
+: <a class="el" href="test__centroid_8hpp.html#a1f3c802afdfa77c5389c557f5284a486">test_centroid.hpp</a>
+</li>
+<li>test_divisors()
+: <a class="el" href="test__number__theory_8hpp.html#a3e935b9aca6e9dfa6b0a8ef9a4c7e153">test_number_theory.hpp</a>
+</li>
+<li>test_dlog()
+: <a class="el" href="test__number__theory_8hpp.html#a7aac53ce82614d79c7098a1de32ed1e7">test_number_theory.hpp</a>
+</li>
+<li>test_egcd()
+: <a class="el" href="test__number__theory_8hpp.html#ae2f84cd254fbf1373fc273141ce470ed">test_number_theory.hpp</a>
+</li>
+<li>test_fac()
+: <a class="el" href="test__number__theory_8hpp.html#afcfd3b1e3415393029bc6a496d825459">test_number_theory.hpp</a>
+</li>
+<li>test_graph_view()
+: <a class="el" href="graph__view_8hpp.html#ac5d2f097a07285733e610a52b16e790b">graph_view.hpp</a>
+</li>
+<li>test_number_theory()
+: <a class="el" href="test__number__theory_8hpp.html#aed36f6b8b9706133e9b5302b1618e9ef">test_number_theory.hpp</a>
+</li>
+<li>test_prime()
+: <a class="el" href="test__number__theory_8hpp.html#a87d7c3ba2489977a16ec40544a918e00">test_number_theory.hpp</a>
+</li>
+<li>test_primitive_root()
+: <a class="el" href="test__number__theory_8hpp.html#a0ff115471f41e78245b5dc48eaf8032f">test_number_theory.hpp</a>
+</li>
+<li>test_sieve()
+: <a class="el" href="test__number__theory_8hpp.html#a8956d5feae5d2dd01656f6f960d568c7">test_number_theory.hpp</a>
+</li>
+<li>test_totient()
+: <a class="el" href="test__number__theory_8hpp.html#a8ae320acad5e35d58ca5ad7adc6ddd78">test_number_theory.hpp</a>
+</li>
+<li>test_tree_diameter()
+: <a class="el" href="tree_8hpp.html#a3723e2fdc7693c4777b321d0619f189d">tree.hpp</a>
+</li>
+<li>to_array()
+: <a class="el" href="treap_8hpp.html#ad72c7dcf3afbf183a09f2220922543d5">treap.hpp</a>
+</li>
+<li>totient()
+: <a class="el" href="number__theory_8hpp.html#af0753ff92c84e6924e1fd6461e77b16f">number_theory.hpp</a>
+</li>
+<li>tree_diameter()
+: <a class="el" href="tree_8hpp.html#a202200d4d06aea05b7638be837590286">tree.hpp</a>
+</li>
+</ul>
+
+
+<h3><a id="index_u"></a>- u -</h3><ul>
+<li>update_data()
+: <a class="el" href="treap_8hpp.html#a9321be3a55db4ee924a0e968e12734a2">treap.hpp</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('modulo_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ece17dd07d1079ae5da4fc1d5e1e51e1.html">number_theory</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">modulo.hpp</div>  </div>
@@ -108,13 +134,13 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#a0a666ddbbb5d4d02c4aee66be7577292">   37</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="namespacemodulo__namespace.html#a0a666ddbbb5d4d02c4aee66be7577292">mod_eq</a>(<a class="code" href="structll.html">ll</a> &amp;a, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> b) { <span class="keywordflow">return</span> a = <a class="code" href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">mod</a>(a, b); }</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1no__mod.html">   40</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a> {};</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> {</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">   42</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="structll.html">ll</a> <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulus</a> =</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">   42</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="structll.html">ll</a> <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulus</a> =</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        1e9 + 7; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">   45</a></span>&#160;    <a class="code" href="structll.html">ll</a> <a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>; </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#ac9d3017987939152de7e7865350abb43">   46</a></span>&#160;    <a class="code" href="structmodulo__namespace_1_1modulo.html#ac9d3017987939152de7e7865350abb43">modulo</a>() : <a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>{0LL} {}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    template &lt;typename T, typename = enable_if_t&lt;is_integral&lt;T&gt;::value, <span class="keywordtype">void</span>&gt;&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#aec9c4507e257635e3c0e258b9667be7f">   48</a></span>&#160;    <a class="code" href="structmodulo__namespace_1_1modulo.html#aec9c4507e257635e3c0e258b9667be7f">modulo</a>(T x_) : <a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>(<a class="code" href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">mod</a>(x_, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>::<a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulus</a>)) {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#aec9c4507e257635e3c0e258b9667be7f">   48</a></span>&#160;    <a class="code" href="structmodulo__namespace_1_1modulo.html#aec9c4507e257635e3c0e258b9667be7f">modulo</a>(T x_) : <a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>(<a class="code" href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">mod</a>(x_, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>::<a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulus</a>)) {}</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#ab2e25a561c35e0e2453ef27de0d66594">   49</a></span>&#160;    <a class="code" href="structmodulo__namespace_1_1modulo.html#ab2e25a561c35e0e2453ef27de0d66594">modulo</a>(<a class="code" href="structll.html">ll</a> x_, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>) : <a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>(x_) {}</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="structmodulo__namespace_1_1modulo.html#a09adfcbfba74232e04a320aeebac5433">   50</a></span>&#160;    <span class="keyword">explicit</span> <span class="keyword">operator</span> <span class="keyword">auto</span>() <span class="keyword">const</span> { <span class="keywordflow">return</span> <a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>; }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
@@ -123,31 +149,31 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#aab105decd35962ad192ea2187706df9b">   54</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#a55577c112e6d41b6314ad996f9e48842">identity</a>(multiplies&lt;&gt;, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>) { <span class="keywordflow">return</span> 1; }</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#aa39044c62fae2707474b9960d257d9dd">   55</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#aa39044c62fae2707474b9960d257d9dd">operator+</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;a, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;b) {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structll.html">ll</a> <span class="keyword">const</span> sum = a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a> + b.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> {sum &gt;= <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a> ? sum - <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a> : sum, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> {sum &gt;= <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a> ? sum - <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a> : sum, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#aef9f34a9358f523b5e12f6897a806e7e">   59</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#aef9f34a9358f523b5e12f6897a806e7e">operator++</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> &amp;a) { <span class="keywordflow">return</span> a += 1; }</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#a19406485d1ce3b2430c67aea00dda27b">   60</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#a19406485d1ce3b2430c67aea00dda27b">operator-</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;a) { <span class="keywordflow">return</span> {<a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a> - a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}}; }</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#a19406485d1ce3b2430c67aea00dda27b">   60</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#a19406485d1ce3b2430c67aea00dda27b">operator-</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;a) { <span class="keywordflow">return</span> {<a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a> - a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}}; }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">// To avoid ADL issues</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;using ::operator-;</div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#a533cfa2e1e3a79428a3b5e00430ad125">   63</a></span>&#160;<a class="code" href="namespacemodulo__namespace.html#a533cfa2e1e3a79428a3b5e00430ad125">bin</a>(==, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#a7d1e0e6527c5e49efdc1ef0780a055c8">   64</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#a7d1e0e6527c5e49efdc1ef0780a055c8">operator*</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;a, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;b) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a> quot = <a class="code" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a>(a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) * <a class="code" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a>(b.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) / <a class="code" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a> quot = <a class="code" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a>(a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) * <a class="code" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a>(b.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) / <a class="code" href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Computes the approximate remainder</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> rem = <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a>(a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) * <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a>(b.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) - <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>) * quot;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> rem = <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a>(a.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) * <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a>(b.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>) - <a class="code" href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>) * quot;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (rem &lt; 0) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> {rem + <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> {rem + <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (rem &gt;= <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> {rem - <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (rem &gt;= <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> {rem - <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> {rem, <a class="code" href="structmodulo__namespace_1_1no__mod.html">no_mod</a>{}};</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0">   77</a></span>&#160;<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <a class="code" href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0">invert</a>(multiplies&lt;&gt;, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;b) {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    assert(b != 0);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(b, <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a> - 2);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(b, <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a> - 2);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;using ::operator/;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#a561c93db625469ab20895dabddbae1b8">   83</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Stream&gt; <span class="keyword">auto</span> &amp;<a class="code" href="namespacemodulo__namespace.html#a561c93db625469ab20895dabddbae1b8">operator&lt;&lt;</a>(Stream &amp;os, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;m) { <span class="keywordflow">return</span> os &lt;&lt; m.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>; }</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace.html#ad645d89c7a55337c12edadb8376670e3">   83</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Stream&gt; <span class="keyword">auto</span> &amp;<a class="code" href="namespacemodulo__namespace.html#ad645d89c7a55337c12edadb8376670e3">operator&lt;&lt;</a>(Stream &amp;os, <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a> <span class="keyword">const</span> &amp;m) { <span class="keywordflow">return</span> os &lt;&lt; m.<a class="code" href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">x</a>; }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">// namespace modulo_namespace</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacemodulo__namespace.html">modulo_namespace</a>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">namespace </span>std {</div>
@@ -156,36 +182,40 @@ $(function() {
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace std</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="astructstd_1_1hash_3_01modulo_01_4_html_a509450130beda45a43f665c115bac2e7"><div class="ttname"><a href="structstd_1_1hash_3_01modulo_01_4.html#a509450130beda45a43f665c115bac2e7">std::hash&lt; modulo &gt;::operator()</a></div><div class="ttdeci">ll operator()(modulo const &amp;x) const</div><div class="ttdef"><b>Definition:</b> modulo.hpp:88</div></div>
+<div class="ttc" id="astructmodulo__namespace_1_1modulo_html_a3fb17100685d3dfe8246407138109bc6"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo_namespace::modulo::modulus</a></div><div class="ttdeci">static ll modulus</div><div class="ttdoc">Modulus used for operations like modular multiplication.</div><div class="ttdef"><b>Definition:</b> modulo.hpp:42</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_aac690d54b7665a90ca461724df8907c0"><div class="ttname"><a href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0">modulo_namespace::invert</a></div><div class="ttdeci">modulo invert(multiplies&lt;&gt;, modulo const &amp;b)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:77</div></div>
-<div class="ttc" id="astructmodulo__namespace_1_1modulo_html_ae2bc70014960c66ea5184cae85a330cc"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo_namespace::modulo::modulus</a></div><div class="ttdeci">static ll modulus</div><div class="ttdoc">Modulus used for operations like modular multiplication.</div><div class="ttdef"><b>Definition:</b> modulo.hpp:42</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html_a364cca04966c17f999945d2e0c8418a0"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#a364cca04966c17f999945d2e0c8418a0">modulo_namespace::modulo::x</a></div><div class="ttdeci">ll x</div><div class="ttdoc">The representative element, which is in [0, M)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:45</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_aa39044c62fae2707474b9960d257d9dd"><div class="ttname"><a href="namespacemodulo__namespace.html#aa39044c62fae2707474b9960d257d9dd">modulo_namespace::operator+</a></div><div class="ttdeci">modulo operator+(modulo const &amp;a, modulo const &amp;b)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:55</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1no__mod_html"><div class="ttname"><a href="structmodulo__namespace_1_1no__mod.html">modulo_namespace::no_mod</a></div><div class="ttdef"><b>Definition:</b> modulo.hpp:40</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a8e6fc91a032b336ea0bbed9eabf54f69"><div class="ttname"><a href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">modulo_namespace::power</a></div><div class="ttdeci">T power(T a, ll b)</div><div class="ttdoc">Returns .</div><div class="ttdef"><b>Definition:</b> modulo.hpp:11</div></div>
+<div class="ttc" id="anamespacemodulo__namespace_html_ad645d89c7a55337c12edadb8376670e3"><div class="ttname"><a href="namespacemodulo__namespace.html#ad645d89c7a55337c12edadb8376670e3">modulo_namespace::operator&lt;&lt;</a></div><div class="ttdeci">auto &amp; operator&lt;&lt;(Stream &amp;os, modulo const &amp;m)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:83</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html_ab2e25a561c35e0e2453ef27de0d66594"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#ab2e25a561c35e0e2453ef27de0d66594">modulo_namespace::modulo::modulo</a></div><div class="ttdeci">modulo(ll x_, no_mod)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:49</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html_aec9c4507e257635e3c0e258b9667be7f"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#aec9c4507e257635e3c0e258b9667be7f">modulo_namespace::modulo::modulo</a></div><div class="ttdeci">modulo(T x_)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:48</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a2507e89fefa09a358a9de729b15dd642"><div class="ttname"><a href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">modulo_namespace::mod</a></div><div class="ttdeci">ll mod(ll a, const ll b)</div><div class="ttdoc">Returns the remainder of a divided by b as a nonnegative integer in [0, b).</div><div class="ttdef"><b>Definition:</b> modulo.hpp:29</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html_ac9d3017987939152de7e7865350abb43"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#ac9d3017987939152de7e7865350abb43">modulo_namespace::modulo::modulo</a></div><div class="ttdeci">modulo()</div><div class="ttdef"><b>Definition:</b> modulo.hpp:46</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a533cfa2e1e3a79428a3b5e00430ad125"><div class="ttname"><a href="namespacemodulo__namespace.html#a533cfa2e1e3a79428a3b5e00430ad125">modulo_namespace::bin</a></div><div class="ttdeci">bin(==, modulo)</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_aa5114a4fed348a29fb92123470476b1b"><div class="ttname"><a href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a></div><div class="ttdeci">unsigned long long ull</div><div class="ttdef"><b>Definition:</b> all.hpp:78</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_aa5114a4fed348a29fb92123470476b1b"><div class="ttname"><a href="core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b">ull</a></div><div class="ttdeci">unsigned long long ull</div><div class="ttdef"><b>Definition:</b> all.hpp:97</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_aef9f34a9358f523b5e12f6897a806e7e"><div class="ttname"><a href="namespacemodulo__namespace.html#aef9f34a9358f523b5e12f6897a806e7e">modulo_namespace::operator++</a></div><div class="ttdeci">modulo operator++(modulo &amp;a)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:59</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html"><div class="ttname"><a href="namespacemodulo__namespace.html">modulo_namespace</a></div><div class="ttdef"><b>Definition:</b> modulo.hpp:3</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html">modulo_namespace::modulo</a></div><div class="ttdef"><b>Definition:</b> modulo.hpp:41</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a2e2e73e53fc509e05f252ef083503838"><div class="ttname"><a href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a></div><div class="ttdeci">long double ld</div><div class="ttdef"><b>Definition:</b> all.hpp:81</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2e2e73e53fc509e05f252ef083503838"><div class="ttname"><a href="core_2all_8hpp.html#a2e2e73e53fc509e05f252ef083503838">ld</a></div><div class="ttdeci">long double ld</div><div class="ttdef"><b>Definition:</b> all.hpp:100</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a19406485d1ce3b2430c67aea00dda27b"><div class="ttname"><a href="namespacemodulo__namespace.html#a19406485d1ce3b2430c67aea00dda27b">modulo_namespace::operator-</a></div><div class="ttdeci">modulo operator-(modulo const &amp;a)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:60</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a0329c7316dfca40b316f6ad7a6b60e87"><div class="ttname"><a href="namespacemodulo__namespace.html#a0329c7316dfca40b316f6ad7a6b60e87">modulo_namespace::invert_t</a></div><div class="ttdeci">decltype(invert(std::declval&lt; Args &gt;()...)) invert_t</div><div class="ttdef"><b>Definition:</b> modulo.hpp:4</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a55577c112e6d41b6314ad996f9e48842"><div class="ttname"><a href="namespacemodulo__namespace.html#a55577c112e6d41b6314ad996f9e48842">modulo_namespace::identity</a></div><div class="ttdeci">modulo identity(plus&lt;&gt;, modulo)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:53</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a0a666ddbbb5d4d02c4aee66be7577292"><div class="ttname"><a href="namespacemodulo__namespace.html#a0a666ddbbb5d4d02c4aee66be7577292">modulo_namespace::mod_eq</a></div><div class="ttdeci">ll mod_eq(ll &amp;a, const ll b)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:37</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a7d1e0e6527c5e49efdc1ef0780a055c8"><div class="ttname"><a href="namespacemodulo__namespace.html#a7d1e0e6527c5e49efdc1ef0780a055c8">modulo_namespace::operator*</a></div><div class="ttdeci">modulo operator*(modulo const &amp;a, modulo const &amp;b)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:64</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
-<div class="ttc" id="anamespacemodulo__namespace_html_a561c93db625469ab20895dabddbae1b8"><div class="ttname"><a href="namespacemodulo__namespace.html#a561c93db625469ab20895dabddbae1b8">modulo_namespace::operator&lt;&lt;</a></div><div class="ttdeci">auto &amp; operator&lt;&lt;(Stream &amp;os, modulo const &amp;m)</div><div class="ttdef"><b>Definition:</b> modulo.hpp:83</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ece17dd07d1079ae5da4fc1d5e1e51e1.html">number_theory</a></li><li class="navelem"><a class="el" href="modulo_8hpp.html">modulo.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

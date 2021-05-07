@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,17 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
-</div><!-- top -->
+$(document).ready(function(){initNavTree('functions_s.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,13 +104,13 @@ $(function() {
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>s
 : <a class="el" href="structpersistent_1_1pers.html#aa69f50e85db0c10e684390388ef6f23b">persistent::pers&lt; T &gt;</a>
-, <a class="el" href="structstring__tools_1_1search__it.html#a27c559aeb3162c49801b37724cd4312c">string_tools::search_it</a>
+, <a class="el" href="structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe">string_tools::search_it</a>
 </li>
 <li>search()
 : <a class="el" href="structstring__tools_1_1Trie.html#a0bfc816d1bbcfa5a160a8f34400816d4">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>search_it()
-: <a class="el" href="structstring__tools_1_1search__it.html#a1605669d491f38f76e0f32902a4b0ce7">string_tools::search_it</a>
+: <a class="el" href="structstring__tools_1_1search__it.html#aca022e021ec03287386571ef78a8e954">string_tools::search_it</a>
 </li>
 <li>SegmentTree()
 : <a class="el" href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
@@ -101,7 +131,7 @@ $(function() {
 , <a class="el" href="structSubgraph.html#ad83982532b85bb5379aa71b98c8d246f">Subgraph&lt; Graph, Pred &gt;</a>
 </li>
 <li>size_
-: <a class="el" href="structdsu__ds_1_1dsu.html#a2e6386657bcc35b96faf72d4bc87f933">dsu_ds::dsu</a>
+: <a class="el" href="structdsu__ds_1_1dsu.html#ad4fe417b29f22c83906ca9a97b3b2d6a">dsu_ds::dsu</a>
 , <a class="el" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">segment_tree::SegmentTree&lt; T, Query, Update, has_lazy, has_ptr, has_pers, base &gt;</a>
 , <a class="el" href="structsplay__tree_1_1SplayTree.html#a7adb23c86a9cb77d3a9d8afbaba65cf7">splay_tree::SplayTree&lt; T &gt;</a>
 </li>
@@ -116,7 +146,7 @@ $(function() {
 : <a class="el" href="structsplay__tree_1_1SplayNode.html#a34a54d6c33025f4be7b37065e584b8c5">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
 </li>
 <li>SplayNode()
-: <a class="el" href="structsplay__tree_1_1SplayNode.html#a8fd96533069082b51ae1a58346c08f94">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
+: <a class="el" href="structsplay__tree_1_1SplayNode.html#a6f8ea4b8bc92264b47e93ce969e53d54">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
 </li>
 <li>SplayTree()
 : <a class="el" href="structsplay__tree_1_1SplayTree.html#aa627e1ec6a9f5f62cb2aba123f47df0b">splay_tree::SplayTree&lt; T &gt;</a>
@@ -125,30 +155,33 @@ $(function() {
 : <a class="el" href="structsplay__tree_1_1SplayNode.html#a82d47b54b62b9e59f594af8db601fc05">splay_tree::SplayNode&lt; T, has_link_cut &gt;</a>
 </li>
 <li>st
-: <a class="el" href="structstring__tools_1_1hash__str.html#aa3e90f086689a026dca8369ea3e7731a">string_tools::hash_str</a>
+: <a class="el" href="structstring__tools_1_1hash__str.html#ac76e86127435197776e56d58da7ac0fe">string_tools::hash_str</a>
 </li>
 <li>str
 : <a class="el" href="structstring__tools_1_1Trie.html#a3a4a07a6e9479d4a03f558a514be4664">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>subgraph
-: <a class="el" href="structSubgraph_1_1iterator.html#acb4dc000038465da64d1859f489d61f3">Subgraph&lt; Graph, Pred &gt;::iterator</a>
+: <a class="el" href="structSubgraph_1_1iterator.html#a7a7cb023f473158d850257096a13d1af">Subgraph&lt; Graph, Pred &gt;::iterator</a>
 </li>
 <li>Subgraph()
 : <a class="el" href="structSubgraph.html#a0d61932ee9d61d8765fb5694edbcbbbd">Subgraph&lt; Graph, Pred &gt;</a>
 </li>
 <li>suffix_link_cache
-: <a class="el" href="structstring__tools_1_1Trie.html#aa1dfae41dfe9443b4ad82fb60725b53c">string_tools::Trie&lt; start, alphabet_size &gt;</a>
+: <a class="el" href="structstring__tools_1_1Trie.html#add3a2c8ef2f3c49a0d027923cd83dce4">string_tools::Trie&lt; start, alphabet_size &gt;</a>
 </li>
 <li>sum
-: <a class="el" href="classsparse__table_1_1DisjointSparseTable.html#afd23a4ac9f85358855420c012795a2e3">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;</a>
+: <a class="el" href="classsparse__table_1_1DisjointSparseTable.html#a9eca81324cb28eea79212d5385d6d2c1">sparse_table::DisjointSparseTable&lt; T, Monoid &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

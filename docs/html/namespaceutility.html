@@ -1,462 +1,852 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>utility namespace | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
-  <link rel="icon" href="favicon-light.png" type="image/png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#cb4b16" />
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OmniTemplate: utility Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
-      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
-        </svg></a>
-        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
-        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
-      </div>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="3">
-            <li><a href="annotated.html">Classes</a></li>
-            <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <use href="#m-doc-search-icon-path" />
-            </svg></a></li>
-          </ol>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">OmniTemplate
+   </div>
+   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
         </div>
-      </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-</nav></header>
-<main><article>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <h1>
-          utility <span class="m-thin">namespace</span>
-        </h1>
-        <p><span></span></p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#namespaces">Namespaces</a></li>
-                <li><a href="#nested-classes">Classes</a></li>
-                <li><a href="#typedef-members">Typedefs</a></li>
-                <li><a href="#func-members">Functions</a></li>
-                <li><a href="#var-members">Variables</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <section id="namespaces">
-          <h2><a href="#namespaces">Namespaces</a></h2>
-          <dl class="m-doc">
-            <dt>namespace <a href="namespaceutility_1_1test.html" class="m-doc">test</a></dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              struct <a href="structutility_1_1ar.html" class="m-doc">ar</a>
-            </dt>
-            <dd>Array convenience template. Converts C style array type to std::array type.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T, <a href="structll.html" class="m-doc">ll</a> n&gt;</div>
-              struct <a href="structutility_1_1ar_3_01T_0fn_0e_4.html" class="m-doc">ar&lt;T[n]&gt;</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              struct <a href="structutility_1_1Empty.html" class="m-doc">Empty</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename Func&gt;</div>
-              struct <a href="structutility_1_1fix.html" class="m-doc">fix</a>
-            </dt>
-            <dd>Helper for lambda recursive functions. The recursive function is passed to Func as the first argument.</dd>
-            <dt>
-              struct <a href="structutility_1_1random__device__patch.html" class="m-doc">random_device_patch</a>
-            </dt>
-            <dd>Random device patch to fix libstdc++&#x27;s broken implementation on Windows.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              struct <a href="structutility_1_1with.html" class="m-doc">with</a>
-            </dt>
-            <dd>Sets v to new_ temporary while with object is alive.</dd>
-          </dl>
-        </section>
-        <section id="typedef-members">
-          <h2><a href="#typedef-members">Typedefs</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              using <a href="#a5527c46ab55c32f4bdf48a47564e3cf0" class="m-doc">ar_t</a> = typename <a href="structutility_1_1ar.html" class="m-doc">ar</a>&lt;T&gt;::type
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#afaacd9ae54757a29e4d3e5381d8cfcdf" class="m-doc">random_device</a> = <a href="structutility_1_1random__device__patch.html" class="m-doc">random_<wbr />device_<wbr />patch</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="func-members">
-          <h2><a href="#func-members">Functions</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">void <a href="#acf80bb2a56236f08271b2d70689cc1f6" class="m-doc">min_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
-              const T&amp; y)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">void <a href="#a80f7a687b4e8d135cde1ae1d6b169d13" class="m-doc">max_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
-              const T&amp; y)</span>
-            </dt>
-            <dd>Set x to the minimum of x and y.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a6e069fcf8b422fbc525eba2543e36a6e" class="m-doc">cache</a>(</span><span class="m-doc-wrap">const T&amp; f) -&gt; auto</span>
-            </dt>
-            <dd>Set x to the minimum of x and y.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename Eq = equal_to&lt;&gt;, typename T = less&lt;&gt;, typename Cont&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a531cc980b5de78f0c2f36ae3210cb9cf" class="m-doc">uniq</a>(</span><span class="m-doc-wrap">Cont v,
-              Eq const&amp; up = Eq{},
-              T const&amp; sp = T{}) -&gt; auto</span>
-            </dt>
-            <dd>Remove all duplicates element from.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename Compare = less&lt;&gt;, typename Func&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a3f485f407bcf34b3ad3831f7fda882e4" class="m-doc">key_compare</a>(</span><span class="m-doc-wrap">const Func&amp; func,
-              const Compare&amp; compare = {}) -&gt; auto</span>
-            </dt>
-            <dd>Compare using key.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a50e9430d1096ce6997ae910135a9533f" class="m-doc">prev_less</a>(</span><span class="m-doc-wrap">const T&amp; v) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a005fc5d8af9bba651f00c74372466b83" class="m-doc">bit_ceil</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd>Return the smallest power of two that is at least x.</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a14dc21f495425ccdc1ec35fe45d45591" class="m-doc">power_ceil</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> x,
-              const <a href="structll.html" class="m-doc">ll</a> base) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd>Returns the smallest power of base that is at least x.</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a750478c01441fac1c27f14bea2cb74ea" class="m-doc">log_ceil</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> x,
-              const <a href="structll.html" class="m-doc">ll</a> base) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd>Returns the smallest exponent such that base raised to exponent is at least x.</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a7cd324d23686536d1d4eeb92afb61ed4" class="m-doc">next_comb</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd>next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x).</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename T, typename Func&gt;</div>
-              <span class="m-doc-wrap-bumper">void <a href="#aa72cfb348ae79fd2bdb5ded63cd36ef2" class="m-doc">swap2</a>(</span><span class="m-doc-wrap">T&amp; a,
-              T&amp; b,
-              const Func&amp; func)</span>
-            </dt>
-            <dd>Stable sorts a and b by func.</dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename Iter, typename Proj&gt;</div>
-              <span class="m-doc-wrap-bumper">void <a href="#a713c1fa985af64dbe0374a15cc3d4383" class="m-doc">counting_sort</a>(</span><span class="m-doc-wrap">Iter a,
-              Iter b,
-              const Proj&amp; proj,
-              const <a href="structll.html" class="m-doc">ll</a> proj_size)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename Cont&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#adafa966f1819210cf795fff85b2a40c5" class="m-doc">ssize</a>(</span><span class="m-doc-wrap">const Cont&amp; cont) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="var-members">
-          <h2><a href="#var-members">Variables</a></h2>
-          <dl class="m-doc">
-            <dt>
-              default_random_engine <a href="#a7fea553f6f915aa6c2affe79637d9b9f" class="m-doc">reng</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section>
-          <h2>Typedef documentation</h2>
-          <section class="m-doc-details" id="a5527c46ab55c32f4bdf48a47564e3cf0"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T&gt;
-              </div>
-              using utility::<wbr /><a href="#a5527c46ab55c32f4bdf48a47564e3cf0" class="m-doc-self">ar_t</a> = typename <a href="structutility_1_1ar.html" class="m-doc">ar</a>&lt;T&gt;::type
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="afaacd9ae54757a29e4d3e5381d8cfcdf"><div>
-            <h3>
-              typedef <a href="structutility_1_1random__device__patch.html" class="m-doc">random_<wbr />device_<wbr />patch</a> utility::<wbr /><a href="#afaacd9ae54757a29e4d3e5381d8cfcdf" class="m-doc-self">random_device</a>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-        <section>
-          <h2>Function documentation</h2>
-          <section class="m-doc-details" id="acf80bb2a56236f08271b2d70689cc1f6"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#acf80bb2a56236f08271b2d70689cc1f6" class="m-doc-self">min_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
-              const T&amp; y)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a80f7a687b4e8d135cde1ae1d6b169d13"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a80f7a687b4e8d135cde1ae1d6b169d13" class="m-doc-self">max_eq</a>(</span><span class="m-doc-wrap">T&amp; x,
-              const T&amp; y)</span></span>
-            </h3>
-            <p>Set x to the minimum of x and y.</p>
-<p>Set x to the maximum of x and y.</p><p>Set x to the maximum of x and y</p>
-          </div></section>
-          <section class="m-doc-details" id="a6e069fcf8b422fbc525eba2543e36a6e"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6e069fcf8b422fbc525eba2543e36a6e" class="m-doc-self">cache</a>(</span><span class="m-doc-wrap">const T&amp; f)</span></span>
-            </h3>
-            <p>Set x to the minimum of x and y.</p>
-<p>Cache calls to f using a map of type T.</p><p>Cache calls to f using a map of type T</p>
-          </div></section>
-          <section class="m-doc-details" id="a531cc980b5de78f0c2f36ae3210cb9cf"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Eq = equal_to&lt;&gt;, typename T = less&lt;&gt;, typename Cont&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a531cc980b5de78f0c2f36ae3210cb9cf" class="m-doc-self">uniq</a>(</span><span class="m-doc-wrap">Cont v,
-              Eq const&amp; up = Eq{},
-              T const&amp; sp = T{})</span></span>
-            </h3>
-            <p>Remove all duplicates element from.</p>
-            <table class="m-table m-fullwidth m-flat">
-              <thead>
-                <tr><th colspan="2">Parameters</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="width: 1%">v</td>
-                  <td>are distinct and sorted</td>
-                </tr>
-                <tr>
-                  <td>up</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>sp</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div></section>
-          <section class="m-doc-details" id="a3f485f407bcf34b3ad3831f7fda882e4"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Compare = less&lt;&gt;, typename Func&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3f485f407bcf34b3ad3831f7fda882e4" class="m-doc-self">key_compare</a>(</span><span class="m-doc-wrap">const Func&amp; func,
-              const Compare&amp; compare = {})</span></span>
-            </h3>
-            <p>Compare using key.</p>
-            <table class="m-table m-fullwidth m-flat">
-              <thead>
-                <tr><th colspan="2">Parameters</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="width: 1%">func</td>
-                  <td>The key function</td>
-                </tr>
-                <tr>
-                  <td>compare</td>
-                  <td>the comparison function.</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Returns</th>
-                  <td>A comparison functor that compares two arugments by the key.</td>
-                </tr>
-              </tfoot>
-            </table>
-          </div></section>
-          <section class="m-doc-details" id="a50e9430d1096ce6997ae910135a9533f"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">auto utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a50e9430d1096ce6997ae910135a9533f" class="m-doc-self">prev_less</a>(</span><span class="m-doc-wrap">const T&amp; v)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a005fc5d8af9bba651f00c74372466b83"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a005fc5d8af9bba651f00c74372466b83" class="m-doc-self">bit_ceil</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-            </h3>
-            <p>Return the smallest power of two that is at least x.</p>
-          </div></section>
-          <section class="m-doc-details" id="a14dc21f495425ccdc1ec35fe45d45591"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a14dc21f495425ccdc1ec35fe45d45591" class="m-doc-self">power_ceil</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> x,
-              const <a href="structll.html" class="m-doc">ll</a> base)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-            </h3>
-            <p>Returns the smallest power of base that is at least x.</p>
-          </div></section>
-          <section class="m-doc-details" id="a750478c01441fac1c27f14bea2cb74ea"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a750478c01441fac1c27f14bea2cb74ea" class="m-doc-self">log_ceil</a>(</span><span class="m-doc-wrap">const <a href="structll.html" class="m-doc">ll</a> x,
-              const <a href="structll.html" class="m-doc">ll</a> base)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-            </h3>
-            <p>Returns the smallest exponent such that base raised to exponent is at least x.</p>
-          </div></section>
-          <section class="m-doc-details" id="a7cd324d23686536d1d4eeb92afb61ed4"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7cd324d23686536d1d4eeb92afb61ed4" class="m-doc-self">next_comb</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> x)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-            </h3>
-            <p>next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x).</p>
-<aside class="m-note m-success"><h4>Precondition</h4><p>THe desired y must exist.</p></aside>
-          </div></section>
-          <section class="m-doc-details" id="aa72cfb348ae79fd2bdb5ded63cd36ef2"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T, typename Func&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa72cfb348ae79fd2bdb5ded63cd36ef2" class="m-doc-self">swap2</a>(</span><span class="m-doc-wrap">T&amp; a,
-              T&amp; b,
-              const Func&amp; func)</span></span>
-            </h3>
-            <p>Stable sorts a and b by func.</p>
-          </div></section>
-          <section class="m-doc-details" id="a713c1fa985af64dbe0374a15cc3d4383"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Iter, typename Proj&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a713c1fa985af64dbe0374a15cc3d4383" class="m-doc-self">counting_sort</a>(</span><span class="m-doc-wrap">Iter a,
-              Iter b,
-              const Proj&amp; proj,
-              const <a href="structll.html" class="m-doc">ll</a> proj_size)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="adafa966f1819210cf795fff85b2a40c5"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Cont&gt;
-              </div>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> utility::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adafa966f1819210cf795fff85b2a40c5" class="m-doc-self">ssize</a>(</span><span class="m-doc-wrap">const Cont&amp; cont)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-        <section>
-          <h2>Variable documentation</h2>
-          <section class="m-doc-details" id="a7fea553f6f915aa6c2affe79637d9b9f"><div>
-            <h3>
-              default_random_engine utility::<wbr /><a href="#a7fea553f6f915aa6c2affe79637d9b9f" class="m-doc-self">reng</a>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="utility_8hpp.html">&lt;/home/ram/OmniTemplate/src/core/utility.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-      </div>
-    </div>
-  </div>
-</article></main>
-<div class="m-doc-search" id="search">
-  <a href="#!" onclick="return hideSearch()"></a>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-m-8 m-push-m-2">
-        <div class="m-doc-search-header m-text m-small">
-          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
-          <div id="search-symbolcount">&hellip;</div>
-        </div>
-        <div class="m-doc-search-content">
-          <form>
-            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
-          </form>
-          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
-          <div id="search-help" class="m-text m-dim m-text-center">
-            <p class="m-noindent">Search for symbols, directories, files, pages or
-            modules. You can omit any prefix from the symbol or file path; adding a
-            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
-            directory.</p>
-            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
-            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
-            <span class="m-label m-dim">Enter</span> to go.
-            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
-            copy a link to the result using <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
-          </div>
-          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
-          <ul id="search-results"></ul>
-        </div>
-      </div>
-    </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script src="searchdata-v1.js" async="async"></script>
-<footer><nav>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
-      </div>
-    </div>
-  </div>
-</nav></footer>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('namespaceutility.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">utility Namespace Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceutility_1_1test"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility_1_1test.html">test</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1ar.html">ar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array convenience template. Converts C style array type to std::array type.  <a href="structutility_1_1ar.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1ar_3_01T_0fn_0e_4.html">ar&lt; T[n]&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutility_1_1chained__compare.html">chained_compare</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1Empty.html">Empty</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1fix.html">fix</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for lambda recursive functions. The recursive function is passed to Func as the first argument.  <a href="structutility_1_1fix.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1random__device__patch.html">random_device_patch</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random device patch to fix libstdc++'s broken implementation on Windows.  <a href="structutility_1_1random__device__patch.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutility_1_1with.html">with</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets v to new_ temporary while with object is alive.  <a href="structutility_1_1with.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0">ar_t</a> = typename <a class="el" href="structutility_1_1ar.html">ar</a>&lt; T &gt;::type</td></tr>
+<tr class="separator:a5527c46ab55c32f4bdf48a47564e3cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8575a7ae9db3044c9cef77ddcc62ab7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a> = <a class="el" href="structutility_1_1random__device__patch.html">random_device_patch</a></td></tr>
+<tr class="separator:a8575a7ae9db3044c9cef77ddcc62ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acf80bb2a56236f08271b2d70689cc1f6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acf80bb2a56236f08271b2d70689cc1f6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#acf80bb2a56236f08271b2d70689cc1f6">min_eq</a> (T &amp;x, const T &amp;y)</td></tr>
+<tr class="separator:acf80bb2a56236f08271b2d70689cc1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f7a687b4e8d135cde1ae1d6b169d13"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a80f7a687b4e8d135cde1ae1d6b169d13"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a80f7a687b4e8d135cde1ae1d6b169d13">max_eq</a> (T &amp;x, const T &amp;y)</td></tr>
+<tr class="memdesc:a80f7a687b4e8d135cde1ae1d6b169d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set x to the minimum of x and y.  <a href="namespaceutility.html#a80f7a687b4e8d135cde1ae1d6b169d13">More...</a><br /></td></tr>
+<tr class="separator:a80f7a687b4e8d135cde1ae1d6b169d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e069fcf8b422fbc525eba2543e36a6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6e069fcf8b422fbc525eba2543e36a6e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a6e069fcf8b422fbc525eba2543e36a6e">cache</a> (const T &amp;f)</td></tr>
+<tr class="memdesc:a6e069fcf8b422fbc525eba2543e36a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set x to the minimum of x and y.  <a href="namespaceutility.html#a6e069fcf8b422fbc525eba2543e36a6e">More...</a><br /></td></tr>
+<tr class="separator:a6e069fcf8b422fbc525eba2543e36a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a531cc980b5de78f0c2f36ae3210cb9cf"><td class="memTemplParams" colspan="2">template&lt;typename Eq  = equal_to&lt;&gt;, typename T  = less&lt;&gt;, typename Cont &gt; </td></tr>
+<tr class="memitem:a531cc980b5de78f0c2f36ae3210cb9cf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a531cc980b5de78f0c2f36ae3210cb9cf">uniq</a> (Cont v, Eq const &amp;up=Eq{}, T const &amp;sp=T{})</td></tr>
+<tr class="memdesc:a531cc980b5de78f0c2f36ae3210cb9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all duplicates element from.  <a href="namespaceutility.html#a531cc980b5de78f0c2f36ae3210cb9cf">More...</a><br /></td></tr>
+<tr class="separator:a531cc980b5de78f0c2f36ae3210cb9cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f485f407bcf34b3ad3831f7fda882e4"><td class="memTemplParams" colspan="2">template&lt;typename Compare  = less&lt;&gt;, typename Func &gt; </td></tr>
+<tr class="memitem:a3f485f407bcf34b3ad3831f7fda882e4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a3f485f407bcf34b3ad3831f7fda882e4">key_compare</a> (const Func &amp;func, const Compare &amp;compare={})</td></tr>
+<tr class="memdesc:a3f485f407bcf34b3ad3831f7fda882e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare using key.  <a href="namespaceutility.html#a3f485f407bcf34b3ad3831f7fda882e4">More...</a><br /></td></tr>
+<tr class="separator:a3f485f407bcf34b3ad3831f7fda882e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e9430d1096ce6997ae910135a9533f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a50e9430d1096ce6997ae910135a9533f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a50e9430d1096ce6997ae910135a9533f">prev_less</a> (const T &amp;v)</td></tr>
+<tr class="separator:a50e9430d1096ce6997ae910135a9533f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005fc5d8af9bba651f00c74372466b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a005fc5d8af9bba651f00c74372466b83">bit_ceil</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
+<tr class="memdesc:a005fc5d8af9bba651f00c74372466b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the smallest power of two that is at least x.  <a href="namespaceutility.html#a005fc5d8af9bba651f00c74372466b83">More...</a><br /></td></tr>
+<tr class="separator:a005fc5d8af9bba651f00c74372466b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14dc21f495425ccdc1ec35fe45d45591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a14dc21f495425ccdc1ec35fe45d45591">power_ceil</a> (const <a class="el" href="structll.html">ll</a> x, const <a class="el" href="structll.html">ll</a> base)</td></tr>
+<tr class="memdesc:a14dc21f495425ccdc1ec35fe45d45591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the smallest power of base that is at least x.  <a href="namespaceutility.html#a14dc21f495425ccdc1ec35fe45d45591">More...</a><br /></td></tr>
+<tr class="separator:a14dc21f495425ccdc1ec35fe45d45591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750478c01441fac1c27f14bea2cb74ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a750478c01441fac1c27f14bea2cb74ea">log_ceil</a> (const <a class="el" href="structll.html">ll</a> x, const <a class="el" href="structll.html">ll</a> base)</td></tr>
+<tr class="memdesc:a750478c01441fac1c27f14bea2cb74ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the smallest exponent such that base raised to exponent is at least x.  <a href="namespaceutility.html#a750478c01441fac1c27f14bea2cb74ea">More...</a><br /></td></tr>
+<tr class="separator:a750478c01441fac1c27f14bea2cb74ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd324d23686536d1d4eeb92afb61ed4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7cd324d23686536d1d4eeb92afb61ed4">next_comb</a> (<a class="el" href="structll.html">ll</a> x)</td></tr>
+<tr class="memdesc:a7cd324d23686536d1d4eeb92afb61ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x).  <a href="namespaceutility.html#a7cd324d23686536d1d4eeb92afb61ed4">More...</a><br /></td></tr>
+<tr class="separator:a7cd324d23686536d1d4eeb92afb61ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8a9d0142092c8f2255e518bfdf9dc4"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Func &gt; </td></tr>
+<tr class="memitem:a4c8a9d0142092c8f2255e518bfdf9dc4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a4c8a9d0142092c8f2255e518bfdf9dc4">sort2</a> (T &amp;a, T &amp;b, const Func &amp;func)</td></tr>
+<tr class="memdesc:a4c8a9d0142092c8f2255e518bfdf9dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stable sorts a and b by func.  <a href="namespaceutility.html#a4c8a9d0142092c8f2255e518bfdf9dc4">More...</a><br /></td></tr>
+<tr class="separator:a4c8a9d0142092c8f2255e518bfdf9dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713c1fa985af64dbe0374a15cc3d4383"><td class="memTemplParams" colspan="2">template&lt;typename Iter , typename Proj &gt; </td></tr>
+<tr class="memitem:a713c1fa985af64dbe0374a15cc3d4383"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a713c1fa985af64dbe0374a15cc3d4383">counting_sort</a> (Iter a, Iter b, const Proj &amp;proj, const <a class="el" href="structll.html">ll</a> proj_size)</td></tr>
+<tr class="separator:a713c1fa985af64dbe0374a15cc3d4383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafa966f1819210cf795fff85b2a40c5"><td class="memTemplParams" colspan="2">template&lt;typename Cont &gt; </td></tr>
+<tr class="memitem:adafa966f1819210cf795fff85b2a40c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#adafa966f1819210cf795fff85b2a40c5">ssize</a> (const Cont &amp;<a class="el" href="range_8hpp.html#a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e">cont</a>)</td></tr>
+<tr class="separator:adafa966f1819210cf795fff85b2a40c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416532ff53790338172141074151fd05"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a416532ff53790338172141074151fd05"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a416532ff53790338172141074151fd05">valid_idx</a> (const vector&lt; T &gt; &amp;vec, const size_t idx)</td></tr>
+<tr class="memdesc:a416532ff53790338172141074151fd05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether idx is a valid index for vec. Note that if idx is negative this returns false.  <a href="namespaceutility.html#a416532ff53790338172141074151fd05">More...</a><br /></td></tr>
+<tr class="separator:a416532ff53790338172141074151fd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2adcc88a8abb68fe298905798fa8ae"><td class="memTemplParams" colspan="2">template&lt;typename InputIt &gt; </td></tr>
+<tr class="memitem:aed2adcc88a8abb68fe298905798fa8ae"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#aed2adcc88a8abb68fe298905798fa8ae">iterator_identity</a> ()</td></tr>
+<tr class="separator:aed2adcc88a8abb68fe298905798fa8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547ec88ecb50fe12150a8d293de2ce75"><td class="memTemplParams" colspan="2">template&lt;typename InputIt &gt; </td></tr>
+<tr class="memitem:a547ec88ecb50fe12150a8d293de2ce75"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a547ec88ecb50fe12150a8d293de2ce75">accumulate</a> (InputIt a, InputIt b)</td></tr>
+<tr class="separator:a547ec88ecb50fe12150a8d293de2ce75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9503cf05b32620d818c2ff7e3c5cb20c"><td class="memTemplParams" colspan="2">template&lt;typename InputIt &gt; </td></tr>
+<tr class="memitem:a9503cf05b32620d818c2ff7e3c5cb20c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a9503cf05b32620d818c2ff7e3c5cb20c">get_partial_sum</a> (InputIt a, InputIt b)</td></tr>
+<tr class="separator:a9503cf05b32620d818c2ff7e3c5cb20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memItemLeft" align="right" valign="top">default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutility.html#a7fea553f6f915aa6c2affe79637d9b9f">reng</a> {<a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a>{}()}</td></tr>
+<tr class="separator:a7fea553f6f915aa6c2affe79637d9b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a5527c46ab55c32f4bdf48a47564e3cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5527c46ab55c32f4bdf48a47564e3cf0">&#9670;&nbsp;</a></span>ar_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceutility.html#a5527c46ab55c32f4bdf48a47564e3cf0">utility::ar_t</a> = typedef typename <a class="el" href="structutility_1_1ar.html">ar</a>&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8575a7ae9db3044c9cef77ddcc62ab7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8575a7ae9db3044c9cef77ddcc62ab7c">&#9670;&nbsp;</a></span>random_device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">utility::random_device</a> = typedef <a class="el" href="structutility_1_1random__device__patch.html">random_device_patch</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a547ec88ecb50fe12150a8d293de2ce75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547ec88ecb50fe12150a8d293de2ce75">&#9670;&nbsp;</a></span>accumulate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputIt &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) utility::accumulate </td>
+          <td>(</td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a547ec88ecb50fe12150a8d293de2ce75_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a005fc5d8af9bba651f00c74372466b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005fc5d8af9bba651f00c74372466b83">&#9670;&nbsp;</a></span>bit_ceil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::bit_ceil </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the smallest power of two that is at least x. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a005fc5d8af9bba651f00c74372466b83_icgraph.svg" width="100%" height="397"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6e069fcf8b422fbc525eba2543e36a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e069fcf8b422fbc525eba2543e36a6e">&#9670;&nbsp;</a></span>cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility::cache </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set x to the minimum of x and y. </p>
+<p>Cache calls to f using a map of type T </p>
+
+</div>
+</div>
+<a id="a713c1fa985af64dbe0374a15cc3d4383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713c1fa985af64dbe0374a15cc3d4383">&#9670;&nbsp;</a></span>counting_sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iter , typename Proj &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void utility::counting_sort </td>
+          <td>(</td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iter&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Proj &amp;&#160;</td>
+          <td class="paramname"><em>proj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>proj_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a713c1fa985af64dbe0374a15cc3d4383_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9503cf05b32620d818c2ff7e3c5cb20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9503cf05b32620d818c2ff7e3c5cb20c">&#9670;&nbsp;</a></span>get_partial_sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputIt &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility::get_partial_sum </td>
+          <td>(</td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a9503cf05b32620d818c2ff7e3c5cb20c_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aed2adcc88a8abb68fe298905798fa8ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed2adcc88a8abb68fe298905798fa8ae">&#9670;&nbsp;</a></span>iterator_identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputIt &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility::iterator_identity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_aed2adcc88a8abb68fe298905798fa8ae_cgraph.svg" width="404" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3f485f407bcf34b3ad3831f7fda882e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f485f407bcf34b3ad3831f7fda882e4">&#9670;&nbsp;</a></span>key_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare  = less&lt;&gt;, typename Func &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility::key_compare </td>
+          <td>(</td>
+          <td class="paramtype">const Func &amp;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Compare &amp;&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare using key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>The key function </td></tr>
+    <tr><td class="paramname">compare</td><td>the comparison function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A comparison functor that compares two arugments by the key. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a3f485f407bcf34b3ad3831f7fda882e4_icgraph.svg" width="100%" height="505"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a750478c01441fac1c27f14bea2cb74ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750478c01441fac1c27f14bea2cb74ea">&#9670;&nbsp;</a></span>log_ceil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::log_ceil </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the smallest exponent such that base raised to exponent is at least x. </p>
+
+</div>
+</div>
+<a id="a80f7a687b4e8d135cde1ae1d6b169d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f7a687b4e8d135cde1ae1d6b169d13">&#9670;&nbsp;</a></span>max_eq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void utility::max_eq </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set x to the minimum of x and y. </p>
+<p>Set x to the maximum of x and y </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a80f7a687b4e8d135cde1ae1d6b169d13_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acf80bb2a56236f08271b2d70689cc1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf80bb2a56236f08271b2d70689cc1f6">&#9670;&nbsp;</a></span>min_eq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void utility::min_eq </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_acf80bb2a56236f08271b2d70689cc1f6_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7cd324d23686536d1d4eeb92afb61ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd324d23686536d1d4eeb92afb61ed4">&#9670;&nbsp;</a></span>next_comb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::next_comb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>next combination of bits Formally, returns the smallest integer y &gt; x such that popcount(y) = popcount(x). </p>
+<dl class="section pre"><dt>Precondition</dt><dd>THe desired y must exist. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a14dc21f495425ccdc1ec35fe45d45591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14dc21f495425ccdc1ec35fe45d45591">&#9670;&nbsp;</a></span>power_ceil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::power_ceil </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the smallest power of base that is at least x. </p>
+
+</div>
+</div>
+<a id="a50e9430d1096ce6997ae910135a9533f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e9430d1096ce6997ae910135a9533f">&#9670;&nbsp;</a></span>prev_less()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility::prev_less </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c8a9d0142092c8f2255e518bfdf9dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c8a9d0142092c8f2255e518bfdf9dc4">&#9670;&nbsp;</a></span>sort2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Func &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void utility::sort2 </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Func &amp;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stable sorts a and b by func. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_a4c8a9d0142092c8f2255e518bfdf9dc4_icgraph.svg" width="487" height="114"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adafa966f1819210cf795fff85b2a40c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafa966f1819210cf795fff85b2a40c5">&#9670;&nbsp;</a></span>ssize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Cont &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> utility::ssize </td>
+          <td>(</td>
+          <td class="paramtype">const Cont &amp;&#160;</td>
+          <td class="paramname"><em>cont</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutility_adafa966f1819210cf795fff85b2a40c5_icgraph.svg" width="350" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a531cc980b5de78f0c2f36ae3210cb9cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a531cc980b5de78f0c2f36ae3210cb9cf">&#9670;&nbsp;</a></span>uniq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Eq  = equal_to&lt;&gt;, typename T  = less&lt;&gt;, typename Cont &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto utility::uniq </td>
+          <td>(</td>
+          <td class="paramtype">Cont&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eq const &amp;&#160;</td>
+          <td class="paramname"><em>up</em> = <code>Eq{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>sp</em> = <code>T{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove all duplicates element from. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>so that all elements in</td></tr>
+    <tr><td class="paramname">v</td><td>are distinct and sorted </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a531cc980b5de78f0c2f36ae3210cb9cf_icgraph.svg" width="100%" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a416532ff53790338172141074151fd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416532ff53790338172141074151fd05">&#9670;&nbsp;</a></span>valid_idx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool utility::valid_idx </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return whether idx is a valid index for vec. Note that if idx is negative this returns false. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutility_a416532ff53790338172141074151fd05_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7fea553f6f915aa6c2affe79637d9b9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fea553f6f915aa6c2affe79637d9b9f">&#9670;&nbsp;</a></span>reng</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">default_random_engine utility::reng {<a class="el" href="namespaceutility.html#a8575a7ae9db3044c9cef77ddcc62ab7c">random_device</a>{}()}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceutility.html">utility</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

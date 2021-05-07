@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('structlinear__algebra_1_1matrix.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacelinear__algebra.html">linear_algebra</a></li><li class="navelem"><a class="el" href="structlinear__algebra_1_1matrix.html">matrix</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">linear_algebra::matrix&lt; T &gt; Member List</div>  </div>
@@ -80,29 +106,25 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#ab36fb1d4542f2a43af3b44c22ffe083e">a</a></td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a417f6b2bcd0bae5ec57612f6b228b879">a</a></td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a4b8d6b65104e322826ecf447078cb953">cols_n</a></td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#ad02294881d9dd92ee77b417d416bed33">is_square</a>() const</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#ad02294881d9dd92ee77b417d416bed33">is_square</a>() const</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a44b1e37202c7dd6a6402b407b9ea2072">matrix</a>(ll r_, ll c_, T v={})</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a678b80bc52046d1a6827e14ea9b6af6e">matrix</a>(T d)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a25e0594f850d04a7102d59392df2bdbc">matrix</a>(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a1c8d8e45107bea445551c6189263768d">matrix</a>(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a44b1e37202c7dd6a6402b407b9ea2072">matrix</a>(ll r_, ll c_, T v={})</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a678b80bc52046d1a6827e14ea9b6af6e">matrix</a>(T d)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a25e0594f850d04a7102d59392df2bdbc">matrix</a>(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a1c8d8e45107bea445551c6189263768d">matrix</a>(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#ae41650872d737bf7aff8a62c2b5bfad5">operator[]</a>(const ll i)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#aa56292eb8f2f032e41fc598e1302dacd">operator[]</a>(const ll i) const</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#ae41650872d737bf7aff8a62c2b5bfad5">operator[]</a>(const ll i)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#aa56292eb8f2f032e41fc598e1302dacd">operator[]</a>(const ll i) const</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a></td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a44b1e37202c7dd6a6402b407b9ea2072">matrix</a>(ll r_, ll c_, T v={})</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a678b80bc52046d1a6827e14ea9b6af6e">matrix</a>(T d)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a25e0594f850d04a7102d59392df2bdbc">matrix</a>(vector&lt; vector&lt; pr &gt;&gt; const &amp;g)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a1c8d8e45107bea445551c6189263768d">matrix</a>(const initializer_list&lt; initializer_list&lt; ll &gt;&gt; &amp;vals)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#ae41650872d737bf7aff8a62c2b5bfad5">operator[]</a>(const ll i)</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#aa56292eb8f2f032e41fc598e1302dacd">operator[]</a>(const ll i) const</td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html#a4cfdcefa6c7acb00a47c68d78a05082e">rows_n</a></td><td class="entry"><a class="el" href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,9 +5,9 @@
     <innerclass refid="structflow_1_1FlowEdge" prot="public">flow::FlowEdge</innerclass>
     <innernamespace refid="namespaceflow_1_1test">flow::test</innernamespace>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespaceflow_1a019c8d89498d267345fd2f560909fa7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceflow_1a724fa814b55772a3c6ba9254b8403e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>matrix&lt; ll &gt; flow::edmond_karp</definition>
+        <definition>matrix&lt;ll&gt; flow::edmond_karp</definition>
         <argsstring>(const matrix&lt; ll &gt; &amp;capacity)</argsstring>
         <name>edmond_karp</name>
         <param>
@@ -30,40 +30,18 @@
 </parameterlist>
 <simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
 </simplesect>
-Edmond-Karp maximum flow algorithm. Complexity: <formula id="23">$O(VE^2)$</formula> <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>capacity</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-1. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
-</simplesect>
-Edmond-Karp maximum flow algorithm. Complexity: <formula id="23">$O(VE^2)$</formula> <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>capacity</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-1. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
-</simplesect>
 </para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="14" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="14" bodyend="61"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
-        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="95">inf</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="114">inf</references>
         <references refid="namespaceutility_1acf80bb2a56236f08271b2d70689cc1f6" compoundref="utility_8hpp" startline="25" endline="25">utility::min_eq</references>
         <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="11">linear_algebra::matrix&lt; T &gt;::rows_n</references>
         <referencedby refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" compoundref="test__flow_8hpp" startline="52" endline="56">flow::test::test_flow</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespaceflow_1ab162ee0224ccca8ae082128f2825d92c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceflow_1ab1878f3966f553be99c58d55aa46709e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structlinear__algebra_1_1matrix" kindref="compound">matrix</ref>&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
-        <definition>matrix&lt; ll &gt; flow::dinic</definition>
+        <definition>matrix&lt;ll&gt; flow::dinic</definition>
         <argsstring>(const matrix&lt; ll &gt; &amp;capacity)</argsstring>
         <name>dinic</name>
         <param>
@@ -86,33 +64,11 @@ Edmond-Karp maximum flow algorithm. Complexity: <formula id="23">$O(VE^2)$</form
 </parameterlist>
 <simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
 </simplesect>
-Dinics maximum-flow algorithm. Complexity: <formula id="24">$O(V^2E)$</formula> <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>capacity</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-1. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
-</simplesect>
-Dinics maximum-flow algorithm. Complexity: <formula id="24">$O(V^2E)$</formula> <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>capacity</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>is a matrix with the capacity for each edge. The source node is 0, and the sink node is n-1. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>The flow for each edge in a maximum flow.</para>
-</simplesect>
 </para>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="62" column="8" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="62" bodyend="158"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="36">fo</references>
-        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="95">inf</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" compoundref="core_2all_8hpp" startline="114">inf</references>
         <references refid="structlinear__algebra_1_1matrix_1a4cfdcefa6c7acb00a47c68d78a05082e" compoundref="linear__algebra_8hpp" startline="11">linear_algebra::matrix&lt; T &gt;::rows_n</references>
         <referencedby refid="namespaceflow_1_1test_1ae0cbf7db821b857cafff43a95f252818" compoundref="test__flow_8hpp" startline="52" endline="56">flow::test::test_flow</referencedby>
       </memberdef>
@@ -132,6 +88,7 @@ Dinics maximum-flow algorithm. Complexity: <formula id="24">$O(V^2E)$</formula> 
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/graph/flow.hpp" line="159" column="4" bodyfile="/home/ram/OmniTemplate/src/graph/flow.hpp" bodystart="159" bodyend="159"/>
+        <references refid="namespaceutility_1a547ec88ecb50fe12150a8d293de2ce75" compoundref="utility_8hpp" startline="169" endline="171">utility::accumulate</references>
         <referencedby refid="namespaceflow_1_1test_1ae4d5bb4d481a3e83a36a3797ff8f782c" compoundref="test__flow_8hpp" startline="45" endline="51">flow::test::test_compare_flow</referencedby>
         <referencedby refid="namespaceflow_1_1test_1a736d0df4682738fa9d4502d37fda8352" compoundref="test__flow_8hpp" startline="4" endline="29">flow::test::test_flow_algo</referencedby>
       </memberdef>

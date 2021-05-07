@@ -7,20 +7,38 @@
     <includedby refid="test__splay__tree_8hpp" local="yes">/home/ram/OmniTemplate/src/ds/test_splay_tree.hpp</includedby>
     <includedby refid="link__cut_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/tree/link_cut.hpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>bits/stdc++.h</label>
+      <node id="9">
+        <label>functional</label>
       </node>
-      <node id="5">
-        <label>experimental/source_location</label>
-      </node>
-      <node id="7">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+      <node id="13">
+        <label>queue</label>
       </node>
       <node id="4">
+        <label>cassert</label>
+      </node>
+      <node id="12">
+        <label>numeric</label>
+      </node>
+      <node id="23">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>unordered_set</label>
+      </node>
+      <node id="22">
         <label>experimental/iterator</label>
+      </node>
+      <node id="8">
+        <label>fstream</label>
       </node>
       <node id="2">
         <label>core/all.hpp</label>
@@ -33,13 +51,49 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -48,30 +102,66 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="14">
+        <label>random</label>
+      </node>
+      <node id="21">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>stack</label>
+      </node>
+      <node id="28">
         <label>utility.hpp</label>
         <link refid="utility_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="26">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="27">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="6">
+        <label>climits</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="17">
+        <label>thread</label>
+      </node>
+      <node id="18">
+        <label>type_traits</label>
+      </node>
+      <node id="15">
+        <label>set</label>
+      </node>
+      <node id="7">
+        <label>complex</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -128,7 +218,7 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3" refid="namespacesplay__tree" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesplay__tree" kindref="compound">splay_tree</ref><sp/>{</highlight></codeline>
-<codeline lineno="5" refid="structsplay__tree_1_1PathParent_1a023303f904294f1ab583fca194636003" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Node&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1PathParent" kindref="compound">PathParent</ref><sp/>{<sp/><ref refid="namespacelink__cut_1a7cec875034f6073f805613cd307611d3" kindref="member">Node</ref><sp/>*<ref refid="structsplay__tree_1_1PathParent_1a023303f904294f1ab583fca194636003" kindref="member">path_parent</ref>{};<sp/>};</highlight></codeline>
+<codeline lineno="5" refid="structsplay__tree_1_1PathParent_1acc553251873a0e2300106f2160994766" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Node&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1PathParent" kindref="compound">PathParent</ref><sp/>{<sp/><ref refid="namespacelink__cut_1a09d87e8cebaf4f6d638db321c396f97b" kindref="member">Node</ref><sp/>*<ref refid="structsplay__tree_1_1PathParent_1acc553251873a0e2300106f2160994766" kindref="member">path_parent</ref>{};<sp/>};</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_link_cut<sp/>=<sp/>false&gt;</highlight></codeline>
 <codeline lineno="7" refid="structsplay__tree_1_1SplayNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>conditional_t&lt;has_link_cut,<sp/>PathParent&lt;SplayNode&lt;T,<sp/>has_link_cut&gt;&gt;,<sp/>Empty&gt;<sp/>{</highlight></codeline>
@@ -136,37 +226,37 @@
 <codeline lineno="10" refid="structsplay__tree_1_1SplayNode_1a8fd96533069082b51ae1a58346c08f94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a8fd96533069082b51ae1a58346c08f94" kindref="member">SplayNode</ref>()<sp/>{}</highlight></codeline>
 <codeline lineno="11" refid="structsplay__tree_1_1SplayNode_1a6f8ea4b8bc92264b47e93ce969e53d54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a6f8ea4b8bc92264b47e93ce969e53d54" kindref="member">SplayNode</ref>(T<sp/>value_arg)<sp/>:<sp/><ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>{value_arg}<sp/>{}</highlight></codeline>
 <codeline lineno="12" refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>{};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="13" refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;SplayNode<sp/>*,<sp/>2&gt;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>{};<sp/></highlight></codeline>
-<codeline lineno="14" refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref><sp/>*<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>{};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;SplayNode<sp/>*,<sp/>2&gt;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>{};<sp/></highlight></codeline>
+<codeline lineno="14" refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref><sp/>*<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>{};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="15" refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1]<sp/>==<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]<sp/>==<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="19" refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>();</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p-&gt;parent)<sp/>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;parent-&gt;attach(p-&gt;side(),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" kindref="member">attach</ref>(i,<sp/><ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[!i]);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" kindref="member">attach</ref>(i,<sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[!i]);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" kindref="member">attach</ref>(!i,<sp/>p);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>constexpr<sp/>(has_link_cut)<sp/>{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;path_parent<sp/>=<sp/>p-&gt;path_parent;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35" refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>())<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>==<sp/><ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>?<sp/><ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>:<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>==<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>?<sp/><ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>:<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a099b6b1b7632cb57ee28bc474d86343e" kindref="member">rotate</ref>();</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="43" refid="structsplay__tree_1_1SplayNode_1a82d47b54b62b9e59f594af8db601fc05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;SplayNode<sp/>*,<sp/>2&gt;<sp/><ref refid="structsplay__tree_1_1SplayNode_1a82d47b54b62b9e59f594af8db601fc05" kindref="member">split</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>use<sp/>detach<sp/>function</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>right<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>right<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1];</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(right)<sp/>{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>right-&gt;parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -175,9 +265,9 @@
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="53" refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a510653918c7b8181c888bbb608a9e6ee" kindref="member">attach</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>,<sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">SplayNode</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>new_)<sp/>{</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(new_)<sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>]<sp/>=<sp/>new_;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>]<sp/>=<sp/>new_;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="60"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="61" refid="structsplay__tree_1_1SplayTree" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsplay__tree_1_1SplayTree" kindref="compound">SplayTree</ref><sp/>{</highlight></codeline>
@@ -189,48 +279,48 @@
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="70" refid="structsplay__tree_1_1SplayTree_1_1iterator_1a1b2e58809547e4402b8a7ef16ed8253d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a1b2e58809547e4402b8a7ef16ed8253d" kindref="member">operator--</ref>()<sp/>{<sp/>advance&lt;false&gt;();<sp/>}</highlight></codeline>
 <codeline lineno="71" refid="structsplay__tree_1_1SplayTree_1_1iterator_1a87fdbf8660f782a32ee209ab7108c0e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a87fdbf8660f782a32ee209ab7108c0e8" kindref="member">operator++</ref>()<sp/>{<sp/>advance&lt;true&gt;();<sp/>}</highlight></codeline>
-<codeline lineno="72" refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" kindref="member">operator*</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="73" refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>;</highlight></codeline>
-<codeline lineno="74" refid="structsplay__tree_1_1SplayTree_1_1iterator_1ab0ea6ed296b79fa203a92992006448ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ab0ea6ed296b79fa203a92992006448ea" kindref="member">iterator</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*node_arg)<sp/>:<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>(node_arg)<sp/>{}</highlight></codeline>
-<codeline lineno="75" refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/>oth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref><sp/>==<sp/>oth.<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="72" refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" kindref="member">operator*</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="73" refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structsplay__tree_1_1SplayTree_1_1iterator_1ab0ea6ed296b79fa203a92992006448ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ab0ea6ed296b79fa203a92992006448ea" kindref="member">iterator</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*node_arg)<sp/>:<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>(node_arg)<sp/>{}</highlight></codeline>
+<codeline lineno="75" refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/>oth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref><sp/>==<sp/>oth.<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="78" refid="structsplay__tree_1_1SplayTree_1_1iterator_1a5de551652a02ec33810bc159032be3de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dir&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a5de551652a02ec33810bc159032be3de" kindref="member">advance</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1])<sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref><sp/>=<sp/>extremum&lt;!dir&gt;(<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1]);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1])<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref><sp/>=<sp/>extremum&lt;!dir&gt;(<ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>&amp;&amp;<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>==<sp/>dir;<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>&amp;&amp;<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a73de7d8fe94fc66a6a43427751e8a546" kindref="member">side</ref>()<sp/>==<sp/>dir;<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>)</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1ad3b5ad84c1a0138db075e2c61eb83144" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kindref="member">node</ref>-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref>;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="88" refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref>{};<sp/></highlight></codeline>
+<codeline lineno="88" refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>{};<sp/></highlight></codeline>
 <codeline lineno="89" refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>{};<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="90" refid="structsplay__tree_1_1SplayTree_1aa627e1ec6a9f5f62cb2aba123f47df0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1aa627e1ec6a9f5f62cb2aba123f47df0b" kindref="member">SplayTree</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="91" refid="structsplay__tree_1_1SplayTree_1a04a5fff3d078c370872ba89bbc90b979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a04a5fff3d078c370872ba89bbc90b979" kindref="member">~SplayTree</ref>()<sp/>{<sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(<ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="91" refid="structsplay__tree_1_1SplayTree_1a04a5fff3d078c370872ba89bbc90b979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a04a5fff3d078c370872ba89bbc90b979" kindref="member">~SplayTree</ref>()<sp/>{<sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>);<sp/>}</highlight></codeline>
 <codeline lineno="92" refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>node)<sp/>{</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!node)<sp/>{</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>child<sp/>:<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>child<sp/>:<sp/>node-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1ac6144f6ba3df06f3eb31da230d62a50b" kindref="member">destroy</ref>(child);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>node;</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="102" refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a80ab90fbd7be1405ae05399b0fc2f2f1" kindref="member">insert</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>x)<sp/>{</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref><sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref><sp/>=<sp/>x;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>;</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;nw<sp/>=<sp/>y-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>&gt;<sp/>y-&gt;value];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;nw<sp/>=<sp/>y-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1aeb587346f51a8c188a0cf74da7770be4" kindref="member">value</ref><sp/>&gt;<sp/>y-&gt;value];</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!nw)<sp/>{</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw<sp/>=<sp/>x;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>=<sp/>y;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref><sp/>=<sp/>nw;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref><sp/>=<sp/>nw;</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nw-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -244,33 +334,33 @@
 <codeline lineno="127" refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a967e320e3d33cad8b0a9c30cd51ed924" kindref="member">erase</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>x)<sp/>{</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(x);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" kindref="member">join</ref>(x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[0],<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1]);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref><sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" kindref="member">join</ref>(x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[0],<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]);</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>;</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="136" refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" kindref="member">erase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;key)<sp/>{<sp/><ref refid="structsplay__tree_1_1SplayTree_1a3c4ae0ba499f4f13a60602ca082365fc" kindref="member">erase</ref>(<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(key));<sp/>}</highlight></codeline>
 <codeline lineno="137" refid="structsplay__tree_1_1SplayTree_1ac3a1a0fa259a0f23787211fb94152acd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i&gt;<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1ac3a1a0fa259a0f23787211fb94152acd" kindref="member">extremum</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*x)<sp/>{</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(x);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[i];<sp/>x<sp/>=<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[i])</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[i];<sp/>x<sp/>=<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[i])</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="145" refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1a21a513a7ac2715f280d2a89b3890722a" kindref="member">join</ref>(<ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>a,<sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!a)<sp/>{</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>mx<sp/>=<sp/>extremum&lt;true&gt;(a);</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a34a54d6c33025f4be7b37065e584b8c5" kindref="member">splay</ref>();</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1]<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[1]<sp/>=<sp/>b;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a543aa24b599c0efa494914be781a2435" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[1]<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mx-&gt;<ref refid="structsplay__tree_1_1SplayNode_1abd2f93c825b0b351f9f29d731150688f" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mx;</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="158" refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayNode" kindref="compound">Node</ref><sp/>*<ref refid="structsplay__tree_1_1SplayTree_1a63ec7e70e6422bbf64cb0b2e1bf497a9" kindref="member">find</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;key)<sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>;</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(x<sp/>&amp;&amp;<sp/>key<sp/>!=<sp/>x-&gt;value)<sp/>{</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>next<sp/>=<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a6aa336f7fa7dcd6d509cdb8bbf9967ee" kindref="member">child</ref>[key<sp/>&gt;<sp/>x-&gt;value];</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>next<sp/>=<sp/>x-&gt;<ref refid="structsplay__tree_1_1SplayNode_1a093b72ce317727a267a5d019b810942f" kindref="member">child</ref>[key<sp/>&gt;<sp/>x-&gt;value];</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!next)<sp/>{</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x-&gt;splay();</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -280,7 +370,7 @@
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="172" refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a7adb23c86a9cb77d3a9d8afbaba65cf7" kindref="member">size_</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="173" refid="structsplay__tree_1_1SplayTree_1a91876a3a77e0f9c9c8550bf527a2f96f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a91876a3a77e0f9c9c8550bf527a2f96f" kindref="member">empty</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1a9dc668b2583940705651fc11072d47da" kindref="member">size</ref>()<sp/>==<sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="174" refid="structsplay__tree_1_1SplayTree_1a2f4c63a201ae3d63d08229382dcbfc67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a2f4c63a201ae3d63d08229382dcbfc67" kindref="member">begin</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref>{extremum&lt;false&gt;(<ref refid="structsplay__tree_1_1SplayTree_1a43c37e09882abec66c0871d4a678ae45" kindref="member">root</ref>)};<sp/>}</highlight></codeline>
+<codeline lineno="174" refid="structsplay__tree_1_1SplayTree_1a2f4c63a201ae3d63d08229382dcbfc67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a2f4c63a201ae3d63d08229382dcbfc67" kindref="member">begin</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref>{extremum&lt;false&gt;(<ref refid="structsplay__tree_1_1SplayTree_1a673d3706c5c3e58495775af5aac944c9" kindref="member">root</ref>)};<sp/>}</highlight></codeline>
 <codeline lineno="175" refid="structsplay__tree_1_1SplayTree_1a45aa483490efb984be745d3847061eba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref><sp/><ref refid="structsplay__tree_1_1SplayTree_1a45aa483490efb984be745d3847061eba" kindref="member">end</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structsplay__tree_1_1SplayTree_1_1iterator" kindref="compound">iterator</ref>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};<sp/>}</highlight></codeline>
 <codeline lineno="176"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="177"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>splay_tree</highlight><highlight class="normal"></highlight></codeline>

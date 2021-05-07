@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('segment__tree_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">segment_tree.hpp</div>  </div>
@@ -89,7 +115,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">   20</a></span>&#160;    <a class="code" href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">SegmentTree</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> size_arg)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        : <a class="code" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">size_</a>{size_arg}, <a class="code" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">ceil_size</a>{<a class="code" href="namespaceutility.html#a14dc21f495425ccdc1ec35fe45d45591">power_ceil</a>(size_arg, base)},</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <a class="code" href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">nodes</a>(!has_ptr ? base * <a class="code" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">ceil_size</a> : 0) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <a class="code" href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">nodes</a>(!has_ptr ? base * <a class="code" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">ceil_size</a> : 0) {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> constexpr (has_ptr) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">root</a> = <span class="keyword">new</span> NodeExp{};</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        } <span class="keywordflow">else</span> {</div>
@@ -106,13 +132,13 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structsegment__tree_1_1SegmentTree_1_1NodeCore.html#a4852cef24d043d15388e91826ca726e6">   36</a></span>&#160;        T <a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeCore.html#a4852cef24d043d15388e91826ca726e6">qsum</a>{<a class="code" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a>(Query{}, T{})};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html">   38</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html">NodeExp</a> : <span class="keyword">public</span> <a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeCore.html">NodeCore</a> {</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#aa898619e89d94503f31c63baec827cc2">   39</a></span>&#160;        array&lt;NodeExp *, base&gt; <a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#aa898619e89d94503f31c63baec827cc2">child</a>{};</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#a4523e07aa838284e536323455a6d948e">   39</a></span>&#160;        array&lt;NodeExp *, base&gt; <a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#a4523e07aa838284e536323455a6d948e">child</a>{};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">   41</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">Node</a> = conditional_t&lt;has_ptr, NodeExp *, ll&gt;;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#ac8ebb88c3ad2fedecb123e31552fde60">   43</a></span>&#160;    <span class="keyword">auto</span> &amp;<a class="code" href="classsegment__tree_1_1SegmentTree.html#ac8ebb88c3ad2fedecb123e31552fde60">get_core</a>(<a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html">NodeExp</a> *<span class="keyword">const</span> &amp;obj) { <span class="keywordflow">return</span> *obj; }</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">   44</a></span>&#160;    <span class="keyword">auto</span> &amp;<a class="code" href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">get_core</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> idx) { <span class="keywordflow">return</span> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">nodes</a>[idx]; }</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">   45</a></span>&#160;    <span class="keyword">auto</span> &amp;<a class="code" href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">get_child</a>(<a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html">NodeExp</a> *<span class="keyword">const</span> &amp;obj, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> i) { <span class="keywordflow">return</span> obj-&gt;<a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#aa898619e89d94503f31c63baec827cc2">child</a>[i]; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">   44</a></span>&#160;    <span class="keyword">auto</span> &amp;<a class="code" href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">get_core</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> idx) { <span class="keywordflow">return</span> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">nodes</a>[idx]; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">   45</a></span>&#160;    <span class="keyword">auto</span> &amp;<a class="code" href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">get_child</a>(<a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html">NodeExp</a> *<span class="keyword">const</span> &amp;obj, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> i) { <span class="keywordflow">return</span> obj-&gt;<a class="code" href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#a4523e07aa838284e536323455a6d948e">child</a>[i]; }</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a6a4f7d2b00e4bc94806364ec0f999700">   46</a></span>&#160;    <span class="keyword">auto</span> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a6a4f7d2b00e4bc94806364ec0f999700">get_child</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> idx, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> i) { <span class="keywordflow">return</span> base * idx + i; }</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a2bab4503b7a982cd822c2d5cb48c8e11">   47</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="structll.html">ll</a> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a2bab4503b7a982cd822c2d5cb48c8e11">mid</a>(<span class="keyword">const</span> <a class="code" href="structll.html">ll</a> node_l, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> node_r, <span class="keyword">const</span> <a class="code" href="structll.html">ll</a> i) {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> df = (node_r - node_l) / base;</div>
@@ -240,15 +266,16 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">  179</a></span>&#160;    <a class="code" href="structll.html">ll</a> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">size_</a>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">  180</a></span>&#160;    <a class="code" href="structll.html">ll</a> <a class="code" href="classsegment__tree_1_1SegmentTree.html#a53e7eb2ce3b43919d36510dc56b980b3">ceil_size</a>;</div>
 <div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">  181</a></span>&#160;    <a class="code" href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">Node</a> <a class="code" href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">root</a>;      <span class="comment">/*&lt; Root node */</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">  182</a></span>&#160;    vector&lt;NodeCore&gt; <a class="code" href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">nodes</a>; <span class="comment">/*&lt; 1-indexed implicit array of nodes */</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">  182</a></span>&#160;    vector&lt;NodeCore&gt; <a class="code" href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">nodes</a>; <span class="comment">/*&lt; 1-indexed implicit array of nodes */</span></div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;} <span class="comment">// namespace segment_tree</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructsegment__tree_1_1SegmentTree_1_1NodeExp_html_a4523e07aa838284e536323455a6d948e"><div class="ttname"><a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#a4523e07aa838284e536323455a6d948e">segment_tree::SegmentTree::NodeExp::child</a></div><div class="ttdeci">array&lt; NodeExp *, base &gt; child</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:39</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_ad753751360f0d9cefe864d4fd22fec83"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#ad753751360f0d9cefe864d4fd22fec83">segment_tree::SegmentTree::root</a></div><div class="ttdeci">Node root</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:181</div></div>
 <div class="ttc" id="anamespaceutility_html_a14dc21f495425ccdc1ec35fe45d45591"><div class="ttname"><a href="namespaceutility.html#a14dc21f495425ccdc1ec35fe45d45591">utility::power_ceil</a></div><div class="ttdeci">ll power_ceil(const ll x, const ll base)</div><div class="ttdoc">Returns the smallest power of base that is at least x.</div><div class="ttdef"><b>Definition:</b> utility.hpp:81</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_ad8b2ae5fb114f861e0dcc0fb5d370b8f"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#ad8b2ae5fb114f861e0dcc0fb5d370b8f">segment_tree::SegmentTree::build</a></div><div class="ttdeci">void build(const vector&lt; T &gt; &amp;arr, const Node idx, const ll node_l, const ll node_r)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:52</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_aee0899b7aed45c73f0142ce425937fde"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#aee0899b7aed45c73f0142ce425937fde">segment_tree::SegmentTree::query</a></div><div class="ttdeci">T query(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:89</div></div>
-<div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a1192e3d264a45fdabbb16fca92e0dae8"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a1192e3d264a45fdabbb16fca92e0dae8">segment_tree::SegmentTree::nodes</a></div><div class="ttdeci">vector&lt; NodeCore &gt; nodes</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:182</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a3d4b3dd98355d9e414bc04cdcf5f5457"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a3d4b3dd98355d9e414bc04cdcf5f5457">segment_tree::SegmentTree::get_child</a></div><div class="ttdeci">auto &amp; get_child(NodeExp *const &amp;obj, const ll i)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:45</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_ac8ebb88c3ad2fedecb123e31552fde60"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#ac8ebb88c3ad2fedecb123e31552fde60">segment_tree::SegmentTree::get_core</a></div><div class="ttdeci">auto &amp; get_core(NodeExp *const &amp;obj)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:43</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_ab4671ac300a724a5bbfdd92c68abcfcb"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#ab4671ac300a724a5bbfdd92c68abcfcb">segment_tree::SegmentTree::build</a></div><div class="ttdeci">void build(const vector&lt; T &gt; &amp;arr)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:51</div></div>
@@ -266,8 +293,7 @@ $(function() {
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a7b87087b2001e8a0f470a4e78f394502"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a7b87087b2001e8a0f470a4e78f394502">segment_tree::SegmentTree::SegmentTree</a></div><div class="ttdeci">SegmentTree(const vector&lt; T &gt; &amp;arr)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:29</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_ad2375790875e1231b39795e93d61e176"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#ad2375790875e1231b39795e93d61e176">segment_tree::SegmentTree::update</a></div><div class="ttdeci">Node update(const ll l, const ll r, const T val)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:155</div></div>
 <div class="ttc" id="astructsegment__tree_1_1SegmentTree_1_1LazyPart_html"><div class="ttname"><a href="structsegment__tree_1_1SegmentTree_1_1LazyPart.html">segment_tree::SegmentTree::LazyPart</a></div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:32</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
-<div class="ttc" id="astructsegment__tree_1_1SegmentTree_1_1NodeExp_html_aa898619e89d94503f31c63baec827cc2"><div class="ttname"><a href="structsegment__tree_1_1SegmentTree_1_1NodeExp.html#aa898619e89d94503f31c63baec827cc2">segment_tree::SegmentTree::NodeExp::child</a></div><div class="ttdeci">array&lt; NodeExp *, base &gt; child</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:39</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a50d361dc1883b3aaa88142238c091571"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a50d361dc1883b3aaa88142238c091571">segment_tree::SegmentTree::Node</a></div><div class="ttdeci">conditional_t&lt; has_ptr, NodeExp *, ll &gt; Node</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:41</div></div>
 <div class="ttc" id="anamespacesegment__tree_html"><div class="ttname"><a href="namespacesegment__tree.html">segment_tree</a></div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:4</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a7b3d2ec003c25e51626c78595ba53401"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a7b3d2ec003c25e51626c78595ba53401">segment_tree::SegmentTree::get_core</a></div><div class="ttdeci">auto &amp; get_core(const ll idx)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:44</div></div>
@@ -278,13 +304,17 @@ $(function() {
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html">segment_tree::SegmentTree</a></div><div class="ttdoc">Generic persistent explicit/implicit lazy based segment tree, technically known as range query tree.</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:18</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a0a3c79962f762f46cb1bb0197dd56fbc"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a0a3c79962f762f46cb1bb0197dd56fbc">segment_tree::SegmentTree::size_</a></div><div class="ttdeci">ll size_</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:179</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a6a4f7d2b00e4bc94806364ec0f999700"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a6a4f7d2b00e4bc94806364ec0f999700">segment_tree::SegmentTree::get_child</a></div><div class="ttdeci">auto get_child(const ll idx, const ll i)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:46</div></div>
+<div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_a26e5975caa51fd679fadc38ef7a48fbb"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#a26e5975caa51fd679fadc38ef7a48fbb">segment_tree::SegmentTree::nodes</a></div><div class="ttdeci">vector&lt; NodeCore &gt; nodes</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:182</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <div class="ttc" id="aclasssegment__tree_1_1SegmentTree_html_addcc5c68b1d667b6a4f868e287dc9bbf"><div class="ttname"><a href="classsegment__tree_1_1SegmentTree.html#addcc5c68b1d667b6a4f868e287dc9bbf">segment_tree::SegmentTree::SegmentTree</a></div><div class="ttdeci">SegmentTree(const ll size_arg)</div><div class="ttdef"><b>Definition:</b> segment_tree.hpp:20</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li><li class="navelem"><a class="el" href="segment__tree_8hpp.html">segment_tree.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

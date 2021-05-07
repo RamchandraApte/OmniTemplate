@@ -1,494 +1,578 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>modulo_namespace namespace | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
-  <link rel="icon" href="favicon-light.png" type="image/png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#cb4b16" />
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OmniTemplate: modulo_namespace Namespace Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
-      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
-        </svg></a>
-        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
-        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
-      </div>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="3">
-            <li><a href="annotated.html">Classes</a></li>
-            <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <use href="#m-doc-search-icon-path" />
-            </svg></a></li>
-          </ol>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">OmniTemplate
+   </div>
+   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
         </div>
-      </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-</nav></header>
-<main><article>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <h1>
-          modulo_namespace <span class="m-thin">namespace</span>
-        </h1>
-        <p><span></span></p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#namespaces">Namespaces</a></li>
-                <li><a href="#nested-classes">Classes</a></li>
-                <li><a href="#typedef-members">Typedefs</a></li>
-                <li><a href="#func-members">Functions</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <section id="namespaces">
-          <h2><a href="#namespaces">Namespaces</a></h2>
-          <dl class="m-doc">
-            <dt>namespace <a href="namespacemodulo__namespace_1_1test.html" class="m-doc">test</a></dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
-          <dl class="m-doc">
-            <dt>
-              struct <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              struct <a href="structmodulo__namespace_1_1no__mod.html" class="m-doc">no_mod</a>
-            </dt>
-            <dd></dd>
-          </dl>
-        </section>
-        <section id="typedef-members">
-          <h2><a href="#typedef-members">Typedefs</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename... Args&gt;</div>
-              using <a href="#a0329c7316dfca40b316f6ad7a6b60e87" class="m-doc">invert_t</a> = decltype(<a href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0" class="m-doc">invert</a>(std::declval&lt;Args&gt;()...))
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="func-members">
-          <h2><a href="#func-members">Functions</a></h2>
-          <dl class="m-doc">
-            <dt>
-              <div class="m-doc-template">template&lt;typename T&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a8e6fc91a032b336ea0bbed9eabf54f69" class="m-doc">power</a>(</span><span class="m-doc-wrap">T a,
-              <a href="structll.html" class="m-doc">ll</a> b) -&gt; T</span>
-            </dt>
-            <dd>Returns <svg class="m-math" style="width: 1.017em; height: 1.028em; vertical-align: -0.000em;" viewBox="0 -9.873238 9.767529 9.873238">
-<title>
-$a^b$
-</title>
-<defs>
-<path id='eq1-g0-98' d='M1.944707-5.292154C1.952677-5.308095 1.976588-5.411706 1.976588-5.419676C1.976588-5.459527 1.944707-5.531258 1.849066-5.531258C1.817186-5.531258 1.570112-5.507347 1.3868-5.491407L.940473-5.459527C.765131-5.443587 .68543-5.435616 .68543-5.292154C.68543-5.180573 .797011-5.180573 .892653-5.180573C1.275218-5.180573 1.275218-5.132752 1.275218-5.061021C1.275218-5.0132 1.195517-4.694396 1.147696-4.511083L.454296-1.737484C.390535-1.466501 .390535-1.346949 .390535-1.211457C.390535-.390535 .892653 .079701 1.506351 .079701C2.486675 .079701 3.506849-1.052055 3.506849-2.207721C3.506849-2.996762 2.996762-3.514819 2.359153-3.514819C1.912827-3.514819 1.570112-3.227895 1.39477-3.076463L1.944707-5.292154ZM1.506351-.143462C1.219427-.143462 .932503-.366625 .932503-.948443C.932503-1.163636 .964384-1.362889 1.060025-1.745455C1.115816-1.976588 1.171606-2.199751 1.235367-2.430884C1.275218-2.574346 1.275218-2.590286 1.370859-2.709838C1.641843-3.044583 2.000498-3.291656 2.335243-3.291656C2.733748-3.291656 2.885181-2.901121 2.885181-2.542466C2.885181-2.247572 2.709838-1.39477 2.470735-.924533C2.263512-.494147 1.880946-.143462 1.506351-.143462Z'/>
-<path id='eq1-g1-97' d='M3.598506-1.422665C3.53873-1.219427 3.53873-1.195517 3.371357-.968369C3.108344-.633624 2.582316-.119552 2.020423-.119552C1.530262-.119552 1.255293-.561893 1.255293-1.267248C1.255293-1.924782 1.625903-3.263761 1.853051-3.765878C2.259527-4.60274 2.82142-5.033126 3.287671-5.033126C4.076712-5.033126 4.23213-4.052802 4.23213-3.957161C4.23213-3.945205 4.196264-3.789788 4.184309-3.765878L3.598506-1.422665ZM4.363636-4.483188C4.23213-4.794022 3.90934-5.272229 3.287671-5.272229C1.936737-5.272229 .478207-3.526775 .478207-1.75741C.478207-.573848 1.171606 .119552 1.984558 .119552C2.642092 .119552 3.203985-.394521 3.53873-.789041C3.658281-.083686 4.220174 .119552 4.578829 .119552S5.224408-.095641 5.439601-.526027C5.630884-.932503 5.798257-1.661768 5.798257-1.709589C5.798257-1.769365 5.750436-1.817186 5.678705-1.817186C5.571108-1.817186 5.559153-1.75741 5.511333-1.578082C5.332005-.872727 5.104857-.119552 4.614695-.119552C4.267995-.119552 4.244085-.430386 4.244085-.669489C4.244085-.944458 4.27995-1.075965 4.387547-1.542217C4.471233-1.841096 4.531009-2.10411 4.62665-2.450809C5.068991-4.244085 5.176588-4.674471 5.176588-4.746202C5.176588-4.913574 5.045081-5.045081 4.865753-5.045081C4.483188-5.045081 4.387547-4.62665 4.363636-4.483188Z'/>
-</defs>
-<g id='eq1-page1'>
-<use x='0' y='0' xlink:href='#eq1-g1-97'/>
-<use x='6.144944' y='-4.338437' xlink:href='#eq1-g0-98'/>
-</g>
-</svg>.</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a2507e89fefa09a358a9de729b15dd642" class="m-doc">mod</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> a,
-              const <a href="structll.html" class="m-doc">ll</a> b) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd>Returns the remainder of a divided by b as a nonnegative integer in [0, b).</dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a0a666ddbbb5d4d02c4aee66be7577292" class="m-doc">mod_eq</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a>&amp; a,
-              const <a href="structll.html" class="m-doc">ll</a> b) -&gt; <a href="structll.html" class="m-doc">ll</a></span>
-            </dt>
-            <dd></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a69f587d528c1bb1f78d8a538b133e57b" class="m-doc">operator&quot;&quot;_M</a>(</span><span class="m-doc-wrap">const unsigned long long x) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a55577c112e6d41b6314ad996f9e48842" class="m-doc">identity</a>(</span><span class="m-doc-wrap">plus&lt;&gt;,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#aab105decd35962ad192ea2187706df9b" class="m-doc">identity</a>(</span><span class="m-doc-wrap">multiplies&lt;&gt;,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#aa39044c62fae2707474b9960d257d9dd" class="m-doc">operator+</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#aef9f34a9358f523b5e12f6897a806e7e" class="m-doc">operator++</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>&amp; a) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a19406485d1ce3b2430c67aea00dda27b" class="m-doc">operator-</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a533cfa2e1e3a79428a3b5e00430ad125" class="m-doc">bin</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a7d1e0e6527c5e49efdc1ef0780a055c8" class="m-doc">operator*</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#aac690d54b7665a90ca461724df8907c0" class="m-doc">invert</a>(</span><span class="m-doc-wrap">multiplies&lt;&gt;,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b) -&gt; <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <div class="m-doc-template">template&lt;typename Stream&gt;</div>
-              <span class="m-doc-wrap-bumper">auto <a href="#a561c93db625469ab20895dabddbae1b8" class="m-doc">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">Stream&amp; os,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; m) -&gt; auto&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a2f1a91608676548419fa75266f0a00bf" class="m-doc">operator==</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b) -&gt; auto</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section>
-          <h2>Typedef documentation</h2>
-          <section class="m-doc-details" id="a0329c7316dfca40b316f6ad7a6b60e87"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename... Args&gt;
-              </div>
-              using modulo_<wbr />namespace::<wbr /><a href="#a0329c7316dfca40b316f6ad7a6b60e87" class="m-doc-self">invert_t</a> = decltype(<a href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0" class="m-doc">invert</a>(std::declval&lt;Args&gt;()...))
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-        <section>
-          <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a8e6fc91a032b336ea0bbed9eabf54f69"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename T&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">T modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8e6fc91a032b336ea0bbed9eabf54f69" class="m-doc-self">power</a>(</span><span class="m-doc-wrap">T a,
-              <a href="structll.html" class="m-doc">ll</a> b)</span></span>
-            </h3>
-            <p>Returns <svg class="m-math" style="width: 1.017em; height: 1.028em; vertical-align: -0.000em;" viewBox="0 -9.873238 9.767529 9.873238">
-<title>
-$a^b$
-</title>
-<defs>
-<path id='eq1-g0-98' d='M1.944707-5.292154C1.952677-5.308095 1.976588-5.411706 1.976588-5.419676C1.976588-5.459527 1.944707-5.531258 1.849066-5.531258C1.817186-5.531258 1.570112-5.507347 1.3868-5.491407L.940473-5.459527C.765131-5.443587 .68543-5.435616 .68543-5.292154C.68543-5.180573 .797011-5.180573 .892653-5.180573C1.275218-5.180573 1.275218-5.132752 1.275218-5.061021C1.275218-5.0132 1.195517-4.694396 1.147696-4.511083L.454296-1.737484C.390535-1.466501 .390535-1.346949 .390535-1.211457C.390535-.390535 .892653 .079701 1.506351 .079701C2.486675 .079701 3.506849-1.052055 3.506849-2.207721C3.506849-2.996762 2.996762-3.514819 2.359153-3.514819C1.912827-3.514819 1.570112-3.227895 1.39477-3.076463L1.944707-5.292154ZM1.506351-.143462C1.219427-.143462 .932503-.366625 .932503-.948443C.932503-1.163636 .964384-1.362889 1.060025-1.745455C1.115816-1.976588 1.171606-2.199751 1.235367-2.430884C1.275218-2.574346 1.275218-2.590286 1.370859-2.709838C1.641843-3.044583 2.000498-3.291656 2.335243-3.291656C2.733748-3.291656 2.885181-2.901121 2.885181-2.542466C2.885181-2.247572 2.709838-1.39477 2.470735-.924533C2.263512-.494147 1.880946-.143462 1.506351-.143462Z'/>
-<path id='eq1-g1-97' d='M3.598506-1.422665C3.53873-1.219427 3.53873-1.195517 3.371357-.968369C3.108344-.633624 2.582316-.119552 2.020423-.119552C1.530262-.119552 1.255293-.561893 1.255293-1.267248C1.255293-1.924782 1.625903-3.263761 1.853051-3.765878C2.259527-4.60274 2.82142-5.033126 3.287671-5.033126C4.076712-5.033126 4.23213-4.052802 4.23213-3.957161C4.23213-3.945205 4.196264-3.789788 4.184309-3.765878L3.598506-1.422665ZM4.363636-4.483188C4.23213-4.794022 3.90934-5.272229 3.287671-5.272229C1.936737-5.272229 .478207-3.526775 .478207-1.75741C.478207-.573848 1.171606 .119552 1.984558 .119552C2.642092 .119552 3.203985-.394521 3.53873-.789041C3.658281-.083686 4.220174 .119552 4.578829 .119552S5.224408-.095641 5.439601-.526027C5.630884-.932503 5.798257-1.661768 5.798257-1.709589C5.798257-1.769365 5.750436-1.817186 5.678705-1.817186C5.571108-1.817186 5.559153-1.75741 5.511333-1.578082C5.332005-.872727 5.104857-.119552 4.614695-.119552C4.267995-.119552 4.244085-.430386 4.244085-.669489C4.244085-.944458 4.27995-1.075965 4.387547-1.542217C4.471233-1.841096 4.531009-2.10411 4.62665-2.450809C5.068991-4.244085 5.176588-4.674471 5.176588-4.746202C5.176588-4.913574 5.045081-5.045081 4.865753-5.045081C4.483188-5.045081 4.387547-4.62665 4.363636-4.483188Z'/>
-</defs>
-<g id='eq1-page1'>
-<use x='0' y='0' xlink:href='#eq1-g1-97'/>
-<use x='6.144944' y='-4.338437' xlink:href='#eq1-g0-98'/>
-</g>
-</svg>.</p>
-            <table class="m-table m-fullwidth m-flat">
-              <thead>
-                <tr><th colspan="2">Parameters</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="width: 1%">a</td>
-                  <td>the base</td>
-                </tr>
-                <tr>
-                  <td>b</td>
-                  <td>the exponent</td>
-                </tr>
-              </tbody>
-            </table>
-<p>Time complexity: <svg class="m-math" style="width: 5.400em; height: 1.245em; vertical-align: -0.312em;" viewBox="0 -8.966376 51.839822 11.955168">
-<title>
-$O(\log_2 |b|)$
-</title>
-<defs>
-<path id='eq2-g0-106' d='M1.900872-8.53599C1.900872-8.751183 1.900872-8.966376 1.661768-8.966376S1.422665-8.751183 1.422665-8.53599V2.558406C1.422665 2.773599 1.422665 2.988792 1.661768 2.988792S1.900872 2.773599 1.900872 2.558406V-8.53599Z'/>
-<path id='eq2-g2-50' d='M2.247572-1.625903C2.375093-1.745455 2.709838-2.008468 2.83736-2.12005C3.331507-2.574346 3.801743-3.012702 3.801743-3.737983C3.801743-4.686426 3.004732-5.300125 2.008468-5.300125C1.052055-5.300125 .422416-4.574844 .422416-3.865504C.422416-3.474969 .73325-3.419178 .844832-3.419178C1.012204-3.419178 1.259278-3.53873 1.259278-3.841594C1.259278-4.25604 .860772-4.25604 .765131-4.25604C.996264-4.837858 1.530262-5.037111 1.920797-5.037111C2.662017-5.037111 3.044583-4.407472 3.044583-3.737983C3.044583-2.909091 2.462765-2.303362 1.522291-1.338979L.518057-.302864C.422416-.215193 .422416-.199253 .422416 0H3.57061L3.801743-1.42665H3.55467C3.53076-1.267248 3.466999-.868742 3.371357-.71731C3.323537-.653549 2.717808-.653549 2.590286-.653549H1.171606L2.247572-1.625903Z'/>
-<path id='eq2-g3-40' d='M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z'/>
-<path id='eq2-g3-41' d='M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z'/>
-<path id='eq2-g3-103' d='M1.422665-2.163885C1.984558-1.793275 2.462765-1.793275 2.594271-1.793275C3.670237-1.793275 4.471233-2.606227 4.471233-3.526775C4.471233-3.849564 4.375592-4.303861 3.993026-4.686426C4.459278-5.164633 5.021171-5.164633 5.080946-5.164633C5.128767-5.164633 5.188543-5.164633 5.236364-5.140722C5.116812-5.092902 5.057036-4.97335 5.057036-4.841843C5.057036-4.674471 5.176588-4.531009 5.36787-4.531009C5.463512-4.531009 5.678705-4.590785 5.678705-4.853798C5.678705-5.068991 5.511333-5.403736 5.092902-5.403736C4.471233-5.403736 4.004981-5.021171 3.837609-4.841843C3.478954-5.116812 3.060523-5.272229 2.606227-5.272229C1.530262-5.272229 .729265-4.459278 .729265-3.53873C.729265-2.857285 1.147696-2.414944 1.267248-2.307347C1.123786-2.12802 .908593-1.78132 .908593-1.315068C.908593-.621669 1.327024-.32279 1.422665-.263014C.872727-.107597 .32279 .32279 .32279 .944458C.32279 1.769365 1.446575 2.450809 2.917061 2.450809C4.339726 2.450809 5.523288 1.817186 5.523288 .920548C5.523288 .621669 5.439601-.083686 4.722291-.454296C4.112578-.765131 3.514819-.765131 2.486675-.765131C1.75741-.765131 1.673724-.765131 1.458531-.992279C1.338979-1.111831 1.231382-1.338979 1.231382-1.590037C1.231382-1.793275 1.303113-1.996513 1.422665-2.163885ZM2.606227-2.044334C1.554172-2.044334 1.554172-3.251806 1.554172-3.526775C1.554172-3.741968 1.554172-4.23213 1.75741-4.554919C1.984558-4.901619 2.343213-5.021171 2.594271-5.021171C3.646326-5.021171 3.646326-3.813699 3.646326-3.53873C3.646326-3.323537 3.646326-2.833375 3.443088-2.510585C3.21594-2.163885 2.857285-2.044334 2.606227-2.044334ZM2.929016 2.199751C1.78132 2.199751 .908593 1.613948 .908593 .932503C.908593 .836862 .932503 .37061 1.3868 .059776C1.649813-.107597 1.75741-.107597 2.594271-.107597C3.58655-.107597 4.937484-.107597 4.937484 .932503C4.937484 1.637858 4.028892 2.199751 2.929016 2.199751Z'/>
-<path id='eq2-g3-108' d='M2.056289-8.296887L.394521-8.16538V-7.81868C1.207472-7.81868 1.303113-7.734994 1.303113-7.149191V-.884682C1.303113-.3467 1.171606-.3467 .394521-.3467V0C.729265-.02391 1.315068-.02391 1.673724-.02391S2.630137-.02391 2.964882 0V-.3467C2.199751-.3467 2.056289-.3467 2.056289-.884682V-8.296887Z'/>
-<path id='eq2-g3-111' d='M5.487422-2.558406C5.487422-4.100623 4.315816-5.332005 2.929016-5.332005C1.494396-5.332005 .358655-4.064757 .358655-2.558406C.358655-1.028144 1.554172 .119552 2.917061 .119552C4.327771 .119552 5.487422-1.052055 5.487422-2.558406ZM2.929016-.143462C2.486675-.143462 1.948692-.334745 1.601993-.920548C1.279203-1.458531 1.267248-2.163885 1.267248-2.666002C1.267248-3.120299 1.267248-3.849564 1.637858-4.387547C1.972603-4.901619 2.49863-5.092902 2.917061-5.092902C3.383313-5.092902 3.88543-4.877709 4.208219-4.411457C4.578829-3.861519 4.578829-3.108344 4.578829-2.666002C4.578829-2.247572 4.578829-1.506351 4.267995-.944458C3.93325-.37061 3.383313-.143462 2.929016-.143462Z'/>
-<path id='eq2-g1-79' d='M8.679452-5.236364C8.679452-7.208966 7.388294-8.416438 5.71457-8.416438C3.156164-8.416438 .573848-5.66675 .573848-2.905106C.573848-1.028144 1.817186 .251059 3.550685 .251059C6.06127 .251059 8.679452-2.367123 8.679452-5.236364ZM3.622416-.02391C2.642092-.02391 1.601993-.74122 1.601993-2.606227C1.601993-3.694147 1.996513-5.475467 2.976837-6.670984C3.849564-7.723039 4.853798-8.153425 5.654795-8.153425C6.706849-8.153425 7.723039-7.388294 7.723039-5.66675C7.723039-4.60274 7.268742-2.940971 6.467746-1.80523C5.595019-.585803 4.507098-.02391 3.622416-.02391Z'/>
-<path id='eq2-g1-98' d='M2.761644-7.998007C2.773599-8.045828 2.797509-8.117559 2.797509-8.177335C2.797509-8.296887 2.677958-8.296887 2.654047-8.296887C2.642092-8.296887 2.211706-8.261021 1.996513-8.237111C1.793275-8.225156 1.613948-8.201245 1.398755-8.18929C1.111831-8.16538 1.028144-8.153425 1.028144-7.938232C1.028144-7.81868 1.147696-7.81868 1.267248-7.81868C1.876961-7.81868 1.876961-7.711083 1.876961-7.591532C1.876961-7.507846 1.78132-7.161146 1.733499-6.945953L1.446575-5.798257C1.327024-5.32005 .645579-2.606227 .597758-2.391034C.537983-2.092154 .537983-1.888917 .537983-1.733499C.537983-.514072 1.219427 .119552 1.996513 .119552C3.383313 .119552 4.817933-1.661768 4.817933-3.395268C4.817933-4.495143 4.196264-5.272229 3.299626-5.272229C2.677958-5.272229 2.116065-4.758157 1.888917-4.519054L2.761644-7.998007ZM2.008468-.119552C1.625903-.119552 1.207472-.406476 1.207472-1.338979C1.207472-1.733499 1.243337-1.960648 1.458531-2.797509C1.494396-2.952927 1.685679-3.718057 1.733499-3.873474C1.75741-3.969116 2.462765-5.033126 3.275716-5.033126C3.801743-5.033126 4.040847-4.507098 4.040847-3.88543C4.040847-3.311582 3.706102-1.960648 3.407223-1.338979C3.108344-.6934 2.558406-.119552 2.008468-.119552Z'/>
-</defs>
-<g id='eq2-page1'>
-<use x='0' y='0' xlink:href='#eq2-g1-79'/>
-<use x='9.271248' y='0' xlink:href='#eq2-g3-40'/>
-<use x='13.823574' y='0' xlink:href='#eq2-g3-108'/>
-<use x='17.075235' y='0' xlink:href='#eq2-g3-111'/>
-<use x='22.928225' y='0' xlink:href='#eq2-g3-103'/>
-<use x='28.943798' y='2.822728' xlink:href='#eq2-g2-50'/>
-<use x='35.668611' y='0' xlink:href='#eq2-g0-106'/>
-<use x='38.989501' y='0' xlink:href='#eq2-g1-98'/>
-<use x='43.966606' y='0' xlink:href='#eq2-g0-106'/>
-<use x='47.287497' y='0' xlink:href='#eq2-g3-41'/>
-</g>
-</svg> multiplications</p>
-          </div></section>
-          <section class="m-doc-details" id="a2507e89fefa09a358a9de729b15dd642"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2507e89fefa09a358a9de729b15dd642" class="m-doc-self">mod</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a> a,
-              const <a href="structll.html" class="m-doc">ll</a> b)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p>Returns the remainder of a divided by b as a nonnegative integer in [0, b).</p>
-          </div></section>
-          <section class="m-doc-details" id="a0a666ddbbb5d4d02c4aee66be7577292"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structll.html" class="m-doc">ll</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0a666ddbbb5d4d02c4aee66be7577292" class="m-doc-self">mod_eq</a>(</span><span class="m-doc-wrap"><a href="structll.html" class="m-doc">ll</a>&amp; a,
-              const <a href="structll.html" class="m-doc">ll</a> b)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-<p>Set a to the remainder when divided by b.</p>
-          </div></section>
-          <section class="m-doc-details" id="a69f587d528c1bb1f78d8a538b133e57b"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a69f587d528c1bb1f78d8a538b133e57b" class="m-doc-self">operator&quot;&quot;_M</a>(</span><span class="m-doc-wrap">const unsigned long long x)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a55577c112e6d41b6314ad996f9e48842"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a55577c112e6d41b6314ad996f9e48842" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap">plus&lt;&gt;,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="aab105decd35962ad192ea2187706df9b"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aab105decd35962ad192ea2187706df9b" class="m-doc-self">identity</a>(</span><span class="m-doc-wrap">multiplies&lt;&gt;,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="aa39044c62fae2707474b9960d257d9dd"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa39044c62fae2707474b9960d257d9dd" class="m-doc-self">operator+</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="aef9f34a9358f523b5e12f6897a806e7e"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aef9f34a9358f523b5e12f6897a806e7e" class="m-doc-self">operator++</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>&amp; a)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a19406485d1ce3b2430c67aea00dda27b"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a19406485d1ce3b2430c67aea00dda27b" class="m-doc-self">operator-</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a533cfa2e1e3a79428a3b5e00430ad125"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a533cfa2e1e3a79428a3b5e00430ad125" class="m-doc-self">bin</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a>)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a7d1e0e6527c5e49efdc1ef0780a055c8"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7d1e0e6527c5e49efdc1ef0780a055c8" class="m-doc-self">operator*</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-<p>Computes a times b modulo <a href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc" class="m-doc">modulo::<wbr />modulus</a> using long double</p><p>Computes a times b modulo <a href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc" class="m-doc">modulo::<wbr />modulus</a> using long double</p><p>Computes a times b modulo <a href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc" class="m-doc">modulo::<wbr />modulus</a> using long double</p>
-          </div></section>
-          <section class="m-doc-details" id="aac690d54b7665a90ca461724df8907c0"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aac690d54b7665a90ca461724df8907c0" class="m-doc-self">invert</a>(</span><span class="m-doc-wrap">multiplies&lt;&gt;,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-<p>Computes the modular inverse <svg class="m-math" style="width: 7.261em; height: 1.298em; vertical-align: -0.312em;" viewBox="0 -9.474739 69.70897 12.463531">
-<title>
-$b^{-1} \pmod{M}$
-</title>
-<defs>
-<path id='eq3-g3-40' d='M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z'/>
-<path id='eq3-g3-41' d='M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z'/>
-<path id='eq3-g3-100' d='M3.58655-8.16538V-7.81868C4.399502-7.81868 4.495143-7.734994 4.495143-7.149191V-4.507098C4.244085-4.853798 3.730012-5.272229 3.000747-5.272229C1.613948-5.272229 .418431-4.100623 .418431-2.570361C.418431-1.052055 1.554172 .119552 2.86924 .119552C3.777833 .119552 4.303861-.478207 4.471233-.705355V.119552L6.156912 0V-.3467C5.34396-.3467 5.248319-.430386 5.248319-1.016189V-8.296887L3.58655-8.16538ZM4.471233-1.398755C4.471233-1.183562 4.471233-1.147696 4.303861-.884682C4.016936-.466252 3.526775-.119552 2.929016-.119552C2.618182-.119552 1.327024-.239103 1.327024-2.558406C1.327024-3.419178 1.470486-3.897385 1.733499-4.291905C1.972603-4.662516 2.450809-5.033126 3.048568-5.033126C3.789788-5.033126 4.208219-4.495143 4.327771-4.303861C4.471233-4.100623 4.471233-4.076712 4.471233-3.861519V-1.398755Z'/>
-<path id='eq3-g3-109' d='M8.571856-2.905106C8.571856-4.016936 8.571856-4.351681 8.296887-4.734247C7.950187-5.200498 7.388294-5.272229 6.981818-5.272229C5.989539-5.272229 5.487422-4.554919 5.296139-4.088667C5.128767-5.009215 4.483188-5.272229 3.730012-5.272229C2.570361-5.272229 2.116065-4.27995 2.020423-4.040847H2.008468V-5.272229L.382565-5.140722V-4.794022C1.195517-4.794022 1.291158-4.710336 1.291158-4.124533V-.884682C1.291158-.3467 1.159651-.3467 .382565-.3467V0C.6934-.02391 1.338979-.02391 1.673724-.02391C2.020423-.02391 2.666002-.02391 2.976837 0V-.3467C2.211706-.3467 2.068244-.3467 2.068244-.884682V-3.108344C2.068244-4.363636 2.893151-5.033126 3.634371-5.033126S4.542964-4.423412 4.542964-3.694147V-.884682C4.542964-.3467 4.411457-.3467 3.634371-.3467V0C3.945205-.02391 4.590785-.02391 4.925529-.02391C5.272229-.02391 5.917808-.02391 6.228643 0V-.3467C5.463512-.3467 5.32005-.3467 5.32005-.884682V-3.108344C5.32005-4.363636 6.144956-5.033126 6.886177-5.033126S7.79477-4.423412 7.79477-3.694147V-.884682C7.79477-.3467 7.663263-.3467 6.886177-.3467V0C7.197011-.02391 7.84259-.02391 8.177335-.02391C8.524035-.02391 9.169614-.02391 9.480448 0V-.3467C8.88269-.3467 8.583811-.3467 8.571856-.705355V-2.905106Z'/>
-<path id='eq3-g3-111' d='M5.487422-2.558406C5.487422-4.100623 4.315816-5.332005 2.929016-5.332005C1.494396-5.332005 .358655-4.064757 .358655-2.558406C.358655-1.028144 1.554172 .119552 2.917061 .119552C4.327771 .119552 5.487422-1.052055 5.487422-2.558406ZM2.929016-.143462C2.486675-.143462 1.948692-.334745 1.601993-.920548C1.279203-1.458531 1.267248-2.163885 1.267248-2.666002C1.267248-3.120299 1.267248-3.849564 1.637858-4.387547C1.972603-4.901619 2.49863-5.092902 2.917061-5.092902C3.383313-5.092902 3.88543-4.877709 4.208219-4.411457C4.578829-3.861519 4.578829-3.108344 4.578829-2.666002C4.578829-2.247572 4.578829-1.506351 4.267995-.944458C3.93325-.37061 3.383313-.143462 2.929016-.143462Z'/>
-<path id='eq3-g2-49' d='M2.502615-5.076961C2.502615-5.292154 2.486675-5.300125 2.271482-5.300125C1.944707-4.98132 1.522291-4.790037 .765131-4.790037V-4.527024C.980324-4.527024 1.41071-4.527024 1.872976-4.742217V-.653549C1.872976-.358655 1.849066-.263014 1.091905-.263014H.812951V0C1.139726-.02391 1.825156-.02391 2.183811-.02391S3.235866-.02391 3.56264 0V-.263014H3.283686C2.526526-.263014 2.502615-.358655 2.502615-.653549V-5.076961Z'/>
-<path id='eq3-g0-0' d='M5.571108-1.809215C5.69863-1.809215 5.873973-1.809215 5.873973-1.992528S5.69863-2.175841 5.571108-2.175841H1.004234C.876712-2.175841 .70137-2.175841 .70137-1.992528S.876712-1.809215 1.004234-1.809215H5.571108Z'/>
-<path id='eq3-g1-77' d='M10.855293-7.292653C10.962889-7.699128 10.9868-7.81868 11.835616-7.81868C12.062765-7.81868 12.170361-7.81868 12.170361-8.045828C12.170361-8.16538 12.086675-8.16538 11.859527-8.16538H10.424907C10.126027-8.16538 10.114072-8.153425 9.982565-7.962142L5.618929-1.06401L4.722291-7.902366C4.686426-8.16538 4.674471-8.16538 4.363636-8.16538H2.881196C2.654047-8.16538 2.546451-8.16538 2.546451-7.938232C2.546451-7.81868 2.654047-7.81868 2.833375-7.81868C3.56264-7.81868 3.56264-7.723039 3.56264-7.591532C3.56264-7.567621 3.56264-7.49589 3.514819-7.316563L1.984558-1.219427C1.841096-.645579 1.566127-.382565 .765131-.3467C.729265-.3467 .585803-.334745 .585803-.131507C.585803 0 .6934 0 .74122 0C.980324 0 1.590037-.02391 1.829141-.02391H2.402989C2.570361-.02391 2.773599 0 2.940971 0C3.024658 0 3.156164 0 3.156164-.227148C3.156164-.334745 3.036613-.3467 2.988792-.3467C2.594271-.358655 2.211706-.430386 2.211706-.860772C2.211706-.980324 2.211706-.992279 2.259527-1.159651L3.90934-7.746949H3.921295L4.913574-.32279C4.94944-.035866 4.961395 0 5.068991 0C5.200498 0 5.260274-.095641 5.32005-.203238L10.126027-7.806725H10.137983L8.404483-.884682C8.296887-.466252 8.272976-.3467 7.436115-.3467C7.208966-.3467 7.089415-.3467 7.089415-.131507C7.089415 0 7.197011 0 7.268742 0C7.47198 0 7.711083-.02391 7.914321-.02391H9.325031C9.528269-.02391 9.779328 0 9.982565 0C10.078207 0 10.209714 0 10.209714-.227148C10.209714-.3467 10.102117-.3467 9.92279-.3467C9.193524-.3467 9.193524-.442341 9.193524-.561893C9.193524-.573848 9.193524-.657534 9.217435-.753176L10.855293-7.292653Z'/>
-<path id='eq3-g1-98' d='M2.761644-7.998007C2.773599-8.045828 2.797509-8.117559 2.797509-8.177335C2.797509-8.296887 2.677958-8.296887 2.654047-8.296887C2.642092-8.296887 2.211706-8.261021 1.996513-8.237111C1.793275-8.225156 1.613948-8.201245 1.398755-8.18929C1.111831-8.16538 1.028144-8.153425 1.028144-7.938232C1.028144-7.81868 1.147696-7.81868 1.267248-7.81868C1.876961-7.81868 1.876961-7.711083 1.876961-7.591532C1.876961-7.507846 1.78132-7.161146 1.733499-6.945953L1.446575-5.798257C1.327024-5.32005 .645579-2.606227 .597758-2.391034C.537983-2.092154 .537983-1.888917 .537983-1.733499C.537983-.514072 1.219427 .119552 1.996513 .119552C3.383313 .119552 4.817933-1.661768 4.817933-3.395268C4.817933-4.495143 4.196264-5.272229 3.299626-5.272229C2.677958-5.272229 2.116065-4.758157 1.888917-4.519054L2.761644-7.998007ZM2.008468-.119552C1.625903-.119552 1.207472-.406476 1.207472-1.338979C1.207472-1.733499 1.243337-1.960648 1.458531-2.797509C1.494396-2.952927 1.685679-3.718057 1.733499-3.873474C1.75741-3.969116 2.462765-5.033126 3.275716-5.033126C3.801743-5.033126 4.040847-4.507098 4.040847-3.88543C4.040847-3.311582 3.706102-1.960648 3.407223-1.338979C3.108344-.6934 2.558406-.119552 2.008468-.119552Z'/>
-</defs>
-<g id='eq3-page1'>
-<use x='0' y='0' xlink:href='#eq3-g1-98'/>
-<use x='4.977105' y='-4.338437' xlink:href='#eq3-g0-0'/>
-<use x='11.563612' y='-4.338437' xlink:href='#eq3-g2-49'/>
-<use x='21.609254' y='0' xlink:href='#eq3-g3-40'/>
-<use x='26.16158' y='0' xlink:href='#eq3-g3-109'/>
-<use x='35.916563' y='0' xlink:href='#eq3-g3-111'/>
-<use x='42.09472' y='0' xlink:href='#eq3-g3-100'/>
-<use x='52.583037' y='0' xlink:href='#eq3-g1-77'/>
-<use x='65.156644' y='0' xlink:href='#eq3-g3-41'/>
-</g>
-</svg></p><p>Computes the modular inverse <svg class="m-math" style="width: 7.261em; height: 1.298em; vertical-align: -0.312em;" viewBox="0 -9.474739 69.70897 12.463531">
-<title>
-$b^{-1} \pmod{M}$
-</title>
-<defs>
-<path id='eq4-g3-40' d='M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z'/>
-<path id='eq4-g3-41' d='M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z'/>
-<path id='eq4-g3-100' d='M3.58655-8.16538V-7.81868C4.399502-7.81868 4.495143-7.734994 4.495143-7.149191V-4.507098C4.244085-4.853798 3.730012-5.272229 3.000747-5.272229C1.613948-5.272229 .418431-4.100623 .418431-2.570361C.418431-1.052055 1.554172 .119552 2.86924 .119552C3.777833 .119552 4.303861-.478207 4.471233-.705355V.119552L6.156912 0V-.3467C5.34396-.3467 5.248319-.430386 5.248319-1.016189V-8.296887L3.58655-8.16538ZM4.471233-1.398755C4.471233-1.183562 4.471233-1.147696 4.303861-.884682C4.016936-.466252 3.526775-.119552 2.929016-.119552C2.618182-.119552 1.327024-.239103 1.327024-2.558406C1.327024-3.419178 1.470486-3.897385 1.733499-4.291905C1.972603-4.662516 2.450809-5.033126 3.048568-5.033126C3.789788-5.033126 4.208219-4.495143 4.327771-4.303861C4.471233-4.100623 4.471233-4.076712 4.471233-3.861519V-1.398755Z'/>
-<path id='eq4-g3-109' d='M8.571856-2.905106C8.571856-4.016936 8.571856-4.351681 8.296887-4.734247C7.950187-5.200498 7.388294-5.272229 6.981818-5.272229C5.989539-5.272229 5.487422-4.554919 5.296139-4.088667C5.128767-5.009215 4.483188-5.272229 3.730012-5.272229C2.570361-5.272229 2.116065-4.27995 2.020423-4.040847H2.008468V-5.272229L.382565-5.140722V-4.794022C1.195517-4.794022 1.291158-4.710336 1.291158-4.124533V-.884682C1.291158-.3467 1.159651-.3467 .382565-.3467V0C.6934-.02391 1.338979-.02391 1.673724-.02391C2.020423-.02391 2.666002-.02391 2.976837 0V-.3467C2.211706-.3467 2.068244-.3467 2.068244-.884682V-3.108344C2.068244-4.363636 2.893151-5.033126 3.634371-5.033126S4.542964-4.423412 4.542964-3.694147V-.884682C4.542964-.3467 4.411457-.3467 3.634371-.3467V0C3.945205-.02391 4.590785-.02391 4.925529-.02391C5.272229-.02391 5.917808-.02391 6.228643 0V-.3467C5.463512-.3467 5.32005-.3467 5.32005-.884682V-3.108344C5.32005-4.363636 6.144956-5.033126 6.886177-5.033126S7.79477-4.423412 7.79477-3.694147V-.884682C7.79477-.3467 7.663263-.3467 6.886177-.3467V0C7.197011-.02391 7.84259-.02391 8.177335-.02391C8.524035-.02391 9.169614-.02391 9.480448 0V-.3467C8.88269-.3467 8.583811-.3467 8.571856-.705355V-2.905106Z'/>
-<path id='eq4-g3-111' d='M5.487422-2.558406C5.487422-4.100623 4.315816-5.332005 2.929016-5.332005C1.494396-5.332005 .358655-4.064757 .358655-2.558406C.358655-1.028144 1.554172 .119552 2.917061 .119552C4.327771 .119552 5.487422-1.052055 5.487422-2.558406ZM2.929016-.143462C2.486675-.143462 1.948692-.334745 1.601993-.920548C1.279203-1.458531 1.267248-2.163885 1.267248-2.666002C1.267248-3.120299 1.267248-3.849564 1.637858-4.387547C1.972603-4.901619 2.49863-5.092902 2.917061-5.092902C3.383313-5.092902 3.88543-4.877709 4.208219-4.411457C4.578829-3.861519 4.578829-3.108344 4.578829-2.666002C4.578829-2.247572 4.578829-1.506351 4.267995-.944458C3.93325-.37061 3.383313-.143462 2.929016-.143462Z'/>
-<path id='eq4-g2-49' d='M2.502615-5.076961C2.502615-5.292154 2.486675-5.300125 2.271482-5.300125C1.944707-4.98132 1.522291-4.790037 .765131-4.790037V-4.527024C.980324-4.527024 1.41071-4.527024 1.872976-4.742217V-.653549C1.872976-.358655 1.849066-.263014 1.091905-.263014H.812951V0C1.139726-.02391 1.825156-.02391 2.183811-.02391S3.235866-.02391 3.56264 0V-.263014H3.283686C2.526526-.263014 2.502615-.358655 2.502615-.653549V-5.076961Z'/>
-<path id='eq4-g0-0' d='M5.571108-1.809215C5.69863-1.809215 5.873973-1.809215 5.873973-1.992528S5.69863-2.175841 5.571108-2.175841H1.004234C.876712-2.175841 .70137-2.175841 .70137-1.992528S.876712-1.809215 1.004234-1.809215H5.571108Z'/>
-<path id='eq4-g1-77' d='M10.855293-7.292653C10.962889-7.699128 10.9868-7.81868 11.835616-7.81868C12.062765-7.81868 12.170361-7.81868 12.170361-8.045828C12.170361-8.16538 12.086675-8.16538 11.859527-8.16538H10.424907C10.126027-8.16538 10.114072-8.153425 9.982565-7.962142L5.618929-1.06401L4.722291-7.902366C4.686426-8.16538 4.674471-8.16538 4.363636-8.16538H2.881196C2.654047-8.16538 2.546451-8.16538 2.546451-7.938232C2.546451-7.81868 2.654047-7.81868 2.833375-7.81868C3.56264-7.81868 3.56264-7.723039 3.56264-7.591532C3.56264-7.567621 3.56264-7.49589 3.514819-7.316563L1.984558-1.219427C1.841096-.645579 1.566127-.382565 .765131-.3467C.729265-.3467 .585803-.334745 .585803-.131507C.585803 0 .6934 0 .74122 0C.980324 0 1.590037-.02391 1.829141-.02391H2.402989C2.570361-.02391 2.773599 0 2.940971 0C3.024658 0 3.156164 0 3.156164-.227148C3.156164-.334745 3.036613-.3467 2.988792-.3467C2.594271-.358655 2.211706-.430386 2.211706-.860772C2.211706-.980324 2.211706-.992279 2.259527-1.159651L3.90934-7.746949H3.921295L4.913574-.32279C4.94944-.035866 4.961395 0 5.068991 0C5.200498 0 5.260274-.095641 5.32005-.203238L10.126027-7.806725H10.137983L8.404483-.884682C8.296887-.466252 8.272976-.3467 7.436115-.3467C7.208966-.3467 7.089415-.3467 7.089415-.131507C7.089415 0 7.197011 0 7.268742 0C7.47198 0 7.711083-.02391 7.914321-.02391H9.325031C9.528269-.02391 9.779328 0 9.982565 0C10.078207 0 10.209714 0 10.209714-.227148C10.209714-.3467 10.102117-.3467 9.92279-.3467C9.193524-.3467 9.193524-.442341 9.193524-.561893C9.193524-.573848 9.193524-.657534 9.217435-.753176L10.855293-7.292653Z'/>
-<path id='eq4-g1-98' d='M2.761644-7.998007C2.773599-8.045828 2.797509-8.117559 2.797509-8.177335C2.797509-8.296887 2.677958-8.296887 2.654047-8.296887C2.642092-8.296887 2.211706-8.261021 1.996513-8.237111C1.793275-8.225156 1.613948-8.201245 1.398755-8.18929C1.111831-8.16538 1.028144-8.153425 1.028144-7.938232C1.028144-7.81868 1.147696-7.81868 1.267248-7.81868C1.876961-7.81868 1.876961-7.711083 1.876961-7.591532C1.876961-7.507846 1.78132-7.161146 1.733499-6.945953L1.446575-5.798257C1.327024-5.32005 .645579-2.606227 .597758-2.391034C.537983-2.092154 .537983-1.888917 .537983-1.733499C.537983-.514072 1.219427 .119552 1.996513 .119552C3.383313 .119552 4.817933-1.661768 4.817933-3.395268C4.817933-4.495143 4.196264-5.272229 3.299626-5.272229C2.677958-5.272229 2.116065-4.758157 1.888917-4.519054L2.761644-7.998007ZM2.008468-.119552C1.625903-.119552 1.207472-.406476 1.207472-1.338979C1.207472-1.733499 1.243337-1.960648 1.458531-2.797509C1.494396-2.952927 1.685679-3.718057 1.733499-3.873474C1.75741-3.969116 2.462765-5.033126 3.275716-5.033126C3.801743-5.033126 4.040847-4.507098 4.040847-3.88543C4.040847-3.311582 3.706102-1.960648 3.407223-1.338979C3.108344-.6934 2.558406-.119552 2.008468-.119552Z'/>
-</defs>
-<g id='eq4-page1'>
-<use x='0' y='0' xlink:href='#eq4-g1-98'/>
-<use x='4.977105' y='-4.338437' xlink:href='#eq4-g0-0'/>
-<use x='11.563612' y='-4.338437' xlink:href='#eq4-g2-49'/>
-<use x='21.609254' y='0' xlink:href='#eq4-g3-40'/>
-<use x='26.16158' y='0' xlink:href='#eq4-g3-109'/>
-<use x='35.916563' y='0' xlink:href='#eq4-g3-111'/>
-<use x='42.09472' y='0' xlink:href='#eq4-g3-100'/>
-<use x='52.583037' y='0' xlink:href='#eq4-g1-77'/>
-<use x='65.156644' y='0' xlink:href='#eq4-g3-41'/>
-</g>
-</svg></p><p>Computes the modular inverse <svg class="m-math" style="width: 7.261em; height: 1.298em; vertical-align: -0.312em;" viewBox="0 -9.474739 69.70897 12.463531">
-<title>
-$b^{-1} \pmod{M}$
-</title>
-<defs>
-<path id='eq5-g3-40' d='M3.88543 2.905106C3.88543 2.86924 3.88543 2.84533 3.682192 2.642092C2.486675 1.43462 1.817186-.537983 1.817186-2.976837C1.817186-5.296139 2.379078-7.292653 3.765878-8.703362C3.88543-8.810959 3.88543-8.834869 3.88543-8.870735C3.88543-8.942466 3.825654-8.966376 3.777833-8.966376C3.622416-8.966376 2.642092-8.105604 2.056289-6.933998C1.446575-5.726526 1.171606-4.447323 1.171606-2.976837C1.171606-1.912827 1.338979-.490162 1.960648 .789041C2.666002 2.223661 3.646326 3.000747 3.777833 3.000747C3.825654 3.000747 3.88543 2.976837 3.88543 2.905106Z'/>
-<path id='eq5-g3-41' d='M3.371357-2.976837C3.371357-3.88543 3.251806-5.36787 2.582316-6.75467C1.876961-8.18929 .896638-8.966376 .765131-8.966376C.71731-8.966376 .657534-8.942466 .657534-8.870735C.657534-8.834869 .657534-8.810959 .860772-8.607721C2.056289-7.400249 2.725778-5.427646 2.725778-2.988792C2.725778-.669489 2.163885 1.327024 .777086 2.737733C.657534 2.84533 .657534 2.86924 .657534 2.905106C.657534 2.976837 .71731 3.000747 .765131 3.000747C.920548 3.000747 1.900872 2.139975 2.486675 .968369C3.096389-.251059 3.371357-1.542217 3.371357-2.976837Z'/>
-<path id='eq5-g3-100' d='M3.58655-8.16538V-7.81868C4.399502-7.81868 4.495143-7.734994 4.495143-7.149191V-4.507098C4.244085-4.853798 3.730012-5.272229 3.000747-5.272229C1.613948-5.272229 .418431-4.100623 .418431-2.570361C.418431-1.052055 1.554172 .119552 2.86924 .119552C3.777833 .119552 4.303861-.478207 4.471233-.705355V.119552L6.156912 0V-.3467C5.34396-.3467 5.248319-.430386 5.248319-1.016189V-8.296887L3.58655-8.16538ZM4.471233-1.398755C4.471233-1.183562 4.471233-1.147696 4.303861-.884682C4.016936-.466252 3.526775-.119552 2.929016-.119552C2.618182-.119552 1.327024-.239103 1.327024-2.558406C1.327024-3.419178 1.470486-3.897385 1.733499-4.291905C1.972603-4.662516 2.450809-5.033126 3.048568-5.033126C3.789788-5.033126 4.208219-4.495143 4.327771-4.303861C4.471233-4.100623 4.471233-4.076712 4.471233-3.861519V-1.398755Z'/>
-<path id='eq5-g3-109' d='M8.571856-2.905106C8.571856-4.016936 8.571856-4.351681 8.296887-4.734247C7.950187-5.200498 7.388294-5.272229 6.981818-5.272229C5.989539-5.272229 5.487422-4.554919 5.296139-4.088667C5.128767-5.009215 4.483188-5.272229 3.730012-5.272229C2.570361-5.272229 2.116065-4.27995 2.020423-4.040847H2.008468V-5.272229L.382565-5.140722V-4.794022C1.195517-4.794022 1.291158-4.710336 1.291158-4.124533V-.884682C1.291158-.3467 1.159651-.3467 .382565-.3467V0C.6934-.02391 1.338979-.02391 1.673724-.02391C2.020423-.02391 2.666002-.02391 2.976837 0V-.3467C2.211706-.3467 2.068244-.3467 2.068244-.884682V-3.108344C2.068244-4.363636 2.893151-5.033126 3.634371-5.033126S4.542964-4.423412 4.542964-3.694147V-.884682C4.542964-.3467 4.411457-.3467 3.634371-.3467V0C3.945205-.02391 4.590785-.02391 4.925529-.02391C5.272229-.02391 5.917808-.02391 6.228643 0V-.3467C5.463512-.3467 5.32005-.3467 5.32005-.884682V-3.108344C5.32005-4.363636 6.144956-5.033126 6.886177-5.033126S7.79477-4.423412 7.79477-3.694147V-.884682C7.79477-.3467 7.663263-.3467 6.886177-.3467V0C7.197011-.02391 7.84259-.02391 8.177335-.02391C8.524035-.02391 9.169614-.02391 9.480448 0V-.3467C8.88269-.3467 8.583811-.3467 8.571856-.705355V-2.905106Z'/>
-<path id='eq5-g3-111' d='M5.487422-2.558406C5.487422-4.100623 4.315816-5.332005 2.929016-5.332005C1.494396-5.332005 .358655-4.064757 .358655-2.558406C.358655-1.028144 1.554172 .119552 2.917061 .119552C4.327771 .119552 5.487422-1.052055 5.487422-2.558406ZM2.929016-.143462C2.486675-.143462 1.948692-.334745 1.601993-.920548C1.279203-1.458531 1.267248-2.163885 1.267248-2.666002C1.267248-3.120299 1.267248-3.849564 1.637858-4.387547C1.972603-4.901619 2.49863-5.092902 2.917061-5.092902C3.383313-5.092902 3.88543-4.877709 4.208219-4.411457C4.578829-3.861519 4.578829-3.108344 4.578829-2.666002C4.578829-2.247572 4.578829-1.506351 4.267995-.944458C3.93325-.37061 3.383313-.143462 2.929016-.143462Z'/>
-<path id='eq5-g2-49' d='M2.502615-5.076961C2.502615-5.292154 2.486675-5.300125 2.271482-5.300125C1.944707-4.98132 1.522291-4.790037 .765131-4.790037V-4.527024C.980324-4.527024 1.41071-4.527024 1.872976-4.742217V-.653549C1.872976-.358655 1.849066-.263014 1.091905-.263014H.812951V0C1.139726-.02391 1.825156-.02391 2.183811-.02391S3.235866-.02391 3.56264 0V-.263014H3.283686C2.526526-.263014 2.502615-.358655 2.502615-.653549V-5.076961Z'/>
-<path id='eq5-g0-0' d='M5.571108-1.809215C5.69863-1.809215 5.873973-1.809215 5.873973-1.992528S5.69863-2.175841 5.571108-2.175841H1.004234C.876712-2.175841 .70137-2.175841 .70137-1.992528S.876712-1.809215 1.004234-1.809215H5.571108Z'/>
-<path id='eq5-g1-77' d='M10.855293-7.292653C10.962889-7.699128 10.9868-7.81868 11.835616-7.81868C12.062765-7.81868 12.170361-7.81868 12.170361-8.045828C12.170361-8.16538 12.086675-8.16538 11.859527-8.16538H10.424907C10.126027-8.16538 10.114072-8.153425 9.982565-7.962142L5.618929-1.06401L4.722291-7.902366C4.686426-8.16538 4.674471-8.16538 4.363636-8.16538H2.881196C2.654047-8.16538 2.546451-8.16538 2.546451-7.938232C2.546451-7.81868 2.654047-7.81868 2.833375-7.81868C3.56264-7.81868 3.56264-7.723039 3.56264-7.591532C3.56264-7.567621 3.56264-7.49589 3.514819-7.316563L1.984558-1.219427C1.841096-.645579 1.566127-.382565 .765131-.3467C.729265-.3467 .585803-.334745 .585803-.131507C.585803 0 .6934 0 .74122 0C.980324 0 1.590037-.02391 1.829141-.02391H2.402989C2.570361-.02391 2.773599 0 2.940971 0C3.024658 0 3.156164 0 3.156164-.227148C3.156164-.334745 3.036613-.3467 2.988792-.3467C2.594271-.358655 2.211706-.430386 2.211706-.860772C2.211706-.980324 2.211706-.992279 2.259527-1.159651L3.90934-7.746949H3.921295L4.913574-.32279C4.94944-.035866 4.961395 0 5.068991 0C5.200498 0 5.260274-.095641 5.32005-.203238L10.126027-7.806725H10.137983L8.404483-.884682C8.296887-.466252 8.272976-.3467 7.436115-.3467C7.208966-.3467 7.089415-.3467 7.089415-.131507C7.089415 0 7.197011 0 7.268742 0C7.47198 0 7.711083-.02391 7.914321-.02391H9.325031C9.528269-.02391 9.779328 0 9.982565 0C10.078207 0 10.209714 0 10.209714-.227148C10.209714-.3467 10.102117-.3467 9.92279-.3467C9.193524-.3467 9.193524-.442341 9.193524-.561893C9.193524-.573848 9.193524-.657534 9.217435-.753176L10.855293-7.292653Z'/>
-<path id='eq5-g1-98' d='M2.761644-7.998007C2.773599-8.045828 2.797509-8.117559 2.797509-8.177335C2.797509-8.296887 2.677958-8.296887 2.654047-8.296887C2.642092-8.296887 2.211706-8.261021 1.996513-8.237111C1.793275-8.225156 1.613948-8.201245 1.398755-8.18929C1.111831-8.16538 1.028144-8.153425 1.028144-7.938232C1.028144-7.81868 1.147696-7.81868 1.267248-7.81868C1.876961-7.81868 1.876961-7.711083 1.876961-7.591532C1.876961-7.507846 1.78132-7.161146 1.733499-6.945953L1.446575-5.798257C1.327024-5.32005 .645579-2.606227 .597758-2.391034C.537983-2.092154 .537983-1.888917 .537983-1.733499C.537983-.514072 1.219427 .119552 1.996513 .119552C3.383313 .119552 4.817933-1.661768 4.817933-3.395268C4.817933-4.495143 4.196264-5.272229 3.299626-5.272229C2.677958-5.272229 2.116065-4.758157 1.888917-4.519054L2.761644-7.998007ZM2.008468-.119552C1.625903-.119552 1.207472-.406476 1.207472-1.338979C1.207472-1.733499 1.243337-1.960648 1.458531-2.797509C1.494396-2.952927 1.685679-3.718057 1.733499-3.873474C1.75741-3.969116 2.462765-5.033126 3.275716-5.033126C3.801743-5.033126 4.040847-4.507098 4.040847-3.88543C4.040847-3.311582 3.706102-1.960648 3.407223-1.338979C3.108344-.6934 2.558406-.119552 2.008468-.119552Z'/>
-</defs>
-<g id='eq5-page1'>
-<use x='0' y='0' xlink:href='#eq5-g1-98'/>
-<use x='4.977105' y='-4.338437' xlink:href='#eq5-g0-0'/>
-<use x='11.563612' y='-4.338437' xlink:href='#eq5-g2-49'/>
-<use x='21.609254' y='0' xlink:href='#eq5-g3-40'/>
-<use x='26.16158' y='0' xlink:href='#eq5-g3-109'/>
-<use x='35.916563' y='0' xlink:href='#eq5-g3-111'/>
-<use x='42.09472' y='0' xlink:href='#eq5-g3-100'/>
-<use x='52.583037' y='0' xlink:href='#eq5-g1-77'/>
-<use x='65.156644' y='0' xlink:href='#eq5-g3-41'/>
-</g>
-</svg></p>
-          </div></section>
-          <section class="m-doc-details" id="a561c93db625469ab20895dabddbae1b8"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="modulo_8hpp.html">&lt;/home/ram/OmniTemplate/src/number_theory/modulo.hpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stream&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">auto&amp; modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a561c93db625469ab20895dabddbae1b8" class="m-doc-self">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">Stream&amp; os,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; m)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a2f1a91608676548419fa75266f0a00bf"><div>
-            <h3>
-              <span class="m-doc-wrap-bumper">auto modulo_<wbr />namespace::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2f1a91608676548419fa75266f0a00bf" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap"><a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; a,
-              <a href="structmodulo__namespace_1_1modulo.html" class="m-doc">modulo</a> const&amp; b)</span></span>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-      </div>
-    </div>
-  </div>
-</article></main>
-<div class="m-doc-search" id="search">
-  <a href="#!" onclick="return hideSearch()"></a>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-m-8 m-push-m-2">
-        <div class="m-doc-search-header m-text m-small">
-          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
-          <div id="search-symbolcount">&hellip;</div>
-        </div>
-        <div class="m-doc-search-content">
-          <form>
-            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
-          </form>
-          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
-          <div id="search-help" class="m-text m-dim m-text-center">
-            <p class="m-noindent">Search for symbols, directories, files, pages or
-            modules. You can omit any prefix from the symbol or file path; adding a
-            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
-            directory.</p>
-            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
-            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
-            <span class="m-label m-dim">Enter</span> to go.
-            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
-            copy a link to the result using <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
-          </div>
-          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
-          <ul id="search-results"></ul>
-        </div>
-      </div>
-    </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script src="searchdata-v1.js" async="async"></script>
-<footer><nav>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
-      </div>
-    </div>
-  </div>
-</nav></footer>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('namespacemodulo__namespace.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">modulo_namespace Namespace Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacemodulo__namespace_1_1test"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace_1_1test.html">test</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodulo__namespace_1_1no__mod.html">no_mod</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a0329c7316dfca40b316f6ad7a6b60e87"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a0329c7316dfca40b316f6ad7a6b60e87"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a0329c7316dfca40b316f6ad7a6b60e87">invert_t</a> = decltype(<a class="el" href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0">invert</a>(std::declval&lt; Args &gt;()...))</td></tr>
+<tr class="separator:a0329c7316dfca40b316f6ad7a6b60e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8e6fc91a032b336ea0bbed9eabf54f69"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8e6fc91a032b336ea0bbed9eabf54f69"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a> (T a, <a class="el" href="structll.html">ll</a> b)</td></tr>
+<tr class="memdesc:a8e6fc91a032b336ea0bbed9eabf54f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns \(a^b\).  <a href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">More...</a><br /></td></tr>
+<tr class="separator:a8e6fc91a032b336ea0bbed9eabf54f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2507e89fefa09a358a9de729b15dd642"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">mod</a> (<a class="el" href="structll.html">ll</a> a, const <a class="el" href="structll.html">ll</a> b)</td></tr>
+<tr class="memdesc:a2507e89fefa09a358a9de729b15dd642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the remainder of a divided by b as a nonnegative integer in [0, b).  <a href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">More...</a><br /></td></tr>
+<tr class="separator:a2507e89fefa09a358a9de729b15dd642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a666ddbbb5d4d02c4aee66be7577292"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a0a666ddbbb5d4d02c4aee66be7577292">mod_eq</a> (<a class="el" href="structll.html">ll</a> &amp;a, const <a class="el" href="structll.html">ll</a> b)</td></tr>
+<tr class="separator:a0a666ddbbb5d4d02c4aee66be7577292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f587d528c1bb1f78d8a538b133e57b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a69f587d528c1bb1f78d8a538b133e57b">operator&quot;&quot;_M</a> (const unsigned long long x)</td></tr>
+<tr class="separator:a69f587d528c1bb1f78d8a538b133e57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55577c112e6d41b6314ad996f9e48842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a55577c112e6d41b6314ad996f9e48842">identity</a> (plus&lt;&gt;, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>)</td></tr>
+<tr class="separator:a55577c112e6d41b6314ad996f9e48842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab105decd35962ad192ea2187706df9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#aab105decd35962ad192ea2187706df9b">identity</a> (multiplies&lt;&gt;, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>)</td></tr>
+<tr class="separator:aab105decd35962ad192ea2187706df9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39044c62fae2707474b9960d257d9dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#aa39044c62fae2707474b9960d257d9dd">operator+</a> (<a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;a, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;b)</td></tr>
+<tr class="separator:aa39044c62fae2707474b9960d257d9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9f34a9358f523b5e12f6897a806e7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#aef9f34a9358f523b5e12f6897a806e7e">operator++</a> (<a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> &amp;a)</td></tr>
+<tr class="separator:aef9f34a9358f523b5e12f6897a806e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19406485d1ce3b2430c67aea00dda27b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a19406485d1ce3b2430c67aea00dda27b">operator-</a> (<a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;a)</td></tr>
+<tr class="separator:a19406485d1ce3b2430c67aea00dda27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533cfa2e1e3a79428a3b5e00430ad125"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a533cfa2e1e3a79428a3b5e00430ad125">bin</a> (==, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>)</td></tr>
+<tr class="separator:a533cfa2e1e3a79428a3b5e00430ad125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1e0e6527c5e49efdc1ef0780a055c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#a7d1e0e6527c5e49efdc1ef0780a055c8">operator*</a> (<a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;a, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;b)</td></tr>
+<tr class="separator:a7d1e0e6527c5e49efdc1ef0780a055c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac690d54b7665a90ca461724df8907c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0">invert</a> (multiplies&lt;&gt;, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;b)</td></tr>
+<tr class="separator:aac690d54b7665a90ca461724df8907c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad645d89c7a55337c12edadb8376670e3"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:ad645d89c7a55337c12edadb8376670e3"><td class="memTemplItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemodulo__namespace.html#ad645d89c7a55337c12edadb8376670e3">operator&lt;&lt;</a> (Stream &amp;os, <a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;m)</td></tr>
+<tr class="separator:ad645d89c7a55337c12edadb8376670e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a0329c7316dfca40b316f6ad7a6b60e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0329c7316dfca40b316f6ad7a6b60e87">&#9670;&nbsp;</a></span>invert_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemodulo__namespace.html#a0329c7316dfca40b316f6ad7a6b60e87">modulo_namespace::invert_t</a> = typedef decltype(<a class="el" href="namespacemodulo__namespace.html#aac690d54b7665a90ca461724df8907c0">invert</a>(std::declval&lt;Args&gt;()...))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a533cfa2e1e3a79428a3b5e00430ad125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533cfa2e1e3a79428a3b5e00430ad125">&#9670;&nbsp;</a></span>bin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">modulo_namespace::bin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab105decd35962ad192ea2187706df9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab105decd35962ad192ea2187706df9b">&#9670;&nbsp;</a></span>identity() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::identity </td>
+          <td>(</td>
+          <td class="paramtype">multiplies&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55577c112e6d41b6314ad996f9e48842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55577c112e6d41b6314ad996f9e48842">&#9670;&nbsp;</a></span>identity() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::identity </td>
+          <td>(</td>
+          <td class="paramtype">plus&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_a55577c112e6d41b6314ad996f9e48842_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aac690d54b7665a90ca461724df8907c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac690d54b7665a90ca461724df8907c0">&#9670;&nbsp;</a></span>invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::invert </td>
+          <td>(</td>
+          <td class="paramtype">multiplies&lt;&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes the modular inverse \(b^{-1} \pmod{M}\)</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_aac690d54b7665a90ca461724df8907c0_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_aac690d54b7665a90ca461724df8907c0_icgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2507e89fefa09a358a9de729b15dd642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2507e89fefa09a358a9de729b15dd642">&#9670;&nbsp;</a></span>mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> modulo_namespace::mod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the remainder of a divided by b as a nonnegative integer in [0, b). </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_a2507e89fefa09a358a9de729b15dd642_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0a666ddbbb5d4d02c4aee66be7577292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a666ddbbb5d4d02c4aee66be7577292">&#9670;&nbsp;</a></span>mod_eq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structll.html">ll</a> modulo_namespace::mod_eq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a to the remainder when divided by b. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_a0a666ddbbb5d4d02c4aee66be7577292_cgraph.svg" width="463" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a69f587d528c1bb1f78d8a538b133e57b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f587d528c1bb1f78d8a538b133e57b">&#9670;&nbsp;</a></span>operator&quot;&quot;_M()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::operator&quot;&quot;_M </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned long long&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d1e0e6527c5e49efdc1ef0780a055c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1e0e6527c5e49efdc1ef0780a055c8">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes a times b modulo <a class="el" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6" title="Modulus used for operations like modular multiplication.">modulo::modulus</a> using long double</p>
+
+</div>
+</div>
+<a id="aa39044c62fae2707474b9960d257d9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39044c62fae2707474b9960d257d9dd">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef9f34a9358f523b5e12f6897a806e7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9f34a9358f523b5e12f6897a806e7e">&#9670;&nbsp;</a></span>operator++()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::operator++ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19406485d1ce3b2430c67aea00dda27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19406485d1ce3b2430c67aea00dda27b">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> modulo_namespace::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad645d89c7a55337c12edadb8376670e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad645d89c7a55337c12edadb8376670e3">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stream &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto&amp; modulo_namespace::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">Stream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmodulo__namespace_1_1modulo.html">modulo</a> const &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e6fc91a032b336ea0bbed9eabf54f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6fc91a032b336ea0bbed9eabf54f69">&#9670;&nbsp;</a></span>power()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T modulo_namespace::power </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structll.html">ll</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns \(a^b\). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>the base </td></tr>
+    <tr><td class="paramname">b</td><td>the exponent</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Time complexity: \(O(\log_2 |b|)\) multiplications </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69_cgraph.svg" width="471" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacemodulo__namespace_a8e6fc91a032b336ea0bbed9eabf54f69_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemodulo__namespace.html">modulo_namespace</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

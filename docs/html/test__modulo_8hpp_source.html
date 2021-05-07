@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('test__modulo_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ece17dd07d1079ae5da4fc1d5e1e51e1.html">number_theory</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test_modulo.hpp</div>  </div>
@@ -82,13 +108,13 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace_1_1test.html#a528d9ed1db3200393555b3dc75036599">    3</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemodulo__namespace_1_1test.html#a528d9ed1db3200393555b3dc75036599">test_power</a>() {</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    assert(<a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(2, 3) == 8);</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    assert(<a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(3, 10) == 59049);</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{<span class="keyword">static_cast&lt;</span><a class="code" href="structll.html">ll</a><span class="keyword">&gt;</span>(1e9 + 7), <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{<span class="keyword">static_cast&lt;</span><a class="code" href="structll.html">ll</a><span class="keyword">&gt;</span>(1e9 + 7), <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>};</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    assert(<a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{3}, 1000) == <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{56888193});</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    assert(<a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{3}, -1000) * <a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{3}, 1000) == 1);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    assert(<a class="code" href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">power</a>(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{1}, 0) == 1);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespacemodulo__namespace_1_1test.html#a1125f7652707749c464a2dfa2732a94c">   11</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemodulo__namespace_1_1test.html#a1125f7652707749c464a2dfa2732a94c">test_md</a>() {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{7, <a class="code" href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo::modulus</a>};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{7, <a class="code" href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo::modulus</a>};</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    assert(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{34} / <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{-2} == <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{4});</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    assert(<a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{2} - <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{6} == <a class="code" href="structmodulo__namespace_1_1modulo.html">modulo</a>{3});</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
@@ -99,8 +125,9 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <span class="comment">// namespace modulo_namespace::test</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacemodulo__namespace_1_1test.html">modulo_namespace::test</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacemodulo__namespace_1_1test_html_a1125f7652707749c464a2dfa2732a94c"><div class="ttname"><a href="namespacemodulo__namespace_1_1test.html#a1125f7652707749c464a2dfa2732a94c">modulo_namespace::test::test_md</a></div><div class="ttdeci">void test_md()</div><div class="ttdef"><b>Definition:</b> test_modulo.hpp:11</div></div>
-<div class="ttc" id="astructmodulo__namespace_1_1modulo_html_ae2bc70014960c66ea5184cae85a330cc"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#ae2bc70014960c66ea5184cae85a330cc">modulo_namespace::modulo::modulus</a></div><div class="ttdeci">static ll modulus</div><div class="ttdoc">Modulus used for operations like modular multiplication.</div><div class="ttdef"><b>Definition:</b> modulo.hpp:42</div></div>
+<div class="ttc" id="astructmodulo__namespace_1_1modulo_html_a3fb17100685d3dfe8246407138109bc6"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html#a3fb17100685d3dfe8246407138109bc6">modulo_namespace::modulo::modulus</a></div><div class="ttdeci">static ll modulus</div><div class="ttdoc">Modulus used for operations like modular multiplication.</div><div class="ttdef"><b>Definition:</b> modulo.hpp:42</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a8e6fc91a032b336ea0bbed9eabf54f69"><div class="ttname"><a href="namespacemodulo__namespace.html#a8e6fc91a032b336ea0bbed9eabf54f69">modulo_namespace::power</a></div><div class="ttdeci">T power(T a, ll b)</div><div class="ttdoc">Returns .</div><div class="ttdef"><b>Definition:</b> modulo.hpp:11</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_1_1test_html_a528d9ed1db3200393555b3dc75036599"><div class="ttname"><a href="namespacemodulo__namespace_1_1test.html#a528d9ed1db3200393555b3dc75036599">modulo_namespace::test::test_power</a></div><div class="ttdeci">void test_power()</div><div class="ttdef"><b>Definition:</b> test_modulo.hpp:3</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_1_1test_html"><div class="ttname"><a href="namespacemodulo__namespace_1_1test.html">modulo_namespace::test</a></div><div class="ttdef"><b>Definition:</b> test_modulo.hpp:2</div></div>
@@ -110,10 +137,13 @@ $(function() {
 <div class="ttc" id="amodulo_8hpp_html"><div class="ttname"><a href="modulo_8hpp.html">modulo.hpp</a></div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ece17dd07d1079ae5da4fc1d5e1e51e1.html">number_theory</a></li><li class="navelem"><a class="el" href="test__modulo_8hpp.html">test_modulo.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('my__int_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0619a8f54b4fad7043a6de45be8fde0b.html">utility</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">my_int.hpp</div>  </div>
@@ -155,12 +181,13 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">// namespace std</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="amy__int_8hpp_html_a33e977ac03b44c7fb6b3f74dae8b2eb6"><div class="ttname"><a href="my__int_8hpp.html#a33e977ac03b44c7fb6b3f74dae8b2eb6">inh</a></div><div class="ttdeci">#define inh(cls)</div><div class="ttdef"><b>Definition:</b> my_int.hpp:69</div></div>
 <div class="ttc" id="astructll_html_a3253b9882ccb1168c5aecfb54188f769"><div class="ttname"><a href="structll.html#a3253b9882ccb1168c5aecfb54188f769">ll::operator--</a></div><div class="ttdeci">ll operator--()</div><div class="ttdef"><b>Definition:</b> my_int.hpp:20</div></div>
 <div class="ttc" id="amy__int_8hpp_html_addc2b513488b556dc2d53112f6c54dcf"><div class="ttname"><a href="my__int_8hpp.html#addc2b513488b556dc2d53112f6c54dcf">operator==</a></div><div class="ttdeci">constexpr auto operator==(ll a, ll b)</div><div class="ttdef"><b>Definition:</b> my_int.hpp:52</div></div>
 <div class="ttc" id="astructll_html_a6bf19079acad25173814f398d03c6785"><div class="ttname"><a href="structll.html#a6bf19079acad25173814f398d03c6785">ll::operator-</a></div><div class="ttdeci">constexpr ll operator-() const</div><div class="ttdef"><b>Definition:</b> my_int.hpp:19</div></div>
 <div class="ttc" id="astructll_html_a4f550126ee54fd066f53186f27093b76"><div class="ttname"><a href="structll.html#a4f550126ee54fd066f53186f27093b76">ll::ll</a></div><div class="ttdeci">constexpr ll(long long int x_=0)</div><div class="ttdef"><b>Definition:</b> my_int.hpp:7</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:80</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:99</div></div>
 <div class="ttc" id="astructll_html_afe1cbe7e5183933ed0a2e943d5850088"><div class="ttname"><a href="structll.html#afe1cbe7e5183933ed0a2e943d5850088">ll::operator+=</a></div><div class="ttdeci">ll operator+=(ll b)</div><div class="ttdef"><b>Definition:</b> my_int.hpp:28</div></div>
 <div class="ttc" id="astructll_html_ab3dcffcb63a9afc64a1ed739c72f7367"><div class="ttname"><a href="structll.html#ab3dcffcb63a9afc64a1ed739c72f7367">ll::operator++</a></div><div class="ttdeci">ll operator++()</div><div class="ttdef"><b>Definition:</b> my_int.hpp:24</div></div>
 <div class="ttc" id="amy__int_8hpp_html_a4f09c437b0c98279749c6a3eb961d98d"><div class="ttname"><a href="my__int_8hpp.html#a4f09c437b0c98279749c6a3eb961d98d">operator%</a></div><div class="ttdeci">constexpr ll operator%(ll a, ll b)</div><div class="ttdef"><b>Definition:</b> my_int.hpp:53</div></div>
@@ -173,10 +200,13 @@ $(function() {
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <div class="ttc" id="astructll_html_a4bdfa09dbbf7923cd92223015f12861f"><div class="ttname"><a href="structll.html#a4bdfa09dbbf7923cd92223015f12861f">ll::x</a></div><div class="ttdeci">ll x</div><div class="ttdef"><b>Definition:</b> my_int.hpp:6</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0619a8f54b4fad7043a6de45be8fde0b.html">utility</a></li><li class="navelem"><a class="el" href="my__int_8hpp.html">my_int.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

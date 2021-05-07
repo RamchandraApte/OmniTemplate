@@ -1,407 +1,668 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>queue_tools::QueueAdaptor class | OmniTemplate All the algorithms, all the data structures, all the templates.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-light+documentation.compiled.css" />
-  <link rel="icon" href="favicon-light.png" type="image/png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#cb4b16" />
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>OmniTemplate: queue_tools::QueueAdaptor&lt; Stack &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">OmniTemplate <span class="m-thin">All the algorithms, all the data structures, all the templates.</span></a>
-      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
-        </svg></a>
-        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
-        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
-      </div>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-            <li><a href="pages.html">Pages</a></li>
-            <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="3">
-            <li><a href="annotated.html">Classes</a></li>
-            <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <use href="#m-doc-search-icon-path" />
-            </svg></a></li>
-          </ol>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">OmniTemplate
+   </div>
+   <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
         </div>
-      </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
   </div>
-</nav></header>
-<main><article>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <h1>
-          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="queue_8hpp.html">&lt;/home/ram/OmniTemplate/src/ds/queue.hpp&gt;</a></div>
-          <div class="m-doc-template">template&lt;typename Stack&gt;</div>
-          <span class="m-breadcrumb"><a href="namespacequeue__tools.html">queue_tools</a>::<wbr/></span>QueueAdaptor <span class="m-thin">class</span>
-        </h1>
-        <p>Queue adaptor, creates a queue using two Stacks left, right If there are at least two elements, left and right are not empty.</p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#pub-types">Public types</a></li>
-                <li><a href="#pub-methods">Public functions</a></li>
-                <li><a href="#pro-methods">Protected functions</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-<p>If there is one element, it is in left.</p>
-        <section id="pub-types">
-          <h2><a href="#pub-types">Public types</a></h2>
-          <dl class="m-doc">
-            <dt id="a0a12e0ff52602d46cea6f7bb072933f6">
-              using <a href="#a0a12e0ff52602d46cea6f7bb072933f6" class="m-doc-self">container_type</a> = Stack
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a41d9b80dbd9c412dbc7326586dbb3540">
-              using <a href="#a41d9b80dbd9c412dbc7326586dbb3540" class="m-doc-self">value_type</a> = typename Stack::value_type
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a7eb2812a5b5f265784995e3b1d796c0b">
-              using <a href="#a7eb2812a5b5f265784995e3b1d796c0b" class="m-doc-self">size_type</a> = typename Stack::size_type
-            </dt>
-            <dd><span></span></dd>
-            <dt id="aaad88193dddc1d17404808cb98e1e79f">
-              using <a href="#aaad88193dddc1d17404808cb98e1e79f" class="m-doc-self">reference</a> = typename Stack::reference
-            </dt>
-            <dd><span></span></dd>
-            <dt id="abfe056cff4a6a88624024d16b0442236">
-              using <a href="#abfe056cff4a6a88624024d16b0442236" class="m-doc-self">const_reference</a> = typename Stack::const_reference
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#a0a12e0ff52602d46cea6f7bb072933f6" class="m-doc">container_type</a> = Stack
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#a41d9b80dbd9c412dbc7326586dbb3540" class="m-doc">value_type</a> = typename Stack::value_type
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#a7eb2812a5b5f265784995e3b1d796c0b" class="m-doc">size_type</a> = typename Stack::size_type
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a> = typename Stack::reference
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              using <a href="#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_reference</a> = typename Stack::const_reference
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="pub-methods">
-          <h2><a href="#pub-methods">Public functions</a></h2>
-          <dl class="m-doc">
-            <dt id="a603c22db9148d592426c73e53ad88178">
-              <span class="m-doc-wrap-bumper">auto <a href="#a603c22db9148d592426c73e53ad88178" class="m-doc-self">front</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_<wbr />reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ac807754cdc69adb7dcfd12c02a21d7cb">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac807754cdc69adb7dcfd12c02a21d7cb" class="m-doc-self">front</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a70c630a800a12e880917ffc2ccbd1153">
-              <span class="m-doc-wrap-bumper">auto <a href="#a70c630a800a12e880917ffc2ccbd1153" class="m-doc-self">back</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_<wbr />reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="ad3a4f68bb1c2cbd0bedd8094e732bece">
-              <span class="m-doc-wrap-bumper">auto <a href="#ad3a4f68bb1c2cbd0bedd8094e732bece" class="m-doc-self">back</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a65573a420692f22b4274313469f3688b">
-              <span class="m-doc-wrap-bumper">auto <a href="#a65573a420692f22b4274313469f3688b" class="m-doc-self">empty</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="adfb78c6b9828b06e9c8f29ae56b43078">
-              <span class="m-doc-wrap-bumper">auto <a href="#adfb78c6b9828b06e9c8f29ae56b43078" class="m-doc-self">size</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b" class="m-doc">size_<wbr />type</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a5857db040da0411af2957d3d44783808">
-              <span class="m-doc-wrap-bumper">void <a href="#a5857db040da0411af2957d3d44783808" class="m-doc-self">push</a>(</span><span class="m-doc-wrap">const <a href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540" class="m-doc">value_<wbr />type</a>&amp; val)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="aab204b0f776af2b94156b69435b81df8">
-              <span class="m-doc-wrap-bumper">void <a href="#aab204b0f776af2b94156b69435b81df8" class="m-doc-self">pop</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a603c22db9148d592426c73e53ad88178" class="m-doc">front</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_<wbr />reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#ac807754cdc69adb7dcfd12c02a21d7cb" class="m-doc">front</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a70c630a800a12e880917ffc2ccbd1153" class="m-doc">back</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_<wbr />reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#ad3a4f68bb1c2cbd0bedd8094e732bece" class="m-doc">back</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a65573a420692f22b4274313469f3688b" class="m-doc">empty</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#adfb78c6b9828b06e9c8f29ae56b43078" class="m-doc">size</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b" class="m-doc">size_<wbr />type</a></span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#a5857db040da0411af2957d3d44783808" class="m-doc">push</a>(</span><span class="m-doc-wrap">const <a href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540" class="m-doc">value_<wbr />type</a>&amp; val)</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">void <a href="#aab204b0f776af2b94156b69435b81df8" class="m-doc">pop</a>(</span><span class="m-doc-wrap">)</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="pro-methods">
-          <h2><a href="#pro-methods">Protected functions</a></h2>
-          <dl class="m-doc">
-            <dt id="a409777bac8958f09bf99f9ca2ff64ab0">
-              <span class="m-doc-wrap-bumper">auto <a href="#a409777bac8958f09bf99f9ca2ff64ab0" class="m-doc-self">get_left</a>(</span><span class="m-doc-wrap">) -&gt; const auto&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a39e37c34ea5fd27421f3f8dabe733a28">
-              <span class="m-doc-wrap-bumper">auto <a href="#a39e37c34ea5fd27421f3f8dabe733a28" class="m-doc-self">get_right</a>(</span><span class="m-doc-wrap">) -&gt; const auto&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a409777bac8958f09bf99f9ca2ff64ab0" class="m-doc">get_left</a>(</span><span class="m-doc-wrap">) -&gt; const auto&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a39e37c34ea5fd27421f3f8dabe733a28" class="m-doc">get_right</a>(</span><span class="m-doc-wrap">) -&gt; const auto&amp;</span>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section>
-          <h2>Typedef documentation</h2>
-          <section class="m-doc-details" id="a0a12e0ff52602d46cea6f7bb072933f6"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              using queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /><a href="#a0a12e0ff52602d46cea6f7bb072933f6" class="m-doc-self">container_type</a> = Stack
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a41d9b80dbd9c412dbc7326586dbb3540"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              using queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /><a href="#a41d9b80dbd9c412dbc7326586dbb3540" class="m-doc-self">value_type</a> = typename Stack::value_type
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a7eb2812a5b5f265784995e3b1d796c0b"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              using queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /><a href="#a7eb2812a5b5f265784995e3b1d796c0b" class="m-doc-self">size_type</a> = typename Stack::size_type
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="aaad88193dddc1d17404808cb98e1e79f"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              using queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /><a href="#aaad88193dddc1d17404808cb98e1e79f" class="m-doc-self">reference</a> = typename Stack::reference
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="abfe056cff4a6a88624024d16b0442236"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              using queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /><a href="#abfe056cff4a6a88624024d16b0442236" class="m-doc-self">const_reference</a> = typename Stack::const_reference
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-        <section>
-          <h2>Function documentation</h2>
-          <section class="m-doc-details" id="a603c22db9148d592426c73e53ad88178"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper"><a href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_<wbr />reference</a> queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a603c22db9148d592426c73e53ad88178" class="m-doc-self">front</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="ac807754cdc69adb7dcfd12c02a21d7cb"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper"><a href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a> queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac807754cdc69adb7dcfd12c02a21d7cb" class="m-doc-self">front</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a70c630a800a12e880917ffc2ccbd1153"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper"><a href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236" class="m-doc">const_<wbr />reference</a> queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a70c630a800a12e880917ffc2ccbd1153" class="m-doc-self">back</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="ad3a4f68bb1c2cbd0bedd8094e732bece"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper"><a href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f" class="m-doc">reference</a> queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad3a4f68bb1c2cbd0bedd8094e732bece" class="m-doc-self">back</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a65573a420692f22b4274313469f3688b"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">bool queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a65573a420692f22b4274313469f3688b" class="m-doc-self">empty</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="adfb78c6b9828b06e9c8f29ae56b43078"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper"><a href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b" class="m-doc">size_<wbr />type</a> queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adfb78c6b9828b06e9c8f29ae56b43078" class="m-doc-self">size</a>(</span><span class="m-doc-wrap">) const</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a5857db040da0411af2957d3d44783808"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5857db040da0411af2957d3d44783808" class="m-doc-self">push</a>(</span><span class="m-doc-wrap">const <a href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540" class="m-doc">value_<wbr />type</a>&amp; val)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="aab204b0f776af2b94156b69435b81df8"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">void queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aab204b0f776af2b94156b69435b81df8" class="m-doc-self">pop</a>(</span><span class="m-doc-wrap">)</span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a409777bac8958f09bf99f9ca2ff64ab0"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">const auto&amp; queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a409777bac8958f09bf99f9ca2ff64ab0" class="m-doc-self">get_left</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">protected</span></span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-          <section class="m-doc-details" id="a39e37c34ea5fd27421f3f8dabe733a28"><div>
-            <h3>
-              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="test__compiled_8cpp.html">&lt;/home/ram/OmniTemplate/src/test/test_compiled.cpp&gt;</a></div>
-              <div class="m-doc-template">
-                template&lt;typename Stack&gt;
-              </div>
-              <span class="m-doc-wrap-bumper">const auto&amp; queue_tools::<wbr />QueueAdaptor&lt;Stack&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a39e37c34ea5fd27421f3f8dabe733a28" class="m-doc-self">get_right</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">protected</span></span></span>
-            </h3>
-            <p><span></span></p>
-          </div></section>
-        </section>
-      </div>
-    </div>
-  </div>
-</article></main>
-<div class="m-doc-search" id="search">
-  <a href="#!" onclick="return hideSearch()"></a>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-m-8 m-push-m-2">
-        <div class="m-doc-search-header m-text m-small">
-          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
-          <div id="search-symbolcount">&hellip;</div>
-        </div>
-        <div class="m-doc-search-content">
-          <form>
-            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
-          </form>
-          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
-          <div id="search-help" class="m-text m-dim m-text-center">
-            <p class="m-noindent">Search for symbols, directories, files, pages or
-            modules. You can omit any prefix from the symbol or file path; adding a
-            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
-            directory.</p>
-            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
-            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
-            <span class="m-label m-dim">Enter</span> to go.
-            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
-            copy a link to the result using <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
-            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
-          </div>
-          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
-          <ul id="search-results"></ul>
-        </div>
-      </div>
-    </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script src="searchdata-v1.js" async="async"></script>
-<footer><nav>
-  <div class="m-container">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-        <p>OmniTemplate All the algorithms, all the data structures, all the templates.. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.18 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
-      </div>
-    </div>
-  </div>
-</nav></footer>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classqueue__tools_1_1QueueAdaptor.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="classqueue__tools_1_1QueueAdaptor-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">queue_tools::QueueAdaptor&lt; Stack &gt; Class Template Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Queue adaptor, creates a queue using two Stacks left, right If there are at least two elements, left and right are not empty.  
+ <a href="classqueue__tools_1_1QueueAdaptor.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="queue_8hpp_source.html">queue.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for queue_tools::QueueAdaptor&lt; Stack &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor__inherit__graph.svg" width="251" height="232"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a0a12e0ff52602d46cea6f7bb072933f6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a0a12e0ff52602d46cea6f7bb072933f6">container_type</a> = Stack</td></tr>
+<tr class="separator:a0a12e0ff52602d46cea6f7bb072933f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d9b80dbd9c412dbc7326586dbb3540"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540">value_type</a> = typename Stack::value_type</td></tr>
+<tr class="separator:a41d9b80dbd9c412dbc7326586dbb3540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb2812a5b5f265784995e3b1d796c0b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b">size_type</a> = typename Stack::size_type</td></tr>
+<tr class="separator:a7eb2812a5b5f265784995e3b1d796c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad88193dddc1d17404808cb98e1e79f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">reference</a> = typename Stack::reference</td></tr>
+<tr class="separator:aaad88193dddc1d17404808cb98e1e79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe056cff4a6a88624024d16b0442236"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">const_reference</a> = typename Stack::const_reference</td></tr>
+<tr class="separator:abfe056cff4a6a88624024d16b0442236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a603c22db9148d592426c73e53ad88178"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a603c22db9148d592426c73e53ad88178">front</a> () const</td></tr>
+<tr class="separator:a603c22db9148d592426c73e53ad88178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac807754cdc69adb7dcfd12c02a21d7cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#ac807754cdc69adb7dcfd12c02a21d7cb">front</a> ()</td></tr>
+<tr class="separator:ac807754cdc69adb7dcfd12c02a21d7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c630a800a12e880917ffc2ccbd1153"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a70c630a800a12e880917ffc2ccbd1153">back</a> () const</td></tr>
+<tr class="separator:a70c630a800a12e880917ffc2ccbd1153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a4f68bb1c2cbd0bedd8094e732bece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#ad3a4f68bb1c2cbd0bedd8094e732bece">back</a> ()</td></tr>
+<tr class="separator:ad3a4f68bb1c2cbd0bedd8094e732bece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65573a420692f22b4274313469f3688b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a65573a420692f22b4274313469f3688b">empty</a> () const</td></tr>
+<tr class="separator:a65573a420692f22b4274313469f3688b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb78c6b9828b06e9c8f29ae56b43078"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#adfb78c6b9828b06e9c8f29ae56b43078">size</a> () const</td></tr>
+<tr class="separator:adfb78c6b9828b06e9c8f29ae56b43078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5857db040da0411af2957d3d44783808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a5857db040da0411af2957d3d44783808">push</a> (const <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540">value_type</a> &amp;val)</td></tr>
+<tr class="separator:a5857db040da0411af2957d3d44783808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab204b0f776af2b94156b69435b81df8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aab204b0f776af2b94156b69435b81df8">pop</a> ()</td></tr>
+<tr class="separator:aab204b0f776af2b94156b69435b81df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a409777bac8958f09bf99f9ca2ff64ab0"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a409777bac8958f09bf99f9ca2ff64ab0">get_left</a> ()</td></tr>
+<tr class="separator:a409777bac8958f09bf99f9ca2ff64ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e37c34ea5fd27421f3f8dabe733a28"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a39e37c34ea5fd27421f3f8dabe733a28">get_right</a> ()</td></tr>
+<tr class="separator:a39e37c34ea5fd27421f3f8dabe733a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a20ad33fb4364a4c4e5228185ac4b73f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a20ad33fb4364a4c4e5228185ac4b73f1">check_invariant</a> () const</td></tr>
+<tr class="separator:a20ad33fb4364a4c4e5228185ac4b73f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0b55c24ddd0b4cedfc85710a6475bde3"><td class="memItemLeft" align="right" valign="top">Stack&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a0b55c24ddd0b4cedfc85710a6475bde3">left</a></td></tr>
+<tr class="separator:a0b55c24ddd0b4cedfc85710a6475bde3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2918263669cadfc4b9ef083407f02826"><td class="memItemLeft" align="right" valign="top">Stack&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a2918263669cadfc4b9ef083407f02826">right</a></td></tr>
+<tr class="separator:a2918263669cadfc4b9ef083407f02826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Stack&gt;<br />
+class queue_tools::QueueAdaptor&lt; Stack &gt;</h3>
+
+<p>Queue adaptor, creates a queue using two Stacks left, right If there are at least two elements, left and right are not empty. </p>
+<p>If there is one element, it is in left. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="abfe056cff4a6a88624024d16b0442236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe056cff4a6a88624024d16b0442236">&#9670;&nbsp;</a></span>const_reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::<a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">const_reference</a> =  typename Stack::const_reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a12e0ff52602d46cea6f7bb072933f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a12e0ff52602d46cea6f7bb072933f6">&#9670;&nbsp;</a></span>container_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::<a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a0a12e0ff52602d46cea6f7bb072933f6">container_type</a> =  Stack</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaad88193dddc1d17404808cb98e1e79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad88193dddc1d17404808cb98e1e79f">&#9670;&nbsp;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::<a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">reference</a> =  typename Stack::reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eb2812a5b5f265784995e3b1d796c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb2812a5b5f265784995e3b1d796c0b">&#9670;&nbsp;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::<a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b">size_type</a> =  typename Stack::size_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41d9b80dbd9c412dbc7326586dbb3540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d9b80dbd9c412dbc7326586dbb3540">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::<a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540">value_type</a> =  typename Stack::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad3a4f68bb1c2cbd0bedd8094e732bece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a4f68bb1c2cbd0bedd8094e732bece">&#9670;&nbsp;</a></span>back() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">reference</a> <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70c630a800a12e880917ffc2ccbd1153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c630a800a12e880917ffc2ccbd1153">&#9670;&nbsp;</a></span>back() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">const_reference</a> <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_a70c630a800a12e880917ffc2ccbd1153_icgraph.svg" width="100%" height="449"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a20ad33fb4364a4c4e5228185ac4b73f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20ad33fb4364a4c4e5228185ac4b73f1">&#9670;&nbsp;</a></span>check_invariant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::check_invariant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_a20ad33fb4364a4c4e5228185ac4b73f1_icgraph.svg" width="464" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a65573a420692f22b4274313469f3688b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65573a420692f22b4274313469f3688b">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_a65573a420692f22b4274313469f3688b_icgraph.svg" width="100%" height="449"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac807754cdc69adb7dcfd12c02a21d7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac807754cdc69adb7dcfd12c02a21d7cb">&#9670;&nbsp;</a></span>front() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#aaad88193dddc1d17404808cb98e1e79f">reference</a> <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a603c22db9148d592426c73e53ad88178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603c22db9148d592426c73e53ad88178">&#9670;&nbsp;</a></span>front() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#abfe056cff4a6a88624024d16b0442236">const_reference</a> <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_a603c22db9148d592426c73e53ad88178_icgraph.svg" width="100%" height="449"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a409777bac8958f09bf99f9ca2ff64ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409777bac8958f09bf99f9ca2ff64ab0">&#9670;&nbsp;</a></span>get_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto&amp; <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::get_left </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39e37c34ea5fd27421f3f8dabe733a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e37c34ea5fd27421f3f8dabe733a28">&#9670;&nbsp;</a></span>get_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto&amp; <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::get_right </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab204b0f776af2b94156b69435b81df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab204b0f776af2b94156b69435b81df8">&#9670;&nbsp;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_aab204b0f776af2b94156b69435b81df8_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5857db040da0411af2957d3d44783808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5857db040da0411af2957d3d44783808">&#9670;&nbsp;</a></span>push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a41d9b80dbd9c412dbc7326586dbb3540">value_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_a5857db040da0411af2957d3d44783808_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adfb78c6b9828b06e9c8f29ae56b43078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb78c6b9828b06e9c8f29ae56b43078">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html#a7eb2812a5b5f265784995e3b1d796c0b">size_type</a> <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classqueue__tools_1_1QueueAdaptor_adfb78c6b9828b06e9c8f29ae56b43078_icgraph.svg" width="100%" height="449"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0b55c24ddd0b4cedfc85710a6475bde3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b55c24ddd0b4cedfc85710a6475bde3">&#9670;&nbsp;</a></span>left</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stack <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::left</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2918263669cadfc4b9ef083407f02826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2918263669cadfc4b9ef083407f02826">&#9670;&nbsp;</a></span>right</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Stack &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Stack <a class="el" href="classqueue__tools_1_1QueueAdaptor.html">queue_tools::QueueAdaptor</a>&lt; Stack &gt;::right</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/ram/OmniTemplate/src/ds/<a class="el" href="queue_8hpp_source.html">queue.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacequeue__tools.html">queue_tools</a></li><li class="navelem"><a class="el" href="classqueue__tools_1_1QueueAdaptor.html">QueueAdaptor</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

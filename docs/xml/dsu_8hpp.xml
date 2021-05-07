@@ -8,20 +8,38 @@
     <includedby refid="core_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/core.hpp</includedby>
     <includedby refid="graph_2all_8hpp" local="yes">/home/ram/OmniTemplate/src/graph/all.hpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>bits/stdc++.h</label>
+      <node id="9">
+        <label>functional</label>
       </node>
-      <node id="5">
-        <label>experimental/source_location</label>
-      </node>
-      <node id="7">
-        <label>operations.hpp</label>
-        <link refid="operations_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
+      <node id="13">
+        <label>queue</label>
       </node>
       <node id="4">
+        <label>cassert</label>
+      </node>
+      <node id="12">
+        <label>numeric</label>
+      </node>
+      <node id="23">
+        <label>experimental/source_location</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>unordered_set</label>
+      </node>
+      <node id="22">
         <label>experimental/iterator</label>
+      </node>
+      <node id="8">
+        <label>fstream</label>
       </node>
       <node id="2">
         <label>core/all.hpp</label>
@@ -34,39 +52,111 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="10">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="14">
+        <label>random</label>
+      </node>
+      <node id="21">
+        <label>vector</label>
+      </node>
+      <node id="16">
+        <label>stack</label>
+      </node>
+      <node id="28">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="27">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="6">
+        <label>climits</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="17">
+        <label>thread</label>
+      </node>
+      <node id="18">
+        <label>type_traits</label>
+      </node>
+      <node id="15">
+        <label>set</label>
+      </node>
+      <node id="7">
+        <label>complex</label>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -277,25 +367,25 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core_2all_8hpp" kindref="compound">core/all.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3" refid="namespacedsu__ds" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedsu__ds" kindref="compound">dsu_ds</ref><sp/>{</highlight></codeline>
 <codeline lineno="5" refid="structdsu__ds_1_1dsu" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdsu__ds_1_1dsu" kindref="compound">dsu</ref><sp/>{</highlight></codeline>
-<codeline lineno="6" refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vector&lt;ll&gt;<sp/><ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>;<sp/></highlight></codeline>
-<codeline lineno="7" refid="structdsu__ds_1_1dsu_1a2e6386657bcc35b96faf72d4bc87f933" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/><ref refid="structdsu__ds_1_1dsu_1a2e6386657bcc35b96faf72d4bc87f933" kindref="member">size_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="9" refid="structdsu__ds_1_1dsu_1ada73da3392d6444f9b29d60669f3c762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1ada73da3392d6444f9b29d60669f3c762" kindref="member">dsu</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>:<sp/><ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>(n),<sp/><ref refid="structdsu__ds_1_1dsu_1a2e6386657bcc35b96faf72d4bc87f933" kindref="member">size_</ref>(n,<sp/>1)<sp/>{<sp/>iota(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>),<sp/>0);<sp/>}</highlight></codeline>
-<codeline lineno="11" refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/><ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>[x]<sp/>?<sp/>x<sp/>:<sp/><ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>[x]<sp/>=<sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(<ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>[x]);<sp/>}</highlight></codeline>
+<codeline lineno="6" refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vector&lt;ll&gt;<sp/><ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>;<sp/></highlight></codeline>
+<codeline lineno="7" refid="structdsu__ds_1_1dsu_1ad4fe417b29f22c83906ca9a97b3b2d6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;ll&gt;<sp/><ref refid="structdsu__ds_1_1dsu_1ad4fe417b29f22c83906ca9a97b3b2d6a" kindref="member">size_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9" refid="structdsu__ds_1_1dsu_1ada73da3392d6444f9b29d60669f3c762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1ada73da3392d6444f9b29d60669f3c762" kindref="member">dsu</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>:<sp/><ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>(n),<sp/><ref refid="structdsu__ds_1_1dsu_1ad4fe417b29f22c83906ca9a97b3b2d6a" kindref="member">size_</ref>(n,<sp/>1)<sp/>{<sp/>iota(<ref refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kindref="member">al</ref>(<ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>),<sp/>0);<sp/>}</highlight></codeline>
+<codeline lineno="11" refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structll" kindref="compound">ll</ref><sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>==<sp/><ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>[x]<sp/>?<sp/>x<sp/>:<sp/><ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>[x]<sp/>=<sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(<ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>[x]);<sp/>}</highlight></codeline>
 <codeline lineno="16" refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1a11446b57ae0bf69361258cb4ee2fd212" kindref="member">join</ref>(<ref refid="structll" kindref="compound">ll</ref><sp/>x,<sp/><ref refid="structll" kindref="compound">ll</ref><sp/>y)<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(x);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/><ref refid="structdsu__ds_1_1dsu_1a5a58bd229ccd7eac0892b762d178981c" kindref="member">find</ref>(y);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>y)<sp/>{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1aa72cfb348ae79fd2bdb5ded63cd36ef2" kindref="member">swap2</ref>(x,<sp/>y,<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1a2e6386657bcc35b96faf72d4bc87f933" kindref="member">size_</ref>[idx];<sp/>});</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu_1a2e6386657bcc35b96faf72d4bc87f933" kindref="member">size_</ref>[y]<sp/>+=<sp/><ref refid="structdsu__ds_1_1dsu_1a2e6386657bcc35b96faf72d4bc87f933" kindref="member">size_</ref>[x];</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>[x]<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceutility_1a4c8a9d0142092c8f2255e518bfdf9dc4" kindref="member">sort2</ref>(x,<sp/>y,<sp/>[&amp;](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structdsu__ds_1_1dsu_1ad4fe417b29f22c83906ca9a97b3b2d6a" kindref="member">size_</ref>[idx];<sp/>});</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu_1ad4fe417b29f22c83906ca9a97b3b2d6a" kindref="member">size_</ref>[y]<sp/>+=<sp/><ref refid="structdsu__ds_1_1dsu_1ad4fe417b29f22c83906ca9a97b3b2d6a" kindref="member">size_</ref>[x];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>[x]<sp/>=<sp/>y;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="29" refid="namespacedsu__ds_1a42947339830a2cede9e140e4283aff36" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacedsu__ds_1a42947339830a2cede9e140e4283aff36" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structdsu__ds_1_1dsu" kindref="compound">dsu</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;d)<sp/>{</highlight></codeline>
+<codeline lineno="29" refid="namespacedsu__ds_1a7c3dbc9f3763e1bd7e1faf0bdff90f78" refkind="member"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Stream&gt;<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="namespacedsu__ds_1a7c3dbc9f3763e1bd7e1faf0bdff90f78" kindref="member">operator&lt;&lt;</ref>(Stream<sp/>&amp;os,<sp/><ref refid="structdsu__ds_1_1dsu" kindref="compound">dsu</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;d)<sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;dsu{&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>d.<ref refid="structdsu__ds_1_1dsu_1a3d0a7cd63b9c90f5a19a03f7f2abb6d8" kindref="member">parent</ref>.size())<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>d.<ref refid="structdsu__ds_1_1dsu_1a7ef7cd6ab6ec798033dadfb372e05e17" kindref="member">parent</ref>.size())<sp/>{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i)<sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/><ref refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kindref="member">delim</ref>;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>

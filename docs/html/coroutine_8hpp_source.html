@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('coroutine_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0619a8f54b4fad7043a6de45be8fde0b.html">utility</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">coroutine.hpp</div>  </div>
@@ -79,7 +105,7 @@ $(function() {
 <div class="contents">
 <a href="coroutine_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">inline</span> <span class="keyword">namespace </span><a class="code" href="namespacecoroutine.html">coroutine</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacecoroutine.html">    6</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">namespace </span><a class="code" href="namespacecoroutine.html">coroutine</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define CO_SWITCH</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="coroutine_8hpp.html#a07a24840ac2854166f541e047362d0bf">    8</a></span>&#160;<span class="preprocessor">#ifdef CO_SWITCH</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define cobegin                                                                                    \</span></div>
@@ -108,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">    return</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define coend throw out_of_range(&quot;Coroutine reached end.&quot;);</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coro</a>(<a class="code" href="structll.html">ll</a> a) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">   35</a></span>&#160;<a class="code" href="structll.html">ll</a> <a class="code" href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coro</a>(<a class="code" href="structll.html">ll</a> a) {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a> <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(404);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">static</span> <a class="code" href="structll.html">ll</a> i = 0; i &lt; a; i++) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a>(i * i);</div>
@@ -118,18 +144,22 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// namespace coroutine</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacecoroutine_html_a4777caf41e11578bb927d2bc250530ea"><div class="ttname"><a href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coroutine::coro</a></div><div class="ttdeci">ll coro(ll a)</div><div class="ttdef"><b>Definition:</b> test_compiled.cpp:4428</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="anamespacecoroutine_html_a4777caf41e11578bb927d2bc250530ea"><div class="ttname"><a href="namespacecoroutine.html#a4777caf41e11578bb927d2bc250530ea">coroutine::coro</a></div><div class="ttdeci">ll coro(ll a)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:35</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a904227d8e8b2e67adef1e140e9990a5c"><div class="ttname"><a href="coroutine_8hpp.html#a904227d8e8b2e67adef1e140e9990a5c">coend</a></div><div class="ttdeci">#define coend</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:13</div></div>
-<div class="ttc" id="anamespacecoroutine_html"><div class="ttname"><a href="namespacecoroutine.html">coroutine</a></div><div class="ttdef"><b>Definition:</b> test_compiled.cpp:4399</div></div>
+<div class="ttc" id="anamespacecoroutine_html"><div class="ttname"><a href="namespacecoroutine.html">coroutine</a></div><div class="ttdef"><b>Definition:</b> coroutine.hpp:6</div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a1672ec864a13c8374fa9bfc6595e67d6"><div class="ttname"><a href="coroutine_8hpp.html#a1672ec864a13c8374fa9bfc6595e67d6">cobegin</a></div><div class="ttdeci">#define cobegin</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:9</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <div class="ttc" id="acoroutine_8hpp_html_a40b2517161c64f0179823b67d4af0242"><div class="ttname"><a href="coroutine_8hpp.html#a40b2517161c64f0179823b67d4af0242">coreturn</a></div><div class="ttdeci">#define coreturn(x)</div><div class="ttdef"><b>Definition:</b> coroutine.hpp:17</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0619a8f54b4fad7043a6de45be8fde0b.html">utility</a></li><li class="navelem"><a class="el" href="coroutine_8hpp.html">coroutine.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

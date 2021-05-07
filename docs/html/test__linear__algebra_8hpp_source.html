@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('test__linear__algebra_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_086a664662017844fa76bd8f66ac71cd.html">algebra</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test_linear_algebra.hpp</div>  </div>
@@ -81,8 +107,8 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="linear__algebra_8hpp.html">linear_algebra.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacelinear__algebra_1_1test.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacelinear__algebra_1_1test.html">linear_algebra::test</a> {</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="namespacelinear__algebra_1_1test.html#a8104ca6c18938c522aa7a1225170aab1">    4</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ts&gt; <span class="keywordtype">void</span> <a class="code" href="namespacelinear__algebra_1_1test.html#a8104ca6c18938c522aa7a1225170aab1">test_invert_impl</a>(<span class="keyword">const</span> <a class="code" href="structlinear__algebra_1_1matrix.html">matrix&lt;Ts...&gt;</a> &amp;a) {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    assert(<a class="code" href="namespacelinear__algebra.html#a9857489fa641b19465aed9647a854219">invert</a>(a) * a == <a class="code" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a>(multiplies&lt;&gt;{}, a));</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    assert(a * <a class="code" href="namespacelinear__algebra.html#a9857489fa641b19465aed9647a854219">invert</a>(a) == <a class="code" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a>(multiplies&lt;&gt;{}, a));</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    assert(<a class="code" href="namespacelinear__algebra.html#ac5881f67135c45bc7c2b2a3de9cec5da">invert</a>(a) * a == <a class="code" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a>(multiplies&lt;&gt;{}, a));</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    assert(a * <a class="code" href="namespacelinear__algebra.html#ac5881f67135c45bc7c2b2a3de9cec5da">invert</a>(a) == <a class="code" href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">identity</a>(multiplies&lt;&gt;{}, a));</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="namespacelinear__algebra_1_1test.html#a58d68feee7c76f77519389051a942161">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacelinear__algebra_1_1test.html#a58d68feee7c76f77519389051a942161">test_invert</a>() {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="structutility_1_1with.html">with</a> _m{<a class="code" href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a>(1e9 + 7), modulo::modulus};</div>
@@ -102,7 +128,7 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    assert(<a class="code" href="namespacelinear__algebra.html#ad80debbf481bb22b5347633cd83e2c77">lin_recur</a>(vector&lt;ll&gt;{2, 3, 1}, 4) == 65);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacelinear__algebra_1_1test.html#a931e55dd26d27ac448311db318de875a">   26</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <a class="code" href="classpolynomial__ns_1_1Polynomial.html">Polynomial&lt;T&gt;</a> <a class="code" href="namespacelinear__algebra_1_1test.html#a931e55dd26d27ac448311db318de875a">lin_recur_coef</a>(vector&lt;T&gt; <span class="keyword">const</span> &amp;c) {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacelinear__algebra_1_1test.html#a2ead9607489ae03e13a808b4ab4562b7">   26</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <a class="code" href="classpolynomial__ns_1_1Polynomial.html">Polynomial&lt;T&gt;</a> <a class="code" href="namespacelinear__algebra_1_1test.html#a2ead9607489ae03e13a808b4ab4562b7">lin_recur_coef</a>(vector&lt;T&gt; <span class="keyword">const</span> &amp;c) {}</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacelinear__algebra_1_1test.html#aec6af708eda9aa2982dcba2a651f4bf9">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacelinear__algebra_1_1test.html#aec6af708eda9aa2982dcba2a651f4bf9">test_linear_algebra</a>() {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespacelinear__algebra_1_1test.html#a9a0a8549e208f8a719d5450d21b339ed">test_matrix</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="namespacelinear__algebra_1_1test.html#a5e39baa2e5b5fa6453ab6307d6e4f201">test_lin_recur</a>();</div>
@@ -112,26 +138,30 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="comment">// namespace linear_algebra::test</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacelinear__algebra_1_1test.html">linear_algebra::test</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anamespacelinear__algebra_1_1test_html_a8104ca6c18938c522aa7a1225170aab1"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#a8104ca6c18938c522aa7a1225170aab1">linear_algebra::test::test_invert_impl</a></div><div class="ttdeci">void test_invert_impl(const matrix&lt; Ts... &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:4</div></div>
 <div class="ttc" id="anamespacelinear__algebra_1_1test_html_a58d68feee7c76f77519389051a942161"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#a58d68feee7c76f77519389051a942161">linear_algebra::test::test_invert</a></div><div class="ttdeci">void test_invert()</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:8</div></div>
 <div class="ttc" id="aclasspolynomial__ns_1_1Polynomial_html"><div class="ttname"><a href="classpolynomial__ns_1_1Polynomial.html">polynomial_ns::Polynomial</a></div><div class="ttdef"><b>Definition:</b> polynomial.hpp:9</div></div>
 <div class="ttc" id="anamespacelinear__algebra_1_1test_html_aec6af708eda9aa2982dcba2a651f4bf9"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#aec6af708eda9aa2982dcba2a651f4bf9">linear_algebra::test::test_linear_algebra</a></div><div class="ttdeci">void test_linear_algebra()</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:27</div></div>
 <div class="ttc" id="anamespacelinear__algebra_1_1test_html_a9a0a8549e208f8a719d5450d21b339ed"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#a9a0a8549e208f8a719d5450d21b339ed">linear_algebra::test::test_matrix</a></div><div class="ttdeci">void test_matrix()</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:15</div></div>
 <div class="ttc" id="anamespacelinear__algebra_1_1test_html_a5e39baa2e5b5fa6453ab6307d6e4f201"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#a5e39baa2e5b5fa6453ab6307d6e4f201">linear_algebra::test::test_lin_recur</a></div><div class="ttdeci">void test_lin_recur()</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:21</div></div>
-<div class="ttc" id="anamespacelinear__algebra_html_a9857489fa641b19465aed9647a854219"><div class="ttname"><a href="namespacelinear__algebra.html#a9857489fa641b19465aed9647a854219">linear_algebra::invert</a></div><div class="ttdeci">matrix&lt; Ts... &gt; invert(const matrix&lt; Ts... &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:104</div></div>
 <div class="ttc" id="anamespacelinear__algebra_html_aac11793366a8aa7d2396775fdb1ba8ca"><div class="ttname"><a href="namespacelinear__algebra.html#aac11793366a8aa7d2396775fdb1ba8ca">linear_algebra::identity</a></div><div class="ttdeci">auto identity(const plus&lt;&gt;, const matrix&lt; T &gt; &amp;mat)</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:39</div></div>
 <div class="ttc" id="alinear__algebra_8hpp_html"><div class="ttname"><a href="linear__algebra_8hpp.html">linear_algebra.hpp</a></div></div>
 <div class="ttc" id="astructutility_1_1with_html"><div class="ttname"><a href="structutility_1_1with.html">utility::with</a></div><div class="ttdoc">Sets v to new_ temporary while with object is alive.</div><div class="ttdef"><b>Definition:</b> utility.hpp:5</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:80</div></div>
-<div class="ttc" id="anamespacelinear__algebra_1_1test_html_a931e55dd26d27ac448311db318de875a"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#a931e55dd26d27ac448311db318de875a">linear_algebra::test::lin_recur_coef</a></div><div class="ttdeci">Polynomial&lt; T &gt; lin_recur_coef(vector&lt; T &gt; const &amp;c)</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:26</div></div>
+<div class="ttc" id="anamespacelinear__algebra_1_1test_html_a2ead9607489ae03e13a808b4ab4562b7"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html#a2ead9607489ae03e13a808b4ab4562b7">linear_algebra::test::lin_recur_coef</a></div><div class="ttdeci">Polynomial&lt; T &gt; lin_recur_coef(vector&lt; T &gt; const &amp;c)</div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:26</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:99</div></div>
 <div class="ttc" id="anamespacelinear__algebra_1_1test_html"><div class="ttname"><a href="namespacelinear__algebra_1_1test.html">linear_algebra::test</a></div><div class="ttdef"><b>Definition:</b> test_linear_algebra.hpp:3</div></div>
+<div class="ttc" id="anamespacelinear__algebra_html_ac5881f67135c45bc7c2b2a3de9cec5da"><div class="ttname"><a href="namespacelinear__algebra.html#ac5881f67135c45bc7c2b2a3de9cec5da">linear_algebra::invert</a></div><div class="ttdeci">matrix&lt; Ts... &gt; invert(const matrix&lt; Ts... &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:104</div></div>
 <div class="ttc" id="astructlinear__algebra_1_1matrix_html"><div class="ttname"><a href="structlinear__algebra_1_1matrix.html">linear_algebra::matrix</a></div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:9</div></div>
 <div class="ttc" id="anamespacelinear__algebra_html_ad80debbf481bb22b5347633cd83e2c77"><div class="ttname"><a href="namespacelinear__algebra.html#ad80debbf481bb22b5347633cd83e2c77">linear_algebra::lin_recur</a></div><div class="ttdeci">auto lin_recur(vector&lt; T &gt; const &amp;c, const ll n)</div><div class="ttdef"><b>Definition:</b> linear_algebra.hpp:124</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_086a664662017844fa76bd8f66ac71cd.html">algebra</a></li><li class="navelem"><a class="el" href="test__linear__algebra_8hpp.html">test_linear_algebra.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

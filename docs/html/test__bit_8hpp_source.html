@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('test__bit_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test_bit.hpp</div>  </div>
@@ -94,16 +120,20 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    assert((bit.<a class="code" href="classBIT.html#a495d58c744095867ad69123897c60700">query</a>(1) == 2));</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="aclassBIT_html_a20ea8eb0ea2065179c756ec96417227f"><div class="ttname"><a href="classBIT.html#a20ea8eb0ea2065179c756ec96417227f">BIT::update</a></div><div class="ttdeci">void update(ll idx, const Value value)</div><div class="ttdoc">Update the value at idx by value.</div><div class="ttdef"><b>Definition:</b> bit.hpp:31</div></div>
 <div class="ttc" id="abit_8hpp_html"><div class="ttname"><a href="bit_8hpp.html">bit.hpp</a></div></div>
 <div class="ttc" id="aclassBIT_html"><div class="ttname"><a href="classBIT.html">BIT</a></div><div class="ttdoc">Binary indexed tree (also called Fenwick tree)</div><div class="ttdef"><b>Definition:</b> bit.hpp:8</div></div>
 <div class="ttc" id="aclassBIT_html_a495d58c744095867ad69123897c60700"><div class="ttname"><a href="classBIT.html#a495d58c744095867ad69123897c60700">BIT::query</a></div><div class="ttdeci">Value query(ll r) const</div><div class="ttdoc">Returns sum of Monoid over elements in [0, r)</div><div class="ttdef"><b>Definition:</b> bit.hpp:18</div></div>
 <div class="ttc" id="atest__bit_8hpp_html_af86f570cf0a5201c700ffeec06aec7f6"><div class="ttname"><a href="test__bit_8hpp.html#af86f570cf0a5201c700ffeec06aec7f6">test_bit</a></div><div class="ttdeci">void test_bit()</div><div class="ttdef"><b>Definition:</b> test_bit.hpp:3</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li><li class="navelem"><a class="el" href="test__bit_8hpp.html">test_bit.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

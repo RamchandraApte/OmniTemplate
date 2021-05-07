@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('number__theory_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ece17dd07d1079ae5da4fc1d5e1e51e1.html">number_theory</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">number_theory.hpp</div>  </div>
@@ -223,9 +249,10 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">throw</span> invalid_argument{<span class="stringliteral">&quot;M has no primitive root!&quot;</span>};</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="anumber__theory_8hpp_html_a2be64a5779e00fe36e74d3496e92e64b"><div class="ttname"><a href="number__theory_8hpp.html#a2be64a5779e00fe36e74d3496e92e64b">fac</a></div><div class="ttdeci">unordered_map&lt; ll, ll &gt; fac(ll n)</div><div class="ttdoc">Returns the factorization of n.</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:76</div></div>
-<div class="ttc" id="anamespacepermutation_html_ade64590f0931d6f5d80521cdf52e4bed"><div class="ttname"><a href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">permutation::power</a></div><div class="ttdeci">Permutation power(const Permutation &amp;perm, ll n)</div><div class="ttdoc">Returns in linear-time, perm^n using cycle-decomposition.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:79</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:38</div></div>
+<div class="ttc" id="anamespacepermutation_html_ade64590f0931d6f5d80521cdf52e4bed"><div class="ttname"><a href="namespacepermutation.html#ade64590f0931d6f5d80521cdf52e4bed">permutation::power</a></div><div class="ttdeci">Permutation power(const Permutation &amp;perm, ll n)</div><div class="ttdoc">Returns in linear-time, perm^n using cycle-decomposition.</div><div class="ttdef"><b>Definition:</b> permutation.hpp:81</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a2f9ddbc7133cc3a48efbc824006bd3cb"><div class="ttname"><a href="core_2all_8hpp.html#a2f9ddbc7133cc3a48efbc824006bd3cb">al</a></div><div class="ttdeci">#define al(v)</div><div class="ttdef"><b>Definition:</b> all.hpp:57</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_aa6039763e84c50eb24fdee392c581898"><div class="ttname"><a href="number__theory_8hpp.html#aa6039763e84c50eb24fdee392c581898">egcd</a></div><div class="ttdeci">void egcd(const ll a, const ll b, ll &amp;x, ll &amp;y)</div><div class="ttdoc">Sets x and y so that .</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:100</div></div>
 <div class="ttc" id="anamespacecombinatorics_html_a20e5a1b40f76572aa1e18b228b6e4849"><div class="ttname"><a href="namespacecombinatorics.html#a20e5a1b40f76572aa1e18b228b6e4849">combinatorics::fact</a></div><div class="ttdeci">T fact(const T n)</div><div class="ttdef"><b>Definition:</b> combinatorics.hpp:9</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a1463d536aba4bb122d7fe13985968590"><div class="ttname"><a href="number__theory_8hpp.html#a1463d536aba4bb122d7fe13985968590">divs</a></div><div class="ttdeci">vector&lt; ll &gt; divs</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:4</div></div>
@@ -234,20 +261,23 @@ $(function() {
 <div class="ttc" id="astructutility_1_1with_html"><div class="ttname"><a href="structutility_1_1with.html">utility::with</a></div><div class="ttdoc">Sets v to new_ temporary while with object is alive.</div><div class="ttdef"><b>Definition:</b> utility.hpp:5</div></div>
 <div class="ttc" id="anamespacemodulo__namespace_html_a2507e89fefa09a358a9de729b15dd642"><div class="ttname"><a href="namespacemodulo__namespace.html#a2507e89fefa09a358a9de729b15dd642">modulo_namespace::mod</a></div><div class="ttdeci">ll mod(ll a, const ll b)</div><div class="ttdoc">Returns the remainder of a divided by b as a nonnegative integer in [0, b).</div><div class="ttdef"><b>Definition:</b> modulo.hpp:29</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_af0753ff92c84e6924e1fd6461e77b16f"><div class="ttname"><a href="number__theory_8hpp.html#af0753ff92c84e6924e1fd6461e77b16f">totient</a></div><div class="ttdeci">ll totient(ll n)</div><div class="ttdoc">Returns the totient of the integer n.</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:106</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:36</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_ae8dd217fd3a3de037c6a1031aef548aa"><div class="ttname"><a href="number__theory_8hpp.html#ae8dd217fd3a3de037c6a1031aef548aa">sieve</a></div><div class="ttdeci">vector&lt; ll &gt; sieve(ll n)</div><div class="ttdoc">Linear time prime sieve.</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:56</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a67527905c2b2c027c8b458902db2d05a"><div class="ttname"><a href="number__theory_8hpp.html#a67527905c2b2c027c8b458902db2d05a">dlog</a></div><div class="ttdeci">ll dlog(const modulo a, const modulo b)</div><div class="ttdoc">Finds x such that a^x = b (mod M) using baby-step giant-step algorithm.</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:117</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:80</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad54dde638d1ae3e9bb08956f539b1883"><div class="ttname"><a href="core_2all_8hpp.html#ad54dde638d1ae3e9bb08956f539b1883">ll</a></div><div class="ttdeci">long long ll</div><div class="ttdef"><b>Definition:</b> all.hpp:99</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a6542b189f3759f43899a8b1978d58e2c"><div class="ttname"><a href="number__theory_8hpp.html#a6542b189f3759f43899a8b1978d58e2c">primitive_root</a></div><div class="ttdeci">modulo primitive_root()</div><div class="ttdoc">Returns a primitive root modulo M.</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:141</div></div>
 <div class="ttc" id="astructmodulo__namespace_1_1modulo_html"><div class="ttname"><a href="structmodulo__namespace_1_1modulo.html">modulo_namespace::modulo</a></div><div class="ttdef"><b>Definition:</b> modulo.hpp:41</div></div>
 <div class="ttc" id="anumber__theory_8hpp_html_a1dba9e869972ca1e250a48ddd5f8f72b"><div class="ttname"><a href="number__theory_8hpp.html#a1dba9e869972ca1e250a48ddd5f8f72b">divisors</a></div><div class="ttdeci">vector&lt; ll &gt; divisors(ll x)</div><div class="ttdoc">Return all divisors of x in sorted order.</div><div class="ttdef"><b>Definition:</b> number_theory.hpp:34</div></div>
 <div class="ttc" id="amodulo_8hpp_html"><div class="ttname"><a href="modulo_8hpp.html">modulo.hpp</a></div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ece17dd07d1079ae5da4fc1d5e1e51e1.html">number_theory</a></li><li class="navelem"><a class="el" href="number__theory_8hpp.html">number_theory.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,9 +9,18 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -32,6 +41,21 @@
    </div>
    <div id="projectbrief">All the algorithms, all the data structures, all the templates.</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -43,16 +67,23 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
+$(document).ready(function(){initNavTree('test__splay__tree_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +98,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">test_splay_tree.hpp</div>  </div>
@@ -112,6 +138,7 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// namespace splay_tree::test</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacesplay__tree_1_1test.html">splay_tree::test</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <div class="ttc" id="astructsplay__tree_1_1SplayTree_html_a45aa483490efb984be745d3847061eba"><div class="ttname"><a href="structsplay__tree_1_1SplayTree.html#a45aa483490efb984be745d3847061eba">splay_tree::SplayTree::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition:</b> splay_tree.hpp:175</div></div>
 <div class="ttc" id="anamespacesplay__tree_1_1test_html"><div class="ttname"><a href="namespacesplay__tree_1_1test.html">splay_tree::test</a></div><div class="ttdef"><b>Definition:</b> test_splay_tree.hpp:3</div></div>
 <div class="ttc" id="anamespacesplay__tree_1_1test_html_a5aa5fd954b1cb0fb099a2310d2801e9e"><div class="ttname"><a href="namespacesplay__tree_1_1test.html#a5aa5fd954b1cb0fb099a2310d2801e9e">splay_tree::test::test_splay_tree</a></div><div class="ttdeci">void test_splay_tree()</div><div class="ttdef"><b>Definition:</b> test_splay_tree.hpp:4</div></div>
@@ -125,10 +152,13 @@ $(function() {
 <div class="ttc" id="astructsplay__tree_1_1SplayTree_html"><div class="ttname"><a href="structsplay__tree_1_1SplayTree.html">splay_tree::SplayTree</a></div><div class="ttdef"><b>Definition:</b> splay_tree.hpp:61</div></div>
 <div class="ttc" id="astructsplay__tree_1_1SplayTree_html_a80ab90fbd7be1405ae05399b0fc2f2f1"><div class="ttname"><a href="structsplay__tree_1_1SplayTree.html#a80ab90fbd7be1405ae05399b0fc2f2f1">splay_tree::SplayTree::insert</a></div><div class="ttdeci">void insert(Node *const x)</div><div class="ttdef"><b>Definition:</b> splay_tree.hpp:102</div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_122f4add68bb94b3fee614989bbbd8f9.html">ds</a></li><li class="navelem"><a class="el" href="test__splay__tree_8hpp.html">test_splay_tree.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

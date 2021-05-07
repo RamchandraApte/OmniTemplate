@@ -20,10 +20,15 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 struct \mbox{\hyperlink{structrin}{rin}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}{cin}}~rin\+\_\+cin
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename R , typename T $>$ }\\auto \mbox{\hyperlink{io_8hpp_ab13ab1059a1675ee7a774c4524b84d23}{operator$<$$<$}} (R \&r, const T \&x) -\/$>$ decltype(\mbox{\hyperlink{test__compiled_8cpp_acf30f45bb690161eda6eb343b019d6e7}{r.\+in}} $>$$>$ const\+\_\+cast$<$ T \& $>$(x), declval$<$ enable\+\_\+if\+\_\+t$<$ is\+\_\+same$<$ R, \mbox{\hyperlink{structrin}{rin}} $>$\+::value, \mbox{\hyperlink{structrin}{rin}} \& $>$$>$())
+{\footnotesize template$<$typename R , typename T $>$ }\\auto \mbox{\hyperlink{io_8hpp_ab13ab1059a1675ee7a774c4524b84d23}{operator$<$$<$}} (R \&r, const T \&x) -\/$>$ decltype(r.\+in $>$$>$ const\+\_\+cast$<$ T \& $>$(x), declval$<$ enable\+\_\+if\+\_\+t$<$ is\+\_\+same$<$ R, \mbox{\hyperlink{structrin}{rin}} $>$\+::value, \mbox{\hyperlink{structrin}{rin}} \& $>$$>$())
 \item 
 {\footnotesize template$<$typename Stream , typename T $>$ }\\enable\+\_\+if\+\_\+t$<$ is\+\_\+same$<$ T, istream $>$\+::value, \mbox{\hyperlink{structrin}{rin}} $>$ \mbox{\hyperlink{io_8hpp_a7df52f31e81b51a76e8f8699accaf3b1}{operator$>$$>$}} (Stream \&is, T \&x)
 \item 
@@ -31,33 +36,53 @@ struct \mbox{\hyperlink{structrin}{rin}}
 \item 
 {\footnotesize template$<$typename T1 , typename... Ts$>$ }\\auto \mbox{\hyperlink{io_8hpp_a1b122fd1e3de03a421d98f4bbb1473d5}{print}} (const T1 \&arg1, const Ts \&... args)
 \item 
-{\footnotesize template$<$typename Stream , typename... T$>$ }\\auto \& \mbox{\hyperlink{io_8hpp_a2939a795e467c7daa07c80b7456d78b4}{std\+::operator$<$$<$}} (Stream \&os, pair$<$ T... $>$ const \&p)
+{\footnotesize template$<$typename Stream , typename... T$>$ }\\auto \& \mbox{\hyperlink{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425}{std\+::operator$<$$<$}} (Stream \&os, pair$<$ T... $>$ const \&p)
 \item 
 {\footnotesize template$<$typename Stream , typename Container $>$ }\\auto \mbox{\hyperlink{io_8hpp_a2f89b21c3f2e0f24bcda02b8d1432695}{std\+::operator$<$$<$}} (Stream \&os, const Container \&v) -\/$>$ enable\+\_\+if\+\_\+t$<$ is\+\_\+same\+\_\+v$<$ Stream, ostream $>$, decltype(begin(v), declval$<$ decltype(os)$>$())$>$
 \item 
 {\footnotesize template$<$typename T $>$ }\\auto \mbox{\hyperlink{io_8hpp_a26ed2eacd641d0bb463e15dd04d3dd63}{std\+::operator$<$$<$}} (\mbox{\hyperlink{structrin}{rin}} \&os, const T \&v) -\/$>$ decltype(begin(v), declval$<$ decltype(os)$>$())
+\item 
+{\footnotesize template$<$typename Stream , typename T $>$ }\\auto \& \mbox{\hyperlink{io_8hpp_a49bbb01635e28db8562b0e6878febef7}{std\+::operator$<$$<$}} (Stream \&os, optional$<$ T $>$ const \&opt)
 \end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrin}{rin}} \mbox{\hyperlink{io_8hpp_abe602cc706ddc3cda8fbf969d5a97386}{std\+::rin\+\_\+cin}} \{\mbox{\hyperlink{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}{cin}}\}
+\item 
+auto \& \mbox{\hyperlink{io_8hpp_ad3d37d28ba906ccaf466014e09241de5}{std\+::orig\+\_\+cin}} = \mbox{\hyperlink{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}{cin}}
+\item 
+auto \& \mbox{\hyperlink{io_8hpp_ac42bccbb7905afc32ae4dddd1a4db540}{std\+::orig\+\_\+cerr}} = \mbox{\hyperlink{core_2all_8hpp_ad8a867e2e93131cb4d4afbedcd38245a}{cerr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}\label{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}} 
+\index{io.hpp@{io.hpp}!cin@{cin}}
+\index{cin@{cin}!io.hpp@{io.hpp}}
+\doxysubsubsection{\texorpdfstring{cin}{cin}}
+{\footnotesize\ttfamily \#define cin~rin\+\_\+cin}
+
 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{io_8hpp_ab13ab1059a1675ee7a774c4524b84d23}\label{io_8hpp_ab13ab1059a1675ee7a774c4524b84d23}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
 {\footnotesize\ttfamily template$<$typename R , typename T $>$ \\
-auto operator$<$$<$ (\begin{DoxyParamCaption}\item[{R \&}]{r,  }\item[{const T \&}]{x }\end{DoxyParamCaption}) -\/$>$ decltype(\mbox{\hyperlink{test__compiled_8cpp_acf30f45bb690161eda6eb343b019d6e7}{r.\+in}} $>$$>$ const\+\_\+cast$<$T \&$>$(x), declval$<$enable\+\_\+if\+\_\+t$<$is\+\_\+same$<$R, \mbox{\hyperlink{structrin}{rin}}$>$\+::value, \mbox{\hyperlink{structrin}{rin}} \&$>$$>$()) }
+auto operator$<$$<$ (\begin{DoxyParamCaption}\item[{R \&}]{r,  }\item[{const T \&}]{x }\end{DoxyParamCaption}) -\/$>$ decltype(r.\+in $>$$>$ const\+\_\+cast$<$T \&$>$(x), declval$<$enable\+\_\+if\+\_\+t$<$is\+\_\+same$<$R, \mbox{\hyperlink{structrin}{rin}}$>$\+::value, \mbox{\hyperlink{structrin}{rin}} \&$>$$>$()) }
 
 \mbox{\Hypertarget{io_8hpp_a26ed2eacd641d0bb463e15dd04d3dd63}\label{io_8hpp_a26ed2eacd641d0bb463e15dd04d3dd63}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrin}{rin}} \&}]{os,  }\item[{const T \&}]{v }\end{DoxyParamCaption}) -\/$>$ decltype(begin(v), declval$<$decltype(os)$>$()) }
 
 \mbox{\Hypertarget{io_8hpp_a2f89b21c3f2e0f24bcda02b8d1432695}\label{io_8hpp_a2f89b21c3f2e0f24bcda02b8d1432695}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename Container $>$ \\
 auto std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{const Container \&}]{v }\end{DoxyParamCaption}) -\/$>$ enable\+\_\+if\+\_\+t$<$is\+\_\+same\+\_\+v$<$Stream, ostream$>$, decltype(begin(v), declval$<$decltype(os)$>$())$>$ }
 
@@ -68,24 +93,31 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{io_8hpp_a2f89b21c3f2e0f24bcda02b8d1432695_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{io_8hpp_a2939a795e467c7daa07c80b7456d78b4}\label{io_8hpp_a2939a795e467c7daa07c80b7456d78b4}} 
+\mbox{\Hypertarget{io_8hpp_a49bbb01635e28db8562b0e6878febef7}\label{io_8hpp_a49bbb01635e28db8562b0e6878febef7}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename Stream , typename T $>$ \\
+auto\& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{optional$<$ T $>$ const \&}]{opt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425}\label{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425}} 
+\index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename... T$>$ \\
-auto \& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{pair$<$ T... $>$ const \&}]{p }\end{DoxyParamCaption})}
+auto\& std\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{pair$<$ T... $>$ const \&}]{p }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{io_8hpp_a2939a795e467c7daa07c80b7456d78b4_cgraph}
+\includegraphics[width=350pt]{io_8hpp_a40cf53faa8f3a9512c4dad9945ecb425_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{io_8hpp_affce1f2cffc83e9e4ecc9203fdd32d29}\label{io_8hpp_affce1f2cffc83e9e4ecc9203fdd32d29}} 
 \index{io.hpp@{io.hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!io.hpp@{io.hpp}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename Stream , typename... T$>$ \\
 auto\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{Stream \&}]{os,  }\item[{tuple$<$ T... $>$}]{t }\end{DoxyParamCaption})}
 
@@ -104,3 +136,23 @@ enable\+\_\+if\+\_\+t$<$is\+\_\+same$<$T, istream$>$\+::value, \mbox{\hyperlink{
 auto print (\begin{DoxyParamCaption}\item[{const T1 \&}]{arg1,  }\item[{const Ts \&...}]{args }\end{DoxyParamCaption})}
 
 Print arguments separated by spaces to stdout
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{io_8hpp_ac42bccbb7905afc32ae4dddd1a4db540}\label{io_8hpp_ac42bccbb7905afc32ae4dddd1a4db540}} 
+\index{io.hpp@{io.hpp}!orig\_cerr@{orig\_cerr}}
+\index{orig\_cerr@{orig\_cerr}!io.hpp@{io.hpp}}
+\doxysubsubsection{\texorpdfstring{orig\_cerr}{orig\_cerr}}
+{\footnotesize\ttfamily auto\& std\+::orig\+\_\+cerr = \mbox{\hyperlink{core_2all_8hpp_ad8a867e2e93131cb4d4afbedcd38245a}{cerr}}}
+
+\mbox{\Hypertarget{io_8hpp_ad3d37d28ba906ccaf466014e09241de5}\label{io_8hpp_ad3d37d28ba906ccaf466014e09241de5}} 
+\index{io.hpp@{io.hpp}!orig\_cin@{orig\_cin}}
+\index{orig\_cin@{orig\_cin}!io.hpp@{io.hpp}}
+\doxysubsubsection{\texorpdfstring{orig\_cin}{orig\_cin}}
+{\footnotesize\ttfamily auto\& std\+::orig\+\_\+cin = \mbox{\hyperlink{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}{cin}}}
+
+\mbox{\Hypertarget{io_8hpp_abe602cc706ddc3cda8fbf969d5a97386}\label{io_8hpp_abe602cc706ddc3cda8fbf969d5a97386}} 
+\index{io.hpp@{io.hpp}!rin\_cin@{rin\_cin}}
+\index{rin\_cin@{rin\_cin}!io.hpp@{io.hpp}}
+\doxysubsubsection{\texorpdfstring{rin\_cin}{rin\_cin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrin}{rin}} std\+::rin\+\_\+cin \{\mbox{\hyperlink{io_8hpp_a5623b1d0cbb6ab8353c440455eb7f3e1}{cin}}\}}
+

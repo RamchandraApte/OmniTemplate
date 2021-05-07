@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bill_1198',['bill',['../my__int_8hpp.html#a2c978e12b0aa097e3f8dc633e68451d7',1,'my_int.hpp']]],
-  ['bin_1199',['bin',['../range_8hpp.html#a198fc8d7aeb577c1c390bbf3cf9ade86',1,'bin():&#160;range.hpp'],['../test__compiled_8cpp.html#a198fc8d7aeb577c1c390bbf3cf9ade86',1,'bin():&#160;test_compiled.cpp']]]
+  ['bill_1228',['bill',['../my__int_8hpp.html#a2c978e12b0aa097e3f8dc633e68451d7',1,'my_int.hpp']]],
+  ['bin_1229',['bin',['../range_8hpp.html#a198fc8d7aeb577c1c390bbf3cf9ade86',1,'range.hpp']]]
 ];

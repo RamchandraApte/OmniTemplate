@@ -52,7 +52,7 @@ class HLD {
 		// FIXME find the LCA and use that to do it for non-commutative operators
 		while (true) {
 			// Don't swap u and v if there's a tie
-			swap2(u, v, [&](const auto x) { return d.distance[head[x]]; });
+			sort2(u, v, [&](const auto x) { return d.distance[head[x]]; });
 			if (head[u] == head[v]) {
 				break;
 			}
