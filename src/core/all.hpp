@@ -28,6 +28,9 @@
 #include <unordered_set>
 #include <vector>
 #endif
+#ifndef DEBUG
+#define NDEBUG
+#endif
 //#include <bits/stdc++.h>
 #include <algorithm>
 #include <bitset>
@@ -50,8 +53,12 @@
 #include <utility>
 #include <vector>
 #endif
-#include <experimental/iterator>
+#if __has_include(<source_location>)
+#include <source_location>
+#else
 #include <experimental/source_location>
+#endif
+#include <experimental/iterator>
 #endif // PRE
 #define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})
 #define fr(i, ...) for ([[maybe_unused]] const auto i : rev(ra{__VA_ARGS__}))

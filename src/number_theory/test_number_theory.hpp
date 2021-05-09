@@ -67,6 +67,14 @@ void test_primitive_root() {
 	check(6, 5);
 	check(7, 3);
 }
+
+void test_divisors_sieve() {
+	const auto n = 100LL;
+	const auto div_list = divisors_sieve(n);
+	assert(div_list.size() == n);
+	fo(i, 1, div_list.size()) { assert(divisors(i) == div_list[i]); }
+}
+
 void test_number_theory() {
 	test_prime();
 	test_divisors();
@@ -76,4 +84,5 @@ void test_number_theory() {
 	test_primitive_root();
 	test_sieve();
 	test_egcd();
+	test_divisors_sieve();
 }

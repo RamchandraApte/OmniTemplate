@@ -32,9 +32,15 @@ int main(int argc, char *argv[]) {
 	}
 	cout.precision(numeric_limits<ld>::max_digits10);
 	timer _t;
-	ll t = 1;
 	if (set_multitest::multitest) {
+		ll t;
 		cin >> t;
+		fo(i, t) {
+			cout << light_purple_color << "=== Test case #" << 1 + i
+			     << " ===" << reset_color << endl;
+			main2();
+		}
+	} else {
+		main2();
 	}
-	fo(i, t) { main2(); }
 }

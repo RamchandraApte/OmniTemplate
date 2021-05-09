@@ -5,7 +5,6 @@
 #ifdef DEBUG
 #define dbg(x) (++debug_tools::depth, debug(x, #x##s))
 #else
-#define NDEBUG
 #define dbg(x) (x)
 #endif
 /*! Debugging tools */
@@ -33,6 +32,8 @@ template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
 	}
 	return s;
 }
+constexpr auto light_purple_color = "\e[1;35m"sv;
+constexpr auto red_color = "\e[91m"sv, reset_color = "\e[0m"sv;
 ll depth = -1;
 template <typename T>
 auto debug(const T &x, const string &name,
@@ -40,8 +41,8 @@ auto debug(const T &x, const string &name,
 	/*! Debug print x */
 	if (debug_mode) {
 		fo(i, depth) { cerr << "\t"; }
-		cerr << loc.function_name() << ":" << loc.line() << " " << name << " = " << x
-		     << endl;
+		cerr << red_color << loc.function_name() << ":" << loc.line() << " " << name
+		     << " = " << x << reset_color << endl;
 	}
 	--depth;
 	return x;
