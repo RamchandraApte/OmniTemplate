@@ -56,12 +56,13 @@ auto hull(vector<point> v, bool do_sort = true) {
 	}
 	return h;
 }
+/** @brief Returns x in Range r that minimizes the value of a convex function
+ * f(x).*/
 template <typename Range, typename Func> auto convex_min(const Range &r, const Func &f) {
-	/*! Returns x in Range r that minimizes the value of a convex function
-	 * f(x).*/
 	return *partition_point(al(r), [&](auto i) { return !(f(i) < f(i + 1)); });
 }
-/*! Convex-hull trick. This can be used to find the minimum of a set of
+/** @brief Convex-hull trick.
+ * This can be used to find the minimum of a set of
  * lines at various points. */
 struct CHT {
 	vector<point> lines; //!< The lines, specified as (a,b) for ax+b.
@@ -69,8 +70,8 @@ struct CHT {
 		v = uniq(v, key_compare(LAMBDA(imag), equal_to{}), key_compare(LAMBDA(conj)));
 		lines = hull(v, false);
 	}
+	/** @brief Minimum value of the lines at x*/
 	auto min(ll x) {
-		/*! Minimum value of the lines at x*/
 		auto const eval = [&](const auto &i) {
 			return real(lines[i]) * x + imag(lines[i]);
 		};

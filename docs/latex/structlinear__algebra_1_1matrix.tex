@@ -2,6 +2,11 @@
 \label{structlinear__algebra_1_1matrix}\index{linear\_algebra::matrix$<$ T $>$@{linear\_algebra::matrix$<$ T $>$}}
 
 
+Matrix class.  
+
+
+
+
 {\ttfamily \#include $<$linear\+\_\+algebra.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -20,7 +25,7 @@ auto \mbox{\hyperlink{structlinear__algebra_1_1matrix_ae41650872d737bf7aff8a62c2
 auto \mbox{\hyperlink{structlinear__algebra_1_1matrix_aa56292eb8f2f032e41fc598e1302dacd}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{structll}{ll}} i) const
 \item 
 bool \mbox{\hyperlink{structlinear__algebra_1_1matrix_ad02294881d9dd92ee77b417d416bed33}{is\+\_\+square}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns true if matrix is a square matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,6 +36,12 @@ bool \mbox{\hyperlink{structlinear__algebra_1_1matrix_ad02294881d9dd92ee77b417d4
 vector$<$ T $>$ \mbox{\hyperlink{structlinear__algebra_1_1matrix_a417f6b2bcd0bae5ec57612f6b228b879}{a}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct linear\+\_\+algebra\+::matrix$<$ T $>$}
+
+Matrix class. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{structlinear__algebra_1_1matrix_a44b1e37202c7dd6a6402b407b9ea2072}\label{structlinear__algebra_1_1matrix_a44b1e37202c7dd6a6402b407b9ea2072}} 
@@ -75,7 +86,12 @@ Array storing the data, in row-\/major order.
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 bool \mbox{\hyperlink{structlinear__algebra_1_1matrix}{linear\+\_\+algebra\+::matrix}}$<$ T $>$\+::is\+\_\+square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Returns true if matrix is a square matrix. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,7 +140,7 @@ Row, column.
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{structlinear__algebra_1_1matrix}{linear\+\_\+algebra\+::matrix}}$<$ T $>$\+::rows\+\_\+n}
 
-Matrix class 
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

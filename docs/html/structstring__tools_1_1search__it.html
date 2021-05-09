@@ -109,21 +109,19 @@ $(document).ready(function(){initNavTree('structstring__tools_1_1search__it.html
 </div><!--header-->
 <div class="contents">
 
-<p>Search iterator for looping through all matches of a string s in t using KMP. Complexity: \(O(n)\), where is the length between subsequent matches.  
+<p>Search iterator for looping through all matches of a string s in t using KMP. Complexity: \(O(n)\) for incrementing, where \(n\) is the length between subsequent matches.  
  <a href="structstring__tools_1_1search__it.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="string_8hpp_source.html">string.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for string_tools::search_it:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structstring__tools_1_1search__it__inherit__graph.svg" width="176" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structstring__tools_1_1search__it__inherit__graph.svg" width="176" height="203"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for string_tools::search_it:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structstring__tools_1_1search__it__coll__graph.svg" width="526" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structstring__tools_1_1search__it__coll__graph.svg" width="526" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -153,10 +151,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad3d2409929107e72a52c886efcd70b8e"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#ad3d2409929107e72a52c886efcd70b8e">t</a></td></tr>
-<tr class="separator:ad3d2409929107e72a52c886efcd70b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1d8385f726abce3cd93b1217f51bbe"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe">s</a></td></tr>
-<tr class="separator:adf1d8385f726abce3cd93b1217f51bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98823e09c1ec6b3ad12c34ca0370214"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#ab98823e09c1ec6b3ad12c34ca0370214">text</a></td></tr>
+<tr class="separator:ab98823e09c1ec6b3ad12c34ca0370214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd2828cb3c63945e5101b18b1f86f4b"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#a0dd2828cb3c63945e5101b18b1f86f4b">substring</a></td></tr>
+<tr class="separator:a0dd2828cb3c63945e5101b18b1f86f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab70ce1b2fdb25d6476e2a68e3e42fef"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#aab70ce1b2fdb25d6476e2a68e3e42fef">n</a> {}</td></tr>
 <tr class="separator:aab70ce1b2fdb25d6476e2a68e3e42fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87ec86b38282706ad524ea778ba728b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structll.html">ll</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html#a87ec86b38282706ad524ea778ba728b0">ed</a> {}</td></tr>
@@ -169,7 +167,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0cf94550269ceab1506f23e769d3e16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Search iterator for looping through all matches of a string s in t using KMP. Complexity: \(O(n)\), where is the length between subsequent matches. </p>
+<div class="textblock"><p>Search iterator for looping through all matches of a string s in t using KMP. Complexity: \(O(n)\) for incrementing, where \(n\) is the length between subsequent matches. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="acb50112dd85865f007cd61cce21075ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb50112dd85865f007cd61cce21075ca">&#9670;&nbsp;</a></span>iterator_category</h2>
@@ -370,28 +368,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adf1d8385f726abce3cd93b1217f51bbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1d8385f726abce3cd93b1217f51bbe">&#9670;&nbsp;</a></span>s</h2>
+<a id="a0dd2828cb3c63945e5101b18b1f86f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd2828cb3c63945e5101b18b1f86f4b">&#9670;&nbsp;</a></span>substring</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const string string_tools::search_it::s</td>
+          <td class="memname">const string string_tools::search_it::substring</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad3d2409929107e72a52c886efcd70b8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3d2409929107e72a52c886efcd70b8e">&#9670;&nbsp;</a></span>t</h2>
+<a id="ab98823e09c1ec6b3ad12c34ca0370214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98823e09c1ec6b3ad12c34ca0370214">&#9670;&nbsp;</a></span>text</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const string string_tools::search_it::t</td>
+          <td class="memname">const string string_tools::search_it::text</td>
         </tr>
       </table>
 </div><div class="memdoc">

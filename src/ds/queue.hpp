@@ -53,13 +53,15 @@ template <typename Stack> class QueueAdaptor {
       private:
 	Stack left, right;
 	void check_invariant() const {
-		if (size() >= 2) {
-			assert(!left.empty() && !right.empty());
-		} else if (size() == 1) {
-			assert(!left.empty());
-			assert(front() == back());
-		} else {
-			assert(empty());
+		if constexpr (false) {
+			if (size() >= 2) {
+				assert(!left.empty() && !right.empty());
+			} else if (size() == 1) {
+				assert(!left.empty());
+				assert(front() == back());
+			} else {
+				assert(empty());
+			}
 		}
 	}
 };
@@ -70,7 +72,7 @@ template <typename T, typename Base = stack<pair<T, T>>> class MinStack : public
 	using size_type = ll;
 	using reference = value_type &;
 	using const_reference = const value_type &;
-	void push(const T &val) { Base::push({val, ::min(val, min())}); }
+	void push(const T &val) { Base::push({val, std::min(val, min())}); }
 	/*! Return the top of the stack*/
 	const T &top() const { return Base::top().first; }
 	/*! Return the minimum element of the stack */
@@ -78,6 +80,6 @@ template <typename T, typename Base = stack<pair<T, T>>> class MinStack : public
 };
 template <typename T> class MinQueue : public QueueAdaptor<MinStack<T>> {
       public:
-	T min() { return ::min(this->get_left().min(), this->get_right().min()); }
+	T min() { return std::min(this->get_left().min(), this->get_right().min()); }
 };
 } // namespace queue_tools

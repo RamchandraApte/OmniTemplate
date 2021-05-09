@@ -102,8 +102,15 @@ ll log_ceil(const ll x, const ll base) {
 	assert(__builtin_popcountll(ret) == __builtin_popcountll(x));
 	return ret;
 }
+
+class IdentityFunctor {
+      public:
+	template <typename T> decltype(auto) operator()(T &&x) const { return std::forward<T>(x); }
+};
+
 /** @brief Stable sorts a and b by func.*/
-template <typename T, typename Func> void sort2(T &a, T &b, const Func &func) {
+template <typename T, typename Func = IdentityFunctor>
+void sort2(T &a, T &b, const Func &func = {}) {
 	if (func(a) > func(b)) {
 		swap(a, b);
 	}
@@ -128,6 +135,7 @@ void counting_sort(Iter a, Iter b, const Proj &proj, const ll proj_size) {
 	}
 	move(al(output), a);
 }
+/** @brief Returns signed value of std::size(cont) */
 template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 // TODO split up utility.hpp maybe?
 /*! @brief Array convenience template. Converts C style array type to std::array type. */
@@ -169,10 +177,14 @@ template <typename InputIt> auto iterator_identity() {
 template <typename InputIt> decltype(auto) accumulate(InputIt a, InputIt b) {
 	return accumulate(a, b, iterator_identity<InputIt>());
 }
+template <typename InputIt> decltype(auto) inner_product(InputIt a, InputIt b, InputIt c) {
+	return inner_product(a, b, c, iterator_identity<InputIt>());
+}
 template <typename InputIt> auto get_partial_sum(InputIt a, InputIt b) {
 	vector sums(distance(a, b) + 1, iterator_identity<InputIt>());
 	partial_sum(a, b, begin(sums) + 1);
 	return sums;
 }
+template <typename... Ts> decltype(auto) read(Ts &...args) { return (std::cin >> ... >> args); }
 } // namespace utility
 using namespace utility;

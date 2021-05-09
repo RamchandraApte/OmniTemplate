@@ -162,3 +162,13 @@ modulo primitive_root() {
 	}
 	throw invalid_argument{"M has no primitive root!"};
 }
+
+vector<vector<ll>> divisors_sieve(const ll n) {
+	vector<vector<ll>> divs(n);
+	fo(i, 1, n) {
+		for (ll j = i; j < n; j += i) {
+			divs[j].push_back(i);
+		}
+	}
+	return divs;
+}

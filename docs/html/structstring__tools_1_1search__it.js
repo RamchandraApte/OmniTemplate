@@ -10,6 +10,6 @@ var structstring__tools_1_1search__it =
     [ "n", "structstring__tools_1_1search__it.html#aab70ce1b2fdb25d6476e2a68e3e42fef", null ],
     [ "o", "structstring__tools_1_1search__it.html#a0cf94550269ceab1506f23e769d3e16e", null ],
     [ "p", "structstring__tools_1_1search__it.html#a187978317937eb139741d9f64948adeb", null ],
-    [ "s", "structstring__tools_1_1search__it.html#adf1d8385f726abce3cd93b1217f51bbe", null ],
-    [ "t", "structstring__tools_1_1search__it.html#ad3d2409929107e72a52c886efcd70b8e", null ]
+    [ "substring", "structstring__tools_1_1search__it.html#a0dd2828cb3c63945e5101b18b1f86f4b", null ],
+    [ "text", "structstring__tools_1_1search__it.html#ab98823e09c1ec6b3ad12c34ca0370214", null ]
 ];

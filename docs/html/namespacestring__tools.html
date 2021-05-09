@@ -116,28 +116,33 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1bytehash.html">bytehash</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes the bytes in an object.  <a href="structstring__tools_1_1bytehash.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1hash__str.html">hash_str</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast rolling hash on a specific string's substrings.  <a href="structstring__tools_1_1hash__str.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1search__it.html">search_it</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search iterator for looping through all matches of a string s in t using KMP. Complexity: \(O(n)\), where is the length between subsequent matches.  <a href="structstring__tools_1_1search__it.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search iterator for looping through all matches of a string s in t using KMP. Complexity: \(O(n)\) for incrementing, where \(n\) is the length between subsequent matches.  <a href="structstring__tools_1_1search__it.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstring__tools_1_1Trie.html">Trie</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af4bef53432a2dea7421e61675cbd1d65"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="structll.html">ll</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#af4bef53432a2dea7421e61675cbd1d65">prefix</a> (string const &amp;s)</td></tr>
-<tr class="separator:af4bef53432a2dea7421e61675cbd1d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a314ab0a3b3f972a1af0b738851323829"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a314ab0a3b3f972a1af0b738851323829">search_all</a> (string const &amp;t, string const &amp;s)</td></tr>
-<tr class="separator:a314ab0a3b3f972a1af0b738851323829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d2ff6ae0b78a477290f34ca8755e78"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="structll.html">ll</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#aa2d2ff6ae0b78a477290f34ca8755e78">prefix</a> (string const &amp;substring)</td></tr>
+<tr class="memdesc:aa2d2ff6ae0b78a477290f34ca8755e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns prefix function of string s.  <a href="namespacestring__tools.html#aa2d2ff6ae0b78a477290f34ca8755e78">More...</a><br /></td></tr>
+<tr class="separator:aa2d2ff6ae0b78a477290f34ca8755e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84505cf4aa04e720ec0807e413ce6437"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a84505cf4aa04e720ec0807e413ce6437">search_all</a> (const string &amp;text, const string &amp;substring)</td></tr>
+<tr class="memdesc:a84505cf4aa04e720ec0807e413ce6437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all substrings of text equal to substring.  <a href="namespacestring__tools.html#a84505cf4aa04e720ec0807e413ce6437">More...</a><br /></td></tr>
+<tr class="separator:a84505cf4aa04e720ec0807e413ce6437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a767408e05473fa35a3fbfd34f7283a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a8a767408e05473fa35a3fbfd34f7283a">operator==</a> (<a class="el" href="structstring__tools_1_1search__it.html">search_it</a> const &amp;a, <a class="el" href="structstring__tools_1_1search__it.html">search_it</a> const &amp;b)</td></tr>
 <tr class="separator:a8a767408e05473fa35a3fbfd34f7283a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7707425b8a62bf2843b109e1c2252539"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a7707425b8a62bf2843b109e1c2252539">operator&lt;</a> (<a class="el" href="structstring__tools_1_1search__it.html">search_it</a> const &amp;a, <a class="el" href="structstring__tools_1_1search__it.html">search_it</a> const &amp;b)</td></tr>
 <tr class="separator:a7707425b8a62bf2843b109e1c2252539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23c0a14c29900fc7ded3e66466dd04e9"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:a23c0a14c29900fc7ded3e66466dd04e9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a23c0a14c29900fc7ded3e66466dd04e9">search_ra</a> (const string &amp;t, const string &amp;s)</td></tr>
-<tr class="separator:a23c0a14c29900fc7ded3e66466dd04e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a937559545ed9e49347ad5e0d0678f653"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a937559545ed9e49347ad5e0d0678f653"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a937559545ed9e49347ad5e0d0678f653">search_ra</a> (const string &amp;text, const string &amp;substring)</td></tr>
+<tr class="memdesc:a937559545ed9e49347ad5e0d0678f653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a range containing all the start indices of matches of s in t.  <a href="namespacestring__tools.html#a937559545ed9e49347ad5e0d0678f653">More...</a><br /></td></tr>
+<tr class="separator:a937559545ed9e49347ad5e0d0678f653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af59e7388a466fccce148991db2eb61db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpermutation_1_1Permutation.html">Permutation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#af59e7388a466fccce148991db2eb61db">suffix_array</a> (string str)</td></tr>
 <tr class="separator:af59e7388a466fccce148991db2eb61db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2034667d39d31db823e82b7c0270d56c"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="structll.html">ll</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestring__tools.html#a2034667d39d31db823e82b7c0270d56c">lcp_array</a> (const string &amp;str, const <a class="el" href="classpermutation_1_1Permutation.html">Permutation</a> &amp;suffix_arr)</td></tr>
@@ -172,14 +177,12 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a2034667d39d31db823e82b7c0270d56c_cgraph.svg" width="286" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a2034667d39d31db823e82b7c0270d56c_cgraph.svg" width="286" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a2034667d39d31db823e82b7c0270d56c_icgraph.svg" width="579" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a2034667d39d31db823e82b7c0270d56c_icgraph.svg" width="579" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -240,8 +243,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af4bef53432a2dea7421e61675cbd1d65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4bef53432a2dea7421e61675cbd1d65">&#9670;&nbsp;</a></span>prefix()</h2>
+<a id="aa2d2ff6ae0b78a477290f34ca8755e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d2ff6ae0b78a477290f34ca8755e78">&#9670;&nbsp;</a></span>prefix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,23 +253,23 @@ Here is the caller graph for this function:</div>
           <td class="memname">vector&lt;<a class="el" href="structll.html">ll</a>&gt; string_tools::prefix </td>
           <td>(</td>
           <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
+          <td class="paramname"><em>substring</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns prefix function of string s </p>
+
+<p>Returns prefix function of string s. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_aa2d2ff6ae0b78a477290f34ca8755e78_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a314ab0a3b3f972a1af0b738851323829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a314ab0a3b3f972a1af0b738851323829">&#9670;&nbsp;</a></span>search_all()</h2>
+<a id="a84505cf4aa04e720ec0807e413ce6437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84505cf4aa04e720ec0807e413ce6437">&#9670;&nbsp;</a></span>search_all()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,14 +277,14 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">auto string_tools::search_all </td>
           <td>(</td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>substring</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -290,24 +293,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Find all substrings of t equal to s. Returns list of start index for each match. s must be a nonempty string </p>
+
+<p>Find all substrings of text equal to substring. </p>
+<p>Returns list of start index for each match. s must be a nonempty string </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a314ab0a3b3f972a1af0b738851323829_cgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437_cgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a314ab0a3b3f972a1af0b738851323829_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a23c0a14c29900fc7ded3e66466dd04e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23c0a14c29900fc7ded3e66466dd04e9">&#9670;&nbsp;</a></span>search_ra()</h2>
+<a id="a937559545ed9e49347ad5e0d0678f653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937559545ed9e49347ad5e0d0678f653">&#9670;&nbsp;</a></span>search_ra()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,13 +321,13 @@ template&lt;typename... Ts&gt; </div>
           <td class="memname">auto string_tools::search_ra </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
+          <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
+          <td class="paramname"><em>substring</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -333,11 +336,12 @@ template&lt;typename... Ts&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a range containing all the start indices of matches of s in t. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_a937559545ed9e49347ad5e0d0678f653_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -360,14 +364,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_af59e7388a466fccce148991db2eb61db_cgraph.svg" width="548" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_af59e7388a466fccce148991db2eb61db_cgraph.svg" width="548" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_af59e7388a466fccce148991db2eb61db_icgraph.svg" width="555" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacestring__tools_af59e7388a466fccce148991db2eb61db_icgraph.svg" width="555" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

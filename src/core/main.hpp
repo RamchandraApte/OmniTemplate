@@ -1,6 +1,10 @@
+// Useful code for competitive programming
 #pragma once
 #include "core/all.hpp"
 #include "time.hpp"
+
+string yesno(const bool b) { return b ? "Yes" : "No"; }
+
 struct set_multitest {
 	inline static bool multitest{};
 	explicit set_multitest(const bool val = true) { multitest = val; }

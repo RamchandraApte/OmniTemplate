@@ -80,7 +80,7 @@ auto shortest_dist(matrix<ll> const &graph) {
 	}
 	return d;
 }
-/*! Returns the minimum spanning forest of the set of edges es, as a set of edges*/
+/** @brief Returns the minimum spanning forest of the set of edges es, as a set of edges*/
 auto mst(vector<edge> edges, const ll n) {
 	sort(al(edges));
 	dsu d{n};

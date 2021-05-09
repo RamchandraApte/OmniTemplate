@@ -2,7 +2,6 @@ var linear__algebra_8hpp =
 [
     [ "matrix", "structlinear__algebra_1_1matrix.html", "structlinear__algebra_1_1matrix" ],
     [ "det", "linear__algebra_8hpp.html#ab7a7f1a8ba225710625d5af10f317b6a", null ],
-    [ "foo", "linear__algebra_8hpp.html#aae153cb33e635039a84c8f6ebeed9b04", null ],
     [ "gauss", "linear__algebra_8hpp.html#aa35d330ed1d66664b874fc261902c7b5", null ],
     [ "identity", "linear__algebra_8hpp.html#a30be90e8c8b57bcd04237e9b1d5b2fe9", null ],
     [ "identity", "linear__algebra_8hpp.html#aac11793366a8aa7d2396775fdb1ba8ca", null ],

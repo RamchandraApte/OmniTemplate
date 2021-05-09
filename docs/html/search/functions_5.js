@@ -9,7 +9,6 @@ var searchData=
   ['find_5fnode_849',['find_node',['../structstring__tools_1_1Trie.html#a219e9e60d7843d09a2e4d2ee54b733ee',1,'string_tools::Trie']]],
   ['find_5froot_850',['find_root',['../namespacelink__cut.html#a3cb07576c29a6d57e510b41c59832ef4',1,'link_cut']]],
   ['fix_851',['fix',['../structutility_1_1fix.html#a0dc72e4b470b6c975318e9127706510f',1,'utility::fix']]],
-  ['foo_852',['foo',['../namespacelinear__algebra.html#aae153cb33e635039a84c8f6ebeed9b04',1,'foo():&#160;linear_algebra.hpp'],['../namespacelinear__algebra.html#aae153cb33e635039a84c8f6ebeed9b04',1,'linear_algebra::foo()']]],
-  ['front_853',['front',['../classqueue__tools_1_1QueueAdaptor.html#a603c22db9148d592426c73e53ad88178',1,'queue_tools::QueueAdaptor::front() const'],['../classqueue__tools_1_1QueueAdaptor.html#ac807754cdc69adb7dcfd12c02a21d7cb',1,'queue_tools::QueueAdaptor::front()']]],
-  ['func_5fpath_854',['func_path',['../classhld_1_1HLD.html#ace75fa88e8df29573405e9241c56baf0',1,'hld::HLD']]]
+  ['front_852',['front',['../classqueue__tools_1_1QueueAdaptor.html#a603c22db9148d592426c73e53ad88178',1,'queue_tools::QueueAdaptor::front() const'],['../classqueue__tools_1_1QueueAdaptor.html#ac807754cdc69adb7dcfd12c02a21d7cb',1,'queue_tools::QueueAdaptor::front()']]],
+  ['func_5fpath_853',['func_path',['../classhld_1_1HLD.html#ace75fa88e8df29573405e9241c56baf0',1,'hld::HLD']]]
 ];

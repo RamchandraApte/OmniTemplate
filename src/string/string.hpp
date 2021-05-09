@@ -2,7 +2,7 @@
 #include "core/all.hpp"
 #include "number_theory/modulo.hpp"
 inline namespace string_tools {
-/*! Fast rolling hash on a specific string's substrings.
+/** @brief Fast rolling hash on a specific string's substrings.
  *
  * Time complexity: \f$O(n)\f$ to build, \f$O(1)\f$ to query.
  */
@@ -32,9 +32,9 @@ struct hash_str {
 		return ll((h[l + v.size()] - h[l]) * p[l]);
 	}
 };
-/*! Hashes the bytes in an object.
+/** @brief Hashes the bytes in an object.
  *
- * NOTE: not sure if this is really standards-compliant
+ * @warning not sure if this is really standards-compliant
  */
 struct bytehash {
 	template <typename T> constexpr auto operator()(const T &x) const {
@@ -42,13 +42,13 @@ struct bytehash {
 		    string_view{reinterpret_cast<const char *>(&x), sizeof(x)});
 	}
 };
-/*! Returns prefix function of string s*/
-vector<ll> prefix(string const &s) {
-	ll n = s.size();
+/** @brief Returns prefix function of string s*/
+vector<ll> prefix(string const &substring) {
+	ll n = substring.size();
 	vector<ll> p(n);
 	fo(i, 1, n) {
 		for (ll j = p[i - 1];; j = p[j - 1]) {
-			if (s[j] == s[i]) {
+			if (substring[j] == substring[i]) {
 				p[i] = j + 1;
 				break;
 			}
@@ -59,44 +59,45 @@ vector<ll> prefix(string const &s) {
 	}
 	return p;
 }
-/*! Find all substrings of t equal to s. Returns list of start index for each match. s must be a
- * nonempty string*/
-auto search_all(string const &t, string const &s) {
-	assert(!s.empty());
-	auto p = prefix(s + '\0' + t);
+/** @brief Find all substrings of text equal to substring.
+ * Returns list of start index for each match. s must be a nonempty string
+ */
+auto search_all(const string &text, const string &substring) {
+	assert(!substring.empty());
+	auto p = prefix(substring + '\0' + text);
 	vector<ll> v;
-	fo(i, t.size()) {
-		if (p[s.size() + 1 + i] == s.size()) {
-			v.push_back(i + 1 - s.size());
+	fo(i, text.size()) {
+		if (p[substring.size() + 1 + i] == substring.size()) {
+			v.push_back(i + 1 - substring.size());
 		}
 	}
 	return v;
 }
 
 /*! @brief Search iterator for looping through all matches of a string s in t using KMP.
- *  Complexity: \f$O(n)\f$, where is the length between subsequent matches.
+ *  Complexity: \f$O(n)\f$ for incrementing, where \f$n\f$ is the length between subsequent matches.
  */
 struct search_it : it_base<ll> {
 	using iterator_category = input_iterator_tag;
-	const string t, s;
+	const string text, substring;
 	const ll n{}, ed{};
 	vector<ll> p;
 	ll i = 0, o = 0;
 	explicit search_it(string const &t_, string const &s_)
-	    : t(t_), s(s_), n(s.size()), ed(n + 1 + t.size()), p(n) {
+	    : text(t_), substring(s_), n(substring.size()), ed(n + 1 + text.size()), p(n) {
 		++*this;
 	}
 	explicit search_it(const ll i_) : i(i_) {}
 	auto operator*() {
 		assert(n);
-		return i - n - s.size();
+		return i - n - substring.size();
 	}
 	void operator++() {
 		assert(i < ed);
 		for (++i; i < ed; ++i) {
-			auto cur = i <= n ? s.c_str()[i] : t[i - (n + 1)];
+			auto cur = i <= n ? substring.c_str()[i] : text[i - (n + 1)];
 			for (ll j = o;; j = p[j - 1]) {
-				if (s[j] == cur) {
+				if (substring[j] == cur) {
 					o = j + 1;
 					break;
 				}
@@ -116,9 +117,10 @@ struct search_it : it_base<ll> {
 };
 bool operator==(search_it const &a, search_it const &b) { return a.i == b.i; }
 bool operator<(search_it const &a, search_it const &b) { return a.i < b.i; }
-template <typename... Ts> auto search_ra(const string &t, const string &s) {
-	auto start = search_it(t, s);
-	return range{start, search_it(start.ed)};
+/** @brief Returns a range containing all the start indices of matches of s in t */
+template <typename... Ts> auto search_ra(const string &text, const string &substring) {
+	auto start = search_it{text, substring};
+	return range{start, search_it{start.ed}};
 }
 } // namespace string_tools
 using namespace string_tools;

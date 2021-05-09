@@ -9,26 +9,26 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structstring__tools_1_1bytehash}{bytehash}}
-\item 
+\begin{DoxyCompactList}\small\item\em Hashes the bytes in an object. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structstring__tools_1_1hash__str}{hash\+\_\+str}}
-\item 
+\begin{DoxyCompactList}\small\item\em Fast rolling hash on a specific string\textquotesingle{}s substrings. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}}
-\begin{DoxyCompactList}\small\item\em Search iterator for looping through all matches of a string s in t using K\+MP. Complexity\+: $O(n)$, where is the length between subsequent matches. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Search iterator for looping through all matches of a string s in t using K\+MP. Complexity\+: $O(n)$ for incrementing, where $n$ is the length between subsequent matches. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structstring__tools_1_1Trie}{Trie}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}{prefix}} (string const \&s)
-\item 
-auto \mbox{\hyperlink{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}{search\+\_\+all}} (string const \&t, string const \&s)
-\item 
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_aa2d2ff6ae0b78a477290f34ca8755e78}{prefix}} (string const \&substring)
+\begin{DoxyCompactList}\small\item\em Returns prefix function of string s. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437}{search\+\_\+all}} (const string \&text, const string \&substring)
+\begin{DoxyCompactList}\small\item\em Find all substrings of text equal to substring. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacestring__tools_a8a767408e05473fa35a3fbfd34f7283a}{operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
 bool \mbox{\hyperlink{namespacestring__tools_a7707425b8a62bf2843b109e1c2252539}{operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
-{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9}{search\+\_\+ra}} (const string \&t, const string \&s)
-\item 
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a937559545ed9e49347ad5e0d0678f653}{search\+\_\+ra}} (const string \&text, const string \&substring)
+\begin{DoxyCompactList}\small\item\em Returns a range containing all the start indices of matches of s in t. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \mbox{\hyperlink{namespacestring__tools_af59e7388a466fccce148991db2eb61db}{suffix\+\_\+array}} (string str)
 \item 
 vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_a2034667d39d31db823e82b7c0270d56c}{lcp\+\_\+array}} (const string \&str, const \mbox{\hyperlink{classpermutation_1_1Permutation}{Permutation}} \&suffix\+\_\+arr)
@@ -68,51 +68,63 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool string\+\_\+tools\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{a,  }\item[{\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&}]{b }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}\label{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}} 
+\mbox{\Hypertarget{namespacestring__tools_aa2d2ff6ae0b78a477290f34ca8755e78}\label{namespacestring__tools_aa2d2ff6ae0b78a477290f34ca8755e78}} 
 \index{string\_tools@{string\_tools}!prefix@{prefix}}
 \index{prefix@{prefix}!string\_tools@{string\_tools}}
 \doxysubsubsection{\texorpdfstring{prefix()}{prefix()}}
-{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structll}{ll}}$>$ string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structll}{ll}}$>$ string\+\_\+tools\+::prefix (\begin{DoxyParamCaption}\item[{string const \&}]{substring }\end{DoxyParamCaption})}
 
-Returns prefix function of string s Here is the caller graph for this function\+:\nopagebreak
+
+
+Returns prefix function of string s. 
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65_icgraph}
+\includegraphics[width=350pt]{namespacestring__tools_aa2d2ff6ae0b78a477290f34ca8755e78_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}\label{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}} 
+\mbox{\Hypertarget{namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437}\label{namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437}} 
 \index{string\_tools@{string\_tools}!search\_all@{search\_all}}
 \index{search\_all@{search\_all}!string\_tools@{string\_tools}}
 \doxysubsubsection{\texorpdfstring{search\_all()}{search\_all()}}
-{\footnotesize\ttfamily auto string\+\_\+tools\+::search\+\_\+all (\begin{DoxyParamCaption}\item[{string const \&}]{t,  }\item[{string const \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto string\+\_\+tools\+::search\+\_\+all (\begin{DoxyParamCaption}\item[{const string \&}]{text,  }\item[{const string \&}]{substring }\end{DoxyParamCaption})}
 
-Find all substrings of t equal to s. Returns list of start index for each match. s must be a nonempty string Here is the call graph for this function\+:\nopagebreak
+
+
+Find all substrings of text equal to substring. 
+
+Returns list of start index for each match. s must be a nonempty string Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829_cgraph}
+\includegraphics[width=350pt]{namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829_icgraph}
+\includegraphics[width=350pt]{namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9}\label{namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9}} 
+\mbox{\Hypertarget{namespacestring__tools_a937559545ed9e49347ad5e0d0678f653}\label{namespacestring__tools_a937559545ed9e49347ad5e0d0678f653}} 
 \index{string\_tools@{string\_tools}!search\_ra@{search\_ra}}
 \index{search\_ra@{search\_ra}!string\_tools@{string\_tools}}
 \doxysubsubsection{\texorpdfstring{search\_ra()}{search\_ra()}}
 {\footnotesize\ttfamily template$<$typename... Ts$>$ \\
-auto string\+\_\+tools\+::search\+\_\+ra (\begin{DoxyParamCaption}\item[{const string \&}]{t,  }\item[{const string \&}]{s }\end{DoxyParamCaption})}
+auto string\+\_\+tools\+::search\+\_\+ra (\begin{DoxyParamCaption}\item[{const string \&}]{text,  }\item[{const string \&}]{substring }\end{DoxyParamCaption})}
+
+
+
+Returns a range containing all the start indices of matches of s in t. 
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9_icgraph}
+\includegraphics[width=350pt]{namespacestring__tools_a937559545ed9e49347ad5e0d0678f653_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespacestring__tools_af59e7388a466fccce148991db2eb61db}\label{namespacestring__tools_af59e7388a466fccce148991db2eb61db}} 

@@ -20,11 +20,11 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structstring__tools_1_1hash__str}{string\+\_\+tools\+::hash\+\_\+str}}
-\item 
+\begin{DoxyCompactList}\small\item\em Fast rolling hash on a specific string\textquotesingle{}s substrings. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structstring__tools_1_1bytehash}{string\+\_\+tools\+::bytehash}}
-\item 
+\begin{DoxyCompactList}\small\item\em Hashes the bytes in an object. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structstring__tools_1_1search__it}{string\+\_\+tools\+::search\+\_\+it}}
-\begin{DoxyCompactList}\small\item\em Search iterator for looping through all matches of a string s in t using K\+MP. Complexity\+: $O(n)$, where is the length between subsequent matches. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Search iterator for looping through all matches of a string s in t using K\+MP. Complexity\+: $O(n)$ for incrementing, where $n$ is the length between subsequent matches. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,13 +33,13 @@ struct \mbox{\hyperlink{structstring__tools_1_1search__it}{string\+\_\+tools\+::
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_af4bef53432a2dea7421e61675cbd1d65}{string\+\_\+tools\+::prefix}} (string const \&s)
-\item 
-auto \mbox{\hyperlink{namespacestring__tools_a314ab0a3b3f972a1af0b738851323829}{string\+\_\+tools\+::search\+\_\+all}} (string const \&t, string const \&s)
-\item 
+vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{namespacestring__tools_aa2d2ff6ae0b78a477290f34ca8755e78}{string\+\_\+tools\+::prefix}} (string const \&substring)
+\begin{DoxyCompactList}\small\item\em Returns prefix function of string s. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{namespacestring__tools_a84505cf4aa04e720ec0807e413ce6437}{string\+\_\+tools\+::search\+\_\+all}} (const string \&text, const string \&substring)
+\begin{DoxyCompactList}\small\item\em Find all substrings of text equal to substring. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacestring__tools_a8a767408e05473fa35a3fbfd34f7283a}{string\+\_\+tools\+::operator==}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
 bool \mbox{\hyperlink{namespacestring__tools_a7707425b8a62bf2843b109e1c2252539}{string\+\_\+tools\+::operator$<$}} (\mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&a, \mbox{\hyperlink{structstring__tools_1_1search__it}{search\+\_\+it}} const \&b)
 \item 
-{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a23c0a14c29900fc7ded3e66466dd04e9}{string\+\_\+tools\+::search\+\_\+ra}} (const string \&t, const string \&s)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename... Ts$>$ }\\auto \mbox{\hyperlink{namespacestring__tools_a937559545ed9e49347ad5e0d0678f653}{string\+\_\+tools\+::search\+\_\+ra}} (const string \&text, const string \&substring)
+\begin{DoxyCompactList}\small\item\em Returns a range containing all the start indices of matches of s in t. \end{DoxyCompactList}\end{DoxyCompactItemize}

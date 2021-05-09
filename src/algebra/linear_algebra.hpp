@@ -6,14 +6,14 @@
 // TODO Tensors? Also, matrix_row class.
 // TODO fix default constructor causing segfault
 inline namespace linear_algebra {
+/** @brief Matrix class*/
 template <typename T> struct matrix {
-	/*! Matrix class*/
 	ll rows_n, cols_n; //!< Row, column
 	vector<T> a;	   //! Array storing the data, in row-major order
 	explicit matrix(ll r_, ll c_, T v = {}) : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) {
 		assert(rows_n >= 1 && cols_n >= 1);
 	}
-	explicit matrix(T d) : rows_n(1), cols_n(1), a{d} {}
+	explicit matrix(T d) : rows_n{1}, cols_n{1}, a{d} {}
 	explicit matrix(vector<vector<pr>> const &g) : matrix(g.size(), g.size(), inf) {
 		fo(i, rows_n) {
 			for (const auto &p : g[i]) {
@@ -34,6 +34,7 @@ template <typename T> struct matrix {
 		return const_cast<T *>(const_cast<matrix const &>(*this)[i]);
 	}
 	auto operator[](const ll i) const { return &a[i * cols_n]; }
+	/** @brief Returns true if matrix is a square matrix */
 	bool is_square() const { return rows_n == cols_n; }
 };
 template <typename T> auto identity(const plus<>, const matrix<T> &mat) {
@@ -60,11 +61,12 @@ template <typename... Ts> auto operator-(const matrix<Ts...> &a) {
 	}
 	return c;
 }
+/** @brief Returns whether matrix A,B are equal.*/
 template <typename... Ts> bool operator==(matrix<Ts...> const &a, matrix<Ts...> const &b) {
 	return a.rows_n == b.rows_n && a.cols_n == b.cols_n && a.a == b.a;
 }
+/** @brief Returns the matrix product of a and b*/
 template <typename... Ts> auto operator*(matrix<Ts...> const &a, matrix<Ts...> const &b) {
-	/*! Returns the matrix product of a and b*/
 	assert(a.cols_n == b.rows_n);
 	matrix<Ts...> c{a.rows_n, b.cols_n};
 	fo(i, c.rows_n) {
@@ -74,9 +76,7 @@ template <typename... Ts> auto operator*(matrix<Ts...> const &a, matrix<Ts...> c
 	}
 	return c;
 }
-/*! Test func*/
-ll foo(ll a, ll b) { return a + b; }
-/*! @brief Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
+/** @brief Returns matrix x such that \f$ax = b\f$ and the determinant of \f$a\f$
 via Gaussian elimination.
 */
 template <typename T> pair<matrix<T>, T> gauss(matrix<T> b, matrix<T> a) {
@@ -101,19 +101,20 @@ template <typename T> pair<matrix<T>, T> gauss(matrix<T> b, matrix<T> a) {
 	}
 	return {move(b), det};
 }
+/** @brief Returns inverse of the matrix */
 template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) {
 	return identity(multiplies<>{}, a) / a;
 }
+/** @brief Returns \f$a^{-1}b\f$*/
 template <typename... Ts> auto operator/(const matrix<Ts...> &b, const matrix<Ts...> &a) {
-	/*! Returns \f$a^{-1}b\f$*/
 	return gauss(b, a).first;
 }
+/** @brief Returns the determinant of matrix a*/
 template <typename T> T det(const matrix<T> &a) {
-	/*! Returns the determinant of matrix a*/
 	return gauss(matrix<T>(a.rows_n, 1), a).second;
 }
+/** @brief Print the matrix rows, line by line*/
 template <typename Stream, typename... Ts> auto &operator<<(Stream &os, matrix<Ts...> const &m) {
-	/*! Print the matrix rows, line by line*/
 	os << simple_tp(m) << endl;
 	fo(i, m.rows_n) {
 		copy(m[i], m[i] + m.cols_n, make_ostream_joiner(os, delim));
@@ -121,9 +122,9 @@ template <typename Stream, typename... Ts> auto &operator<<(Stream &os, matrix<T
 	}
 	return os << "}";
 }
+/*! @brief Returns nth term of linear recurrence described by c. \f$x(i) =
+ * x_{i-1}c_0 + x_{i-2}c_1 + \dots \f$ and \f$x(0) = 1\f$*/
 template <typename T> auto lin_recur(vector<T> const &c, const ll n) {
-	/*! Returns nth term of linear recurrence described by c. \f$x(i) =
-	 * x_{i-1}c_0 + x_{i-2}c_1 + \dots \f$ and \f$x(0) = 1\f$*/
 	// TODO support constant term
 	matrix<T> m(size(c), size(c));
 	copy(al(c), m[0]);

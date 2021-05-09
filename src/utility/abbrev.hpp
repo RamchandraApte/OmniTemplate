@@ -1,8 +1,8 @@
 #pragma once
 /** @brief Abbreviations for various types. Useful for competitive programming. */
-#define I(x)                                                                                       \
-	ll x;                                                                                      \
-	cin >> x;
+#define I(...)                                                                                     \
+	ll __VA_ARGS__;                                                                            \
+	read(__VA_ARGS__)
 #define pb push_back
 #define vc vector
 let(vl, vector<ll>);

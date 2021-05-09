@@ -8,49 +8,50 @@
     <innerclass refid="structstring__tools_1_1Trie" prot="public">string_tools::Trie</innerclass>
     <innernamespace refid="namespacestring__tools_1_1test">string_tools::test</innernamespace>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacestring__tools_1af4bef53432a2dea7421e61675cbd1d65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacestring__tools_1aa2d2ff6ae0b78a477290f34ca8755e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
         <definition>vector&lt;ll&gt; string_tools::prefix</definition>
-        <argsstring>(string const &amp;s)</argsstring>
+        <argsstring>(string const &amp;substring)</argsstring>
         <name>prefix</name>
         <param>
           <type>string const &amp;</type>
-          <declname>s</declname>
+          <declname>substring</declname>
         </param>
         <briefdescription>
+<para>Returns prefix function of string s. </para>
         </briefdescription>
         <detaileddescription>
-<para>Returns prefix function of string s </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="46" column="8" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="46" bodyend="61"/>
         <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
-        <referencedby refid="namespacestring__tools_1a314ab0a3b3f972a1af0b738851323829" compoundref="string_8hpp" startline="64" endline="74">search_all</referencedby>
+        <referencedby refid="namespacestring__tools_1a84505cf4aa04e720ec0807e413ce6437" compoundref="string_8hpp" startline="65" endline="75">search_all</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespacestring__tools_1a314ab0a3b3f972a1af0b738851323829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacestring__tools_1a84505cf4aa04e720ec0807e413ce6437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
         <definition>auto string_tools::search_all</definition>
-        <argsstring>(string const &amp;t, string const &amp;s)</argsstring>
+        <argsstring>(const string &amp;text, const string &amp;substring)</argsstring>
         <name>search_all</name>
         <param>
-          <type>string const &amp;</type>
-          <declname>t</declname>
+          <type>const string &amp;</type>
+          <declname>text</declname>
         </param>
         <param>
-          <type>string const &amp;</type>
-          <declname>s</declname>
+          <type>const string &amp;</type>
+          <declname>substring</declname>
         </param>
         <briefdescription>
+<para>Find all substrings of text equal to substring. </para>
         </briefdescription>
         <detaileddescription>
-<para>Find all substrings of t equal to s. Returns list of start index for each match. s must be a nonempty string </para>
+<para>Returns list of start index for each match. s must be a nonempty string </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="64" column="6" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="64" bodyend="74"/>
+        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="65" column="6" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="65" bodyend="75"/>
         <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
-        <references refid="namespacestring__tools_1af4bef53432a2dea7421e61675cbd1d65" compoundref="string_8hpp" startline="46" endline="61">prefix</references>
+        <references refid="namespacestring__tools_1aa2d2ff6ae0b78a477290f34ca8755e78" compoundref="string_8hpp" startline="46" endline="61">prefix</references>
         <referencedby refid="namespacestring__tools_1_1test_1a5b129e7acba109e81757a0f02f38da1b" compoundref="test__string_8hpp" startline="38" endline="41">string_tools::test::test_search_it_one</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacestring__tools_1a8a767408e05473fa35a3fbfd34f7283a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -72,8 +73,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="117" column="6" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="117" bodyend="117"/>
-        <references refid="structstring__tools_1_1search__it_1abbec6589aea3d745e199d755d85d554a" compoundref="string_8hpp" startline="84">string_tools::search_it::i</references>
+        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="118" column="6" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="118" bodyend="118"/>
+        <references refid="structstring__tools_1_1search__it_1abbec6589aea3d745e199d755d85d554a" compoundref="string_8hpp" startline="85">string_tools::search_it::i</references>
       </memberdef>
       <memberdef kind="function" id="namespacestring__tools_1a7707425b8a62bf2843b109e1c2252539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -94,10 +95,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="118" column="1" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="118" bodyend="118"/>
-        <references refid="structstring__tools_1_1search__it_1abbec6589aea3d745e199d755d85d554a" compoundref="string_8hpp" startline="84">string_tools::search_it::i</references>
+        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="119" column="1" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="119" bodyend="119"/>
+        <references refid="structstring__tools_1_1search__it_1abbec6589aea3d745e199d755d85d554a" compoundref="string_8hpp" startline="85">string_tools::search_it::i</references>
       </memberdef>
-      <memberdef kind="function" id="namespacestring__tools_1a23c0a14c29900fc7ded3e66466dd04e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacestring__tools_1a937559545ed9e49347ad5e0d0678f653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -107,23 +108,25 @@
         </templateparamlist>
         <type>auto</type>
         <definition>auto string_tools::search_ra</definition>
-        <argsstring>(const string &amp;t, const string &amp;s)</argsstring>
+        <argsstring>(const string &amp;text, const string &amp;substring)</argsstring>
         <name>search_ra</name>
         <param>
           <type>const string &amp;</type>
-          <declname>t</declname>
+          <declname>text</declname>
         </param>
         <param>
           <type>const string &amp;</type>
-          <declname>s</declname>
+          <declname>substring</declname>
         </param>
         <briefdescription>
+<para>Returns a range containing all the start indices of matches of s in t. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="119" column="18" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="119" bodyend="122"/>
+        <location file="/home/ram/OmniTemplate/src/string/string.hpp" line="121" column="18" bodyfile="/home/ram/OmniTemplate/src/string/string.hpp" bodystart="121" bodyend="124"/>
+        <references refid="structstring__tools_1_1search__it_1a87ec86b38282706ad524ea778ba728b0" compoundref="string_8hpp" startline="83">string_tools::search_it::ed</references>
         <referencedby refid="namespacestring__tools_1_1test_1a2c6d315516d609b40b8d8a7926b144f2" compoundref="test__string_8hpp" startline="33" endline="36">string_tools::test::search_it_all</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacestring__tools_1af59e7388a466fccce148991db2eb61db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
