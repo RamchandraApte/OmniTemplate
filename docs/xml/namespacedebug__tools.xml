@@ -3,6 +3,68 @@
   <compounddef id="namespacedebug__tools" kind="namespace" language="C++">
     <compoundname>debug_tools</compoundname>
       <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacedebug__tools_1a86be956fa32b1561058083e7b01b2f51" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto debug_tools::light_purple_color</definition>
+        <argsstring></argsstring>
+        <name>light_purple_color</name>
+        <initializer>= &quot;\e[1;35m&quot;sv</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="35" column="16" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="35" bodyend="-1"/>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="13" endline="46">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedebug__tools_1a77213b7ce5a3375feff8afcdeac9f79b" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto debug_tools::green_color</definition>
+        <argsstring></argsstring>
+        <name>green_color</name>
+        <initializer>= &quot;\e[1;32m&quot;sv</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="36" column="16" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="test_8cpp_1af095a232149097b5605064623a9345ac" compoundref="test_8cpp" startline="31" endline="61">main2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedebug__tools_1aa3268ab42e570407ee8673a3efef927f" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto debug_tools::red_color</definition>
+        <argsstring></argsstring>
+        <name>red_color</name>
+        <initializer>= &quot;\e[91m&quot;sv</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="37" column="16" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="37" bodyend="-1"/>
+        <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="40" endline="50">debug</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedebug__tools_1ab3deb90f50896c82829d7ff3dcf8e6d2" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto debug_tools::reset_color</definition>
+        <argsstring></argsstring>
+        <name>reset_color</name>
+        <initializer>= &quot;\e[0m&quot;sv</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="37" column="27" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="37" bodyend="-1"/>
+        <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="40" endline="50">debug</referencedby>
+        <referencedby refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8hpp" startline="13" endline="46">main</referencedby>
+        <referencedby refid="test_8cpp_1af095a232149097b5605064623a9345ac" compoundref="test_8cpp" startline="31" endline="61">main2</referencedby>
+      </memberdef>
       <memberdef kind="variable" id="namespacedebug__tools_1ab312673925f42718bafe74a18eae6685" prot="public" static="no" mutable="no">
         <type><ref refid="structll" kindref="compound">ll</ref></type>
         <definition>ll debug_tools::depth</definition>
@@ -15,8 +77,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="36" column="4" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="36" bodyend="-1"/>
-        <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="38" endline="48">debug</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="38" column="4" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="38" bodyend="-1"/>
+        <referencedby refid="namespacedebug__tools_1a4190b5d045c8cfeb1e9a7332d55d9374" compoundref="debug_8hpp" startline="40" endline="50">debug</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -42,8 +104,8 @@
         <inbodydescription>
 <para>Return the type name of the type of value</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="13" column="18" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="13" bodyend="18"/>
-        <referencedby refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="28" endline="35">simple_tp</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="12" column="18" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="12" bodyend="17"/>
+        <referencedby refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="27" endline="34">simple_tp</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -69,8 +131,8 @@
         <inbodydescription>
 <para>Replace all occurences of a in s with b</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="19" column="6" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="19" bodyend="27"/>
-        <referencedby refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="28" endline="35">simple_tp</referencedby>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="18" column="6" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="18" bodyend="26"/>
+        <referencedby refid="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" compoundref="debug_8hpp" startline="27" endline="34">simple_tp</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacedebug__tools_1a3aa6fe2ec65b64f87ad431efde3822c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -94,10 +156,10 @@
         <inbodydescription>
 <para>Return the simplified type of v</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="28" column="18" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="28" bodyend="35"/>
-        <references refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" compoundref="core_2all_8hpp" startline="80">lets</references>
-        <references refid="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" compoundref="debug_8hpp" startline="19" endline="27">replace</references>
-        <references refid="namespacedebug__tools_1a991f9f01ab3a0e664fabf0bd17fab95c" compoundref="debug_8hpp" startline="13" endline="18">type_name</references>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="27" column="18" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="27" bodyend="34"/>
+        <references refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" compoundref="core_2all_8hpp" startline="88">lets</references>
+        <references refid="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" compoundref="debug_8hpp" startline="18" endline="26">replace</references>
+        <references refid="namespacedebug__tools_1a991f9f01ab3a0e664fabf0bd17fab95c" compoundref="debug_8hpp" startline="12" endline="17">type_name</references>
         <referencedby refid="io_8hpp_1a40cf53faa8f3a9512c4dad9945ecb425" compoundref="io_8hpp" startline="47" endline="49">std::operator&lt;&lt;</referencedby>
         <referencedby refid="namespacelinear__algebra_1a453fd75a1c2a470143f42979d102abe1" compoundref="linear__algebra_8hpp" startline="117" endline="124">linear_algebra::operator&lt;&lt;</referencedby>
       </memberdef>
@@ -131,11 +193,13 @@
         <inbodydescription>
 <para>Debug print x</para>
         </inbodydescription>
-        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="38" column="6" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="38" bodyend="48"/>
-        <references refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" compoundref="core_2all_8hpp" startline="75">cerr</references>
-        <references refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" compoundref="core_2all_8hpp" startline="58">debug_mode</references>
-        <references refid="namespacedebug__tools_1ab312673925f42718bafe74a18eae6685" compoundref="debug_8hpp" startline="36">depth</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="40" column="6" bodyfile="/home/ram/OmniTemplate/src/core/debug.hpp" bodystart="40" bodyend="50"/>
+        <references refid="core_2all_8hpp_1ad8a867e2e93131cb4d4afbedcd38245a" compoundref="core_2all_8hpp" startline="83">cerr</references>
+        <references refid="core_2all_8hpp_1aa021995764a0c77f628e3411497239cc" compoundref="core_2all_8hpp" startline="66">debug_mode</references>
+        <references refid="namespacedebug__tools_1ab312673925f42718bafe74a18eae6685" compoundref="debug_8hpp" startline="38">depth</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
+        <references refid="namespacedebug__tools_1aa3268ab42e570407ee8673a3efef927f" compoundref="debug_8hpp" startline="37">red_color</references>
+        <references refid="namespacedebug__tools_1ab3deb90f50896c82829d7ff3dcf8e6d2" compoundref="debug_8hpp" startline="37">reset_color</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -143,6 +207,6 @@
     <detaileddescription>
 <para>Debugging tools </para>
     </detaileddescription>
-    <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="12" column="1"/>
+    <location file="/home/ram/OmniTemplate/src/core/debug.hpp" line="11" column="1"/>
   </compounddef>
 </doxygen>

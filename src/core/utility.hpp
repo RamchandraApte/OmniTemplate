@@ -87,8 +87,8 @@ ll power_ceil(const ll x, const ll base) {
 /*! @brief Returns the smallest exponent such that base raised to exponent is at least x*/
 ll log_ceil(const ll x, const ll base) {
 	ll pw = 1, cnt = 0;
-	for (; pw < x; pw *= base, ++cnt) {
-	}
+	for (; pw < x; pw *= base, ++cnt)
+		;
 	return cnt;
 }
 /** @brief next combination of bits

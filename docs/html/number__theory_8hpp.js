@@ -1,6 +1,7 @@
 var number__theory_8hpp =
 [
     [ "divisors", "number__theory_8hpp.html#a1dba9e869972ca1e250a48ddd5f8f72b", null ],
+    [ "divisors_sieve", "number__theory_8hpp.html#a660529d1ead17300b516d9aaf3fd233d", null ],
     [ "dlog", "number__theory_8hpp.html#a67527905c2b2c027c8b458902db2d05a", null ],
     [ "egcd", "number__theory_8hpp.html#aa6039763e84c50eb24fdee392c581898", null ],
     [ "fac", "number__theory_8hpp.html#a2be64a5779e00fe36e74d3496e92e64b", null ],

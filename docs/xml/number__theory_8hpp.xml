@@ -7,40 +7,40 @@
     <includedby refid="template_8hpp" local="yes">/home/ram/OmniTemplate/src/core/template.hpp</includedby>
     <includedby refid="test__number__theory_8hpp" local="yes">/home/ram/OmniTemplate/src/number_theory/test_number_theory.hpp</includedby>
     <incdepgraph>
-      <node id="29">
+      <node id="30">
         <label>modulo.hpp</label>
         <link refid="modulo_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>functional</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>queue</label>
       </node>
-      <node id="4">
+      <node id="5">
         <label>cassert</label>
       </node>
-      <node id="12">
+      <node id="13">
         <label>numeric</label>
       </node>
       <node id="23">
         <label>experimental/source_location</label>
       </node>
-      <node id="11">
+      <node id="12">
         <label>map</label>
       </node>
-      <node id="25">
+      <node id="26">
         <label>operations.hpp</label>
         <link refid="operations_8hpp"/>
-        <childnode refid="26" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>unordered_set</label>
       </node>
-      <node id="22">
+      <node id="24">
         <label>experimental/iterator</label>
       </node>
       <node id="1">
@@ -48,10 +48,10 @@
         <link refid="number__theory_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>fstream</label>
       </node>
       <node id="2">
@@ -101,75 +101,80 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-      </node>
-      <node id="14">
-        <label>random</label>
-      </node>
-      <node id="21">
-        <label>vector</label>
-      </node>
-      <node id="16">
-        <label>stack</label>
-      </node>
-      <node id="28">
-        <label>utility.hpp</label>
-        <link refid="utility_8hpp"/>
         <childnode refid="26" relation="include">
         </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
       </node>
-      <node id="26">
+      <node id="15">
+        <label>random</label>
+      </node>
+      <node id="4">
+        <label>bitset</label>
+      </node>
+      <node id="22">
+        <label>vector</label>
+      </node>
+      <node id="17">
+        <label>stack</label>
+      </node>
+      <node id="29">
+        <label>utility.hpp</label>
+        <link refid="utility_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
         <label>range.hpp</label>
         <link refid="range_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>utility</label>
       </node>
-      <node id="10">
+      <node id="11">
         <label>iostream</label>
       </node>
-      <node id="27">
+      <node id="28">
         <label>io.hpp</label>
         <link refid="io_8hpp"/>
-        <childnode refid="24" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>climits</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>chrono</label>
       </node>
-      <node id="17">
+      <node id="18">
         <label>thread</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>type_traits</label>
       </node>
-      <node id="15">
+      <node id="16">
         <label>set</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>complex</label>
       </node>
       <node id="3">
         <label>algorithm</label>
       </node>
-      <node id="24">
+      <node id="25">
         <label>debug.hpp</label>
         <link refid="debug_8hpp"/>
-        <childnode refid="25" relation="include">
-        </childnode>
         <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -212,6 +217,7 @@
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="4" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="4" bodyend="-1"/>
         <referencedby refid="number__theory_8hpp_1a02e886c6eb18cd3b8894ea2ba9ca9784" compoundref="number__theory_8hpp" startline="6" endline="32">prime</referencedby>
         <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</referencedby>
+        <referencedby refid="number__theory_8hpp_1a660529d1ead17300b516d9aaf3fd233d" compoundref="number__theory_8hpp" startline="166" endline="174">divisors_sieve</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -232,9 +238,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="6" column="6" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="6" bodyend="32"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="57">al</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="65">al</references>
         <references refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" compoundref="number__theory_8hpp" startline="4">divs</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
         <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="81" endline="83">permutation::power</references>
         <referencedby refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</referencedby>
         <referencedby refid="test__number__theory_8hpp_1a87d7c3ba2489977a16ec40544a918e00" compoundref="test__number__theory_8hpp" startline="2" endline="9">test_prime</referencedby>
@@ -256,9 +262,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="34" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="34" bodyend="49"/>
-        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="57">al</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" compoundref="core_2all_8hpp" startline="65">al</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
         <referencedby refid="test__number__theory_8hpp_1a3e935b9aca6e9dfa6b0a8ef9a4c7e153" compoundref="test__number__theory_8hpp" startline="10" endline="17">test_divisors</referencedby>
+        <referencedby refid="test__number__theory_8hpp_1a320864427b864922a67b50429db1932d" compoundref="test__number__theory_8hpp" startline="71" endline="76">test_divisors_sieve</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1ae8dd217fd3a3de037c6a1031aef548aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt;</type>
@@ -289,7 +296,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="56" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="56" bodyend="71"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
         <referencedby refid="test__number__theory_8hpp_1a8956d5feae5d2dd01656f6f960d568c7" compoundref="test__number__theory_8hpp" startline="18" endline="18">test_sieve</referencedby>
       </memberdef>
       <memberdef kind="function" id="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -371,7 +378,7 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="106" column="4" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="106" bodyend="113"/>
         <references refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</references>
-        <references refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" compoundref="combinatorics_8hpp" startline="9" endline="12">combinatorics::fact</references>
+        <references refid="namespacecombinatorics_1a20e5a1b40f76572aa1e18b228b6e4849" compoundref="combinatorics_8hpp" startline="10" endline="13">combinatorics::fact</references>
         <referencedby refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" compoundref="number__theory_8hpp" startline="117" endline="138">dlog</referencedby>
         <referencedby refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" compoundref="number__theory_8hpp" startline="141" endline="164">primitive_root</referencedby>
         <referencedby refid="test__number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" compoundref="test__number__theory_8hpp" startline="40" endline="43">test_totient</referencedby>
@@ -400,7 +407,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="117" column="4" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="117" bodyend="138"/>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
         <references refid="namespacemodulo__namespace_1a2507e89fefa09a358a9de729b15dd642" compoundref="modulo_8hpp" startline="29" endline="35">modulo_namespace::mod</references>
         <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="81" endline="83">permutation::power</references>
         <references refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="106" endline="113">totient</references>
@@ -420,10 +427,30 @@
         </inbodydescription>
         <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="141" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="141" bodyend="164"/>
         <references refid="number__theory_8hpp_1a2be64a5779e00fe36e74d3496e92e64b" compoundref="number__theory_8hpp" startline="76" endline="98">fac</references>
-        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="55">fo</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
         <references refid="namespacepermutation_1ade64590f0931d6f5d80521cdf52e4bed" compoundref="permutation_8hpp" startline="81" endline="83">permutation::power</references>
         <references refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" compoundref="number__theory_8hpp" startline="106" endline="113">totient</references>
         <referencedby refid="test__number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" compoundref="test__number__theory_8hpp" startline="60" endline="69">test_primitive_root</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="number__theory_8hpp_1a660529d1ead17300b516d9aaf3fd233d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; <ref refid="structll" kindref="compound">ll</ref> &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;ll&gt; &gt; divisors_sieve</definition>
+        <argsstring>(const ll n)</argsstring>
+        <name>divisors_sieve</name>
+        <param>
+          <type>const <ref refid="structll" kindref="compound">ll</ref></type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" line="166" column="8" bodyfile="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp" bodystart="166" bodyend="174"/>
+        <references refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" compoundref="number__theory_8hpp" startline="4">divs</references>
+        <references refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" compoundref="core_2all_8hpp" startline="63">fo</references>
+        <referencedby refid="test__number__theory_8hpp_1a320864427b864922a67b50429db1932d" compoundref="test__number__theory_8hpp" startline="71" endline="76">test_divisors_sieve</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -576,6 +603,16 @@
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>invalid_argument{</highlight><highlight class="stringliteral">&quot;M<sp/>has<sp/>no<sp/>primitive<sp/>root!&quot;</highlight><highlight class="normal">};</highlight></codeline>
 <codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="number__theory_8hpp_1a660529d1ead17300b516d9aaf3fd233d" refkind="member"><highlight class="normal">vector&lt;vector&lt;ll&gt;&gt;<sp/><ref refid="number__theory_8hpp_1a660529d1ead17300b516d9aaf3fd233d" kindref="member">divisors_sieve</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structll" kindref="compound">ll</ref><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;vector&lt;ll&gt;&gt;<sp/><ref refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" kindref="member">divs</ref>(n);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kindref="member">fo</ref>(i,<sp/>1,<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structll" kindref="compound">ll</ref><sp/>j<sp/>=<sp/>i;<sp/>j<sp/>&lt;<sp/>n;<sp/>j<sp/>+=<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" kindref="member">divs</ref>[j].push_back(i);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="number__theory_8hpp_1a1463d536aba4bb122d7fe13985968590" kindref="member">divs</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/ram/OmniTemplate/src/number_theory/number_theory.hpp"/>
   </compounddef>

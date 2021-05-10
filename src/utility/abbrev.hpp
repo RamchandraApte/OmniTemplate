@@ -5,6 +5,7 @@
 	read(__VA_ARGS__)
 #define pb push_back
 #define vc vector
+#define endl '\n'
 let(vl, vector<ll>);
 using bt = bitset<numeric_limits<ll>::digits>;
 let(um, unordered_map<ll, ll>);

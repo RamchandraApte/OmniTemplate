@@ -1,7 +1,8 @@
 \hypertarget{utility_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/core/utility.hpp File Reference}
 \label{utility_8hpp}\index{/home/ram/OmniTemplate/src/core/utility.hpp@{/home/ram/OmniTemplate/src/core/utility.hpp}}
 {\ttfamily \#include \char`\"{}range.\+hpp\char`\"{}}\newline
-Include dependency graph for utility.\+hpp\+:\nopagebreak
+Include dependency graph for utility.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,6 +23,8 @@ struct \mbox{\hyperlink{structutility_1_1with}{utility\+::with$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em Sets v to new\+\_\+ temporary while with object is alive. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1fix}{utility\+::fix$<$ Func $>$}}
 \begin{DoxyCompactList}\small\item\em Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classutility_1_1IdentityFunctor}{utility\+::\+Identity\+Functor}}
+\item 
 struct \mbox{\hyperlink{structutility_1_1ar}{utility\+::ar$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em Array convenience template. Converts C style array type to std\+::array type. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1ar_3_01T_0fn_0e_4}{utility\+::ar$<$ T\mbox{[}n\mbox{]}$>$}}
@@ -76,19 +79,23 @@ using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{utili
 \begin{DoxyCompactList}\small\item\em Returns the smallest exponent such that base raised to exponent is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{utility\+::next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \begin{DoxyCompactList}\small\item\em next combination of bits Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_a4c8a9d0142092c8f2255e518bfdf9dc4}{utility\+::sort2}} (T \&a, T \&b, const Func \&func)
+{\footnotesize template$<$typename T , typename Func  = Identity\+Functor$>$ }\\void \mbox{\hyperlink{namespaceutility_a7e6fc562b56aacfec4602b0b8f924223}{utility\+::sort2}} (T \&a, T \&b, const Func \&func=\{\})
 \begin{DoxyCompactList}\small\item\em Stable sorts a and b by func. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iter , typename Proj $>$ }\\void \mbox{\hyperlink{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383}{utility\+::counting\+\_\+sort}} (Iter a, Iter b, const Proj \&proj, const \mbox{\hyperlink{structll}{ll}} proj\+\_\+size)
 \item 
 {\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{utility\+::ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
-\item 
+\begin{DoxyCompactList}\small\item\em Returns signed value of std\+::size(cont) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespaceutility_a416532ff53790338172141074151fd05}{utility\+::valid\+\_\+idx}} (const vector$<$ T $>$ \&vec, const size\+\_\+t idx)
 \begin{DoxyCompactList}\small\item\em Return whether idx is a valid index for vec. Note that if idx is negative this returns false. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Input\+It $>$ }\\auto \mbox{\hyperlink{namespaceutility_aed2adcc88a8abb68fe298905798fa8ae}{utility\+::iterator\+\_\+identity}} ()
 \item 
 {\footnotesize template$<$typename Input\+It $>$ }\\decltype(auto) \mbox{\hyperlink{namespaceutility_a547ec88ecb50fe12150a8d293de2ce75}{utility\+::accumulate}} (Input\+It a, Input\+It b)
 \item 
+{\footnotesize template$<$typename Input\+It $>$ }\\decltype(auto) \mbox{\hyperlink{namespaceutility_aaac99ccf70ce4fb41b907d6ee08ec616}{utility\+::inner\+\_\+product}} (Input\+It a, Input\+It b, Input\+It c)
+\item 
 {\footnotesize template$<$typename Input\+It $>$ }\\auto \mbox{\hyperlink{namespaceutility_a9503cf05b32620d818c2ff7e3c5cb20c}{utility\+::get\+\_\+partial\+\_\+sum}} (Input\+It a, Input\+It b)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\decltype(auto) \mbox{\hyperlink{namespaceutility_afd69b1bdb0ca70e3137a52d6aca2c108}{utility\+::read}} (Ts \&...args)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}

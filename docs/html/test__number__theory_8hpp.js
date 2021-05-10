@@ -1,6 +1,7 @@
 var test__number__theory_8hpp =
 [
     [ "test_divisors", "test__number__theory_8hpp.html#a3e935b9aca6e9dfa6b0a8ef9a4c7e153", null ],
+    [ "test_divisors_sieve", "test__number__theory_8hpp.html#a320864427b864922a67b50429db1932d", null ],
     [ "test_dlog", "test__number__theory_8hpp.html#a7aac53ce82614d79c7098a1de32ed1e7", null ],
     [ "test_egcd", "test__number__theory_8hpp.html#a1764567e56d415f536db0a4aa89e782f", null ],
     [ "test_egcd", "test__number__theory_8hpp.html#ae2f84cd254fbf1373fc273141ce470ed", null ],

@@ -8,6 +8,7 @@ var core_2all_8hpp =
     [ "import", "core_2all_8hpp.html#a7796040cab730b2436f078c78d117cab", null ],
     [ "let", "core_2all_8hpp.html#a30d2d6ecdd50cafce635775b6e4e1cf2", null ],
     [ "lets_count", "core_2all_8hpp.html#a5f81e19fe0a4c7a463bf91e49e641270", null ],
+    [ "NDEBUG", "core_2all_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e", null ],
     [ "paste", "core_2all_8hpp.html#a396f7338a30cd5803df5ae220da88711", null ],
     [ "paste2", "core_2all_8hpp.html#a38dec4d2a6700e0c88ced9eeebb3dfaa", null ],
     [ "rel_assert", "core_2all_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db", null ],
@@ -23,7 +24,7 @@ var core_2all_8hpp =
     [ "ull", "core_2all_8hpp.html#aa5114a4fed348a29fb92123470476b1b", null ],
     [ "_l__COUNTER__", "core_2all_8hpp.html#aa3bd6940ab68cd10b31ac2ff2495ffab", null ],
     [ "debug_mode", "core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc", null ],
-    [ "delim", "core_2all_8hpp.html#a4d5579d5eb92e5c3234831659c6d02cf", null ],
+    [ "delim", "core_2all_8hpp.html#a6a2dbe8e1a58258f9060682cf7ea063b", null ],
     [ "inf", "core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca", null ],
     [ "lets", "core_2all_8hpp.html#a10aff294e2147e1cfe921bc2648b4399", null ],
     [ "tau", "core_2all_8hpp.html#a989a29f26fc8591b33ecf33d4d2c7029", null ]

@@ -33,6 +33,7 @@ template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
 	return s;
 }
 constexpr auto light_purple_color = "\e[1;35m"sv;
+constexpr auto green_color = "\e[1;32m"sv;
 constexpr auto red_color = "\e[91m"sv, reset_color = "\e[0m"sv;
 ll depth = -1;
 template <typename T>

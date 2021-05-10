@@ -1,6 +1,7 @@
 \hypertarget{core_2all_8hpp}{}\doxysection{/home/ram/\+Omni\+Template/src/core/all.hpp File Reference}
 \label{core_2all_8hpp}\index{/home/ram/OmniTemplate/src/core/all.hpp@{/home/ram/OmniTemplate/src/core/all.hpp}}
 {\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
 {\ttfamily \#include $<$cassert$>$}\newline
 {\ttfamily \#include $<$chrono$>$}\newline
 {\ttfamily \#include $<$climits$>$}\newline
@@ -19,14 +20,15 @@
 {\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
 {\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$experimental/iterator$>$}\newline
 {\ttfamily \#include $<$experimental/source\+\_\+location$>$}\newline
+{\ttfamily \#include $<$experimental/iterator$>$}\newline
 {\ttfamily \#include \char`\"{}debug.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}io.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}operations.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}range.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utility.\+hpp\char`\"{}}\newline
-Include dependency graph for all.\+hpp\+:\nopagebreak
+Include dependency graph for all.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -47,6 +49,8 @@ struct \mbox{\hyperlink{structlets__add}{lets\+\_\+add}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{core_2all_8hpp_a8de3ed741dadc9c979a4ff17c0a9116e}{N\+D\+E\+B\+UG}}
 \item 
 \#define \mbox{\hyperlink{core_2all_8hpp_a9d597f42af7d85fd96c46aa17cc610d9}{fo}}(i, ...)~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})
 \item 
@@ -102,7 +106,7 @@ vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{core_2all_8hpp_a10aff2
 \item 
 constexpr auto \mbox{\hyperlink{core_2all_8hpp_ab89b6ceb8bf54011eedd872b54361eca}{inf}} = \mbox{\hyperlink{structll}{ll}}(numeric\+\_\+limits$<$\mbox{\hyperlink{structll}{ll}}$>$\+::max()) / 8
 \item 
-auto const \mbox{\hyperlink{core_2all_8hpp_a4d5579d5eb92e5c3234831659c6d02cf}{delim}} = \char`\"{}, \char`\"{}s
+const auto \mbox{\hyperlink{core_2all_8hpp_a6a2dbe8e1a58258f9060682cf7ea063b}{delim}} = \char`\"{}, \char`\"{}s
 \item 
 constexpr auto \mbox{\hyperlink{core_2all_8hpp_a989a29f26fc8591b33ecf33d4d2c7029}{tau}} = 2 $\ast$ 3.\+1415926535897932384626433L
 \end{DoxyCompactItemize}
@@ -133,7 +137,7 @@ constexpr auto \mbox{\hyperlink{core_2all_8hpp_a989a29f26fc8591b33ecf33d4d2c7029
 \doxysubsubsection{\texorpdfstring{fo}{fo}}
 {\footnotesize\ttfamily \#define fo(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{... }\end{DoxyParamCaption})~for (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} const auto i \+: \mbox{\hyperlink{range_8hpp_a6288a170c5a67a2c0b45c858a043722a}{ra}}\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\})}
 
-Contains core files for the template \mbox{\Hypertarget{core_2all_8hpp_a7b724588414fb77283c807a1ad82313c}\label{core_2all_8hpp_a7b724588414fb77283c807a1ad82313c}} 
+\mbox{\Hypertarget{core_2all_8hpp_a7b724588414fb77283c807a1ad82313c}\label{core_2all_8hpp_a7b724588414fb77283c807a1ad82313c}} 
 \index{all.hpp@{all.hpp}!fr@{fr}}
 \index{fr@{fr}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{fr}{fr}}
@@ -169,7 +173,13 @@ Contains core files for the template \mbox{\Hypertarget{core_2all_8hpp_a7b724588
 \doxysubsubsection{\texorpdfstring{lets\_count}{lets\_count}}
 {\footnotesize\ttfamily \#define lets\+\_\+count~\mbox{\hyperlink{structlets__add}{lets\+\_\+add}} \mbox{\hyperlink{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}{paste}}(\+\_\+l, \+\_\+\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+\_\+)}
 
-\mbox{\Hypertarget{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}\label{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}} 
+\mbox{\Hypertarget{core_2all_8hpp_a8de3ed741dadc9c979a4ff17c0a9116e}\label{core_2all_8hpp_a8de3ed741dadc9c979a4ff17c0a9116e}} 
+\index{all.hpp@{all.hpp}!NDEBUG@{NDEBUG}}
+\index{NDEBUG@{NDEBUG}!all.hpp@{all.hpp}}
+\doxysubsubsection{\texorpdfstring{NDEBUG}{NDEBUG}}
+{\footnotesize\ttfamily \#define N\+D\+E\+B\+UG}
+
+Contains core files for the template \mbox{\Hypertarget{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}\label{core_2all_8hpp_a396f7338a30cd5803df5ae220da88711}} 
 \index{all.hpp@{all.hpp}!paste@{paste}}
 \index{paste@{paste}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{paste}{paste}}
@@ -272,11 +282,11 @@ using \mbox{\hyperlink{core_2all_8hpp_ac0b978e8ffc2c44656160a679f86e22a}{prio\+\
 \doxysubsubsection{\texorpdfstring{debug\_mode}{debug\_mode}}
 {\footnotesize\ttfamily bool debug\+\_\+mode = false}
 
-\mbox{\Hypertarget{core_2all_8hpp_a4d5579d5eb92e5c3234831659c6d02cf}\label{core_2all_8hpp_a4d5579d5eb92e5c3234831659c6d02cf}} 
+\mbox{\Hypertarget{core_2all_8hpp_a6a2dbe8e1a58258f9060682cf7ea063b}\label{core_2all_8hpp_a6a2dbe8e1a58258f9060682cf7ea063b}} 
 \index{all.hpp@{all.hpp}!delim@{delim}}
 \index{delim@{delim}!all.hpp@{all.hpp}}
 \doxysubsubsection{\texorpdfstring{delim}{delim}}
-{\footnotesize\ttfamily auto const delim = \char`\"{}, \char`\"{}s}
+{\footnotesize\ttfamily const auto delim = \char`\"{}, \char`\"{}s}
 
 Delimiter for debug output \mbox{\Hypertarget{core_2all_8hpp_ab89b6ceb8bf54011eedd872b54361eca}\label{core_2all_8hpp_ab89b6ceb8bf54011eedd872b54361eca}} 
 \index{all.hpp@{all.hpp}!inf@{inf}}

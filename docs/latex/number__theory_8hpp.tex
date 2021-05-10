@@ -2,7 +2,8 @@
 \label{number__theory_8hpp}\index{/home/ram/OmniTemplate/src/number\_theory/number\_theory.hpp@{/home/ram/OmniTemplate/src/number\_theory/number\_theory.hpp}}
 {\ttfamily \#include \char`\"{}core/all.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}modulo.\+hpp\char`\"{}}\newline
-Include dependency graph for number\+\_\+theory.\+hpp\+:\nopagebreak
+Include dependency graph for number\+\_\+theory.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +35,9 @@ void \mbox{\hyperlink{number__theory_8hpp_aa6039763e84c50eb24fdee392c581898}{egc
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}{dlog}} (const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} a, const \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} b)
 \begin{DoxyCompactList}\small\item\em Finds x such that a$^\wedge$x = b (mod M) using baby-\/step giant-\/step algorithm. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structmodulo__namespace_1_1modulo}{modulo}} \mbox{\hyperlink{number__theory_8hpp_a6542b189f3759f43899a8b1978d58e2c}{primitive\+\_\+root}} ()
-\begin{DoxyCompactList}\small\item\em Returns a primitive root modulo M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns a primitive root modulo M. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ $>$ \mbox{\hyperlink{number__theory_8hpp_a660529d1ead17300b516d9aaf3fd233d}{divisors\+\_\+sieve}} (const \mbox{\hyperlink{structll}{ll}} n)
+\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,11 +56,26 @@ vector$<$ \mbox{\hyperlink{structll}{ll}} $>$ \mbox{\hyperlink{number__theory_8h
 
 Return all divisors of x in sorted order. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{number__theory_8hpp_a1dba9e869972ca1e250a48ddd5f8f72b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{number__theory_8hpp_a660529d1ead17300b516d9aaf3fd233d}\label{number__theory_8hpp_a660529d1ead17300b516d9aaf3fd233d}} 
+\index{number\_theory.hpp@{number\_theory.hpp}!divisors\_sieve@{divisors\_sieve}}
+\index{divisors\_sieve@{divisors\_sieve}!number\_theory.hpp@{number\_theory.hpp}}
+\doxysubsubsection{\texorpdfstring{divisors\_sieve()}{divisors\_sieve()}}
+{\footnotesize\ttfamily vector$<$vector$<$\mbox{\hyperlink{structll}{ll}}$>$ $>$ divisors\+\_\+sieve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structll}{ll}}}]{n }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{number__theory_8hpp_a660529d1ead17300b516d9aaf3fd233d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}\label{number__theory_8hpp_a67527905c2b2c027c8b458902db2d05a}} 

@@ -122,5 +122,6 @@ template <typename... Ts> auto search_ra(const string &text, const string &subst
 	auto start = search_it{text, substring};
 	return range{start, search_it{start.ed}};
 }
+
 } // namespace string_tools
 using namespace string_tools;

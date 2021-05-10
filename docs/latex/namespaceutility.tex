@@ -18,6 +18,8 @@ struct \mbox{\hyperlink{structutility_1_1Empty}{Empty}}
 \item 
 struct \mbox{\hyperlink{structutility_1_1fix}{fix}}
 \begin{DoxyCompactList}\small\item\em Helper for lambda recursive functions. The recursive function is passed to Func as the first argument. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classutility_1_1IdentityFunctor}{Identity\+Functor}}
+\item 
 struct \mbox{\hyperlink{structutility_1_1random__device__patch}{random\+\_\+device\+\_\+patch}}
 \begin{DoxyCompactList}\small\item\em Random device patch to fix libstdc++\textquotesingle{}s broken implementation on Windows. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structutility_1_1with}{with}}
@@ -52,19 +54,23 @@ using \mbox{\hyperlink{namespaceutility_a8575a7ae9db3044c9cef77ddcc62ab7c}{rando
 \begin{DoxyCompactList}\small\item\em Returns the smallest exponent such that base raised to exponent is at least x. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_a7cd324d23686536d1d4eeb92afb61ed4}{next\+\_\+comb}} (\mbox{\hyperlink{structll}{ll}} x)
 \begin{DoxyCompactList}\small\item\em next combination of bits Formally, returns the smallest integer y $>$ x such that popcount(y) = popcount(x). \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename Func $>$ }\\void \mbox{\hyperlink{namespaceutility_a4c8a9d0142092c8f2255e518bfdf9dc4}{sort2}} (T \&a, T \&b, const Func \&func)
+{\footnotesize template$<$typename T , typename Func  = Identity\+Functor$>$ }\\void \mbox{\hyperlink{namespaceutility_a7e6fc562b56aacfec4602b0b8f924223}{sort2}} (T \&a, T \&b, const Func \&func=\{\})
 \begin{DoxyCompactList}\small\item\em Stable sorts a and b by func. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iter , typename Proj $>$ }\\void \mbox{\hyperlink{namespaceutility_a713c1fa985af64dbe0374a15cc3d4383}{counting\+\_\+sort}} (Iter a, Iter b, const Proj \&proj, const \mbox{\hyperlink{structll}{ll}} proj\+\_\+size)
 \item 
 {\footnotesize template$<$typename Cont $>$ }\\\mbox{\hyperlink{structll}{ll}} \mbox{\hyperlink{namespaceutility_adafa966f1819210cf795fff85b2a40c5}{ssize}} (const Cont \&\mbox{\hyperlink{range_8hpp_a3642ae4ffe47e0d16c399aead9674f78a37a1cc6c35e50ff31a8bda2d00998c1e}{cont}})
-\item 
+\begin{DoxyCompactList}\small\item\em Returns signed value of std\+::size(cont) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespaceutility_a416532ff53790338172141074151fd05}{valid\+\_\+idx}} (const vector$<$ T $>$ \&vec, const size\+\_\+t idx)
 \begin{DoxyCompactList}\small\item\em Return whether idx is a valid index for vec. Note that if idx is negative this returns false. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Input\+It $>$ }\\auto \mbox{\hyperlink{namespaceutility_aed2adcc88a8abb68fe298905798fa8ae}{iterator\+\_\+identity}} ()
 \item 
 {\footnotesize template$<$typename Input\+It $>$ }\\decltype(auto) \mbox{\hyperlink{namespaceutility_a547ec88ecb50fe12150a8d293de2ce75}{accumulate}} (Input\+It a, Input\+It b)
 \item 
+{\footnotesize template$<$typename Input\+It $>$ }\\decltype(auto) \mbox{\hyperlink{namespaceutility_aaac99ccf70ce4fb41b907d6ee08ec616}{inner\+\_\+product}} (Input\+It a, Input\+It b, Input\+It c)
+\item 
 {\footnotesize template$<$typename Input\+It $>$ }\\auto \mbox{\hyperlink{namespaceutility_a9503cf05b32620d818c2ff7e3c5cb20c}{get\+\_\+partial\+\_\+sum}} (Input\+It a, Input\+It b)
+\item 
+{\footnotesize template$<$typename... Ts$>$ }\\decltype(auto) \mbox{\hyperlink{namespaceutility_afd69b1bdb0ca70e3137a52d6aca2c108}{read}} (Ts \&...args)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -160,6 +166,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceutility_a9503cf05b32620d818c2ff7e3c5cb20c_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespaceutility_aaac99ccf70ce4fb41b907d6ee08ec616}\label{namespaceutility_aaac99ccf70ce4fb41b907d6ee08ec616}} 
+\index{utility@{utility}!inner\_product@{inner\_product}}
+\index{inner\_product@{inner\_product}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{inner\_product()}{inner\_product()}}
+{\footnotesize\ttfamily template$<$typename Input\+It $>$ \\
+decltype(auto) utility\+::inner\+\_\+product (\begin{DoxyParamCaption}\item[{Input\+It}]{a,  }\item[{Input\+It}]{b,  }\item[{Input\+It}]{c }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{namespaceutility_aed2adcc88a8abb68fe298905798fa8ae}\label{namespaceutility_aed2adcc88a8abb68fe298905798fa8ae}} 
 \index{utility@{utility}!iterator\_identity@{iterator\_identity}}
 \index{iterator\_identity@{iterator\_identity}!utility@{utility}}
@@ -281,22 +294,30 @@ Returns the smallest power of base that is at least x.
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 auto utility\+::prev\+\_\+less (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespaceutility_a4c8a9d0142092c8f2255e518bfdf9dc4}\label{namespaceutility_a4c8a9d0142092c8f2255e518bfdf9dc4}} 
+\mbox{\Hypertarget{namespaceutility_afd69b1bdb0ca70e3137a52d6aca2c108}\label{namespaceutility_afd69b1bdb0ca70e3137a52d6aca2c108}} 
+\index{utility@{utility}!read@{read}}
+\index{read@{read}!utility@{utility}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$typename... Ts$>$ \\
+decltype(auto) utility\+::read (\begin{DoxyParamCaption}\item[{Ts \&...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceutility_a7e6fc562b56aacfec4602b0b8f924223}\label{namespaceutility_a7e6fc562b56aacfec4602b0b8f924223}} 
 \index{utility@{utility}!sort2@{sort2}}
 \index{sort2@{sort2}!utility@{utility}}
 \doxysubsubsection{\texorpdfstring{sort2()}{sort2()}}
-{\footnotesize\ttfamily template$<$typename T , typename Func $>$ \\
-void utility\+::sort2 (\begin{DoxyParamCaption}\item[{T \&}]{a,  }\item[{T \&}]{b,  }\item[{const Func \&}]{func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename T , typename Func  = Identity\+Functor$>$ \\
+void utility\+::sort2 (\begin{DoxyParamCaption}\item[{T \&}]{a,  }\item[{T \&}]{b,  }\item[{const Func \&}]{func = {\ttfamily \{\}} }\end{DoxyParamCaption})}
 
 
 
 Stable sorts a and b by func. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceutility_a4c8a9d0142092c8f2255e518bfdf9dc4_icgraph}
+\includegraphics[width=350pt]{namespaceutility_a7e6fc562b56aacfec4602b0b8f924223_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceutility_adafa966f1819210cf795fff85b2a40c5}\label{namespaceutility_adafa966f1819210cf795fff85b2a40c5}} 
@@ -306,7 +327,12 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily template$<$typename Cont $>$ \\
 \mbox{\hyperlink{structll}{ll}} utility\+::ssize (\begin{DoxyParamCaption}\item[{const Cont \&}]{cont }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+
+
+Returns signed value of std\+::size(cont) 
+
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

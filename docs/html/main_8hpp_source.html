@@ -103,58 +103,71 @@ $(document).ready(function(){initNavTree('main_8hpp_source.html',''); initResiza
 <div class="title">main.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="main_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time_8hpp.html">time.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="structset__multitest.html">    4</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structset__multitest.html">set_multitest</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">    5</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">multitest</a>{};</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">    6</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">set_multitest</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> val = <span class="keyword">true</span>) { <a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">multitest</a> = val; }</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;};</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">    9</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, argc) {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">if</span> (argv[i] == <span class="stringliteral">&quot;-q&quot;</span>s) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ios::sync_with_stdio(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a>) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a>.rdbuf(<span class="keyword">nullptr</span>);</div>
+<a href="main_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Useful code for competitive programming</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="core_2all_8hpp.html">core/all.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="time_8hpp.html">time.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="main_8hpp.html#aad985d901cd34436d739e561eff68eb9">    6</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="main_8hpp.html#aad985d901cd34436d739e561eff68eb9">yesno</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> b) { <span class="keywordflow">return</span> b ? <span class="stringliteral">&quot;Yes&quot;</span> : <span class="stringliteral">&quot;No&quot;</span>; }</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structset__multitest.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structset__multitest.html">set_multitest</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">    9</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">multitest</a>{};</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">   10</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">set_multitest</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> val = <span class="keyword">true</span>) { <a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">multitest</a> = val; }</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef DEBUG</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, argc) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> (argv[i] == <span class="stringliteral">&quot;-q&quot;</span>s) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (ios &amp;os : initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{<a class="code" href="io_8hpp.html#ad3d37d28ba906ccaf466014e09241de5">orig_cin</a>, cout, <a class="code" href="io_8hpp.html#ac42bccbb7905afc32ae4dddd1a4db540">orig_cerr</a>, clog}) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        fixed(os);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (os.rdbuf()) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            os.exceptions(ios::failbit | ios::badbit | ios::eofbit);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        os.precision(<span class="keyword">false</span> ? numeric_limits&lt;ld&gt;::max_digits10 : 5);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    cout.precision(numeric_limits&lt;ld&gt;::max_digits10);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structtime__tools_1_1timer.html">timer</a> _t;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structll.html">ll</a> t = 1;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest::multitest</a>) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="io_8hpp.html#a5623b1d0cbb6ab8353c440455eb7f3e1">cin</a> &gt;&gt; t;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, t) { <a class="code" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a>(); }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    ios::sync_with_stdio(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a>) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a>.rdbuf(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (ios &amp;os : initializer_list&lt;reference_wrapper&lt;ios&gt;&gt;{<a class="code" href="io_8hpp.html#ad3d37d28ba906ccaf466014e09241de5">orig_cin</a>, cout, <a class="code" href="io_8hpp.html#ac42bccbb7905afc32ae4dddd1a4db540">orig_cerr</a>, clog}) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        fixed(os);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (os.rdbuf()) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            os.exceptions(ios::failbit | ios::badbit | ios::eofbit);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        os.precision(<span class="keyword">false</span> ? numeric_limits&lt;ld&gt;::max_digits10 : 5);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    cout.precision(numeric_limits&lt;ld&gt;::max_digits10);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="structtime__tools_1_1timer.html">timer</a> _t;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest::multitest</a>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="structll.html">ll</a> t;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="io_8hpp.html#a5623b1d0cbb6ab8353c440455eb7f3e1">cin</a> &gt;&gt; t;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, t) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            cout &lt;&lt; <a class="code" href="namespacedebug__tools.html#a86be956fa32b1561058083e7b01b2f51">light_purple_color</a> &lt;&lt; <span class="stringliteral">&quot;=== Test case #&quot;</span> &lt;&lt; 1 + i</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                 &lt;&lt; <span class="stringliteral">&quot; ===&quot;</span> &lt;&lt; <a class="code" href="namespacedebug__tools.html#ab3deb90f50896c82829d7ff3dcf8e6d2">reset_color</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="acore_2all_8hpp_html_aa021995764a0c77f628e3411497239cc"><div class="ttname"><a href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a></div><div class="ttdeci">bool debug_mode</div><div class="ttdef"><b>Definition:</b> all.hpp:58</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_aa021995764a0c77f628e3411497239cc"><div class="ttname"><a href="core_2all_8hpp.html#aa021995764a0c77f628e3411497239cc">debug_mode</a></div><div class="ttdeci">bool debug_mode</div><div class="ttdef"><b>Definition:</b> all.hpp:66</div></div>
 <div class="ttc" id="amain_8hpp_html_af095a232149097b5605064623a9345ac"><div class="ttname"><a href="main_8hpp.html#af095a232149097b5605064623a9345ac">main2</a></div><div class="ttdeci">void main2()</div><div class="ttdef"><b>Definition:</b> test.cpp:31</div></div>
 <div class="ttc" id="aio_8hpp_html_a5623b1d0cbb6ab8353c440455eb7f3e1"><div class="ttname"><a href="io_8hpp.html#a5623b1d0cbb6ab8353c440455eb7f3e1">cin</a></div><div class="ttdeci">#define cin</div><div class="ttdef"><b>Definition:</b> io.hpp:82</div></div>
+<div class="ttc" id="anamespacedebug__tools_html_a86be956fa32b1561058083e7b01b2f51"><div class="ttname"><a href="namespacedebug__tools.html#a86be956fa32b1561058083e7b01b2f51">debug_tools::light_purple_color</a></div><div class="ttdeci">constexpr auto light_purple_color</div><div class="ttdef"><b>Definition:</b> debug.hpp:35</div></div>
+<div class="ttc" id="amain_8hpp_html_aad985d901cd34436d739e561eff68eb9"><div class="ttname"><a href="main_8hpp.html#aad985d901cd34436d739e561eff68eb9">yesno</a></div><div class="ttdeci">string yesno(const bool b)</div><div class="ttdef"><b>Definition:</b> main.hpp:6</div></div>
 <div class="ttc" id="astructtime__tools_1_1timer_html"><div class="ttname"><a href="structtime__tools_1_1timer.html">time_tools::timer</a></div><div class="ttdef"><b>Definition:</b> time.hpp:4</div></div>
-<div class="ttc" id="astructset__multitest_html_a746c648fb7b25d87a0f67c3f4da2f2f2"><div class="ttname"><a href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">set_multitest::set_multitest</a></div><div class="ttdeci">set_multitest(const bool val=true)</div><div class="ttdef"><b>Definition:</b> main.hpp:6</div></div>
+<div class="ttc" id="astructset__multitest_html_a746c648fb7b25d87a0f67c3f4da2f2f2"><div class="ttname"><a href="structset__multitest.html#a746c648fb7b25d87a0f67c3f4da2f2f2">set_multitest::set_multitest</a></div><div class="ttdeci">set_multitest(const bool val=true)</div><div class="ttdef"><b>Definition:</b> main.hpp:10</div></div>
 <div class="ttc" id="acore_2all_8hpp_html"><div class="ttname"><a href="core_2all_8hpp.html">all.hpp</a></div></div>
-<div class="ttc" id="acore_2all_8hpp_html_ad8a867e2e93131cb4d4afbedcd38245a"><div class="ttname"><a href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a></div><div class="ttdeci">#define cerr()</div><div class="ttdef"><b>Definition:</b> all.hpp:75</div></div>
-<div class="ttc" id="astructset__multitest_html_a20d0d5a0be72afc726d24cff42a14130"><div class="ttname"><a href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest::multitest</a></div><div class="ttdeci">static bool multitest</div><div class="ttdef"><b>Definition:</b> main.hpp:5</div></div>
-<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:55</div></div>
-<div class="ttc" id="astructset__multitest_html"><div class="ttname"><a href="structset__multitest.html">set_multitest</a></div><div class="ttdef"><b>Definition:</b> main.hpp:4</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_ad8a867e2e93131cb4d4afbedcd38245a"><div class="ttname"><a href="core_2all_8hpp.html#ad8a867e2e93131cb4d4afbedcd38245a">cerr</a></div><div class="ttdeci">#define cerr()</div><div class="ttdef"><b>Definition:</b> all.hpp:83</div></div>
+<div class="ttc" id="anamespacedebug__tools_html_ab3deb90f50896c82829d7ff3dcf8e6d2"><div class="ttname"><a href="namespacedebug__tools.html#ab3deb90f50896c82829d7ff3dcf8e6d2">debug_tools::reset_color</a></div><div class="ttdeci">constexpr auto reset_color</div><div class="ttdef"><b>Definition:</b> debug.hpp:37</div></div>
+<div class="ttc" id="astructset__multitest_html_a20d0d5a0be72afc726d24cff42a14130"><div class="ttname"><a href="structset__multitest.html#a20d0d5a0be72afc726d24cff42a14130">set_multitest::multitest</a></div><div class="ttdeci">static bool multitest</div><div class="ttdef"><b>Definition:</b> main.hpp:9</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a9d597f42af7d85fd96c46aa17cc610d9"><div class="ttname"><a href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a></div><div class="ttdeci">#define fo(i,...)</div><div class="ttdef"><b>Definition:</b> all.hpp:63</div></div>
+<div class="ttc" id="astructset__multitest_html"><div class="ttname"><a href="structset__multitest.html">set_multitest</a></div><div class="ttdef"><b>Definition:</b> main.hpp:8</div></div>
 <div class="ttc" id="aio_8hpp_html_ac42bccbb7905afc32ae4dddd1a4db540"><div class="ttname"><a href="io_8hpp.html#ac42bccbb7905afc32ae4dddd1a4db540">std::orig_cerr</a></div><div class="ttdeci">auto &amp; orig_cerr</div><div class="ttdef"><b>Definition:</b> io.hpp:81</div></div>
 <div class="ttc" id="aio_8hpp_html_ad3d37d28ba906ccaf466014e09241de5"><div class="ttname"><a href="io_8hpp.html#ad3d37d28ba906ccaf466014e09241de5">std::orig_cin</a></div><div class="ttdeci">auto &amp; orig_cin</div><div class="ttdef"><b>Definition:</b> io.hpp:80</div></div>
 <div class="ttc" id="atime_8hpp_html"><div class="ttname"><a href="time_8hpp.html">time.hpp</a></div></div>
-<div class="ttc" id="amain_8hpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> main.hpp:9</div></div>
+<div class="ttc" id="amain_8hpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8hpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> main.hpp:13</div></div>
 <div class="ttc" id="astructll_html"><div class="ttname"><a href="structll.html">ll</a></div><div class="ttdef"><b>Definition:</b> my_int.hpp:5</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

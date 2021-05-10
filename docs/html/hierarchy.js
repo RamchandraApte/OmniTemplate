@@ -38,6 +38,7 @@ var hierarchy =
     [ "string_tools::hash_str", "structstring__tools_1_1hash__str.html", null ],
     [ "hld::HLD< T, Monoid, QueryDS >", "classhld_1_1HLD.html", null ],
     [ "hld::HLD< T, Monoid, QueryDS >", "classhld_1_1HLD.html", null ],
+    [ "utility::IdentityFunctor", "classutility_1_1IdentityFunctor.html", null ],
     [ "is_integral< ll >", null, [
       [ "std::is_integral< ll >", "structstd_1_1is__integral_3_01ll_01_4.html", null ]
     ] ],

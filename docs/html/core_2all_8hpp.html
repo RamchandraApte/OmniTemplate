@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('core_2all_8hpp.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;climits&gt;</code><br />
@@ -127,8 +128,8 @@ $(document).ready(function(){initNavTree('core_2all_8hpp.html',''); initResizabl
 <code>#include &lt;unordered_set&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;experimental/iterator&gt;</code><br />
 <code>#include &lt;experimental/source_location&gt;</code><br />
+<code>#include &lt;experimental/iterator&gt;</code><br />
 <code>#include &quot;<a class="el" href="debug_8hpp_source.html">debug.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="io_8hpp_source.html">io.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="operations_8hpp_source.html">operations.hpp</a>&quot;</code><br />
@@ -137,7 +138,8 @@ $(document).ready(function(){initNavTree('core_2all_8hpp.html',''); initResizabl
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for all.hpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="core_2all_8hpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="core_2all_8hpp__incl.svg" width="100%" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -154,6 +156,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e">NDEBUG</a></td></tr>
+<tr class="separator:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a9d597f42af7d85fd96c46aa17cc610d9">fo</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__})</td></tr>
 <tr class="separator:a9d597f42af7d85fd96c46aa17cc610d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b724588414fb77283c807a1ad82313c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a7b724588414fb77283c807a1ad82313c">fr</a>(i, ...)&#160;&#160;&#160;for ([[maybe_unused]] const auto i : <a class="el" href="range_8hpp.html#a438bd5fc0a79e42a6a2abb632203f925">rev</a>(<a class="el" href="range_8hpp.html#a6288a170c5a67a2c0b45c858a043722a">ra</a>{__VA_ARGS__}))</td></tr>
@@ -209,8 +213,8 @@ Variables</h2></td></tr>
 <tr class="separator:aa3bd6940ab68cd10b31ac2ff2495ffab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab89b6ceb8bf54011eedd872b54361eca"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#ab89b6ceb8bf54011eedd872b54361eca">inf</a> = <a class="el" href="structll.html">ll</a>(numeric_limits&lt;<a class="el" href="structll.html">ll</a>&gt;::max()) / 8</td></tr>
 <tr class="separator:ab89b6ceb8bf54011eedd872b54361eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d5579d5eb92e5c3234831659c6d02cf"><td class="memItemLeft" align="right" valign="top">auto const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a4d5579d5eb92e5c3234831659c6d02cf">delim</a> = &quot;, &quot;s</td></tr>
-<tr class="separator:a4d5579d5eb92e5c3234831659c6d02cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2dbe8e1a58258f9060682cf7ea063b"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a6a2dbe8e1a58258f9060682cf7ea063b">delim</a> = &quot;, &quot;s</td></tr>
+<tr class="separator:a6a2dbe8e1a58258f9060682cf7ea063b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989a29f26fc8591b33ecf33d4d2c7029"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2all_8hpp.html#a989a29f26fc8591b33ecf33d4d2c7029">tau</a> = 2 * 3.1415926535897932384626433L</td></tr>
 <tr class="separator:a989a29f26fc8591b33ecf33d4d2c7029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -277,7 +281,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Contains core files for the template </p>
 
 </div>
 </div>
@@ -370,6 +373,21 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de3ed741dadc9c979a4ff17c0a9116e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de3ed741dadc9c979a4ff17c0a9116e">&#9670;&nbsp;</a></span>NDEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NDEBUG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Contains core files for the template </p>
 
 </div>
 </div>
@@ -629,14 +647,14 @@ template&lt;typename T , typename Comp &gt; </div>
 
 </div>
 </div>
-<a id="a4d5579d5eb92e5c3234831659c6d02cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d5579d5eb92e5c3234831659c6d02cf">&#9670;&nbsp;</a></span>delim</h2>
+<a id="a6a2dbe8e1a58258f9060682cf7ea063b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2dbe8e1a58258f9060682cf7ea063b">&#9670;&nbsp;</a></span>delim</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">auto const delim = &quot;, &quot;s</td>
+          <td class="memname">const auto delim = &quot;, &quot;s</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -708,7 +726,7 @@ template&lt;typename T , typename Comp &gt; </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="acore_2all_8hpp_html_a7f10cc81a560bb73b2eb647dfb10c9db"><div class="ttname"><a href="core_2all_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a></div><div class="ttdeci">#define rel_assert(...)</div><div class="ttdef"><b>Definition:</b> all.hpp:60</div></div>
+<div class="ttc" id="acore_2all_8hpp_html_a7f10cc81a560bb73b2eb647dfb10c9db"><div class="ttname"><a href="core_2all_8hpp.html#a7f10cc81a560bb73b2eb647dfb10c9db">rel_assert</a></div><div class="ttdeci">#define rel_assert(...)</div><div class="ttdef"><b>Definition:</b> all.hpp:68</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

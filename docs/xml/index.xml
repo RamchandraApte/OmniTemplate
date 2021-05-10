@@ -150,6 +150,9 @@
     <member refid="classhld_1_1HLD_1a89ad91fa5429a48db553da8d44849415" kind="function"><name>query</name></member>
     <member refid="classhld_1_1HLD_1a5010452fe04b89ecba385cec7a0c183f" kind="function"><name>update</name></member>
   </compound>
+  <compound refid="classutility_1_1IdentityFunctor" kind="class"><name>utility::IdentityFunctor</name>
+    <member refid="classutility_1_1IdentityFunctor_1a3d76420d4031fb3d3106850e07e2a88a" kind="function"><name>operator()</name></member>
+  </compound>
   <compound refid="structint__it" kind="struct"><name>int_it</name>
     <member refid="structint__it_1ad986a324b4a8e1c5a8fca9e411d6c078" kind="typedef"><name>iterator_category</name></member>
     <member refid="structint__it_1a1e1f66e40cd8620afe9129f4f0266fa7" kind="variable"><name>x</name></member>
@@ -178,6 +181,16 @@
     <member refid="structit__base_1a65ea2a2492ba8ae44a336fd192f5ff2a" kind="typedef"><name>reference</name></member>
     <member refid="structit__base_1a2f441c3115c3b785aedc6816276d7511" kind="typedef"><name>difference_type</name></member>
   </compound>
+  <compound refid="structsplay__tree_1_1SplayTree_1_1iterator" kind="struct"><name>splay_tree::SplayTree::iterator</name>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a69bb5a2446e8219c0eca5b6791272e23" kind="typedef"><name>iterator_category</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kind="variable"><name>node</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a1b2e58809547e4402b8a7ef16ed8253d" kind="function"><name>operator--</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a87fdbf8660f782a32ee209ab7108c0e8" kind="function"><name>operator++</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" kind="function"><name>operator*</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1ab0ea6ed296b79fa203a92992006448ea" kind="function"><name>iterator</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" kind="function"><name>operator==</name></member>
+    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a5de551652a02ec33810bc159032be3de" kind="function"><name>advance</name></member>
+  </compound>
   <compound refid="structSubgraph_1_1iterator" kind="struct"><name>Subgraph::iterator</name>
     <member refid="structSubgraph_1_1iterator_1a7a7cb023f473158d850257096a13d1af" kind="variable"><name>subgraph</name></member>
     <member refid="structSubgraph_1_1iterator_1a446d48ffd07058bcce4bf3f616a004b1" kind="variable"><name>i</name></member>
@@ -189,16 +202,6 @@
     <member refid="structSubgraph_1_1iterator_1a590bacc33ad746829d0b176e0b2fed5b" kind="function"><name>operator++</name></member>
     <member refid="structSubgraph_1_1iterator_1a0c63e38a83bcd42b04c0d9b55bdc4d62" kind="function"><name>operator==</name></member>
     <member refid="structSubgraph_1_1iterator_1a3b5d3735f55fb1e655bfc16e65d9f847" kind="function"><name>operator!=</name></member>
-  </compound>
-  <compound refid="structsplay__tree_1_1SplayTree_1_1iterator" kind="struct"><name>splay_tree::SplayTree::iterator</name>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a69bb5a2446e8219c0eca5b6791272e23" kind="typedef"><name>iterator_category</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a3c9fb5e7acf1d7fbb16ca90c28158e90" kind="variable"><name>node</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a1b2e58809547e4402b8a7ef16ed8253d" kind="function"><name>operator--</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a87fdbf8660f782a32ee209ab7108c0e8" kind="function"><name>operator++</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1afdc7a7403ba2e1b78fac2480a82e974f" kind="function"><name>operator*</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1ab0ea6ed296b79fa203a92992006448ea" kind="function"><name>iterator</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1ac7fc8c5b9cf35ae5b350631deda6b3c3" kind="function"><name>operator==</name></member>
-    <member refid="structsplay__tree_1_1SplayTree_1_1iterator_1a5de551652a02ec33810bc159032be3de" kind="function"><name>advance</name></member>
   </compound>
   <compound refid="structsegment__tree_1_1SegmentTree_1_1LazyPart" kind="struct"><name>segment_tree::SegmentTree::LazyPart</name>
     <member refid="structsegment__tree_1_1SegmentTree_1_1LazyPart_1a23a6ecc2e40bbe3d261dce229ebef13a" kind="variable"><name>lazy</name></member>
@@ -610,6 +613,10 @@
     <member refid="namespacecoroutine_1_1test_1a22ebde81203b27ead34dd1fcc2afdbfc" kind="function"><name>test_coroutine</name></member>
   </compound>
   <compound refid="namespacedebug__tools" kind="namespace"><name>debug_tools</name>
+    <member refid="namespacedebug__tools_1a86be956fa32b1561058083e7b01b2f51" kind="variable"><name>light_purple_color</name></member>
+    <member refid="namespacedebug__tools_1a77213b7ce5a3375feff8afcdeac9f79b" kind="variable"><name>green_color</name></member>
+    <member refid="namespacedebug__tools_1aa3268ab42e570407ee8673a3efef927f" kind="variable"><name>red_color</name></member>
+    <member refid="namespacedebug__tools_1ab3deb90f50896c82829d7ff3dcf8e6d2" kind="variable"><name>reset_color</name></member>
     <member refid="namespacedebug__tools_1ab312673925f42718bafe74a18eae6685" kind="variable"><name>depth</name></member>
     <member refid="namespacedebug__tools_1a991f9f01ab3a0e664fabf0bd17fab95c" kind="function"><name>type_name</name></member>
     <member refid="namespacedebug__tools_1a2b613fd4caa0fb48d04eb7e6f3bf6dff" kind="function"><name>replace</name></member>
@@ -853,13 +860,15 @@
     <member refid="namespaceutility_1a14dc21f495425ccdc1ec35fe45d45591" kind="function"><name>power_ceil</name></member>
     <member refid="namespaceutility_1a750478c01441fac1c27f14bea2cb74ea" kind="function"><name>log_ceil</name></member>
     <member refid="namespaceutility_1a7cd324d23686536d1d4eeb92afb61ed4" kind="function"><name>next_comb</name></member>
-    <member refid="namespaceutility_1a4c8a9d0142092c8f2255e518bfdf9dc4" kind="function"><name>sort2</name></member>
+    <member refid="namespaceutility_1a7e6fc562b56aacfec4602b0b8f924223" kind="function"><name>sort2</name></member>
     <member refid="namespaceutility_1a713c1fa985af64dbe0374a15cc3d4383" kind="function"><name>counting_sort</name></member>
     <member refid="namespaceutility_1adafa966f1819210cf795fff85b2a40c5" kind="function"><name>ssize</name></member>
     <member refid="namespaceutility_1a416532ff53790338172141074151fd05" kind="function"><name>valid_idx</name></member>
     <member refid="namespaceutility_1aed2adcc88a8abb68fe298905798fa8ae" kind="function"><name>iterator_identity</name></member>
     <member refid="namespaceutility_1a547ec88ecb50fe12150a8d293de2ce75" kind="function"><name>accumulate</name></member>
+    <member refid="namespaceutility_1aaac99ccf70ce4fb41b907d6ee08ec616" kind="function"><name>inner_product</name></member>
     <member refid="namespaceutility_1a9503cf05b32620d818c2ff7e3c5cb20c" kind="function"><name>get_partial_sum</name></member>
+    <member refid="namespaceutility_1afd69b1bdb0ca70e3137a52d6aca2c108" kind="function"><name>read</name></member>
   </compound>
   <compound refid="namespaceutility_1_1test" kind="namespace"><name>utility::test</name>
     <member refid="namespaceutility_1_1test_1a5b509a14966e453c36c0b3263b8c73f3" kind="function"><name>test_with</name></member>
@@ -901,6 +910,7 @@
   <compound refid="test__permutation_8hpp" kind="file"><name>test_permutation.hpp</name>
   </compound>
   <compound refid="core_2all_8hpp" kind="file"><name>all.hpp</name>
+    <member refid="core_2all_8hpp_1a8de3ed741dadc9c979a4ff17c0a9116e" kind="define"><name>NDEBUG</name></member>
     <member refid="core_2all_8hpp_1a9d597f42af7d85fd96c46aa17cc610d9" kind="define"><name>fo</name></member>
     <member refid="core_2all_8hpp_1a7b724588414fb77283c807a1ad82313c" kind="define"><name>fr</name></member>
     <member refid="core_2all_8hpp_1a2f9ddbc7133cc3a48efbc824006bd3cb" kind="define"><name>al</name></member>
@@ -925,13 +935,12 @@
     <member refid="core_2all_8hpp_1a10aff294e2147e1cfe921bc2648b4399" kind="variable"><name>lets</name></member>
     <member refid="core_2all_8hpp_1aa3bd6940ab68cd10b31ac2ff2495ffab" kind="variable"><name>_l__COUNTER__</name></member>
     <member refid="core_2all_8hpp_1ab89b6ceb8bf54011eedd872b54361eca" kind="variable"><name>inf</name></member>
-    <member refid="core_2all_8hpp_1a4d5579d5eb92e5c3234831659c6d02cf" kind="variable"><name>delim</name></member>
+    <member refid="core_2all_8hpp_1a6a2dbe8e1a58258f9060682cf7ea063b" kind="variable"><name>delim</name></member>
     <member refid="core_2all_8hpp_1a989a29f26fc8591b33ecf33d4d2c7029" kind="variable"><name>tau</name></member>
   </compound>
   <compound refid="graph_2all_8hpp" kind="file"><name>all.hpp</name>
   </compound>
   <compound refid="debug_8hpp" kind="file"><name>debug.hpp</name>
-    <member refid="debug_8hpp_1a8de3ed741dadc9c979a4ff17c0a9116e" kind="define"><name>NDEBUG</name></member>
     <member refid="debug_8hpp_1a49bc164f30e64702250d2cbea09bf86c" kind="define"><name>dbg</name></member>
   </compound>
   <compound refid="io_8hpp" kind="file"><name>io.hpp</name>
@@ -942,6 +951,7 @@
     <member refid="io_8hpp_1a1b122fd1e3de03a421d98f4bbb1473d5" kind="function"><name>print</name></member>
   </compound>
   <compound refid="main_8hpp" kind="file"><name>main.hpp</name>
+    <member refid="main_8hpp_1aad985d901cd34436d739e561eff68eb9" kind="function"><name>yesno</name></member>
     <member refid="main_8hpp_1af095a232149097b5605064623a9345ac" kind="function"><name>main2</name></member>
     <member refid="main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
@@ -1117,6 +1127,7 @@
     <member refid="number__theory_8hpp_1af0753ff92c84e6924e1fd6461e77b16f" kind="function"><name>totient</name></member>
     <member refid="number__theory_8hpp_1a67527905c2b2c027c8b458902db2d05a" kind="function"><name>dlog</name></member>
     <member refid="number__theory_8hpp_1a6542b189f3759f43899a8b1978d58e2c" kind="function"><name>primitive_root</name></member>
+    <member refid="number__theory_8hpp_1a660529d1ead17300b516d9aaf3fd233d" kind="function"><name>divisors_sieve</name></member>
   </compound>
   <compound refid="test__modulo_8hpp" kind="file"><name>test_modulo.hpp</name>
   </compound>
@@ -1130,6 +1141,7 @@
     <member refid="test__number__theory_8hpp_1a8ae320acad5e35d58ca5ad7adc6ddd78" kind="function"><name>test_totient</name></member>
     <member refid="test__number__theory_8hpp_1a7aac53ce82614d79c7098a1de32ed1e7" kind="function"><name>test_dlog</name></member>
     <member refid="test__number__theory_8hpp_1a0ff115471f41e78245b5dc48eaf8032f" kind="function"><name>test_primitive_root</name></member>
+    <member refid="test__number__theory_8hpp_1a320864427b864922a67b50429db1932d" kind="function"><name>test_divisors_sieve</name></member>
     <member refid="test__number__theory_8hpp_1aed36f6b8b9706133e9b5302b1618e9ef" kind="function"><name>test_number_theory</name></member>
   </compound>
   <compound refid="dict__search_8hpp" kind="file"><name>dict_search.hpp</name>
@@ -1149,7 +1161,7 @@
     <member refid="test_8cpp_1af095a232149097b5605064623a9345ac" kind="function"><name>main2</name></member>
   </compound>
   <compound refid="abbrev_8hpp" kind="file"><name>abbrev.hpp</name>
-    <member refid="abbrev_8hpp_1a64daeab6d74dffeca723fbb620b687cb" kind="define"><name>I</name></member>
+    <member refid="abbrev_8hpp_1a35b3e63b52a18007fe508219245e7270" kind="define"><name>I</name></member>
     <member refid="abbrev_8hpp_1a276c5a0e984cf60015b27252fe04fe6b" kind="define"><name>pb</name></member>
     <member refid="abbrev_8hpp_1aff943633016deb6c62a519ffe92c6819" kind="define"><name>vc</name></member>
     <member refid="abbrev_8hpp_1a52c977d91e62bd8e617e5cb2926547e1" kind="typedef"><name>bt</name></member>

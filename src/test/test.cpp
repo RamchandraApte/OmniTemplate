@@ -57,5 +57,5 @@ void main2() {
 	if (false) {
 		test_graph_draw();
 	}
-	clog << "\e[0;32mAccepted\e[0m" << endl;
+	clog << green_color << "Accepted" << reset_color << endl;
 }
