@@ -36,8 +36,10 @@ int main(int argc, char *argv[]) {
 		ll t;
 		cin >> t;
 		fo(i, t) {
-			cout << light_purple_color << "=== Test case #" << 1 + i
-			     << " ===" << reset_color << endl;
+			if (debug_mode) {
+				cerr << light_purple_color << "=== Test case #" << 1 + i
+				     << " ===" << reset_color << endl;
+			}
 			main2();
 		}
 	} else {

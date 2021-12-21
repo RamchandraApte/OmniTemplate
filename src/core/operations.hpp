@@ -95,14 +95,17 @@ auto operator+(Iterator it,
 	}
 FUNCTOR(Max, max);
 FUNCTOR(Min, min);
-template <typename T, typename = enable_if_t<is_arithmetic_v<T>>> T identity(plus<>, T) {
+template <typename T, typename = enable_if_t<is_arithmetic_v<T>>> T identity_elt(plus<>, T) {
 	return 0;
 }
-template <typename T, typename = enable_if_t<is_arithmetic_v<T>>> T identity(multiplies<>, T) {
+template <typename T, typename = enable_if_t<is_arithmetic_v<T>>> T identity_elt(multiplies<>, T) {
 	return 1;
 }
-ll identity(Max, ll) { return -inf; }
-ll identity(Min, ll) { return inf; }
+template <typename T, typename = enable_if_t<is_integral_v<T>>> T identity_elt(bit_xor<>, T) {
+	return {};
+}
+ll identity_elt(Max, ll) { return -inf; }
+ll identity_elt(Min, ll) { return inf; }
 // TODO convert all macros to UPPER_CASE
 //} // namespace operations
 // using namespace operations;

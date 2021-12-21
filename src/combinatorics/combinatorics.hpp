@@ -1,19 +1,17 @@
 #pragma once
 #include "core/all.hpp"
-/*! Combinatorics header. */
+/** @brief Combinatorics header. */
 inline namespace combinatorics {
 // TODO should b be integer type??
+/*!Return \f$P(a,b)\f$, the falling factorial.*/
 template <typename T> T perm(const T a, const T b) {
-	/*!Return \f$P(a,b)\f$, the falling factorial.*/
 	return accumulate(int_it<T>{a + 1 - b}, int_it<T>{a + 1}, T{1}, multiplies<>{});
 }
+/** @brief Return the factorial of n, i.e. \f$n!\f$. */
 template <typename T> T fact(const T n) {
-	/*! Return the factorial of n, i.e. \f$n!\f$. */
 	return perm(n, n);
 }
-// TODO rename this to binom
-template <typename T> T choose(const T a, const T b) {
-	/*! Returns a choose b, i.e. \f$\binom{a}{b}\f$*/
-	return perm(a, b) / fact(b);
-}
+/** @brief Binomal coefficients.
+ *  @return a choose b, i.e. \f$\binom{a}{b}\f$*/
+template <typename T> T binom(const T a, const T b) { return perm(a, b) / fact(b); }
 } // namespace combinatorics

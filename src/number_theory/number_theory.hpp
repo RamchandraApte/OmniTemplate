@@ -2,6 +2,7 @@
 #include "core/all.hpp"
 #include "modulo.hpp"
 vector<ll> divs;
+// TODO modulus should probably be 0 by default
 /** @brief Return whether integer n >= 2 is prime*/
 auto prime(ll n) {
 	assert(n >= 2);

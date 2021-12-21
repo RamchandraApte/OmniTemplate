@@ -1,13 +1,14 @@
 #pragma once
-#include "core.hpp"
+#include "core/all.hpp"
+// TODO this code needs tests
 namespace tree {
-ll const sz = 30;
-template <typename T> struct no {
+template <typename T, size_t sz_arg = 30> struct no {
+	static const size_t sz = sz_arg;
 	vector<no *> p;
 	T v;
 	no(T const &v_, no *pa = nullptr) : p(sz), v(v_) {
 		if (!pa) {
-			pa = &this;
+			pa = this;
 		}
 		fo(i, sz) {
 			p[i] = pa;
@@ -16,7 +17,7 @@ template <typename T> struct no {
 	}
 	auto gt(ll h) {
 		bt b(h);
-		auto x = &this;
+		auto x = this;
 		fo(i, sz) {
 			if (b[i]) {
 				x = x->p[i];
@@ -37,7 +38,7 @@ template <typename T> struct no {
 		return ll(b.to_ullong()) + 1;
 	}
 };
-template <typename T> auto lca(no<T> *a, no<T> *b) {
+template <typename Node> auto lca(Node *a, Node *b) {
 	ll da = a->dp(), db = b->dp();
 	if (da > db) {
 		swap(a, b);
@@ -46,7 +47,7 @@ template <typename T> auto lca(no<T> *a, no<T> *b) {
 	if (a == b) {
 		return a;
 	}
-	for (const auto &i : rev(ra{sz})) {
+	for (const auto &i : rev(ra{Node::sz})) {
 		if (a->p[i] != b->p[i]) {
 			a = a->p[i];
 			b = b->p[i];

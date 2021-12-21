@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "core/main.hpp"
 bool multitest = false;
 void main2() {
 	cout << clock_::now().time_since_epoch().count() << endl;

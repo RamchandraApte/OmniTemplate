@@ -17,8 +17,10 @@ template <typename Func> struct fix {
 		return func(*this, forward<Args>(args)...);
 	}
 };
-#define LAMBDA(f)                                                                                  \
-	[&, this](auto &&...args) -> decltype(auto) { return f(forward<decltype(args)>(args)...); }
+#define LAMBDA_IMPL(f)                                                                             \
+	(auto &&...args)->decltype(auto) { return f(forward<decltype(args)>(args)...); }
+#define LAMBDA(f) [&] LAMBDA_IMPL(f)
+#define LAMBDA_THIS(f) [&, this ] LAMBDA_IMPL(f)
 #define DEFINE_FUNC_EQ(func)                                                                       \
 	template <typename T> void func##_eq(T &x, const T &y) { x = func(x, y); }                 \
 /*! @brief Set x to the minimum of x and y*/
@@ -46,7 +48,7 @@ template <typename Eq = equal_to<>, typename T = less<>, typename Cont>
 /** @brief Compare using key.
  * @param func The key function
  * @param compare the comparison function.
- * @returns A comparison functor that compares two arugments by the key.
+ * @returns A comparison functor that compares two arguments by the key.
  */
 template <typename Compare = less<>, typename Func>
 auto key_compare(const Func &func, const Compare &compare = {}) {
@@ -93,7 +95,7 @@ ll log_ceil(const ll x, const ll base) {
 }
 /** @brief next combination of bits
  * Formally, returns the smallest integer y > x such that popcount(y) = popcount(x).
- * @pre THe desired y must exist. */
+ * @pre The desired y must exist. */
 [[nodiscard]] ll next_comb(ll x) {
 	ll tz = __builtin_ctzll(x);
 	ll y = x + (ll{1} << tz);
@@ -102,7 +104,7 @@ ll log_ceil(const ll x, const ll base) {
 	assert(__builtin_popcountll(ret) == __builtin_popcountll(x));
 	return ret;
 }
-
+/** @brief Identity functor. */
 class IdentityFunctor {
       public:
 	template <typename T> decltype(auto) operator()(T &&x) const { return std::forward<T>(x); }
@@ -115,6 +117,7 @@ void sort2(T &a, T &b, const Func &func = {}) {
 		swap(a, b);
 	}
 }
+/** @brief performs a counting sort, comparing elements x,y using proj(x) < proj(y)*/
 template <typename Iter, typename Proj>
 void counting_sort(Iter a, Iter b, const Proj &proj, const ll proj_size) {
 	range rang{a, b};
@@ -135,8 +138,6 @@ void counting_sort(Iter a, Iter b, const Proj &proj, const ll proj_size) {
 	}
 	move(al(output), a);
 }
-/** @brief Returns signed value of std::size(cont) */
-template <typename Cont> ll ssize(const Cont &cont) { return size(cont); }
 // TODO split up utility.hpp maybe?
 /*! @brief Array convenience template. Converts C style array type to std::array type. */
 template <typename T> struct ar { using type = T; };
@@ -165,14 +166,13 @@ template <typename Compare = less<>> class chained_compare {
       private:
 	Compare comp;
 };
-// bool valid_index = true;
 /*! @brief Return whether idx is a valid index for vec. Note that if idx is negative this returns
  * false.*/
 template <typename T> bool valid_idx(const vector<T> &vec, const size_t idx) {
 	return idx < vec.size();
 }
 template <typename InputIt> auto iterator_identity() {
-	return identity(plus<>{}, typename InputIt::value_type{});
+	return identity_elt(plus<>{}, typename InputIt::value_type{});
 };
 template <typename InputIt> decltype(auto) accumulate(InputIt a, InputIt b) {
 	return accumulate(a, b, iterator_identity<InputIt>());
@@ -180,9 +180,10 @@ template <typename InputIt> decltype(auto) accumulate(InputIt a, InputIt b) {
 template <typename InputIt> decltype(auto) inner_product(InputIt a, InputIt b, InputIt c) {
 	return inner_product(a, b, c, iterator_identity<InputIt>());
 }
-template <typename InputIt> auto get_partial_sum(InputIt a, InputIt b) {
-	vector sums(distance(a, b) + 1, iterator_identity<InputIt>());
-	partial_sum(a, b, begin(sums) + 1);
+template <typename InputIt, typename Op = plus<>>
+auto get_partial_sum(InputIt a, InputIt b, const Op &op = {}) {
+	vector sums(distance(a, b) + 1, identity_elt(op, typename InputIt::value_type{}));
+	partial_sum(a, b, begin(sums) + 1, op);
 	return sums;
 }
 template <typename... Ts> decltype(auto) read(Ts &...args) { return (std::cin >> ... >> args); }

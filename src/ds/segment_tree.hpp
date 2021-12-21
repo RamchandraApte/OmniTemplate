@@ -30,10 +30,10 @@ class SegmentTree {
 	static_assert(!has_pers || has_ptr, "Pointers required for persistency");
 	static_assert(base > 1, "Base must be at least 1");
 	struct LazyPart {
-		T lazy{identity(Update{}, T{})};
+		T lazy{identity_elt(Update{}, T{})};
 	};
 	struct NodeCore : public conditional_t<has_lazy, LazyPart, Empty> {
-		T qsum{identity(Query{}, T{})};
+		T qsum{identity_elt(Query{}, T{})};
 	};
 	struct NodeExp : public NodeCore {
 		array<NodeExp *, base> child{};
@@ -52,10 +52,10 @@ class SegmentTree {
 	void build(const vector<T> &arr, const Node idx, const ll node_l, const ll node_r) {
 		if (node_r - node_l == 1) {
 			get_core(idx).qsum =
-			    node_l < arr.size() ? arr[node_l] : identity(Query{}, T{});
+			    node_l < arr.size() ? arr[node_l] : identity_elt(Query{}, T{});
 			return;
 		}
-		auto ret = identity(Query{}, T{});
+		auto ret = identity_elt(Query{}, T{});
 		fo(inc, base) {
 			build(arr, get_child(idx, inc), mid(node_l, node_r, inc),
 			      mid(node_l, node_r, inc + 1));
@@ -83,21 +83,21 @@ class SegmentTree {
 					get_core(get_child(idx, i)).lazy += get_core(idx).lazy;
 				}
 			}
-			get_core(idx).lazy = identity(Update{}, get_core(idx).lazy);
+			get_core(idx).lazy = identity_elt(Update{}, get_core(idx).lazy);
 		}
 	}
 	T query(const ll l, const ll r, const Node idx, const ll node_l, const ll node_r) {
 		/*! Returns the sum over the intersection of [query_l, query_r) with [node_l,
 		 * node_r) */
 		if (node_r <= l || r <= node_l) {
-			return identity(Query{}, T{});
+			return identity_elt(Query{}, T{});
 		}
 		down(idx, node_l, node_r);
 		if (l <= node_l && node_r <= r) {
 			return get_core(idx).qsum;
 		}
 
-		auto ret = identity(Query{}, T{});
+		auto ret = identity_elt(Query{}, T{});
 		fo(inc, base) {
 			ret =
 			    Query{}(ret, query(l, r, get_child(idx, inc), mid(node_l, node_r, inc),
@@ -145,7 +145,7 @@ class SegmentTree {
 				get_update();
 			}
 		}
-		get_core(idx).qsum = identity(Query{}, T{});
+		get_core(idx).qsum = identity_elt(Query{}, T{});
 		fo(inc, base) {
 			get_core(idx).qsum =
 			    Query{}(get_core(idx).qsum, get_core(get_child(idx, inc)).qsum);

@@ -34,11 +34,13 @@ template <typename T> auto simple_tp([[maybe_unused]] const T &v) {
 }
 constexpr auto light_purple_color = "\e[1;35m"sv;
 constexpr auto green_color = "\e[1;32m"sv;
-constexpr auto red_color = "\e[91m"sv, reset_color = "\e[0m"sv;
+constexpr auto red_color = "\e[91m"sv;
+constexpr auto reset_color = "\e[0m"sv;
 ll depth = -1;
+#include <source_location>
 template <typename T>
 auto debug(const T &x, const string &name,
-	   source_location const &loc = source_location::current()) {
+	   std::source_location const &loc = source_location::current()) {
 	/*! Debug print x */
 	if (debug_mode) {
 		fo(i, depth) { cerr << "\t"; }

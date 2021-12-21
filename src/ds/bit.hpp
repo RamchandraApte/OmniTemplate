@@ -13,10 +13,10 @@ template <typename Value, typename MonoidOp = plus<>> class BIT {
       public:
 	//! Construct a BIT of size size_arg
 	explicit BIT(const ll size_arg)
-	    : arr(bit_ceil(size_arg) + 1, identity(MonoidOp{}, Value{})) {}
+	    : arr(bit_ceil(size_arg) + 1, identity_elt(MonoidOp{}, Value{})) {}
 	/*! @brief Returns sum of Monoid over elements in [0, r)*/
 	Value query(ll r) const {
-		auto sum = identity(MonoidOp{}, Value{});
+		auto sum = identity_elt(MonoidOp{}, Value{});
 		for (; r; r -= get_len(r)) {
 			sum = op(sum, arr[r]);
 		}

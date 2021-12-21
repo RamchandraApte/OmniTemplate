@@ -31,9 +31,12 @@
 #ifndef DEBUG
 #define NDEBUG
 #endif
+
 //#include <bits/stdc++.h>
 #include <algorithm>
+#include <bit>
 #include <bitset>
+// FIXME identity does not work in c++20, we should use namespaces
 #include <cassert>
 #include <chrono>
 #include <climits>
@@ -43,6 +46,7 @@
 #include <iostream>
 #include <map>
 #include <numeric>
+#include <optional>
 #include <queue>
 #include <random>
 #include <set>
@@ -53,11 +57,7 @@
 #include <utility>
 #include <vector>
 #endif
-#if __has_include(<source_location>)
 #include <source_location>
-#else
-#include <experimental/source_location>
-#endif
 #include <experimental/iterator>
 #endif // PRE
 #define fo(i, ...) for ([[maybe_unused]] const auto i : ra{__VA_ARGS__})
@@ -99,7 +99,6 @@ import(std);
 // import(experimental);
 using experimental::make_ostream_joiner;
 using experimental::ostream_joiner;
-using experimental::source_location;
 import(chrono);
 import(literals);
 import(placeholders) let(ull, unsigned long long);

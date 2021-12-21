@@ -13,14 +13,15 @@ template <typename T, typename Semilattice> class SparseTable {
 			fo(i, arr.size()) {
 				const auto half = 1LL << (pw - 1);
 				meet[pw][i] = Semilattice{}(
-				    meet[pw - 1][i], meet[pw - 1][min(i + half, ssize(arr) - 1)]);
+				    meet[pw - 1][i],
+				    meet[pw - 1][min(i + half, static_cast<ll>(ssize(arr)) - 1)]);
 			}
 		}
 	}
 	T query(ll l, ll r) const {
 		const auto len = r - l;
 		if (len == 0) {
-			return identity(Semilattice{}, T{});
+			return identity_elt(Semilattice{}, T{});
 		}
 		// TODO put this in a function
 		const auto floor_log2 = (sizeof(ll) * CHAR_BIT) - 1 - __builtin_clzll(len);
@@ -41,7 +42,7 @@ template <typename T, typename Monoid> class DisjointSparseTable {
       public:
 	explicit DisjointSparseTable(vector<T> arr)
 	    : sum(log_ceil(arr.size(), 2), vector<T>(power_ceil(arr.size(), 2))) {
-		arr.resize(sum[0].size(), identity(Monoid{}, T{}));
+		arr.resize(sum[0].size(), identity_elt(Monoid{}, T{}));
 		fo(level, sum.size()) {
 			fo(block, 1LL << level) {
 				// The first half of the block contains suffix sums, the second half
@@ -64,11 +65,11 @@ template <typename T, typename Monoid> class DisjointSparseTable {
 			}
 		}
 	}
-	/*! Returns Monoid sum over range [l, r)*/
+	/*! @brief Returns Monoid sum over range [l, r)*/
 	T query(ll l, ll r) const {
 		assert(l <= r);
 		if (l == r) {
-			return identity(Monoid{}, T{});
+			return identity_elt(Monoid{}, T{});
 		}
 		if (l + 1 == r) {
 			return sum.back()[l];

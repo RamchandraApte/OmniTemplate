@@ -20,8 +20,8 @@ template <typename Graph, typename Pred> struct Subgraph {
 			advance();
 		}
 		void advance() {
-			for (; it != adj_list.end() && !subgraph.pred(i, *it); ++it) {
-			}
+			for (; it != adj_list.end() && !subgraph.pred(i, *it); ++it)
+				;
 		}
 		ll operator*() const { return *it; }
 		void operator++() {
@@ -29,7 +29,7 @@ template <typename Graph, typename Pred> struct Subgraph {
 			advance();
 		}
 		bool operator==(const iterator &oth) const { return it == oth.it; }
-		// FIXME should be genericized for all classes
+		// FIXME should be genericized for all classes. Also no test for this.
 		bool operator!=(const iterator &oth) const { return !(*this == oth); }
 	};
 	range<iterator> operator[](const ll i) const {

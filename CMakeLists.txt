@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(OmniTemplate)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(mcss_exe $ENV{HOME}/m.css/documentation/doxygen.py)
 find_package(Doxygen)

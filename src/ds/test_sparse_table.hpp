@@ -10,7 +10,7 @@ void test_sparse_table_impl() {
 		fo(end, start, data.size()) {
 			assert(sp.query(start, end) ==
 			       accumulate(begin(data) + start, begin(data) + end,
-					  identity(Monoid{}, T{}), Monoid{}));
+					  identity_elt(Monoid{}, T{}), Monoid{}));
 		}
 	}
 }

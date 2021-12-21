@@ -37,9 +37,10 @@ bool ccw(const point &a, const point &b, const point &c) {
 	}
 	return area_pts > 0;
 }
+/** @brief Returns the convex hull of the points in v.
+ *  By default, do_sort is true, and so the array v is sorted before processing.*/
 auto hull(vector<point> v, bool do_sort = true) {
 	// TODO why do_sort?
-	/*! Returns the convex hull of the points in v*/
 	vector<point> h;
 	if (do_sort) {
 		const auto p = *min_element(al(v), key_compare([](point a) {

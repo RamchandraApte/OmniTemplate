@@ -4,16 +4,17 @@
 #include "polynomial.hpp"
 /*! @file */
 // TODO Tensors? Also, matrix_row class.
-// TODO fix default constructor causing segfault
 inline namespace linear_algebra {
 /** @brief Matrix class*/
 template <typename T> struct matrix {
-	ll rows_n, cols_n; //!< Row, column
+	ll rows_n; //!< Number of rows
+	ll cols_n; //!< Number of columns
+	// NOTE this is contiguous memory
 	vector<T> a;	   //! Array storing the data, in row-major order
 	explicit matrix(ll r_, ll c_, T v = {}) : rows_n(r_), cols_n(c_), a(rows_n * cols_n, v) {
 		assert(rows_n >= 1 && cols_n >= 1);
 	}
-	explicit matrix(T d) : rows_n{1}, cols_n{1}, a{d} {}
+	explicit matrix(const T val) : rows_n{1}, cols_n{1}, a{val} {}
 	explicit matrix(vector<vector<pr>> const &g) : matrix(g.size(), g.size(), inf) {
 		fo(i, rows_n) {
 			for (const auto &p : g[i]) {
@@ -23,24 +24,28 @@ template <typename T> struct matrix {
 		}
 		fo(i, rows_n) { this[i][i] = 0; }
 	}
-	explicit matrix(const initializer_list<initializer_list<ll>> &vals)
-	    : matrix(size(vals), size(begin(vals)[0])) {
+	void check_nonempty(const initializer_list<initializer_list<T>> &vals) {
+		assert(vals.size() != 0);
+	}
+	explicit matrix(const initializer_list<initializer_list<T>> &vals)
+	    : matrix(size(vals), size((check_nonempty(vals), begin(vals)[0]))) {
 		fo(i, rows_n) {
 			assert(size(begin(vals)[i]) == cols_n);
 			fo(j, cols_n) { (*this)[i][j] = begin(begin(vals)[i])[j]; }
 		}
 	}
 	auto operator[](const ll i) {
+		assert(0 <= i && i < rows_n);
 		return const_cast<T *>(const_cast<matrix const &>(*this)[i]);
 	}
 	auto operator[](const ll i) const { return &a[i * cols_n]; }
 	/** @brief Returns true if matrix is a square matrix */
 	bool is_square() const { return rows_n == cols_n; }
 };
-template <typename T> auto identity(const plus<>, const matrix<T> &mat) {
+template <typename T> auto identity_elt(const plus<>, const matrix<T> &mat) {
 	return matrix(mat.rows_n, mat.cols_n);
 }
-template <typename T> auto identity(const multiplies<>, const matrix<T> &mat) {
+template <typename T> auto identity_elt(const multiplies<>, const matrix<T> &mat) {
 	assert(mat.is_square());
 	matrix<T> id(mat.rows_n, mat.cols_n);
 	fo(i, mat.rows_n) { id[i][i] = 1; }
@@ -103,7 +108,7 @@ template <typename T> pair<matrix<T>, T> gauss(matrix<T> b, matrix<T> a) {
 }
 /** @brief Returns inverse of the matrix */
 template <typename... Ts> matrix<Ts...> invert(const matrix<Ts...> &a) {
-	return identity(multiplies<>{}, a) / a;
+	return identity_elt(multiplies<>{}, a) / a;
 }
 /** @brief Returns \f$a^{-1}b\f$*/
 template <typename... Ts> auto operator/(const matrix<Ts...> &b, const matrix<Ts...> &a) {

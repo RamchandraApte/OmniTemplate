@@ -200,8 +200,5 @@ auto scc(const GraphAdj &graph) {
 	}
 	return comp;
 }
-/*! @brief Reads 1-indexed list of edges into graph g*/
-// FIXME
-auto graph_in(GraphAdj &g, ll m) { g.read(m); }
 } // namespace graph_theory
 using namespace graph_theory;

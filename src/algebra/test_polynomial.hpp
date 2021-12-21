@@ -16,6 +16,8 @@ void test_polynomial() {
 	assert((p1 % p2 == poly{11_M / 3_M}));
 	assert((p1 % poly{2} == poly{}));
 	assert((p2 % p1 == p2));
+	assert(poly{}.degree() == -inf);
+	assert((poly{0, 2, 0}.degree() == 1));
 }
 }; // namespace polynomial_ns::test
 using namespace polynomial_ns::test;

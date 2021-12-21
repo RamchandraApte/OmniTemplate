@@ -13,6 +13,7 @@ pair<array<ll, 2>, ll> tree_diameter(const GraphAdj &g) {
 	fo(i, b2.distance[v] / 2) { c = b2.parent[c]; }
 	return {{u, v}, c};
 }
+// TODO this test function should be in a separate file
 void test_tree_diameter() {
 	{
 		GraphAdj graph(5);

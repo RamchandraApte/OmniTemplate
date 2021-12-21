@@ -70,7 +70,7 @@ class HLD {
 	 * @return T
 	 */
 	T query(ll u, ll v) {
-		T ret{identity(Monoid{}, T{})};
+		T ret{identity_elt(Monoid{}, T{})};
 		func_path(u, v, [&](ll u, ll v) { ret = Monoid{}(ret, ds.query(u, v)); });
 		return ret;
 	}

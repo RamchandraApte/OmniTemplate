@@ -2,6 +2,7 @@
 #include "algebra/test_linear_algebra.hpp"
 #include "algebra/test_polynomial.hpp"
 #include "combinatorics/test_combinatorics.hpp"
+#include "combinatorics/test_knapsack.hpp"
 #include "combinatorics/test_permutation.hpp"
 #include "core/all.hpp"
 #include "core/main.hpp"
@@ -45,6 +46,7 @@ void main2() {
 	test_splay_tree();
 	test_geometry();
 	test_combinatorics();
+	test_knapsack();
 	test_coroutine();
 	test_linear_algebra();
 	test_permutation();

@@ -17,7 +17,7 @@ template <typename T> T power(T a, ll b) {
 			assert(("b < 0 but unable to inverse a", false));
 		}
 	}
-	T ret = identity(multiplies<>{}, a);
+	T ret = identity_elt(multiplies<>{}, a);
 	for (; b; b >>= 1, a *= a) {
 		if (b & 1) {
 			ret *= a;
@@ -50,8 +50,8 @@ struct modulo {
 	explicit operator auto() const { return x; }
 };
 modulo operator"" _M(const unsigned long long x) { return modulo{x}; }
-modulo identity(plus<>, modulo) { return 0; }
-modulo identity(multiplies<>, modulo) { return 1; }
+modulo identity_elt(plus<>, modulo) { return 0; }
+modulo identity_elt(multiplies<>, modulo) { return 1; }
 modulo operator+(modulo const &a, modulo const &b) {
 	ll const sum = a.x + b.x;
 	return {sum >= modulo::modulus ? sum - modulo::modulus : sum, no_mod{}};

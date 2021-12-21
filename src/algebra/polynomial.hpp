@@ -18,12 +18,8 @@ template <typename T> class Polynomial : public vector<T> {
 	ll degree() const {
 		/*! Returns the degree of polynomial. Returns \f$-\infty\f$ for the \f$0\f$
 		 * polynomial.*/
-		fr(j, 0, this->size()) {
-			if ((*this)[j] != 0) {
-				return j;
-			}
-		}
-		return -inf;
+		const auto it = find_if(rbegin(*this), rend(*this), [](auto x) { return x != 0; });
+		return it == rend(*this) ? -inf : (rend(*this) - it) - 1;
 	}
 };
 template <typename T> Polynomial<T> operator+(const Polynomial<T> &a, const Polynomial<T> &b) {
@@ -34,6 +30,8 @@ template <typename T> Polynomial<T> operator+(const Polynomial<T> &a, const Poly
 	fo(i, a.size()) { sum[i] += a[i]; }
 	return sum;
 }
+/** @brief returns the product of two polynomials a and b.
+ *  Complexity: \f$O(\deg a \deg b)\f$ */
 template <typename T> Polynomial<T> operator*(const Polynomial<T> &a, const Polynomial<T> &b) {
 	Polynomial<T> prod(a.size() - 1 + b.size() - 1 + 1);
 	fo(i, a.size()) {
@@ -41,6 +39,9 @@ template <typename T> Polynomial<T> operator*(const Polynomial<T> &a, const Poly
 	}
 	return prod;
 }
+/** @brief Returns the remainder
+ *  Complexity: \f$O()\f$
+ */
 template <typename T> Polynomial<T> operator%(Polynomial<T> a, const Polynomial<T> &b) {
 	const auto bdeg = b.degree();
 	fr(i, 0, a.size()) {
@@ -53,9 +54,9 @@ template <typename T> Polynomial<T> operator%(Polynomial<T> a, const Polynomial<
 	}
 	return a;
 }
+/** Checks if two polynomials are equal. Note that polynomials can have different sizes but
+ * be equal*/
 template <typename T> bool operator==(const Polynomial<T> &a, const Polynomial<T> &b) {
-	/*! Checks if two polynomials are equal. Note that polynomials can have different sizes but
-	 * be equal*/
 	if (!(a.size() <= b.size())) {
 		return b == a;
 	}

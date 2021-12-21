@@ -100,7 +100,9 @@ void test_biconnected() {
 		       }));
 
 	GraphAdj graph1(1);
-	test_all_perms(graph1, make_test([](const auto perm) { return Exp{{}, {}}; }));
+	test_all_perms(graph1, make_test([]([[maybe_unused]] const auto perm) {
+			       return Exp{{}, {}};
+		       }));
 
 	// Disconnect graph, union of 1 and 2
 	const auto graph_dis = graph_disunion(graph_t1, graph_t2);

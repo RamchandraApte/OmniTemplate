@@ -27,15 +27,16 @@ enable_if_t<is_same<T, istream>::value, rin> operator>>(Stream &is, T &x) {
 	rin r{is};
 	return r >> x;
 }
-// TODO make this generic for all tuple-like types
-template <typename Stream, typename... T> auto &operator<<(Stream &os, tuple<T...> t) {
+template <typename Stream, typename Tuple, auto size = std::tuple_size<Tuple>::value>
+auto &operator<<(Stream &os, const Tuple &tuple) {
+	os << simple_tp(tuple) << "{";
 	apply(
-	    [&](auto &f, auto &... x) {
+	    [&](auto &f, auto &...x) {
 		    os << f;
 		    ((os << delim << x), ...);
 	    },
-	    t);
-	return os;
+	    tuple);
+	return os << "}";
 }
 template <typename T1, typename... Ts> auto print(const T1 &arg1, const Ts &... args) {
 	/*! Print arguments separated by spaces to stdout*/
@@ -44,9 +45,6 @@ template <typename T1, typename... Ts> auto print(const T1 &arg1, const Ts &... 
 	cout << endl;
 }
 namespace std {
-template <typename Stream, typename... T> auto &operator<<(Stream &os, pair<T...> const &p) {
-	return os << simple_tp(p) << "{" << p.first << delim << p.second << "}";
-}
 // enable_if is there to avoid problems with ostringstream
 // TODO fix this whole IO mess one day.
 template <typename Stream, typename Container>
@@ -76,6 +74,7 @@ auto operator<<(rin &os, const T &v) -> decltype(begin(v), declval<decltype(os)>
 template <typename Stream, typename T> auto &operator<<(Stream &os, optional<T> const &opt) {
 	return opt ? (os << *opt) : (os << "nullopt");
 }
+// FIXME This should really not be in the std namespace
 rin rin_cin{cin};
 auto &orig_cin = cin;
 auto &orig_cerr = cerr;

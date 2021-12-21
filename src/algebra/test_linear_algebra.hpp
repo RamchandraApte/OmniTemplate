@@ -2,8 +2,8 @@
 #include "linear_algebra.hpp"
 namespace linear_algebra::test {
 template <typename... Ts> void test_invert_impl(const matrix<Ts...> &a) {
-	assert(invert(a) * a == identity(multiplies<>{}, a));
-	assert(a * invert(a) == identity(multiplies<>{}, a));
+	assert(invert(a) * a == identity_elt(multiplies<>{}, a));
+	assert(a * invert(a) == identity_elt(multiplies<>{}, a));
 }
 void test_invert() {
 	with _m{ll(1e9 + 7), modulo::modulus};
